@@ -15,18 +15,16 @@ from pandas import DataFrame, read_csv
 from scipy import stats
 
 ################################################################################################
-
 #current dir	
 	os.getcwd()
 #change dir
 	os.chdir('D:\\Training\\Python\\Logistic_Model_Development_Process')
-
 #############################################################################################################################################		
-## Test on Hilton data ######################################################################################################################
+## Test on client data ######################################################################################################################
 	#Prepare format of variable to read raw file. Keep the same order for variable name as it is raw file.
-	hilton_raw_dtype = np.dtype([( 'vid' , 'S100' ), ( 'active_session' , 'float64' ), 	( 'session_start_server' , 'float64' ),	( 'max_page_count' , 'float64' ),	( 'max_page_count_before_purchase' , 'float64' ),	( 'max_page_count_before_purchase_flag' , 'float64' ),	( 'os_cat' , 'S10' ),	( 'dd' , 'S1' ),	( 'country' , 'S20' ),	( 'browser_cat' , 'S5' ),	( 'Property_Brand' , 'S4' ),	( 'nop_last_visit' , 'float64' ),	( 'no_of_visits_last_7_days' , 'float64' ),	( 'no_of_purchases_last_7_days' , 'f3' ),	( 'page_01_category' , 'S100' ),	( 'page_02_category' , 'S100' ),	( 'page_03_category' , 'S100' ),	( 'page_04_category' , 'S100' ),	( 'page_05_category' , 'S100' ),	( 'page_06_category' , 'S100' ),	( 'page_07_category' , 'S100' ),	( 'page_08_category' , 'S100' ),	( 'page_09_category' , 'S100' ),	( 'page_10_category' , 'S100' ),	( 'page_11_category' , 'S100' ),	( 'page_12_category' , 'S100' ),	( 'page_13_category' , 'S100' ),	( 'page_14_category' , 'S100' ),	( 'page_15_category' , 'S100' ),	( 'page_16_category' , 'S100' ),	( 'page_17_category' , 'S100' ),	( 'page_18_category' , 'S100' ),	( 'page_19_category' , 'S100' ),	( 'page_20_category' , 'S100' ),	( 'reservation' , 'float64' ),	( 'Hilton_Honors_Status_flag' , 'float64' ),	( 'Hilton_Honors_Status_Ever_flag' , 'float64' ),	( 'random_number' , 'float64' )])
+	client_raw_dtype = np.dtype([( 'vid' , 'S100' ), ( 'session' , 'float64' ), 	( 'session_start_server' , 'float64' ),	( 'max_page_count' , 'float64' ),	( 'max_page_count_before_purchase' , 'float64' ),	( 'max_page_count_before_purchase_flag' , 'float64' ),	( 'os_cat' , 'S10' ),	( 'dd' , 'S1' ),	( 'country' , 'S20' ),	( 'browser_cat' , 'S5' ),	( 'Property_Brand' , 'S4' ),	( 'nop_last_visit' , 'float64' ),	( 'no_of_visits_last_7_days' , 'float64' ),	( 'no_of_purchases_last_7_days' , 'f3' ),	( 'page_01_category' , 'S100' ),	( 'page_02_category' , 'S100' ),	( 'page_03_category' , 'S100' ),	( 'page_04_category' , 'S100' ),	( 'page_05_category' , 'S100' ),	( 'page_06_category' , 'S100' ),	( 'page_07_category' , 'S100' ),	( 'page_08_category' , 'S100' ),	( 'page_09_category' , 'S100' ),	( 'page_10_category' , 'S100' ),	( 'page_11_category' , 'S100' ),	( 'page_12_category' , 'S100' ),	( 'page_13_category' , 'S100' ),	( 'page_14_category' , 'S100' ),	( 'page_15_category' , 'S100' ),	( 'page_16_category' , 'S100' ),	( 'page_17_category' , 'S100' ),	( 'page_18_category' , 'S100' ),	( 'page_19_category' , 'S100' ),	( 'page_20_category' , 'S100' ),	( 'reservation' , 'float64' ),	( 'client_loyalty_flag' , 'float64' ),	( 'client_loyalty_Ever_flag' , 'float64' ),	( 'random_number' , 'float64' )])
 	#Apply the above format to convert in numpy data.  keep dataset name as "df"
-	df = np.genfromtxt('Hilton_Model_Dev_Val_Data.csv', delimiter=',', names=True, missing_values='nan', dtype = hilton_raw_dtype)
+	df = np.genfromtxt('client_Model_Dev_Val_Data.csv', delimiter=',', names=True, missing_values='nan', dtype = client_raw_dtype)
 	
 ###########################################################################################################################################################
 ############# Do Not change below code. Only run it
@@ -104,9 +102,5 @@ def overall_eda(df):
 		mlab.rec2csv(eda_output, 'overall_eda_output.csv')
 		
 #############################################################################################################################################		
-
 overall_eda(df)
-
-	###same as abovefix
-	###np.savetxt("eda.csv", eda_output, delimiter=",", fmt="%s", header=str(eda_output.dtype.names))
-	#outfile name "eda_output.csv"
+#############################################################################################################################################
