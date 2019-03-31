@@ -298,6 +298,7 @@ def collect_model_information(Degrees_of_Freedom, output_estimate_logistic_model
 		
 def vif_calculation():
 		### calculate VIF from linear regression
+		### http://www.real-statistics.com/multiple-regression/ridge-and-lasso-regression/ridge-regression-basic-concepts/
 		independent_without_intercept 	= independent_variable[:,1:] if 'Intercept' in independent_variable_name else independent_variable[:]
 		vif								= []
 		
