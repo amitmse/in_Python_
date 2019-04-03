@@ -1,0 +1,251 @@
+
+----------------------------------------------------------------------------------------------------------------
+
+ADA Boost:	
+	1. Assign same weight to all obs ( 1/No. of obs )
+	2. Develop a tree and pick node (decision stump) with lowest weighted training error
+	3. Compute coefficient		(1/2 ln[{1 - weighted error(ft)}/weighted error(ft)])
+	4. Recompute weights		( ai e^(-Wt))
+	5. Normalize weights
+
+GBM:
+	1.	Y 		= M(x) + error 	(Logistic Regression if dep is binay). get the weight as well
+	2.	error 	= G(x) + error2	(Regress error with other ind var. Apply linear regression as error is continuous). get the weight as well
+	3.	error2 	= H(x) + error3	(continue the #2 until you get low error)
+	4.	Y 		= M(x) + G(x) + H(x) + error3	(combine all model together)
+	5.	Y 		= alpha * M(x) + beta * G(x) + gamma * H(x) + error4	(alpha, beta, gamma are weight of each model)
+
+
+https://stats.stackexchange.com/questions/204154/classification-with-gradient-boosting-how-to-keep-the-prediction-in-0-1
+http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/
+http://mccormickml.com/2013/12/13/adaboost-tutorial/
+	
+----------------------------------------------------------------------------------------------------------------
+
+http://stats.stackexchange.com/questions/222772/generalised-boosted-models-gbm-assumptions
+
+I have a rather simple question the answer to which I struggle to find in any literature about GBM. I am fitting a GBM model as per G.Ridgeway (2007), paper can be found in http://www.saedsayad.com/docs/gbm2.pdf .
+	Question: After fitting a model what assumptions should I check? Do we require the residuals to have mean zero and constant variance?
+
+After contacting the author of the paper directly, I can answer the question myself. Assumptions:
+	1) Independence of observations
+	2) Assumptions related to the interaction depth. If set to 1, strictly additive model is assumed. As we increase the interaction depth, this assumption is relaxed.
+
+-------------------------------------------------------------------------------------------
+
+ADABoost:
+	y^ = sign(sum(Wt ft(X)))														(Wt=Coefficient)
+	first compute Wt (Coefficient)
+		Wt = 1/2 ln[{1 - weighted error(ft)}/weighted error(ft)] 					(weighted error	= total weight of mistake/total weight of all data point)
+	second compute ai(weight)
+		for first iteration ai = 1/N 												(N=no of observation)
+		ai = "ai e^(-Wt)" if ft(Xi)=Yi OR "ai e^(Wt)" if ft(Xi) not equal to Yi		(ai=Weight)
+	Normalize weight ai
+		ai = ai/(sum of all a's)
+
+		
+	Function: 		(1/sum (Wi)) sum(Wi exp(-2Yi -1)f(Xi))
+	Initial Value: 	1/2 log [(sum (Yi Wi e^-oi))/sum ((1-Yi)Wi e^oi)]
+	Gradient:		Zi = -(2Yi - 1) exp(-(2Yi-1)fXi))
+
+
+GBM: https://www.youtube.com/watch?v=sRktKszFmSk
+		1. Learn a regression predictor
+		2. compute the error of residual
+		3. learn to predict the residual
+		4. identify good weights
+
+
+	
+Pseudo-code of the GBM algorithm : https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/
+	1. Initialize the outcome
+	2. Iterate from 1 to total number of trees
+		  2.1 Update the weights for targets based on previous run (higher for the ones mis-classified) 
+					[weight = 0.5log(1-error/error)]	It would indicate higher weights to trees with lower error rate.
+		  2.2 Fit the model on selected subsample of data
+		  2.3 Make predictions on the full set of observations
+		  2.4 Update the output with current results taking into account the learning rate
+	3. Return the final output.
+
+		
+Gradient boosting involves three elements: http://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/
+	1. A loss function to be optimized: 
+		- The loss function used depends on the type of problem being solved.
+		- It must be differentiable, but many standard loss functions are supported and you can define your own. 
+				For example, regression may use a squared error and classification may use logarithmic loss.
+		- A benefit of the gradient boosting framework is that a new boosting algorithm does not have to be derived for each loss function that may want to be used, instead, 
+				it is a generic enough framework that any differentiable loss function can be used.
+	
+	2. A weak learner to make predictions: 
+		- Decision trees are used as the weak learner in gradient boosting.
+		- Specifically regression trees are used that output real values for splits and whose output can be added together, 
+				allowing subsequent models outputs to be added and “correct” the residuals in the predictions.
+		- Trees are constructed in a greedy manner, choosing the best split points based on purity scores like Gini or to minimize the loss.
+		- Initially, such as in the case of AdaBoost, very short decision trees were used that only had a single split, 
+				called a decision stump. Larger trees can be used generally with 4-to-8 levels.
+		- It is common to constrain the weak learners in specific ways, such as a maximum number of layers, nodes, splits or leaf nodes.
+		- This is to ensure that the learners remain weak, but can still be constructed in a greedy manner.
+
+	3. An additive model to add weak learners to minimize the loss function:
+		- Trees are added one at a time, and existing trees in the model are not changed.
+		- A gradient descent procedure is used to minimize the loss when adding trees.
+		- Traditionally, gradient descent is used to minimize a set of parameters, such as the coefficients in a regression equation or weights in a neural network. 
+				After calculating error or loss, the weights are updated to minimize that error.
+		- Instead of parameters, we have weak learner sub-models or more specifically decision trees. After calculating the loss, to perform the gradient descent procedure, 
+				we must add a tree to the model that reduces the loss (i.e. follow the gradient). 
+				We do this by parameterizing the tree, then modify the parameters of the tree and move in the right direction by (reducing the residual loss.
+		- Generally this approach is called functional gradient descent or gradient descent with functions.
+
+Improvements to Basic Gradient Boosting	:
+		- Gradient boosting is a greedy algorithm and can overfit a training dataset quickly.
+		- It can benefit from regularization methods that penalize various parts of the algorithm and generally improve the performance of the algorithm by reducing overfitting.
+		- In this this section we will look at 4 enhancements to basic gradient boosting:
+				1. Tree Constraints:
+						- It is important that the weak learners have skill but remain weak.
+						- There are a number of ways that the trees can be constrained.
+						- A good general heuristic is that the more constrained tree creation is, the more trees you will need in the model, 
+								and the reverse, where less constrained individual trees, the fewer trees that will be required.
+						- Below are some constraints that can be imposed on the construction of decision trees:
+								# Number of trees: 	generally adding more trees to the model can be very slow to overfit. The advice is to keep adding trees until no further improvement is observed.
+								# Tree depth: deeper trees are more complex trees and shorter trees are preferred. Generally, better results are seen with 4-8 levels.
+								# Number of nodes or number of leaves: like depth, this can constrain the size of the tree, but is not constrained to a symmetrical structure if other constraints are used.
+								# Number of observations per split: imposes a minimum constraint on the amount of training data at a training node before a split can be considered
+								# Minimim improvement to loss: is a constraint on the improvement of any split added to a tree.											
+				2. Shrinkage:
+				3. Random sampling:				
+				4. Penalized Learning:
+				
+XG Boost: 
+			https://www.quora.com/What-is-the-difference-between-the-R-gbm-gradient-boosting-machine-and-xgboost-extreme-gradient-boosting
+			https://www.quora.com/When-would-one-use-Random-Forests-over-Gradient-Boosted-Machines-GBMs/answer/Tianqi-Chen-1
+			https://www.quora.com/What-makes-xgboost-run-much-faster-than-many-other-implementations-of-gradient-boosting/answer/Tianqi-Chen-1
+			http://xgboost.readthedocs.io/en/latest/model.html						
+			
+		- I am the author of xgboost. Both xgboost and gbm follows the principle of gradient boosting.  There are however, the difference in modeling details. 
+				Specifically,  xgboost used a more regularized model formalization to control over-fitting, which gives it better performance.
+
+
+https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/?utm_content=bufferadd03&utm_medium=social&utm_source=linkedin.com&utm_campaign=buffer				
+
+https://gist.github.com/tristanwietsma/5486024
+ADA : https://www.coursera.org/learn/ml-classification/home/welcome
+
+	
+Adaboost vs Gradient Boosting: http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/slides/gradient_boosting.pdf
+		- Adaboost: 		"shortcomings” are identified by high-weight data points.
+		- Gradient Boosting: “shortcomings” are identified by gradients. 
+
+Gradient Boosting Part1–Visual Conceptualization : http://dimensionless.in/gradient-boosting/
+	It combines a set of weak learners and delivers improved prediction accuracy.
+	
+	
+	
+	
+http://scikit-learn.org/stable/modules/ensemble.html#gradient-tree-boosting
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3885826/
+
+Boosting/Bagging: 
+		https://www.analyticsvidhya.com/blog/2015/09/complete-guide-boosting-methods/
+		https://www.analyticsvidhya.com/blog/2015/11/quick-introduction-boosting-algorithms-machine-learning/
+		https://www.quora.com/What-is-the-difference-between-gradient-boosting-and-adaboost
+		https://arxiv.org/pdf/1403.1452.pdf
+		
+		- Boosting: 	It is similar, however the selection of sample is made more intelligently. We subsequently give more and more weight to hard to classify observations.
+		- Bagging: 		It is an approach where you take random samples of data, build learning algorithms and take simple means to find bagging probabilities.
+
+--------------------------------------------------------------------------------------
+https://www.analyticsvidhya.com/blog/2015/09/complete-guide-boosting-methods/
+
+One simple way is to build an entirely different model using new set of input variables and trying better ensemble learners. On the contrary, I have a much simpler way to suggest. It goes like this:
+
+	Y = M(x) + error
+	What if I am able to see that error is not a white noise but have same correlation with outcome(Y) value. What if we can develop a model on this error term? Like,
+
+	error = G(x) + error2
+	Probably, you’ll see error rate will improve to a higher number, say 84%. Let’s take another step and regress against error2.
+
+	error2 = H(x) + error3
+	Now we combine all these together :
+
+	Y = M(x) + G(x) + H(x) + error3
+	This probably will have a accuracy of even more than 84%. What if I can find an optimal weights for each of the three learners,
+
+	Y = alpha * M(x) + beta * G(x) + gamma * H(x) + error4
+	If we found good weights, we probably have made even a better model. This is the underlying principle of a boosting learner. When I read the theory for the first time, I had two quick questions:
+
+	Do we really see non white noise error in regression/classification equations? If not, how can we even use this algorithm?
+	Wow, if this is possible, why not get near 100% accuracy?
+	I’ll answer these questions in this article, however, in a crisp manner. Boosting is generally done on weak learners, which do not have a capacity to leave behind white noise.  
+	Secondly, boosting can lead to overfitting, so we need to stop at the right point.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+read this: http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf
+
+Solve a equation:
+	1.Calculus: It will faster if equation is simple. But in real life equations are very complex and messy and its difficult to solve. 
+				f(x) 	= X^2 - 2X + 2
+				df/dx 	= 2X - 2
+				2X=2
+				X=1
+				
+	2.Gradient Descent: 
+				Xi+1 = Xi - a f'(Xi)	[Xi = initial guess, a = learning rate or step length or jump, Xi+1 = next guess]
+				f(x) 	= X^2 - 2X + 2
+				df/dx 	= 2X - 2
+				apply "Xi+1 = Xi - a f'(Xi)" on above equation. start with zero "0"
+				X1 = X0 - 0.2f'(3)			X0= 3 (initial guess), a=0.2 (guess)
+				X1 = 3  - 0.2(4)			[put 3 in "2X - 2": 2*3 - 2 = 6-2 =4]
+				X1 = 3 - 0.8
+				X1 = 2.2
+				X2 = X1 - 0.2f'(X1)
+				X2 = 2.2 - 0.2(2.4)			[put 2.2 in "2X - 2": 2*2.2 - 2 = 4.4-2 =2.4]
+				X2 = 1.72
+				X3 = X2 - 0.2f'(X2)
+				X3 = 1.72 - 0.2(1.44)		[put 1.72 in "2X - 2": 2*1.72 - 2 = 3.44-2 =1.44]
+				X3 = 1.72 - 0.288
+				X3 = 1.432
+				continue doing this untill we are close to 1 which is the exact solution.
+				
+				As we approach to local minimum, Gradient Descent will automatically take smaller steps. So no need to decrease "a" over time.
+				
+				optimization gradient descent:
+					cX + d = Y [equation of line and solve this for c & d]
+					(cX + d) -  Y = 0 ( "cX + d" is predected Y^, Y^-Y is error and it should be zero) 
+					min by(a,b) = sum ([cX + d]-Yi)^2		[c = cofficient, d=intercept]
+					First make initial guess for c & d then do the derivative by c & d seperately to get the optimium value of c & d. 
+					Above process will apply on Gradient Descent "Xi+1 = Xi - a f'(Xi)"
+			
+				Gradient descent is based on 1st derivatives only and it use all data at one time. Gradient descent generally requires more iterations.	If data size is big then it will take long time to compute.
+			
+			
+			Stochastic Gradient descent: 
+					It takes portion of data at one time and do the computation and continue in same way. 
+					cofficients are not exactly equals to Gradient descent but its close. 
+					For BIG data its only option to apply Gradient descent in faster way.
+			
+			
+			
+	3.Newton Raphson: 	Newton's method generally requires fewer iterations, but each iteration is slow as we need to compute 2nd dervatives too.
+						There is no guarantee that the Hessian is nonsingular. Additionally, we must supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate).
+							(http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf)
+	
+			Xn+1 	= Xn - f(X)/f'(X)
+			f(X) 	= X^2 - 8
+			f'(X)	= 2X
+			X1		= 3 (guess)
+			X2		= X1 - f(X)/f'(X)
+					= 3	 - [(3^2-8)/2*3]
+					= 3  - (1/6)
+					= 18-1/6
+					= 17/6
+			X3		= X2 - f(X2)/f'(X2)
+					= 17/6 - [(17/6)^2 - 8]/[2(17/6)]
+					= 2.828
+-------------------------------------------------------------------------------------------------------------------------------------------------------		
+
+http://mccormickml.com/2013/12/13/adaboost-tutorial/
+
+There are three bits of intuition to take from this graph:
+	1. The classifier weight grows exponentially as the error approaches 0. Better classifiers are given exponentially more weight.
+	2. The classifier weight is zero if the error rate is 0.5. A classifier with 50% accuracy is no better than random guessing, so we ignore it.
+	3. The classifier weight grows exponentially negative as the error approaches 1. We give a negative weight to classifiers with worse worse than 50% accuracy. “Whatever that classifier says, do the opposite!”.
