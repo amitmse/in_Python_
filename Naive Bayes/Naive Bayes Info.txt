@@ -1,12 +1,12 @@
 
-													  NaÔve Bayes
+													  Na√Øve Bayes
 													---------------
 -	Assumption
 			1. Violation of Independence Assumption:
-					- 	The NaÔve Bayes assumption is that all the features are conditionally independent given the class label. 
+					- 	The Na√Øve Bayes assumption is that all the features are conditionally independent given the class label. 
 							Even though this is usually false (since features are usually dependent). 
 					- 	Naive Bayesian classifiers assume that the effect of an attribute value on a given class is independent of the values of the other attributes. 
-							This assumption is called class conditional independence. It is made to simplify the computations involved and, in this sense, is considered ìnaive.î
+							This assumption is called class conditional independence. It is made to simplify the computations involved and, in this sense, is considered ‚Äúnaive.‚Äù
 
 			2. Zero conditional probability Problem:
 					-	If a given class and feature value never occur together in the training set then the frequency-based probability estimate will be zero.
