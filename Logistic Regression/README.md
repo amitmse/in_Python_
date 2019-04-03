@@ -13,7 +13,8 @@ Because logistic regression uses MLE rather than OLS, it avoids many of the typi
 	- Does not assume normal errors.
 	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
   
-Maximum likelihood estimation (MLE): Finds parameter values that maximize the likelihood of making the observations given the parameters
+Maximum likelihood estimation (MLE): 
+	- Finds parameter values that maximize the likelihood of making the observations given the parameters
 
 Ordinary Least Squares (OLS): Finds parameter values that minimizing the error
 Linear regression assumptions: (http://r-statistics.co/Assumptions-of-Linear-Regression.html)
@@ -36,8 +37,9 @@ Derivation of Logistic Regression:
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}] 	  = Exp(a + bX) = exp^y
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
 	
-	Maximum Likelihood: finds parameter values that maximize the likelihood of making the observations given the parameters
-	(https://onlinecourses.science.psu.edu/stat414/node/191)
+	Maximum Likelihood: 
+		finds parameter values that maximize the likelihood of making the observations given the parameters
+		(https://onlinecourses.science.psu.edu/stat414/node/191)
 		Pi = {Pr(Yi = 1/Xi) if Yi = 1}	= Pr^Yi (Yi is a Bernoulli random variable) P
 		{1 - Pr(Yi = 1/Xi)   if Yi = 0}	= (1-Pr)^(1-Yi)	1-P
 			
@@ -45,7 +47,8 @@ Derivation of Logistic Regression:
 	(https://stats.stackexchange.com/questions/211848/likelihood-why-multiply)
 		= Product[(Pr^Yi){(1-Pr)^(1-Yi)}]
 		
-	Log Likelihood Function (Applying Logs on likelihood equation and  product will become sum. Refer to property of LOG)
+	Log Likelihood Function:
+		(Applying Logs on likelihood equation and  product will become sum. Refer to property of LOG)
 		= Sum[{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}] (Apply log in above eq. and simplify it. cost function)
 		= Sum[Yi*Log(Pr) - Yi*Log(1-Pr) + Log(1-Pr)]
 		= Sum[Yi*Log{Pr/(1-Pr)}] + Sum[Log(1-Pr)] [Substitute [Log{Pr/(1-Pr) = a + bX] and [1-Pr = 1 / {1 + Exp(a + bX)}]]
@@ -53,14 +56,16 @@ Derivation of Logistic Regression:
 		= Sum[Yi*(a + bX)] + Sum[ Log(1) - Log{1 + Exp(a + bX)}] (Log(1) = 0)
 		= Sum[Yi*(a + bX)] - Sum[Log{1 + Exp(a + bX)}]				
 		= -[Sum[Yi*(a + bX)] - Sum[Log{1 + Exp(a + bX)}]] 
-		(Apply negative to minimize the Log Likelihood Function. refer to below function negative_log_likelihood)
+		(Apply negative to minimize the Log Likelihood Function)
 		
-	Gradient of Log Likelihood Function / First Differentiation (with respect to beta) of Log Likelihood Function
+	Gradient of Log Likelihood Function : 
+		First Differentiation (with respect to beta) of Log Likelihood Function
 		= [Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]
 		= -[[Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]]	
 		(Negative is part of negative log likelihood function. Refer to gradient_log_likelihood)
 		
-	Hessian Matrix / Second Differentiation (with respect to beta) of Log Likelihood Function / 
+	Hessian Matrix :
+		Second Differentiation (with respect to beta) of Log Likelihood Function
 		First Differentiation of Gradient of Log Likelihood Function
 		= 0 - [{(X*Exp(a + bX)*X)/(1 + Exp(a + bX))} + {(X*Exp(a + bX))/((1+Exp(a + bX))^2)*(Exp(a + bX)*X)}]	
 			(Differentiation of [Yi*X] will be 0 due to no beta.
