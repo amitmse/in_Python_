@@ -1,7 +1,9 @@
 # Logistic Regression
 		https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
-## Logistic regression assumptions: 		(http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf)
+## Logistic regression assumptions: 		
+http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
+
 	1. Dependent variable should be binary
 	2. Linearity between independent & log odds 
 	     (non-linear relationship between the dependent and independent variables)
