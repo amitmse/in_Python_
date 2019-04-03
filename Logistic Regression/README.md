@@ -9,7 +9,8 @@
 	4. No perfect multicollinearity
     
 Logistic regression uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) tested in statistical analysis.
-Does not assume: 
+
+	Does not assume: 
 		- normality of variables (both DV and IVs)
 		
 		- linearity between DV and IVs
