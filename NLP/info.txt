@@ -1,0 +1,63 @@
+										Natural Language Processing
+------------------------------------------------------------------------------------------------------------------------------
+
+--	Introduction to Natural Language Processing		: https://www.youtube.com/playlist?list=PLLssT5z_DsK8BdawOVCCaTCO99Ya58ryR
+													  https://www.coursera.org/learn/natural-language-processing
+--	Text Mining and Analytics by ChengXiang Zhai 	: https://www.youtube.com/playlist?list=PLLssT5z_DsK8Xwnh_0bjN4KNT81bekvtt
+													  https://www.coursera.org/learn/text-mining/home/week/1
+
+
+--------------------------------------------------------------------------------
+-- https://www.analyticsvidhya.com/blog/2014/11/text-data-cleaning-steps-python/
+
+https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/
+https://www.analyticsvidhya.com/blog/2017/04/natural-language-processing-made-easy-using-spacy-%E2%80%8Bin-python/
+
+http://www.nltk.org/
+http://www.nltk.org/book/
+http://www.nltk.org/book/ch03.html
+http://www.nltk.org/book/ch01.html
+https://www.dataquest.io/blog/natural-language-processing-with-python/
+
+https://www.coursera.org/learn/text-mining/home/week/1
+
+http://cs224d.stanford.edu/syllabus.html
+http://web.stanford.edu/class/cs224n/syllabus.html
+
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-864-advanced-natural-language-processing-fall-2005/
+http://www.cs.jhu.edu/~jason/465/
+
+http://xrds.acm.org/blog/2017/01/build-natural-language-processing-based-intelligent-assistant-using-python-easy/
+http://blog.algorithmia.com/introduction-natural-language-processing-nlp/
+http://okfnlabs.org/blog/2013/11/11/python-nlp.html
+http://www.vikparuchuri.com/blog/natural-language-processing-tutorial/
+https://apps.worldwritable.com/tutorials/chatbot/
+http://rwet.decontextualize.com/book/textblob/
+http://www.cs.jhu.edu/~jason/465/hw-hmm/hw-hmm.pdf
+http://www.umiacs.umd.edu/~resnik/pubs/gibbs.pdf
+https://nlp.stanford.edu/fsnlp/promo/
+https://nlp.stanford.edu/IR-book/
+http://stackoverflow.com/questions/526469/practical-examples-of-nltk-use
+https://www.slideshare.net/japerk/nltk-in-20-minutes
+https://www.ibm.com/developerworks/library/l-cpnltk/
+https://docs.continuum.io/anaconda-cluster/howto/spark-nltk
+https://medium.com/broken-window/how-to-get-into-natural-language-processing-2011bf9f4cfe
+https://www.quora.com/How-do-I-learn-Natural-Language-Processing
+http://www.cs.utexas.edu/~mooney/cs388/
+
+http://victoria.lviv.ua/html/fl5/NaturalLanguageProcessingWithPython.pdf
+http://desilinguist.org/pdf/crossroads.pdf
+
+------------------------------------------------------------
+---- exercises
+
+https://github.com/sahiga/nlp-exercises
+https://sites.google.com/site/gothnlp/exercises/exams
+
+https://training-course-material.com/training/Natural_Language_Processing_in_Python
+
+--------------------------------------------------------------
+Lexicon Normalization : multiple representations exhibited by single word (textual noise) i.e. “play”, “player”, “played”, “plays” and “playing” are the different variations of the word – “play”.
+The most common lexicon normalization practices are :
+		-	Stemming:  		Stemming is a rudimentary rule-based process of stripping the suffixes (“ing”, “ly”, “es”, “s” etc) from a word.
+		-	Lemmatization: 	Lemmatization, on the other hand, is an organized & step by step procedure of obtaining the root form of the word, it makes use of vocabulary (dictionary importance of words) and morphological analysis (word structure and grammar relations).
