@@ -13,9 +13,6 @@ Because logistic regression uses MLE rather than OLS, it avoids many of the typi
 	-	Does not assume normal errors.
 	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
   
-Maximum likelihood estimation (MLE):  	
-	- finds parameter values that maximize the likelihood of making the observations given the parameters
- 
-Ordinary Least Squares (OLS): 
-	- finds parameter values that minimizing the error
+Maximum likelihood estimation (MLE): Finds parameter values that maximize the likelihood of making the observations given the parameters
+Ordinary Least Squares (OLS): Finds parameter values that minimizing the error
 
