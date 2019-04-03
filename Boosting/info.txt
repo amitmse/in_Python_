@@ -79,7 +79,7 @@ Gradient boosting involves three elements: http://machinelearningmastery.com/gen
 	2. A weak learner to make predictions: 
 		- Decision trees are used as the weak learner in gradient boosting.
 		- Specifically regression trees are used that output real values for splits and whose output can be added together, 
-				allowing subsequent models outputs to be added and ìcorrectî the residuals in the predictions.
+				allowing subsequent models outputs to be added and ‚Äúcorrect‚Äù the residuals in the predictions.
 		- Trees are constructed in a greedy manner, choosing the best split points based on purity scores like Gini or to minimize the loss.
 		- Initially, such as in the case of AdaBoost, very short decision trees were used that only had a single split, 
 				called a decision stump. Larger trees can be used generally with 4-to-8 levels.
@@ -132,10 +132,10 @@ ADA : https://www.coursera.org/learn/ml-classification/home/welcome
 
 	
 Adaboost vs Gradient Boosting: http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/slides/gradient_boosting.pdf
-		- Adaboost: 		"shortcomingsî are identified by high-weight data points.
-		- Gradient Boosting: ìshortcomingsî are identified by gradients. 
+		- Adaboost: 		"shortcomings‚Äù are identified by high-weight data points.
+		- Gradient Boosting: ‚Äúshortcomings‚Äù are identified by gradients. 
 
-Gradient Boosting Part1ñVisual Conceptualization : http://dimensionless.in/gradient-boosting/
+Gradient Boosting Part1‚ÄìVisual Conceptualization : http://dimensionless.in/gradient-boosting/
 	It combines a set of weak learners and delivers improved prediction accuracy.
 	
 	
@@ -162,7 +162,7 @@ One simple way is to build an entirely different model using new set of input va
 	What if I am able to see that error is not a white noise but have same correlation with outcome(Y) value. What if we can develop a model on this error term? Like,
 
 	error = G(x) + error2
-	Probably, youíll see error rate will improve to a higher number, say 84%. Letís take another step and regress against error2.
+	Probably, you‚Äôll see error rate will improve to a higher number, say 84%. Let‚Äôs take another step and regress against error2.
 
 	error2 = H(x) + error3
 	Now we combine all these together :
@@ -175,7 +175,7 @@ One simple way is to build an entirely different model using new set of input va
 
 	Do we really see non white noise error in regression/classification equations? If not, how can we even use this algorithm?
 	Wow, if this is possible, why not get near 100% accuracy?
-	Iíll answer these questions in this article, however, in a crisp manner. Boosting is generally done on weak learners, which do not have a capacity to leave behind white noise.  
+	I‚Äôll answer these questions in this article, however, in a crisp manner. Boosting is generally done on weak learners, which do not have a capacity to leave behind white noise.  
 	Secondly, boosting can lead to overfitting, so we need to stop at the right point.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -248,4 +248,41 @@ http://mccormickml.com/2013/12/13/adaboost-tutorial/
 There are three bits of intuition to take from this graph:
 	1. The classifier weight grows exponentially as the error approaches 0. Better classifiers are given exponentially more weight.
 	2. The classifier weight is zero if the error rate is 0.5. A classifier with 50% accuracy is no better than random guessing, so we ignore it.
-	3. The classifier weight grows exponentially negative as the error approaches 1. We give a negative weight to classifiers with worse worse than 50% accuracy. ìWhatever that classifier says, do the opposite!î.
+	3. The classifier weight grows exponentially negative as the error approaches 1. We give a negative weight to classifiers with worse worse than 50% accuracy. ‚ÄúWhatever that classifier says, do the opposite!‚Äù.
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+http://blog.hackerearth.com/beginners-tutorial-on-xgboost-parameter-tuning-r
+
+What is XGBoost ? Why is it so good ?
+XGBoost (Extreme Gradient Boosting) is an optimized distributed gradient boosting library. 
+Yes, it uses gradient boosting (GBM) framework at core. Yet, does better than GBM framework alone. 
+XGBoost was created by Tianqi Chen, PhD Student, University of Washington. It is used for supervised ML problems.  
+Let's look at what makes it so good:
+
+1. Parallel Computing: It is enabled with parallel processing (using OpenMP); i.e., when you run xgboost, by default, it would use all the cores of your laptop/machine.
+2. Regularization: I believe this is the biggest advantage of xgboost. 
+					GBM has no provision for regularization. Regularization is a technique used to avoid overfitting in linear and tree-based models.
+3. Enabled Cross Validation: In R, we usually use external packages such as caret and mlr to obtain CV results. But, xgboost is enabled with internal CV function (we'll see below).
+4. Missing Values: XGBoost is designed to handle missing values internally. 
+					The missing values are treated in such a manner that if there exists any trend in missing values, it is captured by the model.
+5. Flexibility: In addition to regression, classification, and ranking problems, it supports user-defined objective functions also. 
+					An objective function is used to measure the performance of the model given a certain set of parameters. 
+					Furthermore, it supports user defined evaluation metrics as well.
+6. Availability: Currently, it is available for programming languages such as R, Python, Java, Julia, and Scala.
+7. Save and Reload: XGBoost gives us a feature to save our data matrix and model and reload it later. 
+					Suppose, we have a large data set, we can simply save the model and use it in future instead of wasting time redoing the computation.
+8. Tree Pruning: Unlike GBM, where tree pruning stops once a negative loss is encountered, 
+					XGBoost grows the tree upto max_depth and then prune backward until the improvement in loss function is below a threshold.
+
+		
+XG Boost: 
+			https://www.quora.com/What-is-the-difference-between-the-R-gbm-gradient-boosting-machine-and-xgboost-extreme-gradient-boosting
+			https://www.quora.com/When-would-one-use-Random-Forests-over-Gradient-Boosted-Machines-GBMs/answer/Tianqi-Chen-1
+			https://www.quora.com/What-makes-xgboost-run-much-faster-than-many-other-implementations-of-gradient-boosting/answer/Tianqi-Chen-1
+			http://xgboost.readthedocs.io/en/latest/model.html						
+			
+		- I am the author of xgboost. Both xgboost and gbm follows the principle of gradient boosting.  There are however, the difference in modeling details. 
+				Specifically,  xgboost used a more regularized model formalization to control over-fitting, which gives it better performance.
