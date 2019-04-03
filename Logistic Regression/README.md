@@ -32,16 +32,16 @@ Derivation of Logistic Regression:
 		Y = a + bX (Y = dependent_variable, a=Intercept, b = coefficient, X = independent_variable)
 	
 	Logit function/Sigmoid Function:
-		Y 		= xp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}] = 1/(1+exp^-y)
-		1 - Y 		= xp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}	  = 1/(1+exp^y)
-		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}] 	  = Exp(a + bX) = exp^y
+		Y 		= xp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}]  = 1/(1+exp^-y)
+		1 - Y 		= xp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}	    = 1/(1+exp^y)
+		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
 	
 	Maximum Likelihood: 
 		finds parameter values that maximize the likelihood of making the observations given the parameters
 		(https://onlinecourses.science.psu.edu/stat414/node/191)
 		Pi = {Pr(Yi = 1/Xi) if Yi = 1}	= Pr^Yi (Yi is a Bernoulli random variable) P
-		{1 - Pr(Yi = 1/Xi)   if Yi = 0}	= (1-Pr)^(1-Yi)	1-P
+		{1 - Pr(Yi = 1/Xi)  if Yi = 0}	= (1-Pr)^(1-Yi)	1-P
 			
 	Likelihood function/Joint probability density function: (Yi is success and failure)
 	(https://stats.stackexchange.com/questions/211848/likelihood-why-multiply)
