@@ -74,8 +74,8 @@
 	AIC						= (No of variable*2)               - (2*-Log Likelihood)
 	BIC						= {No of variable*log(No of obs)}  - (2*-Log Likelihood)
 	VIF 						= 1.0 / (1.0 - R Squared)
-	Gini/Somerís D 					= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
-	Divergence 					= [(meanG ñ meanB)^2] / [0.5(varG + varB)]	[meanG = mean of score only for good, varB= variance of score only for bad ]
+	Gini/Somer‚Äôs D 					= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+	Divergence 					= [(meanG ‚Äì meanB)^2] / [0.5(varG + varB)]	[meanG = mean of score only for good, varB= variance of score only for bad ]
 	Area under curve /C statistics 			= Percent Concordant + 0.5 * Percent Tied	
 								(The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.)
 								True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate (100-Specificity : X axis) for different cut-off points. 
@@ -93,8 +93,8 @@ The determinant of a matrix is also sometimes referred to as the Hessian. The He
 Hessian matrices are used in large-scale optimization problems within Newton-type methods because they are the coefficient of the quadratic term of a local Taylor expansion of a function.
 A bordered Hessian (Lagrange function) is used for the second-derivative test in certain constrained optimization problems.
 The Hessian matrix of a convex function is positive semi-definite. And this property allows us to test if a critical point x is a local maximum, local minimum, or a saddle point, as follows:
-	-	If the Hessian is positive definite at x, then f attains an isolated local minimum at x. This is like ìconcave upî. 
-	-	If the Hessian is negative definite at x, then f attains an isolated local maximum at x. This is like ìconcave downî.
+	-	If the Hessian is positive definite at x, then f attains an isolated local minimum at x. This is like ‚Äúconcave up‚Äù. 
+	-	If the Hessian is negative definite at x, then f attains an isolated local maximum at x. This is like ‚Äúconcave down‚Äù.
 	-	If the Hessian has both positive and negative eigenvalues then x is a saddle point for f. Otherwise the test is inconclusive. Graph is concave up in one direction and concave down in the other.
 	-	This implies that, at a local minimum (respectively, a local maximum), the Hessian is positive-semi-definite (respectively, negative semi-definite).
 
@@ -487,9 +487,9 @@ def calculate_metrics(output_estimate_logistic_model, lift_table):
 		percent_tied 			= 	round((float(tied) / float(total_pairs))*100,1)
 		##Area under curve (c statistics) = Percent Concordant + 0.5 * Percent Tied		
 		roc 					= 	((float(concordant) / float(total_pairs)) + 0.5 * (float(tied) / float(total_pairs)))
-		##A statistic that works out mathematically the same as the Gini is Somerís D [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+		##A statistic that works out mathematically the same as the Gini is Somer‚Äôs D [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
 		gini 					= 	(2*((float(concordant) / float(total_pairs)) + 0.5 * (float(tied) / float(total_pairs))) - 1)
-		##Divergence = [(meanG ñ meanB)^2] / [0.5(varG + varB)]	[meanG = mean of score only for good, varB= variance of score only for bad ]
+		##Divergence = [(meanG ‚Äì meanB)^2] / [0.5(varG + varB)]	[meanG = mean of score only for good, varB= variance of score only for bad ]
 		divergence  			= 	((float(np.mean(actual_predicted[actual_predicted[dependent_variable_name]==0]['predicted_value'])) - float(np.mean(actual_predicted[actual_predicted[dependent_variable_name]==1]['predicted_value'])))**2)/(0.5*(float(np.var(actual_predicted[actual_predicted[dependent_variable_name]==0]['predicted_value'],ddof=1)) + float(np.var(actual_predicted[actual_predicted[dependent_variable_name]==1]['predicted_value'],ddof=1))))
 				
 		metrics_type 			= np.dtype([('Col1', 'S100'), ('Col2', 'float64'),( 'Col3', 'S100'), ('Col4', 'float64')])
