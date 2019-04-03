@@ -11,9 +11,13 @@
 Logistic regression uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) tested in statistical analysis.
 Does not assume: 
 		- normality of variables (both DV and IVs)
+		
 		- linearity between DV and IVs
+		
 		- homoscedasticity
+		
 		- normal errors
+		
 MLE allows more flexibility in the data and analysis because it has fewer restrictions
   
 Maximum likelihood estimation (MLE): 
