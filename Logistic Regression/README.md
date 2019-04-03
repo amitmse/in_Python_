@@ -1,5 +1,5 @@
 # Logistic Regression
-		https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
+https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
 ## Logistic regression assumptions: 		
 http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
