@@ -51,7 +51,8 @@ Derivation of Logistic Regression:
 		(Applying Logs on likelihood equation and  product will become sum. Refer to property of LOG)
 		= Sum[{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}] (Apply log in above eq. and simplify it. cost function)
 		= Sum[Yi*Log(Pr) - Yi*Log(1-Pr) + Log(1-Pr)]
-		= Sum[Yi*Log{Pr/(1-Pr)}] + Sum[Log(1-Pr)] [Substitute [Log{Pr/(1-Pr) = a + bX] and [1-Pr = 1 / {1 + Exp(a + bX)}]]
+		= Sum[Yi*Log{Pr/(1-Pr)}] + Sum[Log(1-Pr)] 
+			[Substitute [Log{Pr/(1-Pr) = a + bX] and [1-Pr = 1 / {1 + Exp(a + bX)}]]
 		= Sum[Yi*(a + bX)] + Sum[Log{1/1 + Exp(a + bX)}]
 		= Sum[Yi*(a + bX)] + Sum[ Log(1) - Log{1 + Exp(a + bX)}] (Log(1) = 0)
 		= Sum[Yi*(a + bX)] - Sum[Log{1 + Exp(a + bX)}]				
