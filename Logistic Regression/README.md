@@ -77,21 +77,56 @@ Derivation of Logistic Regression:
 			
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-	beta(x) 	= covariance(x,y) / variance(x)
-	correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
-	TSS 		= SUM[y-mean(y)]^2
-	RSS 		= SUM[y-predicted(y)]^2
-	R Squared	= 1.0 - (RSS/TSS)
-	AIC		= (No of variable*2)               - (2*-Log Likelihood)
-	BIC		= {No of variable*log(No of obs)}  - (2*-Log Likelihood)
-	VIF 		= 1.0 / (1.0 - R Squared)
-	Gini/Somer’s D 	= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
-	Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]	
-				[meanG = mean of score only for good, varB= variance of score only for bad ]
-				
-	Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied 
-	The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as 
-	its discrimination 	threshold is varied. True positive rate (Sensitivity : Y axis ) is plotted in 
-	function of the false positive rate (100-Specificity : X axis) for different cut-off points. 
-	Each point on the ROC curve represents a sensitivity/specificity pair corresponding to a particular 
-	decision threshold.
+beta(x) 	= covariance(x,y) / variance(x)
+correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
+TSS 		= SUM[y-mean(y)]^2
+RSS 		= SUM[y-predicted(y)]^2
+R Squared	= 1.0 - (RSS/TSS)
+AIC		= (No of variable*2)               - (2*-Log Likelihood)
+BIC		= {No of variable*log(No of obs)}  - (2*-Log Likelihood)
+VIF 		= 1.0 / (1.0 - R Squared)
+Gini/Somer’s D 	= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]	
+			[meanG = mean of score only for good, varB= variance of score only for bad ]
+			
+Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied 
+The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as 
+its discrimination 	threshold is varied. True positive rate (Sensitivity : Y axis ) is plotted in 
+function of the false positive rate (100-Specificity : X axis) for different cut-off points. 
+Each point on the ROC curve represents a sensitivity/specificity pair corresponding to a particular decision threshold.
+	
+Standard Error Coef: 
+	Linear regression standard error of Coef : SE  = sqrt [ S(yi - yi)2 / (n - 2) ] / sqrt [ S(xi - x)2 ]
+	http://support.minitab.com/en-us/minitab-express/1/help-and-how-to/modeling-statistics/regression/how-to/binary-logistic-regression/interpret-the-results/all-statistics-and-graphs/coefficients/
+	The standard error of the coefficient estimates the variability between coefficient estimates that you would 
+	obtain if you took samples from the same population again and again. The calculation assumes that the sample 
+	size and the coefficients to estimate would remain the same if you sampled again and again.
+	Interpretation : Use the standard error of the coefficient to measure the precision of the estimate of the coefficient. 
+	The smaller the standard error, the more precise the estimate. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3976195/
+
+Jacobian is similar to first order derivative and Hessian is similar to second order derivative.
+	The determinant of a matrix is also sometimes referred to as the Hessian. 
+	The Hessian matrix can be considered related to the Jacobian matrix. 
+	Hessian matrices are used in large-scale optimization problems within Newton-type methods because they are 
+	the coefficient of the quadratic term of a local Taylor expansion of a function.
+	A bordered Hessian (Lagrange function) is used for the second-derivative test in certain constrained 
+	optimization problems.
+	The Hessian matrix of a convex function is positive semi-definite. And this property allows us to test 
+	if a critical point x is a local maximum, local minimum, or a saddle point, as follows:
+	 - If the Hessian is positive definite at x, then f attains an isolated local minimum at x. This is like “concave up”. 
+	 - If the Hessian is negative definite at x, then f attains an isolated local maximum at x. This is like “concave down”.
+	 - If the Hessian has both positive and negative eigenvalues then x is a saddle point for f. 
+	   Otherwise the test is inconclusive. Graph is concave up in one direction and concave down in the other.
+	- This implies that, at a local minimum (respectively, a local maximum), the Hessian is positive-semi-definite
+	  (respectively, negative semi-definite).
+
+If the gradient (the vector of the partial derivatives) of a function f is zero at some point x, then f has a 
+critical point (or stationary point) at x. The determinant of the Hessian at x is then called the discriminant. 
+If this determinant is zero then x is called a degenerate critical point of f. Otherwise it is non-degenerate.
+
+Jacobian matrix is the matrix of first-order partial derivatives of a vector-valued function. When the matrix is a 
+square matrix, both the matrix and its determinant are referred to as the Jacobian determinant.
+The Jacobian of the gradient of a scalar function of several variables has a special name: the Hessian matrix, 
+which in a sense is the "second derivative" of the function.
+
+http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
