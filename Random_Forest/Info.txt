@@ -1,0 +1,158 @@
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+							Random Forest
+----------------------------------------------------------------------------
+https://citizennet.com/blog/2012/11/10/random-forests-ensembles-and-performance-metrics/
+https://github.com/amitmse/treelearn
+
+https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf
+https://datajobs.com/data-science-repo/Random-Forest-[Frederick-Livingston].pdf
+http://www.stat.berkeley.edu/~breiman/RandomForests/cc_examples/prog.f
+https://epub.ub.uni-muenchen.de/13766/1/TR.pdf
+http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
+http://people.csail.mit.edu/menze/papers/menze_11_oblique.pdf
+http://ijcsi.org/papers/IJCSI-9-5-3-272-278.pdf
+http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Ren_Global_Refinement_of_2015_CVPR_paper.pdf
+http://www.normalesup.org/~scornet/paper/test.pdf
+http://lrs.icg.tugraz.at/pubs/saffari_olcv_09.pdf
+http://www-stat.wharton.upenn.edu/~mtraskin/misc/rf.html
+http://www.enggjournals.com/ijet/docs/IJET14-06-02-219.pdf
+https://sourceforge.net/projects/triangleinequal/files/machine%20learning/
+
+https://www.quora.com/How-does-randomization-in-a-random-forest-work?redirected_qid=212859
+
+https://www.coursera.org/learn/practical-machine-learning/lecture/XKsl6/random-forests
+
+
+https://www.coursera.org/learn/machine-learning-data-analysis/home/week/2
+https://www.coursera.org/learn/machine-learning-data-analysis/lecture/eTO92/building-a-random-forest-with-python
+
+https://www.coursera.org/learn/practical-machine-learning/lecture/XKsl6/random-forests
+https://www.coursera.org/learn/practical-machine-learning/lecture/EALzX/predicting-with-trees
+
+https://www.coursera.org/learn/predictive-analytics/home/week/2
+https://github.com/igorlukanin/coursera-hse-machine-learning/tree/master/week5/lesson1
+
+
+https://www.youtube.com/watch?v=0GrciaGYzV0##
+http://nullege.com/codes/show/src@s@c@scikit-learn-0.14.1@examples@applications@plot_outlier_detection_housing.py/58/sklearn.datasets.load_boston/python
+http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier
+
+http://scikit-learn.org/stable/modules/ensemble.html#forest
+http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+http://scikit-learn.org/stable/auto_examples/ensemble/plot_bias_variance.html#sphx-glr-auto-examples-ensemble-plot-bias-variance-py
+http://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html
+http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.html#sphx-glr-auto-examples-model-selection-randomized-search-py
+
+http://www.listendata.com/2014/11/random-forest-with-r.html
+http://scott.fortmann-roe.com/docs/BiasVariance.html
+http://scikit-learn.org/stable/modules/ensemble.html
+http://www.ultravioletanalytics.com/2014/12/12/kaggle-titanic-competition-part-ix-bias-variance-and-learning-curves/
+https://blog.cambridgecoding.com/2016/03/24/misleading-modelling-overfitting-cross-validation-and-the-bias-variance-trade-off/
+http://gerardnico.com/wiki/data_mining/bias_trade-off
+http://link.springer.com/article/10.1186%2F1471-2105-8-25
+https://hal.archives-ouvertes.fr/hal-00755489/file/PRLv4.pdf
+
+#Mean decrease impurity
+http://blog.datadive.net/selecting-good-features-part-iii-random-forests/
+http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/
+#stability
+http://blog.datadive.net/selecting-good-features-part-iv-stability-selection-rfe-and-everything-side-by-side/
+
+https://www.kaggle.com/nirajvermafcb/d/dalpozz/creditcardfraud/decision-trees
+
+#bias variance
+http://scikit-learn.org/stable/auto_examples/ensemble/plot_bias_variance.html#sphx-glr-auto-examples-ensemble-plot-bias-variance-py
+
+https://www.quora.com/How-do-we-calculate-variable-importance-for-a-regression-tree-in-random-forests
+https://stats.stackexchange.com/questions/6478/how-to-measure-rank-variable-importance-when-using-cart-specifically-using
+----------------------------------------------------------------------------------
+http://stats.stackexchange.com/questions/59124/random-forest-assumptions
+I am kind of new to random forest so I am still struggling with some basic concepts. 
+In linear regression, we assume independent observations, constant variance…
+	-	What are the basic assumptions/hypothesis we make, when we use random forest?
+	-	What are the key differences between random forest and naive bayes in terms of model assumptions?
+	
+Thanks for a very good question! I will try to give my intuition behind it. 
+In order to understand this, remember the "ingredients" of random forest classifier (there are some modifications, but this is the general pipeline):
+	1.	At each step of building individual tree we find the best split of data
+	2.	While building a tree we use not the whole dataset, but bootstrap sample
+	3.	We aggregate the individual tree outputs by averaging (actually 2 and 3 means together more general bagging procedure).
+	
+	Assume first point. It is not always possible to find the best split. 
+	For example in the following dataset each split will give exactly one misclassified object. 
+	And I think that exactly this point can be confusing: indeed, 
+	the behaviour of the individual split is somehow similar to the behaviour of Naive Bayes classifier: 
+	if the variables are dependent - there is no better split for Decision Trees and Naive Bayes classifier also fails 
+	(just to remind: independent variables is the main assumption that we make in Naive Bayes classifier; 
+	all other assumptions come from the probabilistic model that we choose). 
+	But here comes the great advantage of decision trees: we take any split and continue splitting further. 
+	And for the following splits we will find a perfect separation (in red). 
+	And as we have no probabilistic model, but just binary split, we don't need to make any assumption at all. 
+	That was about Decision Tree, but it also applies for Random Forest. The difference is that for Random Forest we use Bootstrap Aggregation. 
+	It has no model underneath, and the only assumption that it relies is that sampling is representative. 
+	But this is usually a common assumption. For example, if one class consist of two components and in our dataset one component is represented by 100 samples, 
+	and another component is represented by 1 sample - probably most individual decision trees will see only the first component and 
+	Random Forest will misclassify the second one. 
+
+https://home.zhaw.ch/~dueo/bbs/files/random-forest-intro-presented.pdf
+
+----------------------------------------------------------------------------
+	
+	
+Here is how such a system is trained; for some number of trees T:
+		1. Sample N cases at random with replacement to create a subset of the data (see top layer of figure above). The subset should be about 66% of the total set.
+		2. At each node:
+			- For some number m (see below), m predictor variables are selected at random from all the predictor variables.
+			- The predictor variable that provides the best split, according to some objective function, is used to do a binary split on that node.
+			- At the next node, choose another m variables at random from all predictor variables and do the same.
+		3. Depending upon the value of m, there are three slightly different systems:
+			- Random splitter selection: m =1
+			- Breiman’s bagger: m = total number of predictor variables
+			- Random forest: m << number of predictor variables. Brieman suggests three possible values for m: 1/2(sqrt(vm)), sqrt(vm), and sqrt(2vm)
+		4. Running a Random Forest. When a new input is entered into the system, it is run down all of the trees. 
+				The result may either be an average or weighted average of all of the terminal nodes that are reached, or, in the case of categorical variables, a voting majority.
+		Note that:
+			- With a large number of predictors, the eligible predictor set will be quite different from node to node.
+			- The greater the inter-tree correlation, the greater the random forest error rate, so one pressure on the model is to have the trees as uncorrelated as possible.
+			- As m goes down, both inter-tree correlation and the strength of individual trees go down. So some optimal value of m must be discovered.
+		5. To understand how we test the classifier, we must explain several concepts:
+			- cross-validation :
+			- thresholds :
+			- mean precision:
+			- precision above chance:
+			
+http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
+The random forests algorithm (for both classification and regression) is as follows:
+		1. Draw ntree bootstrap samples from the original data
+		2. For each of the bootstrap samples, grow an unpruned classification or regression tree, with the following modification: at each node, rather
+				than choosing the best split among all predictors, randomly sample mtry of the predictors and choose the best split from among those
+				variables. (Bagging can be thought of as the special case of random forests obtained when mtry = p, the number of predictors.)
+		3. Predict new data by aggregating the predictions of the ntree trees (i.e., majority votes for classification, average for regression).
+		
+	An estimate of the error rate can be obtained, based on the training data, by the following:
+		1. At each bootstrap iteration, predict the data not in the bootstrap sample (what Breiman calls “out-of-bag”, or OOB, data) using the tree
+					grown with the bootstrap sample.
+		2. Aggregate the OOB predictions. (On the average, each data point would be out-of-bag around 36% of the times, so aggregate these predictions.) 	
+					Calcuate the error rate, and call it the OOB estimate of error rate.
+	Our experience has been that the OOB estimate of error rate is quite accurate, given that enough trees have been grown (otherwise the OOB estimate can
+					bias upward; see Bylander (2002))
+
+bias-variance: 
+	For example, if you have high variance, one common solution is to add more features from which to learn. This very frequently increases bias, so there’s a tradeoff to take into consideration.
+	Tune: 	http://stackoverflow.com/questions/36107820/how-to-tune-parameters-in-random-forest-using-scikit-learn
+		- n_estimators is not really worth optimizing. The more estimators you give it, the better it will do. 500 or 1000 is usually sufficient. ususally bigger the forest the better, there is small chance of overfitting here
+		- max_features is worth exploring for many different values. It may have a large impact on the behavior of the RF because it decides how many features each tree in the RF considers at each split. 
+				Try reducing this number (try 30-50% of the number of features). This determines how many features each tree is randomly assigned. The smaller, the less likely to overfit, but too small will start to introduce under fitting.
+		- max depth of each tree (default none, leading to full tree) - reduction of the maximum depth helps fighting with overfitting. 
+				This will reduce the complexity of the learned models, lowering over fitting risk. Try starting small, say 5-10, and increasing you get the best result.
+		- criterion may have a small impact, but usually the default is fine. If you have the time, try it out.
+		- Make sure to use sklearn's GridSearch (preferably GridSearchCV, but your data set size is too small) when trying out these parameters.
+		- my default setting for a first run is: 1000 trees, 1/2 features per node, out of bag performance weighting, Gini Index for node evaluation.
+		- https://medium.com/@chris_bour/6-tricks-i-learned-from-the-otto-kaggle-challenge-a9299378cd61#.62v2igttw
+		- plot_learning_curve: http://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html
+		- http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.html#sphx-glr-auto-examples-model-selection-randomized-search-py
+		
+		
+
+		

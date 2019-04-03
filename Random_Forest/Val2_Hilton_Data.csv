@@ -1,0 +1,2001 @@
+reservation,os_cat,dd,country,browser_cat,Property_Brand
+Non-Purchase,Mac,D,United States,Safari,HW
+Purchase,Windows,D,Sweden,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,CH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Sweden,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Mac,D,Australia,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HW
+Non-Purchase,Others,D,United States,Firefox,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Android,T,United Kingdom,Others,DT
+Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,Unknown,Safari,HH
+Purchase,Windows,D,United Kingdom,MSIE,GI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,Hong Kong,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Others,D,United Kingdom,Chrome,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Spain,MSIE,HI
+Non-Purchase,Windows,D,Canada,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,MSIE,GI
+Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Ireland,MSIE,DT
+Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,Austria,Firefox,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,Spain,MSIE,HI
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Android,T,United States,Chrome,DT
+Non-Purchase,Windows,D,United States,Firefox,HH
+Non-Purchase,Windows,D,Israel,Chrome,HP
+Non-Purchase,Windows,D,Spain,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,Spain,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,WA
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Others,D,France,Firefox,HI
+Purchase,Mac,D,Austria,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,France,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United States,Safari,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Sweden,MSIE,DT
+Non-Purchase,Windows,D,Canada,MSIE,HI
+Non-Purchase,Mac,D,Australia,Chrome,Others
+Non-Purchase,Mac,D,Australia,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Chrome,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Hungary,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,GI
+Non-Purchase,Others,D,United States,Chrome,HI
+Non-Purchase,Windows,D,Denmark,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Mac,D,Unknown,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,China,MSIE,HP
+Non-Purchase,iOS,T,United Arab Emirates,Safari,HI
+Non-Purchase,iOS,T,United States,Safari,HH
+Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Mac,D,Unknown,Chrome,TM
+Non-Purchase,Mac,D,Switzerland,Safari,DT
+Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,India,Safari,HI
+Non-Purchase,Mac,D,India,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,Firefox,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Europe,MSIE,HI
+Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,Others
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Denmark,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,iOS,T,Norway,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,Luxembourg,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,CH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Firefox,WA
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Australia,Firefox,GI
+Non-Purchase,Windows,D,Ireland,Firefox,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United States,MSIE,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Israel,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,Italy,MSIE,DT
+Non-Purchase,Windows,D,Austria,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,Unknown,Safari,HI
+Non-Purchase,Windows,D,United Arab Emirates,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,France,MSIE,HI
+Non-Purchase,Windows,D,Canada,MSIE,HI
+Non-Purchase,Windows,D,Germany,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Firefox,CH
+Non-Purchase,Android,T,Germany,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,Unknown,Firefox,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,Japan,Chrome,DT
+Non-Purchase,Windows,D,Japan,Chrome,HI
+Purchase,Mac,D,Unknown,Chrome,HI
+Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,Firefox,HH
+Non-Purchase,Mac,D,Taiwan,Firefox,HI
+Non-Purchase,Windows,D,Germany,MSIE,WA
+Non-Purchase,Mac,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,Norway,MSIE,HH
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Mac,D,Canada,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Non-Purchase,Windows,D,Brazil,Firefox,WA
+Non-Purchase,Windows,D,United States,Firefox,HH
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Arab Emirates,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Firefox,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,France,Firefox,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Mac,D,Japan,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HP
+Non-Purchase,Windows,D,Germany,MSIE,HI
+Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Mac,D,Thailand,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Switzerland,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,DT
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,Unknown,Safari,HP
+Non-Purchase,Windows,D,Ireland,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,France,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,Italy,Safari,DT
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Canada,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,Others
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,Mac,D,United States,Chrome,CH
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Firefox,WA
+Non-Purchase,Android,T,United Kingdom,Chrome,HP
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HH
+Purchase,iOS,T,Spain,Safari,HI
+Non-Purchase,Mac,D,United States,Firefox,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,Korea,Others,Others
+Non-Purchase,Mac,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,Australia,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Chrome,HP
+Non-Purchase,Others,D,United States,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Germany,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Europe,Chrome,HI
+Purchase,Windows,D,Switzerland,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Firefox,DT
+Non-Purchase,Windows,D,Unknown,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,Israel,Chrome,DT
+Non-Purchase,iOS,T,Unknown,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,China,Chrome,CH
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,Hong Kong,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Germany,MSIE,GI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,New Zealand,Safari,HI
+Non-Purchase,Mac,D,United States,Chrome,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Firefox,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Android,T,Ireland,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,iOS,T,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Netherlands,MSIE,HH
+Non-Purchase,Windows,D,United States,Firefox,HI
+Non-Purchase,Windows,D,Australia,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Mac,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,CH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HP
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,iOS,T,Norway,Safari,HI
+Non-Purchase,Mac,D,Unknown,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,Bahrain,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,Australia,Chrome,HI
+Non-Purchase,Windows,D,Greece,Chrome,HH
+Purchase,Windows,D,Portugal,MSIE,DT
+Non-Purchase,Mac,D,Finland,Safari,HH
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,Germany,MSIE,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,Unknown,Chrome,DT
+Non-Purchase,Mac,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,Malaysia,MSIE,HI
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,Unknown,Safari,DT
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Windows,D,United States,Firefox,DT
+Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United States,Firefox,HI
+Non-Purchase,iOS,T,United States,Safari,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,CH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Android,T,Bahrain,Others,DT
+Purchase,Windows,D,France,Firefox,HI
+Non-Purchase,Windows,D,Germany,MSIE,HI
+Non-Purchase,Windows,D,Turkey,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United States,Chrome,HP
+Non-Purchase,Mac,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,Australia,Safari,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Italy,Firefox,DT
+Non-Purchase,Mac,D,Singapore,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,Singapore,Chrome,WA
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Others,D,Belgium,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,Mac,D,India,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,United States,Chrome,HI
+Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,Unknown,Safari,WA
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Mac,D,Germany,Firefox,DT
+Non-Purchase,Windows,D,Thailand,MSIE,DT
+Non-Purchase,Windows,D,Israel,Chrome,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,Unknown,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,China,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Mac,D,Spain,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Mac,D,United Kingdom,Chrome,DT
+Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Others,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United States,Firefox,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,Norway,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Turkey,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United States,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,Android,T,Austria,Chrome,HI
+Non-Purchase,Windows,D,China,MSIE,HI
+Non-Purchase,Windows,D,Australia,Firefox,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,Unknown,Safari,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Belgium,MSIE,DT
+Non-Purchase,Windows,D,Ireland,MSIE,DT
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Mac,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Brazil,Chrome,HI
+Non-Purchase,Windows,D,Bulgaria,Firefox,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United States,Safari,DT
+Non-Purchase,iOS,T,United States,Safari,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Hong Kong,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Mac,D,Unknown,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,Firefox,DT
+Non-Purchase,Windows,D,United States,Firefox,DT
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Canada,Firefox,HI
+Non-Purchase,Windows,D,Europe,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,Japan,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,Australia,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,Unknown,Chrome,HH
+Non-Purchase,Others,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,Belgium,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Ireland,MSIE,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,CH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Mac,D,Sweden,Firefox,DT
+Non-Purchase,Windows,D,France,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,WA
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Purchase,Windows,D,Ireland,Chrome,CH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Android,T,United Kingdom,Firefox,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Belgium,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United States,Safari,DT
+Non-Purchase,Windows,D,Switzerland,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Purchase,Windows,D,Canada,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United States,Safari,ES
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Mac,D,United States,Chrome,HH
+Non-Purchase,Windows,D,Hong Kong,MSIE,HI
+Non-Purchase,Windows,D,Europe,Chrome,HI
+Purchase,Windows,D,Egypt,Chrome,HP
+Non-Purchase,Android,T,United Kingdom,Chrome,Others
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Android,T,United Kingdom,Others,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Chrome,DT
+Non-Purchase,Windows,D,Finland,MSIE,DT
+Non-Purchase,Windows,D,Italy,Chrome,DT
+Non-Purchase,Mac,D,Germany,Safari,HI
+Purchase,Mac,D,Germany,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,iOS,T,United States,Safari,HH
+Non-Purchase,Windows,D,India,Chrome,HI
+Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,Ireland,Firefox,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,WA
+Non-Purchase,Others,D,United States,Firefox,HP
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Android,T,Europe,Others,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,iOS,T,Singapore,Safari,DT
+Purchase,iOS,T,United Kingdom,Safari,GI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,Ireland,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,Italy,Safari,HI
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United States,MSIE,CH
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Others,D,United States,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,China,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,Norway,MSIE,DT
+Non-Purchase,Windows,D,Malaysia,Chrome,WA
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,China,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United States,Chrome,GI
+Non-Purchase,Others,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,iOS,T,United States,Safari,HH
+Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,Belgium,MSIE,HI
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Egypt,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HP
+Non-Purchase,Android,T,Unknown,Chrome,DT
+Non-Purchase,Mac,D,Unknown,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,Ireland,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,United States,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United States,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,Canada,MSIE,GI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,Others
+Non-Purchase,Windows,D,Unknown,MSIE,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,GI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Others,D,United States,Chrome,HP
+Non-Purchase,Windows,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,Others
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Netherlands,Firefox,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Non-Purchase,Android,T,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United States,Chrome,CH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,GI
+Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Romania,Firefox,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HH
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,France,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Others,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Japan,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Germany,Firefox,HI
+Non-Purchase,iOS,T,Netherlands,Safari,DT
+Non-Purchase,Windows,D,Australia,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Mac,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,China,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,TM
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,Mac,D,Unknown,Safari,HP
+Purchase,Windows,D,Germany,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Arab Emirates,MSIE,DT
+Non-Purchase,Mac,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Android,T,Unknown,Chrome,HI
+Non-Purchase,Android,T,United States,Chrome,HH
+Non-Purchase,Windows,D,Austria,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,iOS,T,Europe,Safari,HI
+Non-Purchase,Mac,D,Germany,Safari,DT
+Non-Purchase,Windows,D,Ireland,MSIE,CH
+Non-Purchase,iOS,T,Unknown,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,iOS,T,Unknown,Safari,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,Hong Kong,Safari,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,GI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Windows,D,Europe,Chrome,HH
+Non-Purchase,Windows,D,Germany,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Mac,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Windows,D,China,MSIE,HI
+Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,iOS,T,Spain,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Romania,Chrome,GI
+Non-Purchase,Windows,D,Cyprus,Chrome,Others
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,Brazil,MSIE,CH
+Non-Purchase,Mac,D,United States,Safari,HP
+Non-Purchase,Windows,D,France,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,WA
+Purchase,Mac,D,United States,Safari,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Mac,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United States,Firefox,GI
+Non-Purchase,Windows,D,Thailand,Chrome,HH
+Non-Purchase,iOS,T,Unknown,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,Korea,Others,Others
+Non-Purchase,Windows,D,United Kingdom,MSIE,Others
+Non-Purchase,Windows,D,United States,Firefox,HH
+Non-Purchase,Windows,D,Canada,MSIE,HP
+Non-Purchase,Mac,D,United States,Safari,WA
+Non-Purchase,Mac,D,Belgium,Safari,HI
+Non-Purchase,Windows,D,United Arab Emirates,MSIE,CH
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,Unknown,Chrome,Others
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HP
+Non-Purchase,Others,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,iOS,T,Germany,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Vietnam,MSIE,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Safari,HH
+Non-Purchase,Windows,D,United States,Chrome,GI
+Non-Purchase,Windows,D,United States,MSIE,WA
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Firefox,ES
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Mac,D,India,Safari,HH
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Mac,D,United States,Safari,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,CH
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,Ireland,Firefox,DT
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,iOS,T,Ireland,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,Nigeria,MSIE,DT
+Non-Purchase,Windows,D,Unknown,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,iOS,T,Unknown,Safari,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,CH
+Non-Purchase,Windows,D,Europe,Chrome,HI
+Purchase,Windows,D,Canada,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Mac,D,Unknown,Firefox,CH
+Non-Purchase,Mac,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,Switzerland,MSIE,DT
+Non-Purchase,Windows,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United States,Firefox,HH
+Non-Purchase,Windows,D,United States,Firefox,GI
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,iOS,T,Ukraine,Safari,HI
+Non-Purchase,Windows,D,Austria,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HH
+Non-Purchase,iOS,T,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,Canada,MSIE,HI
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,Unknown,Firefox,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,GI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,Finland,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,Others
+Non-Purchase,Windows,D,China,MSIE,DT
+Non-Purchase,Windows,D,Ireland,Chrome,HI
+Non-Purchase,Windows,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United States,Chrome,HP
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Firefox,HH
+Non-Purchase,Windows,D,Isle of Man,Chrome,HP
+Non-Purchase,Mac,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,United States,Chrome,HP
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Non-Purchase,Others,D,United States,Chrome,HI
+Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,Switzerland,MSIE,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,Czech Republic,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United States,Chrome,GI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Ireland,MSIE,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HH
+Purchase,Windows,D,Hong Kong,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,CH
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Mac,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United States,Chrome,ES
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,India,Safari,HI
+Non-Purchase,Windows,D,Ireland,MSIE,HI
+Non-Purchase,Windows,D,Greece,Chrome,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,iOS,T,United States,Safari,TM
+Non-Purchase,Mac,D,Unknown,Safari,HH
+Non-Purchase,Mac,D,Unknown,Safari,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,Germany,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HW
+Non-Purchase,Mac,D,United Kingdom,Safari,GI
+Non-Purchase,Mac,D,France,Safari,DT
+Non-Purchase,Windows,D,United Arab Emirates,Firefox,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United States,Safari,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,Russian Federation,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HH
+Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Android,T,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Europe,Firefox,DT
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Mac,D,Canada,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,iOS,T,Germany,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,Switzerland,MSIE,HI
+Non-Purchase,Windows,D,Sweden,MSIE,DT
+Non-Purchase,iOS,T,United States,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Czech Republic,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,Italy,Firefox,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,Others
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,Brazil,Safari,HI
+Non-Purchase,Windows,D,China,MSIE,HI
+Non-Purchase,Windows,D,Ireland,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,New Zealand,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,Germany,MSIE,GI
+Non-Purchase,Windows,D,Isle of Man,Chrome,HP
+Non-Purchase,iOS,T,Unknown,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Purchase,Mac,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Android,T,United Kingdom,Others,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,iOS,T,Germany,Safari,CH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Europe,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,Finland,Firefox,HH
+Non-Purchase,Windows,D,Ireland,MSIE,HI
+Non-Purchase,Windows,D,Canada,MSIE,HP
+Purchase,Windows,D,United Kingdom,Chrome,DT
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,Unknown,Firefox,HI
+Non-Purchase,Mac,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Finland,Firefox,HH
+Non-Purchase,Mac,D,United Kingdom,Safari,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Cyprus,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,iOS,T,Ireland,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,CH
+Non-Purchase,Windows,D,United Kingdom,Firefox,HP
+Non-Purchase,iOS,T,United States,Safari,HH
+Non-Purchase,Windows,D,Belgium,MSIE,DT
+Non-Purchase,iOS,T,Czech Republic,Safari,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,China,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United Arab Emirates,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,iOS,T,United States,Safari,HH
+Non-Purchase,Windows,D,United States,Chrome,HP
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,GI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HP
+Non-Purchase,Mac,D,United States,Firefox,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Others,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Mac,D,Unknown,Chrome,DT
+Non-Purchase,Windows,D,United States,MSIE,CH
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Cyprus,MSIE,HI
+Non-Purchase,Windows,D,Ireland,MSIE,CH
+Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,Canada,Chrome,HI
+Purchase,Mac,D,Germany,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Germany,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Mac,D,Unknown,Safari,HI
+Non-Purchase,Windows,D,United States,Firefox,CH
+Non-Purchase,Windows,D,United Kingdom,Firefox,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United States,Firefox,ES
+Non-Purchase,Others,D,United States,Chrome,CH
+Non-Purchase,Mac,D,United Kingdom,Firefox,Others
+Non-Purchase,Windows,D,Korea,Others,Others
+Non-Purchase,Windows,D,Sweden,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,United States,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Italy,Chrome,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,HP
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Firefox,HH
+Non-Purchase,Windows,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,Spain,Safari,HI
+Non-Purchase,iOS,T,Australia,Safari,Others
+Non-Purchase,Windows,D,United States,Firefox,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,iOS,T,Unknown,Safari,DT
+Non-Purchase,Windows,D,United States,MSIE,HP
+Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,Unknown,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Chrome,HP
+Non-Purchase,iOS,T,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,Unknown,Safari,HI
+Non-Purchase,Windows,D,Canada,MSIE,HI
+Non-Purchase,Windows,D,Canada,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,Switzerland,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HH
+Non-Purchase,Mac,D,United Kingdom,Safari,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Android,T,United Kingdom,Others,HI
+Non-Purchase,Mac,D,Israel,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Non-Purchase,Windows,D,United States,MSIE,HI
+Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Germany,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Unknown,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Taiwan,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,Unknown,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,Netherlands,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Chrome,GI
+Non-Purchase,Windows,D,Turkey,MSIE,HI
+Non-Purchase,Windows,D,Unknown,Chrome,DT
+Non-Purchase,Windows,D,Spain,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,CH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,France,MSIE,HI
+Non-Purchase,Android,T,Unknown,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Android,T,Sweden,Chrome,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,iOS,T,Canada,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Mac,D,United States,Chrome,HH
+Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,QQ
+Non-Purchase,Windows,D,Hong Kong,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,WA
+Non-Purchase,iOS,T,United Kingdom,Safari,Others
+Non-Purchase,Windows,D,United States,MSIE,CH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Firefox,HI
+Non-Purchase,iOS,T,United Kingdom,Chrome,HI
+Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Mac,D,Unknown,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,iOS,T,United States,Safari,ES
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,Windows,D,Russian Federation,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Android,T,United Kingdom,Others,DT
+Non-Purchase,Windows,D,Germany,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Netherlands,Firefox,DT
+Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Others,D,United States,Firefox,HW
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,Unknown,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United States,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,Japan,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Belgium,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Sweden,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,Unknown,MSIE,GI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Romania,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,Austria,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,iOS,T,Australia,Safari,HI
+Non-Purchase,iOS,T,Australia,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,iOS,T,Denmark,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,iOS,T,Norway,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Mac,D,United States,Firefox,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United States,Safari,DT
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,Netherlands,Firefox,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Android,T,United States,Others,HP
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,Ireland,MSIE,HI
+Non-Purchase,Mac,D,United States,Firefox,GI
+Purchase,Windows,D,Canada,MSIE,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,GI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,Unknown,Chrome,TM
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Firefox,HI
+Non-Purchase,Windows,D,Egypt,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Mac,D,Germany,Safari,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Singapore,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,France,Safari,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,Czech Republic,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,GI
+Purchase,Windows,D,Canada,MSIE,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,Germany,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,Others
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,iOS,T,Canada,Safari,DT
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Unknown,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,Windows,D,Korea,Others,Others
+Non-Purchase,Windows,D,United States,Firefox,DT
+Non-Purchase,Mac,D,Qatar,Safari,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,Others
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Hong Kong,MSIE,DT
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,iOS,T,Italy,Safari,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,Canada,Chrome,DT
+Non-Purchase,Others,D,Unknown,Chrome,DT
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United States,Chrome,QQ
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,Europe,MSIE,TM
+Non-Purchase,Mac,D,France,Firefox,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Others,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Israel,Chrome,HI
+Non-Purchase,Android,T,Unknown,Chrome,HI
+Purchase,Windows,D,Netherlands,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Android,T,Germany,Others,DT
+Non-Purchase,Windows,D,Canada,Firefox,HI
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Arab Emirates,Chrome,HI
+Non-Purchase,Windows,D,China,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Purchase,iOS,T,France,Safari,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,Unknown,Safari,HI
+Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Mac,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Purchase,Windows,D,United Kingdom,Firefox,HI
+Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,Unknown,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HP
+Non-Purchase,Windows,D,Korea,Others,Others
+Non-Purchase,Windows,D,United States,Chrome,ES
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Germany,MSIE,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,China,MSIE,CH
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Unknown,Firefox,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,Windows,D,Norway,Firefox,DT
+Non-Purchase,Windows,D,Switzerland,Firefox,HH
+Non-Purchase,Windows,D,Switzerland,Firefox,HH
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United States,Firefox,CH
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,Europe,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,Italy,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Mac,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United States,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,Others
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United States,MSIE,HP
+Purchase,iOS,T,United Kingdom,Safari,HP
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Australia,MSIE,HH
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,Unknown,Chrome,CH
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,Belgium,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HP
+Non-Purchase,Mac,D,Germany,Safari,CH
+Non-Purchase,Mac,D,Unknown,Safari,HI
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Nigeria,Chrome,HI
+Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Safari,HH
+Non-Purchase,Windows,D,China,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Unknown,MSIE,ES
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,iOS,T,Unknown,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,Finland,Safari,CH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Japan,Chrome,HI
+Non-Purchase,Windows,D,Ireland,Firefox,DT
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Germany,Chrome,HH
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,Ireland,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,Others
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Ireland,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Germany,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,Netherlands,Safari,HI
+Non-Purchase,Windows,D,France,Chrome,HI
+Non-Purchase,Windows,D,Brazil,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,India,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United States,MSIE,CH
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Hong Kong,Firefox,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Firefox,HP
+Non-Purchase,Windows,D,Unknown,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,Europe,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United States,Firefox,WA
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,China,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Brazil,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,Bahrain,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Netherlands,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,Norway,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,Others
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,GI
+Non-Purchase,Windows,D,Germany,MSIE,HH
+Non-Purchase,Mac,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Android,T,United States,Chrome,DT
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,Israel,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Sweden,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Mac,D,Unknown,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,Others
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Purchase,Windows,D,Saudi Arabia,MSIE,HI
+Non-Purchase,Windows,D,Sweden,MSIE,HH
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,iOS,T,United States,Safari,CH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,Bulgaria,MSIE,HH
+Non-Purchase,Windows,D,India,MSIE,HI
+Non-Purchase,Mac,D,Finland,Safari,HI
+Non-Purchase,Windows,D,Germany,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,Switzerland,Chrome,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Safari,HI
+Non-Purchase,Windows,D,United States,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Android,T,United Kingdom,Others,HI
+Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,Others
+Non-Purchase,Mac,D,France,Chrome,HI
+Non-Purchase,Mac,D,United States,Safari,DT
+Non-Purchase,Windows,D,Australia,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,Canada,MSIE,HI
+Non-Purchase,Windows,D,Canada,MSIE,HI
+Non-Purchase,Windows,D,Canada,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Germany,MSIE,Others
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Norway,MSIE,WA
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Android,T,United Kingdom,Others,HP
+Non-Purchase,Windows,D,Norway,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,CH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United States,Safari,HH
+Non-Purchase,Windows,D,United States,Chrome,HI
+Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Windows,D,Germany,Chrome,HI
+Non-Purchase,Windows,D,Germany,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,MSIE,WA
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,Taiwan,Chrome,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Purchase,Mac,D,United Kingdom,Firefox,HP
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,Sweden,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Mac,D,United Kingdom,Firefox,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,CH
+Non-Purchase,iOS,T,United States,Safari,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Mac,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,iOS,T,Hong Kong,Safari,HI
+Non-Purchase,Windows,D,Netherlands,MSIE,DT
+Non-Purchase,Mac,D,Australia,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,Australia,Safari,HP
+Non-Purchase,Windows,D,Austria,MSIE,DT
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Israel,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Germany,Chrome,HI
+Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,Germany,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Denmark,MSIE,HI
+Non-Purchase,iOS,T,Romania,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,Turkey,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Android,T,Germany,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Purchase,Mac,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,Norway,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,Firefox,HH
+Non-Purchase,Mac,D,United Kingdom,Safari,DT
+Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,Canada,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,Germany,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,United Kingdom,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,iOS,T,Ireland,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,Ireland,Chrome,DT
+Non-Purchase,Mac,D,United States,Safari,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HH
+Non-Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HW
+Non-Purchase,Windows,D,United Kingdom,MSIE,GI
+Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,India,Chrome,HI
+Non-Purchase,Windows,D,Netherlands,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,Others
+Non-Purchase,iOS,T,Unknown,Safari,HI
+Non-Purchase,iOS,T,Denmark,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,Mac,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,Italy,Chrome,DT
+Non-Purchase,Windows,D,India,Chrome,HI
+Non-Purchase,Windows,D,India,Chrome,HI
+Purchase,Windows,D,United Kingdom,Chrome,DT
+Purchase,Windows,D,Norway,Firefox,HP
+Purchase,Windows,D,United Kingdom,Chrome,HP
+Purchase,Mac,D,United States,Chrome,DT
+Non-Purchase,Mac,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United States,Chrome,ES
+Non-Purchase,iOS,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,France,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,France,Safari,DT
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Windows,D,Germany,MSIE,DT
+Non-Purchase,Android,T,United Kingdom,Others,DT
+Non-Purchase,Mac,D,United States,Safari,WA
+Non-Purchase,iOS,T,United Kingdom,Safari,HP
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,Germany,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Israel,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,France,Chrome,DT
+Non-Purchase,Mac,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Italy,Firefox,HH
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Windows,D,Japan,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Unknown,MSIE,CH
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HH
+Non-Purchase,Mac,D,United Kingdom,Safari,HP
+Purchase,Windows,D,Hong Kong,MSIE,HI
+Non-Purchase,Windows,D,Ireland,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,Germany,Chrome,DT
+Non-Purchase,Windows,D,Australia,Firefox,HI
+Non-Purchase,Windows,D,Switzerland,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Mac,D,United Kingdom,Chrome,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Germany,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,ES
+Non-Purchase,Mac,D,Unknown,Safari,HI
+Non-Purchase,Mac,D,United States,Firefox,DT
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HH
+Non-Purchase,Windows,D,Ireland,Chrome,HI
+Non-Purchase,Android,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HP
+Non-Purchase,Mac,D,Singapore,Safari,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United States,Safari,HI
+Purchase,iOS,T,United Kingdom,Safari,HI
+Purchase,Mac,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,iOS,T,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,Israel,MSIE,HI
+Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Mac,D,Unknown,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,India,Chrome,HP
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,Chrome,HI
+Purchase,Windows,D,Unknown,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Malaysia,MSIE,HH
+Purchase,Windows,D,United Arab Emirates,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,Brazil,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,Others
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,Others
+Non-Purchase,Mac,D,United Kingdom,Safari,WA
+Non-Purchase,Windows,D,Turkey,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,CH
+Non-Purchase,iOS,T,United States,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Mac,D,Italy,Firefox,HI
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,Ireland,MSIE,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,United States,MSIE,DT
+Non-Purchase,Windows,D,Hong Kong,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Mac,D,United States,Firefox,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,Germany,Firefox,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HP
+Non-Purchase,Mac,D,Germany,Safari,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,CH
+Non-Purchase,Mac,D,United Kingdom,Firefox,DT
+Non-Purchase,Windows,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Firefox,GI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United States,MSIE,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,CH
+Non-Purchase,Windows,D,United States,MSIE,HI
+Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,Spain,MSIE,HI
+Non-Purchase,Windows,D,China,Chrome,CH
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,Chrome,DT
+Non-Purchase,iOS,T,United Kingdom,Safari,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United States,Chrome,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,WA
+Non-Purchase,Windows,D,Unknown,MSIE,HI
+Non-Purchase,Mac,D,United Kingdom,Safari,HP
+Purchase,Windows,D,Europe,Chrome,HI
+Purchase,Windows,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Unknown,MSIE,DT
+Non-Purchase,Windows,D,Ireland,Chrome,HI
+Non-Purchase,Windows,D,Unknown,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HH
+Non-Purchase,Windows,D,United States,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HH
+Non-Purchase,Mac,D,United States,Safari,HH
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Europe,Firefox,HI
+Non-Purchase,Windows,D,India,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Mac,D,United States,Safari,HH
+Non-Purchase,Windows,D,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United States,Firefox,HI
+Non-Purchase,Windows,D,United States,MSIE,GI
+Non-Purchase,iOS,T,United Kingdom,Chrome,DT
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,Ireland,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,DT
+Non-Purchase,Mac,D,United Kingdom,Safari,HI
+Non-Purchase,Mac,D,United Kingdom,Chrome,GI
+Non-Purchase,Windows,D,United States,Chrome,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,GI
+Non-Purchase,Windows,D,United Kingdom,Chrome,HI
+Non-Purchase,iOS,T,United Kingdom,Safari,DT
+Non-Purchase,Windows,D,Germany,Firefox,HI
+Non-Purchase,Windows,D,United Kingdom,MSIE,HP
+Non-Purchase,Windows,D,United Kingdom,Firefox,DT
