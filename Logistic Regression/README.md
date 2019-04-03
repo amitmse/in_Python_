@@ -8,12 +8,13 @@
 	3. Independence of errors
 	4. No perfect multicollinearity
     
-Because logistic regression uses MLE rather than OLS, it avoids many of the typical assumptions tested in statistical analysis:
-	- Does not assume normality of variables (both DV and IVs).
-	- Does not assume linearity between DV and IVs.
-	- Does not assume homoscedasticity.
-	- Does not assume normal errors.
-	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
+Logistic regression uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) tested in statistical analysis.
+Does not assume: 
+		- normality of variables (both DV and IVs)
+		- linearity between DV and IVs
+		- homoscedasticity
+		- normal errors
+MLE allows more flexibility in the data and analysis because it has fewer restrictions
   
 Maximum likelihood estimation (MLE): 
 	- Finds parameter values that maximize the likelihood of making the observations given the parameters
