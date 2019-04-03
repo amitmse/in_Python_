@@ -77,17 +77,17 @@ Derivation of Logistic Regression:
 			
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-beta(x) 	= covariance(x,y) / variance(x)
-correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
-TSS 		= SUM[y-mean(y)]^2
-RSS 		= SUM[y-predicted(y)]^2
-R Squared	= 1.0 - (RSS/TSS)
-AIC		= (No of variable*2)               - (2*-Log Likelihood)
-BIC		= {No of variable*log(No of obs)}  - (2*-Log Likelihood)
-VIF 		= 1.0 / (1.0 - R Squared)
-Gini/Somer’s D 	= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
-Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]	
-			[meanG = mean of score only for good, varB= variance of score only for bad ]
+	beta(x) 	= covariance(x,y) / variance(x)
+	correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
+	TSS 		= SUM[y-mean(y)]^2
+	RSS 		= SUM[y-predicted(y)]^2
+	R Squared	= 1.0 - (RSS/TSS)
+	AIC		= (No of variable*2)               - (2*-Log Likelihood)
+	BIC		= {No of variable*log(No of obs)}  - (2*-Log Likelihood)
+	VIF 		= 1.0 / (1.0 - R Squared)
+	Gini/Somer’s D 	= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+	Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]	
+			     [meanG = mean of score only for good, varB= variance of score only for bad ]
 			
 Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied 
 The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as 
