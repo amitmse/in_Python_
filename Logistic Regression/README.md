@@ -3,7 +3,8 @@
 
 ## Logistic regression assumptions: 		(http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf)
 	1. Dependent variable should be binary
-	2. Linearity between independent & log odds (non-linear relationship between the dependent and independent variables)
+	2. Linearity between independent & log odds 
+	     (non-linear relationship between the dependent and independent variables)
 	3. Independence of errors
 	4. No perfect multicollinearity
     
