@@ -139,8 +139,8 @@ Improvements to Basic Gradient Boosting
 					Generally, better results are seen with 4-8 levels.
 				# Number of nodes or number of leaves: like depth, this can constrain the size of tree, 
 					but is not constrained to a symmetrical structure if other constraints are used.
-				# Number of observations per split: imposes a minimum constraint on the amount of training 
-					data at a training node before a split can be considered
+				# Number of observations per split: imposes a minimum constraint on the amount of 
+					training data at a training node before a split can be considered
 				# Minimum improvement to loss:
 					is a constraint on the improvement of any split added to a tree
 		2. Shrinkage:
