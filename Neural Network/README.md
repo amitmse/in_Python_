@@ -130,9 +130,9 @@
 			neurons in the hidden layers can increase the time it takes to train the network. 
 		- There are many rule-of-thumb methods for determining the correct number of neurons to use in the 
 			hidden layers, such as the following:
-		- number of hidden neurons should be between the size of the input layer and the size of the output layer
-		- number of hidden neurons should be 2/3 the size of the input layer, plus the size of the output layer
-		- number of hidden neurons should be less than twice the size of the input layer
+		- #hidden neurons should be between the size of the input layer and the size of the output layer
+		- #hidden neurons should be 2/3 the size of the input layer, plus the size of the output layer
+		- #hidden neurons should be less than twice the size of the input layer
 							
 	- A model with zero hidden layers will resolve linearly separable data. So unless you already know your data 
 		isn't linearly separable, it doesn't hurt to verify this.
