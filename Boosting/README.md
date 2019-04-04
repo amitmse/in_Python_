@@ -137,7 +137,7 @@ Improvements to Basic Gradient Boosting
 					The advice is to keep adding trees until no further improvement is observed.
 				# Tree depth: deeper trees are more complex trees and shorter trees are preferred. 
 					Generally, better results are seen with 4-8 levels.
-				# Number of nodes or number of leaves: like depth, this can constrain the size of the tree, 
+				# Number of nodes or number of leaves: like depth, this can constrain the size of tree, 
 					but is not constrained to a symmetrical structure if other constraints are used.
 				# Number of observations per split: imposes a minimum constraint on the amount of training 
 					data at a training node before a split can be considered
