@@ -1,0 +1,70 @@
+Matrix
+
+Diagonal:
+	- Square 
+	- Non zero elements in diagonal
+	
+Identity:
+	- Square
+	- One in diagonal 
+	- A * Inverse A is equal to Identity
+	- AI = A = IA
+
+Singular:
+	- Determinant = 0
+	- Square
+	- Inverse is undefined when determinant equal 0 [If two lines have same slope then they'll never intersect, so no unique solution]
+
+Transpose:
+	- Transpose[Transpose A] 	= A
+	- Transpose[AB] 			= Transpose[B] Transpose[A]
+	- Transpose[A+B] 			= Transpose[A] + Transpose[B]
+	
+Symmetric: 
+	- Square matrix 
+	- Equal to its own transpose
+	
+Skew Symmetric:
+	- Its a square matrix whose transpose equals its negative
+	
+Trace:
+	- Sum of diagonal elements in the matrix. Determinant is like the trace operator without parentheses.
+	- Trace[A] 		= Trace[Transpose A]
+	- Trace[AB] 	= Trace[BA]
+	- Trace[A+B] 	= Trace[A] + Trace[B]
+	
+
+Norms:
+	- A norm of a vector is informally measure of the length of the vector.
+	- 
+
+Orthogonal:
+	- Square matrix 
+	- An orthogonal matrix is always a symmetric matrix.
+	- Columns and rows are orthogonal unit vectors
+	- A matrix is orthogonal if its transpose is equal to its inverse
+	- The determinant of any orthogonal matrix is either +1 or -1.
+	- Every identity matrix is an orthogonal matrix.
+	- The diagonal matrix is an orthogonal one.
+
+Hessian:
+	- Square matrix
+	- Second-order partial derivatives
+	- The Hessian matrix of a convex function is positive semi-definite. 
+	
+Regression with Matrix Algebra: http://faculty.cas.usf.edu/mbrannick/regression/regma.htm
+	y = Xb +e	
+	y = Xb
+	X'y = X'Xb						[X is square and symmetric matrix]
+	(X'X)-1 X'y = (X'X)-1 (X'X)b
+	(X'X)-1 X'y=Ib	[identity matrix]
+	(X'X)-1 X'y=b
+	
+	Inverse(A'A)A'A=I 		[If columns are linearly independent then A'A is invertible. Pseudo Inverse : Inverse(A'A)A']
+	Equation has a single solution if Transpose(X)*X is invertible(non-singular). If it's not, you have more solutions.
+	Full rank or identification condition means that there are no exact linear relationships between the variables.
+	X is a full column rank means that the columns of X are linearly independent and that there are at least K observations.
+	
+	
+		http://faculty.utrgv.edu/diego.escobari/teaching/Econ8370/Handouts/Chapter02.pdf
+		
