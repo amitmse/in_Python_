@@ -46,7 +46,7 @@
 	Momentum term: 
 		It represents inertia. Large values of momentum term will influence the adjustment in the current weight 
 		to move in same direction as previous adjustment. Easily get stuck in a local minima and the algorithm 
-		may think you reach the global minima leading to sub-optimal results. Use a momentum term in the objective 
+		may think to reach global minima leading to sub-optimal results. Use a momentum term in the objective 
 		function that increases the size of the steps taken towards the minimum by trying to jump from a local 
 		minima. If the momentum term is large then the learning rate should be kept smaller. A large value of
 		momentum also means that the convergence will happen fast. But if both the momentum and learning rate 
