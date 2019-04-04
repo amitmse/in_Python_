@@ -6,15 +6,15 @@
 	packages installed 	# help("modules")
 	
 	Install Library 	# First install pip then 
-				  http://stackoverflow.com/questions/28142839/pip-install-numpy-python-2-7-fails-with-errorcode-1
+				# http://stackoverflow.com/questions/28142839/pip-install-numpy-python-2-7-fails-with-errorcode-1
 				# python get-pip.py  	- pip install pip-tools / python -m pip install 
-							--upgrade pip  / 'pip install --upgrade pip  
-				  https://bootstrap.pypa.io/get-pip.py
+				#			--upgrade pip  / 'pip install --upgrade pip
+				#  https://bootstrap.pypa.io/get-pip.py
 				# Download Library 	- http://www.lfd.uci.edu/~gohlke/pythonlibs
 				# download package 	- go to folder open cmd to install / 'https://docs.python.org/2/install/						
 				# pip install numpy 	- easy_install -U setuptools / easy_install -U statsmodels 
-							  /easy_install scipy-0.16.0-cp26-none-win_amd64.whl	 
-							  /python setup.py install 
+				#			  /easy_install scipy-0.16.0-cp26-none-win_amd64.whl	 
+				#			  /python setup.py install 
 
 	Graphviz 		# Install software and add path C:\Program Files (x86)\Graphviz2.38\bin 
 	
@@ -44,7 +44,7 @@
 	lower()			# string_l = string.lower()	----> 'example'	string = 'ExaMple'
 	upper()			# string_u = string.upper()	----> 'EXAMPLE'			
 	find()			# string.find('M') 		----> 3, string.find('o') ----> -1 
-				  (if not able to findout then it will mention -1)
+				# (if not able to findout then it will mention -1)
 	replace()		# string.replace('Exa', 'EXA')	----> 'EXAMple'
 	lstrip()		# Remove space. string.lstrip()	----> 'HeLooo TeSt ' string = ' HeLooo TeSt '
 	rstrip()		# Remove space. string.rstrip()	----> ' HeLooo TeSt'			
@@ -55,12 +55,13 @@
 	MAX			# big = max("amit xyz")  	----> z
 	iter()			# it = iter(s) 			----> it.next()									s = 'abc', next will give next word 
 	
-#/***************************************************************************************************************************************************/	
-	==			# Equal to			----> if x==1 then do
-	=			# Assign Value			----> x=1
-	#			# comment the code		----> #comment this part
-	'''			# Multiple line comment. 	----> ''' should be at both places  start and end
-'	\n			# Newline 			----> stuff = 'HelOo\nWoRlD' [it will print in two lines] 
+#/****************************************************************************************************************#
+
+#	==			# Equal to			----> if x==1 then do
+#	=			# Assign Value			----> x=1
+#	#			# comment the code		----> #comment this part
+#	'''			# Multiple line comment. 	----> ''' should be at both places  start and end
+#	\n			# Newline 			----> stuff = 'HelOo\nWoRlD' [it will print in two lines] 
 
 #/*****************************************************************/
 	import nltk
