@@ -37,6 +37,13 @@
   
  ## GBM
  
+ 	--------------------------------------
+	1. Learn a regression predictor
+	2. compute the error of residual
+	3. learn to predict the residual
+	4. identify good weights
+	---------------------------------------	
+ 
 	1. Y 	  = M(x) + error (Logistic Regression if dep is binay). get the weight as well
   
 	2. Error  = G(x) + error2 (Regress error with other ind var. Apply linear regression as error is continuous. 
