@@ -120,7 +120,7 @@
 	- Get decent performance (even without a second optimization step) by setting the hidden layer configuration 
 		using just two rules: 
 			i. number of hidden layers equals one
-			ii. number of neurons in that layer is the mean of the neurons in the input and output layers			
+			ii. number of neurons in that layer is the mean of the neurons in the input and output layers
 	- Pruning describes a set of techniques to trim network size (by nodes not layers) to improve computational 
 		performance and sometimes resolution performance. Get a rough idea of which nodes are not important by 
 		looking at your weight (weights very close to zero) matrix after training.
