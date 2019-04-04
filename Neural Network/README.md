@@ -193,8 +193,8 @@
 		
 	-BackPropagation: 
 		The errors are getting propagated in a backward fashion. We start by first finding the error terms 
-		of the output layer using BP1. And then using BP2 we get the error terms of the layer previous to that. 
-		And keep on using BP2 to get error terms of all neurons in all inside layer right till first input layer. 
+		of the output layer using BP1. And then using BP2 we get error terms of the layer previous to that. 
+		keep on using BP2 to get error terms of all neurons in all inside layer right till first input layer. 
 		So this way we are propagating the error from the output layer all the way to the first layer. 
 		Back Propagation is nothing but the chain rule of calculus. So the reason this error propagation 
 		is happening backwards is because the initial cost function is used as a function of output
