@@ -6,5 +6,5 @@ Basic operation in Python 2.7
 
 - Sample code / operation 
 
-- EDA 
+- Exploratory Data Analysis (EDA)
  
