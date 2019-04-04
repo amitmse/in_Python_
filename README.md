@@ -1,19 +1,19 @@
 # Hands on machine learning with PYTHON (2.7)
 
-Data Preparation : https://github.com/amitmse/in_Python_/tree/master/Boosting
+1. Data Preparation : https://github.com/amitmse/in_Python_/tree/master/Data%20Prep
 
-Logistic Regression
+2. Logistic Regression : https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 
-Decision Tree
+3. Decision Tree : https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree
 
-Naive Bayes
+4. Naive Bayes : https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes
 
-Random_Forest
+5. Random_Forest : https://github.com/amitmse/in_Python_/tree/master/Random_Forest
 
-Boosting
+6. Boosting (ADA & GBM): https://github.com/amitmse/in_Python_/tree/master/Boosting
 
-Neural Network
+7. Neural Network : https://github.com/amitmse/in_Python_/tree/master/Neural%20Network
 
-Cluster Analysis
+8. Cluster Analysis : https://github.com/amitmse/in_Python_/tree/master/Cluster%20Analysis
 
-SVM
+9. SVM : https://github.com/amitmse/in_Python_/tree/master/SVM
