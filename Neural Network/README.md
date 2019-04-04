@@ -62,44 +62,52 @@
 
 
 ## Multi Layer Perceptron (MLP): One or more non-linear hidden layers.
-			Advantages:
-				-	Capability to learn non-linear models.
-				-	Capability to learn models in real-time (on-line learning) using partial_fit.
-			Disadvantages:
-				-	MLP with hidden layers have a non-convex loss function where there exists more than one local minimum. Therefore different random weight initializations can lead to different validation accuracy.
-				-	MLP requires tuning a number of hyperparameters such as the number of hidden neurons, layers, and iterations.
-				-	MLP is sensitive to feature scaling.
+	Advantages:
+		- Capability to learn non-linear models.
+		- Capability to learn models in real-time (on-line learning) using partial_fit.
+	Disadvantages:
+		- MLP with hidden layers have a non-convex loss function where there exists more than 
+		  one local minimum. Therefore different random weight initializations can lead to 
+		  different validation accuracy.
+		- MLP requires tuning a number of hyperparameters such as the number of hidden neurons, 
+		  layers, and iterations.
+		- MLP is sensitive to feature scaling.
 
-			number of neurons in hidden layer (hidden_layer_sizes):
-				-	no of hidden layer is length of tuple. for below example hidden layers are  1,3,2:
-						-	len(7,) 		is 1 
-						-	len(10,10,10) 	is 3
-						-	len(5, 2) 		is 2
-				-	hidden unit is number inside tuple: 
-						-	hidden_layer_sizes = (7,) this refers to 1 hidden layer with 7 hidden units.
-						-	length = n_layers - 2 is because you have 1 input layer and 1 output layer.
-						-	3 hidden layers with 10 hidden units each - (10,10,10)
-						-	(5, 2) i.e 1st hidden layer has 5 neurons. 2nd hidden layer has 2 neurons.
+	number of neurons in hidden layer (hidden_layer_sizes):
+		- no of hidden layer is length of tuple. for below example hidden layers are  1,3,2:
+			- len(7,) 	is 1 
+			- len(10,10,10) is 3
+			- len(5, 2) 	is 2
+		- hidden unit is number inside tuple: 
+			- hidden_layer_sizes = (7,) this refers to 1 hidden layer with 7 hidden units.
+			- length = n_layers - 2 is because you have 1 input layer and 1 output layer.
+			- 3 hidden layers with 10 hidden units each - (10,10,10)
+			- (5, 2) i.e 1st hidden layer has 5 neurons. 2nd hidden layer has 2 neurons.
 				
-			Activation function for the hidden layer: (default is relu)
-				identity: no-op activation, useful to implement linear bottleneck, returns f(x) = x
-				logistic: logistic sigmoid function, returns f(x) = 1 / (1 + exp(-x)).
-				tanh	: hyperbolic tan function, returns f(x) = tanh(x).
-				relu	: rectified linear unit function, returns f(x) = max(0, x)
+		Activation function for the hidden layer: (default is relu)
+			identity: no-op activation, useful to implement linear bottleneck, returns f(x) = x
+			logistic: logistic sigmoid function, returns f(x) = 1 / (1 + exp(-x)).
+			tanh	: hyperbolic tan function, returns f(x) = tanh(x).
+			relu	: rectified linear unit function, returns f(x) = max(0, x)
 
-			The solver for weight optimization: (default is adam)
-				lbfgs	: optimizer in the family of quasi-Newton methods.
-				sgd		: stochastic gradient descent.
-				adam	: stochastic gradient-based optimizer
+		The solver for weight optimization: (default is adam)
+			lbfgs	: optimizer in the family of quasi-Newton methods.
+			sgd	: stochastic gradient descent.
+			adam	: stochastic gradient-based optimizer
 			
-			alpha 		: default 0.0001
+		alpha 		: default 0.0001
 
-			Learning rate: (default constant)
-				constant	: constant learning rate given by ‘learning_rate_init’.
-				invscaling	: gradually decreases the learning rate learning_rate_ at each time step ‘t’ using an inverse scaling exponent of ‘power_t’. effective_learning_rate = learning_rate_init / pow(t, power_t)
-				adaptive	: keeps the learning rate constant to ‘learning_rate_init’ as long as training loss keeps decreasing. 
-								Each time two consecutive epochs fail to decrease training loss by at least tol, or fail to increase 
-								validation score by at least tol if ‘early_stopping’ is on, the current learning rate is divided by 5.
-								Only used when solver='sgd'
+		Learning rate: (default constant)
+			constant   : constant learning rate given by ‘learning_rate_init’.
+			invscaling : gradually decreases the learning rate learning_rate_ at each time step ‘t’ 
+					using an inverse scaling exponent of ‘power_t’. 
+					effective_learning_rate = learning_rate_init / pow(t, power_t)
+			adaptive   : keeps the learning rate constant to ‘learning_rate_init’ as long as training 
+					loss keeps decreasing. Each time two consecutive epochs fail to decrease 
+					training loss by at least tol, or fail to increase validation score by at 
+					least tol if ‘early_stopping’ is on, the current learning rate is divided by 5.
+					Only used when solver='sgd'
 								
 			momentum 	: float, default 0.9
+			
+			
