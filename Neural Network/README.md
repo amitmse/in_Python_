@@ -57,5 +57,5 @@
 												
 		Momentum simply adds a fraction of the previous weight update to the current one. When the gradient 
 		keeps pointing in the same direction, this will increase the size of the steps taken towards the minimum.
-		It's necessary to reduce the global learning rate when using a lot of momentum (m close to 1). 
-		If you combine a high learning rate with a lot of momentum, you will rush past the minimum with huge steps!
+		It's necessary to reduce the global learning rate when using a lot of momentum (m close to 1). If you 
+		combine a high learning rate with a lot of momentum, you will rush past the minimum with huge steps!
