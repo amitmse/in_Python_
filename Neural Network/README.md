@@ -13,11 +13,14 @@ Algorithm:
 		Rate of change (weight for hidden) 	: Multiply Learning rate, Error in output layer node and 
 								Hidden layer nodes.
 		Adjusted weights for hidden layer 	: Add previous weights for hidden layer, Rate of change 
-			(weight for hidden) and Momentum term into previous delta change of the weight (will be 0 for 1st time).
+			(weight for hidden) and Momentum term into previous delta change of the weight 
+			(will be 0 for 1st time).
 
 	3. Back propagation to the hidden layer	: calculate error of hidden layer & weights adjustment input layer.
-		Error in hidden layer node		: Multiply Error in output layer node and adjusted weights for hidden layer.
-		Rate of change (weight for input)	: Multiply Learning rate, Error in hidden layer nodes and input layer nodes.
+		Error in hidden layer node		: Multiply Error in output layer node and adjusted 
+								weights for hidden layer.
+		Rate of change (weight for input)	: Multiply Learning rate, Error in hidden layer nodes and 
+								input layer nodes.
 		Adjusted weights for input layer	: Add previous weights for input layer, 
 			Rate of change (weight for input) and Momentum term into previous delta change of 
 			the weight (will be 0 for 1st time).
