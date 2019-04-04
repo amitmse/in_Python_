@@ -167,11 +167,11 @@
 		and do just as well as a three layer network.
 		
 	- Perceptron: 
-		It's a Binary unit outputting Yes, No decisions with binary inputs. Perceptron function is a step function.
-		Transform the normal Perceptron into a sigmoid neuron using a sigmoid function (y = 1/(1+e^-z).
-		Sigmoid function is nothing but a smooth Step function and it gives us a range of values between 0 and 1. 
-		Using this gradual output from the neuron, we can control our weight learning and tweaking of the weights. 
-		This facilitates learning of weights in a neuron.
+		It's a Binary unit outputting Yes, No decisions with binary inputs. Perceptron function is a 
+		step function. Transform the normal Perceptron into a sigmoid neuron using a sigmoid function 
+		(y = 1/(1+e^-z). Sigmoid function is nothing but a smooth Step function and it gives us a range 
+		of values between 0 and 1. Using this gradual output from the neuron, we can control our weight 
+		learning and tweaking of the weights. This facilitates learning of weights in a neuron.
 		
 	-Neuron Saturation:
 		If we use sigmoid function as the activation function, then the error term in the output layer 
@@ -194,7 +194,7 @@
 	-BackPropagation: 
 		The errors are getting propagated in a backward fashion. We start by first finding the error terms 
 		of the output layer using BP1. And then using BP2 we get the error terms of the layer previous to that. 
-		And keep on using BP2 to get error terms of all neurons in all inside layer right till the first input layer. 
+		And keep on using BP2 to get error terms of all neurons in all inside layer right till first input layer. 
 		So this way we are propagating the error from the output layer all the way to the first layer. 
 		Back Propagation is nothing but the chain rule of calculus. So the reason this error propagation 
 		is happening backwards is because the initial cost function is used as a function of output
