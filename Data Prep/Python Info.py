@@ -246,7 +246,7 @@
 '''
 		HELP		: help(list), help("list"), help([])
 		Empty list 	: shopping_list  = [], 				zz=list()
-		append		: a=[-1, 1, 1, 2, 3, 3, 4, 4, 6.777, 'test']	a.append(10)	=> [-1,1,1,2,3,3,4,4,6.777,'test',10]
+		append		: a=[-1, 1, 1, 2, 3, 3, 4, 4, 6.777, 'test']	a.append(10) #=> [-1,1,1,2,3,3,4,4,6.777,'test',10]
 		extend		: 
 		insert		: a.insert(2,-1) = [1, 2, -1, 3, 4, 6.777, 'test', 1, 2, 3, 4] 
 		remove		: a.remove(2)    = [1,    -1, 3, 4, 6.777, 'test', 1, 2, 3, 4] 
@@ -269,7 +269,8 @@
 		s + t 		: the concatenation of s and t 			 t=[0,9]       , s+t    , [1, 2, 3, 4, 0, 9]
 		s * n, n * s 	: n shallow copies of s concatenated 		 s=[1,2,3,4]   , s*2    , [1, 2, 3, 4, 1, 2, 3, 4]
 		s[i] 		: ith item of s, origin 0 			 s=[1,2,3,4]   , s[2]   , 3
-		s[i:j] 		: slice of s from i to j-1			 s=[1,2,3,4]   , s[2:4] , [3, 4](not inclde 4th position, start is 0)	
+		s[i:j] 		: slice of s from i to j-1			 s=[1,2,3,4]   , s[2:4] , [3, 4]
+			          #(not inclde 4th position, start is 0)	
 			
 
 	Loop: 
@@ -284,7 +285,7 @@
 		list2 = list1 				# 2 names refer to 1 ref, Changing one affects both
 		list2 = list1[:] 			# Two independent copies, two refs
 		
-		y = [x+x for x in [1,4,6,9]]		#list comprehensions
+		y = [x+x for x in [1,4,6,9]]		# list comprehensions
 		
 #######****** Set --- set()/Curly braces **************************************************************#################
 	#A set is an unordered collection with no duplicate elements. It will create unique. 
@@ -316,25 +317,25 @@
 	The values of a dictionary can be of any type, but the keys must be of an immutable data type 
 	such as strings, numbers, or tuples.
 '''
-		empty hash			: d = {}, d=dict()
-		Create hash 			: d["key1"] = "value1" 	{'key1': 'value1'}
-		print a value of key		: d["key1"]		'value1'
-		create hash 			: d = {'Name': 'Zara', 'Age': 7};  {'Age': 7, 'Name': 'Zara'}
-		length of hash			: len(d)		2						
-		Convert in string		: str(d)		"{'Age': 7, 'Name': 'Zara'}"
-		copy of hash			: a =d.copy()		{'Age': 7, 'Name': 'Zara'}
-		new hash with keys		: d = dict.fromkeys(seq, 10)	seq = ('name', 'age', 'sex')	{'age': 10, 'name': 10, 'sex': 10}
-		Get value of a key		: d.get(name, 'not available')	(key, default=None)				10
-		for key return value/add	: d.setdefault('test', 99)	{'test': 99, 'age': 10, 'name': 10, 'sex': 10}
-		Check key			: d.has_key(4)			False
-		key/value in list/tuple 	: d.items()			[('age', 10), ('name', 10), ('sex', 10)]
-		Get key from in list		: d.keys()			['age', 'name', 'sex']	
-		add 1 hash to another		: d.update(s)	s = {1:4, 6:0}	{1: 4, 'age': 10, 'name': 10, 6: 0, 'sex': 10}
-		Get values in list		: d.values()			[4, 10, 10, 0, 10]
+		empty hash		 : d = {}, d=dict()
+		Create hash 		 : d["key1"] = "value1" 	{'key1': 'value1'}
+		print a value of key	 : d["key1"]			'value1'
+		create hash 		 : d = {'Name': 'Zara', 'Age': 7};  {'Age': 7, 'Name': 'Zara'}
+		length of hash		 : len(d)			2						
+		Convert in string	 : str(d)			"{'Age': 7, 'Name': 'Zara'}"
+		copy of hash		 : a =d.copy()			{'Age': 7, 'Name': 'Zara'}
+		new hash with keys	 : d = dict.fromkeys(seq, 10)	seq = ('name', 'age', 'sex'){'age': 10, 'name': 10, 'sex': 10}
+		Get value of a key	 : d.get(name, 'not available')	(key, default=None)				10
+		for key return value/add : d.setdefault('test', 99)	{'test': 99, 'age': 10, 'name': 10, 'sex': 10}
+		Check key		 : d.has_key(4)			False
+		key/value in list/tuple  : d.items()			[('age', 10), ('name', 10), ('sex', 10)]
+		Get key from in list	 : d.keys()			['age', 'name', 'sex']	
+		add 1 hash to another	 : d.update(s)	s = {1:4, 6:0}	{1: 4, 'age': 10, 'name': 10, 6: 0, 'sex': 10}
+		Get values in list	 : d.values()			[4, 10, 10, 0, 10]
 
-		delete a key 			: del d["Age"]			{'Name': 'Zara'}
-		remove all entries		: d.clear()			{}
-		delete entire dictionary	: del d				
+		delete a key 		 : del d["Age"]			{'Name': 'Zara'}
+		remove all entries	 : d.clear()			{}
+		delete entire dictionary : del d				
 
 
 	How to add key value mapping from a dataset:
