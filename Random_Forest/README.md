@@ -74,7 +74,6 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 	This very frequently increases bias, so there’s a tradeoff to take into consideration.
 
 # Tune
-http://stackoverflow.com/questions/36107820/how-to-tune-parameters-in-random-forest-using-scikit-learn
 	- n_estimators is not really worth optimizing. The more estimators you give it, the better it will do. 
 		500 or 1000 is usually sufficient. ususally bigger the forest the better, 
 		there is small chance of overfitting here
@@ -96,10 +95,12 @@ http://stackoverflow.com/questions/36107820/how-to-tune-parameters-in-random-for
 		
 	- my default setting for a first run is: 1000 trees, 1/2 features per node, out of bag performance weighting, 
 		Gini Index for node evaluation.
-		
-https://medium.com/@chris_bour/6-tricks-i-learned-from-the-otto-kaggle-challenge-a9299378cd61#.62v2igttw
 
 plot_learning_curve: http://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html
+
+https://medium.com/@chris_bour/6-tricks-i-learned-from-the-otto-kaggle-challenge-a9299378cd61#.62v2igttw
+
+http://stackoverflow.com/questions/36107820/how-to-tune-parameters-in-random-forest-using-scikit-learn
 
 http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.html#sphx-glr-auto-examples-model-selection-randomized-search-py
 
