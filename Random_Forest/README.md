@@ -70,7 +70,7 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 
 
 # Bias - Variance
-	For example, if you have high variance, one common solution is to add more features from which to learn. 
+	For high variance, one common solution is to add more features from which to learn. 
 	This very frequently increases bias, so there’s a tradeoff to take into consideration.
 
 # Tune
