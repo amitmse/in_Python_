@@ -158,3 +158,33 @@
 	on training data set, then it causes over fitting and losses the predictive power of the model because 
 	it is not generalized. Over fitting can be removed by pruning the nodes.
 
+## Type I / II Error
+	True Positives 	(TP) = Correctly Identified
+	True Negatives 	(TN) = Correctly Rejected
+	False Positives	(FP) = Incorrectly Identified 	= Type I Error
+	False Negatives	(FN) = Incorrectly Rejected	= Type II Error
+	Recall (Sensitivity) = Ability of the classifier to find positive samples from all positive samples
+	Precision 	     = Ability of the classifier not to label as positive a sample that is negative
+				(positive predictive value)
+	Specificity 	     = Measures the proportion of actual negatives that are correctly identified
+				(true negative rate)
+
+
+	True Positive Rate / Sensitivity / Recall : 
+		TP 	/ (TP + FN)			= TP / Actual Positives
+	True Negative Rate / Specificity : 
+		TN 	/ (TN + FP)			= TN / Actual Negatives
+	False Positive Rate / Type I Error: 
+		FP	/ (FP + TN) 			= FP / Actual Negatives		= 1 - Specificity
+	False Negative Rate / Type II Error : 
+		FN	/ (FN + TP) 			= FN / Actual Positives		= 1 - True Positive Rate
+	Positive Predictive Value / Precision : 
+		TP 	/ (TP + FP)
+	Negative Predictive Value : 
+		TN 	/ (TN + FN)
+	False Discovery Rate: 
+		FP	/ (FP + TP)			= 1 - Positive Predictive Value
+	F1-Score : 
+		2*TP	/ (2TP + FP + FN) 	= [2 * (Precision * Recall) / (Precision + Recall)]
+	Accuracy : 
+		(TP + TN)/ (TP  + TN + FP + FN)
