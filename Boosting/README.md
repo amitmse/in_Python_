@@ -1,4 +1,5 @@
 
+
 ## ADA Boost
 
 	--------------------------------------------------------------------------------------------------
@@ -146,3 +147,10 @@ Improvements to Basic Gradient Boosting
 		2. Shrinkage:
 		3. Random sampling:				
 		4. Penalized Learning:
+
+
+
+Adaboost vs Gradient Boosting: 
+
+	- Adaboost		:"shortcomings” are identified by high-weight data points.
+	- Gradient Boosting	: “shortcomings” are identified by gradients. 
