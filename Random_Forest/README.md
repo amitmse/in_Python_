@@ -25,9 +25,9 @@
   
 http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 
-Here is how such a system is trained; for some number of trees T:
+## Implementation 
 
-	1. Sample N cases at random with replacement to create a subset of the data 
+	1. Sample (N) cases at random with replacement to create a subset of the data.
 		The subset should be about 66% of the total set.
 		
 	2. At each node:
