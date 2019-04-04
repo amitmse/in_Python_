@@ -110,4 +110,30 @@
 								
 			momentum 	: float, default 0.9
 			
-			
+
+## Hidden layers
+	- if data is linearly separable then don't need any hidden layers at all. Of course, you don't need an 
+		NN to resolve your data either, but it will still do the job.
+	- One issue within this subject on which there is a consensus is the performance difference from adding 
+		additional hidden layers: the situations in which performance improves with a second (or third, etc.) 
+		hidden layer are very small. One hidden layer is sufficient for the large majority of problems.
+	- Get decent performance (even without a second optimization step) by setting the hidden layer configuration 
+		using just two rules: 
+			i. number of hidden layers equals one
+			ii. number of neurons in that layer is the mean of the neurons in the input and output layers			
+	- Pruning describes a set of techniques to trim network size (by nodes not layers) to improve computational 
+		performance and sometimes resolution performance. Get a rough idea of which nodes are not important by 
+		looking at your weight (weights very close to zero) matrix after training.
+	- Using too many neurons in the hidden layers can result in several problems. 
+		- First, too many neurons in the hidden layers may result in overfitting.
+		- A second problem can occur even when the training data is sufficient. An inordinately large number of 
+			neurons in the hidden layers can increase the time it takes to train the network. 
+		- There are many rule-of-thumb methods for determining the correct number of neurons to use in the 
+			hidden layers, such as the following:
+		- number of hidden neurons should be between the size of the input layer and the size of the output layer
+		- number of hidden neurons should be 2/3 the size of the input layer, plus the size of the output layer
+		- number of hidden neurons should be less than twice the size of the input layer
+							
+	- A model with zero hidden layers will resolve linearly separable data. So unless you already know your data 
+		isn't linearly separable, it doesn't hurt to verify this.
+	- Assuming your data does require separation by a non-linear technique, then always start with one hidden layer
