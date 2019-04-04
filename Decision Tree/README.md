@@ -170,21 +170,12 @@
 				(true negative rate)
 
 
-	True Positive Rate / Sensitivity / Recall : 
-		TP 	/ (TP + FN)			= TP / Actual Positives
-	True Negative Rate / Specificity : 
-		TN 	/ (TN + FP)			= TN / Actual Negatives
-	False Positive Rate / Type I Error: 
-		FP	/ (FP + TN) 			= FP / Actual Negatives		= 1 - Specificity
-	False Negative Rate / Type II Error : 
-		FN	/ (FN + TP) 			= FN / Actual Positives		= 1 - True Positive Rate
-	Positive Predictive Value / Precision : 
-		TP 	/ (TP + FP)
-	Negative Predictive Value : 
-		TN 	/ (TN + FN)
-	False Discovery Rate: 
-		FP	/ (FP + TP)			= 1 - Positive Predictive Value
-	F1-Score : 
-		2*TP	/ (2TP + FP + FN) 	= [2 * (Precision * Recall) / (Precision + Recall)]
-	Accuracy : 
-		(TP + TN)/ (TP  + TN + FP + FN)
+	True Positive Rate / Sensitivity / Recall : TP  / (TP + FN) = TP / Actual Positives
+	True Negative Rate / Specificity : 	    TN  / (TN + FP) = TN / Actual Negatives
+	False Positive Rate / Type I Error: 	    FP  / (FP + TN) = FP / Actual Negatives = 1 - Specificity
+	False Negative Rate / Type II Error : 	    FN  / (FN + TP) = FN / Actual Positives = 1 - True Positive Rate
+	Positive Predictive Value / Precision :     TP  / (TP + FP)
+	Negative Predictive Value : 		    TN  / (TN + FN)
+	False Discovery Rate: 			    FP  / (FP + TP) = 1 - Positive Predictive Value
+	F1-Score : 2*TP/ (2TP + FP + FN) 	=   [2 * (Precision * Recall) / (Precision + Recall)]
+	Accuracy : (TP + TN)/ (TP  + TN + FP + FN)
