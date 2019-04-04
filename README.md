@@ -1,6 +1,6 @@
 # Hands on machine learning with PYTHON (2.7)
 
-Data Preparation
+Data Preparation : https://github.com/amitmse/in_Python_/tree/master/Boosting
 
 Logistic Regression
 
