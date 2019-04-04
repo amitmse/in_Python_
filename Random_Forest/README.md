@@ -27,11 +27,12 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 
 Here is how such a system is trained; for some number of trees T:
 
-	1. Sample N cases at random with replacement to create a subset of the data (see top layer of figure above). 
+	1. Sample N cases at random with replacement to create a subset of the data 
 		The subset should be about 66% of the total set.
 		
 	2. At each node:
-		- For some number m (see below), m predictor variables are selected at random from all the predictor variables.
+		- For some number m (see below), m predictor variables are selected at random from 
+			all the predictor variables.
 		
 		- The predictor variable that provides the best split, according to some objective function, 
 			is used to do a binary split on that node.
@@ -45,10 +46,13 @@ Here is how such a system is trained; for some number of trees T:
 			Brieman suggests three possible values for m: 1/2(sqrt(vm)), sqrt(vm), and sqrt(2vm)
 			
 	4. Running a Random Forest. When a new input is entered into the system, 
-		it is run down all of the trees. The result may either be an average or weighted average of all 
-		of the terminal nodes that are reached, or, in the case of categorical variables, a voting majority.
+		it is run down all of the trees. The result may either be an average or weighted average of 
+		all of the terminal nodes that are reached, or, in the case of categorical variables, 
+		a voting majority.
+		
 		Note that:
-			- With a large number of predictors, the eligible predictor set will be quite different from node to node.
+			- With a large number of predictors, the eligible predictor set will be quite 
+				different from node to node.
 			- The greater the inter-tree correlation, the greater the random forest error rate, 
 				so one pressure on the model is to have the trees as uncorrelated as possible.
 			- As m goes down, both inter-tree correlation and the strength of individual trees go down. 
