@@ -176,6 +176,32 @@
 	False Negative Rate / Type II Error : 	    FN  / (FN + TP) = FN / Actual Positives = 1 - True Positive Rate
 	Positive Predictive Value / Precision :     TP  / (TP + FP)
 	Negative Predictive Value : 		    TN  / (TN + FN)
-	False Discovery Rate: 			    FP  / (FP + TP) = 1 - Positive Predictive Value
+	False Discovery Rate: 			    FP  / (FP + TP) = 1 - Positive Predictive Value	
+	Accuracy : 				   (TP + TN)/ (TP  + TN + FP + FN)
 	F1-Score : 2*TP/ (2TP + FP + FN) 	=   [2 * (Precision * Recall) / (Precision + Recall)]
-	Accuracy : (TP + TN)/ (TP  + TN + FP + FN)
+		F1 score (also F-score or F-measure) is a measure of a test's accuracy. 
+		The F1-score gives you the harmonic mean of precision and recall.
+		The scores corresponding to every class will tell you the accuracy of the classifier in 
+		classifying the data points in that particular class compared to all other classes.
+		The F1 score is the harmonic average of the precision and recall, where an F1 score reaches 
+		its best value at 1 (perfect precision and recall) and worst at 0.
+		It considers both the precision and the recall of the test to compute the score: 
+		 	- precision is the number of correct positive results divided by the number of all positive 
+				results returned by the classifier, 
+			- recall is the number of correct positive results divided by the number of all relevant 
+				samples (all samples that should have been identified as positive). 
+				F1-Score : 2*TP	/ (2TP + FP + FN) = [2 * (Precision * Recall) / (Precision + Recall)]
+				
+	Feature importances: 
+		It is also known as the Gini importance. The importance of a feature is computed as the (normalized) 
+		total reduction of the criterion brought by that feature.  That reduction or weighted information gain
+		is defined as. The weighted impurity decrease equation is the following: 
+			N_t / N * (impurity - N_t_R / N_t * right_impurity - N_t_L / N_t * left_impurity)
+				N 	: Total number of samples
+				N_t 	: No. of samples at the current node
+				N_t_L 	: No. of samples in the left child 
+				N_t_R 	: No. of samples in the right child
+				
+https://stackoverflow.com/questions/49170296/scikit-learn-feature-importance-calculation-in-decision-trees?rq=1
+https://hackernoon.com/a-brief-look-at-sklearn-tree-decisiontreeclassifier-c2ee262eab9a
+https://github.com/random-forests/tutorials/blob/master/decision_tree.ipynb
