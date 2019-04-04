@@ -137,3 +137,85 @@
 	- A model with zero hidden layers will resolve linearly separable data. So unless you already know your data 
 		isn't linearly separable, it doesn't hurt to verify this.
 	- Assuming your data does require separation by a non-linear technique, then always start with one hidden layer
+
+
+
+## Deep neural network
+
+	-Deep learning works because of the architecture of the network AND the optimization routine applied 
+		to that architecture.
+	-Deep neural networks were a set of techniques that were discovered to overcome the vanishing gradient 
+		problem which was severely limiting the depth of neural networks.
+	-Neural networks are trained using backpropagation gradient descent. That is, you update the weights of 
+		each layer as a function of the derivative of the previous layer. The problem is that the update 
+		signal was lost as you increased the depth of the neural network. The math is pretty simple. 
+		Therefore, in the old days, people pretty much only used neural networks with a single hidden-layer.
+	-These new techniques include things like using RELU instead of sigmoids as activation functions. 
+		RELU are of the form f(x)=max(0,x) and so they have non-vanishing derivative. But there are other
+		techniques like using the sign of the derivative, rather than the magnitude, 
+		in the backpropagation optimization problem.
+	-The use of simple Rectified Linear Units (ReLU) instead of sigmoid and tanh functions is probably 
+		the biggest building block in making training of DNNs possible. Note that both sigmoid and 
+		tanh functions have almost zero gradient almost everywhere, depending on how fast they transit 
+		from the low activation level to high; in the extreme case, when the transition is sudden, 
+		we get a step function that has slope zero everywhere except at one point where the transition happens.
+	-To expand on David Gasquez's answer, one of the main differences between deep neural networks and 
+		traditional neural networks is that we don't just use backpropagation for deep neural nets. 
+		Because backpropagation trains later layers more efficiently than it trains earlier layers--as you 
+		go earlier and earlier in the network, the errors get smaller and more diffuse. So a ten-layer 
+		network will basically be seven layers of random weights followed by three layers of fitted weights, 
+		and do just as well as a three layer network.
+		
+	- Perceptron: 
+		It's a Binary unit outputting Yes, No decisions with binary inputs. Perceptron function is a step function.
+		Transform the normal Perceptron into a sigmoid neuron using a sigmoid function (y = 1/(1+e^-z).
+		Sigmoid function is nothing but a smooth Step function and it gives us a range of values between 0 and 1. 
+		Using this gradual output from the neuron, we can control our weight learning and tweaking of the weights. 
+		This facilitates learning of weights in a neuron.
+		
+	-Neuron Saturation:
+		If we use sigmoid function as the activation function, then the error term in the output layer 
+		slows down as activation saturates. If you see as Z tends to grow higher 
+		(refer to graph for logistic sigmod function) or smaller the function flattens either to 1 or 0. 
+		This is called neuron saturation as it can't go beyond that. Which means the differential at 
+		that time becomes very low or close to zero. This means if the output neuron saturates, 
+		then the error for that neuron would be very low. Now error as defined above is just the change 
+		of cost with respect to that neuron's weighted input (z), the cost would change slowly, 
+		with respect to that weight and hence the gradient of that neuron is very low. This means the 
+		weight update rule or weight learning will slow down. So once we calculate the error term of 
+		the output layer , BP2 gives an equation of relating the error term in l+1th layer to 
+		error terms in lth layer. Now we can calculate error terms of each neuron in each inside 
+		layers as a function of error terms of the next layer neurons. But even the error term of 
+		lth layer has the sigmoid function differential term in it. Which means when the activation or 
+		input to the lth layer is saturated, then the weight incident on that neuron from previous 
+		layer would learn slow too. Overall, weight learning will slow down if the input activation or 
+		the output activation is saturated.
+		
+	-BackPropagation: 
+		The errors are getting propagated in a backward fashion. We start by first finding the error terms 
+		of the output layer using BP1. And then using BP2 we get the error terms of the layer previous to that. 
+		And keep on using BP2 to get error terms of all neurons in all inside layer right till the first input layer. 
+		So this way we are propagating the error from the output layer all the way to the first layer. 
+		Back Propagation is nothing but the chain rule of calculus. So the reason this error propagation 
+		is happening backwards is because the initial cost function is used as a function of output
+		activation and chain rule of calculus then causes it to behave that way.
+
+	-Activation Function:
+		Sigmoid is not only activation function right but we have other two most popular activation 
+		functions which are also used are tanh and ReLu.
+		TanH :  The advantage is that instead of having a range between 0 and 1, tanh has a range between -1 to +1.
+			tanh(w*x + b)
+			tanh(z) = (e^z - e^-z)/(e^z + e^-z)						
+		ReLU :	Rectified Linear Unit doesn't have the saturation problem where the output might get 
+			constrained beyond a limit. max(0, w*x + b)
+
+	- Problem in NN:
+		Well due to Fully Connected Layer Architecture we experience two problems:
+				-	Vanishing Gradient Problem 
+				-	Exploding Gradient Problem 
+		while training Deep Neural Networks which makes it hard to train deep neural networks.
+		To prevent that we make use of a different architecture called as Convolutional Nets 
+		which uses three main ideas:
+				-	Local Receptive fields 
+				-	Shared Weights 
+				- 	Pooling
