@@ -1,59 +1,59 @@
 
 #/***************************************************************************************************************************************************/	
-	Set path			# set PATH=%PATH%;C:\python27\	Advanced System Settings http://pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/
+	Set path		# set PATH=%PATH%;C:\python27\	Advanced System Settings http://pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/
 	
 	packages installed 	# help("modules")
 	
 	Install Library 	# First install pip then 	- http://stackoverflow.com/questions/28142839/pip-install-numpy-python-2-7-fails-with-errorcode-1
-						# python get-pip.py 		- https://bootstrap.pypa.io/get-pip.py 		/pip install pip-tools  		/ python -m pip install --upgrade pip  / 'pip install --upgrade pip  
-						# Download Library 			- http://www.lfd.uci.edu/~gohlke/pythonlibs
-						# download package 			- go to folder open cmd to install 			/ 'https://docs.python.org/2/install/						
-						# pip install numpy 		- easy_install -U setuptools 				/ easy_install -U statsmodels 	/	easy_install scipy-0.16.0-cp26-none-win_amd64.whl	 / python setup.py install 
+				# python get-pip.py 		- https://bootstrap.pypa.io/get-pip.py 	/pip install pip-tools  		/ python -m pip install --upgrade pip  / 'pip install --upgrade pip  
+				# Download Library 		- http://www.lfd.uci.edu/~gohlke/pythonlibs
+				# download package 		- go to folder open cmd to install / 'https://docs.python.org/2/install/						
+				# pip install numpy 		- easy_install -U setuptools 	/ easy_install -U statsmodels 	/	easy_install scipy-0.16.0-cp26-none-win_amd64.whl	 / python setup.py install 
 
-	Graphviz 			# Install software and add path C:\Program Files (x86)\Graphviz2.38\bin 
+	Graphviz 		# Install software and add path C:\Program Files (x86)\Graphviz2.38\bin 
 	
 	
 #/***************************************************************************************************************************************************/	
 	version	Library		# print igraph.__version__	
 	python program.py	# Run it from the command line/double click on code
-	Ctrl-D				# Quit Python
+	Ctrl-D			# Quit Python
 	help("range")		# help on function 
 	import library		# First import library before calling it. import numpy
-	import os			# import module
-	print os			# check location of source code of a library
-	os.getcwd()			# check current directory			----> import os, os.getcwd(), 'C:\\Python27'
-	os.chdir()			# Change directory					----> os.chdir("D:\\247NETWORKBACKUP\\Training")
-	os.mkdir()			# create a directory				----> os.mkdir("D:\\test"), os.mkdir("test")
-	type(var)			# type of data. type(9) 			----> int
-	dir(string_l)		# inbuild function of a object. 	----> x= [1,2,9] , dir(x)
-						# import pdb / 	pdb.set_trace()
+	import os		# import module
+	print os		# check location of source code of a library
+	os.getcwd()		# check current directory	----> import os, os.getcwd(), 'C:\\Python27'
+	os.chdir()		# Change directory		----> os.chdir("D:\\247NETWORKBACKUP\\Training")
+	os.mkdir()		# create a directory		----> os.mkdir("D:\\test"), os.mkdir("test")
+	type(var)		# type of data. type(9) 	----> int
+	dir(string_l)		# inbuild function of a object. ----> x= [1,2,9] , dir(x)
+				# import pdb / 	pdb.set_trace()
 	
 #/***************************************************************************************************************************************************/	
-	Int(num)			# convert to integer, 	int('9.8') 	----> 9
-	float(num)			# Convert to float, 	float(9) 	----> 9.0
-	complex()			# convert to a complex number with real part and imaginary part
+	Int(num)		# convert to integer, 	int('9.8') 	----> 9
+	float(num)		# Convert to float, 	float(9) 	----> 9.0
+	complex()		# convert to a complex number with real part and imaginary part
 	complex(x, y)		# convert to a complex number with real  and imaginary
-	str()				# Convert to string,	str(9)		----> '9'
-	raw_input()			# user input						----> fname = raw_input("enter file name"), raw_input("done")
-	lower()				# string_l = string.lower()			----> 'example'			string = 'ExaMple'
-	upper()				# string_u = string.upper()			----> 'EXAMPLE'			
-	find()				# string.find('M') 					----> 3, string.find('o') ----> -1 (if not able to findout then it will mention -1)
-	replace()			# string.replace('Exa', 'EXA')		----> 'EXAMple'
-	lstrip()			# Remove space. string.lstrip()		----> 'HeLooo TeSt ' 			string = ' HeLooo TeSt '
-	rstrip()			# Remove space. string.rstrip()		----> ' HeLooo TeSt'			
-	strip()				# Remove space. string.strip()		----> 'HeLooo TeSt'
+	str()			# Convert to string,	str(9)	----> '9'
+	raw_input()		# user input			----> fname = raw_input("enter file name"), raw_input("done")
+	lower()			# string_l = string.lower()	----> 'example'	string = 'ExaMple'
+	upper()			# string_u = string.upper()	----> 'EXAMPLE'			
+	find()			# string.find('M') 		----> 3, string.find('o') ----> -1 (if not able to findout then it will mention -1)
+	replace()		# string.replace('Exa', 'EXA')	----> 'EXAMple'
+	lstrip()		# Remove space. string.lstrip()	----> 'HeLooo TeSt ' string = ' HeLooo TeSt '
+	rstrip()		# Remove space. string.rstrip()	----> ' HeLooo TeSt'			
+	strip()			# Remove space. string.strip()	----> 'HeLooo TeSt'
 	startswith()		# string.startswith(' HeLooo')		----> True
-	range()				# create a list, x = range(3)		----> [0, 1, 2]
-	Min					# tiny = min("AmitTest") 			----> A
-	MAX					# big = max("amit xyz")  			----> z
-	iter()				# it = iter(s) 						----> it.next()									s = 'abc', next will give next word 
+	range()			# create a list, x = range(3)	----> [0, 1, 2]
+	Min			# tiny = min("AmitTest") 	----> A
+	MAX			# big = max("amit xyz")  	----> z
+	iter()			# it = iter(s) 			----> it.next()									s = 'abc', next will give next word 
 	
 #/***************************************************************************************************************************************************/	
-	==					# Equal to							----> if x==1 then do
-	=					# Assign Value						----> x=1
-	#					# comment the code					----> #comment this part
-	'''					# Multiple line comment. 			----> ''' should be at both places  start and end
-	\n					# Newline 							----> stuff = 'HelOo\nWoRlD' [it will print in two lines] 
+	==			# Equal to			----> if x==1 then do
+	=			# Assign Value			----> x=1
+	#			# comment the code		----> #comment this part
+	'''			# Multiple line comment. 	----> ''' should be at both places  start and end
+'	\n			# Newline 			----> stuff = 'HelOo\nWoRlD' [it will print in two lines] 
 
 #/*****************************************************************/
 	import nltk
@@ -65,46 +65,44 @@
 	structured to regular array : t=np.array(df.tolist())
 	
 #/************** PANDAS ******************************************************/	
-	read data 					: train_df = pd.read_csv('train.csv', header=0)
-	numpy to pandas				: b=pd.DataFrame(a) # a is numpy array
-	pandas to numpy				: a=df1.as_matrix() / b=df1.values 	(df1 is pandas dataframe)
+	read data 		: train_df = pd.read_csv('train.csv', header=0)
+	numpy to pandas		: b=pd.DataFrame(a) # a is numpy array
+	pandas to numpy		: a=df1.as_matrix() / b=df1.values (df1 is pandas dataframe)
 
-	Var list 					: train_df.columns
-	Num var distribution		: train_df.describe()
-	Freq						: train_df['Sex'].value_counts()	/ 	train_df.groupby('Sex').size()
-	Mean						: mean = df3['float_col'].mean()
-	Count Missing 				: train_df.isnull().sum().sum()		/	sum([True for idx,row in train_df.iterrows() if any(row.isnull())])	
-	Columns Missing				: train_df.apply(lambda x: sum(x.isnull().values), axis = 0)
-	Row Missing					: train_df.apply(lambda x: sum(x.isnull().values), axis = 1)	
-	Fill Missing				: df3['float_col'].fillna(mean)
-	Drop Missing				: df2.dropna()
-	Filter on column			: x = df[df['A'] == 3]
-	Correlation 				: a=input_data.corr()
-	Append data					: old_data_frame = pd.concat([old_data_frame,new_record])
-	Drop a column				: input_data=input_data.drop('reservation',1)
-	Reset Index					: h.reset_index() #fresh index
-	Use columnas  Index			: data2 = t.set_index('two')
-	Change column position		: rearrage the column list and use the list (a) to subset the data (Transpose[a])
-	New record					: a=pd.Series(TP, index=['Actual-1'], name='Predicted-1'), 
-								  b=pd.Series(FN, index=['Actual-1'], name='Predicted-0'), 
-								  c=pd.Series(FP, index=['Actual-0'], name='Predicted-1'), 
-								  d=pd.Series(TN, index=['Actual-0'], name='Predicted-0')
-	Add column 				    : train['Has_Cabin'] = train["Cabin"].apply(lambda x: 0 if type(x) == float else 1) #Number will be available for Cabin
-								  dataset['Sex'] = dataset['Sex'].map( {'female': 0, 'male': 1} ).astype(int)
-	Merge by column				: first=pd.concat([a, b], axis=1), second=pd.concat([c, d], axis=1)
-	Append						: third = pd.concat([first, second])
-
-
+	Var list 		: train_df.columns
+	Num var distribution	: train_df.describe()
+	Freq			: train_df['Sex'].value_counts() / train_df.groupby('Sex').size()
+	Mean			: mean = df3['float_col'].mean()
+	Count Missing 		: train_df.isnull().sum().sum()	 /sum([True for idx,row in train_df.iterrows() if any(row.isnull())])	
+	Columns Missing		: train_df.apply(lambda x: sum(x.isnull().values), axis = 0)
+	Row Missing		: train_df.apply(lambda x: sum(x.isnull().values), axis = 1)	
+	Fill Missing		: df3['float_col'].fillna(mean)
+	Drop Missing		: df2.dropna()
+	Filter on column	: x = df[df['A'] == 3]
+	Correlation 		: a=input_data.corr()
+	Append data		: old_data_frame = pd.concat([old_data_frame,new_record])
+	Drop a column		: input_data=input_data.drop('reservation',1)
+	Reset Index		: h.reset_index() #fresh index
+	Use columnas  Index	: data2 = t.set_index('two')
+	Change column position	: rearrage the column list and use the list (a) to subset the data (Transpose[a])
+	New record		: a=pd.Series(TP, index=['Actual-1'], name='Predicted-1'), 
+				  b=pd.Series(FN, index=['Actual-1'], name='Predicted-0'), 
+				  c=pd.Series(FP, index=['Actual-0'], name='Predicted-1'), 
+				  d=pd.Series(TN, index=['Actual-0'], name='Predicted-0')
+	Add column 		: train['Has_Cabin'] = train["Cabin"].apply(lambda x: 0 if type(x) == float else 1) #Number will be available for Cabin
+				  dataset['Sex'] = dataset['Sex'].map( {'female': 0, 'male': 1} ).astype(int)
+	Merge by column		: first=pd.concat([a, b], axis=1), second=pd.concat([c, d], axis=1)
+	Append			: third = pd.concat([first, second])
 	
 #/******Conditionals ( IF/ELSE IF/ELSE) ****************************************/
 	
-		angle = 5
-		if angle > 0:
-				print("Turning clockwise")
-		elif angle < 0:
-				print("Turning anticlockwise")
-		else:
-				print("Not turning at all"
+	angle = 5
+	if angle > 0:
+			print("Turning clockwise")
+	elif angle < 0:
+			print("Turning anticlockwise")
+	else:
+			print("Not turning at all"
 	
 #/****** TRY & EXCEPT **************************************************************/
 	#Feature to handle any unexpected error in your Python programs.
@@ -119,13 +117,13 @@
 	print istr
 	-1
 
-	try :          	hr = raw_input("hour"); hour = float(hr) ; rt = raw_input("rate") ; rate  = float(rt) ; pay = hour*rate ; print pay;
-	except:			print "error, please check"
+	try :   hr = raw_input("hour"); hour = float(hr) ; rt = raw_input("rate") ; rate  = float(rt) ; pay = hour*rate ; print pay;
+	except:	print "error, please check"
 
 	try :          	
-		hr 		= raw_input("hour"); 
+		hr 	= raw_input("hour"); 
 		hour 	= float(hr) ; 
-		rt 		= raw_input("rate") ; 
+		rt 	= raw_input("rate") ; 
 		rate  	= float(rt) ; 
 		pay 	= hour*rate ; 
 		print 	pay;
@@ -162,10 +160,10 @@
 	
 	while True:
 		line = raw_input('user input..... ')	#ask user input 
-		if line == 'done':						#check user input 
-			break								#if user input is 'done' then exit from loop
-		print line								#if user input is not 'done' then print the user input
-	print "DONE"								#if user input is 'done' then exit from loopif and print "DONE"
+		if line == 'done':	#check user input 
+			break		#if user input is 'done' then exit from loop
+		print line		#if user input is not 'done' then print the user input
+	print "DONE"			#if user input is 'done' then exit from loopif and print "DONE"
 	
 #/****** Reading a file **************************************************************/
 	#every time open a file. once code is executed it will go to end of line.
@@ -186,7 +184,7 @@
 	for line in file_n:
 		line = line.strip()
 		if not 'Received:' in line:
-			continue						#Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
+			continue #Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
 	print line
 	
 	
@@ -194,25 +192,25 @@
 	csv_file = open('data.csv')
 	print (csv_file.read())
 
-	print open('data.csv').readline()						# column name.
+	print open('data.csv').readline()		# column name.
 	
 	allrows=list(csv.reader(open('data.csv')))
-	allrows[0]												# column name
-	header = list(csv.reader(open('data.csv')))[0]			# column name. its combination above two lines of code
+	allrows[0]					# column name
+	header = list(csv.reader(open('data.csv')))[0]	# column name. its combination above two lines of code
 	
 	with open('data.csv') as f:
 	reader = csv.reader(f)
-	row1 = next(reader) 									#header of CSV file
-	column = next(csv.reader(open('data.csv')))				#column name. its combination above three lines of code
+	row1 = next(reader) 				#header of CSV file
+	column = next(csv.reader(open('data.csv')))	#column name. its combination above three lines of code
 	
-	r=sum(1 for row in (csv.reader(open('data.csv'))))		#total number of record with header
+	r=sum(1 for row in (csv.reader(open('data.csv'))))	#total number of record with header
 	
 	text = 'Sample Text to Save\nNew line!'
 	
-	saveFile = open('exampleFile.txt','w')					# notifies Python that you are opening this file, with the intention to write
-	saveFile.write(text)									# actually writes the information
-	saveFile.close()										# It is important to remember to actually close the file, otherwise it will hang for a while and
-															#			could cause problems in your script
+	saveFile = open('exampleFile.txt','w')		# notifies Python that you are opening this file, with the intention to write
+	saveFile.write(text)				# actually writes the information
+	saveFile.close()				# It is important to remember to actually close the file, otherwise it will hang for a while and
+							# could cause problems in your script
 
 	# so here, generally it can be a good idea to start with a newline, since otherwise it will append data on the same line as the file left off.
 	# you might want that, but I'll use a new line. another option used is to first append just a simple newline then append what you want. 
@@ -226,38 +224,36 @@
 	#The list is a most versatile datatype available in Python which can be written as a list of comma-separated values (items) between square brackets. 
 	#Important thing about a list is that items in a list need not be of the same type.
 
+		HELP		: help(list), help("list"), help([])
+		Empty list 	: shopping_list  = [], 				zz=list()
+		append		: a=[-1, 1, 1, 2, 3, 3, 4, 4, 6.777, 'test']	a.append(10)	=> [-1,1,1,2,3,3,4,4,6.777,'test',10]
+		extend		: 
+		insert		: a.insert(2,-1) = [1, 2, -1, 3, 4, 6.777, 'test', 1, 2, 3, 4] 
+		remove		: a.remove(2)    = [1,    -1, 3, 4, 6.777, 'test', 1, 2, 3, 4] 
+		index		: [1, 2, -1, 3, 4, 6.777, 'test', 1, 2, 3, 4]	a.index('test')=6
+		count		: a=[1, 2,3, 4, 6.777, 'test', 1, 2, 3, 4]	a.count(1)= 2, 	a.count(9)= 0,  				      			
+		sort		: [4, 3,  2, 1,   'test', 6.777, 4, 3, -1, 1]	a.sort()= [-1, 1, 1, 2, 3, 3, 4, 4, 6.777, 'test']			
+		reverse		: [1, -1,    3, 4, 6.777, 'test', 1, 2, 3, 4] 	a.reverse()= [4, 3, 2, 1, 'test', 6.777, 4, 3, -1, 1]
+		Delete		: [-1, 2, 3, 3, 4, 4, 6.777, 'test']		del a[0]= [2, 3, 3, 4, 4, 6.777, 'test']
+		split()		: xc = "test 123  ixcv ", 			xcx = xc.split(), xcx = ['test', '123', 'ixcv']
 
-		HELP			:	help(list), help("list"), help([])
-		Empty list 		:	shopping_list  = []		, zz=list()
-		append			:	a=[-1, 1, 1, 2, 3, 3, 4, 4, 6.777, 'test']							a.append(10)	=> [-1,1,1,2,3,3,4,4,6.777,'test',10]		
-		extend			:	
-		insert			:																		a.insert(2,-1) = [1, 2, -1, 3, 4, 6.777, 'test', 1, 2, 3, 4] 
-		remove			:																		a.remove(2)    = [1,    -1, 3, 4, 6.777, 'test', 1, 2, 3, 4] 
-		pop				:	[-1, 1, 1, 2, 3, 3, 4, 4, 6.777, 'test']							a.pop()= 'test'	(default remove last, give position)
-		index			: 	[1, 2, -1, 3, 4, 6.777, 'test', 1, 2, 3, 4]							a.index('test')=6
-		count			:	a=[1, 2,3, 4, 6.777, 'test', 1, 2, 3, 4]							a.count(1)= 2, 	a.count(9)= 0,  				      			
-		sort			:	[4, 3,  2, 1,   'test', 6.777, 4, 3, -1, 1]							a.sort()= [-1, 1, 1, 2, 3, 3, 4, 4, 6.777, 'test']			
-		reverse			: 	[1, -1,    3, 4, 6.777, 'test', 1, 2, 3, 4] 						a.reverse()= [4, 3, 2, 1, 'test', 6.777, 4, 3, -1, 1]
-		Delete			:	[-1, 2, 3, 3, 4, 4, 6.777, 'test']									del a[0]= [2, 3, 3, 4, 4, 6.777, 'test']
-		split()			:	xc = "test 123  ixcv "	, xcx = xc.split()							xcx = ['test', '123', 'ixcv']
+		len(s) 		: length of s	      s=[1, 2, 3, 4], len(s), 4
+		min(s) 		: smallest item of s  s=[1, 2, 3, 4], min(s), 1
+		max(s) 		: largest item of s   s=[1, 2, 3, 4], max(s), 4
+		s.index(i) 	: index of the first occurrence of i in s s=[1, 2, 3, 4], s.index(3) , 2
+		s.count(i) 	: total number of occurrences of i in s   s=[1, 2, 3, 4], s.count(2) , 1
+		Tuple to list	: list(tupl) = [1, 2]	tupl=(1, 2) tuple 
 
-		len(s) 			:	length of s										s=[1, 2, 3, 4],			len(s)		, 4 	 
-		min(s) 			:	smallest item of s 	 							s=[1, 2, 3, 4],			min(s)		, 1
-		max(s) 			:	largest item of s 	 							s=[1, 2, 3, 4],			max(s)		, 4
-		s.index(i) 		:	index of the first occurrence of i in s 	 	s=[1, 2, 3, 4],			s.index(3)	, 2
-		s.count(i) 		:	total number of occurrences of i in s 	 		s=[1, 2, 3, 4],			s.count(2)	, 1
-		Tuple to list	: 	list(tupl) = [1, 2]								tupl=(1, 2) tuple 
-
-		x in s 			:	True if an item of s is equal to x, else False 	s=[1,2,3,4]   ,			0 in s 		, True
-		x not in s 		:	False if an item of s is equal to x, else True 	s=[1,2,3,4]   ,			2 not in s	, False
-		s + t 			:	the concatenation of s and t 					t=[0,9]       ,			s+t			, [1, 2, 3, 4, 0, 9]
-		s * n, n * s 	:	n shallow copies of s concatenated 				s=[1,2,3,4]   ,			s*2			, [1, 2, 3, 4, 1, 2, 3, 4]
-		s[i] 			:	ith item of s, origin 0 				  		s=[1,2,3,4]   ,			s[2]		, 3
-		s[i:j] 			:	slice of s from i to j-1				  		s=[1,2,3,4]   ,			s[2:4]		, [3, 4](not inclde 4th position, start is 0)	
+		x in s 		: True if an item of s is equal to x, else False s=[1,2,3,4]   , 0 in s , True
+		x not in s 	: False if an item of s is equal to x, else True s=[1,2,3,4]   , 2 not in s, False
+		s + t 		: the concatenation of s and t 			 t=[0,9]       , s+t    , [1, 2, 3, 4, 0, 9]
+		s * n, n * s 	: n shallow copies of s concatenated 		 s=[1,2,3,4]   , s*2    , [1, 2, 3, 4, 1, 2, 3, 4]
+		s[i] 		: ith item of s, origin 0 			 s=[1,2,3,4]   , s[2]   , 3
+		s[i:j] 		: slice of s from i to j-1			 s=[1,2,3,4]   , s[2:4] , [3, 4](not inclde 4th position, start is 0)	
 			
 
 	Loop: 
-		for item in a:			# a= [1, 2, 3, 4, 6.777, 'test', 1, 2, 3, 4]
+		for item in a:				# a= [1, 2, 3, 4, 6.777, 'test', 1, 2, 3, 4]
 				print(item)		# 1, 2, 3, 4, 6.777, 'test', 1, 2, 3, 4 (in colomn)
 		
 		if 'check10' not in a:
@@ -265,55 +261,55 @@
 				a.append("check10")
 			print(a)			# not avaialbale, [1, 2, 3, 4, 6.777, 'test', 1, 2, 3, 4, 'check10']
 		
-		list2 = list1 			# 2 names refer to 1 ref, Changing one affects both
-		list2 = list1[:] 		# Two independent copies, two refs
+		list2 = list1 				# 2 names refer to 1 ref, Changing one affects both
+		list2 = list1[:] 			# Two independent copies, two refs
 		
-		y = [x+x for x in [1,4,6,9]]	#list comprehensions
+		y = [x+x for x in [1,4,6,9]]		#list comprehensions
 		
-#/****** Set --- set()/Curly braces --- **************************************************************/
+#######****** Set --- set()/Curly braces **************************************************************#################
 	#A set is an unordered collection with no duplicate elements. It will create unique. 
 
-	create Set from list 	:	fruit 	= set(basket) 	set(['orange', 'pear', 'apple']),  	basket = ['apple', 'orange', 'apple', 'pear', 'orange']
-	unique item				:	a 		= set('abracadabra')								set(['a', 'r', 'b', 'c', 'd'])
-	unique item				:	b 		= set('alacazam')									set(['a', 'c', 'z', 'm', 'l'])
-	a but not in b			:	a-b		= set(['r', 'd', 'b'])
-	either a or b			:	a | b 	= set(['a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'])
-	both a and b			:	a & b  	= set(['a', 'c'])
-	a or b but not both		:	a ^ b   = set(['r', 'd', 'b', 'm', 'z', 'l'])	
+	create Set from list 	: fruit = set(basket) 		set(['orange', 'pear', 'apple']), basket = ['apple', 'orange', 'apple', 'pear', 'orange']
+	unique item		: a 	= set('abracadabra') 	set(['a', 'r', 'b', 'c', 'd'])
+	unique item		: b 	= set('alacazam') 	set(['a', 'c', 'z', 'm', 'l'])
+	a but not in b		: a-b	= set(['r', 'd', 'b'])
+	either a or b		: a | b = set(['a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'])
+	both a and b		: a & b = set(['a', 'c'])
+	a or b but not both	: a ^ b = set(['r', 'd', 'b', 'm', 'z', 'l'])	
 
-#/****** Tuples ---- ()--- **************************************************************/
+###***** Tuples () **************************************************************
 	#A tuple is a sequence of immutable Python objects. Tuples are sequences, just like lists. 
 	#The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses, whereas lists use square brackets.
 
 	help(tuple), help(())
-		index					:	tup[2]       = 3							  	  					(1, 2, 3, 4, 6.777, 'test')
-		count					:	tup.count(2) = 1								  					(1, 2, 3, 4, 6.777, 'test')
-		list to tuple 			:	tup          = tuple(a)  (1, 2, 3, 4, 6.777, 'test')				a=[1, 2, 3, 4, 6.777, 'test']
+		index		:	tup[2]       = 3							  	  					(1, 2, 3, 4, 6.777, 'test')
+		count		:	tup.count(2) = 1								  					(1, 2, 3, 4, 6.777, 'test')
+		list to tuple 	:	tup          = tuple(a)  (1, 2, 3, 4, 6.777, 'test') a=[1, 2, 3, 4, 6.777, 'test']
 
-#/****** Dictionary/Hash ---- {} ----- (first key and then value. only works if hash is define) ***********************************/
+###****** Dictionary/Hash ---- {} ----- (first key and then value. only works if hash is define) ******************************###
 	#Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. 
 	#Keys are unique within a dictionary while values may not be. 
 	#The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
 
-		empty hash				:	d = {}	, d=dict()
-		Create hash 			: 	d["key1"] = "value1" 									{'key1': 'value1'}
-		print a value of key	:	d["key1"]												'value1'
-		create hash 			: 	d = {'Name': 'Zara', 'Age': 7};							{'Age': 7, 'Name': 'Zara'}
-		length of hash			:	len(d)													2						
-		Convert in string		:	str(d)													"{'Age': 7, 'Name': 'Zara'}"
-		copy of hash			:	a =d.copy()												{'Age': 7, 'Name': 'Zara'}
-		new hash with keys		:	d = dict.fromkeys(seq, 10)								seq = ('name', 'age', 'sex')	{'age': 10, 'name': 10, 'sex': 10}
-		Get value of a key		: 	d.get(name, 'not available')							(key, default=None)				10
-		for key return value/add:	d.setdefault('test', 99)								{'test': 99, 'age': 10, 'name': 10, 'sex': 10}
-		Check key				:	d.has_key(4)											False
-		key/value in list/tuple :	d.items()												[('age', 10), ('name', 10), ('sex', 10)]
-		Get key from in list	:	d.keys()												['age', 'name', 'sex']	
-		add 1 hash to another	: 	d.update(s)	s = {1:4, 6:0}								{1: 4, 'age': 10, 'name': 10, 6: 0, 'sex': 10}
-		Get values in list		:	d.values()												[4, 10, 10, 0, 10]
+		empty hash			: d = {}, d=dict()
+		Create hash 			: d["key1"] = "value1" 	{'key1': 'value1'}
+		print a value of key		: d["key1"]		'value1'
+		create hash 			: d = {'Name': 'Zara', 'Age': 7};  {'Age': 7, 'Name': 'Zara'}
+		length of hash			: len(d)		2						
+		Convert in string		: str(d)		"{'Age': 7, 'Name': 'Zara'}"
+		copy of hash			: a =d.copy()		{'Age': 7, 'Name': 'Zara'}
+		new hash with keys		: d = dict.fromkeys(seq, 10)	seq = ('name', 'age', 'sex')	{'age': 10, 'name': 10, 'sex': 10}
+		Get value of a key		: d.get(name, 'not available')	(key, default=None)				10
+		for key return value/add	: d.setdefault('test', 99)	{'test': 99, 'age': 10, 'name': 10, 'sex': 10}
+		Check key			: d.has_key(4)			False
+		key/value in list/tuple 	: d.items()			[('age', 10), ('name', 10), ('sex', 10)]
+		Get key from in list		: d.keys()			['age', 'name', 'sex']	
+		add 1 hash to another		: d.update(s)	s = {1:4, 6:0}	{1: 4, 'age': 10, 'name': 10, 6: 0, 'sex': 10}
+		Get values in list		: d.values()			[4, 10, 10, 0, 10]
 
-		delete a key 			: 	del d["Age"]											{'Name': 'Zara'}
-		remove all entries		:	d.clear()												{}
-		delete entire dictionary: 	del d									 
+		delete a key 			: del d["Age"]			{'Name': 'Zara'}
+		remove all entries		: d.clear()			{}
+		delete entire dictionary	: del d				
 
 
 	How to add key value mapping from a dataset:
@@ -321,7 +317,7 @@
 		longitudes = {}
 		f = open("airports.dat")
 		for row in csv.reader(f):
-			airport_id = row[0]			# Key
+			airport_id = row[0]				# Key
 				latitudes[airport_id]  	= float(row[6])	# Map value for each Key
 				longitudes[airport_id] 	= float(row[7])	# Map value for each Key
 
@@ -333,10 +329,10 @@
 				count[list] = 1
 			else :
 				count[list] = count[list] + 1
-		print count							---> {'test': 3, 'amit': 2, 1234:1}
+		print count	#---> {'test': 3, 'amit': 2, 1234:1}
 	
 	#Biggest count
-		name = raw_input("file...")	----> file...f.txt
+		name = raw_input("file...")	#----> file...f.txt
 		h = open(name)
 		t = h.read()
 		w = t.split()
@@ -351,11 +347,13 @@
 			bc = ct	
 		print bw, bc	---> Jan, 12
 
-#/******Loop**************************************************************/
-	#while	:	Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body.
-	#for	:	Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable. 		
-	#nested :	You can use one or more loop inside any another while, for or do..while loop.
-		
+####******Loop**************************************************************
+'''			      
+	#while	: Repeats a statement or group of statements while a given condition is TRUE. 
+		  It tests the condition before executing the loop body.
+	#for	: Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable. 		
+	#nested : You can use one or more loop inside any another while, for or do..while loop.
+'''		
 	For:
 		for i in 2, 4, 6, 8:
 			print(i)
@@ -370,7 +368,7 @@
 
 
 	While:
-		f 			= open("months.txt")
+		f 		= open("months.txt")
 		next 		= f.read(1)		# intital value of next. read one character
 		while next 	!= "":		# loop end when it finds empty string
 				print(next)
@@ -390,13 +388,13 @@
 	string = 'heloo'
 		'o' in string ---> True
 		
-
-#/******Functions**************************************************************/
+####******Functions**************************************************************##
+'''			      
 	#A function is a block of organized, reusable code that is used to perform a single, related action. 
 	#Functions provide better modularity for your application and a high degree of code reusing.
 	#Python gives many built-in functions like print(), etc. but we can also create your own functions. 
 	#These functions are called user-defined functions.
-	
+'''	
 		def say_hello_to(name):
 				print("Hello " + name)
 				
@@ -450,7 +448,7 @@
 			f = __builtin__.open(path, 'r')
 			return UpperCaser(f)
 
-#/****** Reading a text/csv file ****************************************/
+####****** Reading a text/csv file ****************************************###
 	TEXT:
 		f = open("months.txt")
 
@@ -461,7 +459,7 @@
 			if row[3] == "Australia" or row[3] == "Russia":
 				print(row[1])
 
-#/***** Class ******************************************************************/
+###***** Class ******************************************************************##
 	#A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. 
 	#The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.
 
@@ -492,22 +490,22 @@
 		testing -1
 		tsting  -2
 
-		#interpreter’s main program executes 
+		#interpreterÂ’s main program executes 
 		if __name__ == "__main__":
 			main()
 		
-#/****** Plot a chart ****************************************/
+#****** Plot a chart ****************************************#
 	import matplotlib.pyplot as plt
 	vals = [3,2,5,0,1]
 	plt.plot(vals)
 	plt.show()
 
-#/**********************************************/
+#**********************************************#
 	#list of locally installed Python modules:
 		import pip
 		sorted(["%s==%s" % (i.key, i.version) for i in pip.get_installed_distributions()])
 
-#/** Numpy : http://docs.scipy.org/doc/numpy#/********************************************/
+#** Numpy : http://docs.scipy.org/doc/numpy#/********************************************#
 		arange() 	#will create arrays with regularly incrementing values		np.arange(10)	array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 		#Read data from text file and convert into numpy
 			from StringIO import StringIO
@@ -519,7 +517,7 @@
 	from Python_logistic_regression_with_L2_regularization import LogisticRegression
 	print inspect.getsource(LogisticRegression.negative_lik)
 
-#/**** Binning *************************************************************/
+#**** Binning *************************************************************#
 ### http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/?utm_content=buffer7ef30&utm_medium=social&utm_source=linkedin.com&utm_campaign=buffer
 	def binning(col, cut_points, labels=None):
 	  #Define min and max values:
@@ -543,7 +541,7 @@
 	data["LoanAmount_Bin"] = binning(data["LoanAmount"], cut_points, labels)
 	print pd.value_counts(data["LoanAmount_Bin"], sort=False)
 
-#/**** Restart your python program *************************************************************/
+#**** Restart your python program *************************************************************#
 	import sys
 	import os
 	"""
@@ -561,7 +559,7 @@
 		if answer.lower().strip() in "y yes".split():
 			restart_program()
 		
-#/**** Upgrading all packages with pip *************************************************************/
+#**** Upgrading all packages with pip *************************************************************#
 
 import pip
 from subprocess import call
@@ -621,17 +619,17 @@ df['new_var']=df['old_var'].str.replace(r"\([^)]*\)","")
 '''
 
 ################################################################################################
-
+'''
 OOP:
-	-	Encapsulation	:	restrict access to methods and variables. This can prevent the data from being modified by accident and is known as encapsulation.
-	-	Abstraction		:	Simplifying complex reality by modeling classes appropriate to the problem.
-	-	Inheritance		:	Instead of starting from scratch, you can create a class by deriving it from a pre existing class by listing the parent class in parentheses after the new class name.
-	-	Polymorphism	:	Process of using an operator or function in different ways for different data input. 
-							-	Overloading	:	It means more than one method shares the same name in the class but having different signature. It is to “add” or “extend” more to method’s behavior. compile time polymorphism.
-							-	Overriding	:	It means method of base class is re-defined in the derived class having same signature.	It is to “Change” existing behavior of method. run time polymorphism.
+	Encapsulation	: restrict access to methods and variables. This can prevent the data from being modified by accident and is known as encapsulation.
+	Abstraction	: Simplifying complex reality by modeling classes appropriate to the problem.
+	Inheritance	: Instead of starting from scratch, you can create a class by deriving it from a pre existing class by listing the parent class in parentheses after the new class name.
+	Polymorphism	: Process of using an operator or function in different ways for different data input. 
+	Overloading	: It means more than one method shares the same name in the class but having different signature. It is to Â“addÂ” or Â“extendÂ” more to methodÂ’s behavior. compile time polymorphism.
+	Overriding	: It means method of base class is re-defined in the derived class having same signature.	It is to Â“ChangeÂ” existing behavior of method. run time polymorphism.
 
-							http://freefeast.info/difference-between/difference-between-method-overloading-and-method-overriding-method-overloading-vs-method-overriding/
-								
+http://freefeast.info/difference-between/difference-between-method-overloading-and-method-overriding-method-overloading-vs-method-overriding/
+'''								
 ################################################################################################
 
 ## suppress warning message
