@@ -52,7 +52,8 @@
 
 	- It works with categorical target variable “Success” or “Failure”.
 	- It can performs two or more splits
-	- Higher the value of Chi-Square higher the statistical significance of differences between sub-node and Parent node.
+	- Higher the value of Chi-Square higher the statistical significance of differences 
+		between sub-node and Parent node.
 	- Chi-Square of each node is calculated using formula,
 	- Chi-square = SQRT((Actual – Expected)^2 / Expected)
 	- It generates tree called CHAID (Chi-square Automatic Interaction Detector)
