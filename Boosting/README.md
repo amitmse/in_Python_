@@ -55,10 +55,31 @@
   
 	5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 	(alpha, beta, gamma are weight of each model)
   
-  
 https://stats.stackexchange.com/questions/204154/classification-with-gradient-boosting-how-to-keep-the-prediction-in-0-1
 
 http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/
 
 http://mccormickml.com/2013/12/13/adaboost-tutorial/
+
+	--------------------------------------
+  	Pseudo-code of the GBM algorithm
+	
+		1. Initialize the outcome
+		
+		2. Iterate from 1 to total number of trees
+	
+		  	2.1 Update the weights for targets based on previous run (higher for the ones mis-classified) 
+			[weight = 0.5log(1-error/error)]	
+			It would indicate higher weights to trees with lower error rate.
+			
+		  	2.2 Fit the model on selected subsample of data
+		  
+		  	2.3 Make predictions on the full set of observations
+			
+		  	2.4 Update the output with current results taking into account the learning rate
+			
+		3. Return the final output.
+		
+  https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/
+  
 
