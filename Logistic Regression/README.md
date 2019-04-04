@@ -96,16 +96,17 @@ Linear regression assumptions: http://r-statistics.co/Assumptions-of-Linear-Regr
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 			
 			
-	Jacobian is similar to first order derivative and Hessian is similar to second order derivative. The determinant of 
-	a matrix is also sometimes referred to as the Hessian. The Hessian matrix can be considered related to the Jacobian 
-	matrix. Hessian matrices are used in large-scale optimization problems within Newton-type methods because they are 
-	the coefficient of the quadratic term of a local Taylor expansion of a function. A bordered Hessian (Lagrange function)
-	is used for the second-derivative test in certain constrained optimization problems. The Hessian matrix of a 
-	convex function is positive semi-definite. And this property allows us to test if a critical point x is a local maximum, 
-	local minimum, or a saddle point, as follows:
-	 - If the Hessian is positive definite at x, then f attains an isolated local minimum at x. This is like “concave up”.
+	Jacobian is similar to first order derivative and Hessian is similar to second order derivative. 
+	The determinant of a matrix is also sometimes referred to as the Hessian. The Hessian matrix can 
+	be considered related to the Jacobian matrix. Hessian matrices are used in large-scale optimization 
+	problems within Newton-type methods because they are the coefficient of the quadratic term of a local 
+	Taylor expansion of a function. A bordered Hessian (Lagrange function) is used for the second-derivative 
+	test in certain constrained optimization problems. The Hessian matrix of a convex function is positive 
+	semi-definite. And this property allows us to test if a critical point x is a local maximum, local minimum, 
+	or a saddle point, as follows:
+	 - If the Hessian is positive definite at x, then f attains an isolated local minimum at x (concave up)
 	 
-	 - If the Hessian is negative definite at x, then f attains an isolated local maximum at x. This is like “concave down”.
+	 - If the Hessian is negative definite at x, then f attains an isolated local maximum at x (concave down)
 	 
 	 - If the Hessian has both positive and negative eigenvalues then x is a saddle point for f. 
 	   Otherwise the test is inconclusive. Graph is concave up in one direction and concave down in the other.
@@ -121,7 +122,8 @@ Linear regression assumptions: http://r-statistics.co/Assumptions-of-Linear-Regr
 	square matrix, both the matrix and its determinant are referred to as the Jacobian determinant. The Jacobian of 
 	the gradient of a scalar function of several variables has a special name: the Hessian matrix, 
 	which in a sense is the "second derivative" of the function.
-	http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
+	
+http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
 			
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -151,8 +153,8 @@ Linear regression assumptions: http://r-statistics.co/Assumptions-of-Linear-Regr
 		size and the coefficients to estimate would remain the same if you sampled again and again.
 		Use the standard error of the coefficient to measure the precision of the estimate of the coefficient. 
 		The smaller the standard error, the more precise the estimate. 
-		https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3976195/
-		http://support.minitab.com/en-us/minitab-express/1/help-and-how-to/modeling-statistics/regression/how-to/binary-logistic-regression/interpret-the-results/all-statistics-and-graphs/coefficients/
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3976195/
+http://support.minitab.com/en-us/minitab-express/1/help-and-how-to/modeling-statistics/regression/how-to/binary-logistic-regression/interpret-the-results/all-statistics-and-graphs/coefficients/
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
