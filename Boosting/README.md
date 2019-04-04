@@ -119,3 +119,28 @@ http://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorith
 			the model that reduces the loss. We do this by parameterizing the tree, then modify the 
 			parameters of the tree and move in the right direction by reducing the residual loss.
 		- Generally this approach is called functional gradient descent or gradient descent with functions.
+
+Improvements to Basic Gradient Boosting	:
+	- Gradient boosting is a greedy algorithm and can overfit a training dataset quickly.
+	- It can benefit from regularization methods that penalize various parts of the algorithm and generally 
+		improve the performance of the algorithm by reducing overfitting.
+	- In this this section we will look at 4 enhancements to basic gradient boosting:
+		1. Tree Constraints:
+			- It is important that the weak learners have skill but remain weak.
+			- There are a number of ways that the trees can be constrained.
+			- A good general heuristic is that the more constrained tree creation is, the more trees 
+				you will need in the model, and the reverse, where less constrained individual trees, 
+				the fewer trees that will be required.
+			- Below are some constraints that can be imposed on the construction of decision trees:
+				# Number of trees: generally adding more trees to the model can be very slow to overfit. 
+					The advice is to keep adding trees until no further improvement is observed.
+				# Tree depth: deeper trees are more complex trees and shorter trees are preferred. 
+					Generally, better results are seen with 4-8 levels.
+				# Number of nodes or number of leaves: like depth, this can constrain the size of the tree, 
+					but is not constrained to a symmetrical structure if other constraints are used.
+				# Number of observations per split: imposes a minimum constraint on the amount of training 
+					data at a training node before a split can be considered
+				# Minimim improvement to loss: is a constraint on the improvement of any split added to a tree.											
+		2. Shrinkage:
+		3. Random sampling:				
+		4. Penalized Learning:
