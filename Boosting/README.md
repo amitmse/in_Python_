@@ -154,3 +154,10 @@ Adaboost vs Gradient Boosting:
 
 	- Adaboost		:"shortcomings” are identified by high-weight data points.
 	- Gradient Boosting	: “shortcomings” are identified by gradients. 
+
+Boosting vs Bagging
+
+	- Boosting: It is similar, however the selection of sample is made more intelligently. We subsequently 
+			give more and more weight to hard to classify observations.
+	- Bagging: It is an approach where you take random samples of data, build learning algorithms and take 
+			simple means to find bagging probabilities.
