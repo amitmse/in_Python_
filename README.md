@@ -1,2 +1,1 @@
-# Hands on machine learning with with python
-
+# Hands on machine learning with PYTHON (2.7)
