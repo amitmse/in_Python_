@@ -1,4 +1,6 @@
-# Hands on machine learning with PYTHON (2.7)
+# Hands on Machine Learning with PYTHON (2.7)
+
+###############################################################################################################
 
 1. Data Preparation : https://github.com/amitmse/in_Python_/tree/master/Data%20Prep
 
@@ -17,3 +19,5 @@
 8. Cluster Analysis : https://github.com/amitmse/in_Python_/tree/master/Cluster%20Analysis
 
 9. SVM : https://github.com/amitmse/in_Python_/tree/master/SVM
+
+###############################################################################################################
