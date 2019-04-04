@@ -56,12 +56,6 @@
   
 	5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 	(alpha, beta, gamma are weight of each model)
   
-https://stats.stackexchange.com/questions/204154/classification-with-gradient-boosting-how-to-keep-the-prediction-in-0-1
-
-http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/
-
-http://mccormickml.com/2013/12/13/adaboost-tutorial/
-
 	--------------------------------------
   	Pseudo-code of the GBM algorithm
 	
@@ -81,12 +75,7 @@ http://mccormickml.com/2013/12/13/adaboost-tutorial/
 			
 		3. Return the final output.
 		
-  https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/
-  
-
 Gradient boosting involves three elements: 
-
-http://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/
 
 	1. A loss function to be optimized: 
 		- The loss function used depends on the type of problem being solved.
