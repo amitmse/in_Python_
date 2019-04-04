@@ -118,9 +118,9 @@ Linear regression assumptions: http://r-statistics.co/Assumptions-of-Linear-Regr
 	critical point (or stationary point) at x. The determinant of the Hessian at x is then called the discriminant.
 	If this determinant is zero then x is called a degenerate critical point of f. Otherwise it is non-degenerate.
 	  
-	Jacobian matrix is the matrix of first-order partial derivatives of a vector-valued function. When the matrix is a
-	square matrix, both the matrix and its determinant are referred to as the Jacobian determinant. The Jacobian of 
-	the gradient of a scalar function of several variables has a special name: the Hessian matrix, 
+	Jacobian matrix is the matrix of first-order partial derivatives of a vector-valued function. When the matrix 
+	is a square matrix, both the matrix and its determinant are referred to as the Jacobian determinant. 
+	The Jacobian of the gradient of a scalar function of several variables has a special name: the Hessian matrix, 
 	which in a sense is the "second derivative" of the function.
 	
 http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
@@ -140,18 +140,20 @@ http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
 			     [meanG = mean of score only for good, varB= variance of score only for bad ]
 	Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied
 			
-		The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as 
-		its discrimination threshold is varied. True positive rate (Sensitivity : Y axis ) is plotted in 
-		function of the false positive rate (100-Specificity : X axis) for different cut-off points. Each point 
-		on the ROC curve represents a sensitivity/specificity pair corresponding to a particular decision threshold.
+		The ROC curve is a graphical plot that illustrates the performance of any binary classifier 
+		system as its discrimination threshold is varied. True positive rate (Sensitivity : Y axis ) 
+		is plotted in function of the false positive rate (100-Specificity : X axis) for different 
+		cut-off points. Each point on the ROC curve represents a sensitivity/specificity pair 
+		corresponding to a particular decision threshold.
 	
 	Standard Error Coef: 
 		Linear regression standard error of Coef : SE  = sqrt [ S(yi - yi)2 / (n - 2) ] / sqrt [ S(xi - x)2 ]
 	
-		The standard error of the coefficient estimates the variability between coefficient estimates that you would 
-		obtain if you took samples from the same population again and again. The calculation assumes that the sample 
-		size and the coefficients to estimate would remain the same if you sampled again and again.
-		Use the standard error of the coefficient to measure the precision of the estimate of the coefficient. 
+		The standard error of the coefficient estimates the variability between coefficient estimates 
+		that you would obtain if you took samples from the same population again and again. 
+		The calculation assumes that the sample size and the coefficients to estimate would remain 
+		the same if you sampled again and again. Use the standard error of the coefficient to measure 
+		the precision of the estimate of the coefficient. 
 		The smaller the standard error, the more precise the estimate. 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3976195/
 http://support.minitab.com/en-us/minitab-express/1/help-and-how-to/modeling-statistics/regression/how-to/binary-logistic-regression/interpret-the-results/all-statistics-and-graphs/coefficients/
