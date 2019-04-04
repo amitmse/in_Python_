@@ -120,3 +120,40 @@
 		- Above you can see that entropy of split on Gender is lower compare to 
 			 Class so we will again go with split Gender. 
 		- We can derive information gain from entropy as 1- Entropy.
+
+
+## Reduction in Variance
+	Till now, we have discussed the algorithms for categorical target variable. Reduction in Variance 
+	is an algorithm for continuous target variable. This algorithm uses the same formula of variance to 
+	choose the right split that we went through the descriptive statistics. 
+	The split with lower variance is selected as the criteria to split the population:
+			
+	Steps to calculate Variance:
+		- Calculate variance for each node.
+		- Calculate Variance for each split as weighted average of each node variance
+			
+	Example:- Let’s assign numerical value 1 for play cricket and 0 for not playing cricket. 
+			Now follow the steps to identify the right split:
+		- Variance for Root node, here mean value is (15*1 + 15*0)/30 = 0.5 and we have 15 one and 15 zero. 
+			Now variance would be ((1-0.5)^2+(1-0.5)^2+….15 times+(0-0.5)^2+(0-0.5)^2+…15 times) / 30,
+			this can be written as (15*(1-0.5)^2+15*(0-0.5)^2) / 30 = 0.25
+		- Mean of Female node =(2*1+8*0)/10=0.2 and Variance = (2*(1-0.2)^2+8*(0-0.2)^2) / 10 = 0.16
+		- Mean of Male Node =(13*1+7*0)/20=0.65 and Variance = (13*(1-0.65)^2+7*(0-0.65)^2) / 20 = 0.23
+		- Variance for Split Gender = Weighted Variance of Sub-nodes = (10/30)*0.16 + (20/30) *0.23 = 0.21
+		- Mean of Class IX node =(6*1+8*0)/14=0.43 and Variance = (6*(1-0.43)^2+8*(0-0.43)^2) / 14 = 0.24
+		- Mean of Class X node =(9*1+7*0)/16=0.56 and Variance = (9*(1-0.56)^2+7*(0-0.56)^2) / 16 = 0.25
+		- Variance for Split Gender =Weighted Variance of Sub-nodes = (14/30)*0.24 + (16/30) *0.25 = 0.25
+		Above, you can see that Gender split has lower variance compare to parent node so 
+		the split would be on Gender only.
+		
+## Splitting / Pruning
+	Above, we have have looked at various algorithms to split a node into sub nodes. Now to create a decision tree, 
+	sub-nodes are further split into two or more sub-nodes and all input variables are considered for creating 
+	the split again. Fields already involved in split also get considered for split. 
+			It is a recursive process and it stops if the node ends up as a pure node or 
+			it reaches the maximum depth of the tree or number of records in the node reaches the preset limit.
+
+			In a extreme scenario, a decision tree can have number of nodes equals to total number of observation, 
+			but that would be a very complex tree. If we are expanding decision tree towards more complexity based on training data set, 
+			then it causes over fitting and losses the predictive power of the model because it is not generalized. 
+			Over fitting can be removed by pruning the nodes.		
