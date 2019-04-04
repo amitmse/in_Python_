@@ -41,8 +41,10 @@ Here is how such a system is trained; for some number of trees T:
 		
 	3. Depending upon the value of m, there are three slightly different systems:
 		- Random splitter selection: m =1
+		
 		- Breiman’s bagger: m = total number of predictor variables
-		- Random forest: m << number of predictor variables. 
+		
+		- Random forest: m << number of predictor variables
 			Brieman suggests three possible values for m: 1/2(sqrt(vm)), sqrt(vm), and sqrt(2vm)
 			
 	4. Running a Random Forest. When a new input is entered into the system, 
@@ -52,9 +54,11 @@ Here is how such a system is trained; for some number of trees T:
 		
 		Note that:
 			- With a large number of predictors, the eligible predictor set will be quite 
-				different from node to node.
+				different from node to node
+				
 			- The greater the inter-tree correlation, the greater the random forest error rate, 
-				so one pressure on the model is to have the trees as uncorrelated as possible.
+				so one pressure on the model is to have the trees as uncorrelated as possible
+				
 			- As m goes down, both inter-tree correlation and the strength of individual trees go down. 
 				So some optimal value of m must be discovered
 				
