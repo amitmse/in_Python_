@@ -149,11 +149,12 @@
 ## Splitting / Pruning
 	Above, we have have looked at various algorithms to split a node into sub nodes. Now to create a decision tree, 
 	sub-nodes are further split into two or more sub-nodes and all input variables are considered for creating 
-	the split again. Fields already involved in split also get considered for split. 
-			It is a recursive process and it stops if the node ends up as a pure node or 
-			it reaches the maximum depth of the tree or number of records in the node reaches the preset limit.
+	the split again. Fields already involved in split also get considered for split. It is a recursive process 
+	and it stops if the node ends up as a pure node or it reaches the maximum depth of the tree or number of 
+	records in the node reaches the preset limit.
+	
+	In a extreme scenario, a decision tree can have number of nodes equals to total number of observation, 
+	but that would be a very complex tree. If we are expanding decision tree towards more complexity based 
+	on training data set, then it causes over fitting and losses the predictive power of the model because 
+	it is not generalized. Over fitting can be removed by pruning the nodes.
 
-			In a extreme scenario, a decision tree can have number of nodes equals to total number of observation, 
-			but that would be a very complex tree. If we are expanding decision tree towards more complexity based on training data set, 
-			then it causes over fitting and losses the predictive power of the model because it is not generalized. 
-			Over fitting can be removed by pruning the nodes.		
