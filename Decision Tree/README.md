@@ -43,3 +43,77 @@
 						
 			Above, we can see that Gini score for Split on Gender is higher (0.59> 0.51) 
 			than Class so node will split on Gender.	  
+
+## Chi-Square
+
+	It is an algorithm to find out the statistical significance between the differences between sub-nodes and 
+	parent node. We measures it by sum of squares of standardized differences between observed and expected 
+	frequencies of target variable.
+
+	- It works with categorical target variable “Success” or “Failure”.
+	- It can performs two or more splits
+	- Higher the value of Chi-Square higher the statistical significance of differences between sub-node and Parent node.
+	- Chi-Square of each node is calculated using formula,
+	- Chi-square = SQRT((Actual – Expected)^2 / Expected)
+	- It generates tree called CHAID (Chi-square Automatic Interaction Detector)
+			
+	Steps to Calculate Chi-square for a split:
+		- Calculate Chi-square for individual node by calculating the deviation for Success and Failure both
+		- Calculated Chi-square of Split using Sum of all Chi-square of success and Failure of each node of the split					
+			
+	Example: Let’s work with above example that we have used to calculate Gini.		
+		Split on Gender:
+			1. First we are populating for node Female, Populate the actual value for “Play Cricket” 
+				and “Not Play Cricket”, here these are 2 and 8 respectively.
+			2. Calculate expected value for “Play Cricket” and “Not Play Cricket”, here it would be 5 
+				for both because parent node has probability of 50% and we have applied same 
+				probability on Female count(10).
+			3. Calculate deviations by using formula, Actual – Expected. It is for “Play Cricket” (2 – 5 = -3) 
+				and for “Not play cricket” ( 8 – 5 = 3).
+			4. Calculate Chi-square of node for “Play Cricket” and “Not Play Cricket” using formula 
+				with formula, = ((Actual – Expected)^2 / Expected)^1/2. You can refer below table for calculation.
+			5. Follow similar steps for calculating Chi-square value for Male node.			
+			6. Now add all Chi-square values to calculate Chi-square for split Gender.
+		
+			       Play Cricket	 			PC
+			       Play not Cricket 			NPC 		
+			       Expected 	Play Cricket 		EPC	[Total*%oftarget ]
+			       Expected 	Play not Cricket	ENPC	[Total*%oftarget ]
+			       Deviatation 	Play Cricket		DPC	[PC - EPC]
+			       Deviatation 	NOT Play Cricket	DNPC	[NPC - ENPC]
+			       Chi-Square  	Play Cricket		CPC 	[(DPC^2)/EPC]^1/2
+			       Chi-Square  	Not Play Cricket	CNPC	[(DNPC^2)/ENPC]^1/2
+
+
+			TOTAL CHI-SQUARE for Gender = 1.34 + 1.34 + 0.95 + 0.95 = 4.58
+			TOTAL CHI-SQUARE for Class  = 0.38 + 0.38 + 0.35 + 0.35 = 1.46
+
+## Information Gain
+	We can say that less impure node requires less information to describe it and more impure node 
+	requires more information. Information theory has a measure to define this degree of disorganization 
+	in a system, which is called Entropy. Lower Entropy is better. If the sample is completely homogeneous, 
+	then the entropy is zero and if the sample is an equally divided it has entropy of one. 
+	Entropy can be calculated using formula:   - P*Log2(P) - Q*Log2(Q)
+		Here P and Q is probability of success and failure respectively in that node. 
+		Entropy is also used with categorical target variable. 
+		It chooses the split which has lowest entropy compared to parent node and other splits.
+				
+	Steps to calculate entropy for a split:
+		- Calculate entropy of parent node
+		- Calculate entropy of each individual node of split and calculate weighted average 
+			of all sub-nodes available in split.	
+				
+	Example: Let’s use this method to identify best split for student example. 	
+			Total=30, PC=15, NPC=15, P=PC/Total, Q=NPC/Total			
+		- Entropy for parent node = -(15/30)log2(15/30) – (15/30)log2(15/30) 	= 1. 		
+			Here 1 shows that it is a impure node. 
+		- Entropy for Female node = -(2/10)log2(2/10) – (8/10)log2(8/10) 	= 0.72 and 
+			  for male node   = -(13/20)log2(13/20) – (7/20)log2(7/20) 	= 0.93.
+		- Entropy for split Gender = Weighted entropy of sub-nodes [10 Female, 20 Male] 
+			 (10/30)*0.72 + (20/30)*0.93 					= 0.86 
+		- Entropy for Class IX node = -(6/14) log2 (6/14) – (8/14) log2 (8/14) 	= 0.99 and 
+			  for Class X node  = -(9/16) log2 (9/16) – (7/16) log2 (7/16) 	= 0.99
+		- Entropy for split Class =  (14/30)*0.99 + (16/30)*0.99 		= 0.99
+		- Above you can see that entropy of split on Gender is lower compare to 
+			 Class so we will again go with split Gender. 
+		- We can derive information gain from entropy as 1- Entropy.
