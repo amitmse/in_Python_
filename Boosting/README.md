@@ -141,7 +141,7 @@ Improvements to Basic Gradient Boosting
 					but is not constrained to a symmetrical structure if other constraints are used.
 				# Number of observations per split: imposes a minimum constraint on the amount of training 
 					data at a training node before a split can be considered
-				# Minimim improvement to loss: is a constraint on the improvement of any split added to a tree.											
+				# Minimim improvement to loss:is a constraint on the improvement of any split added to a tree
 		2. Shrinkage:
 		3. Random sampling:				
 		4. Penalized Learning:
