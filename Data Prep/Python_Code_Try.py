@@ -9,19 +9,19 @@
 
 		while True:
 			line = raw_input('user input..... ')	#ask user input 
-			if line == 'done':						#check user input equal to 'done'
-				break								#if user input is done then exit from loop
-			print line								#if user input is not done then print the user input
-		print "DONE"								#if user input is done then exit from loopif and print "DONE"
+			if line == 'done':	#check user input equal to 'done'
+				break		#if user input is done then exit from loop
+			print line		#if user input is not done then print the user input
+		print "DONE"			#if user input is done then exit from loopif and print "DONE"
 
 		while True:
 			line = raw_input("user input ....")
-			if line[0] =='#':						#check user input, if it starts with #
-				continue 							#if user input does not start with # then run the loop again.
-			if line == 'done':						#check user input equal to 'done'
-				break								#if user input is 'done' then exit from loop
-			print line								#if user input is not done and does not start with # then print the user input
-		print 'DONE'								#Exit from loop and print "DONE"
+			if line[0] =='#':	#check user input, if it starts with #
+				continue 	#if user input does not start with # then run the loop again.
+			if line == 'done':	#check user input equal to 'done'
+				break		#if user input is 'done' then exit from loop
+			print line		#if user input is not done and does not start with # then print the user input
+		print 'DONE'			#Exit from loop and print "DONE"
 
 #largest number
 		largest = -1
@@ -92,29 +92,29 @@
 
 #string			
 			string = "heloo"			
-			print string 					#---> 'heloo'
-			print string[:4]				#---> helo
-			print string[3:]				#---> oo		#start with 3rd letter
-			print string[:]					#---> heloo 	#all leter
-			print string[0:5] 				#---> 'heloo'
-			print string[0:4]				#---> helo # not 4, only 0 to 3
-			first = string[1]				#---> 'e'	# it starts with 0.
-			string.startswith('HELoo')		#---> True
-			fin = string.find('o')			#---> 3
+			print string 			#---> 'heloo'
+			print string[:4]		#---> helo
+			print string[3:]		#---> oo	#start with 3rd letter
+			print string[:]			#---> heloo 	#all leter
+			print string[0:5] 		#---> 'heloo'
+			print string[0:4]		#---> helo 	# not 4, only 0 to 3
+			first = string[1]		#---> 'e'	# it starts with 0.
+			string.startswith('HELoo')	#---> True
+			fin = string.find('o')		#---> 3
 			string.replace('hel', 'HEL')	#---> 'HELoo'
-			string_l = string.lower()		#---> 'heloo'
-			string_u = string.upper()		#---> 'HELOO'
-			'o' in string					#---> True
+			string_l = string.lower()	#---> 'heloo'
+			string_u = string.upper()	#---> 'HELOO'
+			'o' in string			#---> True
 			
 			data = 'From step.marq@gmail.com Sat Jan 5 09:14:16:2008'
-			at = data.find('@')				#--> 14
-			ed = data.find(' ',at)			#--> 24
-			mail = data[at+1:ed]			#--> 'gmail.com'
-			sp = data.find(' ')				#--> 4
-			mail = data[sp+1:ed]			#--> step.marq@gmail.com
+			at = data.find('@')		#--> 14
+			ed = data.find(' ',at)		#--> 24
+			mail = data[at+1:ed]		#--> 'gmail.com'
+			sp = data.find(' ')		#--> 4
+			mail = data[sp+1:ed]		#--> step.marq@gmail.com
 
 #read files
-			fname  = raw_input("enter file name...")	#---> enter file name...test_example.txt
+			fname  = raw_input("enter file name...") #---> enter file name...test_example.txt
 			fread = open(fname)
 			print (fread.read())
 
@@ -127,7 +127,7 @@
 			count = 0
 			for line in file_n:
 				count = count+1
-			print 'total line', count					#---> 48
+			print 'total line', count	#---> 48
 
 			#remove space and search for a word
 			file_n = open('test_example.txt')
@@ -144,12 +144,12 @@
 				if line.startswith('Received:'):
 			print line
 			
-			fname = raw_input("enter file name ...")	#--> enter file name ...test_example.txt
+			fname = raw_input("enter file name ...") #--> enter file name ...test_example.txt
 			fread = open(fname)
 			for line in fread:
 				if line.startswith("Received:"):
 					count = count+1
-			print count									#---> 9		
+			print count				#---> 9		
 
 #Read file and count of a word			
 			import os
@@ -179,32 +179,35 @@
 			raw_input("done")
 
 #Most frequent word with count
-			name = raw_input("file...")				#---> file...f.txt
+			name = raw_input("file...")		#---> file...f.txt
 			h = open(name)
 			t = h.read()
 			w = t.split()
 			c = dict()
 			for ws in w:
-				c[ws] = c.get(ws,0)+1		#Get will give the value of key and it is not available then it will add 0 otherwise add 1.
+				c[ws] = c.get(ws,0)+1		#Get will give the value of key and it is not available 
+								#then it will add 0 otherwise add 1.
 			bc = None
 			bw = None
-			for ws, ct in c.items():		#items will provide the key, value. 
-				if bc is None or ct > bc :	#check value of key and compare with previous and logic is true then update the both variable.
+			for ws, ct in c.items():	   	#items will provide the key, value. 
+				if bc is None or ct > bc : 	#check value of key and compare with previous and 
+								#logic is true then update the both variable.
 					bw = ws
 					bc = ct	
-			print bw, bc							#---> Jan -> 12
+			print bw, bc				#---> Jan -> 12
 
 #Convert into float			
-			num_list = list()						#---> num_list		#---> []
+			num_list = list()			#---> num_list	#---> []
 			while True:
 				input = raw_input("No. please...")
 				if input == 'done':					
-					break							#if input is done then exit from loop until then it will append all numbers
+					break			#if input is done then exit from loop until then 
+								#it will append all numbers
 				value = float(input)
 				num_list.append(value)
-			print input								#---> done
-			print value								#---> 4.0
-			print sum(num_list)						#---> 109.0
+			print input				#---> done
+			print value				#---> 4.0
+			print sum(num_list)			#---> 109.0
 
 			total = 0
 			count = 0
@@ -215,21 +218,21 @@
 				value = float(input)
 				total = total + value
 				count = count + 1	
-			print total, count						#---> 6.0 2
+			print total, count			#---> 6.0 2
 
 #List			
-			z= x+y									#---> [0, 1, 2, 4, 5, 6, 7, 8]
-			x.append(111)							#---> [0, 1, 2, 'test', 111]
-			0 in x									#---> True
-			3 in x									#---> False
-			3 not in x								#---> True
-			x.sort()								#---> [0, 1, 2, 111, 'test']
-			print len(x)							#---> 5
-			print min(x)							#---> 0
-			print max(x)							#---> test
+			z= x+y					#---> [0, 1, 2, 4, 5, 6, 7, 8]
+			x.append(111)				#---> [0, 1, 2, 'test', 111]
+			0 in x					#---> True
+			3 in x					#---> False
+			3 not in x				#---> True
+			x.sort()				#---> [0, 1, 2, 111, 'test']
+			print len(x)				#---> 5
+			print min(x)				#---> 0
+			print max(x)				#---> test
 			
-			x = range(3)							#---> [0, 1, 2]
-			y = range(4,9)							#---> [4, 5, 6, 7, 8]
+			x = range(3)				#---> [0, 1, 2]
+			y = range(4,9)				#---> [4, 5, 6, 7, 8]
 			for i in range(len(x)):
 				test = x[i]
 				print test
@@ -239,7 +242,7 @@
 			for line in fname:
 				line = line.strip()
 				word = line.split()
-				print "working"			#debug. getting error due to blank line 
+				print "working"		#debug. getting error due to blank line 
 				if word[0] != 'From':
 					continue
 				print "end", word[2]
@@ -248,7 +251,8 @@
 			for line in fname:
 				line = line.strip()
 				if line == '' :			
-					continue 			#if line is blank then it will skip the operation and move to the top of the loop and reiterating the process.
+					continue 	#if line is blank then it will skip the operation 
+							#and move to the top of the loop and reiterating the process.
 				word = line.split()
 				if word[0] != 'From':	#if first continue condition is not true then it will check this one.
 					continue
@@ -276,18 +280,19 @@
 
 #Frequency
 			counts =dict()
-			line =  raw_input("line please..")		#---> line please..I am amit. going to delhi amit amit to
+			line =  raw_input("line please..") #---> line please..I am amit. going to delhi amit amit to
 			words = line.split()
-			print words								#---> ['I', 'am', 'amit.', 'going', 'to', 'delhi', 'amit', 'amit', 'to']
+			print words	#---> ['I', 'am', 'amit.', 'going', 'to', 'delhi', 'amit', 'amit', 'to']
 			for word in words:
-				counts[word] = counts.get(word,0)+1 #Get will give the value of key and it is not available then it will add 0 otherwise add 1.
-			print counts							#---> {'I': 1, 'delhi': 1, 'am': 1, 'to': 2, 'going': 1, 'amit': 2, 'amit.': 1}
+				counts[word] = counts.get(word,0)+1 #Get will give the value of key and 
+						#it is not available then it will add 0 otherwise add 1.
+			print counts	#---> {'I': 1, 'delhi': 1, 'am': 1, 'to': 2, 'going': 1, 'amit': 2, 'amit.': 1}
 				
 			counts  = dict()
 			name = ['amit', 'test', 1234, 'amit', 'test', 'test']
 			for name in names:
 				counts[name] = counts.get(name,0)+1
-			print counts 							#---> {'test': 3, 'amit': 2}
+			print counts 	#---> {'test': 3, 'amit': 2}
 
 			count  = dict()
 			names = ['amit', 'test', 1234, 'amit', 'test', 'test']
@@ -296,35 +301,35 @@
 					count[list] = 1
 				else :
 					count[list] = count[list] + 1
-			print count								#---> {'test': 3, 'amit': 2}
-			print counts.get('name',0)				#---> 0
-			print counts.get('amit','xxxxx')		#---> 2 
-			print counts.get('amiT','xxxxx')		#---> xxxxx
+			print count				#---> {'test': 3, 'amit': 2}
+			print counts.get('name',0)		#---> 0
+			print counts.get('amit','xxxxx')	#---> 2 
+			print counts.get('amiT','xxxxx')	#---> xxxxx
 
 			for key in counts:
 				print key, counts[key]
 
 #hash				
-			p = dict()							#---> {}
-			p['money'] = 12						#---> {'money': 12}
-			p['xuz'] = 999						#---> {'money': 12, 'xuz': 999}
-			p['money'] = p['money'] + 8			#---> {'money': 20, 'xuz': 999}
-			p['text']='amit'					#---> {'money': 20, 'xuz': 999, 'text': 'amit'}
+			p = dict()				#---> {}
+			p['money'] = 12				#---> {'money': 12}
+			p['xuz'] = 999				#---> {'money': 12, 'xuz': 999}
+			p['money'] = p['money'] + 8		#---> {'money': 20, 'xuz': 999}
+			p['text']='amit'			#---> {'money': 20, 'xuz': 999, 'text': 'amit'}
 			p['text'] = p['text'] + 'xyz129'	#---> {'money': 20, 'xuz': 999, 'text': 'amitxyz129'}
-			p['text']							#---> 'amitxyz129'
+			p['text']				#---> 'amitxyz129'
 
 
 			d =dict()
 			d['x1']=123
 			d['x2'] = 999
-			print d								#---> {'x2': 999, 'x1': 123}
+			print d					#---> {'x2': 999, 'x1': 123}
 			
 			for (k,v) in d.items():
 				print k,v
 				
 			#Sort
-			tups=d.items()						#---> [('x2', 999), ('x1', 123)]
-			t = sorted(d.items())				#---> [('x1', 123), ('x2', 999)]
+			tups=d.items()				#---> [('x2', 999), ('x1', 123)]
+			t = sorted(d.items())			#---> [('x1', 123), ('x2', 999)]
 			for (k,v) in sorted(d.items()):
 				print k,v
 				
@@ -332,8 +337,8 @@
 			temp = list()
 			for k,v in d.items():
 				temp.append((v,k))
-			print temp							#---> [(999, 'x2'), (123, 'x1')]
-			temp.sort(reverse=False)			#---> [(123, 'x1'), (999, 'x2')]
+			print temp				#---> [(999, 'x2'), (123, 'x1')]
+			temp.sort(reverse=False)		#---> [(123, 'x1'), (999, 'x2')]
 
 			#frequency of a word
 			fname = open('f.txt')
@@ -350,7 +355,7 @@
 			for val, key in lst[:10]:
 				print key, val
 
-			print sorted( [ (v,k) for k,v in d.items() ]  )		#---> [(123, 'x1'), (999, 'x2')]
+			print sorted( [ (v,k) for k,v in d.items() ]  )	#---> [(123, 'x1'), (999, 'x2')]
 			
 			
 #Regex
@@ -360,11 +365,11 @@
 				if line.find('Received:')>=0:
 					print line
 					
-			import re								# regex library
+			import re				# regex library
 			fname = open('f.txt')
 			for line in fname:
 				line = line.strip()
-				if re.search('Received:',line):		# call search function from regex 
+				if re.search('Received:',line):	# call search function from regex 
 					print line
 					
 			fname = open('f.txt')
@@ -437,7 +442,7 @@
 				coun = coun + 1
 				
 				if coun == 1:
-					col_3 = words[3]			#Column Name
+					col_3 = words[3]		#Column Name
 				else :
 					col_3 = words[3]
 					col_3 = int(words[3])
@@ -445,12 +450,12 @@
 					cum_val = cum_val + col_3	#SUM
 
 					if col_3 > max_val:
-						max_val = col_3			#MAX
+						max_val = col_3		#MAX
 
 					if min_val is None :
-						min_val = col_3			#MIN
+						min_val = col_3		#MIN
 					elif col_3 < min_val:
-						min_val = col_3			#MIN
+						min_val = col_3		#MIN
 				num_list.append(col_3)			#List of value with column name
 			#print everything
 			print num_list, min_val, max_val, cum_val, coun, float(cum_val/(coun-1))
@@ -569,11 +574,11 @@
 				if not header_read:
 					header_read = True
 					headers = line
-					record = dict([(k.strip(),[]) for k in line ])			#y = {a: a*a for a in x}
+					record = dict([(k.strip(),[]) for k in line ])	#y = {a: a*a for a in x}
 					continue
 				for i, head in enumerate(headers):
 					record[head].append(line[i].strip())
 					#record.setdefault(head,[]).append(line[i].strip())
 
 
-#---------------------------------------------------------------------------------------------------------------------#
+###########################################################################################################
