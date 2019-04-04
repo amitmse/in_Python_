@@ -27,16 +27,23 @@ Logistic regression uses MLE rather than OLS, it avoids many of the typical assu
 	- Finds parameter values that maximize the likelihood of making the observations given the parameters
 	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
 
-Ordinary Least Squares (OLS): 
-Finds parameter values that minimizing the error
-Linear regression assumptions: (http://r-statistics.co/Assumptions-of-Linear-Regression.html)
+Ordinary Least Squares (OLS): Finds parameter values that minimizing the error. 
+Linear regression assumptions: http://r-statistics.co/Assumptions-of-Linear-Regression.html
+
 	1. Linear in parameters
+	
 	2. Mean of residuals is zero
-	3. Homoscedasticity of residuals /	equal variance of residuals
+	
+	3. Homoscedasticity of residuals /equal variance of residuals
+	
 	4. No autocorrelation of residuals
+	
 	5. Normality of residuals 
+	
 	6. X variables and residuals are uncorrelated 
+	
 	7. No perfect multicollinearity
+	
 	8. number of observations must be greater than number of Xs
 
 ## Derivation of Logistic Regression:
