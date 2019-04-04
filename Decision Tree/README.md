@@ -59,8 +59,10 @@
 	- It generates tree called CHAID (Chi-square Automatic Interaction Detector)
 			
 	Steps to Calculate Chi-square for a split:
-		- Calculate Chi-square for individual node by calculating the deviation for Success and Failure both
-		- Calculated Chi-square of Split using Sum of all Chi-square of success and Failure of each node of the split					
+		- Calculate Chi-square for individual node by calculating the deviation for 
+			Success and Failure both
+		- Calculated Chi-square of Split using Sum of all Chi-square of success and Failure 
+			of each node of the split					
 			
 	Example: Let’s work with above example that we have used to calculate Gini.		
 		Split on Gender:
@@ -69,10 +71,10 @@
 			2. Calculate expected value for “Play Cricket” and “Not Play Cricket”, here it would be 5 
 				for both because parent node has probability of 50% and we have applied same 
 				probability on Female count(10).
-			3. Calculate deviations by using formula, Actual – Expected. It is for “Play Cricket” (2 – 5 = -3) 
-				and for “Not play cricket” ( 8 – 5 = 3).
+			3. Calculate deviations by using formula, Actual – Expected. 
+				It is for “Play Cricket” (2 – 5 = -3) and for “Not play cricket” ( 8 – 5 = 3).
 			4. Calculate Chi-square of node for “Play Cricket” and “Not Play Cricket” using formula 
-				with formula, = ((Actual – Expected)^2 / Expected)^1/2. You can refer below table for calculation.
+				with formula, = ((Actual – Expected)^2 / Expected)^1/2. 				
 			5. Follow similar steps for calculating Chi-square value for Male node.			
 			6. Now add all Chi-square values to calculate Chi-square for split Gender.
 		
