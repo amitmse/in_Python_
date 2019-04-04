@@ -11,41 +11,10 @@ http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 	     (non-linear relationship between the dependent and independent variables)
 	3. Independence of errors
 	4. No perfect multicollinearity
-    
-Logistic regression uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) tested in statistical analysis.
-
-	Does not assume: 
-		- normality of variables (both DV and IVs)
-		
-		- linearity between DV and IVs
-		
-		- homoscedasticity
-		
-		- normal errors
-		  
+    	  
 ## Maximum likelihood estimation (MLE): 
 	- Finds parameter values that maximize the likelihood of making the observations given the parameters
 	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
-
-Ordinary Least Squares (OLS): Finds parameter values that minimizing the error. Assumptions of Linear regression: 
-
-	1. Linear in parameters
-	
-	2. Mean of residuals is zero
-	
-	3. Homoscedasticity of residuals /equal variance of residuals
-	
-	4. No autocorrelation of residuals
-	
-	5. Normality of residuals 
-	
-	6. X variables and residuals are uncorrelated 
-	
-	7. No perfect multicollinearity
-	
-	8. number of observations must be greater than number of Xs
-
-http://r-statistics.co/Assumptions-of-Linear-Regression.html
 
 ## Derivation of Logistic Regression:
  	Model Equation:
@@ -160,6 +129,38 @@ http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3976195/
 
 http://support.minitab.com/en-us/minitab-express/1/help-and-how-to/modeling-statistics/regression/how-to/binary-logistic-regression/interpret-the-results/all-statistics-and-graphs/coefficients/
+
+
+Logistic regression uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) tested in statistical analysis.
+
+	Does not assume: 
+		- normality of variables (both DV and IVs)
+		
+		- linearity between DV and IVs
+		
+		- homoscedasticity
+		
+		- normal errors
+		
+Ordinary Least Squares (OLS): Finds parameter values that minimizing the error. Assumptions of Linear regression: 
+
+	1. Linear in parameters
+	
+	2. Mean of residuals is zero
+	
+	3. Homoscedasticity of residuals /equal variance of residuals
+	
+	4. No autocorrelation of residuals
+	
+	5. Normality of residuals 
+	
+	6. X variables and residuals are uncorrelated 
+	
+	7. No perfect multicollinearity
+	
+	8. number of observations must be greater than number of Xs
+
+http://r-statistics.co/Assumptions-of-Linear-Regression.html
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
