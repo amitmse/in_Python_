@@ -114,8 +114,8 @@ http://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorith
 		- Traditionally, gradient descent is used to minimize a set of parameters, such as the coefficients 
 			in a regression equation or weights in a neural network. After calculating error or loss, 
 			the weights are updated to minimize that error.
-		- Instead of parameters, we have weak learner sub-models or more specifically decision trees. 
-			After calculating the loss, to perform the gradient descent procedure, we must add a tree to 
-			the model that reduces the loss (i.e. follow the gradient). We do this by parameterizing the tree, 
-			then modify the parameters of the tree and move in the right direction by (reducing the residual loss.
+		- Instead of parameters, we have weak learner sub-models or more specifically decision trees. After 
+			calculating the loss, to perform the gradient descent procedure, we must add a tree to 
+			the model that reduces the loss. We do this by parameterizing the tree, then modify the 
+			parameters of the tree and move in the right direction by reducing the residual loss.
 		- Generally this approach is called functional gradient descent or gradient descent with functions.
