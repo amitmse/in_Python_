@@ -90,26 +90,32 @@ http://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorith
 	1. A loss function to be optimized: 
 		- The loss function used depends on the type of problem being solved.
 		- It must be differentiable, but many standard loss functions are supported and you can define your own. 
-				For example, regression may use a squared error and classification may use logarithmic loss.
-		- A benefit of the gradient boosting framework is that a new boosting algorithm does not have to be derived for each loss function that may want to be used, instead, 
-				it is a generic enough framework that any differentiable loss function can be used.
+			For example, regression may use a squared error and classification may use logarithmic loss.
+		- A benefit of the gradient boosting framework is that a new boosting algorithm does not have to 
+			be derived for each loss function that may want to be used, instead, it is a generic enough 
+			framework that any differentiable loss function can be used.
 	
 	2. A weak learner to make predictions: 
 		- Decision trees are used as the weak learner in gradient boosting.
-		- Specifically regression trees are used that output real values for splits and whose output can be added together, 
-				allowing subsequent models outputs to be added and “correct” the residuals in the predictions.
-		- Trees are constructed in a greedy manner, choosing the best split points based on purity scores like Gini or to minimize the loss.
-		- Initially, such as in the case of AdaBoost, very short decision trees were used that only had a single split, 
-				called a decision stump. Larger trees can be used generally with 4-to-8 levels.
-		- It is common to constrain the weak learners in specific ways, such as a maximum number of layers, nodes, splits or leaf nodes.
+		- Specifically regression trees are used that output real values for splits and whose output 
+			can be added together, allowing subsequent models outputs to be added and “correct” 
+			the residuals in the predictions.
+		- Trees are constructed in a greedy manner, choosing the best split points based on purity 
+			scores like Gini or to minimize the loss.
+		- Initially, such as in the case of AdaBoost, very short decision trees were used that only had 
+			a single split, called a decision stump. Larger trees can be used generally with 4-to-8 levels.
+		- It is common to constrain the weak learners in specific ways, such as a maximum number of layers, 
+			nodes, splits or leaf nodes.
 		- This is to ensure that the learners remain weak, but can still be constructed in a greedy manner.
 
 	3. An additive model to add weak learners to minimize the loss function:
 		- Trees are added one at a time, and existing trees in the model are not changed.
 		- A gradient descent procedure is used to minimize the loss when adding trees.
-		- Traditionally, gradient descent is used to minimize a set of parameters, such as the coefficients in a regression equation or weights in a neural network. 
-				After calculating error or loss, the weights are updated to minimize that error.
-		- Instead of parameters, we have weak learner sub-models or more specifically decision trees. After calculating the loss, to perform the gradient descent procedure, 
-				we must add a tree to the model that reduces the loss (i.e. follow the gradient). 
-				We do this by parameterizing the tree, then modify the parameters of the tree and move in the right direction by (reducing the residual loss.
+		- Traditionally, gradient descent is used to minimize a set of parameters, such as the coefficients 
+			in a regression equation or weights in a neural network. After calculating error or loss, 
+			the weights are updated to minimize that error.
+		- Instead of parameters, we have weak learner sub-models or more specifically decision trees. 
+			After calculating the loss, to perform the gradient descent procedure, we must add a tree to 
+			the model that reduces the loss (i.e. follow the gradient). We do this by parameterizing the tree, 
+			then modify the parameters of the tree and move in the right direction by (reducing the residual loss.
 		- Generally this approach is called functional gradient descent or gradient descent with functions.
