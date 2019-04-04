@@ -1,6 +1,6 @@
-# Python 2.7
+######################## Python 2.7 #####################################################################
 
-#/***************************************************************************************************************************************************/	
+#********************************************************************************************************
 	Set path		# set PATH=%PATH%;C:\python27\	
 	http://pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/
 	
@@ -20,7 +20,7 @@
 	Graphviz 		# Install software and add path C:\Program Files (x86)\Graphviz2.38\bin 
 	
 	
-#/***************************************************************************************************************************************************/	
+#*********************************************************************************************************	
 	version	Library		# print igraph.__version__	
 	python program.py	# Run it from the command line/double click on code
 	Ctrl-D			# Quit Python
@@ -35,7 +35,7 @@
 	dir(string_l)		# inbuild function of a object. ----> x= [1,2,9] , dir(x)
 				# import pdb / 	pdb.set_trace()
 	
-#/***************************************************************************************************************************************************/	
+#***********************************************************************************************************	
 	Int(num)		# convert to integer, 	int('9.8') 	----> 9
 	float(num)		# Convert to float, 	float(9) 	----> 9.0
 	complex()		# convert to a complex number with real part and imaginary part
@@ -56,7 +56,7 @@
 	MAX			# big = max("amit xyz")  	----> z
 	iter()			# it = iter(s) 			----> it.next()									s = 'abc', next will give next word 
 	
-#/****************************************************************************************************************#
+#**************************************************************************************************************
 
 #	==			# Equal to			----> if x==1 then do
 #	=			# Assign Value			----> x=1
@@ -64,16 +64,16 @@
 #	'''			# Multiple line comment. 	----> ''' should be at both places  start and end
 #	\n			# Newline 			----> stuff = 'HelOo\nWoRlD' [it will print in two lines] 
 
-#/*****************************************************************/
+#************************************************************************************************************
 	import nltk
 	import sklearn
 	print('The nltk version is {}.'.format(nltk.__version__))
 	print('The scikit-learn version is {}.'.format(sklearn.__version__))
 
-#/****Numpy*************************************************************/	
+#****Numpy***************************************************************************************************
 	structured to regular array : t=np.array(df.tolist())
 	
-#/************** PANDAS ******************************************************/	
+#************** PANDAS **************************************************************************************
 	read data 		: train_df = pd.read_csv('train.csv', header=0)
 	numpy to pandas		: b=pd.DataFrame(a) # a is numpy array
 	pandas to numpy		: a=df1.as_matrix() / b=df1.values (df1 is pandas dataframe)
@@ -105,7 +105,7 @@
 	Merge by column		: first=pd.concat([a, b], axis=1), second=pd.concat([c, d], axis=1)
 	Append			: third = pd.concat([first, second])
 	
-#******Conditionals ( IF/ELSE IF/ELSE) ****************************************
+#******Conditionals ( IF/ELSE IF/ELSE) ****************************************************************************
 	
 	angle = 5
 	if angle > 0:
@@ -115,7 +115,7 @@
 	else:
 			print("Not turning at all"
 	
-#****** TRY & EXCEPT **************************************************************
+#****** TRY & EXCEPT *********************************************************************************************
 '''			      
 	Feature to handle any unexpected error in your Python programs.
 	If you have some suspicious code that may raise an exception, you can defend your program by 
@@ -167,7 +167,7 @@
 	print "Total count", count
 	raw_input("done")
 
-#****** Break **************************************************************
+#****** Break **********************************************************************************************************
 '''			      
 	Break 	: Terminates the loop statement and transfers execution to the statement immediately following the loop.
 	continue: Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
@@ -181,7 +181,7 @@
 		print line		#if user input is not 'done' then print the user input
 	print "DONE"			#if user input is 'done' then exit from loopif and print "DONE"
 	
-#****** Reading a file **************************************************************#
+#****** Reading a file ***************************************************************************************************
 	#every time open a file. once code is executed it will go to end of line.
 	
 	f= open("test.txt")	# open a text file
@@ -239,7 +239,7 @@
 	appendFile.write(appendMe)
 	appendFile.close()
 	
-#****** List --- [] --- **************************************************************#
+#****** List [] ***********************************************************************************************
 '''			      
 	The list is a most versatile datatype available in Python which can be written as a 
 	list of comma-separated values (items) between square brackets. 
@@ -288,7 +288,7 @@
 		
 		y = [x+x for x in [1,4,6,9]]		# list comprehensions
 		
-#######****** Set --- set()/Curly braces **************************************************************#################
+#######****** Set --- set()/Curly braces **************************************************************************************
 	#A set is an unordered collection with no duplicate elements. It will create unique. 
 
 	create Set from list 	: fruit = set(basket) 		set(['orange', 'pear', 'apple']), basket = ['apple', 'orange', 'apple', 'pear', 'orange']
@@ -299,7 +299,7 @@
 	both a and b		: a & b = set(['a', 'c'])
 	a or b but not both	: a ^ b = set(['r', 'd', 'b', 'm', 'z', 'l'])	
 
-###***** Tuples () **************************************************************##
+###***** Tuples () ******************************************************************************************************
 '''			      
 	A tuple is a sequence of immutable Python objects. Tuples are sequences, just like lists. 
 	The differences between tuples and lists are, the tuples cannot be changed unlike lists and 
@@ -310,7 +310,7 @@
 		count		:tup.count(2) = 1								  					(1, 2, 3, 4, 6.777, 'test')
 		list to tuple 	:tup          = tuple(a)  (1, 2, 3, 4, 6.777, 'test') a=[1, 2, 3, 4, 6.777, 'test']
 
-###****** Dictionary/Hash ---- {} ----- (first key and then value. only works if hash is define) ********###
+###****** Dictionary/Hash ---- {} ----- (first key and then value. only works if hash is define) **************************
 '''			      
 	Each key is separated from its value by a colon (:), the items are separated by commas, 
 	and the whole thing is enclosed in curly braces. 
@@ -415,7 +415,7 @@
 	string = 'heloo'
 		'o' in string #---> True
 		
-####******Functions**************************************************************##
+####******Functions*********************************************************************************************
 '''			      
 	#A function is a block of organized, reusable code that is used to perform a single, related action. 
 	#Functions provide better modularity for your application and a high degree of code reusing.
@@ -475,7 +475,7 @@
 			f = __builtin__.open(path, 'r')
 			return UpperCaser(f)
 
-####****** Reading a text/csv file ****************************************###
+####****** Reading a text/csv file ***************************************************************************
 	TEXT:
 		f = open("months.txt")
 
@@ -486,7 +486,7 @@
 			if row[3] == "Australia" or row[3] == "Russia":
 				print(row[1])
 
-###***** Class ******************************************************************##
+###***** Class ***************************************************************************************************
 	#A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. 
 	#The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.
 
@@ -521,19 +521,20 @@
 		if __name__ == "__main__":
 			main()
 		
-#****** Plot a chart ****************************************#
+#****** Plot a chart *******************************************************************************
 	import matplotlib.pyplot as plt
 	vals = [3,2,5,0,1]
 	plt.plot(vals)
 	plt.show()
 
-#**********************************************#
+#******************************************************************************************************
 	#list of locally installed Python modules:
 		import pip
 		sorted(["%s==%s" % (i.key, i.version) for i in pip.get_installed_distributions()])
 
-#** Numpy : http://docs.scipy.org/doc/numpy#/********************************************#
-		arange() 	#will create arrays with regularly incrementing values		np.arange(10)	array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+#** Numpy : http://docs.scipy.org/doc/numpy#/***********************************************************
+		arange() 	#will create arrays with regularly incrementing values	
+			        #np.arange(10)	array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 		#Read data from text file and convert into numpy
 			from StringIO import StringIO
 			data = "1, 2, 3\n4, 5, 6"
@@ -544,7 +545,7 @@
 	from Python_logistic_regression_with_L2_regularization import LogisticRegression
 	print inspect.getsource(LogisticRegression.negative_lik)
 
-#**** Binning *************************************************************#
+#**** Binning *************************************************************************************************
 ### http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/?utm_content=buffer7ef30&utm_medium=social&utm_source=linkedin.com&utm_campaign=buffer
 	def binning(col, cut_points, labels=None):
 	  #Define min and max values:
@@ -568,7 +569,7 @@
 	data["LoanAmount_Bin"] = binning(data["LoanAmount"], cut_points, labels)
 	print pd.value_counts(data["LoanAmount_Bin"], sort=False)
 
-#**** Restart your python program *************************************************************#
+#**** Restart your python program ***********************************************************************************
 	import sys
 	import os
 	"""
@@ -586,7 +587,7 @@
 		if answer.lower().strip() in "y yes".split():
 			restart_program()
 		
-#**** Upgrading all packages with pip *************************************************************#
+#**** Upgrading all packages with pip *************************************************************
 
 import pip
 from subprocess import call
@@ -760,3 +761,5 @@ print [str(cachedStopWords[x]) for x in range(len(cachedStopWords))]
 from nltk.corpus import stopwords
 cachedStopWords = set(stopwords.words("english"))
 cachedStopWords.update((set([x.lower() for x in ['and','I','A','And','So','arnt','This','When','It','many','Many','so','cant','Yes','yes','No','no','These','these']]))
+
+########################################################################################################################################
