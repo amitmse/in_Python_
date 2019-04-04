@@ -1,6 +1,8 @@
 # Logistic Regression
 https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
+Logistic Regression is a classification technique which predicts a binary outcome.
+
 ## Logistic regression assumptions: 		
 http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 
@@ -20,13 +22,13 @@ Logistic regression uses MLE rather than OLS, it avoids many of the typical assu
 		- homoscedasticity
 		
 		- normal errors
-		
-MLE allows more flexibility in the data and analysis because it has fewer restrictions
-  
-Maximum likelihood estimation (MLE): 
+		  
+## Maximum likelihood estimation (MLE): 
 	- Finds parameter values that maximize the likelihood of making the observations given the parameters
+	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
 
-Ordinary Least Squares (OLS): Finds parameter values that minimizing the error
+## Ordinary Least Squares (OLS): 
+Finds parameter values that minimizing the error
 Linear regression assumptions: (http://r-statistics.co/Assumptions-of-Linear-Regression.html)
 	1. Linear in parameters
 	2. Mean of residuals is zero
