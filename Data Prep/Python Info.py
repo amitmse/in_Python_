@@ -1,14 +1,20 @@
 
 #/***************************************************************************************************************************************************/	
-	Set path		# set PATH=%PATH%;C:\python27\	Advanced System Settings http://pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/
+	Set path		# set PATH=%PATH%;C:\python27\	
+	http://pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/
 	
 	packages installed 	# help("modules")
 	
-	Install Library 	# First install pip then 	- http://stackoverflow.com/questions/28142839/pip-install-numpy-python-2-7-fails-with-errorcode-1
-				# python get-pip.py 		- https://bootstrap.pypa.io/get-pip.py 	/pip install pip-tools  		/ python -m pip install --upgrade pip  / 'pip install --upgrade pip  
-				# Download Library 		- http://www.lfd.uci.edu/~gohlke/pythonlibs
-				# download package 		- go to folder open cmd to install / 'https://docs.python.org/2/install/						
-				# pip install numpy 		- easy_install -U setuptools 	/ easy_install -U statsmodels 	/	easy_install scipy-0.16.0-cp26-none-win_amd64.whl	 / python setup.py install 
+	Install Library 	# First install pip then 
+				  http://stackoverflow.com/questions/28142839/pip-install-numpy-python-2-7-fails-with-errorcode-1
+				# python get-pip.py  	- pip install pip-tools / python -m pip install 
+							--upgrade pip  / 'pip install --upgrade pip  
+				  https://bootstrap.pypa.io/get-pip.py
+				# Download Library 	- http://www.lfd.uci.edu/~gohlke/pythonlibs
+				# download package 	- go to folder open cmd to install / 'https://docs.python.org/2/install/						
+				# pip install numpy 	- easy_install -U setuptools / easy_install -U statsmodels 
+							  /easy_install scipy-0.16.0-cp26-none-win_amd64.whl	 
+							  /python setup.py install 
 
 	Graphviz 		# Install software and add path C:\Program Files (x86)\Graphviz2.38\bin 
 	
@@ -37,7 +43,8 @@
 	raw_input()		# user input			----> fname = raw_input("enter file name"), raw_input("done")
 	lower()			# string_l = string.lower()	----> 'example'	string = 'ExaMple'
 	upper()			# string_u = string.upper()	----> 'EXAMPLE'			
-	find()			# string.find('M') 		----> 3, string.find('o') ----> -1 (if not able to findout then it will mention -1)
+	find()			# string.find('M') 		----> 3, string.find('o') ----> -1 
+				  (if not able to findout then it will mention -1)
 	replace()		# string.replace('Exa', 'EXA')	----> 'EXAMple'
 	lstrip()		# Remove space. string.lstrip()	----> 'HeLooo TeSt ' string = ' HeLooo TeSt '
 	rstrip()		# Remove space. string.rstrip()	----> ' HeLooo TeSt'			
@@ -73,7 +80,8 @@
 	Num var distribution	: train_df.describe()
 	Freq			: train_df['Sex'].value_counts() / train_df.groupby('Sex').size()
 	Mean			: mean = df3['float_col'].mean()
-	Count Missing 		: train_df.isnull().sum().sum()	 /sum([True for idx,row in train_df.iterrows() if any(row.isnull())])	
+	Count Missing 		: train_df.isnull().sum().sum()	 
+				  sum([True for idx,row in train_df.iterrows() if any(row.isnull())])	
 	Columns Missing		: train_df.apply(lambda x: sum(x.isnull().values), axis = 0)
 	Row Missing		: train_df.apply(lambda x: sum(x.isnull().values), axis = 1)	
 	Fill Missing		: df3['float_col'].fillna(mean)
@@ -89,12 +97,13 @@
 				  b=pd.Series(FN, index=['Actual-1'], name='Predicted-0'), 
 				  c=pd.Series(FP, index=['Actual-0'], name='Predicted-1'), 
 				  d=pd.Series(TN, index=['Actual-0'], name='Predicted-0')
-	Add column 		: train['Has_Cabin'] = train["Cabin"].apply(lambda x: 0 if type(x) == float else 1) #Number will be available for Cabin
+	Add column 		: train['Has_Cabin'] = train["Cabin"].apply(lambda x: 0 if type(x) == float else 1) 
+				  #Number will be available for Cabin
 				  dataset['Sex'] = dataset['Sex'].map( {'female': 0, 'male': 1} ).astype(int)
 	Merge by column		: first=pd.concat([a, b], axis=1), second=pd.concat([c, d], axis=1)
 	Append			: third = pd.concat([first, second])
 	
-#/******Conditionals ( IF/ELSE IF/ELSE) ****************************************/
+#******Conditionals ( IF/ELSE IF/ELSE) ****************************************
 	
 	angle = 5
 	if angle > 0:
@@ -104,11 +113,14 @@
 	else:
 			print("Not turning at all"
 	
-#/****** TRY & EXCEPT **************************************************************/
-	#Feature to handle any unexpected error in your Python programs.
-	#If you have some suspicious code that may raise an exception, you can defend your program by placing the suspicious code in a try: block. 
-	#After the try: block, include an except: statement, followed by a block of code which handles the problem as elegantly as possible.
-
+#****** TRY & EXCEPT **************************************************************
+'''			      
+	Feature to handle any unexpected error in your Python programs.
+	If you have some suspicious code that may raise an exception, you can defend your program by 
+	placing the suspicious code in a try: block. 
+	After the try: block, include an except: statement, followed by a block of code which handles 
+	the problem as elegantly as possible.
+'''
 	astr =  'helpp'
 	try:
 		istr = int(astr)
@@ -153,11 +165,13 @@
 	print "Total count", count
 	raw_input("done")
 
-#/****** Break **************************************************************/
-	#Break 		: Terminates the loop statement and transfers execution to the statement immediately following the loop.
-	#continue 	: Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
-	#pass		: The pass statement in Python is used when a statement is required syntactically but you do not want any command or code to execute.
-	
+#****** Break **************************************************************
+'''			      
+	Break 	: Terminates the loop statement and transfers execution to the statement immediately following the loop.
+	continue: Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
+	pass : The pass statement in Python is used when a statement is required syntactically but you do not want any 
+		command or code to execute.
+'''	
 	while True:
 		line = raw_input('user input..... ')	#ask user input 
 		if line == 'done':	#check user input 
@@ -165,7 +179,7 @@
 		print line		#if user input is not 'done' then print the user input
 	print "DONE"			#if user input is 'done' then exit from loopif and print "DONE"
 	
-#/****** Reading a file **************************************************************/
+#****** Reading a file **************************************************************#
 	#every time open a file. once code is executed it will go to end of line.
 	
 	f= open("test.txt")	# open a text file
@@ -184,7 +198,8 @@
 	for line in file_n:
 		line = line.strip()
 		if not 'Received:' in line:
-			continue #Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
+			continue #Causes the loop to skip the remainder of its body and 
+			      	 #immediately retest its condition prior to reiterating.
 	print line
 	
 	
@@ -209,21 +224,25 @@
 	
 	saveFile = open('exampleFile.txt','w')		# notifies Python that you are opening this file, with the intention to write
 	saveFile.write(text)				# actually writes the information
-	saveFile.close()				# It is important to remember to actually close the file, otherwise it will hang for a while and
+	saveFile.close()				# It is important to remember to actually close the file, 
+			      				# otherwise it will hang for a while and
 							# could cause problems in your script
 
-	# so here, generally it can be a good idea to start with a newline, since otherwise it will append data on the same line as the file left off.
-	# you might want that, but I'll use a new line. another option used is to first append just a simple newline then append what you want. 
-	
+	''' so here, generally it can be a good idea to start with a newline, since otherwise it will append data 
+	    on the same line as the file left off. you might want that, but I'll use a new line. another option 
+	    used is to first append just a simple newline then append what you want. 
+	'''
 	appendMe 	= '\nNew bit of information'
 	appendFile 	= open('exampleFile.txt','a')
 	appendFile.write(appendMe)
 	appendFile.close()
 	
-#/****** List --- [] --- **************************************************************/
-	#The list is a most versatile datatype available in Python which can be written as a list of comma-separated values (items) between square brackets. 
-	#Important thing about a list is that items in a list need not be of the same type.
-
+#****** List --- [] --- **************************************************************#
+'''			      
+	The list is a most versatile datatype available in Python which can be written as a 
+	list of comma-separated values (items) between square brackets. 
+	Important thing about a list is that items in a list need not be of the same type.
+'''
 		HELP		: help(list), help("list"), help([])
 		Empty list 	: shopping_list  = [], 				zz=list()
 		append		: a=[-1, 1, 1, 2, 3, 3, 4, 4, 6.777, 'test']	a.append(10)	=> [-1,1,1,2,3,3,4,4,6.777,'test',10]
@@ -277,20 +296,25 @@
 	both a and b		: a & b = set(['a', 'c'])
 	a or b but not both	: a ^ b = set(['r', 'd', 'b', 'm', 'z', 'l'])	
 
-###***** Tuples () **************************************************************
-	#A tuple is a sequence of immutable Python objects. Tuples are sequences, just like lists. 
-	#The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses, whereas lists use square brackets.
-
+###***** Tuples () **************************************************************##
+'''			      
+	A tuple is a sequence of immutable Python objects. Tuples are sequences, just like lists. 
+	The differences between tuples and lists are, the tuples cannot be changed unlike lists and 
+	tuples use parentheses, whereas lists use square brackets.
+'''
 	help(tuple), help(())
-		index		:	tup[2]       = 3							  	  					(1, 2, 3, 4, 6.777, 'test')
-		count		:	tup.count(2) = 1								  					(1, 2, 3, 4, 6.777, 'test')
-		list to tuple 	:	tup          = tuple(a)  (1, 2, 3, 4, 6.777, 'test') a=[1, 2, 3, 4, 6.777, 'test']
+		index		:tup[2]       = 3							  	  					(1, 2, 3, 4, 6.777, 'test')
+		count		:tup.count(2) = 1								  					(1, 2, 3, 4, 6.777, 'test')
+		list to tuple 	:tup          = tuple(a)  (1, 2, 3, 4, 6.777, 'test') a=[1, 2, 3, 4, 6.777, 'test']
 
-###****** Dictionary/Hash ---- {} ----- (first key and then value. only works if hash is define) ******************************###
-	#Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. 
-	#Keys are unique within a dictionary while values may not be. 
-	#The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
-
+###****** Dictionary/Hash ---- {} ----- (first key and then value. only works if hash is define) ********###
+'''			      
+	Each key is separated from its value by a colon (:), the items are separated by commas, 
+	and the whole thing is enclosed in curly braces. 
+	Keys are unique within a dictionary while values may not be. 
+	The values of a dictionary can be of any type, but the keys must be of an immutable data type 
+	such as strings, numbers, or tuples.
+'''
 		empty hash			: d = {}, d=dict()
 		Create hash 			: d["key1"] = "value1" 	{'key1': 'value1'}
 		print a value of key		: d["key1"]		'value1'
@@ -483,7 +507,7 @@
 		print swine.__doc__ --> documentation, it will print all text.
 		
 		class new:
-			def __init__(self):			# __init__ is initialization. it will automatically run this
+			def __init__(self):		# __init__ is initialization. it will automatically run this
 				print "testing -1"
 				print "tsting  -2"
 		obj2 = new()
@@ -621,12 +645,16 @@ df['new_var']=df['old_var'].str.replace(r"\([^)]*\)","")
 ################################################################################################
 '''
 OOP:
-	Encapsulation	: restrict access to methods and variables. This can prevent the data from being modified by accident and is known as encapsulation.
+	Encapsulation	: restrict access to methods and variables. This can prevent the data from being 
+			  modified by accident and is known as encapsulation.
 	Abstraction	: Simplifying complex reality by modeling classes appropriate to the problem.
-	Inheritance	: Instead of starting from scratch, you can create a class by deriving it from a pre existing class by listing the parent class in parentheses after the new class name.
+	Inheritance	: Instead of starting from scratch, you can create a class by deriving it from a 
+			  pre existing class by listing the parent class in parentheses after the new class name.
 	Polymorphism	: Process of using an operator or function in different ways for different data input. 
-	Overloading	: It means more than one method shares the same name in the class but having different signature. It is to add or extend more to methods behavior. compile time polymorphism.
-	Overriding	: It means method of base class is re-defined in the derived class having same signature.	It is to Change existing behavior of method. run time polymorphism.
+	Overloading	: It means more than one method shares the same name in the class but having different signature. 
+			  It is to add or extend more to methods behavior. compile time polymorphism.
+	Overriding	: It means method of base class is re-defined in the derived class having same signature.	
+			  It is to Change existing behavior of method. run time polymorphism.
 
 http://freefeast.info/difference-between/difference-between-method-overloading-and-method-overriding-method-overloading-vs-method-overriding/
 '''								
