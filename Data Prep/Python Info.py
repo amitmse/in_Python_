@@ -1,3 +1,4 @@
+# Python 2.7
 
 #/***************************************************************************************************************************************************/	
 	Set path		# set PATH=%PATH%;C:\python27\	
@@ -371,7 +372,7 @@
 			if bc is None or ct > bc :
 			bw = ws
 			bc = ct	
-		print bw, bc	---> Jan, 12
+		print bw, bc	#---> Jan, 12
 
 ####******Loop**************************************************************
 '''			      
@@ -412,7 +413,7 @@
 	raw_input("press enter to exit ")
 			
 	string = 'heloo'
-		'o' in string ---> True
+		'o' in string #---> True
 		
 ####******Functions**************************************************************##
 '''			      
@@ -443,17 +444,17 @@
 			else :
 				print 'Helooo'
 
-		greet('en')    ------> Helooo
+		greet('en')    #------> Helooo
 
 		def gt():
 			return "heloo"
-		print gt(), "AMIT"   ----> heloo AMIT 
+		print gt(), "AMIT"   #----> heloo AMIT 
 
 		def adi(a,b):
 			added = a+b
 			return added
 		x= adi(2,7)
-		print x             ------> 9
+		print x             #------> 9
 
 		# Function definition is here
 		def sum( arg1, arg2 ):
@@ -497,16 +498,16 @@
 
 		exClass
 		exObject = exClass()
-		exObject.x1		---> 123
+		exObject.x1		#---> 123
 		exObject.fnMethod()
 
 		class swine:
 			def apples(self):
 				print "testing"		
 		obj1 = swine()
-		obj1.apples()	---> testing
+		obj1.apples()	#---> testing
 
-		print swine.__doc__ --> documentation, it will print all text.
+		print swine.__doc__ #--> documentation, it will print all text.
 		
 		class new:
 			def __init__(self):		# __init__ is initialization. it will automatically run this
