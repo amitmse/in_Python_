@@ -203,8 +203,9 @@
 	-Activation Function:
 		Sigmoid is not only activation function right but we have other two most popular activation 
 		functions which are also used are tanh and ReLu.
-		TanH :  The advantage is that instead of having a range between 0 and 1, tanh has a range between -1 to +1.
-			tanh(w*x + b)
+		TanH :  The advantage is that instead of having a range between 0 and 1, 
+			tanh has a range between -1 to +1. 
+			tanh(w*x + b) 
 			tanh(z) = (e^z - e^-z)/(e^z + e^-z)						
 		ReLU :	Rectified Linear Unit doesn't have the saturation problem where the output might get 
 			constrained beyond a limit. max(0, w*x + b)
