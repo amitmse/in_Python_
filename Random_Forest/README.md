@@ -67,3 +67,39 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 		- thresholds 
 		- mean precision
 		- precision above chance
+
+
+# Bias - Variance
+	For example, if you have high variance, one common solution is to add more features from which to learn. 
+	This very frequently increases bias, so there’s a tradeoff to take into consideration.
+
+# Tune
+http://stackoverflow.com/questions/36107820/how-to-tune-parameters-in-random-forest-using-scikit-learn
+	- n_estimators is not really worth optimizing. The more estimators you give it, the better it will do. 
+		500 or 1000 is usually sufficient. ususally bigger the forest the better, 
+		there is small chance of overfitting here
+		
+	- max_features is worth exploring for many different values. It may have a large impact on the behavior 
+		of the RF because it decides how many features each tree in the RF considers at each split. 
+		Try reducing this number (try 30-50% of the number of features). This determines how many features 
+		each tree is randomly assigned. The smaller, the less likely to overfit, but too small will start 
+		to introduce under fitting.
+		
+	- max depth of each tree (default none, leading to full tree) - reduction of the maximum depth helps 
+		fighting with overfitting. This will reduce the complexity of the learned models, lowering over 
+		fitting risk. Try starting small, say 5-10, and increasing you get the best result.
+		
+	- criterion may have a small impact, but usually the default is fine. If you have the time, try it out.
+	
+	- Make sure to use sklearn's GridSearch (preferably GridSearchCV, but your data set size is too small) 
+		when trying out these parameters.
+		
+	- my default setting for a first run is: 1000 trees, 1/2 features per node, out of bag performance weighting, 
+		Gini Index for node evaluation.
+		
+https://medium.com/@chris_bour/6-tricks-i-learned-from-the-otto-kaggle-challenge-a9299378cd61#.62v2igttw
+
+plot_learning_curve: http://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html
+
+http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.html#sphx-glr-auto-examples-model-selection-randomized-search-py
+
