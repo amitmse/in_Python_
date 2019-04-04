@@ -154,8 +154,10 @@ http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
 		The calculation assumes that the sample size and the coefficients to estimate would remain 
 		the same if you sampled again and again. Use the standard error of the coefficient to measure 
 		the precision of the estimate of the coefficient. 
-		The smaller the standard error, the more precise the estimate. 
+		The smaller the standard error, the more precise the estimate.
+		
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3976195/
+
 http://support.minitab.com/en-us/minitab-express/1/help-and-how-to/modeling-statistics/regression/how-to/binary-logistic-regression/interpret-the-results/all-statistics-and-graphs/coefficients/
 
 
