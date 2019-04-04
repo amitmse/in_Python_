@@ -120,7 +120,8 @@ http://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorith
 			parameters of the tree and move in the right direction by reducing the residual loss.
 		- Generally this approach is called functional gradient descent or gradient descent with functions.
 
-Improvements to Basic Gradient Boosting	:
+Improvements to Basic Gradient Boosting
+
 	- Gradient boosting is a greedy algorithm and can overfit a training dataset quickly.
 	- It can benefit from regularization methods that penalize various parts of the algorithm and generally 
 		improve the performance of the algorithm by reducing overfitting.
