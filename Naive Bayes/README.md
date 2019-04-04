@@ -5,7 +5,7 @@
   1. Violation of Independence Assumption:
       
 	- The Naïve Bayes assumption is that all the features are conditionally independent given the class label. 
-	  Even though this is usually false (since features are usually dependent).
+	  	Even though this is usually false (since features are usually dependent).
               
 	- Naive Bayesian classifiers assume that the effect of an attribute value on a given 
           class is independent of the values of the other attributes. This assumption is called class 
