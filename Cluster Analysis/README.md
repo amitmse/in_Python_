@@ -1,45 +1,32 @@
 # Clustering 
 
-Basic: 	
+## Basic: 	
 
 	- Clustering algorithms are a part of unsupervised (no target variable) machine learning algorithms
 	
 	- These clustering techniques use distance measures to decide the similarity or dissimilarity in the observations
     
 	- There are some important things you should keep in mind:
-				-	With quantitative variables, distance calculations are highly influenced by variable units and magnitude. 
-					For example, clustering variable height (in feet) with salary (in rupees) having different units and distribution (skewed) will invariably return biased results. 
-					Hence, always make sure to standardize (mean = 0, sd = 1) the variables. Standardization results in unit-less variables.
+		- With quantitative variables, distance calculations are highly influenced by variable units and 
+			magnitude. For example, clustering variable height (in feet) with salary (in rupees) having 
+			different units and distribution (skewed) will invariably return biased results. 
+			Hence, always make sure to standardize (mean = 0, sd = 1) the variables. Standardization 
+			results in unit-less variables.
 				
-				-	Use of a particular distance measure depends on the variable types; 
-					i.e., formula for calculating distance between numerical variables is different than categorical variables.
-					
-		
-			http://blog.hackerearth.com/practical-guide-to-clustering-algorithms-evaluation-in-r?stc_status=success&stc_hash=
-			http://blog.hackerearth.com/2015/05/top-7-algorithms-and-data-structures-every-programmer-should-know-about.html
-			https://datasciencelab.wordpress.com/2013/12/12/clustering-with-k-means-in-python/
-			http://brandonrose.org/clustering
-			http://www.aladdin.cs.cmu.edu/papers/pdfs/y2000/xmeans.pdf
-			https://datasciencelab.wordpress.com/2013/12/27/finding-the-k-in-k-means-clustering/
-			https://datasciencelab.wordpress.com/2014/01/21/selection-of-k-in-k-means-clustering-reloaded/
-			https://www.quora.com/How-can-we-choose-a-good-K-for-K-means-clustering
-			https://en.wikipedia.org/wiki/Determining_the_number_of_clusters_in_a_data_set
-			http://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html
-			http://www.ijarcsms.com/docs/paper/volume1/issue6/V1I6-0015.pdf
-			https://www.coursera.org/learn/machine-learning-data-analysis/home/week/4
-			https://www.coursera.org/learn/cluster-analysis/home/week/3
-			https://www.coursera.org/learn/ml-clustering-and-retrieval/home/week/6
-		
--	Clustering Techniques:					
-		-	K means clustering: 
-					This technique partitions the data set into unique homogeneous clusters whose observations are similar to each other but different than other clusters. 
-					The resultant clusters remain mutually exclusive, i.e., non-overlapping clusters.
-					In this technique, "K" refers to the number of cluster among which we wish to partition the data. Every cluster has a centroid. 
-					The name "k means" is derived from the fact that cluster centroids are computed as the mean distance of observations assigned to each cluster.
-					This k value k is given by the user. It's a hard clustering technique, i.e., one observation gets classified into exactly one cluster.
-					K means tries to classify the observations into K clusters such that the total within cluster variation is as small as possible.
-					How do we calculate within cluster variation? The most commonly used method is squared Euclidean distance. 
-					It is sum of squared Euclidean distance between observations in a cluster divided by the number of observations in a cluster. 
+		- Use of a particular distance measure depends on the variable types; i.e., formula for calculating 
+			distance between numerical variables is different than categorical variables.
+
+## K means clustering: 
+	This technique partitions the data set into unique homogeneous clusters whose observations are similar 
+	to each other but different than other clusters. The resultant clusters remain mutually exclusive, 
+	i.e., non-overlapping clusters. In this technique, "K" refers to the number of cluster among which 
+	we wish to partition the data. Every cluster has a centroid. The name "k means" is derived from the 
+	fact that cluster centroids are computed as the mean distance of observations assigned to each cluster.
+	This k value k is given by the user. It's a hard clustering technique, i.e., one observation gets 
+	classified into exactly one cluster. K means tries to classify the observations into K clusters such 
+	that the total within cluster variation is as small as possible. How do we calculate within cluster variation? 
+	The most commonly used method is squared Euclidean distance. It is sum of squared Euclidean distance 
+	between observations in a cluster divided by the number of observations in a cluster. 
 
 					K - Means Algorithm:
 							1. 	Initilize (randomly) K number of values ( its centroid).
