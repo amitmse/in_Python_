@@ -23,3 +23,7 @@ You can align text to the left, right, or center of a column by including colons
 
 
 It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
+
+https://help.github.com/en/articles/basic-writing-and-formatting-syntax
+
+https://help.github.com/en/articles/organizing-information-with-tables
