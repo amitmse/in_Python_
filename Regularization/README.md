@@ -66,3 +66,7 @@ Both L1 and L2 work differently in the way that they penalize the size of a weig
 	
 			 
 			 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
