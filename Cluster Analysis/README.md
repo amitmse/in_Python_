@@ -1,13 +1,10 @@
 # Clustering 
 
-					
-
 Basic: 		
-
-		-	Clustering algorithms are a part of unsupervised (no target variable) machine learning algorithms. 
-		-	These clustering techniques use distance measures to decide the similarity or dissimilarity in the observations.
+	- Clustering algorithms are a part of unsupervised (no target variable) machine learning algorithms
+	- These clustering techniques use distance measures to decide the similarity or dissimilarity in the observations
     
-		-	There are some important things you should keep in mind:
+	- There are some important things you should keep in mind:
 				-	With quantitative variables, distance calculations are highly influenced by variable units and magnitude. 
 					For example, clustering variable height (in feet) with salary (in rupees) having different units and distribution (skewed) will invariably return biased results. 
 					Hence, always make sure to standardize (mean = 0, sd = 1) the variables. Standardization results in unit-less variables.
