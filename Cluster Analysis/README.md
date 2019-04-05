@@ -141,61 +141,67 @@
 		when the data is categorical.
 
 ## The methods to evaluate clustering accuracy :
-		-	Internal Accuracy Measures: 
-					These measures calculate the cluster's accuracy based on the compactness of a cluster. 
-					Following are the methods which fall under this category:
-							1.	Sum of Squared Errors (SSE):
-										The compactness of a cluster can be determined by calculating its SSE. 
-										It works best when the clusters are well separated from one another. 
-										formula is "||X -  µk||^2" where Ck is the number of observations in a cluster. µk is the mean distance in cluster k.
-							2.	Scatter Criteria:
-										It calculates the spread of a cluster. 
-										To do that, first it calculates a scatter matrix, within cluster scatter and between cluster scatter. 
-										Then, it sums over the resulting values to derive total scatter values. Lower values are desirable. 
-		-	External Accuracy Measures: 
-					These measures are calculated by matching the structure of the clusters with some pre-defined classification of instances in the data. 
-					Let's look at these measures:
-							1. 	Rand Index:
-										It compares the two clusters and tries to find the ratio of matching and unmatched observations among two clustering structures (C1 and C2). Its value lies between 0 and 1. Think of the clustering structures (C1 and C2) with several small clusters. 
-										Think of C1 as your predicted cluster output and C2 as the actual cluster output. Higher the value, better the score. 
-										Its simple formula is given by: RAND SCORE = a + d / (a + b + c + d)
-										a = observations which are available in the same cluster in both structures (C1 and C2)
-										b = observations which are available in a cluster in C1 and not in the same cluster in C2
-										c = observations which are available in a cluster in C2 and not in the same cluster in C1
-										d = observations which are available in different clusters in C1 and C2
-							2.	Precision Recall Measure:
-										This metric is derived from the confusion matrix. 
-										Recall is also known as Sensitivity [True Positive/ (True Positive + False Negative)]. 
-										For clustering, we use this measure from an information retrieval point of view. 
-										Here, precision is a measure of correctly retrieved items. 
-										Recall is measure of matching items from all the correctly retrieved items.
+	- Internal Accuracy Measures: 
+		These measures calculate the cluster's accuracy based on the compactness of a cluster. 
+		Following are the methods which fall under this category:
+			1. Sum of Squared Errors (SSE):
+				The compactness of a cluster can be determined by calculating its SSE.
+				It works best when the clusters are well separated from one another.
+				formula is "||X -  µk||^2" where Ck is the number of observations in a cluster. 
+				µk is the mean distance in cluster k.
+			2.Scatter Criteria:
+				It calculates the spread of a cluster. To do that, first it calculates a 
+				scatter matrix, within cluster scatter and between cluster scatter. 
+				Then, it sums over the resulting values to derive total scatter values. 
+				Lower values are desirable. 
+	- External Accuracy Measures: 
+		These measures are calculated by matching the structure of the clusters with some pre-defined 
+		classification of instances in the data. 
+		Let's look at these measures:
+			1. Rand Index:
+				It compares the two clusters and tries to find the ratio of matching and 
+				unmatched observations among two clustering structures (C1 and C2). 
+				Its value lies between 0 and 1. Think of the clustering structures (C1 and C2) 
+				with several small clusters.Think of C1 as your predicted cluster output and C2 as 
+				the actual cluster output. Higher the value, better the score. Its simple formula 
+				is given by: RAND SCORE = a + d / (a + b + c + d)
+				a = obs which are available in the same cluster in both structures (C1 and C2)
+				b = obs which are available in a cluster in C1 and not in the same cluster in C2
+				c = obs which are available in a cluster in C2 and not in the same cluster in C1
+				d = observations which are available in different clusters in C1 and C2
+			2. Precision Recall Measure:
+				This metric is derived from the confusion matrix. Recall is also known as 
+				Sensitivity [True Positive/ (True Positive + False Negative)]. 
+				For clustering, we use this measure from an information retrieval point of view.
+				Here, precision is a measure of correctly retrieved items. Recall is measure of 
+				matching items from all the correctly retrieved items.
 
 
--	Distance Calculation for Clustering:
-		Euclidean Distance: 
-					It is used to calculate the distance between quantitative (numeric) variables. 
-					As it involves square terms, it is also known as L2 distance (because it squares the difference in coordinates). Its formula is given by
-					d(xi , xj ) = (|xi1 - xj1|² + |xi2 - xj2|² + . . . + |xip - xjp|² ) 1/2
+## Distance Calculation for Clustering:
+	- Euclidean Distance: 
+		It is used to calculate the distance between quantitative (numeric) variables. As it involves 
+		square terms, it is also known as L2 distance (because it squares the difference in coordinates). 
+		Its formula is given by d(xi , xj ) = (|xi1 - xj1|² + |xi2 - xj2|² + . . . + |xip - xjp|² ) 1/2
 
-		Manhattan Distance: 
-					It is calculated as the absolute value of the sum of differences in the given coordinates. 
-					This is known as L1 distance. It is also sometimes called the Minowski Distance.
-					d(xi , xj ) = (|xi1 - xj1| + |xi2 - xj2| + . . . + |xip - xjp| 
+	- Manhattan Distance: It is calculated as the absolute value of the sum of differences in the given 
+		coordinates. This is known as L1 distance. It is also sometimes called the Minowski Distance.
+		d(xi , xj ) = (|xi1 - xj1| + |xi2 - xj2| + . . . + |xip - xjp| 
 					
-		Hamming Distance: 
-					It is used to calculate the distance between categorical variables. 
-					It uses a contingency table to count the number of mismatches among the observations. 
-					If a categorical variable is binary (say, male or female), it encodes the variable as male = 0, female = 1.
-					hdist(x, y) <- sum((x[1] != y[1]) + (x[2] != y[2]) + ...)
+	- Hamming Distance: 
+		It is used to calculate the distance between categorical variables. It uses a contingency table to 
+		count the number of mismatches among the observations. If a categorical variable is binary 
+		(say, male or female), it encodes the variable as male = 0, female = 1.
+		hdist(x, y) <- sum((x[1] != y[1]) + (x[2] != y[2]) + ...)
 
-		Gower Distance: 
-					It is used to calculate the distance between mixed (numeric, categorical) variables. 
-					It works this way: it computes the distance between observations weighted by its variable type, and then takes the mean across all variables.
+	- Gower Distance: 
+		It is used to calculate the distance between mixed (numeric, categorical) variables. 
+		It works this way: it computes the distance between observations weighted by its variable type, 
+		and then takes the mean across all variables.
 					
-		Cosine Similarity: 
-					It is the most commonly used similarity metric in text analysis. 
-					The closeness of text data is measured by the smallest angle between two vectors. The angle (T) is assumed to be between 0 and 90. 
-					For two vectors (x,y), the cosine similarity is given by their normalized dot product shown below:
-					cossim(x, y) <- dot(x, y)/(sqrt(dot(x,x)*dot(y,y)))
+	- Cosine Similarity: 
+		It is the most commonly used similarity metric in text analysis. The closeness of text data is 
+		measured by the smallest angle between two vectors. The angle (T) is assumed to be between 0 and 90.
+		For two vectors (x,y), the cosine similarity is given by their normalized dot product shown below:
+		cossim(x, y) <- dot(x, y)/(sqrt(dot(x,x)*dot(y,y)))
 
 
