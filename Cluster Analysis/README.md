@@ -1,7 +1,9 @@
 # Clustering 
 
-Basic: 		
+Basic: 	
+
 	- Clustering algorithms are a part of unsupervised (no target variable) machine learning algorithms
+	
 	- These clustering techniques use distance measures to decide the similarity or dissimilarity in the observations
     
 	- There are some important things you should keep in mind:
