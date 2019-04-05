@@ -64,7 +64,8 @@ Both L1 and L2 work differently in the way that they penalize the size of a weig
 	
 	L1 will force the weights into a pattern similar to a Laplace distribution
 	
-			 
+
+# For Table:
 			 
 | First Header  | Second Header |
 | ------------- | ------------- |
