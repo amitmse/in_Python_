@@ -220,3 +220,9 @@
 				-	Local Receptive fields 
 				-	Shared Weights 
 				- 	Pooling
+
+
+## Dropout Regularization
+
+Most neural network frameworks implement dropout as a separate layer. Dropout layers function as a regular, densely connected neural network layer. The only difference is that the dropout layers will periodically drop some of their neurons during training. You can use dropout layers on regular feedforward neural networks.
+
