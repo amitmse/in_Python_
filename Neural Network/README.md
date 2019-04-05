@@ -226,3 +226,53 @@
 
 Most neural network frameworks implement dropout as a separate layer. Dropout layers function as a regular, densely connected neural network layer. The only difference is that the dropout layers will periodically drop some of their neurons during training. You can use dropout layers on regular feedforward neural networks.
 
+https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
+
+## Recurrent Neural Networks
+
+https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class10_lstm.ipynb
+
+So far the neural networks that we’ve examined have always had forward connections. The input layer always connects to the first hidden layer. Each hidden layer always connects to the next hidden layer. The final hidden layer always connects to the output layer. This manner to connect layers is the reason that these networks are called “feedforward.” Recurrent neural networks are not so rigid, as backward connections are also allowed. A recurrent connection links a neuron in a layer to either a previous layer or the neuron itself. Most recurrent neural network architectures maintain state in the recurrent connections. Feedforward neural networks don’t maintain any state. A recurrent neural network’s state acts as a sort of short-term memory for the neural network. Consequently, a recurrent neural network will not always produce the same output for a given input.
+
+Recurrent neural networks do not force the connections to flow only from one layer to the next, from input layer to output layer. A recurrent connection occurs when a connection is formed between a neuron and one of the following other types of neurons:
+
+	- The neuron itself
+	- A neuron on the same level
+	- A neuron on a previous level
+
+Recurrent connections can never target the input neurons or the bias neurons.
+The processing of recurrent connections can be challenging. Because the recurrent links create endless loops, the neural network must have some way to know when to stop. A neural network that entered an endless loop would not be useful. To prevent endless loops, we can calculate the recurrent connections with the following three approaches:
+
+	- Context neurons
+	- Calculating output over a fixed number of iterations
+	- Calculating output until neuron output stabilizes
+	
+	
+
+## Evaluating Feature Importance
+
+https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class13_adv.ipynb
+
+http://depts.washington.edu/oldenlab/wordpress/wp-content/uploads/2013/03/EcologicalModelling_2004.pdf
+
+	def perturbation_rank(model, x, y, names, regression):
+	    errors = []
+
+	    for i in range(x.shape[1]):
+		hold = np.array(x[:, i])
+		np.random.shuffle(x[:, i])
+
+		if regression:
+		    pred = model.predict(x)
+		    error = metrics.mean_squared_error(y, pred)
+		else:
+		    pred = model.predict_proba(x)
+		    error = metrics.log_loss(y, pred)
+
+		errors.append(error)
+		x[:, i] = hold
+
+	    max_error = np.max(errors)
+	    importance = [e/max_error for e in errors]
+    
+    
