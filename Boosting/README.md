@@ -4,7 +4,7 @@
 | Ensembling	| Bagging	| RF	| Handle Overfitting	| Reduce Variance		| Independent Calssifiers |
 |----|----|----|----|----|----|
 | Ensembling	| Boosting	| GBM	| Can Overfit		| Reduce Bias and Variance	| Sequential Classifier   |
-|----|----|----|----|----|----|
+
 
 ## ADA Boost
 
