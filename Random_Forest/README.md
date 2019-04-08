@@ -106,12 +106,11 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 
 
 
-## feature’s importance
+# Feature importance
 
 https://medium.com/@srnghn/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3
 
 https://github.com/scikit-learn/scikit-learn/blob/18cdaa69c14a5c84ab03fce4fb5dc6cd77619e35/sklearn/tree/_tree.pyx#L1056
-
 
 Accuracy-based importance:
 
@@ -166,5 +165,152 @@ Importance for numeric outcomes
 	with many classes, which also biases the importance measure. Both methods may overstate 
 	the importance of correlated predictors.
 
-## Gini Importance / Mean Decrease in Impurity (MDI)
+## Gini Importance / Mean Decrease in Impurity (MDI) :
+
+https://medium.com/the-artificial-impostor/feature-importance-measures-for-tree-models-part-i-47f187c1a2c3
+
+		MDI counts the times a feature is used to split a node, weighted by the number of samples it splits:
+		Gini Importance or Mean Decrease in Impurity (MDI) calculates each feature importance as 
+		the sum over the number of splits (across all tress) that include the feature, 
+		proportionally to the number of samples it splits.
+		
+		However, Gilles Louppe gave a different version in [4]. Instead of counting splits, 
+		the actual decrease in node impurity is summed and averaged across all trees. 
+		(weighted by the number of samples it splits).
+		
+		In scikit-learn, we implement the importance as described in
+		(often cited, but unfortunately rarely read…). It is sometimes called “gini importance” 
+		or “mean decrease impurity” and is defined as the total decrease in node impurity 
+		(weighted by the probability of reaching that node 
+		(which is approximated by the proportion of samples reaching that node)) 
+		averaged over all trees of the ensemble.
+		
+		At each split in each tree, the improvement in the split-criterion is the importance 
+		measure attributed to the splitting variable, and is accumulated over all the trees in 
+		the forest separately for each variable.
+		
+## Permutation Importance or Mean Decrease in Accuracy (MDA)
+		
+		This is IMO most interesting measure, because it is based on experiments on out-of-bag(OOB) 
+		samples, via destroying the predictive power of a feature without changing its 
+		marginal distribution. Because scikit-learn doesn’t implement this measure, 
+		people who only use Python may not even know it exists.
+		
+		Random forests also use the OOB samples to construct a different variable-importance measure, 
+		apparently to measure the prediction strength of each variable. When the bth tree is grown, 
+		the OOB samples are passed down the tree, and the prediction accuracy is recorded. Then the values 
+		for the jth variable are randomly permuted in the OOB samples, and the accuracy is again computed. 
+		The decrease in accuracy as a result of this permuting is averaged over all trees, and is used as a 
+		measure of the importance of variable j in the random forest. … The randomization effectively voids 
+		the effect of a variable, much like setting a coefficient to zero in a linear model (Exercise 15.7). 
+		This does not measure the effect on prediction were this variable not available, because if the model
+		was refitted without the variable, other variables could be used as surrogates.
+
+## Feature Importance Measure in Gradient Boosting Models
+
+		LightGBM: importance_type (string, optional (default=”split”)) — How the importance is calculated. 
+		If “split”, result contains numbers of times the feature is used in a model. If “gain”, result contains 
+		total gains of splits which use the feature.
+		
+		XGBoost: ‘weight’ — the number of times a feature is used to split the data across all trees. 
+		‘gain’ — the average gain of the feature when it is used in trees ‘cover’ — the average coverage of 
+		the feature when it is used in trees, where coverage is defined as the number of 
+		samples affected by the split
+		
+		 It’s basically the same as the Gini Importance implemented in R packages and in scikit-learn 
+		 with Gini impurity replaced by the objective used by the gradient boosting model.
+
+How do we calculate variable importance for a regression tree in random forests?
+
+https://www.quora.com/How-do-we-calculate-variable-importance-for-a-regression-tree-in-random-forests
+
+		1. %IncMSE - It is computed from permuting test data: For each tree, the prediction error on test 
+		is recorded (Mean Squared Error - MSE ). Then the same is done after permuting each predictor variable. 
+		The difference between the two are then averaged over all trees, and normalized by the standard 
+		deviation of the differences. If the standard deviation of the differences is equal to 0 for a 
+		variable, the division is not done (but the average is almost always equal to 0 in that case).
+		Higher the difference is, more important the variable. MSE = mean((actual_y - predicted_y)^2)
+
+		2. IncNodePurity -  Total decrease in node impurities from splitting on the variable, averaged 
+		over all trees. Impurity is measured by residual sum of squares. Impurity is calculated only 
+		at node at which that variable is used for that split. Impurity before that node, 
+		and impurity after the split has occurred.
+
+https://blog.datadive.net/selecting-good-features-part-iii-random-forests/
+
+		Random forests are among the most popular machine learning methods thanks to their relatively 
+		good accuracy, robustness and ease of use. They also provide two straightforward methods for
+		feature selection: mean decrease impurity and mean decrease accuracy.
+
+		Mean decrease impurity:
+			Random forest consists of a number of decision trees. Every node in the decision trees 
+			is a condition on a single feature, designed to split the dataset into two so that similar 
+			response values end up in the same set. The measure based on which the (locally) optimal 
+			condition is chosen is called impurity. For classification, it is typically either Gini 
+			impurity or information gain/entropy and for regression trees it is variance. Thus when 
+			training a tree, it can be computed how much each feature decreases the weighted impurity 
+			in a tree. For a forest, the impurity decrease from each feature can be averaged and 
+			the features are ranked according to this measure.
+
+			This is the feature importance measure exposed in sklearn’s Random Forest implementations 
+			(random forest classifier and random forest regressor).
+
+
+			from sklearn.datasets import load_boston
+			from sklearn.ensemble import RandomForestRegressor
+			import numpy as np
+			#Load boston housing dataset as an example
+			boston = load_boston()
+			X = boston["data"]
+			Y = boston["target"]
+			names = boston["feature_names"]
+			rf = RandomForestRegressor()
+			rf.fit(X, Y)
+			print "Features sorted by their score:"
+			print sorted(zip(map(lambda x: round(x, 4), rf.feature_importances_), names), reverse=True)
+			
+		Mean decrease accuracy
+			Another popular feature selection method is to directly measure the impact of each feature 
+			on accuracy of the model. The general idea is to permute the values of each feature and 
+			measure how much the permutation decreases the accuracy of the model. Clearly, 
+			for unimportant variables, the permutation should have little to no effect on model 
+			accuracy, while permuting important variables should significantly decrease it.
+
+			This method is not directly exposed in sklearn, but it is straightforward to implement it. 
+			Continuing from the previous example of ranking the features in the Boston housing dataset:
+		
+				from sklearn.cross_validation import ShuffleSplit
+				from sklearn.metrics import r2_score
+				from collections import defaultdict
+
+				X = boston["data"]
+				Y = boston["target"]
+
+				rf = RandomForestRegressor()
+				scores = defaultdict(list)
+
+				#crossvalidate the scores on a number of different random splits of the data
+				for train_idx, test_idx in ShuffleSplit(len(X), 100, .3):
+				    X_train, X_test = X[train_idx], X[test_idx]
+				    Y_train, Y_test = Y[train_idx], Y[test_idx]
+				    r = rf.fit(X_train, Y_train)
+				    acc = r2_score(Y_test, rf.predict(X_test))
+				    for i in range(X.shape[1]):
+					X_t = X_test.copy()
+					np.random.shuffle(X_t[:, i])
+					shuff_acc = r2_score(Y_test, rf.predict(X_t))
+					scores[names[i]].append((acc-shuff_acc)/acc)
+				print "Features sorted by their score:"
+				print sorted([(round(np.mean(score), 4), feat) for feat, score in scores.items()], reverse=True)
+
+https://stackoverflow.com/questions/15810339/how-are-feature-importances-in-randomforestclassifier-determined
+
+		In scikit-learn, we implement the importance as described in. It is sometimes called 
+		"gini importance" or "mean decrease impurity" and is defined as the total decrease in node 
+		impurity (weighted by the probability of reaching that node averaged over all trees of the ensemble.
+
+		In the literature or in some other packages, you can also find feature importances implemented as 
+		the "mean decrease accuracy". Basically, the idea is to measure the decrease in accuracy on 
+		OOB data when you randomly permute the values for that feature. If the decrease is low, 
+		then the feature is not important, and vice-versa.
 
