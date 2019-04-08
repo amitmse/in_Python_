@@ -109,10 +109,13 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 ## feature’s importance
 
 https://medium.com/@srnghn/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3
+
 https://github.com/scikit-learn/scikit-learn/blob/18cdaa69c14a5c84ab03fce4fb5dc6cd77619e35/sklearn/tree/_tree.pyx#L1056
 
 
 Accuracy-based importance:
+
+https://www.displayr.com/how-is-variable-importance-calculated-for-a-random-forest/
 
 	Each tree has its own out-of-bag sample of data that was not used during construction. 
 	This sample is used to calculate importance of a specific variable. First, the prediction 
@@ -148,4 +151,20 @@ Gini-based importance
 	hrs_per_week being lower on the Gini scale. This may indicate a bias towards using numeric variables 
 	to split nodes because there are potentially many split points.	
 
+Importance for numeric outcomes
+
+	The previous example used a categorical outcome. For a numeric outcome (as show below) 
+	there are two similar measures:
+
+	Percentage increase in mean square error is analogous to accuracy-based importance, 
+	and is calculated by shuffling the values of the out-of-bag samples.
+	Increase in node purity is analogous to Gini-based importance, and is calculated based on the reduction 
+	in sum of squared errors whenever a variable is chosen to split.
+
+	One advantage of the Gini-based importance is that the Gini calculations are already performed during training, 
+	so minimal extra computation is required. A disadvantage is that splits are biased towards variables 
+	with many classes, which also biases the importance measure. Both methods may overstate 
+	the importance of correlated predictors.
+
+## Gini Importance / Mean Decrease in Impurity (MDI)
 
