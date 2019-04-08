@@ -104,3 +104,48 @@ http://stackoverflow.com/questions/36107820/how-to-tune-parameters-in-random-for
 
 http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.html#sphx-glr-auto-examples-model-selection-randomized-search-py
 
+
+
+## feature’s importance
+
+https://medium.com/@srnghn/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3
+https://github.com/scikit-learn/scikit-learn/blob/18cdaa69c14a5c84ab03fce4fb5dc6cd77619e35/sklearn/tree/_tree.pyx#L1056
+
+
+Accuracy-based importance:
+
+	Each tree has its own out-of-bag sample of data that was not used during construction. 
+	This sample is used to calculate importance of a specific variable. First, the prediction 
+	accuracy on the out-of-bag sample is measured. Then, the values of the variable in the 
+	out-of-bag-sample are randomly shuffled, keeping all other variables the same. Finally, 
+	the decrease in prediction accuracy on the shuffled data is measured.
+	
+	
+	The mean decrease in accuracy across all trees is reported. This importance measure is also broken 
+	down by outcome class. For example, age is important for predicting that a person earns over $50,000,
+	but not important for predicting a person earns less.
+
+	Intuitively, the random shuffling means that, on average, the shuffled variable has no predictive power. 
+	This importance is a measure of by how much removing a variable decreases accuracy, and vice versa — b
+	y how much including a variable increases accuracy.
+
+	Note that if a variable has very little predictive power, shuffling may lead to a slight increase in 
+	accuracy due to random noise. This in turn can give rise to small negative importance scores, 
+	which can be essentially regarded as equivalent to zero importance.	
+
+
+Gini-based importance
+
+	When a tree is built, the decision about which variable to split at each node uses a 
+	calculation of the Gini impurity.
+
+	For each variable, the sum of the Gini decrease across every tree of the forest is accumulated 
+	every time that variable is chosen to split a node. The sum is divided by the number of trees in 
+	the forest to give an average. The scale is irrelevant: only the relative values matter. 
+	In the example above, occupation is over five times more important than country.
+
+	The importances are roughly aligned between the two measures, with numeric variables age and 
+	hrs_per_week being lower on the Gini scale. This may indicate a bias towards using numeric variables 
+	to split nodes because there are potentially many split points.	
+
+
