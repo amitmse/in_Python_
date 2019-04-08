@@ -175,5 +175,16 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 	with Gini impurity replaced by the objective used by the gradient boosting model.
 
 
+http://dni-institute.in/blogs/gini-index-work-out-example/
+
+https://www.quora.com/How-do-you-explain-%E2%80%98mean-decrease-accuracy%E2%80%99-and-%E2%80%98mean-decrease-gini%E2%80%99-in-layman%E2%80%99s-terms
+
+https://stats.stackexchange.com/questions/197827/how-to-interpret-mean-decrease-in-accuracy-and-mean-decrease-gini-in-random-fore
+
+https://bambielli.com/til/2017-11-04-temporal-models/#
+
+https://jamesmccaffrey.wordpress.com/2018/09/06/calculating-gini-impurity-example/
+
+https://www.researchgate.net/post/How_to_compute_impurity_using_Gini_Index
 
 
