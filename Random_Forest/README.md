@@ -173,6 +173,24 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 			
 	****** Implemented in scikit-learn ********************************************************************
 		
+|outlook|temp|humidity|windy|play|
+|---|---|---|---|---|
+|sunny|hot|high|Weak|no|
+|sunny|hot|high|Strong|no|
+|overcast|hot|high|Weak|yes|
+|rainy|mild|high|Weak|yes|
+|rainy|cool|normal|Weak|yes|
+|rainy|cool|normal|Strong|no|
+|overcast|cool|normal|Strong|yes|
+|sunny|mild|high|Weak|no|
+|sunny|cool|normal|Weak|yes|
+|rainy|mild|normal|Weak|yes|
+|sunny|mild|normal|Strong|yes|
+|overcast|mild|high|Strong|yes|
+|overcast|hot|normal|Weak|yes|
+|rainy|mild|high|Strong|no|
+
+
 	Calculate the gini index of dep variable												
 		Gini(S) = 1 - [(9/14)² + (5/14)²] = 0.459											
 	calculate gini gain. For that first, we will find the average weighted gini impurity of 
@@ -197,19 +215,4 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 		Gini gain is higher for outlook.So we can choose it as our root node.
 		
 		
-|outlook|temp|humidity|windy|play|
-|---|---|---|---|---|
-|sunny|hot|high|Weak|no|
-|sunny|hot|high|Strong|no|
-|overcast|hot|high|Weak|yes|
-|rainy|mild|high|Weak|yes|
-|rainy|cool|normal|Weak|yes|
-|rainy|cool|normal|Strong|no|
-|overcast|cool|normal|Strong|yes|
-|sunny|mild|high|Weak|no|
-|sunny|cool|normal|Weak|yes|
-|rainy|mild|normal|Weak|yes|
-|sunny|mild|normal|Strong|yes|
-|overcast|mild|high|Strong|yes|
-|overcast|hot|normal|Weak|yes|
-|rainy|mild|high|Strong|no|
+
