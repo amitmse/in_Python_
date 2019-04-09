@@ -147,10 +147,10 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 
 ## Gini Importance / Mean Decrease in Impurity (MDI) :
 
-	The initial gini index before split  Overall = 1 − P(Good)^2 − P(Bad)^2
+	The initial gini index before split  Overall = 1 − P(success)^2 − P(Failure)^2
 	Node level :
-		impurity in Left node  =1 − P(Good in left node)^2  − P(Bad in left node)^2
-		impurity in Right node =1 − P(Good in right node)^2 − P(Bad in right node)^2
+		impurity in Left node  =1 − P(Success in left node)^2  − P(Failure in left node)^2
+		impurity in Right node =1 − P(Success in right node)^2 − P(Failure in right node)^2
 
 	Now the final formula for GiniGain would be = Overall − impurity in  Left node − impurity in Right node
 		
