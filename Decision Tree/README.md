@@ -42,7 +42,22 @@
 				5.Calculate weighted Gini for Split Class = (14/30)* 0.51 +(16/30)* 0.51 =0.51
 						
 			Above, we can see that Gini score for Split on Gender is higher (0.59> 0.51) 
-			than Class so node will split on Gender.	  
+			than Class so node will split on Gender
+			
+	------------------------------------------------------------------------------------
+	Above is Gini and below is for Gini Index (1-gini)
+	https://github.com/amitmse/in_Python_/tree/master/Random_Forest
+	
+	Gini Index:
+	    for each branch in split:
+		Calculate percent branch represents #Used for weighting
+		for each class in branch:
+		    Calculate probability of class in the given branch.
+		    Square the class probability.
+		Sum the squared class probabilities.
+		Subtract the sum from 1. #This is the Ginin Index for branch
+	    Weight each branch based on the baseline probability.
+	    Sum the weighted gini index for each split.
 
 ## Chi-Square
 
@@ -120,6 +135,19 @@
 		- Above you can see that entropy of split on Gender is lower compare to 
 			 Class so we will again go with split Gender. 
 		- We can derive information gain from entropy as 1- Entropy.
+
+
+
+	Entropy:
+	    for each branch in split:
+		Calculate percent branch represents #Used for weighting
+		for each class in branch:
+		    Calculate probability of class in the given branch.
+		    Multiply probability times log(Probability,base=2)
+		    Multiply that product by -1
+		Sum the calculated probabilities.
+	    Weight each branch based on the baseline probability.
+	    Sum the weighted entropy for each split.
 
 
 ## Reduction in Variance
