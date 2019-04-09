@@ -65,4 +65,7 @@ Both L1 and L2 work differently in the way that they penalize the size of a weig
 	L1 will force the weights into a pattern similar to a Laplace distribution
 	
 
-
+## ElasticNet Regression:
+	- Objective = RSS + α * [{(1-b)/2}*(sum of square of coefficients)  + 	{b}*(sum of absolute value of coefficients) ]  
+		ridge : b=0
+		lasso : b=1
