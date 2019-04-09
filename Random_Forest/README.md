@@ -200,7 +200,7 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 		
 		Gini(S, outlook)
 		
-			(5/14) * gini(3,2) + (4/14) * gini(4,0) + (5/14) * gini(2,3)
+			(5/14)*gini(3,2) + (4/14)*gini(4,0) + (5/14)*gini(2,3)
 			
 			[5/14]*[1 - (3/5)² - (2/5)²] + (4/14)*[0] + (5/14)*[1 - (2/5)² - (3/5)²]
 			
