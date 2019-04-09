@@ -147,33 +147,49 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 
 ## Gini Importance / Mean Decrease in Impurity (MDI) :
 
-	When a tree is built, the decision about which variable to split at each node uses a 
-	calculation of the Gini impurity. For each variable, the sum of the Gini decrease across every tree of 
-	the forest is accumulated every time that variable is chosen to split a node. 
-	The sum is divided by the number of trees in the forest to give an average. 
-	
-	Increase in node purity is analogous to Gini-based importance, and is calculated based on the reduction 
-	in sum of squared errors whenever a variable is chosen to split. One advantage of the Gini-based importance 
-	is that the Gini calculations are already performed during training, so minimal extra computation is required. 
-	A disadvantage is that splits are biased towards variables with many classes, which also biases the importance 
-	measure. 
+	The initial gini index before split  Overall = 1 − P(Good)^2 − P(Bad)^2
+	Node level :
+		impurity in Left node  =1 − P(Good in left node)^2  − P(Bad in left node)^2
+		impurity in Right node =1 − P(Good in right node)^2 − P(Bad in right node)^2
 
-	MDI counts the times a feature is used to split a node, weighted by the number of samples it splits:
-	Gini Importance or Mean Decrease in Impurity (MDI) calculates each feature importance as 
-	the sum over the number of splits (across all tress) that include the feature, 
-	proportionally to the number of samples it splits. 
-	
-	However, Gilles Louppe gave a different version in [4]. Instead of counting splits, 
-	the actual decrease in node impurity is summed and averaged across all trees. 
-	(weighted by the number of samples it splits).
+	Now the final formula for GiniGain would be = Overall − impurity in  Left node − impurity in Right node
 		
+	Lets assume we have 3 classes and 80 objects. 19 objects are in class 1, 21 objects in class 2, and 
+	40 objects in class 3 (denoted as (19,21,40) ). 
+	The Gini index would be: 	= 1 - [ (19/80)^2 + (21/80)^2 + (40/80)^2] 
+					= 0.6247 
+	      costbefore Gini(19,21,40) = 0.6247
+
+	In order to decide where to split, we test all possible splits. For example splitting at 2.0623, 
+	which results in a split (16,9,0) and (3,12,40).
+	After testing x1 < 2.0623:
+		costL Gini(16,9,0)  = 0.4608
+		costR Gini(3,12,40) = 0.4205
+	Then we weight branch impurity by empirical branch probabilities:
+		costx1<2.0623 = 25/80 costL + 55/80 costR = 0.4331
+	We do that for every possible split, for example x1 < 1:
+		costx1<1 = FractionL Gini(8,4,0) + FractionR Gini(11,17,40) = 12/80 * 0.4444 + 68/80 * 0.5653 = 0.5417
+	After that, we chose the split with the lowest cost. This is the split x1 < 2.0623 with a cost of 0.4331.
+			
 	****** Implemented in scikit-learn ********************************************************************
 		
-	Feature Importance Measure in Gradient Boosting Models:
-	
-	It’s basically the same as the Gini Importance implemented in R packages and in scikit-learn 
-	with Gini impurity replaced by the objective used by the gradient boosting model.
+		
 
+
+		
+		
+		
+		
+
+
+	
+	https://stats.stackexchange.com/questions/95839/gini-decrease-and-gini-impurity-of-children-nodes
+
+
+	https://www.researchgate.net/post/How_to_compute_impurity_using_Gini_Index
+	
+	https://datascience.stackexchange.com/questions/1095/gini-coefficient-vs-gini-impurity-decision-trees
+	
 
 http://dni-institute.in/blogs/gini-index-work-out-example/
 
