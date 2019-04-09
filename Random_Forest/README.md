@@ -197,6 +197,6 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 		Gini gain is higher for outlook.So we can choose it as our root node.
 		
 		
-|	outlook	|	temp	|	humidity	|	windy	|	play	|
-	|---		|---		|---		|---		|---|	
-|	sunny	|	hot	|	high	|	Weak	|	no	|
+|outlook|
+|---|
+|sunny	|
