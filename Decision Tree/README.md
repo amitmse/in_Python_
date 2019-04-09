@@ -230,8 +230,3 @@
 				N_t_L 	: No. of samples in the left child 
 				N_t_R 	: No. of samples in the right child
 				
-https://stackoverflow.com/questions/49170296/scikit-learn-feature-importance-calculation-in-decision-trees?rq=1
-
-https://hackernoon.com/a-brief-look-at-sklearn-tree-decisiontreeclassifier-c2ee262eab9a
-
-https://github.com/random-forests/tutorials/blob/master/decision_tree.ipynb
