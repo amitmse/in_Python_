@@ -191,17 +191,22 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 |rainy|mild|high|Strong|no|
 
 
-	Calculate the gini index of dep variable												
-		Gini(S) = 1 - [(9/14)² + (5/14)²] = 0.459											
+	Calculate the gini index of dep variable
+	
+		Gini(S) = 1 - [(9/14)² + (5/14)²] = 0.459
+		
 	calculate gini gain. For that first, we will find the average weighted gini impurity of 
-		Outlook, Temperature, Humidity and Windy														
+		Outlook, Temperature, Humidity and Windy
+		
 		Gini(S, outlook)
 		
-			(5/14) * gini(3,2) + (4/14) * gini(4,0) + (5/14) * gini(2,3) 										
-			[5/14]*[1 - (3/5)² - (2/5)²] + (4/14)*[0] + (5/14)*[1 - (2/5)² - (3/5)²]									
-			0.171 + 0 + 0.171									
+			(5/14) * gini(3,2) + (4/14) * gini(4,0) + (5/14) * gini(2,3)
 			
-			0.342									
+			[5/14]*[1 - (3/5)² - (2/5)²] + (4/14)*[0] + (5/14)*[1 - (2/5)² - (3/5)²]
+			
+			0.171 + 0 + 0.171
+			
+			0.342
 			
 		Gini gain (S, outlook) 		= 0.459 - 0.342 	= 0.117
 		
