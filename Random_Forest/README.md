@@ -173,3 +173,31 @@ http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.h
 			
 	****** Implemented in scikit-learn ********************************************************************
 		
+	Calculate the gini index of dep variable												
+		Gini(S) = 1 - [(9/14)² + (5/14)²] = 0.459											
+	calculate gini gain. For that first, we will find the average weighted gini impurity of 
+		Outlook, Temperature, Humidity and Windy														
+		Gini(S, outlook)
+		
+			(5/14) * gini(3,2) + (4/14) * gini(4,0) + (5/14) * gini(2,3) 										
+			[5/14]* [1 - (3/5)² - (2/5)²]  +  (4/14) * [1 - (4/4) - (0/4) ] + (5/14) * [1 - (2/5)² - (3/5)²]									
+			0.171+0+0.171									
+			
+			0.342									
+			
+		Gini gain (S, outlook) 		= 0.459 - 0.342 	= 0.117
+		
+		Gini gain(S, Temperature) 	= 0.459 - 0.4405 	= 0.0185
+		
+		Gini gain(S, Humidity) 		= 0.459 - 0.3674 	= 0.0916
+		
+		Gini gain(S, windy) 		= 0.459 - 0.4286 	= 0.0304
+		
+		Choose one that having higher gini gain. 
+		Gini gain is higher for outlook.So we can choose it as our root node.
+		
+		
+outlook	temp	humidity	windy	play
+|---	|---	|---	|---	|
+sunny	hot	high	Weak	no
+		
