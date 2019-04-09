@@ -1,4 +1,4 @@
-												Decision Tree Algorithms ñ Simplified
+												Decision Tree Algorithms ‚Äì Simplified
 											------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------------------------									
@@ -18,7 +18,7 @@ Gini Index:
 
 			Gini index says, if we select two items from a population at random then they must be of same class and probability for this is 1 if population is pure.
 
-			-	It works with categorical target variable ìSuccessî or ìFailureî.
+			-	It works with categorical target variable ‚ÄúSuccess‚Äù or ‚ÄúFailure‚Äù.
 			-	It performs only Binary splits
 			-	Higher the value of Gini higher the homogeneity.
 			-	CART (Classification and Regression Tree) uses Gini method to create binary splits.
@@ -51,26 +51,26 @@ Chi-Square:
 			It is an algorithm to find out the statistical significance between the differences between sub-nodes and parent node. 
 			We measures it by sum of squares of standardized differences between observed and expected frequencies of target variable.
 
-			-	It works with categorical target variable ìSuccessî or ìFailureî.
+			-	It works with categorical target variable ‚ÄúSuccess‚Äù or ‚ÄúFailure‚Äù.
 			-	It can performs two or more splits
 			-	Higher the value of Chi-Square higher the statistical significance of differences between sub-node and Parent node.
 			-	Chi-Square of each node is calculated using formula,
-			-	Chi-square = SQRT((Actual ñ Expected)^2 / Expected)
+			-	Chi-square = SQRT((Actual ‚Äì Expected)^2 / Expected)
 			-	It generates tree called CHAID (Chi-square Automatic Interaction Detector)
 			
 			Steps to Calculate Chi-square for a split:
 				-	Calculate Chi-square for individual node by calculating the deviation for Success and Failure both
 				-	Calculated Chi-square of Split using Sum of all Chi-square of success and Failure of each node of the split					
 			
-			Example: Letís work with above example that we have used to calculate Gini.
+			Example: Let‚Äôs work with above example that we have used to calculate Gini.
 			
 			Split on Gender:
 
-			1. First we are populating for node Female, Populate the actual value for ìPlay Cricketî and ìNot Play Cricketî, here these are 2 and 8 respectively.
-			2. Calculate expected value for ìPlay Cricketî and ìNot Play Cricketî, here it would be 5 for both because parent node has probability of 50% and
+			1. First we are populating for node Female, Populate the actual value for ‚ÄúPlay Cricket‚Äù and ‚ÄúNot Play Cricket‚Äù, here these are 2 and 8 respectively.
+			2. Calculate expected value for ‚ÄúPlay Cricket‚Äù and ‚ÄúNot Play Cricket‚Äù, here it would be 5 for both because parent node has probability of 50% and
 					we have applied same probability on Female count(10).
-			3. Calculate deviations by using formula, Actual ñ Expected. It is for ìPlay Cricketî (2 ñ 5 = -3) and for ìNot play cricketî ( 8 ñ 5 = 3).
-			4. Calculate Chi-square of node for ìPlay Cricketî and ìNot Play Cricketî using formula with formula, = ((Actual ñ Expected)^2 / Expected)^1/2. 
+			3. Calculate deviations by using formula, Actual ‚Äì Expected. It is for ‚ÄúPlay Cricket‚Äù (2 ‚Äì 5 = -3) and for ‚ÄúNot play cricket‚Äù ( 8 ‚Äì 5 = 3).
+			4. Calculate Chi-square of node for ‚ÄúPlay Cricket‚Äù and ‚ÄúNot Play Cricket‚Äù using formula with formula, = ((Actual ‚Äì Expected)^2 / Expected)^1/2. 
 					You can refer below table for calculation.
 			5. Follow similar steps for calculating Chi-square value for Male node.			
 			6. Now add all Chi-square values to calculate Chi-square for split Gender.
@@ -110,14 +110,14 @@ Information Gain:
 				-	Calculate entropy of parent node
 				-	Calculate entropy of each individual node of split and calculate weighted average of all sub-nodes available in split.	
 				
-			Example: Letís use this method to identify best split for student example. 	Total=30, PC=15, NPC=15, P=PC/Total, Q=NPC/Total			
-			-	Entropy for parent node 	= 	-(15/30)log2(15/30) ñ (15/30)log2(15/30) 	= 1. 		Here 1 shows that it is a impure node. 
-			-	Entropy for Female node 	= 	-(2/10)log2(2/10) 	ñ (8/10)log2(8/10) 		= 0.72 		and 
-						for male node,  		-(13/20)log2(13/20) ñ (7/20)log2(7/20) 		= 0.93.
+			Example: Let‚Äôs use this method to identify best split for student example. 	Total=30, PC=15, NPC=15, P=PC/Total, Q=NPC/Total			
+			-	Entropy for parent node 	= 	-(15/30)log2(15/30) ‚Äì (15/30)log2(15/30) 	= 1. 		Here 1 shows that it is a impure node. 
+			-	Entropy for Female node 	= 	-(2/10)log2(2/10) 	‚Äì (8/10)log2(8/10) 		= 0.72 		and 
+						for male node,  		-(13/20)log2(13/20) ‚Äì (7/20)log2(7/20) 		= 0.93.
 			-	Entropy for split Gender 	= Weighted entropy of sub-nodes [10 Female, 20 Male] = (10/30)*0.72 + (20/30)*0.93 = 0.86 
 			-	Entropy for 
-							Class IX node, -(6/14) log2 (6/14) ñ (8/14) log2 (8/14) = 0.99 and 
-						for Class X node,  -(9/16) log2 (9/16) ñ (7/16) log2 (7/16) = 0.99
+							Class IX node, -(6/14) log2 (6/14) ‚Äì (8/14) log2 (8/14) = 0.99 and 
+						for Class X node,  -(9/16) log2 (9/16) ‚Äì (7/16) log2 (7/16) = 0.99
 			-	Entropy for split Class =  (14/30)*0.99 + (16/30)*0.99 = 0.99
 			-	Above you can see that entropy of split on Gender is lower compare to Class so we will again go with split Gender. 
 			-	We can derive information gain from entropy as 1- Entropy.
@@ -133,9 +133,9 @@ Reduction in Variance:
 			-	Calculate variance for each node.
 			-	Calculate Variance for each split as weighted average of each node variance
 			
-			Example:- Letís assign numerical value 1 for play cricket and 0 for not playing cricket. Now follow the steps to identify the right split:
+			Example:- Let‚Äôs assign numerical value 1 for play cricket and 0 for not playing cricket. Now follow the steps to identify the right split:
 			-	Variance for Root node, here mean value is (15*1 + 15*0)/30 = 0.5 and we have 15 one and 15 zero. 
-					Now variance would be ((1-0.5)^2+(1-0.5)^2+Ö.15 times+(0-0.5)^2+(0-0.5)^2+Ö15 times) / 30, 
+					Now variance would be ((1-0.5)^2+(1-0.5)^2+‚Ä¶.15 times+(0-0.5)^2+(0-0.5)^2+‚Ä¶15 times) / 30, 
 					this can be written as (15*(1-0.5)^2+15*(0-0.5)^2) / 30 = 0.25
 			-	Mean of Female node 		=(2*1+8*0)/10=0.2 and Variance 		= (2*(1-0.2)^2+8*(0-0.2)^2) / 10 	= 0.16
 			-	Mean of Male Node 			=(13*1+7*0)/20=0.65 and Variance 	= (13*(1-0.65)^2+7*(0-0.65)^2) / 20 = 0.23
@@ -204,8 +204,6 @@ Feature importances:
 				N_t_L 	: No. of samples in the left child 
 				N_t_R 	: No. of samples in the right child
 
-			https://stackoverflow.com/questions/49170296/scikit-learn-feature-importance-calculation-in-decision-trees?rq=1
-			https://hackernoon.com/a-brief-look-at-sklearn-tree-decisiontreeclassifier-c2ee262eab9a
-			https://github.com/random-forests/tutorials/blob/master/decision_tree.ipynb
-
-
+https://stackoverflow.com/questions/49170296/scikit-learn-feature-importance-calculation-in-decision-trees?rq=1
+https://hackernoon.com/a-brief-look-at-sklearn-tree-decisiontreeclassifier-c2ee262eab9a
+https://github.com/random-forests/tutorials/blob/master/decision_tree.ipynb
