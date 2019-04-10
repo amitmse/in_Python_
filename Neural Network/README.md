@@ -276,3 +276,19 @@ http://depts.washington.edu/oldenlab/wordpress/wp-content/uploads/2013/03/Ecolog
 	    importance = [e/max_error for e in errors]
     
     
+Type:
+
+## 1. Feedforward Neural Network – Artificial Neuron
+
+	In a feedforward neural network, the data passes through the different input nodes till it reaches 
+	the output node. Data moves in only one direction from the first tier onwards until it reaches 
+	the output node. This is also known as a front propagated wave which is usually achieved by 
+	using a classifying activation function. There is no backpropagation and data moves in one direction only. 
+	A feedforward neural network may have a single layer or it may have hidden layers.
+	Feedforward neural networks are used in technologies like face recognition and computer vision. 
+	This is because the target classes in these applications are hard to classify.
+	A simple feedforward neural network is equipped to deal with data which contains a lot of noise. 
+	Feedforward neural networks are also relatively simple to maintain.
+	
+
+
