@@ -52,4 +52,9 @@ Gradient descent algorithm: https://www.analyticsvidhya.com/blog/2016/01/complet
 		   2.1.2 update the jth weight by subtracting learning rate times the gradient
 				 w(t+1) = w(t) - learning rate * gradient
 			 
-			 
+
+## Dropout Regularization
+
+Most neural network frameworks implement dropout as a separate layer. Dropout layers function as a regular, densely connected neural network layer. The only difference is that the dropout layers will periodically drop some of their neurons during training. You can use dropout layers on regular feedforward neural networks.
+
+https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf			 
