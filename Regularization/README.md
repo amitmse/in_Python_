@@ -69,3 +69,9 @@ Both L1 and L2 work differently in the way that they penalize the size of a weig
 	- Objective = RSS + α * [{(1-b)/2}*(sum of square of coefficients) + {b}*(sum of absolute value of coefficients)]
 				ridge : b=0
 				lasso : b=1
+
+## Dropout Regularization
+
+Most neural network frameworks implement dropout as a separate layer. Dropout layers function as a regular, densely connected neural network layer. The only difference is that the dropout layers will periodically drop some of their neurons during training. You can use dropout layers on regular feedforward neural networks.
+
+https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
