@@ -1,15 +1,7 @@
 # Neural Networks
 
 
-## Types of neural networks and their applications:
-
-https://www.digitalvidya.com/blog/types-of-neural-networks/
-
-https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464
-
-https://www.asimovinstitute.org/author/fjodorvanveen/
-
-https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b
+# Types of neural networks and their applications:
 
 ## 01. Perceptron 
 	The simplest and oldest model of Neuron, as we know it. Takes some inputs, sums them up, 
@@ -197,8 +189,6 @@ https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b
 	prediction during the backpropagation. 
 	This type of neural network is very effective in text-to-speech conversion technology.  
 
-	https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class10_lstm.ipynb
-
 	So far the neural networks that we’ve examined have always had forward connections. The input layer always
 	connects to the first hidden layer. Each hidden layer always connects to the next hidden layer. 
 	The final hidden layer always connects to the output layer. This manner to connect layers is the 
@@ -266,8 +256,6 @@ https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b
 	Most neural network frameworks implement dropout as a separate layer. Dropout layers function as a regular, 
 	densely connected neural network layer. The only difference is that the dropout layers will periodically 
 	drop some of their neurons during training. You can use dropout layers on regular feedforward neural networks.
-
-	https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
 
 ## 12. Deep neural network
 
@@ -349,10 +337,6 @@ https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b
 				-	Local Receptive fields 
 				-	Shared Weights 
 				- 	Pooling
-
-	https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class13_adv.ipynb
-
-	http://depts.washington.edu/oldenlab/wordpress/wp-content/uploads/2013/03/EcologicalModelling_2004.pdf
 
 	def perturbation_rank(model, x, y, names, regression):
 	    errors = []
