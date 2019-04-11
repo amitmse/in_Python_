@@ -455,3 +455,13 @@ https://www.digitalvidya.com/blog/types-of-neural-networks/
 https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464
 https://www.asimovinstitute.org/author/fjodorvanveen/
 https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b
+
+
+https://www.digitalvidya.com/blog/types-of-neural-networks/
+https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464
+https://www.asimovinstitute.org/author/fjodorvanveen/
+https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b
+https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class10_lstm.ipynb
+https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
+https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class13_adv.ipynb
+http://depts.washington.edu/oldenlab/wordpress/wp-content/uploads/2013/03/EcologicalModelling_2004.pdf
