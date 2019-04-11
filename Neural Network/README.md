@@ -138,8 +138,6 @@
 		isn't linearly separable, it doesn't hurt to verify this.
 	- Assuming your data does require separation by a non-linear technique, then always start with one hidden layer
 
-
-
 ## Deep neural network
 
 	-Deep learning works because of the architecture of the network AND the optimization routine applied 
@@ -222,35 +220,6 @@
 				- 	Pooling
 
 
-## Dropout Regularization
-
-Most neural network frameworks implement dropout as a separate layer. Dropout layers function as a regular, densely connected neural network layer. The only difference is that the dropout layers will periodically drop some of their neurons during training. You can use dropout layers on regular feedforward neural networks.
-
-https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
-
-## Recurrent Neural Networks
-
-https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class10_lstm.ipynb
-
-So far the neural networks that we’ve examined have always had forward connections. The input layer always connects to the first hidden layer. Each hidden layer always connects to the next hidden layer. The final hidden layer always connects to the output layer. This manner to connect layers is the reason that these networks are called “feedforward.” Recurrent neural networks are not so rigid, as backward connections are also allowed. A recurrent connection links a neuron in a layer to either a previous layer or the neuron itself. Most recurrent neural network architectures maintain state in the recurrent connections. Feedforward neural networks don’t maintain any state. A recurrent neural network’s state acts as a sort of short-term memory for the neural network. Consequently, a recurrent neural network will not always produce the same output for a given input.
-
-Recurrent neural networks do not force the connections to flow only from one layer to the next, from input layer to output layer. A recurrent connection occurs when a connection is formed between a neuron and one of the following other types of neurons:
-
-	- The neuron itself
-	- A neuron on the same level
-	- A neuron on a previous level
-
-Recurrent connections can never target the input neurons or the bias neurons.
-The processing of recurrent connections can be challenging. Because the recurrent links create endless loops, the neural network must have some way to know when to stop. A neural network that entered an endless loop would not be useful. To prevent endless loops, we can calculate the recurrent connections with the following three approaches:
-
-	- Context neurons
-	- Calculating output over a fixed number of iterations
-	- Calculating output until neuron output stabilizes
-	
-	
-
-## Evaluating Feature Importance
-
 https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class13_adv.ipynb
 
 http://depts.washington.edu/oldenlab/wordpress/wp-content/uploads/2013/03/EcologicalModelling_2004.pdf
@@ -276,9 +245,21 @@ http://depts.washington.edu/oldenlab/wordpress/wp-content/uploads/2013/03/Ecolog
 	    importance = [e/max_error for e in errors]
     
     
-Type:
+# Types of neural networks and their applications:
 
-## 1. Feedforward Neural Network – Artificial Neuron
+https://www.digitalvidya.com/blog/types-of-neural-networks/
+
+https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464
+
+https://www.asimovinstitute.org/author/fjodorvanveen/
+
+https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b
+
+## Perceptron 
+	The simplest and oldest model of Neuron, as we know it. Takes some inputs, sums them up, 
+	applies activation function and passes them to output layer.
+
+## Feedforward Neural Network
 
 	In a feedforward neural network, the data passes through the different input nodes till it reaches 
 	the output node. Data moves in only one direction from the first tier onwards until it reaches 
@@ -289,6 +270,166 @@ Type:
 	This is because the target classes in these applications are hard to classify.
 	A simple feedforward neural network is equipped to deal with data which contains a lot of noise. 
 	Feedforward neural networks are also relatively simple to maintain.
+
+	In most cases this type of networks is trained using Backpropagation method.
 	
+## Back-propagation
+
+	Back-propagation is considered the standard method in artificial neural networks to calculate 
+	the error contribution of each neuron after a batch of data is processed. However, there are 
+	some major problems using back-propagation. Firstly, it requires labeled training data; 
+	while almost all data is unlabeled. Secondly, the learning time does not scale well, 
+	which means it is very slow in networks with multiple hidden layers. Thirdly, it can 
+	get stuck in poor local optima, so for deep nets they are far from optimal.
+	
+	Back propagation has some problems associated with it which include :
+	
+	 - Network paralysis: It occurs when the weights are adjusted to very large values during training, 
+	 		large weights can force most of the units to operate at extreme values, in a region 
+			where the derivative of the activation function is very small
+	 
+	 - Local minima : Perhaps the best known is called “Local Minima”. This occurs because 
+	 		the algorithm always changes the weights in such a way as to cause 
+			the error to fall. But the error might briefly have to rise as part of a more
+			general fall, If this is the case, the algorithm will “get stuck” 
+			(because it can‟t go uphill) and the error will not decrease further
+			
+	 - Slow convergence
+	
+	- A multilayer neural network requires many repeated presentations of the input patterns, 
+			for which the weights need to be adjusted before the network is able to 
+			settle down into an optimal solution
+	
+## Convolutional Neural Networks
+	It used back propagation in a feedforward net with many hidden layers, many maps of replicated units 
+	in each layer, pooling of the outputs of nearby replicated units, a wide net that can cope with 
+	several characters at once even if they overlap, and a clever way of training a complete system, 
+	not just a recognizer. Later it is formalized under the name convolutional neural networks (CNNs). 
+	They are primarily used for image processing but can also be used for other types of input such as as audio.
+
+	A convolutional neural network(CNN) uses a variation of the multilayer perceptrons. 
+	A CNN contains one or more than one convolutional layers. These layers can either be 
+	completely interconnected or pooled. 
+	Before passing the result to the next layer, the convolutional layer uses a convolutional operation 
+	on the input. Due to this convolutional operation, the network can be much deeper but with much 
+	fewer parameters. Due to this ability, convolutional neural networks show very effective results 
+	in image and video recognition, natural language processing, and recommender systems. 
+	Convolutional neural networks also show great results in semantic parsing and paraphrase detection.
+	They are also applied in signal processing and image classification.
+	CNNs are also being used in image analysis and recognition in agriculture where weather features 
+	are extracted from satellites like LSAT to predict the growth and yield of a piece of land. 
+
+## Radial Basis Function Neural Network
+
+	Actually FF (feed forward), that use radial basis function as activation function instead of 
+	logistic function. What makes the difference? Logistic function map some arbitrary value 
+	to a 0…1 range, answering a “yes or no” question. It is good for classification and decision 
+	making systems, but works bad for continuous values. Contrary, radial basis functions answer 
+	the question “how far are we from the target”? This is perfect for function approximation, 
+	and machine control. 
+	To be short, these are just FF networks with different activation function and appliance.
+	
+	A radial basis function considers the distance of any point relative to the centre. Such neural networks 
+	have two layers. In the inner layer, the features are combined with the radial basis function.
+	The radial basis function neural network is applied extensively in power restoration systems. 
+	In recent decades, power systems have become bigger and more complex. This increases the risk 
+	of a blackout. This neural network is used in the power restoration systems in order to restore 
+	power in the shortest possible time.
+
+## Multilayer Perceptron
+
+	A multilayer perceptron has three or more layers. It is used to classify data that cannot be
+	separated linearly. It is a type of artificial neural network that is fully connected. 
+	This is because every single node in a layer is connected to each node in the following layer.
+	
+	A multilayer perceptron uses a nonlinear activation function (mainly hyperbolic tangent or logistic function). 
+	This type of neural network is applied extensively in speech recognition and machine translation technologies.
+	
+## Recurrent Neural Network(RNN) – Long Short Term Memory
+
+	A Recurrent Neural Network is a type of artificial neural network in which the output of a particular 
+	layer is saved and fed back to the input. This helps predict the outcome of the layer. The first layer 
+	is formed in the same way as it is in the feedforward network. That is, with the product of the sum of 
+	the weights and features. However, in subsequent layers, the recurrent neural network process begins.
+	From each time-step to the next, each node will remember some information that it had in the previous 
+	time-step. In other words, each node acts as a memory cell while computing and carrying out operations. 
+	The neural network begins with the front propagation as usual but remembers the information it may 
+	need to use later. If the prediction is wrong, the system self-learns and works towards making the right 
+	prediction during the backpropagation. 
+	This type of neural network is very effective in text-to-speech conversion technology.  
 
 
+	https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class10_lstm.ipynb
+
+	So far the neural networks that we’ve examined have always had forward connections. The input layer always
+	connects to the first hidden layer. Each hidden layer always connects to the next hidden layer. 
+	The final hidden layer always connects to the output layer. This manner to connect layers is the 
+	reason that these networks are called “feedforward.” Recurrent neural networks are not so rigid, 
+	as backward connections are also allowed. A recurrent connection links a neuron in a layer to 
+	either a previous layer or the neuron itself. Most recurrent neural network architectures maintain 
+	state in the recurrent connections. Feedforward neural networks don’t maintain any state. 
+	A recurrent neural network’s state acts as a sort of short-term memory for the neural network. 
+	Consequently, a recurrent neural network will not always produce the same output for a given input.
+
+	Recurrent neural networks do not force the connections to flow only from one layer to the next, 
+	from input layer to output layer. A recurrent connection occurs when a connection is formed
+	between a neuron and one of the following other types of neurons:
+
+		- The neuron itself
+		- A neuron on the same level
+		- A neuron on a previous level
+
+	Recurrent connections can never target the input neurons or the bias neurons.
+	The processing of recurrent connections can be challenging. Because the recurrent links create endless
+	loops, the neural network must have some way to know when to stop. A neural network that entered an 
+	endless loop would not be useful. To prevent endless loops, we can calculate the recurrent connections 
+	with the following three approaches:
+
+		- Context neurons
+		- Calculating output over a fixed number of iterations
+		- Calculating output until neuron output stabilizes
+
+
+## Modular Neural Network
+	
+	A modular neural network has a number of different networks that function independently and perform sub-tasks. 
+	The different networks do not really interact with or signal each other during the computation process. 
+	They work independently towards achieving the output.
+
+	As a result, a large and complex computational process can be done significantly faster by breaking it down 
+	into independent components. The computation speed increases because the networks are not interacting with 
+	or even connected to each other.
+	
+## Sequence-To-Sequence Models
+
+	A sequence to sequence model consists of two recurrent neural networks. There’s an encoder that processes 
+	the input and a decoder that processes the output. The encoder and decoder can either use the same or 
+	different parameters. This model is particularly applicable in those cases where the length of the input 
+	data is not the same as the length of the output data. Sequence-to-sequence models are applied mainly 
+	in chatbots, machine translation, and question answering systems.	
+	
+## DFF neural networks 
+	These are just FF NNs, but with more than one hidden layer. training a traditional FF, we pass only a small
+	amount of error to previous layer. Because of that stacking more layers led to exponential growth of 
+	training times, making DFFs quite impractical. in early 2000s we developed a bunch of approaches 
+	that allowed to train DFFs effectively; now they form a core of modern Machine Learning systems, 
+	covering the same purposes as FFs, but with much better results.
+	
+## Autoencoders are used for classification, clustering and feature compression.
+
+	When you train FF neural networks for classification you mostly must feed then X examples in Y categories, 
+	and expect one of Y output cells to be activated. This is called “supervised learning”.
+	AEs, on the other hand, can be trained without supervision. Their structure — when number of hidden cells 
+	is smaller than number of input cells (and number of output cells equals number of input cells), 
+	and when the AE is trained the way the output is as close to input as possible, 
+	forces AEs to generalise data and search for common patterns.
+
+## Dropout Regularization
+
+	Most neural network frameworks implement dropout as a separate layer. Dropout layers function as a regular, 
+	densely connected neural network layer. The only difference is that the dropout layers will periodically 
+	drop some of their neurons during training. You can use dropout layers on regular feedforward neural networks.
+
+	https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
+
+	
