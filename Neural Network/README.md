@@ -1,7 +1,7 @@
 # Neural Networks
 
- 	It is basically taking logistic regression (or any other) and repeating it at more than one times. 
-	In logistic regression, there are only two layes=rs input and output but in neural network, there is at 
+ 	It uses logistic regression (or any other) and repeating it more than one times.
+	In logistic regression, there are only two layers input and output but in neural network, there is at 
 	least one hidden layer between input and output layer.
  
 
