@@ -1,5 +1,9 @@
 # Neural Networks
 
+ 	It is basically taking logistic regression (or any other) and repeating it at more than one times. 
+	In logistic regression, there are only two layes=rs input and output but in neural network, there is at 
+	least one hidden layer between input and output layer.
+ 
 
 # Types of neural networks and their applications:
 
@@ -387,6 +391,9 @@
 		combine a high learning rate with a lot of momentum, you will rush past the minimum with huge steps!
 
 ## Hidden layers
+
+	Why it is called hidden: Because hidden layer does not see inputs(training set)
+	
 	- if data is linearly separable then don't need any hidden layers at all. Of course, you don't need an 
 		NN to resolve your data either, but it will still do the job.
 	- One issue within this subject on which there is a consensus is the performance difference from adding 
