@@ -465,3 +465,5 @@ https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class10_lst
 https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
 https://github.com/amitmse/t81_558_deep_learning/blob/master/t81_558_class13_adv.ipynb
 http://depts.washington.edu/oldenlab/wordpress/wp-content/uploads/2013/03/EcologicalModelling_2004.pdf
+
+https://www.kaggle.com/kanncaa1/deep-learning-tutorial-for-beginners
