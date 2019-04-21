@@ -9,9 +9,7 @@
 		Bias is the difference between the average prediction of our model and the correct value 
 		which we are trying to predict. Model with high bias pays very little attention to 
 		the training data and oversimplifies the model. It always leads to high error on training and test data.
-		
-https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229
-		
+			
 	- The variance (over-fitting) is an error from sensitivity to small fluctuations in the training set. 
 		High variance can cause an algorithm to model the random noise in the training data, 
 		rather than the intended outputs.
