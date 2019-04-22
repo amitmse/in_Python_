@@ -322,6 +322,12 @@
 		activation and chain rule of calculus then causes it to behave that way.
 
 	-Activation Function:
+		
+		The activation function determines the output a node will generate, based upon its input. 
+		Some examples: CUBE, ELU, HARDSIGMOID, HARDTANH, IDENTITY, LEAKYRELU, RATIONALTANH, RELU, RRELU, 
+		SIGMOID, SOFTMAX, SOFTPLUS, SOFTSIGN, TANH
+		
+	
 		Sigmoid is not only activation function right but we have other two most popular activation 
 		functions which are also used are tanh and ReLu.
 		TanH :  The advantage is that instead of having a range between 0 and 1, 
