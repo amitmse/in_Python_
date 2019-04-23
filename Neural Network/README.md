@@ -261,6 +261,11 @@
 	densely connected neural network layer. The only difference is that the dropout layers will periodically 
 	drop some of their neurons during training. You can use dropout layers on regular feedforward neural networks.
 
+	 A network with dropout means that some weights will be randomly set to zero. 
+	 Imagine you have an array of weights [0.1, 1.7, 0.7, -0.9]. If the neural network has 
+	a dropout, it will become [0.1, 0, 0, -0.9] with randomly distributed 0. The parameter that controls 
+	the dropout is the dropout rate. The rate defines how many weights to be set to zeroes.
+
 ## 12. Deep neural network
 
 	-Deep learning works because of the architecture of the network AND the optimization routine applied 
