@@ -52,6 +52,8 @@
 			for which the weights need to be adjusted before the network is able to 
 			settle down into an optimal solution
 	
+## This one round of forward and back propagation iteration is known as one training iteration aka “Epoch“.
+	
 ## 03. Convolutional Neural Networks
 	It used back propagation in a feedforward net with many hidden layers, many maps of replicated units 
 	in each layer, pooling of the outputs of nearby replicated units, a wide net that can cope with 
@@ -432,3 +434,4 @@
 	- Assuming your data does require separation by a non-linear technique, then always start with one hidden layer
 
 -----------------------------------------------------------------------------------------------------------------------------
+https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/
