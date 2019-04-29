@@ -433,5 +433,17 @@
 		isn't linearly separable, it doesn't hurt to verify this.
 	- Assuming your data does require separation by a non-linear technique, then always start with one hidden layer
 
+## Parameters vs Hyperparameters
+	Parameters are learned by the model during the training time, while hyperparameters can be changed 
+	before training the model. Parameters of a deep neural network are weight, Beta etc, which the model 
+	updates during the backpropagation step. 
+	On the other hand, there are a lot of hyperparameters for a deep NN, including:
+		Learning rate – ⍺
+		Number of iterations
+		Number of hidden layers
+		Units in each hidden layer
+		Choice of activation function
+
+
 -----------------------------------------------------------------------------------------------------------------------------
 https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/
