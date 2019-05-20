@@ -22,8 +22,8 @@ http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 		Y = a + bX (Y = dependent_variable, a=Intercept, b = coefficient, X = independent_variable)
 	
 	Logit function/Sigmoid Function:
-		Y 		= xp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}]  = 1/(1+exp^-y)
-		1 - Y 		= xp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}	    = 1/(1+exp^y)
+		Y 		= Exp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}] = 1/(1+exp^-y)
+		1 - Y 		= Exp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}    = 1/(1+exp^y)
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
 	
