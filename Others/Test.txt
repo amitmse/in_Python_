@@ -7,8 +7,10 @@ Chi-Squared Distribution :
 				-	Chi-squared test of goodness of fit of observed data to hypothetical distributions 	(does a coin tossed 20 times turn up 10 heads and 10 tails?) 
 				-	Likelihood-ratio test for nested models
 				-	Log-rank test in survival analysis
-				-	Cochran–Mantel–Haenszel test for stratified contingency tables
+				-	Cochranâ€“Mantelâ€“Haenszel test for stratified contingency tables
 				
 		https://www.quora.com/What-is-the-most-intuitive-explanation-for-the-chi-square-test
+		
+		https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119197096.app03
 		
 				
