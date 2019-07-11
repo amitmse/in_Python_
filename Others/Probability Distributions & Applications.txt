@@ -9,8 +9,8 @@ Chi-Squared Distribution :
 				-	Log-rank test in survival analysis
 				-	Cochran–Mantel–Haenszel test for stratified contingency tables
 				
-		https://www.quora.com/What-is-the-most-intuitive-explanation-for-the-chi-square-test
+https://www.quora.com/What-is-the-most-intuitive-explanation-for-the-chi-square-test
 		
-		https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119197096.app03
+https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119197096.app03
 		
 				
