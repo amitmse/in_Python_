@@ -153,19 +153,19 @@ Ordinary Least Squares (OLS): Finds parameter values that minimizing the error. 
 			Thus, there must be no relationship between the independent variable and the error term
 	
 	3. Homoscedasticity of residuals /equal variance of residuals
-		Example	: Family income to predict luxury spending. Residuals are very small for low values of family income 
-			  (less spend on luxury) while there is great variation in the size of the residuals for wealthier families.
-			  Standard errors are biased and it leads to incorrect conclusions about the significance of the regression
-			  coefficients
+		Example	: Family income to predict luxury spending. Residuals are very small for low values of 
+			  family income (less spend on luxury) while there is great variation in the size of 
+			  the residuals for wealthier families. Standard errors are biased and it leads to 
+			  incorrect conclusions about the significance of the regression coefficients
 		Test	: Breush-Pagan test
 		Solution: Weighted least squares regression.
 			  Transform the dependent variable using one of the variance stabilizing transformations
 	
 	4. No autocorrelation of residuals :
-		Issue: correlation with own lag (stock price today linked with yesterday's price). if above fails then OLS estimators
-			are no longer the Best Linear Unbiased Estimators. While it does not bias the OLS coefficient estimates, 
-			the standard errors tend to be underestimated (and the t-scores overestimated) when the autocorrelations 
-			of the errors at low lags are positive.
+		Issue: correlation with own lag (stock price today linked with yesterday's price). if above fails 
+		 	then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not 
+			bias the OLS coefficient estimates, the standard errors tend to be underestimated 
+			(and the t-scores overestimated) when the autocorrelations of the errors at low lags are positive.
 		Test :  Durbin–Watson
 	
 	5. Normality of residuals :
