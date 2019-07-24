@@ -165,7 +165,7 @@ Ordinary Least Squares (OLS): Finds parameter values that minimizing the error. 
 		Issue: correlation with own lag (stock price today linked with yesterday's price). if above fails 
 		 	then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not 
 			bias the OLS coefficient estimates, the standard errors tend to be underestimated 
-			(and the t-scores overestimated) when the autocorrelations of the errors at low lags are positive.
+			(t-scores overestimated) when the autocorrelations of the errors at low lags are positive.
 		Test :  Durbin–Watson
 	
 	5. Normality of residuals :
