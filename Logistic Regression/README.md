@@ -174,11 +174,15 @@ Ordinary Least Squares (OLS): Finds parameter values that minimizing the error. 
 	6. X variables and residuals are uncorrelated 
 	
 	7. No perfect multicollinearity :
+		Issue: Issue: Regression coefficient variance will increase
 		Test: VIF
 	
 	8. Number of observations must be greater than number of Xs
 
 http://r-statistics.co/Assumptions-of-Linear-Regression.html
 
+	Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves 
+	or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
+		
 
 ---------------------------------------------------------------------------------------------------------------------------------------
