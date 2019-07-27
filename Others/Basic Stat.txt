@@ -1,3 +1,6 @@
+
+
+
 Chi-Squared Distribution :
 		chi squared distribution is the square of a normal distribution.
 		Chi Square lets you know whether two groups have significantly different opinions, 
