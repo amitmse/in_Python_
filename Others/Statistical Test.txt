@@ -44,8 +44,8 @@ Likelihood-ratio :
 	This test assesses the goodness of fit of two competing statistical models based on the ratio of their likelihoods
 	
 F-test:
-	F-test of equality of variances is a test for the null hypothesis that two normal populations have the same variance. 
+	- F-test of equality of variances is a test for the null hypothesis that two normal populations have the same variance. 
 	
-	It is most often used when comparing statistical models that have been fitted to a data set, in order to identify 
-	the model that best fits the population from which the data were sampled. "F-tests" mainly arise when the models 
-	have been fitted to the data using least squares.
+	- It is most often used when comparing statistical models that have been fitted to a data set, in order to identify
+	  the model that best fits the population from which the data were sampled. "F-tests" mainly arise when the models
+	  have been fitted to the data using least squares.
