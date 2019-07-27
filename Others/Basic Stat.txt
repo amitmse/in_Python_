@@ -1,6 +1,6 @@
 Z-test:
-	The sample is assumed to be normally distributed. A z-score is calculated with population 
-	parameters such as "population mean" and "population standard deviation" and is used to 
+	The sample is assumed to be normally distributed. A z-score is calculated with population parameters such as 
+	"population mean" and "population standard deviation" and is used to 
 	validate a hypothesis that the sample drawn belongs to the same population. 
 	Sample mean is same as the population mean
 
