@@ -39,7 +39,4 @@ Chi-Squared Distribution :
 		- Likelihood-ratio test for nested models
 		- Log-rank test in survival analysis
 		- Cochran–Mantel–Haenszel test for stratified contingency tables
-				
 
-		
-				
