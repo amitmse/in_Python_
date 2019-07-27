@@ -1,10 +1,12 @@
 Chi-Squared Distribution :
 		chi squared distribution is the square of a normal distribution.
-		Chi Square lets you know whether two groups have significantly different opinions, which makes it a very useful statistic for survey research.
+		Chi Square lets you know whether two groups have significantly different opinions, 
+			which makes it a very useful statistic for survey research.
 		
 		The chi-squared distribution is used primarily in hypothesis testing:
 				- 	Chi-squared test of independence in contingency tables								(is there a relationship between gender and salary?)
-				-	Chi-squared test of goodness of fit of observed data to hypothetical distributions 	(does a coin tossed 20 times turn up 10 heads and 10 tails?) 
+				-	Chi-squared test of goodness of fit of observed data to hypothetical distributions 	
+						(does a coin tossed 20 times turn up 10 heads and 10 tails?) 
 				-	Likelihood-ratio test for nested models
 				-	Log-rank test in survival analysis
 				-	Cochran–Mantel–Haenszel test for stratified contingency tables
