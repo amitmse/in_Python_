@@ -73,7 +73,8 @@ Probability Distribution:
 	Bernoulli distribution:
 		The Bernoulli PDF has two lines of equal height, representing the two equally-probable outcomes 
 		of 0 and 1 at either end.
-	
+		Bernoulli Distribution is a special case of Binomial Distribution with a single trial
+		
 	Uniform distribution:
 		Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
 		Imagine rolling a fair die. The outcomes 1 to 6 are equally likely. 
@@ -105,7 +106,7 @@ Probability Distribution:
 		The Poisson distribution is when trying to count events over a time given the continuous rate of events occurring i.e.
 		When things like packets arrive at routers, or customers arrive at a store, or things wait in some kind of queue
 		Count of customers calling a support hot-line each minute doesn't follow binomial/Bernoulli but Poisson.
-		
+		Poisson Distribution is a limiting case of binomial distribution.
 	Geometric distribution:
 		From simple Bernoulli trials arises another distribution. How many times does a flipped coin come up tails 
 		before it first comes up heads? This count of tails follows a geometric distribution.
@@ -117,7 +118,10 @@ Probability Distribution:
 		
 		
 	Exponential distribution:
-		The exponential distribution should come to mind when thinking of "time until event", maybe "time until failure". 
+		The exponential distribution should come to mind when thinking of "time until event", maybe "time until failure".
+		Exponential distribution is widely used for survival analysis. From the expected life of a machine to 
+		the expected life of a human, exponential distribution successfully delivers the result.
+		
 ????????
 
 	Weibull:
@@ -130,5 +134,11 @@ Probability Distribution:
 		Its cousin the hyper-geometric distribution does too. 
 		The Poisson distribution—an extreme form of binomial—also approaches the normal distribution as 
 		the rate parameter increases.
+		The mean, median and mode of the distribution coincide.
+		The curve of the distribution is bell-shaped and symmetrical about the line x=μ.
+		Normal distribution is another limiting form of binomial distribution.
+		The standard normal distribution (also known as the Z distribution) is the normal distribution 
+		with a mean of zero and a variance of one.
+		
 
 
