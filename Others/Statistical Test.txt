@@ -118,9 +118,16 @@ Probability Distribution:
 		
 		
 	Exponential distribution:
+		The exponential distribution is one of the widely used continuous distributions. 
+		It is often used to model the time elapsed between events.
+		
 		The exponential distribution should come to mind when thinking of "time until event", maybe "time until failure".
 		Exponential distribution is widely used for survival analysis. From the expected life of a machine to 
 		the expected life of a human, exponential distribution successfully delivers the result.
+		
+		There is a strong relationship between the Poisson distribution and the Exponential distribution. 
+		For example, let’s say a Poisson distribution models the number of births in a given time period. 
+		The time in between each birth can be modeled with an exponential distribution.
 		
 ????????
 
