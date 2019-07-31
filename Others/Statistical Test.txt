@@ -53,3 +53,82 @@ F-test:
 	- It is most often used when comparing statistical models that have been fitted to a data set, in order to identify
 	  the model that best fits the population from which the data were sampled. "F-tests" mainly arise when the models
 	  have been fitted to the data using least squares.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+https://blog.cloudera.com/blog/2015/12/common-probability-distributions-the-data-scientists-crib-sheet/
+https://www.johndcook.com/blog/distribution_chart/
+
+Probability Distribution:
+	Probability distributions describe what we think the probability of each outcome is.
+	They come in many shapes, but in only one size: probabilities in a distribution always add up to 1.
+	
+	For example: 
+		Flipping a fair coin has two outcomes: it lands heads or tails. 
+		Before the flip, we believe there’s a 0.5 probability, of heads and same for tails. 
+		That’s a probability distribution over the two outcomes of the flip (Bernoulli distribution).
+	
+	Chart: Horizontal axis set of possible numeric outcomes. Vertical axis probability of outcomes.
+	
+	Bernoulli distribution:
+		The Bernoulli PDF has two lines of equal height, representing the two equally-probable outcomes 
+		of 0 and 1 at either end.
+	
+	Uniform distribution:
+		Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
+		Imagine rolling a fair die. The outcomes 1 to 6 are equally likely. 
+		It can be defined for any number of outcomes n or even as a continuous distribution.
+	
+	Binomial distribution:
+		The binomial distribution may be thought of as the sum of outcomes of things that follow a Bernoulli distribution.
+		Example: 
+			Toss a fair coin 20 times; how many times does it come up heads? This count is an 
+			outcome that follows the binomial distribution. 
+			Its parameters are n, the number of trials, and p, the probability of a "success" (here: heads, or 1). 
+			Each flip is a Bernoulli-distributed outcome. Converted to binomial distribution when counting 
+			the number of successes, where each flip is independent and has the same probability of success.
+			
+			Imagine an urn with equal numbers of white and black balls. 
+			Close your eyes and draw a ball and note whether it is black, then put it back. Repeat. 
+			How many times did you draw a black ball? This count also follows a binomial distribution.
+			
+	Hyper-Geometric distribution:
+		This is the distribution of that same count if the balls were drawn without replacement instead. 
+		Undeniably it’s a cousin to the binomial distribution, but not the same, because the probability 
+		of success changes as balls are removed. 
+		If the number of balls is large relative to the number of draws, the distributions are similar 
+		because the chance of success changes less with each draw.
+		
+	Poisson distribution:
+		Like the binomial distribution, the Poisson distribution is the distribution of a 
+		count - the count of times something happened. 
+		The Poisson distribution is when trying to count events over a time given the continuous rate of events occurring i.e.
+		When things like packets arrive at routers, or customers arrive at a store, or things wait in some kind of queue
+		Count of customers calling a support hot-line each minute doesn't follow binomial/Bernoulli but Poisson.
+		
+	Geometric distribution:
+		From simple Bernoulli trials arises another distribution. How many times does a flipped coin come up tails 
+		before it first comes up heads? This count of tails follows a geometric distribution.
+		If the binomial distribution is “How many successes?” then the geometric distribution is 
+		“How many failures until a success?”
+
+	Negative Binomial distribution:
+		It's a simple generalization. It’s the number of failures until r successes have occurred,not just 1. 
+		
+		
+	Exponential distribution:
+		The exponential distribution should come to mind when thinking of "time until event", maybe "time until failure". 
+????????
+
+	Weibull:
+		Weibull distribution can model increasing (or decreasing) rates of failure over time. 
+		The exponential is merely a special case.
+
+	Normal Distribution:
+		The sum of Bernoulli trials follows a binomial distribution, and as the number of trials increases, 
+		that binomial distribution becomes more like the normal distribution. 
+		Its cousin the hyper-geometric distribution does too. 
+		The Poisson distribution—an extreme form of binomial—also approaches the normal distribution as 
+		the rate parameter increases.
+
+
