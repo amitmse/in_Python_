@@ -284,3 +284,6 @@ Model Metrics:
 	- Divergence 		= [(meanG – meanB)^2] / [0.5(varG + varB)]	
 		     		  [meanG = mean of score only for good, varB= variance of score only for bad ]
 	- Area under curve 	= Percent Concordant + 0.5 * Percent Tied 	(Also refered as C statistics)
+
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
