@@ -31,6 +31,7 @@ Probability Distribution:
 		
 		Example: 
 			- Flipping a fair coin
+			- it’s going to rain tomorrow or not
 		
 	Uniform distribution:
 		- Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
@@ -57,8 +58,6 @@ Probability Distribution:
 			- Imagine an urn with equal numbers of white and black balls. Draw a ball and note whether it is black, 
 			  then put it back and Repeat this process. How many times black ball was drawn? 
 			  This count also follows a binomial distribution.
-			  
-			  
 			
 	Hyper-Geometric distribution:
 		Example: 
@@ -81,6 +80,12 @@ Probability Distribution:
 		Example:
 			- Packets arrive at routers, or customers arrive at a store, or things wait in some kind of queue Count 
 			  of customers calling a support hot-line each minute doesn't follow binomial/Bernoulli but Poisson.
+			- The number of emergency calls recorded at a hospital in a day.
+			- The number of thefts reported in an area on a day.
+			- The number of customers arriving at a salon in an hour.
+			- The number of suicides reported in a particular city.
+			- The number of printing errors at each page of the book.
+			- The number of incoming calls at a call center in a day.
 		
 	Geometric distribution:
 		- If the binomial distribution is “How many successes?” then the geometric distribution is
@@ -129,7 +134,6 @@ Probability Distribution:
 			- Probability mass function	: [1/{SQRT(2Pai)*STD}]*Expo[(X-Mean)^2/-2Variance] 
 			- Mean  			: Mean
 			- Variance 			: Variance
-			
 			
 	Z-test:
 		- The sample is assumed to be normally distributed. A z-score is calculated with population 
