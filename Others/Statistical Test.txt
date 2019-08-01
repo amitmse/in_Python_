@@ -25,10 +25,9 @@ Probability Distribution:
 		  of 0 and 1 at either end.
 		- Bernoulli Distribution is a special case of Binomial Distribution with a single trial
 		- Function
-			- Probability mass function	: P^x*(1-P)^(1-x)       {x in 0 or 1}
-			- Mean  			: P
-			- Variance 			: P(1-P)
-		
+			- PDF		: P^x*(1-P)^(1-x)       {x in 0 or 1}
+			- Mean  	: P
+			- Variance 	: P(1-P)
 		Example: 
 			- Flipping a fair coin
 			- it’s going to rain tomorrow or not
@@ -37,18 +36,18 @@ Probability Distribution:
 		- Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
 		- It can be defined for any number of outcomes or even as a continuous distribution.
 		- Function
-			- Probability mass function	: 1/(b-a) 	       {-infinite <- (a,b) -> infinite}
-			- Mean  			: (a+b)/2
-			- Variance 			: (b-a)^2/12
+			- PDF		: 1/(b-a) 	       {-infinite <- (a,b) -> infinite}
+			- Mean  	: (a+b)/2
+			- Variance 	: (b-a)^2/12
 		Example: 
 			- Imagine rolling a fair die. The outcomes 1 to 6 are equally likely.
 	
 	Binomial distribution:
 		- The binomial distribution may be thought of as the sum of outcomes of things that follow a Bernoulli distribution.
 		- Function
-			- Probability mass function	: [n!/(n-x)!*x!] * [P^x*(Q)^(n-x)]	{! factorial}
-			- Mean  			: nP
-			- Variance 			: nPQ
+			- PDF		: [n!/(n-x)!*x!] * [P^x*(Q)^(n-x)]	{! factorial}
+			- Mean  	: nP
+			- Variance 	: nPQ
 		Example: 
 			- Toss a fair coin 20 times; how many times does it come up heads? This count is an outcome that follows 
 			  the binomial distribution. Each flip is a Bernoulli-distributed outcome. Converted to binomial 
@@ -109,7 +108,6 @@ Probability Distribution:
 			- PDF		: λe^(-λx)    		{x ≥ 0}
 			- Mean  	: 1/λ
 			- Variance 	: (1/λ)²
-
 		Example: 
 			- let’s say a Poisson distribution models the number of births in a given time period. 
 			  The time in between each birth can be modeled with an exponential distribution.
@@ -130,10 +128,10 @@ Probability Distribution:
 		- The standard normal distribution (also known as the Z distribution) is the normal distribution 
 		  with a mean of zero and a variance of one.
 		- Its popular due to Central Limit Theorem.
-		- Function								{-infinite <- (x) -> infinite}
-			- Probability mass function	: [1/{SQRT(2Pai)*STD}]*Expo[(X-Mean)^2/-2Variance] 
-			- Mean  			: Mean
-			- Variance 			: Variance
+		- Function								
+			- PDF		: [1/{SQRT(2Pai)*STD}]*Expo[(X-Mean)^2/-2Variance]   {-infinite <-x-> infinite}
+			- Mean  	: Mean
+			- Variance 	: Variance
 			
 	Z-test:
 		- The sample is assumed to be normally distributed. A z-score is calculated with population 
