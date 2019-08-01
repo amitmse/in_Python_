@@ -188,7 +188,11 @@ Probability Distribution:
 		  two groups have significantly different opinions, which makes it a very useful statistic for survey research.
 		- Population mean is known and test the variance of normal distributed. chi squared distribution is the square 
 		  of a normal distribution.
-		- The chi-squared distribution is used primarily in hypothesis testing:
+		- Function
+			- PDF		: (Observed - Mean)^2/Mean
+			- Mean  	: mean
+		Example:
+			- The chi-squared distribution is used primarily in hypothesis testing
 			- Goodness of fit test, which determines if a sample matches the population 
 				(does a coin tossed 20 times turn up 10 heads and 10 tails?)
 			- A chi-square fit test for two independent variables is used to compare two variables in a contingency table 
@@ -197,6 +201,7 @@ Probability Distribution:
 			- Likelihood-ratio test for nested models
 			- Log-rank test in survival analysis
 			- Cochran–Mantel–Haenszel test for stratified contingency tables
+
 
 	Likelihood-ratio :
 		- This test assesses the goodness of fit of two competing statistical models based on the ratio of their likelihoods
