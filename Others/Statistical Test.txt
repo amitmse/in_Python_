@@ -20,20 +20,34 @@ Probability Distribution:
 		  That’s a probability distribution over the two outcomes of the flip (Bernoulli distribution).
 	
 	Bernoulli distribution:
+		- Bernoulli distribution has only two possible outcomes i.e. success and failure in a single trial
 		- The Bernoulli PDF has two lines of equal height, representing the two equally-probable outcomes
 		  of 0 and 1 at either end.
 		- Bernoulli Distribution is a special case of Binomial Distribution with a single trial
+		- Function
+			- Probability mass function	: P^x*(1-P)^(1-x)       {x in 0 or 1}
+			- Mean  			: P
+			- Variance 			: P(1-P)
+		
 		Example: 
 			- Flipping a fair coin
 		
 	Uniform distribution:
 		- Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
 		- It can be defined for any number of outcomes or even as a continuous distribution.
+		- Function
+			- Probability mass function	: 1/(b-a) 	       {-infinite <- (a,b) -> infinite}
+			- Mean  			: (a+b)/2
+			- Variance 			: (b-a)^2/12
 		Example: 
 			- Imagine rolling a fair die. The outcomes 1 to 6 are equally likely.
 	
 	Binomial distribution:
-		The binomial distribution may be thought of as the sum of outcomes of things that follow a Bernoulli distribution.
+		- The binomial distribution may be thought of as the sum of outcomes of things that follow a Bernoulli distribution.
+		- Function
+			- Probability mass function	: [n!/(n-x)!*x!] * [P^x*(Q)^(n-x)]	{! factorial}
+			- Mean  			: nP
+			- Variance 			: nPQ
 		Example: 
 			- Toss a fair coin 20 times; how many times does it come up heads? This count is an outcome that follows 
 			  the binomial distribution. Each flip is a Bernoulli-distributed outcome. Converted to binomial 
@@ -43,6 +57,8 @@ Probability Distribution:
 			- Imagine an urn with equal numbers of white and black balls. Draw a ball and note whether it is black, 
 			  then put it back and Repeat this process. How many times black ball was drawn? 
 			  This count also follows a binomial distribution.
+			  
+			  
 			
 	Hyper-Geometric distribution:
 		Example: 
@@ -58,6 +74,10 @@ Probability Distribution:
 		- The Poisson distribution is when trying to count events over a time given the continuous rate of 
 		  events occurring
 		- Poisson Distribution is a limiting case of binomial distribution.
+		- Function								
+			- PDF		: Expo(-Mean)*{(Mean^x)/x!} 		{x in o,1,2,3,4,5}
+			- Mean  	: Mean
+			- Variance 	: Mean
 		Example:
 			- Packets arrive at routers, or customers arrive at a store, or things wait in some kind of queue Count 
 			  of customers calling a support hot-line each minute doesn't follow binomial/Bernoulli but Poisson.
@@ -79,7 +99,12 @@ Probability Distribution:
 		- The exponential distribution should come to mind when thinking of "time until event", maybe "time until failure".
 		- Exponential distribution is widely used for survival analysis. From the expected life of a machine to 
 		  the expected life of a human, exponential distribution successfully delivers the result.
-		- There is a strong relationship between the Poisson distribution and the Exponential distribution. 
+		- There is a strong relationship between the Poisson distribution and the Exponential distribution.
+		- Function								
+			- PDF		: λe^(-λx)    		{x ≥ 0}
+			- Mean  	: 1/λ
+			- Variance 	: (1/λ)²
+
 		Example: 
 			- let’s say a Poisson distribution models the number of births in a given time period. 
 			  The time in between each birth can be modeled with an exponential distribution.
@@ -99,7 +124,13 @@ Probability Distribution:
 		- Normal distribution is another limiting form of binomial distribution.
 		- The standard normal distribution (also known as the Z distribution) is the normal distribution 
 		  with a mean of zero and a variance of one.
-	
+		- Its popular due to Central Limit Theorem.
+		- Function								{-infinite <- (x) -> infinite}
+			- Probability mass function	: [1/{SQRT(2Pai)*STD}]*Expo[(X-Mean)^2/-2Variance] 
+			- Mean  			: Mean
+			- Variance 			: Variance
+			
+			
 	Z-test:
 		- The sample is assumed to be normally distributed. A z-score is calculated with population 
 		  parameters such as "population mean" and "population standard deviation" and is used to validate 
@@ -152,7 +183,11 @@ Probability Distribution:
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
+https://medium.com/@srowen/common-probability-distributions-347e6b945ce4
 https://blog.cloudera.com/blog/2015/12/common-probability-distributions-the-data-scientists-crib-sheet/
 https://www.johndcook.com/blog/distribution_chart/
 
 -----------------------------------------------------------------------------------------------------------------------------------
+
+
+
