@@ -123,6 +123,9 @@ Probability Distribution:
 	Weibull:
 		- Weibull distribution can model increasing (or decreasing) rates of failure over time. 
 		- The exponential is merely a special case.
+		- Commonly used to assess product reliability, analyze life data and model failure times
+		- Weibull isn’t an appropriate model for every situation i.e. chemical reactions and corrosion failures are 
+		  usually modeled with the lognormal distribution.
 
 	Normal Distribution:
 		- The sum of Bernoulli trials follows a binomial distribution, and as the number of trials increases, 
