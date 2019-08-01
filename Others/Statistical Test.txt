@@ -21,8 +21,7 @@ Probability Distribution:
 	
 Bernoulli distribution:
 	- Bernoulli distribution has only two possible outcomes i.e. success and failure in a single trial
-	- The Bernoulli PDF has two lines of equal height, representing the two equally-probable outcomes
-	  of 0 and 1 at either end.
+	- The Bernoulli PDF has two lines of equal height, representing the two equally-probable outcomes of 0 and 1 at either end.
 	- Bernoulli Distribution is a special case of Binomial Distribution with a single trial
 	- Function
 		- PDF		: P^x*(1-P)^(1-x)       {x in 0 or 1}
@@ -69,8 +68,7 @@ Hyper-Geometric distribution:
 Poisson distribution:
 	- Simialr to the binomial distribution, the Poisson distribution is the distribution of a 
 	  count - the count of times something happened. 
-	- The Poisson distribution is when trying to count events over a time given the continuous rate of 
-	  events occurring
+	- The Poisson distribution is when trying to count events over a time given the continuous rate of events occurring
 	- Poisson Distribution is a limiting case of binomial distribution.
 	- Function								
 		- PDF		: Expo(-Mean)*{(Mean^x)/x!} 		{x in o,1,2,3,4,5}
