@@ -60,8 +60,12 @@ https://blog.cloudera.com/blog/2015/12/common-probability-distributions-the-data
 https://www.johndcook.com/blog/distribution_chart/
 
 Probability Distribution:
-	Probability distributions describe what we think the probability of each outcome is.
-	They come in many shapes, but in only one size: probabilities in a distribution always add up to 1.
+	- Probability distributions describe what we think the probability of each outcome is.
+	- They come in many shapes, but in only one size: probabilities in a distribution always add up to 1.
+	- A probability distribution is a function that assigns to each event a number in [0,1] which is 
+	  the probability that this event occurs.
+	- A statistical model is a set of probability distributions. We assume that the observations are generated 
+	  from one of these distributions.
 	
 	For example: 
 		Flipping a fair coin has two outcomes: it lands heads or tails. 
