@@ -219,10 +219,6 @@ https://www.johndcook.com/blog/distribution_chart/
 https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 -----------------------------------------------------------------------------------------------------------------------------------
 
-Maximum likelihood estimation (MLE):
-	- Finds parameter values that maximize the likelihood of making the observations given the parameters
-	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
-
 Ordinary Least Squares (OLS): 
 	- Finds parameter values that minimizing the error. 
 	- Assumptions of Linear regression:
@@ -264,7 +260,10 @@ Ordinary Least Squares (OLS):
 	- Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves 
 	  or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
-
+Maximum likelihood estimation (MLE):
+	- Finds parameter values that maximize the likelihood of making the observations given the parameters
+	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
+	
 Logistic regression assumptions:
 	1. Dependent variable should be binary
 	2. Linearity between independent & log odds 
