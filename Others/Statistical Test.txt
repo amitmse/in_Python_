@@ -219,5 +219,69 @@ https://www.johndcook.com/blog/distribution_chart/
 https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 -----------------------------------------------------------------------------------------------------------------------------------
 
+Maximum likelihood estimation (MLE):
+	- Finds parameter values that maximize the likelihood of making the observations given the parameters
+	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
+
+Ordinary Least Squares (OLS): 
+	- Finds parameter values that minimizing the error. 
+	- Assumptions of Linear regression:
+		1. Linear in parameters 
+			Issue	: Incorrect and unreliable model which leads to error in result.
+			Solution: Transformations of independent variables
+
+		2. Mean of residuals is zero 
+			Issue	: Error terms has zero mean and doesn’t depend on the independent variables. 
+			       	  Thus, there must be no relationship between the independent variable and the error term
+
+		3. Homoscedasticity of residuals /equal variance of residuals
+			Example	: Family income to predict luxury spending. Residuals are very small for low values of 
+		  		  family income (less spend on luxury) while there is great variation in the size of 
+		  		  the residuals for wealthier families. Standard errors are biased and it leads to 
+		  		  incorrect conclusions about the significance of the regression coefficients
+			Test	: Breush-Pagan test
+			Solution: Weighted least squares regression.
+		  		  Transform the dependent variable using one of the variance stabilizing transformations
+
+		4. No autocorrelation of residuals
+			Issue	: correlation with own lag (stock price today linked with yesterday's price). if above fails 
+	 			  then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not 
+				  bias the OLS coefficient estimates, the standard errors tend to be underestimated 
+				  (t-scores overestimated) when the autocorrelations of the errors at low lags are positive.
+			Test 	:  Durbin–Watson
+
+		5. Normality of residuals
+			Issue	: OLS estimators won’t have the desirable BLUE property
+	
+		6. X variables and residuals are uncorrelated 
+
+		7. No perfect multicollinearity
+			Issue	: Issue: Regression coefficient variance will increase
+			Test	: VIF
+
+		8. Number of observations must be greater than number of Xs
+		
+	- Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves 
+	  or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
 
+Logistic regression assumptions:
+	1. Dependent variable should be binary
+	2. Linearity between independent & log odds 
+     	   (non-linear relationship between the dependent and independent variables)
+	3. Independence of errors
+	4. No perfect multicollinearity
+
+Model Metrics:
+	- beta(x) 		= covariance(x,y) / variance(x)
+	- correlation(x,y)	= covariance(x,y) / [variance(x)*variance(y)]
+	- TSS 			= SUM[y-mean(y)]^2
+	- RSS 			= SUM[y-predicted(y)]^2
+	- R Squared		= 1.0 - (RSS/TSS)
+	- AIC			= (No of variable*2)               - (2*-Log Likelihood)
+	- BIC			= {No of variable*log(No of obs)}  - (2*-Log Likelihood)
+	- VIF 			= 1.0 / (1.0 - R Squared)
+	- Gini/Somer’s D 	= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+	- Divergence 		= [(meanG – meanB)^2] / [0.5(varG + varB)]	
+		     		  [meanG = mean of score only for good, varB= variance of score only for bad ]
+	- Area under curve 	= Percent Concordant + 0.5 * Percent Tied 	(Also refered as C statistics)
