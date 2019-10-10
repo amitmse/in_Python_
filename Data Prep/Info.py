@@ -111,17 +111,22 @@ Cons:
 	numpy to pandas		: b=pd.DataFrame(a) # a is numpy array
 	pandas to numpy		: a=df1.as_matrix() / b=df1.values (df1 is pandas dataframe)
 
+	Sample			: train_df.head()			/ train_df.head(20) #Print 20 obs
+	Column & Row		: train_df.shape
 	Var list 		: train_df.columns
 	Num var distribution	: train_df.describe()
-	Freq			: train_df['Sex'].value_counts() / train_df.groupby('Sex').size()
+		
+	Freq			: train_df['Sex'].value_counts() 	/ train_df.groupby('Sex').size()
 	Mean			: mean = df3['float_col'].mean()
-	Count Missing 		: train_df.isnull().sum().sum()	 
-				  sum([True for idx,row in train_df.iterrows() if any(row.isnull())])	
-	Columns Missing		: train_df.apply(lambda x: sum(x.isnull().values), axis = 0)
+		
+	Columns Missing		: train_df.isnull().sum()		/ train_df.apply(lambda x: sum(x.isnull().values), axis = 0)
+	Count Missing 		: sum([True for idx,row in train_df.iterrows() if any(row.isnull())])	
 	Row Missing		: train_df.apply(lambda x: sum(x.isnull().values), axis = 1)	
 	Fill Missing		: df3['float_col'].fillna(mean)
 	Drop Missing		: df2.dropna()
+		
 	Filter on column	: x = df[df['A'] == 3]
+		
 	Correlation 		: a=input_data.corr()
 	Append data		: old_data_frame = pd.concat([old_data_frame,new_record])
 	Drop a column		: input_data=input_data.drop('reservation',1)
