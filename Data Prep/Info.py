@@ -94,8 +94,8 @@ Cons:
 	==			# Equal to			----> if x==1 then do
 	=			# Assign Value			----> x=1
 	#			# comment the code		----> #comment this part
-	'''			# Multiple line comment. 	----> ''' should be at both places  start and end
-	\n			# Newline 			----> stuff = 'HelOo\nWoRlD' [it will print in two lines] 
+#	'''			# Multiple line comment. 	----> ''' should be at both places  start and end
+#	\n			# Newline 			----> stuff = 'HelOo\nWoRlD' [it will print in two lines] 
 	!=			# Not Equal to			----> if x != 1 then do
 
 #************************************************************************************************************
