@@ -1,3 +1,36 @@
+'''
+- Python's name is derived from the television series Monty Python's Flying Circus. 
+   It is a British sketch comedy series created by the comedy group Monty Python and broadcast by the BBC from 1969 to 1974.
+- Python is a widely used high-level programming language for general-purpose programming.
+- Created by Guido van Rossum and first released in 1991
+- Python has a design philosophy that emphasizes code readability (notably using whitespace indentation), 
+   and a syntax that allows programmers to express concepts in fewer lines of code.
+
+- Python are open source.
+- Python developed with the sole purpose of teaching non-programmers how to program. 
+    Readability is one of the key features of Python.
+- I can use any algorithm out there and choose the one that suits the challenge at hand best.
+- data scientists use to manage unstructured data. 
+
+Pro:
+- Free
+- Easy to learn
+- Scalability
+- Big community
+- Good in Machine learning
+- Growing
+- Fast in adapting new technique
+- Data Handling/Big Data
+- Visualization 
+   In terms of graphical output, Python edges SAS out.  Both are verbose and tedious to get it to work. 
+     Python wins because the output is cleaner and there are way more options.
+- Python is much a more versatile object oriented language that has capabilities that SAS doesn’t have.  
+
+Cons:
+- High cost
+- Slow in adapting new technique
+'''
+
 ######################## Python 2.7 #####################################################################
 
 #********************************************************************************************************
