@@ -105,6 +105,15 @@
 	Merge by column		: first=pd.concat([a, b], axis=1), second=pd.concat([c, d], axis=1)
 	Append			: third = pd.concat([first, second])
 	
+#****** Convert SAS data into Pandas data frame ****************************************************************************
+pip install sas7bdat
+from sas7bdat import SAS7BDAT
+
+foo = SAS7BDAT('Y:\KR_PL_IFRS9_01\Data\Final\def_check1.sas7bdat')
+#converts to data frame
+ds = foo.to_data_frame()
+ds.describe()
+
 #******Conditionals ( IF/ELSE IF/ELSE) ****************************************************************************
 	
 	angle = 5
