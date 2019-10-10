@@ -125,7 +125,9 @@ Cons:
 	Fill Missing		: df3['float_col'].fillna(mean)
 	Drop Missing		: df2.dropna()
 		
-	Filter on column	: x = df[df['A'] == 3]
+	Filter column		: train_df.loc[:, 'City']			/ 	train_df.loc[:, ['City', 'State']]
+	Filter Row & Column	: train_df.loc[0:2,'repayment':'portfolio_code']
+	Filter on var 		: x = train_df[train_df['A'] == 3]
 		
 	Correlation 		: a=input_data.corr()
 	Append data		: old_data_frame = pd.concat([old_data_frame,new_record])
