@@ -812,3 +812,74 @@ cachedStopWords = set(stopwords.words("english"))
 cachedStopWords.update((set([x.lower() for x in ['and','I','A','And','So','arnt','This','When','It','many','Many','so','cant','Yes','yes','No','no','These','these']]))
 
 ########################################################################################################################################
+
+###################################### Zip a file/folder  using Python #####################################
+os.chdir(r'C:\Users\1567478\Downloads')
+		       
+#--------- Zip a file
+import os
+import zipfile
+jungle_zip = zipfile.ZipFile('jungle.zip', 'w')
+jungle_zip.write('9781441996121-c2.pdf', compress_type=zipfile.ZIP_DEFLATED)
+jungle_zip.close()
+		       
+#-----------Zip All PDF Files
+import os
+import zipfile
+fantasy_zip = zipfile.ZipFile('archive.zip', 'w')
+for folder, subfolders, files in os.walk(r'C:\Users\1567478\Downloads\Copy'):
+    for file in files:
+        if file.endswith('.pdf'):
+            fantasy_zip.write(os.path.join(folder, file), os.path.relpath(os.path.join(folder,file), r'C:\Users\1567478\Downloads\Copy'), compress_type = zipfile.ZIP_DEFLATED)    
+fantasy_zip.close()
+		       
+#----------Zip a folder
+import shutil
+os.chdir(r'C:\Users\1567478\Downloads')
+# Copy is the folder which is getting zipped
+shutil.make_archive('filename', 'zip', 'Copy')
+
+#------------Zip a Folder
+import os,zipfile
+# Change the directory where you want your new zip file to be
+os.chdir(r'C:\Users\1567478\Downloads')
+zf = zipfile.ZipFile('myfile.zip','w')
+# Copy is the folder which is getting zipped
+for dirnames,folders,files in os.walk('Copy'):
+    zf.write('Copy')
+    for file in files:
+        zf.write(os.path.join('Copy',file))		
+zf.close()
+
+#-----------Unzip a file
+import zipfile
+zip_ref = zipfile.ZipFile(r'C:\Users\1567478\Desktop\New folder\201_Probe201405.zip', 'r')
+zip_ref.extractall(r'C:\Users\1567478\Desktop\New folder')
+zip_ref.close()
+		       
+#--------Unzip a folder
+import os, zipfile
+dir_name = 'C:\\SomeDirectory'
+extension = ".zip"
+os.chdir(dir_name) # change directory from working dir to dir with files
+for item in os.listdir(dir_name): 			# loop through items in dir
+    if item.endswith(extension): 			# check for ".zip" extension
+        file_name = os.path.abspath(item) 		# get full path of files
+        zip_ref = zipfile.ZipFile(file_name)		# create zipfile object
+        zip_ref.extractall(dir_name) 			# extract file to dir
+        zip_ref.close() 				# close file
+        #os.remove(file_name) 				# delete zipped file
+		
+#-------Copy data from one dir to another dir
+import shutil
+shutil.copy2(r'C:\Users\1567478\Downloads\9781441996121-c2.pdf', r'C:\Users\1567478\Downloads\test\9781441996121-c2.pdf')
+		       
+#-------Copy a folder one dir to another dir
+from distutils.dir_util import copy_tree
+		       
+#---------------------------------------
+fromDirectory = r'C:\Users\1567478\Downloads\Copy'
+toDirectory = r'C:\Users\1567478\Downloads\test'
+copy_tree(fromDirectory, toDirectory)
+		       
+#---------------------------------------
