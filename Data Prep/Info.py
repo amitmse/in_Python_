@@ -117,14 +117,13 @@ Cons:
 	Var list 		: train_df.columns
 	Num var distribution	: train_df.describe()
 		
-	Freq			: train_df['Sex'].value_counts() 	/ train_df.groupby('Sex').size()
-	Mean			: mean = df3['float_col'].mean()
-		
 	Columns Missing		: train_df.isnull().sum()		/ train_df.apply(lambda x: sum(x.isnull().values), axis = 0)
-	Count Missing 		: sum([True for idx,row in train_df.iterrows() if any(row.isnull())])	
 	Row Missing		: train_df.apply(lambda x: sum(x.isnull().values), axis = 1)	
 	Fill Missing		: df3['float_col'].fillna(mean)
 	Drop Missing		: df2.dropna()
+		
+	Freq			: train_df['Sex'].value_counts() 	/ train_df.groupby('Sex').size()
+	Mean			: mean = df3['float_col'].mean()
 		
 	Filter column		: train_df.loc[:, 'City']			/ 	train_df.loc[:, ['City', 'State']]
 	Filter Row & Column	: train_df.loc[0:2,'repayment':'portfolio_code']
