@@ -446,4 +446,9 @@
 
 
 -----------------------------------------------------------------------------------------------------------------------------
+# Deep Learning: multi neural network architecture : 
+	# Artificial neural network (ANN): Data in numeric format
+	# Convolutional Neural Networks(CNN) : Imgaes data
+	# Recurrent neural network(RNN): Time series data
+------------------------------------------------------
 https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/
