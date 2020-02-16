@@ -27,3 +27,7 @@ It's very easy to make some words **bold** and other words *italic* with Markdow
 https://help.github.com/en/articles/basic-writing-and-formatting-syntax
 
 https://help.github.com/en/articles/organizing-information-with-tables
+
+# 
+https://www.fluentu.com/blog/english/blogs-in-english/
+https://www.wordstream.com/blog/ws/2014/08/07/improve-writing-skills
