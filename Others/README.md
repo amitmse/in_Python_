@@ -32,3 +32,14 @@ https://help.github.com/en/articles/organizing-information-with-tables
 https://www.fluentu.com/blog/english/blogs-in-english/
 
 https://www.wordstream.com/blog/ws/2014/08/07/improve-writing-skills
+
+from pyunpack import Archive
+Archive('data.7z').extractall("<output path>")
+
+import py7zlib
+f7file = "<mypath>/boost_1_60_0.7z"
+with open(f7file, 'rb') as f:
+     z = py7zlib.Archive7z(f)
+     z.list()
+     
+
