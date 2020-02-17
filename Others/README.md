@@ -42,4 +42,5 @@ with open(f7file, 'rb') as f:
      z = py7zlib.Archive7z(f)
      z.list()
      
+proc sql; alter table work.shoes drop inventory;quit;
 
