@@ -855,8 +855,7 @@ zf.close()
 import zipfile
 zip_ref = zipfile.ZipFile(r'C:\Users\1567478\Desktop\New folder\201_Probe201405.zip', 'r')
 zip_ref.extractall(r'C:\Users\1567478\Desktop\New folder')
-zip_ref.close()
-		       
+zip_ref.close()		    	       
 #--------Unzip a folder
 import os, zipfile
 dir_name = 'C:\\SomeDirectory'
@@ -869,7 +868,24 @@ for item in os.listdir(dir_name): 			# loop through items in dir
         zip_ref.extractall(dir_name) 			# extract file to dir
         zip_ref.close() 				# close file
         #os.remove(file_name) 				# delete zipped file
-		
+#---------------------------------------------------------
+#Unzip .7z file
+from pyunpack import Archive
+import os
+#No need to import but but instal it "import patool"
+os.chdir(r'C:\Users\1567478\MyData\00.Work\test')
+Archive('qcpl_recoveries_201402.7z').extractall("")
+#----------------------------------------------------------
+#Unzip .7z folder
+import os
+from pyunpack import Archive
+dir_name = r'C:\Users\1567478\MyData\00.Work\test'
+extension = ".7z"
+os.chdir(dir_name) # change directory from working dir to dir with files
+for item in os.listdir(dir_name): 			# loop through items in dir
+    if item.endswith(extension): 			# check for ".zip" extension
+        file_name = os.path.abspath(item) 	# get full path of files
+        Archive(file_name).extractall("")
 #-------Copy data from one dir to another dir
 import shutil
 shutil.copy2(r'C:\Users\1567478\Downloads\9781441996121-c2.pdf', r'C:\Users\1567478\Downloads\test\9781441996121-c2.pdf')
