@@ -33,14 +33,6 @@ https://www.fluentu.com/blog/english/blogs-in-english/
 
 https://www.wordstream.com/blog/ws/2014/08/07/improve-writing-skills
 
-from pyunpack import Archive
-Archive('data.7z').extractall("<output path>")
+https://learning.blogs.nytimes.com/2014/05/08/12-ways-to-learn-vocabulary-with-the-new-york-times-2/
 
-import py7zlib
-f7file = "<mypath>/boost_1_60_0.7z"
-with open(f7file, 'rb') as f:
-     z = py7zlib.Archive7z(f)
-     z.list()
-     
-proc sql; alter table work.shoes drop inventory;quit;
-
+https://www.vocabulary.com/
