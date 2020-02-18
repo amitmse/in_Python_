@@ -814,7 +814,7 @@ cachedStopWords.update((set([x.lower() for x in ['and','I','A','And','So','arnt'
 ########################################################################################################################################
 
 ###################################### Zip a file/folder  using Python #####################################
-os.chdir(r'C:\Users\1567478\Downloads')
+os.chdir(r'C:\Users\AMIT\Downloads')
 		       
 #--------- Zip a file
 import os
@@ -827,22 +827,22 @@ jungle_zip.close()
 import os
 import zipfile
 fantasy_zip = zipfile.ZipFile('archive.zip', 'w')
-for folder, subfolders, files in os.walk(r'C:\Users\1567478\Downloads\Copy'):
+for folder, subfolders, files in os.walk(r'C:\Users\AMIT\Downloads\Copy'):
     for file in files:
         if file.endswith('.pdf'):
-            fantasy_zip.write(os.path.join(folder, file), os.path.relpath(os.path.join(folder,file), r'C:\Users\1567478\Downloads\Copy'), compress_type = zipfile.ZIP_DEFLATED)    
+            fantasy_zip.write(os.path.join(folder, file), os.path.relpath(os.path.join(folder,file), r'C:\Users\AMIT\Downloads\Copy'), compress_type = zipfile.ZIP_DEFLATED)    
 fantasy_zip.close()
 		       
 #----------Zip a folder
 import shutil
-os.chdir(r'C:\Users\1567478\Downloads')
+os.chdir(r'C:\Users\AMIT\Downloads')
 # Copy is the folder which is getting zipped
 shutil.make_archive('filename', 'zip', 'Copy')
 
 #------------Zip a Folder
 import os,zipfile
 # Change the directory where you want your new zip file to be
-os.chdir(r'C:\Users\1567478\Downloads')
+os.chdir(r'C:\Users\AMIT\Downloads')
 zf = zipfile.ZipFile('myfile.zip','w')
 # Copy is the folder which is getting zipped
 for dirnames,folders,files in os.walk('Copy'):
@@ -853,8 +853,8 @@ zf.close()
 
 #-----------Unzip a file
 import zipfile
-zip_ref = zipfile.ZipFile(r'C:\Users\1567478\Desktop\New folder\201_Probe201405.zip', 'r')
-zip_ref.extractall(r'C:\Users\1567478\Desktop\New folder')
+zip_ref = zipfile.ZipFile(r'C:\Users\AMIT\Desktop\New folder\201405.zip', 'r')
+zip_ref.extractall(r'C:\Users\AMIT\Desktop\New folder')
 zip_ref.close()		    	       
 #--------Unzip a folder
 import os, zipfile
@@ -873,13 +873,13 @@ for item in os.listdir(dir_name): 			# loop through items in dir
 from pyunpack import Archive
 import os
 #No need to import but but instal it "import patool"
-os.chdir(r'C:\Users\1567478\MyData\00.Work\test')
-Archive('qcpl_recoveries_201402.7z').extractall("")
+os.chdir(r'C:\Users\AMIT\MyData\00.Work\test')
+Archive('201402.7z').extractall("")
 #----------------------------------------------------------
 #Unzip .7z folder
 import os
 from pyunpack import Archive
-dir_name = r'C:\Users\1567478\MyData\00.Work\test'
+dir_name = r'C:\Users\AMIT\MyData\00.Work\test'
 extension = ".7z"
 os.chdir(dir_name) # change directory from working dir to dir with files
 for item in os.listdir(dir_name): 			# loop through items in dir
@@ -888,14 +888,14 @@ for item in os.listdir(dir_name): 			# loop through items in dir
         Archive(file_name).extractall("")
 #-------Copy data from one dir to another dir
 import shutil
-shutil.copy2(r'C:\Users\1567478\Downloads\9781441996121-c2.pdf', r'C:\Users\1567478\Downloads\test\9781441996121-c2.pdf')
+shutil.copy2(r'C:\Users\AMIT\Downloads\9781441996121-c2.pdf', r'C:\Users\AMIT\Downloads\test\9781441996121-c2.pdf')
 		       
 #-------Copy a folder one dir to another dir
 from distutils.dir_util import copy_tree
 		       
 #---------------------------------------
-fromDirectory = r'C:\Users\1567478\Downloads\Copy'
-toDirectory = r'C:\Users\1567478\Downloads\test'
+fromDirectory = r'C:\Users\AMIT\Downloads\Copy'
+toDirectory = r'C:\Users\AMIT\Downloads\test'
 copy_tree(fromDirectory, toDirectory)
 		       
 #---------------------------------------
