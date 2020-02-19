@@ -899,3 +899,18 @@ toDirectory = r'C:\Users\AMIT\Downloads\test'
 copy_tree(fromDirectory, toDirectory)
 		       
 #---------------------------------------
+#List of files inside folder and subfolder
+import os
+import win32api
+import win32con
+import win32security
+
+dirName=r"C:\Users\AMIT\Work\Utility\Not is use"
+
+listOfFiles = list()
+for (dirpath, dirnames, filenames) in os.walk(dirName):
+    listOfFiles += [os.path.join(dirpath, file) for file in filenames]
+
+for filename in listOfFiles:
+    name, domain, type = win32security.LookupAccountSid(None, win32security.GetFileSecurity(filename, win32security.OWNER_SECURITY_INFORMATION).GetSecurityDescriptorOwner())
+    print filename, "|Owner ->", name, "|Size ->", os.path.getsize(filename)
