@@ -899,18 +899,37 @@ toDirectory = r'C:\Users\AMIT\Downloads\test'
 copy_tree(fromDirectory, toDirectory)
 		       
 #---------------------------------------
-#List of files inside folder and subfolder
+### Get list of file with owner name, file size ##################
+#-----------------------------------------------------------------
 import os
 import win32api
 import win32con
 import win32security
-
-dirName=r"C:\Users\AMIT\Work\Utility\Not is use"
-
+import csv
+import pandas as pd
+import time
+#-----------------------------------------------------------------
+# Change below  
+dirName = r"C:\Users\AMIT\MyData\00.Work\Utility\Not is use"
+output  = 'test.csv'
+#----------------------------------------------------------------
+os.chdir(dirName)
+#----------------------------------------------------------------
+#Get list of files from folder and sub-folder
 listOfFiles = list()
 for (dirpath, dirnames, filenames) in os.walk(dirName):
     listOfFiles += [os.path.join(dirpath, file) for file in filenames]
-
+#----------------------------------------------------------------
+#Add owner of file, size of file and last access timestamp   
+Final = list()
 for filename in listOfFiles:
     name, domain, type = win32security.LookupAccountSid(None, win32security.GetFileSecurity(filename, win32security.OWNER_SECURITY_INFORMATION).GetSecurityDescriptorOwner())
-    print filename, "|Owner ->", name, "|Size ->", os.path.getsize(filename)
+    Final.append(tuple([filename]+[name.encode("utf-8")]+[int(os.path.getsize(filename))]+[time.strftime('%Y-%m-%d', time.localtime(os.path.getatime(filename)))]))
+#----------------------------------------------------------------
+#Convert data in pandas and export in csv
+labels = ['File', 'Owner - ID', 'Size in bytes', 'Last Access Time']
+df = pd.DataFrame.from_records(Final, columns=labels)
+df.to_csv(output, encoding='utf-8', index=False)
+df.head()
+#----------------------------------------------------------------
+####### END of Code #############################################
