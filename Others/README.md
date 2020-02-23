@@ -1,5 +1,21 @@
+# Statistical tests : 
 
-# To create Table:
+https://github.com/amitmse/in_Python_/blob/master/Others/Basic_Statistics.txt
+
+https://github.com/amitmse/in_Python_/blob/master/Others/Common%20Probability%20Distributions.pdf
+
+https://github.com/amitmse/in_Python_/blob/master/Others/t-test.py
+
+# Maths:
+
+https://github.com/amitmse/in_Python_/blob/master/Others/Matrix.txt
+
+https://github.com/amitmse/in_Python_/blob/master/Others/Stat.pdf
+
+https://github.com/amitmse/in_Python_/blob/master/Others/distribution.png
+
+
+# To create Table in GITHUB:
 
 You can create tables with pipes | and hyphens -. Hyphens are used to create each column's header, while pipes separate each column. You must include a blank line before your table in order for it to correctly render.
 
