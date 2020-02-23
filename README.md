@@ -20,7 +20,7 @@
 
 09. SVM : https://github.com/amitmse/in_Python_/tree/master/SVM
 
-10. Test : https://github.com/amitmse/in_Python_/blob/master/Others/Basic_Statistics.txt
+10. Type of data / Distribution / Test : https://github.com/amitmse/in_Python_/blob/master/Others/Basic_Statistics.txt
 
 #########################################################################################
 https://abirchakraborty.wordpress.com/
