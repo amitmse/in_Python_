@@ -25,6 +25,8 @@ Type of data:
 					Regression Analysis / Correlation (for two continuous variables/for relationship)
 					
 	One categorical and one continuous: T test (Anova when more than 2 category)
+	https://www.youtube.com/watch?v=tfiDu--7Gmg
+	
 ---------------------------------------------------------------------------------------------
 
 Probability Distribution:
