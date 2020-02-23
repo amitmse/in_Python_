@@ -452,3 +452,15 @@
 	# Recurrent neural network(RNN): Time series data
 ------------------------------------------------------
 https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/
+
+https://www.digitalvidya.com/blog/types-of-neural-networks/
+
+https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464
+
+https://towardsdatascience.com/types-of-neural-network-and-what-each-one-does-explained-d9b4c0ed63a1
+
+https://analyticsindiamag.com/6-types-of-artificial-neural-networks-currently-being-used-in-todays-technology/
+
+https://www.mygreatlearning.com/blog/types-of-neural-networks/
+
+https://blog.statsbot.co/neural-networks-for-beginners-d99f2235efca
