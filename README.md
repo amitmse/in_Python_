@@ -1,3 +1,14 @@
+# Due 
+- Info Val
+- Lift Table, KS
+- LR
+- CA
+- PSI
+- EDA
+- Var Transformation
+- Score scale by PDO
+- Profile Analysis
+
 # Hands on Machine Learning with PYTHON (2.7)
 
 ###########################################################################################
