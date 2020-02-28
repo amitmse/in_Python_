@@ -536,16 +536,16 @@ ds.describe()
 				print(row[1])
 
 ###***** Class ***************************************************************************************************
-	#A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. 
-	#The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.
-	# __doc__ : It gives us the docstring of that class. print(MyClass.__doc__) 
-	#[MyClass is a class and __doc__ to print text in the class]
-	#__init__() : To initialize the variables (defaults to zero).
-	#def :	It is called METHOD
-	#super() : It's function that will make the child class inherit all the methods and properties from its parent.
-	# https://www.makeuseof.com/tag/object-oriented-programming-explained/
-	#https://www.programiz.com/python-programming/object-oriented-programming
-	#------------------------------------------------------
+'''
+	A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. 
+	The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.
+	__doc__ : It gives us the docstring of that class. print(MyClass.__doc__) [MyClass is a class and __doc__ to print text in the class]
+	__init__() : To initialize the variables (defaults to zero).
+	def :	It is called METHOD
+	super() : It's function that will make the child class inherit all the methods and properties from its parent.
+	https://www.makeuseof.com/tag/object-oriented-programming-explained/
+	https://www.programiz.com/python-programming/object-oriented-programming
+'''
 			      
 		class exClass:
 			x1=123
