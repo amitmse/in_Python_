@@ -149,6 +149,11 @@ Cons:
 pip install sas7bdat
 from sas7bdat import SAS7BDAT
 
+from sas7bdat import SAS7BDAT
+data_path=r'C:\Users\AMIT\final.sas7bdat'
+reader = SAS7BDAT(data_path) 
+df = reader.to_data_frame()
+
 foo = SAS7BDAT('Y:\KR_PL_IFRS9_01\Data\Final\def_check1.sas7bdat')
 #converts to data frame
 ds = foo.to_data_frame()
@@ -539,7 +544,8 @@ ds.describe()
 '''
 	A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. 
 	The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.
-	__doc__ : It gives us the docstring of that class. print(MyClass.__doc__) [MyClass is a class and __doc__ to print text in the class]
+	__doc__ : It gives us the docstring of that class. print(MyClass.__doc__) 
+	[MyClass is a class and __doc__ to print text in the class]
 	__init__() : To initialize the variables (defaults to zero).
 	def :	It is called METHOD
 	super() : It's function that will make the child class inherit all the methods and properties from its parent.
