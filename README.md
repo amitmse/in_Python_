@@ -8,6 +8,7 @@
 - Var Transformation
 - Score scale by PDO
 - Profile Analysis
+- SQL
 
 # Hands on Machine Learning with PYTHON (2.7)
 
