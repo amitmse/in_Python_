@@ -1,6 +1,6 @@
 # Due 
 - Info Val
-- Lift Table, KS
+- Lift Table, KS, Gini, AR
 - LR
 - CA
 - PSI
