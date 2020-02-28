@@ -9,6 +9,7 @@
 - Score scale by PDO
 - Profile Analysis
 - SQL
+- S.N. number (first and last)
 
 # Hands on Machine Learning with PYTHON (2.7)
 
