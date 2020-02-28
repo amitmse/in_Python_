@@ -2,7 +2,7 @@
 
 Basic operation in Python 2.7
 
-# OOPS
+# Python Object Oriented Programming (OOP)
 
 - Abstraction : It hides the inner workings of an object when it’s not necessary to see them. 
                 All you need to know is that when you tell the piece to move, it moves.
