@@ -111,7 +111,7 @@ import os
 	df2 = df[df['Value_FINAL_l4'].isnull()] 
 
 ######### Create/Drop variable ###################################################
-#Drop a column		
+# Drop a column		
 	input_data=input_data.drop('reservation',1)
 
 # Create new variable
@@ -124,7 +124,7 @@ import os
 	event_dictionary ={'Music' : 1500, 'Poetry' : 800, 'Comedy' : 1200} 
 	df['Price'] = df['Event'].map(event_dictionary)
 	
-#variable category
+# variable category
 	def ff(row):
 	  if row['c'] > 339: 
 		val = 0
@@ -135,6 +135,13 @@ import os
 	  return val
 	a['hh'] = a.apply(ff, axis=1)
 
+# Generate sequence number from Index
+	df['flag']=df.index
+	
+# Generate condition based sequence number i.e. monthly customer information 
+	df['constant'] = 1
+	df['sn'] = df.groupby(['customer'])['constant'].cumsum()
+	
 ######## Subset data ###############################################################
 #Filter column		
 	df.loc[:, 'City']				# .loc is to access row and column together		
