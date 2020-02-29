@@ -23,7 +23,7 @@ import numpy as np
 	
 # Import data : Text 
 	txt = r'C:\Users\AMIT\Google Drive\Study\ML\07.Boosting\Dev1_Hilton_Model_Data.txt' # space delimiter (csv)
-	df = pd.read_table(txt, delim_whitespace=True) #df = pd.read_csv(txt , sep='	' , header=None)
+	df = pd.read_table(txt, delim_whitespace=True) #df = pd.read_csv(txt, sep='	')
 
 	txt = r'C:\Users\AMIT\Google Drive\Study\ML\07.Boosting\Dev1_Hilton_Model_Data_v2.txt' # comma delimiter
 	df = pd.read_csv(txt , sep=',' , header=None)
