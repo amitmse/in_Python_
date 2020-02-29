@@ -48,7 +48,9 @@ import os
 # in Excel
 	df.to_excel('File2.xlsx')
 	df.to_excel('File3.xls')
-
+# in TXT
+	df.to_csv('file2.txt',  header=True, index=False, sep=',')
+	
 ######### Basic data checks ########################################################
 
 # No. of Row & Column
