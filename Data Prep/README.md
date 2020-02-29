@@ -31,4 +31,3 @@ https://abirchakraborty.wordpress.com/
 - Score scale by PDO
 - Profile Analysis
 - SQL
-- S.N. number (first and last)
