@@ -7,6 +7,7 @@ from sas7bdat import SAS7BDAT
 import pandas as pd
 import numpy as np
 import os
+import pandasql as ps
 
 ###### Change working directory ###################################################
 	work = r'C:\Users\AMIT'		# Don't put "\" in the last ('C:\Users\AMIT\')
@@ -216,7 +217,11 @@ df.loc[ df.groupby('reservation',as_index=False).nth([0,-1]).index, 'flag' ] = 1
 	df['counter'].corr(df['Factor_Value'])
 # All variables
 	a=df.corr()
-		
+	
+####### SQL #########################################################################
+q1 = """SELECT reservation, count(*) as total FROM df group by 1"""
+print(ps.sqldf(q1, locals()))
+	
 #####################################################################################
 # End Of Code
 #####################################################################################
