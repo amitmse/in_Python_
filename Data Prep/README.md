@@ -30,4 +30,3 @@ https://abirchakraborty.wordpress.com/
 - Var Transformation
 - Score scale by PDO
 - Profile Analysis
-- SQL
