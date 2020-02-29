@@ -19,3 +19,16 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/EDA.py
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Monotonic_Binning.py
 
 https://abirchakraborty.wordpress.com/
+
+# Due 
+- Info Val
+- Lift Table, KS, Gini, AR
+- LR
+- CA
+- PSI
+- EDA
+- Var Transformation
+- Score scale by PDO
+- Profile Analysis
+- SQL
+- S.N. number (first and last)
