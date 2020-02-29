@@ -17,6 +17,14 @@ import numpy as np
 # Import data : CSV
 	df = pd.read_csv('train.csv', header=0)
 
+# Import data : excel (work on both xlsx & xls)
+	xlsx = r'C:\Users\AMIT\Google Drive\Study\ML\07.Boosting\Dev1_Hilton_Model_Data.xlsx'
+	df = pd.read_excel(xlsx)
+	
+# Import data : Text 
+	txt = r'C:\Users\AMIT\Google Drive\Study\ML\07.Boosting\Dev1_Hilton_Model_Data.txt' # space (csv) delimiter
+	df = pd.read_table(txt, delim_whitespace=True)
+
 # Convert data : numpy to pandas
 	df=pd.DataFrame(data_in_numpy)
 
