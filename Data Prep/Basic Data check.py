@@ -53,6 +53,9 @@ import os
 	
 ######### Basic data checks ########################################################
 
+# contents
+	df.info()
+	
 # No. of Row & Column
 	df.shape
 
@@ -64,7 +67,11 @@ import os
 		df.head()
 	# Print 20 obs
 		df.head(20)
-
+	# Print selected columns
+		df[['reservation', 'dd']].head(10)	
+	# Print last obs
+		df.tail(20)
+		
 # Numeric variable distribution
 	df.describe()
 
@@ -79,6 +86,7 @@ import os
 	# single variable
 		mean = df['float_col'].mean()
 	# aggregate
+		df1.mean()
 		pd.pivot_table(a, index= 'time_period', columns='hh' , values= "Factor_Value" , aggfunc=np.mean)
 		pd.pivot_table(a, index=['time_period'], columns=['hh'], values=['Factor_Value'],aggfunc={'Factor_Value':len,'Factor_Value':[np.sum, np.mean]},fill_value=0)
 
@@ -169,6 +177,10 @@ import os
 
 # Drop column
 	a.drop(['Discounted_Price','elderly','Price'],1)
+######## First dot and Last Dot ###################################################
+df['flag'] = ((df.reservation != df.reservation.shift()) | (df.reservation != df.reservation.shift(-1))).astype(int)
+df['flag'] = np.where((df.reservation != df.reservation.shift()) | (df.reservation != df.reservation.shift(-1)), 1, 0)
+df.loc[ df.groupby('reservation',as_index=False).nth([0,-1]).index, 'flag' ] = 1
 
 ######## Merge ####################################################################
 # Merge (inner,left,right,outer) https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
