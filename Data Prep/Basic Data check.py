@@ -6,6 +6,12 @@ pip install sas7bdat
 from sas7bdat import SAS7BDAT
 import pandas as pd
 import numpy as np
+import os
+
+###### Change working directory ###################################################
+	work = r'C:\Users\AMIT'		# Don't put "\" in the last ('C:\Users\AMIT\')
+	os.chdir(work)
+	os.getcwd()
 
 ###### Import data #################################################################
 
@@ -18,14 +24,14 @@ import numpy as np
 	df = pd.read_csv('train.csv', header=0)
 
 # Import data : excel (work on both xlsx & xls)
-	xlsx = r'C:\Users\AMIT\Google Drive\Study\ML\07.Boosting\Dev1_Hilton_Model_Data.xlsx'
+	xlsx = r'C:\Users\AMIT\Dev1_Model_Data.xlsx'
 	df = pd.read_excel(xlsx)
 	
 # Import data : Text 
-	txt = r'C:\Users\AMIT\Google Drive\Study\ML\07.Boosting\Dev1_Hilton_Model_Data.txt' # space delimiter (csv)
+	txt = r'C:\Users\AMIT\Dev1_Model_Data.txt' # space delimiter (csv)
 	df = pd.read_table(txt, delim_whitespace=True) #df = pd.read_csv(txt, sep='	')
 
-	txt = r'C:\Users\AMIT\Google Drive\Study\ML\07.Boosting\Dev1_Hilton_Model_Data_v2.txt' # comma delimiter
+	txt = r'C:\Users\AMIT\Dev1_Model_Data_v2.txt' # comma delimiter
 	df = pd.read_csv(txt , sep=',' , header=None)
 
 # Convert data : numpy to pandas
