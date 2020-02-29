@@ -40,6 +40,14 @@ import os
 # Convert data : pandas to numpy
 	data_in_numpy=df.as_matrix()
 	data_in_numpy=df.values
+	
+###### Export data #################################################################
+# in CSV
+	df.to_csv('file1.csv') 
+
+# in Excel
+	df.to_excel('File2.xlsx')
+	df.to_excel('File3.xls')
 
 ######### Basic data checks ########################################################
 
