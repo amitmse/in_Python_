@@ -168,22 +168,26 @@ import os
 	a.sort_values(by=['Factor_Value'], inplace=True, ascending=True)
 	a.sort_values(by=['Factor_Value'], inplace=True, ascending=False)
 
-
 ###### Duplicate #################################################################
 # Check Duplicate
 	a['time_period'].duplicated().any()
-#Count of duplicate
+	
+# Count of duplicate
 	a.duplicated(subset=['time_period'], keep='first').sum()
-#Row level duplicate
+	
+# Row level duplicate
 	a.duplicated(subset=None, keep='first').sum()
+	
 # Drop duplicate by column
 	a.drop_duplicates(subset =["time_period"], keep = False, inplace = True)
 	b.drop_duplicates(subset =["time_period"], keep = False, inplace = True) 
+	
 # Drop rows where all data is the same
 	my_dataframe = my_dataframe.drop_duplicates()
 
 # Drop column
 	a.drop(['Discounted_Price','elderly','Price'],1)
+	
 ######## First dot and Last Dot ###################################################
 df['flag'] = ((df.reservation != df.reservation.shift()) | (df.reservation != df.reservation.shift(-1))).astype(int)
 df['flag'] = np.where((df.reservation != df.reservation.shift()) | (df.reservation != df.reservation.shift(-1)), 1, 0)
