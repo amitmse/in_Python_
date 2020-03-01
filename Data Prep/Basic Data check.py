@@ -253,7 +253,10 @@ def generate_lift_table(input_data=None, dependent_variable=None, score_variable
     temp.rename(columns = {dependent_variable:'response', score_variable:'score'}, inplace = True) 
     temp['non_response'] = 1 - temp['response'] #temp.response
     #DEFINE 10 BUCKETS WITH EQUAL SIZE
-    temp['bucket'] = pd.qcut(temp.score, 10)
+    try:
+        temp['bucket'] = pd.qcut(temp.score, 10)
+    except:
+        temp['bucket'] = pd.qcut(temp.score,len(temp.score.dropna()),duplicates='drop')
     #GROUP THE DATA FRAME BY BUCKETS
     grouped = temp.groupby('bucket', as_index = False)
     #CREATE A SUMMARY DATA FRAME
