@@ -189,10 +189,16 @@ import pandasql as ps
 # Drop column
 	a.drop(['Discounted_Price','elderly','Price'],1)
 	
-######## First dot and Last Dot ###################################################
-df['flag'] = ((df.reservation != df.reservation.shift()) | (df.reservation != df.reservation.shift(-1))).astype(int)
-df['flag'] = np.where((df.reservation != df.reservation.shift()) | (df.reservation != df.reservation.shift(-1)), 1, 0)
-df.loc[ df.groupby('reservation',as_index=False).nth([0,-1]).index, 'flag' ] = 1
+######## Lag, Lead, First dot and Last Dot ###################################################
+# Lag 
+	df.reservation.shift())
+# Lead
+	df.reservation.shift(-1))
+	
+# First dot and Last Dot
+	df['flag'] = ((df.reservation != df.reservation.shift()) | (df.reservation != df.reservation.shift(-1))).astype(int)
+	df['flag'] = np.where((df.reservation != df.reservation.shift()) | (df.reservation != df.reservation.shift(-1)), 1, 0)
+	df.loc[ df.groupby('reservation',as_index=False).nth([0,-1]).index, 'flag' ] = 1
 
 ######## Merge ####################################################################
 # Merge (inner,left,right,outer) https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
