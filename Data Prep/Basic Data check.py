@@ -260,9 +260,7 @@ def generate_lift_table(input_data=None, dependent_variable=None, score_variable
     #GROUP THE DATA FRAME BY BUCKETS
     grouped = temp.groupby('bucket', as_index = False)
     #CREATE A SUMMARY DATA FRAME
-    #delete entire datframe [del agg1]
     agg1= pd.DataFrame()
-    #agg1 = pd.DataFrame(grouped.min().score, columns = ['min_scr'])
     agg1['min_scr'] = grouped.min().score
     agg1['max_scr'] = grouped.max().score
     agg1['total'] = agg1['total'] = grouped.sum().response + grouped.sum().non_response
@@ -281,8 +279,6 @@ def generate_lift_table(input_data=None, dependent_variable=None, score_variable
     lift_table['cum_pct_non_response']= (lift_table.cum_non_response/lift_table.non_response.sum()).apply('{0:.2%}'.format)
     #CALCULATE KS STATISTIC
     lift_table['ks'] = np.round(((lift_table.cum_non_response/lift_table.non_response.sum()) - (lift_table.cum_response/lift_table.response.sum()))*100,2)
-    #lift_table['ks']= np.round((lift_table.cum_non_response/lift_table.non_response.sum() - lift_table.cum_response/lift_table.response.sum()),4)* 100
-    #lift_table['ks']= np.round(((lift_table.non_response/data.non_response.sum()).cumsum() - (lift_table.response/data.response.sum()).cumsum()),4)* 100
     #DEFINE A FUNCTION TO FLAG MAX KS
     flag = lambda x: '<----' if x == lift_table.ks.max() else ''
     #FLAG OUT MAX KS
