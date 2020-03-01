@@ -94,6 +94,13 @@ import pandasql as ps
 # Global Variable
 	global test_var	# test_var is a global variable
 	
+# Random number
+	df['Random_score'] = np.random.randint(0,1000,size=(len(df),1))
+	df['Random_variable'] = np.random.uniform(size=df.shape[0])
+	
+# Sampleling 
+	df1 = df.sample(frac =.7) 
+
 ####### Missing ##################################################################		
 
 # Total missing count
@@ -173,6 +180,9 @@ import pandasql as ps
 	a.sort_values(by=['Factor_Value'], inplace=True, ascending=False)
 
 ###### Duplicate #################################################################
+# Duplicate daatset 
+	df_copy = df.copy()
+	
 # Check Duplicate
 	a['time_period'].duplicated().any()
 	
@@ -234,6 +244,50 @@ import pandasql as ps
 ####### SQL #########################################################################
 q1 = """SELECT reservation, count(*) as total FROM df group by 1"""
 print(ps.sqldf(q1, locals()))
+	
+	
+####### Lift table/KS #################################################################
+def generate_lift_table(input_data=None, dependent_variable=None, score_variable=None):
+    ## Generate lift table, ks table
+    temp = pd.DataFrame(input_data, columns=[dependent_variable, score_variable])
+    temp.rename(columns = {dependent_variable:'response', score_variable:'score'}, inplace = True) 
+    temp['non_response'] = 1 - temp['response'] #temp.response
+    #DEFINE 10 BUCKETS WITH EQUAL SIZE
+    temp['bucket'] = pd.qcut(temp.score, 10)
+    #GROUP THE DATA FRAME BY BUCKETS
+    grouped = temp.groupby('bucket', as_index = False)
+    #CREATE A SUMMARY DATA FRAME
+    #delete entire datframe [del agg1]
+    agg1= pd.DataFrame()
+    #agg1 = pd.DataFrame(grouped.min().score, columns = ['min_scr'])
+    agg1['min_scr'] = grouped.min().score
+    agg1['max_scr'] = grouped.max().score
+    agg1['total'] = agg1['total'] = grouped.sum().response + grouped.sum().non_response
+    agg1['pct_total'] = (agg1.total/agg1.total.sum()).apply('{0:.2%}'.format)	
+    agg1['non_response'] = grouped.sum().non_response
+    agg1['pct_non_response']= (agg1.non_response/agg1.non_response.sum()).apply('{0:.2%}'.format)	
+    agg1['response'] = grouped.sum().response
+    agg1['pct_response'] = (agg1.response/agg1.response.sum()).apply('{0:.2%}'.format)
+    agg1['bad_rate'] = (agg1.response  / agg1.total).apply('{0:.2%}'.format)
+    agg1['odds']= (agg1.non_response / agg1.response).apply('{0:.2f}'.format)
+    #SORT THE DATA FRAME BY SCORE
+    lift_table = (agg1.sort_values(by = 'min_scr')).reset_index(drop = True)
+    lift_table['cum_response'] = lift_table.response.cumsum()
+    lift_table['cum_non_response'] = lift_table.non_response.cumsum()
+    lift_table['cum_pct_response'] = (lift_table.cum_response/lift_table.response.sum()).apply('{0:.2%}'.format)	
+    lift_table['cum_pct_non_response']= (lift_table.cum_non_response/lift_table.non_response.sum()).apply('{0:.2%}'.format)
+    #CALCULATE KS STATISTIC
+    lift_table['ks'] = np.round(((lift_table.cum_non_response/lift_table.non_response.sum()) - (lift_table.cum_response/lift_table.response.sum()))*100,2)
+    #lift_table['ks']= np.round((lift_table.cum_non_response/lift_table.non_response.sum() - lift_table.cum_response/lift_table.response.sum()),4)* 100
+    #lift_table['ks']= np.round(((lift_table.non_response/data.non_response.sum()).cumsum() - (lift_table.response/data.response.sum()).cumsum()),4)* 100
+    #DEFINE A FUNCTION TO FLAG MAX KS
+    flag = lambda x: '<----' if x == lift_table.ks.max() else ''
+    #FLAG OUT MAX KS
+    lift_table['max_ks'] = lift_table.ks.apply(flag)
+    return lift_table
+    
+lift_table=generate_lift_table(input_data=df1, dependent_variable='reservation', score_variable='Random_score')
+lift_table
 	
 #####################################################################################
 # End Of Code
