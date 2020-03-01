@@ -91,6 +91,9 @@ import pandasql as ps
 		pd.pivot_table(a, index= 'time_period', columns='hh' , values= "Factor_Value" , aggfunc=np.mean)
 		pd.pivot_table(a, index=['time_period'], columns=['hh'], values=['Factor_Value'],aggfunc={'Factor_Value':len,'Factor_Value':[np.sum, np.mean]},fill_value=0)
 
+# Global Variable
+	global test_var	# test_var is a global variable
+	
 ####### Missing ##################################################################		
 
 # Total missing count
@@ -200,6 +203,10 @@ import pandasql as ps
 	df['flag'] = np.where((df.reservation != df.reservation.shift()) | (df.reservation != df.reservation.shift(-1)), 1, 0)
 	df.loc[ df.groupby('reservation',as_index=False).nth([0,-1]).index, 'flag' ] = 1
 
+# Compare with previous value
+	df.dd.eq(df.dd.shift())
+	df.dd == df.dd.shift()
+	
 ######## Merge ####################################################################
 # Merge (inner,left,right,outer) https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
 	c = pd.merge(a, b, how='left', on=['time_period'],indicator='Key in dataset')
