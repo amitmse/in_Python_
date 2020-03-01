@@ -98,7 +98,7 @@ import pandasql as ps
 	df['Random_score'] = np.random.randint(0,1000,size=(len(df),1))
 	df['Random_variable'] = np.random.uniform(size=df.shape[0])
 	
-# Sampleling 
+# Sampling 
 	df1 = df.sample(frac =.7) 
 
 ####### Missing ##################################################################		
@@ -113,12 +113,12 @@ import pandasql as ps
 	df.apply(lambda x: sum(x.isnull().values), axis = 1)
 # Fill Missing		
 	df3['float_col'].fillna(mean)
-#Drop Missing		
+# Drop Missing		
 	df.dropna()
-#subset data without missing
+# subset data without missing
 	df1 = df[~df['Value_FINAL_l4'].isnull()]
 	df1 = df.dropna(axis=0, subset=['Value_FINAL_l4'])
-#subset data only for missing
+# subset data only for missing
 	df2 = df[df['Value_FINAL_l4'].isnull()] 
 
 ######### Create/Drop variable ###################################################
@@ -292,6 +292,10 @@ def generate_lift_table(input_data=None, dependent_variable=None, score_variable
 lift_table=generate_lift_table(input_data=df1, dependent_variable='reservation', score_variable='Random_score')
 lift_table
 	
+	
+# Another way to define argument in function
+	def calc_cumulative_gains(df: pd.DataFrame, actual_col: str, predicted_col:str, probability_col:str):
+
 #####################################################################################
 # End Of Code
 #####################################################################################
