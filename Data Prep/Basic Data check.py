@@ -245,45 +245,59 @@ import pandasql as ps
 q1 = """SELECT reservation, count(*) as total FROM df group by 1"""
 print(ps.sqldf(q1, locals()))
 	
-	
 ####### Lift table/KS #################################################################
 def generate_lift_table(input_data=None, dependent_variable=None, score_variable=None):
-    ## Generate lift table, ks table
-    temp = pd.DataFrame(input_data, columns=[dependent_variable, score_variable])
-    temp.rename(columns = {dependent_variable:'response', score_variable:'score'}, inplace = True) 
-    temp['non_response'] = 1 - temp['response'] #temp.response
-    #DEFINE 10 BUCKETS WITH EQUAL SIZE
-    try:
-        temp['bucket'] = pd.qcut(temp.score, 10)
-    except:
-        temp['bucket'] = pd.qcut(temp.score,len(temp.score.dropna()),duplicates='drop')
-    #GROUP THE DATA FRAME BY BUCKETS
-    grouped = temp.groupby('bucket', as_index = False)
-    #CREATE A SUMMARY DATA FRAME
-    agg1= pd.DataFrame()
-    agg1['min_scr'] = grouped.min().score
-    agg1['max_scr'] = grouped.max().score
-    agg1['total'] = agg1['total'] = grouped.sum().response + grouped.sum().non_response
-    agg1['pct_total'] = (agg1.total/agg1.total.sum()).apply('{0:.2%}'.format)	
-    agg1['non_response'] = grouped.sum().non_response
-    agg1['pct_non_response']= (agg1.non_response/agg1.non_response.sum()).apply('{0:.2%}'.format)	
-    agg1['response'] = grouped.sum().response
-    agg1['pct_response'] = (agg1.response/agg1.response.sum()).apply('{0:.2%}'.format)
-    agg1['bad_rate'] = (agg1.response  / agg1.total).apply('{0:.2%}'.format)
-    agg1['odds']= (agg1.non_response / agg1.response).apply('{0:.2f}'.format)
-    #SORT THE DATA FRAME BY SCORE
-    lift_table = (agg1.sort_values(by = 'min_scr')).reset_index(drop = True)
-    lift_table['cum_response'] = lift_table.response.cumsum()
-    lift_table['cum_non_response'] = lift_table.non_response.cumsum()
-    lift_table['cum_pct_response'] = (lift_table.cum_response/lift_table.response.sum()).apply('{0:.2%}'.format)	
-    lift_table['cum_pct_non_response']= (lift_table.cum_non_response/lift_table.non_response.sum()).apply('{0:.2%}'.format)
-    #CALCULATE KS STATISTIC
-    lift_table['ks'] = np.round(((lift_table.cum_non_response/lift_table.non_response.sum()) - (lift_table.cum_response/lift_table.response.sum()))*100,2)
-    #DEFINE A FUNCTION TO FLAG MAX KS
-    flag = lambda x: '<----' if x == lift_table.ks.max() else ''
-    #FLAG OUT MAX KS
-    lift_table['max_ks'] = lift_table.ks.apply(flag)
-    return lift_table
+	## Generate lift table, ks table
+	temp = pd.DataFrame(input_data, columns=[dependent_variable, score_variable])
+	temp.rename(columns = {dependent_variable:'response', score_variable:'score'}, inplace = True) 
+	temp['non_response'] = 1 - temp['response'] #temp.response
+	#DEFINE 10 BUCKETS WITH EQUAL SIZE
+	try:
+		temp['bucket'] = pd.qcut(temp.score, 10)
+	except:
+		temp['Rank'] = temp["score"].rank(pct=True)
+		temp['bucket'] = pd.qcut(temp.Rank, 10)
+	  	#temp=temp.drop('Rank',1)
+	  	#temp['bucket'] = pd.qcut(temp.score,len(temp.score.dropna()),duplicates='drop')
+	#GROUP THE DATA FRAME BY BUCKETS
+	grouped = temp.groupby('bucket', as_index = False)
+	#CREATE A SUMMARY DATA FRAME
+	agg1= pd.DataFrame()
+	agg1['min_scr'] = grouped.min().score
+	agg1['max_scr'] = grouped.max().score
+	agg1['total'] = agg1['total'] = grouped.sum().response + grouped.sum().non_response
+	agg1['pct_total'] = (agg1.total/agg1.total.sum())
+	agg1['non_response'] = grouped.sum().non_response
+	agg1['pct_non_response']= (agg1.non_response/agg1.non_response.sum())
+	agg1['response'] = grouped.sum().response
+	agg1['pct_response'] = (agg1.response/agg1.response.sum()).apply('{0:.2%}'.format)
+	agg1['bad_rate'] = (agg1.response / agg1.total).apply('{0:.2%}'.format)
+	agg1['odds']= (agg1.non_response / agg1.response).apply('{0:.2f}'.format)
+	#SORT THE DATA FRAME BY SCORE
+	lift_table = (agg1.sort_values(by = 'min_scr')).reset_index(drop = True)
+	lift_table['cum_response'] = lift_table.response.cumsum()
+	lift_table['cum_non_response'] = lift_table.non_response.cumsum()
+	lift_table['cum_pct_response'] = (lift_table.cum_response/lift_table.response.sum())
+	lift_table['cum_pct_non_response']= (lift_table.cum_non_response/lift_table.non_response.sum()).apply('{0:.2%}'.format)
+	#CALCULATE KS STATISTIC
+	lift_table['ks'] = np.round(((lift_table.cum_non_response/lift_table.non_response.sum()) - (lift_table.cum_response/lift_table.response.sum()))*100,2).abs()
+	#DEFINE A FUNCTION TO FLAG MAX KS
+	flag = lambda x: '<----' if x == lift_table.ks.max() else ''
+	#FLAG OUT MAX KS
+	lift_table['max_ks'] = lift_table.ks.apply(flag)
+	#accuracy ratio (AR) using ROC method 
+	lift_table['AUC_by_ROC'] = ((lift_table['cum_pct_response'] + lift_table.cum_pct_response.shift().fillna(0))*lift_table['pct_non_response'])/2
+	#accuracy ratio (AR) using CAP method
+	lift_table['AUC_by_CAP'] = ((lift_table['cum_pct_response'] + lift_table.cum_pct_response.shift().fillna(0))*lift_table['pct_total'])/2
+	# AR is same from ROC and CAP method. Using only ROC for final AR 
+	lift_table['AR']= ((2*lift_table.AUC_by_ROC.sum())-1)
+	lift_table['AR']= (lift_table['AR']).apply('{0:.2%}'.format)
+	lift_table['AUC_by_ROC']= (lift_table['AUC_by_ROC']).apply('{0:.2%}'.format)
+	lift_table['AUC_by_CAP']= (lift_table['AUC_by_CAP']).apply('{0:.2%}'.format)
+	lift_table['cum_pct_response'] = (lift_table['cum_pct_response']).apply('{0:.2%}'.format)
+	lift_table['pct_non_response']= (lift_table['pct_non_response']).apply('{0:.2%}'.format)
+	lift_table['pct_total'] = (lift_table['pct_total']).apply('{0:.2%}'.format)
+	return lift_table
     
 lift_table=generate_lift_table(input_data=df1, dependent_variable='reservation', score_variable='Random_score')
 lift_table
