@@ -153,6 +153,11 @@ import pandasql as ps
 	df['constant'] = 1
 	df['sn'] = df.groupby(['customer'])['constant'].cumsum()
 	
+####### Bin of a variable assigned to another variable ############################
+ser, bins = pd.qcut(df["final_score"], 10, retbins=True, labels=False)
+df['binned'] = pd.cut(df['final_score'], bins)
+df.head()
+	
 ######## Subset data ###############################################################
 #Filter column		
 	df.loc[:, 'City']				# .loc is to access row and column together		
