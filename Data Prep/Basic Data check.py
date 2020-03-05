@@ -266,6 +266,7 @@ def generate_lift_table(input_data=None, dependent_variable=None, score_variable
 	  	#temp['bucket'] = pd.qcut(temp.score,len(temp.score.dropna()),duplicates='drop')
 	#GROUP THE DATA FRAME BY BUCKETS
 	grouped = temp.groupby('bucket', as_index = False)
+	####################################################################
 	#CREATE A SUMMARY DATA FRAME
 	agg1= pd.DataFrame()
 	agg1['min_scr'] = grouped.min().score
@@ -278,6 +279,7 @@ def generate_lift_table(input_data=None, dependent_variable=None, score_variable
 	agg1['pct_response'] = (agg1.response/agg1.response.sum()).apply('{0:.2%}'.format)
 	agg1['bad_rate'] = (agg1.response / agg1.total).apply('{0:.2%}'.format)
 	agg1['odds']= (agg1.non_response / agg1.response).apply('{0:.2f}'.format)
+	##################################################################
 	#SORT THE DATA FRAME BY SCORE
 	lift_table = (agg1.sort_values(by = 'min_scr')).reset_index(drop = True)
 	lift_table['cum_response'] = lift_table.response.cumsum()
@@ -337,6 +339,7 @@ def PSI(development_data=None , validation_data=None, score_variable=None, numbe
 	val_agg['Max_Score_Val'] = val_grouped.max().score
 	val_agg['Total_Val'] = val_grouped.count().score
 	val_agg['Pct_Total_Val'] = val_agg.Total_Val/val_agg.Total_Val.sum()
+	###########################################################
 	dev_val_agg = pd.merge(dev_agg, val_agg, how='left', on=['Group'],indicator='Key in dataset')
 	dev_val_agg['PSI'] = ((dev_agg['Pct_Total_Dev'] - val_agg['Pct_Total_Val'])*(np.log(dev_agg['Pct_Total_Dev'] / val_agg['Pct_Total_Val'])))
 	dev_val_agg=dev_val_agg.drop(['Group','Min_Score_Val','Max_Score_Val','Key in dataset'],1)
@@ -345,6 +348,7 @@ def PSI(development_data=None , validation_data=None, score_variable=None, numbe
 	dev_val_agg['PSI'] = (dev_val_agg['PSI']).apply('{0:.1%}'.format)
 	dev_val_agg['Pct_Total_Dev'] =(dev_val_agg['Pct_Total_Dev']).apply('{0:.0%}'.format)
 	dev_val_agg['Pct_Total_Val'] =(dev_val_agg['Pct_Total_Val']).apply('{0:.0%}'.format)
+	#############################################################
 	return dev_val_agg
 
 dev=PSI(development_data=df , validation_data=df1, score_variable='final_score', number_of_bins=10 )
