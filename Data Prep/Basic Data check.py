@@ -306,10 +306,62 @@ def generate_lift_table(input_data=None, dependent_variable=None, score_variable
     
 lift_table=generate_lift_table(input_data=df1, dependent_variable='reservation', score_variable='Random_score')
 lift_table
-	
-	
+
+### PSI ##########################################################################################
+def PSI(development_data=None , validation_data=None, score_variable=None, number_of_bins=10 ):
+	####### Dev ##################################################
+	dev = pd.DataFrame(development_data, columns=[score_variable])
+	dev.rename(columns = {score_variable:'score'}, inplace = True)
+	#Create score bin
+	ser, score_bins = pd.qcut(dev['score'], number_of_bins, retbins=True, labels=range(0,number_of_bins))
+	#Apply above score bin on dev data 
+	dev['binned'] = pd.cut(dev['score'], score_bins,labels=range(0,number_of_bins))
+	dev_grouped = dev.groupby('binned', as_index = False)
+	#CREATE A SUMMARY DATA FRAME
+	dev_agg= pd.DataFrame()
+	dev_agg['Group'] = dev_grouped.min().binned
+	dev_agg['Min_Score_Dev'] = dev_grouped.min().score
+	dev_agg['Max_Score_Dev'] = dev_grouped.max().score
+	dev_agg['Total_Dev'] = dev_grouped.count().score
+	dev_agg['Pct_Total_Dev'] = dev_agg.Total_Dev/dev_agg.Total_Dev.sum()
+	####### Val ##################################################
+	#Apply above same score bin on val data
+	val = pd.DataFrame(validation_data, columns=[score_variable])
+	val.rename(columns = {score_variable:'score'}, inplace = True)
+	val['binned'] = pd.cut(val['score'], score_bins,labels=range(0,number_of_bins))
+	val_grouped = val.groupby('binned', as_index = False)
+	#CREATE A SUMMARY DATA FRAME
+	val_agg= pd.DataFrame()
+	val_agg['Group'] = val_grouped.min().binned
+	val_agg['Min_Score_Val'] = val_grouped.min().score
+	val_agg['Max_Score_Val'] = val_grouped.max().score
+	val_agg['Total_Val'] = val_grouped.count().score
+	val_agg['Pct_Total_Val'] = val_agg.Total_Val/val_agg.Total_Val.sum()
+	dev_val_agg = pd.merge(dev_agg, val_agg, how='left', on=['Group'],indicator='Key in dataset')
+	dev_val_agg['PSI'] = ((dev_agg['Pct_Total_Dev'] - val_agg['Pct_Total_Val'])*(np.log(dev_agg['Pct_Total_Dev'] / val_agg['Pct_Total_Val'])))
+	dev_val_agg=dev_val_agg.drop(['Group','Min_Score_Val','Max_Score_Val','Key in dataset'],1)
+	total=(pd.DataFrame((dev_val_agg.apply(np.sum)).values, index=(dev_val_agg.apply(np.sum)).keys()).T).assign(Min_Score_Dev=None, Max_Score_Dev=None)
+	dev_val_agg=dev_val_agg.append(total, ignore_index=True)
+	dev_val_agg['PSI'] = (dev_val_agg['PSI']).apply('{0:.1%}'.format)
+	dev_val_agg['Pct_Total_Dev'] =(dev_val_agg['Pct_Total_Dev']).apply('{0:.0%}'.format)
+	dev_val_agg['Pct_Total_Val'] =(dev_val_agg['Pct_Total_Val']).apply('{0:.0%}'.format)
+	return dev_val_agg
+
+dev=PSI(development_data=df , validation_data=df1, score_variable='final_score', number_of_bins=10 )
+
+###  ##########################################################################################
+
+
 # Another way to define argument in function
-	def calc_cumulative_gains(df: pd.DataFrame, actual_col: str, predicted_col:str, probability_col:str):
+#def calc_cumulative_gains(df: pd.DataFrame, actual_col: str, predicted_col:str, probability_col:str):
+
+#notmiss = df[['binned']][df.binned.notnull()]
+#notmiss.isnull().sum()
+#miss = df1[['X','Y']][df1.X.isnull()]
+#notmiss = df1[['X','Y']][df1.X.notnull()]
+
+	
+
 
 #####################################################################################
 # End Of Code
