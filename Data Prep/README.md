@@ -22,8 +22,8 @@ https://abirchakraborty.wordpress.com/
 
 # Due 
 - Info Val
-- LR
 - CA
 - Var Transformation
+- LR
 - Score scale by PDO
 - Profile Analysis
