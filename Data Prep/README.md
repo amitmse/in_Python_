@@ -22,11 +22,8 @@ https://abirchakraborty.wordpress.com/
 
 # Due 
 - Info Val
-- Lift Table, KS, Gini, AR
 - LR
 - CA
-- PSI
-- EDA
 - Var Transformation
 - Score scale by PDO
 - Profile Analysis
