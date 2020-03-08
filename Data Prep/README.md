@@ -4,8 +4,6 @@ Basic operation in Python 2.7
 
 # Basic Syntex : 
 
--  Basic syntax
-
 -  SAS to Python : https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20check.py
 
 -  sample code : https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Info.py
