@@ -155,7 +155,7 @@ import pandasql as ps
 	
 ####### Bin of a variable assigned to another variable ############################
 ser, bins = pd.qcut(df["final_score"], 10, retbins=True, labels=False)
-df['binned'] = pd.cut(df['final_score'], bins)
+df['binned'] = pd.cut(df['final_score'], bins) # add catogery in this 
 df.head()
 	
 ######## Subset data ###############################################################
