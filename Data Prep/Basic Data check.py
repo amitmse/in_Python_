@@ -122,6 +122,12 @@ import pandasql as ps
 # subset data without missing
 	df1 = df[~df['Value_FINAL_l4'].isnull()]
 	df1 = df.dropna(axis=0, subset=['Value_FINAL_l4'])
+	
+	# Missing row but not NAN 
+	nan_value = float("NaN")
+	df1.replace("", nan_value, inplace=True)
+	df1.dropna(subset = ['Metrics'], inplace=True)
+
 # subset data only for missing
 	df2 = df[df['Value_FINAL_l4'].isnull()] 
 
