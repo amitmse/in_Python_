@@ -270,7 +270,6 @@ independent_variable_val 	= df_val[independent_variable_name]
 dependent_variable_val 		= df_val[dependent_variable_name]
 
 ############################################################################################################
-#P value unavailable in skleran
 ''' 
 clf = LogisticRegression(penalty='none', fit_intercept=True, random_state=None).fit(independent_variable, dependent_variable)
 clf.score(independent_variable, dependent_variable)
@@ -293,7 +292,164 @@ result.summary() #Method
 result.summary2() #AIC, BIC
 print (np.exp(result.params)) # odds ratios only
 result.params #coefficients 
+pd.read_html(result.summary().tables[1].as_html(), header=0, index_col=0)[0]
 
+nan_value = float("NaN")
+summary1 = {}
+for item in result.summary().tables[0].data:
+    summary1[item[0].strip()] = item[1].strip()
+    summary1[item[2].strip()] = item[3].strip()
+summary1 = pd.DataFrame(summary1.items(), columns=['Metrics', 'Value'])
+summary1.replace("", nan_value, inplace=True)
+summary1.dropna(subset = ['Metrics'], inplace=True)
+summary1 = summary1[~summary1.Metrics.isin(['Dep. Variable:','Date:','Time:'])]
+
+summary2_1=result.summary2().tables[0].loc[:, [0, 1]]
+summary2_1.rename(columns = {0:'Metrics',1:'Value'}, inplace = True)
+summary2_1.replace("", nan_value, inplace=True)
+summary2_1.dropna(subset = ['Metrics'], inplace=True)
+summary2_1 = summary2_1[~summary2_1.Metrics.isin(['Model:','No. Observations:','Df Model:','Df Residuals:','Converged:'])]
+
+summary2_2=result.summary2().tables[0].loc[:, [2, 3]]
+summary2_2.rename(columns = {2:'Metrics',3:'Value'}, inplace = True)
+summary2_2.replace("", nan_value, inplace=True)
+summary2_2.dropna(subset = ['Metrics'], inplace=True)
+summary2_2 = summary2_2[~summary2_2.Metrics.isin(['Pseudo R-squared:','Log-Likelihood:','LL-Null:','LLR p-value:'])]
+
+summary_all = None
+summary_all=pd.concat([summary1,summary2_1,summary2_2])
+summary_all.reset_index(drop=True, inplace=True)
+
+result.summary2().tables[1] #more decimal places
+
+######## Check and update ################################################################################################################################
+'''
+def probability_calculation(coefficient):
+		#calculate Yhat or probability or predicted value
+		def logit_function(independent_variable_and_coefficient):
+		#Logit function/Sigmoid Function
+			return 1 / (1 + np.exp(-independent_variable_and_coefficient))
+
+		return logit_function(np.dot(independent_variable, coefficient))
+
+
+#actual_score = np.column_stack((dependent_variable, np.around(1000*probability_calculation(output_estimate_logistic_model[0]))))
+'''
+
+#predictions = result.predict(independent_variable)
+df['odds']=-3.670706 + (0.022926*df['NOP_before_purchase']) - (0.061525*df['nop_last_visit']) - (0.913963*df['no_of_visits_last_7_days']) + (3.176300*df['no_of_purchases_last_7_days']) + (0.195037*df['Hilton_Honors_Status_Ever_flag'])
+df['prob']= 1 / (1 + np.exp(-df['odds']))
+
+def calculate_ROC(input=None, target=None,score=None ):
+        actual_predicted 		= 	np.column_stack((input[target], input[score]))
+        actual_predicted.dtype 	= 	{'names':['target', 'predicted_value'], 'formats':[np.float64, np.float64]}
+        concordant 				= 	0
+        discordant 				= 	0
+        tied					=	0
+        for i in actual_predicted[actual_predicted['target']==1]['predicted_value']:
+            for j in actual_predicted[actual_predicted['target']==0]['predicted_value']:
+                if i > j:
+                    concordant = concordant + 1
+                elif j > i:
+                    discordant = discordant + 1
+                else:
+                    tied  = tied + 1		
+
+        total_pairs 			= 	concordant + discordant + tied
+        percent_concordant 		= 	round((float(concordant) / float(total_pairs))*100,1)
+        percent_discordant 		= 	round((float(discordant) / float(total_pairs))*100,1)
+        percent_tied 			= 	round((float(tied) / float(total_pairs))*100,1)
+        roc 					= 	((float(concordant) / float(total_pairs)) + 0.5 * (float(tied) / float(total_pairs)))
+        gini 					= 	(2*((float(concordant) / float(total_pairs)) + 0.5 * (float(tied) / float(total_pairs))) - 1)
+        
+        metrics_type 			= np.dtype([('Col1', 'S100'), ('Col2', 'float64')])
+        ln_1 					= np.asarray([("Percent Concordant:", 	percent_concordant)], dtype=metrics_type)
+        ln_2 					= np.asarray([("Percent Discordant:", 	percent_discordant)], dtype=metrics_type)
+        ln_3 					= np.asarray([("Percent Tied:",			percent_tied)], dtype=metrics_type)	
+        ln_4 					= np.asarray([("Total Pairs:", total_pairs		)], dtype=metrics_type)
+        ln_5 					= np.asarray([("ROC:", roc						)], dtype=metrics_type)
+        ln_6 					= np.asarray([("Gini:",gini 					)], dtype=metrics_type)	
+        
+        metrics = np.array([], dtype=metrics_type)
+        for i in [ln_1, ln_2, ln_3, ln_4, ln_5, ln_6]:
+            metrics= np.hstack((metrics, i))
+            
+        del actual_predicted, ln_1, ln_2, ln_3, ln_4, ln_5, ln_6
+            
+        return metrics
+    
+    
+metrics = pd.DataFrame(calculate_ROC(input=df, target='reservation',score='prob' ))
+metrics.rename(columns = {'Col1':'Metrics','Col2':'Value'}, inplace = True)
+metrics['Metrics'] = metrics['Metrics'].str.decode('utf-8')
+metrics
+
+
+
+def generate_lift_table(input_data=None, dependent_variable=None, score_variable=None, high_score_for_bad=False):
+    ## Generate lift table, ks table
+    temp = pd.DataFrame(input_data, columns=[dependent_variable, score_variable])
+    temp.rename(columns = {dependent_variable:'response', score_variable:'score'}, inplace = True) 
+    temp['non_response'] = 1 - temp['response'] #temp.response
+    #DEFINE 10 BUCKETS WITH EQUAL SIZE
+    try:
+        temp['bucket'] = pd.qcut(temp.score, 10)
+    except:
+        temp['Rank'] = temp["score"].rank(method='first')
+        temp['bucket'] = pd.qcut(temp.Rank, 10)
+        #temp=temp.drop('Rank',1)
+        #temp['bucket'] = pd.qcut(temp.score,len(temp.score.dropna()),duplicates='drop')
+        
+    #GROUP THE DATA FRAME BY BUCKETS
+    grouped = temp.groupby('bucket', as_index = False)
+    
+    ####################################################################
+    #CREATE A SUMMARY DATA FRAME
+    agg1= pd.DataFrame()
+    agg1['min_scr'] = grouped.min().score
+    agg1['max_scr'] = grouped.max().score
+    agg1['total'] = agg1['total'] = grouped.sum().response + grouped.sum().non_response
+    agg1['pct_total'] = (agg1.total/agg1.total.sum())
+    agg1['non_response'] = grouped.sum().non_response
+    agg1['pct_non_response']= (agg1.non_response/agg1.non_response.sum())
+    agg1['response'] = grouped.sum().response
+    agg1['pct_response'] = (agg1.response/agg1.response.sum()).apply('{0:.2%}'.format)
+    agg1['bad_rate'] = (agg1.response / agg1.total).apply('{0:.2%}'.format)
+    agg1['odds']= (agg1.non_response / agg1.response).apply('{0:.2f}'.format)
+    ##################################################################
+    
+    #SORT THE DATA FRAME BY SCORE
+    if high_score_for_bad == True:
+        lift_table = (agg1.sort_values(by = 'min_scr', ascending=False)).reset_index(drop = True)
+    else:
+        lift_table = (agg1.sort_values(by = 'min_scr', ascending=True)).reset_index(drop = True)
+    
+    lift_table['cum_response'] = lift_table.response.cumsum()
+    lift_table['cum_non_response'] = lift_table.non_response.cumsum()
+    lift_table['cum_pct_response'] = (lift_table.cum_response/lift_table.response.sum())
+    lift_table['cum_pct_non_response']= (lift_table.cum_non_response/lift_table.non_response.sum()).apply('{0:.2%}'.format)
+    #CALCULATE KS STATISTIC
+    lift_table['ks'] = np.round(((lift_table.cum_non_response/lift_table.non_response.sum()) - (lift_table.cum_response/lift_table.response.sum()))*100,2).abs()
+    #DEFINE A FUNCTION TO FLAG MAX KS
+    flag = lambda x: '<----' if x == lift_table.ks.max() else ''
+    #FLAG OUT MAX KS
+    lift_table['max_ks'] = lift_table.ks.apply(flag)
+    #accuracy ratio (AR) using ROC method 
+    lift_table['AUC_by_ROC'] = ((lift_table['cum_pct_response'] + lift_table.cum_pct_response.shift().fillna(0))*lift_table['pct_non_response'])/2
+    #accuracy ratio (AR) using CAP method
+    lift_table['AUC_by_CAP'] = ((lift_table['cum_pct_response'] + lift_table.cum_pct_response.shift().fillna(0))*lift_table['pct_total'])/2
+    # AR is same from ROC and CAP method. Using only ROC for final AR 
+    lift_table['AR']= ((2*lift_table.AUC_by_ROC.sum())-1)
+    lift_table['AR']= (lift_table['AR']).apply('{0:.2%}'.format)
+    lift_table['AUC_by_ROC']= (lift_table['AUC_by_ROC']).apply('{0:.2%}'.format)
+    lift_table['AUC_by_CAP']= (lift_table['AUC_by_CAP']).apply('{0:.2%}'.format)
+    lift_table['cum_pct_response'] = (lift_table['cum_pct_response']).apply('{0:.2%}'.format)
+    lift_table['pct_non_response']= (lift_table['pct_non_response']).apply('{0:.2%}'.format)
+    lift_table['pct_total'] = (lift_table['pct_total']).apply('{0:.2%}'.format)
+    return lift_table
+    
+temp=generate_lift_table(input_data=df, dependent_variable='reservation', score_variable='prob',high_score_for_bad=True)
+temp
 
 ######## Check and update ################################################################################################################################
 #Selecting good features by Mean decrease impurity. 
@@ -328,7 +484,7 @@ ts_gs 	= 	run_gridsearch(independent_variable, dependent_variable, clf, param_gr
 for k, v in ts_gs.items(): print("parameters: {:<20s} setting: {}".format(k, v))
 
 # n_estimators 		: 	The number of trees in the forest.
-# criterion 		: 	The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “entropy” for the information gain.
+# criterion 		: 	The function to measure the quality of a split. Supported criteria are Â“giniÂ” for the Gini impurity and Â“entropyÂ” for the information gain.
 # max_features 		: 	The number of features to consider when looking for the best split.
 # max_depth 		: 	The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
 # min_samples_split	: 	The minimum number of samples required to split an internal node.
@@ -561,18 +717,18 @@ for c, feature in zip(contributions[0], iris.feature_names):
 ################################################################################
 ## https://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/
 ## 2.a. n_jobs : This parameter tells the engine how many processors is it allowed to use. 
-## A value of “-1” means there is no restriction whereas a value of “1” means it can only use one processor. 
+## A value of Â“-1Â” means there is no restriction whereas a value of Â“1Â” means it can only use one processor. 
 ## Here is a simple experiment you can do with Python to check this metric :
 
 # Only in Ipython
 ## %timeit
 model = RandomForestRegressor(n_estimators = 100, oob_score = True,n_jobs = 1,random_state =1)
 model.fit(X,y)
-## Output  ———-  1 loop best of 3 : 1.7 sec per loop
+## Output  Â—Â—Â—-  1 loop best of 3 : 1.7 sec per loop
 ## %timeit
 model = RandomForestRegressor(n_estimators = 100,oob_score = True,n_jobs = -1,random_state =1)
 model.fit(X,y)
-## Output  ———-  1 loop best of 3 : 1.1 sec per loop
+## Output  Â—Â—Â—-  1 loop best of 3 : 1.1 sec per loop
 
 #########################################################
 ## Titanic data	  
@@ -585,7 +741,7 @@ y = x.pop("Survived")
 model =  RandomForestRegressor(n_estimators = 100, oob_score=True, random_state = 42)
 model.fit(x(numeric_variable,y)
 print "AUC - ROC : ", roc_auc_score(y,model.oob_prediction)
-## AUC – ROC : 0.7386
+## AUC Â– ROC : 0.7386
 ## Try runing the following code and find the optimal leaf size in the comment box.
 sample_leaf_options = [1,5,10,50,100,200,500]
 for leaf_size in sample_leaf_options :
