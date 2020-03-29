@@ -101,6 +101,10 @@ import pandasql as ps
 # Sampling 
 	df1 = df.sample(frac =.7) 
 
+# Rename Variable
+	dev.rename(columns = {score_variable:'score'}, inplace = True)
+	df.rename(columns={ df.columns[1]: "score" })
+	
 ####### Missing ##################################################################		
 
 # Total missing count
