@@ -56,6 +56,8 @@ import pandasql as ps
 
 # contents
 	df.info()
+	df.dtypes 
+	dict(df.dtypes)
 	
 # No. of Row & Column
 	df.shape
