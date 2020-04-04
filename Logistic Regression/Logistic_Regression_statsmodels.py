@@ -27,6 +27,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 from sklearn.datasets import load_iris, make_blobs
 import pickle
+
 ############################################################################################################
 os.chdir("C:\\Users\\AMIT\\Google Drive\\Study\ML\\06.Random_Forest")
 
@@ -51,7 +52,6 @@ independent_variable_val 	= df_val[independent_variable_name]
 dependent_variable_val 		= df_val[dependent_variable_name]
 
 ############################################################################################################
-
 
 def LR(target=None, model_variable=None):
     model = sm.Logit(target, model_variable)
@@ -101,28 +101,14 @@ def LR(target=None, model_variable=None):
     print (LR_Coefficients)
     return LR_summary, LR_Coefficients
     
-
 LR_summary, LR_Coefficients =LR(target=dependent_variable, model_variable=independent_variable)
 
-
-######## Check and update ################################################################################################################################
-'''
-def probability_calculation(coefficient):
-		#calculate Yhat or probability or predicted value
-		def logit_function(independent_variable_and_coefficient):
-		#Logit function/Sigmoid Function
-			return 1 / (1 + np.exp(-independent_variable_and_coefficient))
-
-		return logit_function(np.dot(independent_variable, coefficient))
-
-
-#actual_score = np.column_stack((dependent_variable, np.around(1000*probability_calculation(output_estimate_logistic_model[0]))))
-'''
-
+##############################################################################################
 #predictions = result.predict(independent_variable)
 df['odds']=-3.670706 + (0.022926*df['NOP_before_purchase']) - (0.061525*df['nop_last_visit']) - (0.913963*df['no_of_visits_last_7_days']) + (3.176300*df['no_of_purchases_last_7_days']) + (0.195037*df['Hilton_Honors_Status_Ever_flag'])
 df['prob']= 1 / (1 + np.exp(-df['odds']))
 
+###################################################################################################
 def calculate_ROC(input=None, target=None,score=None ):
         actual_predicted 		= 	np.column_stack((input[target], input[score]))
         actual_predicted.dtype 	= 	{'names':['target', 'predicted_value'], 'formats':[np.float64, np.float64]}
@@ -165,9 +151,9 @@ def calculate_ROC(input=None, target=None,score=None ):
 metrics = pd.DataFrame(calculate_ROC(input=df, target='reservation',score='prob' ))
 metrics.rename(columns = {'Col1':'Metrics','Col2':'Value'}, inplace = True)
 metrics['Metrics'] = metrics['Metrics'].str.decode('utf-8')
-metrics
+metrics.round(decimals=2)
 
-
+##################################################################################################################
 
 def generate_lift_table(input_data=None, dependent_variable=None, score_variable=None, high_score_for_bad=False):
     ## Generate lift table, ks table
@@ -235,6 +221,20 @@ temp=generate_lift_table(input_data=df, dependent_variable='reservation', score_
 temp
 
 ##############################################################################################################
+'''
+######## Check and update
+def probability_calculation(coefficient):
+		#calculate Yhat or probability or predicted value
+		def logit_function(independent_variable_and_coefficient):
+		#Logit function/Sigmoid Function
+			return 1 / (1 + np.exp(-independent_variable_and_coefficient))
+
+		return logit_function(np.dot(independent_variable, coefficient))
+
+
+#actual_score = np.column_stack((dependent_variable, np.around(1000*probability_calculation(output_estimate_logistic_model[0]))))
+'''
+
 ''' 
 clf = LogisticRegression(penalty='none', fit_intercept=True, random_state=None).fit(independent_variable, dependent_variable)
 clf.score(independent_variable, dependent_variable)
