@@ -215,6 +215,8 @@ def generate_lift_table(input_data=None, dependent_variable=None, score_variable
     lift_table['cum_pct_response'] = (lift_table['cum_pct_response']).apply('{0:.2%}'.format)
     lift_table['pct_non_response']= (lift_table['pct_non_response']).apply('{0:.2%}'.format)
     lift_table['pct_total'] = (lift_table['pct_total']).apply('{0:.2%}'.format)
+    lift_table['min_scr'] = lift_table['min_scr'].round(decimals=4)
+    lift_table['max_scr'] = lift_table['max_scr'].round(decimals=4)
     return lift_table
     
 temp=generate_lift_table(input_data=df, dependent_variable='reservation', score_variable='prob',high_score_for_bad=True)
