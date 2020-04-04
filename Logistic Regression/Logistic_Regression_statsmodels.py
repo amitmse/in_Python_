@@ -102,6 +102,8 @@ def LR(target=None, model_variable=None):
     return LR_summary, LR_Coefficients
     
 LR_summary, LR_Coefficients =LR(target=dependent_variable, model_variable=independent_variable)
+#LR_summary
+#LR_Coefficients
 
 ##############################################################################################
 #predictions = result.predict(independent_variable)
