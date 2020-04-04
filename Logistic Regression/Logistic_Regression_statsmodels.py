@@ -51,57 +51,59 @@ independent_variable_val 	= df_val[independent_variable_name]
 dependent_variable_val 		= df_val[dependent_variable_name]
 
 ############################################################################################################
-''' 
-clf = LogisticRegression(penalty='none', fit_intercept=True, random_state=None).fit(independent_variable, dependent_variable)
-clf.score(independent_variable, dependent_variable)
-clf.score(independent_variable_val, dependent_variable_val)
-clf.coef_, independent_variable_name
-predictions = clf.predict(independent_variable)
-probs = clf.predict_proba(independent_variable)
-print(classification_report(dependent_variable, predictions))
-print(confusion_matrix(dependent_variable, predictions))
-print(accuracy_score(dependent_variable, predictions))
-print (roc_auc_score(dependent_variable, probs[:, 1]))
-pd.DataFrame(zip(independent_variable_name, np.transpose(clf.coef_))) #clf.intercept_
-log_loss(dependent_variable, predictions)
-log_loss(dependent_variable, predictions)
-'''
 
-model = sm.Logit(dependent_variable, independent_variable)
-result = model.fit(method='newton')
-result.summary() #Method
-result.summary2() #AIC, BIC
-print (np.exp(result.params)) # odds ratios only
-result.params #coefficients 
-pd.read_html(result.summary().tables[1].as_html(), header=0, index_col=0)[0]
 
-nan_value = float("NaN")
-summary1 = {}
-for item in result.summary().tables[0].data:
-    summary1[item[0].strip()] = item[1].strip()
-    summary1[item[2].strip()] = item[3].strip()
-summary1 = pd.DataFrame(summary1.items(), columns=['Metrics', 'Value'])
-summary1.replace("", nan_value, inplace=True)
-summary1.dropna(subset = ['Metrics'], inplace=True)
-summary1 = summary1[~summary1.Metrics.isin(['Dep. Variable:','Date:','Time:'])]
+def LR(target=None, model_variable=None):
+    model = sm.Logit(target, model_variable)
+    result = model.fit(method='newton', disp=False)
+    #result.summary() #Method
+    #result.summary2() #AIC, BIC
+    #pd.read_html(result.summary().tables[1].as_html(), header=0, index_col=0)[0]
+    #result.params #coefficients
+    #print (np.exp(result.params)) # odds ratios only
 
-summary2_1=result.summary2().tables[0].loc[:, [0, 1]]
-summary2_1.rename(columns = {0:'Metrics',1:'Value'}, inplace = True)
-summary2_1.replace("", nan_value, inplace=True)
-summary2_1.dropna(subset = ['Metrics'], inplace=True)
-summary2_1 = summary2_1[~summary2_1.Metrics.isin(['Model:','No. Observations:','Df Model:','Df Residuals:','Converged:'])]
+    nan_value = float("NaN")
+    summary1 = {}
+    for item in result.summary().tables[0].data:
+        summary1[item[0].strip()] = item[1].strip()
+        summary1[item[2].strip()] = item[3].strip()
+    summary1 = pd.DataFrame(summary1.items(), columns=['Metrics', 'Value'])
+    summary1.replace("", nan_value, inplace=True)
+    summary1.dropna(subset = ['Metrics'], inplace=True)
+    summary1 = summary1[~summary1.Metrics.isin(['Dep. Variable:','Date:','Time:'])]
 
-summary2_2=result.summary2().tables[0].loc[:, [2, 3]]
-summary2_2.rename(columns = {2:'Metrics',3:'Value'}, inplace = True)
-summary2_2.replace("", nan_value, inplace=True)
-summary2_2.dropna(subset = ['Metrics'], inplace=True)
-summary2_2 = summary2_2[~summary2_2.Metrics.isin(['Pseudo R-squared:','Log-Likelihood:','LL-Null:','LLR p-value:'])]
+    summary2_1=result.summary2().tables[0].loc[:, [0, 1]]
+    summary2_1.rename(columns = {0:'Metrics',1:'Value'}, inplace = True)
+    summary2_1.replace("", nan_value, inplace=True)
+    summary2_1.dropna(subset = ['Metrics'], inplace=True)
+    summary2_1 = summary2_1[~summary2_1.Metrics.isin(['Model:','No. Observations:','Df Model:','Df Residuals:','Converged:'])]
 
-summary_all = None
-summary_all=pd.concat([summary1,summary2_1,summary2_2])
-summary_all.reset_index(drop=True, inplace=True)
+    summary2_2=result.summary2().tables[0].loc[:, [2, 3]]
+    summary2_2.rename(columns = {2:'Metrics',3:'Value'}, inplace = True)
+    summary2_2.replace("", nan_value, inplace=True)
+    summary2_2.dropna(subset = ['Metrics'], inplace=True)
+    summary2_2 = summary2_2[~summary2_2.Metrics.isin(['Pseudo R-squared:','Log-Likelihood:','LL-Null:','LLR p-value:'])]
 
-result.summary2().tables[1] #more decimal places
+    LR_summary = None
+    LR_summary=pd.concat([summary1,summary2_1,summary2_2])
+    LR_summary.reset_index(drop=True, inplace=True)
+    
+    LR_Coefficients=result.summary2().tables[1].drop(['z','[0.025','0.975]'],1)
+    LR_Coefficients.rename(columns = {'Coef.':'Coefficients','Std.Err.':'Standard Error','P>|z|':'P-Value'}, inplace = True)
+    LR_Coefficients['Wald Chi-Square'] = (LR_Coefficients['Coefficients']**2/LR_Coefficients['Standard Error']**2).round(decimals=2)
+    LR_Coefficients['P-Value']=LR_Coefficients['P-Value'].round(decimals=2)
+    LR_Coefficients['Standard Error']=LR_Coefficients['Standard Error'].round(decimals=2)
+    LR_Coefficients['Coefficients']=LR_Coefficients['Coefficients'].round(decimals=15)
+    LR_Coefficients=LR_Coefficients[['Coefficients','Standard Error','Wald Chi-Square','P-Value']]
+
+    print (LR_summary.to_string(index=False ))
+    print("\n")
+    print (LR_Coefficients)
+    return LR_summary, LR_Coefficients
+    
+
+LR_summary, LR_Coefficients =LR(target=dependent_variable, model_variable=independent_variable)
+
 
 ######## Check and update ################################################################################################################################
 '''
@@ -231,3 +233,57 @@ def generate_lift_table(input_data=None, dependent_variable=None, score_variable
     
 temp=generate_lift_table(input_data=df, dependent_variable='reservation', score_variable='prob',high_score_for_bad=True)
 temp
+
+##############################################################################################################
+''' 
+clf = LogisticRegression(penalty='none', fit_intercept=True, random_state=None).fit(independent_variable, dependent_variable)
+clf.score(independent_variable, dependent_variable)
+clf.score(independent_variable_val, dependent_variable_val)
+clf.coef_, independent_variable_name
+predictions = clf.predict(independent_variable)
+probs = clf.predict_proba(independent_variable)
+print(classification_report(dependent_variable, predictions))
+print(confusion_matrix(dependent_variable, predictions))
+print(accuracy_score(dependent_variable, predictions))
+print (roc_auc_score(dependent_variable, probs[:, 1]))
+pd.DataFrame(zip(independent_variable_name, np.transpose(clf.coef_))) #clf.intercept_
+log_loss(dependent_variable, predictions)
+log_loss(dependent_variable, predictions)
+
+# Created a function : LR
+model = sm.Logit(dependent_variable, independent_variable)
+result = model.fit(method='newton')
+result.summary() #Method
+result.summary2() #AIC, BIC
+print (np.exp(result.params)) # odds ratios only
+result.params #coefficients 
+pd.read_html(result.summary().tables[1].as_html(), header=0, index_col=0)[0]
+
+nan_value = float("NaN")
+summary1 = {}
+for item in result.summary().tables[0].data:
+    summary1[item[0].strip()] = item[1].strip()
+    summary1[item[2].strip()] = item[3].strip()
+summary1 = pd.DataFrame(summary1.items(), columns=['Metrics', 'Value'])
+summary1.replace("", nan_value, inplace=True)
+summary1.dropna(subset = ['Metrics'], inplace=True)
+summary1 = summary1[~summary1.Metrics.isin(['Dep. Variable:','Date:','Time:'])]
+
+summary2_1=result.summary2().tables[0].loc[:, [0, 1]]
+summary2_1.rename(columns = {0:'Metrics',1:'Value'}, inplace = True)
+summary2_1.replace("", nan_value, inplace=True)
+summary2_1.dropna(subset = ['Metrics'], inplace=True)
+summary2_1 = summary2_1[~summary2_1.Metrics.isin(['Model:','No. Observations:','Df Model:','Df Residuals:','Converged:'])]
+
+summary2_2=result.summary2().tables[0].loc[:, [2, 3]]
+summary2_2.rename(columns = {2:'Metrics',3:'Value'}, inplace = True)
+summary2_2.replace("", nan_value, inplace=True)
+summary2_2.dropna(subset = ['Metrics'], inplace=True)
+summary2_2 = summary2_2[~summary2_2.Metrics.isin(['Pseudo R-squared:','Log-Likelihood:','LL-Null:','LLR p-value:'])]
+
+summary_all = None
+summary_all=pd.concat([summary1,summary2_1,summary2_2])
+summary_all.reset_index(drop=True, inplace=True)
+
+result.summary2().tables[1] #more decimal places
+'''
