@@ -41,6 +41,12 @@ import pandasql as ps
 # Convert data : pandas to numpy
 	data_in_numpy=df.as_matrix()
 	data_in_numpy=df.values
+
+# Convert : Pandas Series to Dataframe
+	contents = pd.DataFrame(df.dtypes,columns = ['type'])
+	#contents['variable'] = cont.index #index as column
+	contents=contents.reset_index()
+	contents.rename(columns = {'index':'variable'}, inplace = True)
 	
 ###### Export data #################################################################
 # in CSV
@@ -190,7 +196,7 @@ df.head()
 	df1 = df.set_index('two')
 
 # Reset Index		
-	df.reset_index()
+	df=df.reset_index()
 
 # Sort
 	a.sort_values(by=['Factor_Value'], inplace=True, ascending=True)
