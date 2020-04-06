@@ -285,7 +285,38 @@ df.head()
 ####### SQL #########################################################################
 q1 = """SELECT reservation, count(*) as total FROM df group by 1"""
 print(ps.sqldf(q1, locals()))
-	
+
+
+
+######### Proc contents ##############################################################
+def contents(input_data=None):
+    #############
+    contents = pd.DataFrame(input_data.dtypes,columns = ['type'])
+    contents = contents.reset_index()
+    contents.rename(columns = {'index':'variable'}, inplace = True)
+    #############
+    cnt = pd.DataFrame(input_data.count(),columns = ['count'])
+    cnt = cnt.reset_index()
+    cnt.rename(columns = {'index':'variable'}, inplace = True)
+    contents = pd.merge(contents, cnt, how='left', on=['variable'])
+    ##############
+    miss = pd.DataFrame(input_data.isnull().sum(),columns = ['missing'])
+    miss = miss.reset_index()
+    miss.rename(columns = {'index':'variable'}, inplace = True)
+    contents = pd.merge(contents, miss, how='left', on=['variable'])
+    ##############
+    unique = pd.DataFrame(input_data.nunique(),columns = ['unique_values'])
+    unique = unique.reset_index()
+    unique.rename(columns = {'index':'variable'}, inplace = True)
+    contents = pd.merge(contents, unique, how='left', on=['variable'])
+    ################
+    #print (contents)
+
+    return contents
+
+contents = contents(input_data=df)
+contents
+
 ####### Lift table/KS #################################################################
 def generate_lift_table(input_data=None, dependent_variable=None, score_variable=None, high_score_for_bad=False):
     ## Generate lift table, ks table
