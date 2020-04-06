@@ -62,8 +62,12 @@ import pandasql as ps
 
 # contents
 	df.info()
-	df.dtypes 
-	dict(df.dtypes)
+	# Pandas data type [object, int64, float64, bool, datetime64]  [timedelta, category]
+		df.dtypes 
+		dict(df.dtypes)
+		list((df.dtypes[df.dtypes == np.object]).index) # String column
+		df.select_dtypes(include=np.number).columns.tolist() # Numeric Variable list
+	
 	
 # No. of Row & Column
 	df.shape
