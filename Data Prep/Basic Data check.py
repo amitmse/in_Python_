@@ -48,6 +48,9 @@ import pandasql as ps
 	contents=contents.reset_index()
 	contents.rename(columns = {'index':'variable'}, inplace = True)
 	
+# Convert : Pandas to List
+	df.values.tolist()
+	
 ###### Export data #################################################################
 # in CSV
 	df.to_csv('file1.csv') 
