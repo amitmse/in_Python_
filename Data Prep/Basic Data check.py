@@ -116,10 +116,14 @@ import pandasql as ps
 	# single variable
 		mean = df['float_col'].mean()
 	# aggregate
-		df1.mean()
+		df.mean()
 		pd.pivot_table(df, index= 'time_period',  values= "Factor_Value" , aggfunc=np.mean)
 		pd.pivot_table(df, index=['time_period'], values=['Factor_Value'], aggfunc={'Factor_Value':len,'Factor_Value':[np.sum, np.mean]},fill_value=0)
-		pd.pivot_table(df, index=['time_period'], columns=['3rd_dimension_existing_var'], values=['Factor_Value'], aggfunc={'Factor_Value':len,'Factor_Value':[np.sum, np.mean]},fill_value=0)
+		df1 = pd.pivot_table(df, index=['time_period'], columns=['3rd_dimension_existing_var'], values=['Factor_Value'], aggfunc={'Factor_Value':len,'Factor_Value':[np.sum, np.mean]},fill_value=0)
+		# Remove multi index in column name
+		df1 = df1.reset_index()
+		df1.columns = (df1.columns.map('|'.join).str.strip('|'))
+		df1.columns = df1.columns.str.split('|').str[0]
 
 # Global Variable
 	global test_var	# test_var is a global variable
