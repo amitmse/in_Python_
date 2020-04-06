@@ -19,7 +19,6 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Monotonic_Binning.
 https://abirchakraborty.wordpress.com/
 
 # Due 
-- Info Val
 - CA
 - Var Transformation
 - LR
