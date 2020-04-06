@@ -175,7 +175,7 @@ import pandasql as ps
 	def ff(row):
 	  if row['c'] > 339: 
 		val = 0
-	  elif row['c'] > 338: 
+	  elif row['c'] in [999,888]: 
 		val = 1
 	  else: 
 		val = -1
@@ -315,6 +315,19 @@ def contents(input_data=None):
     return contents
 
 contents = contents(input_data=df)
+
+def var_type(input):
+    if input['type'] == 'datetime64[ns]':
+        val = 'NA'    
+    elif input['unique_values'] <10: 
+        val = 'char'
+    elif input['type'] in ['object','bool']: 
+        val = 'char'
+    else: 
+        val = 'num'
+    return val
+
+contents['treatment'] = contents.apply(var_type, axis=1)
 contents
 
 ####### Lift table/KS #################################################################
