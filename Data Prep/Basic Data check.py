@@ -84,6 +84,9 @@ import pandasql as ps
 		contents = pd.merge(contents, unique, how='left', on=['variable'])
 		contents
 	
+# Rearrange / Change position of colum 
+	df = df[['variable', 'categery', 'count', 'target' ]]
+	
 # No. of Row & Column
 	df.shape
 
