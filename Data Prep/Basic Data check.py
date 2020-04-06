@@ -67,7 +67,19 @@ import pandasql as ps
 		dict(df.dtypes)
 		list((df.dtypes[df.dtypes == np.object]).index) # String column
 		df.select_dtypes(include=np.number).columns.tolist() # Numeric Variable list
-	
+	# Number of Unique values
+		np.unique(df['reservation_n']).size
+		df['reservation_n'].nunique()
+		df.nunique()
+	# Proc contents
+		contents = pd.DataFrame(df.dtypes,columns = ['type'])
+		contents = contents.reset_index()
+		contents.rename(columns = {'index':'variable'}, inplace = True)
+		unique = pd.DataFrame(df.nunique(),columns = ['unique_values'])
+		unique = unique.reset_index()
+		unique.rename(columns = {'index':'variable'}, inplace = True)
+		contents = pd.merge(contents, unique, how='left', on=['variable'])
+		contents
 	
 # No. of Row & Column
 	df.shape
@@ -85,6 +97,8 @@ import pandasql as ps
 	# Print last obs
 		df.tail(20)
 		
+
+
 # Numeric variable distribution
 	df.describe()
 
