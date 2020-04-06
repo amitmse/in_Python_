@@ -162,6 +162,7 @@ info_val_overall = pd.pivot_table(info_val_all, index=['variable'], values=['inf
 info_val_overall = info_val_overall.reset_index()
 info_val_overall.columns = (info_val_overall.columns.map('|'.join).str.strip('|'))
 info_val_overall.columns = info_val_overall.columns.str.split('|').str[0]
+info_val_overall.rename(columns = {'sum':'Information_value'}, inplace = True)
 info_val_overall
 #################################################################################################
 
