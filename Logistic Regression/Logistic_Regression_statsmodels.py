@@ -112,16 +112,7 @@ df['prob']  = 1 / (1 + np.exp(-df['odds']))
 #df['score'] =  (- ((df['odds'] + np.log(100))*30 / np.log(2) ) + 500).round(decimals=4)
 df['score'] =  (- ((df['odds'] + np.log(100))*30 / np.log(2) ) + 500).apply(np.ceil)
 # Score capping and flooring 0 to 999
-def ff(row):
-    if row['score'] == 371.0: 
-        val = -9
-    elif row['score'] == 458.0: 
-        val = 1200
-    else: 
-        val = row['score']
-    return val
-
-df['score_capped'] = df.apply(ff, axis=1).clip(0, 999)
+df['score_capped'] = df['score'].clip(0, 999)
 
 
 #curr_score = round(-( (curr_log_odds + log(100)) *30/log(2)) + 500,1);
