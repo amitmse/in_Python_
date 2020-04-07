@@ -111,8 +111,6 @@ df['odds']  = -3.670706 + (0.022926*df['NOP_before_purchase']) - (0.061525*df['n
 df['prob']  = 1 / (1 + np.exp(-df['odds']))
 df['score'] =  (- ((df['odds'] + np.log(100))*30 / np.log(2) ) + 500)
 #curr_score = round(-( (curr_log_odds + log(100)) *30/log(2)) + 500,1);
-
-
 ###################################################################################################
 def calculate_ROC(input=None, target=None,score=None ):
         actual_predicted 		= 	np.column_stack((input[target], input[score]))
