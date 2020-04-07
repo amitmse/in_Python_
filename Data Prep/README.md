@@ -20,5 +20,4 @@ https://abirchakraborty.wordpress.com/
 
 # Due 
 - CA
-- Var Transformation
 - Profile Analysis
