@@ -16,12 +16,12 @@ Basic operation in Python 2.7
 
 # Exploratory Data Analysis (EDA) :   
 
-    https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/EDA.py
+https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/EDA.py
 
 # Information Value:
 
-    https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Information_value_calculation.py
+https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Information_value_calculation.py
 
 # Monotonic Binning : 
 
-    https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Monotonic_Binning.py
+https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Monotonic_Binning.py
