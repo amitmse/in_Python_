@@ -20,4 +20,3 @@ https://abirchakraborty.wordpress.com/
 
 # Due 
 - CA
-- Profile Analysis
