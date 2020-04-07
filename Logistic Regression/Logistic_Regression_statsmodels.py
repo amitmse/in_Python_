@@ -107,8 +107,11 @@ LR_summary, LR_Coefficients =LR(target=dependent_variable, model_variable=indepe
 
 ##############################################################################################
 #predictions = result.predict(independent_variable)
-df['odds']=-3.670706 + (0.022926*df['NOP_before_purchase']) - (0.061525*df['nop_last_visit']) - (0.913963*df['no_of_visits_last_7_days']) + (3.176300*df['no_of_purchases_last_7_days']) + (0.195037*df['Hilton_Honors_Status_Ever_flag'])
-df['prob']= 1 / (1 + np.exp(-df['odds']))
+df['odds']  = -3.670706 + (0.022926*df['NOP_before_purchase']) - (0.061525*df['nop_last_visit']) - (0.913963*df['no_of_visits_last_7_days']) + (3.176300*df['no_of_purchases_last_7_days']) + (0.195037*df['Hilton_Honors_Status_Ever_flag'])
+df['prob']  = 1 / (1 + np.exp(-df['odds']))
+df['score'] =  (- ((df['odds'] + np.log(100))*30 / np.log(2) ) + 500)
+#curr_score = round(-( (curr_log_odds + log(100)) *30/log(2)) + 500,1);
+
 
 ###################################################################################################
 def calculate_ROC(input=None, target=None,score=None ):
