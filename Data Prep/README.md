@@ -16,7 +16,5 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/EDA.py
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Monotonic_Binning.py
 
-https://abirchakraborty.wordpress.com/
-
 # Due 
 - CA
