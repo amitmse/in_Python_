@@ -109,7 +109,21 @@ LR_summary, LR_Coefficients =LR(target=dependent_variable, model_variable=indepe
 #predictions = result.predict(independent_variable)
 df['odds']  = -3.670706 + (0.022926*df['NOP_before_purchase']) - (0.061525*df['nop_last_visit']) - (0.913963*df['no_of_visits_last_7_days']) + (3.176300*df['no_of_purchases_last_7_days']) + (0.195037*df['Hilton_Honors_Status_Ever_flag'])
 df['prob']  = 1 / (1 + np.exp(-df['odds']))
-df['score'] =  (- ((df['odds'] + np.log(100))*30 / np.log(2) ) + 500)
+#df['score'] =  (- ((df['odds'] + np.log(100))*30 / np.log(2) ) + 500).round(decimals=4)
+df['score'] =  (- ((df['odds'] + np.log(100))*30 / np.log(2) ) + 500).apply(np.ceil)
+# Score capping and flooring 0 to 999
+def ff(row):
+    if row['score'] == 371.0: 
+        val = -9
+    elif row['score'] == 458.0: 
+        val = 1200
+    else: 
+        val = row['score']
+    return val
+
+df['score_capped'] = df.apply(ff, axis=1).clip(0, 999)
+
+
 #curr_score = round(-( (curr_log_odds + log(100)) *30/log(2)) + 500,1);
 ###################################################################################################
 def calculate_ROC(input=None, target=None,score=None ):
