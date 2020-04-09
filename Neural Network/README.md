@@ -464,3 +464,9 @@ https://analyticsindiamag.com/6-types-of-artificial-neural-networks-currently-be
 https://www.mygreatlearning.com/blog/types-of-neural-networks/
 
 https://blog.statsbot.co/neural-networks-for-beginners-d99f2235efca
+
+
+-----------------------------------------------------------------------------------
+Gradient Descend:
+https://towardsdatascience.com/a-comprehensive-guide-on-neural-networks-for-beginners-a4ca07cee1b7
+https://becominghuman.ai/step-by-step-neural-network-tutorial-for-beginner-cc71a04eedeb
