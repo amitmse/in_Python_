@@ -4,28 +4,8 @@
 	In logistic regression, there are only two layers i.e. input and output but in neural network, there is at 
 	least one hidden layer between input and output layer.
  
-
-# Types of neural networks and their applications:
-
-## 01. Perceptron 
-	The simplest and oldest model of Neuron, as we know it. Takes some inputs, sums them up, 
-	applies activation function and passes them to output layer.
-
-## 02. Feedforward Neural Network
-
-	In a feedforward neural network, the data passes through the different input nodes till it reaches 
-	the output node. Data moves in only one direction from the first tier onwards until it reaches 
-	the output node. This is also known as a front propagated wave which is usually achieved by 
-	using a classifying activation function. There is no backpropagation and data moves in one direction only. 
-	A feedforward neural network may have a single layer or it may have hidden layers.
-	Feedforward neural networks are used in technologies like face recognition and computer vision. 
-	This is because the target classes in these applications are hard to classify.
-	A simple feedforward neural network is equipped to deal with data which contains a lot of noise. 
-	Feedforward neural networks are also relatively simple to maintain.
-
-	In most cases this type of networks is trained using Backpropagation method.
-	
-## Back-propagation
+ 
+ ## Back-propagation
 
 	Back-propagation is considered the standard method in artificial neural networks to calculate 
 	the error contribution of each neuron after a batch of data is processed. However, there are 
@@ -51,27 +31,6 @@
 	- A multilayer neural network requires many repeated presentations of the input patterns, 
 			for which the weights need to be adjusted before the network is able to 
 			settle down into an optimal solution
-	
-## This one round of forward and back propagation iteration is known as one training iteration aka “Epoch“.
-	
-## 03. Convolutional Neural Networks
-	It used back propagation in a feedforward net with many hidden layers, many maps of replicated units 
-	in each layer, pooling of the outputs of nearby replicated units, a wide net that can cope with 
-	several characters at once even if they overlap, and a clever way of training a complete system, 
-	not just a recognizer. Later it is formalized under the name convolutional neural networks (CNNs). 
-	They are primarily used for image processing but can also be used for other types of input such as as audio.
-
-	A convolutional neural network(CNN) uses a variation of the multilayer perceptrons. 
-	A CNN contains one or more than one convolutional layers. These layers can either be 
-	completely interconnected or pooled. 
-	Before passing the result to the next layer, the convolutional layer uses a convolutional operation 
-	on the input. Due to this convolutional operation, the network can be much deeper but with much 
-	fewer parameters. Due to this ability, convolutional neural networks show very effective results 
-	in image and video recognition, natural language processing, and recommender systems. 
-	Convolutional neural networks also show great results in semantic parsing and paraphrase detection.
-	They are also applied in signal processing and image classification.
-	CNNs are also being used in image analysis and recognition in agriculture where weather features 
-	are extracted from satellites like LSAT to predict the growth and yield of a piece of land. 
 
 
 ## Algorithm
@@ -107,6 +66,46 @@
 		Updated Error in output layer node	: Substract actual output and Output layer node
 		Change in error				: Substract previous error and current error
 
+# Types of neural networks and their applications:
+
+## 01. Perceptron 
+	The simplest and oldest model of Neuron, as we know it. Takes some inputs, sums them up, 
+	applies activation function and passes them to output layer.
+
+## 02. Feedforward Neural Network
+
+	In a feedforward neural network, the data passes through the different input nodes till it reaches 
+	the output node. Data moves in only one direction from the first tier onwards until it reaches 
+	the output node. This is also known as a front propagated wave which is usually achieved by 
+	using a classifying activation function. There is no backpropagation and data moves in one direction only. 
+	A feedforward neural network may have a single layer or it may have hidden layers.
+	Feedforward neural networks are used in technologies like face recognition and computer vision. 
+	This is because the target classes in these applications are hard to classify.
+	A simple feedforward neural network is equipped to deal with data which contains a lot of noise. 
+	Feedforward neural networks are also relatively simple to maintain.
+
+	In most cases this type of networks is trained using Backpropagation method.
+	
+## This one round of forward and back propagation iteration is known as one training iteration aka “Epoch“.
+	
+## 03. Convolutional Neural Networks
+	It used back propagation in a feedforward net with many hidden layers, many maps of replicated units 
+	in each layer, pooling of the outputs of nearby replicated units, a wide net that can cope with 
+	several characters at once even if they overlap, and a clever way of training a complete system, 
+	not just a recognizer. Later it is formalized under the name convolutional neural networks (CNNs). 
+	They are primarily used for image processing but can also be used for other types of input such as as audio.
+
+	A convolutional neural network(CNN) uses a variation of the multilayer perceptrons. 
+	A CNN contains one or more than one convolutional layers. These layers can either be 
+	completely interconnected or pooled. 
+	Before passing the result to the next layer, the convolutional layer uses a convolutional operation 
+	on the input. Due to this convolutional operation, the network can be much deeper but with much 
+	fewer parameters. Due to this ability, convolutional neural networks show very effective results 
+	in image and video recognition, natural language processing, and recommender systems. 
+	Convolutional neural networks also show great results in semantic parsing and paraphrase detection.
+	They are also applied in signal processing and image classification.
+	CNNs are also being used in image analysis and recognition in agriculture where weather features 
+	are extracted from satellites like LSAT to predict the growth and yield of a piece of land. 
 
 ## 04. Radial Basis Function Neural Network
 
@@ -451,6 +450,19 @@
 	# Convolutional Neural Networks(CNN) : Imgaes data
 	# Recurrent neural network(RNN): Time series data
 ------------------------------------------------------
+
+- The Turing test is a method to test a machine’s ability to match the human-level intelligence.
+
+- F1 score is the weighted average of precision and recall. It considers both false positive and false negative values into account. It is used to measure a model’s performance.
+
+- A cost function is a scalar function that quantifies the error factor of the neural network.
+
+- Dropout is a simple way to prevent a neural network from overfitting.
+
+- Perceptron : Number of  Hidden Layer
+
+
+
 https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/
 
 https://www.digitalvidya.com/blog/types-of-neural-networks/
