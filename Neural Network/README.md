@@ -177,36 +177,7 @@
 		
 		Change in error				: Substract previous error and current error
 
-
-## Choosing the correct learning rate and momentum will help in weight adjustment
-
-## Learning rate /step size:
-	Setting right learning rate could be difficult task. The learning rate is a parameter that determines 
-	how much an updating step influences the current value of the weights.If learning rate is too small, 
-	algorithm might take long time to converges. choosing large learning rate could have opposite effect 
-	algorithm could diverge. Sometimes in NN every weight has it’s own learning rate. Learning rate of 0.35 
-	proved to be popular choice when training NN. This paper will use rate of 0.45 but this value is used 
-	because of simple architecture of NN used in example.
-						
-## Momentum term: 
-	It represents inertia. Large values of momentum term will influence the adjustment in the current weight 
-	to move in same direction as previous adjustment. Easily get stuck in a local minima and the algorithm 
-	may think to reach global minima leading to sub-optimal results. Use a momentum term in the objective 
-	function that increases the size of the steps taken towards the minimum by trying to jump from a local 
-	minima. If the momentum term is large then the learning rate should be kept smaller. A large value of
-	momentum also means that the convergence will happen fast. But if both the momentum and learning rate 
-	are kept at large values, then you might skip the minimum with a huge step. A small value of momentum 
-	cannot reliably avoid local minima, and can also slow down the training of the system. Momentum also 
-	helps in smoothing out the variations, if the gradient keeps changing direction. A right value of 
-	momentum can be either learned by hit and trial or through cross-validation.
-												
-	Momentum simply adds a fraction of the previous weight update to the current one. When the gradient 
-	keeps pointing in the same direction, this will increase the size of the steps taken towards the minimum.
-	It's necessary to reduce the global learning rate when using a lot of momentum (m close to 1). If you 
-	combine a high learning rate with a lot of momentum, you will rush past the minimum with huge steps!
-
-
-#################################################################################################################
+####################################################################################################
 
 # Types of neural networks and their applications:
 
@@ -513,13 +484,40 @@
 
 	    max_error = np.max(errors)
 	    importance = [e/max_error for e in errors]
- -----------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------
+ 
 # Deep Learning: multi neural network architecture : 
 	# Artificial neural network (ANN): Data in numeric format
 	# Convolutional Neural Networks(CNN) : Imgaes data
 	# Recurrent neural network(RNN): Time series data
 
------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+## Choosing the correct learning rate and momentum will help in weight adjustment
+
+## Learning rate /step size:
+	Setting right learning rate could be difficult task. The learning rate is a parameter that determines 
+	how much an updating step influences the current value of the weights.If learning rate is too small, 
+	algorithm might take long time to converges. choosing large learning rate could have opposite effect 
+	algorithm could diverge. Sometimes in NN every weight has it’s own learning rate. Learning rate of 0.35 
+	proved to be popular choice when training NN. This paper will use rate of 0.45 but this value is used 
+	because of simple architecture of NN used in example.
+						
+## Momentum term: 
+	It represents inertia. Large values of momentum term will influence the adjustment in the current weight 
+	to move in same direction as previous adjustment. Easily get stuck in a local minima and the algorithm 
+	may think to reach global minima leading to sub-optimal results. Use a momentum term in the objective 
+	function that increases the size of the steps taken towards the minimum by trying to jump from a local 
+	minima. If the momentum term is large then the learning rate should be kept smaller. A large value of
+	momentum also means that the convergence will happen fast. But if both the momentum and learning rate 
+	are kept at large values, then you might skip the minimum with a huge step. A small value of momentum 
+	cannot reliably avoid local minima, and can also slow down the training of the system. Momentum also 
+	helps in smoothing out the variations, if the gradient keeps changing direction. A right value of 
+	momentum can be either learned by hit and trial or through cross-validation.
+												
+	Momentum simply adds a fraction of the previous weight update to the current one. When the gradient 
+	keeps pointing in the same direction, this will increase the size of the steps taken towards the minimum.
+	It's necessary to reduce the global learning rate when using a lot of momentum (m close to 1). If you 
+	combine a high learning rate with a lot of momentum, you will rush past the minimum with huge steps!
 
 ## Parameters vs Hyperparameters
 	Parameters are learned by the model during the training time, while hyperparameters can be changed 
@@ -532,13 +530,12 @@
 		Units in each hidden layer
 		Choice of activation function
 
-
-
------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 - The Turing test is a method to test a machine’s ability to match the human-level intelligence.
 
-- F1 score is the weighted average of precision and recall. It considers both false positive and false negative values into account. It is used to measure a model’s performance.
+- F1 score is the weighted average of precision and recall. It considers both false positive and 
+  false negative values into account. It is used to measure a model’s performance.
 
 - A cost function is a scalar function that quantifies the error factor of the neural network.
 
