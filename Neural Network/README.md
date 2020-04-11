@@ -53,6 +53,7 @@
 	data and to differentiate between the output. It allows backpropagation because they have a derivative function
 	which is related to the inputs. It allows “stacking” of multiple layers of neurons to create a deep neural network.
 	Multiple hidden layers of neurons are needed to learn complex data sets with high levels of accuracy.
+	Below are non-linear Activation Functions:
 	
 #### Sigmoid or Logistic Activation Function: 
 	
