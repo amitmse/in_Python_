@@ -55,7 +55,7 @@
 	Multiple hidden layers of neurons are needed to learn complex data sets with high levels of accuracy.
 	Below are non-linear Activation Functions:
 	
-#### i. Sigmoid or Logistic Activation Function: 
+#### 2.1 Sigmoid or Logistic Activation Function: 
 	
 	Sigmoid Function curve looks like a S-shape. The logistic sigmoid function can cause a neural network to get stuck 
 	at the training time. The softmax function is a more generalized logistic activation function which is used for 
@@ -65,7 +65,7 @@
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Sigmoid.PNG)
 
 
-#### ii. Tanh or hyperbolic tangent Activation Function: 
+#### 2.2 Tanh or hyperbolic tangent Activation Function: 
 	
 	tanh is also like logistic sigmoid but better. The range of the tanh function is from (-1 to 1). 
 	tanh is also sigmoidal (s - shaped). Both tanh and logistic sigmoid activation functions are used in 
@@ -73,7 +73,7 @@
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Tanh.PNG)
 	
-#### iii. ReLU (Rectified Linear Unit) Activation Function: 
+#### 2.3 ReLU (Rectified Linear Unit) Activation Function: 
 	
 	The ReLU is the most used activation function in the world right now.Since, it is used in almost all 
 	the convolutional neural networks or deep learning. As you can see, the ReLU is half rectified. f(z) is 
@@ -95,12 +95,12 @@
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/ReLU.PNG)
 	
-#### iv. Leaky ReLU: 
+#### 2.4 Leaky ReLU: 
 	Range of the Leaky ReLU is -infinity to infinity.
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Leaky_ReLU.PNG)
 
-#### v. Softmax: 
+#### 2.5 Softmax: 
 	Softmax is a very interesting activation function because it not only maps our output to a [0,1] range but also 
 	maps each output in such a way that the total sum is 1. The output of Softmax is therefore a probability distribution.
 	The softmax function is often used in the final layer of a neural network-based classifier. Such networks are 
