@@ -271,25 +271,83 @@
 		- Dense (fully connected layer)
 		- Model compile and train
 	
+## 04. Recurrent Neural Network(RNN):
 
-## 04. Radial Basis Function Neural Network
+	A Recurrent Neural Network is a type of artificial neural network in which the output of a particular 
+	layer is saved and fed back to the input. This helps predict the outcome of the layer. The first layer 
+	is formed in the same way as it is in the feedforward network. That is, with the product of the sum of 
+	the weights and features. However, in subsequent layers, the recurrent neural network process begins.
+	From each time-step to the next, each node will remember some information that it had in the previous 
+	time-step. In other words, each node acts as a memory cell while computing and carrying out operations. 
+	The neural network begins with the front propagation as usual but remembers the information it may 
+	need to use later. If the prediction is wrong, the system self-learns and works towards making the right 
+	prediction during the backpropagation. 
+	This type of neural network is very effective in text-to-speech conversion technology.  
 
-	Actually FF (feed forward), that use radial basis function as activation function instead of 
-	logistic function. What makes the difference? Logistic function map some arbitrary value 
-	to a 0…1 range, answering a “yes or no” question. It is good for classification and decision 
-	making systems, but works bad for continuous values. Contrary, radial basis functions answer 
-	the question “how far are we from the target”? This is perfect for function approximation, 
-	and machine control. 
-	To be short, these are just FF networks with different activation function and appliance.
+	So far the neural networks that we’ve examined have always had forward connections. The input layer always
+	connects to the first hidden layer. Each hidden layer always connects to the next hidden layer. 
+	The final hidden layer always connects to the output layer. This manner to connect layers is the 
+	reason that these networks are called “feedforward.” Recurrent neural networks are not so rigid, 
+	as backward connections are also allowed. A recurrent connection links a neuron in a layer to 
+	either a previous layer or the neuron itself. Most recurrent neural network architectures maintain 
+	state in the recurrent connections. Feedforward neural networks don’t maintain any state. 
+	A recurrent neural network’s state acts as a sort of short-term memory for the neural network. 
+	Consequently, a recurrent neural network will not always produce the same output for a given input.
+
+	Recurrent neural networks do not force the connections to flow only from one layer to the next, 
+	from input layer to output layer. A recurrent connection occurs when a connection is formed
+	between a neuron and one of the following other types of neurons:
+
+		- The neuron itself
+		- A neuron on the same level
+		- A neuron on a previous level
+
+	Recurrent connections can never target the input neurons or the bias neurons.
+	The processing of recurrent connections can be challenging. Because the recurrent links create endless
+	loops, the neural network must have some way to know when to stop. A neural network that entered an 
+	endless loop would not be useful. To prevent endless loops, we can calculate the recurrent connections 
+	with the following three approaches:
+
+		- Context neurons
+		- Calculating output over a fixed number of iterations
+		- Calculating output until neuron output stabilizes
+		
+	For sequence of events, languages, models, time series, Predicting stock prices, Speech recognition,
+	Image captions, Word predictions, Language translation.
 	
-	A radial basis function considers the distance of any point relative to the centre. Such neural networks 
-	have two layers. In the inner layer, the features are combined with the radial basis function.
-	The radial basis function neural network is applied extensively in power restoration systems. 
-	In recent decades, power systems have become bigger and more complex. This increases the risk 
-	of a blackout. This neural network is used in the power restoration systems in order to restore 
-	power in the shortest possible time.
+	Time series analysis such as stock prediction like price, price at time t1, t2 etc.. can be done using 
+	Recurrent neural network. Predictions depend on earlier data, in order to predict time t2, we get the 
+	earlier state information t1, this is known as recurrent neural network. Maintains memory from previous
+	state. Length of the memory is very limited. 
+	Variants of RNN :
+		- Long Short Term Memory (LSTM)
+		- GRU :Gated recurrent unit
+		- End to end network
+		- Memory network
 
-## 05. Multi Layer Perceptron (MLP): One or more non-linear hidden layers.
+## 05. Long Short Term Memory:
+	
+	Special type of RNN. They are explicitly designed to address the long term dependency problem, there are 
+	gates to remember, where to forget in LSTM. RNN with LSTM prevents vanishing gradient effect by passing 
+	errors recursively to the next NN. It controls the gradient flow & enable better preservation of “long-range 
+	dependencies” by using gates. Maintains memory from previous and even other states. Length of the memory is 
+	quite large. Long short-term memory (LSTM) is explicitly designed to address the long-term dependency problem, 
+	by maintaining a state of what to remember and what to forget.
+	Key components of LSTM : 
+		- Gates
+			- forget: Earlier gate which has data to be remembered are concatenated with the new data to 
+					be remembered.
+					
+			- memory: Here it is used to determine how much information should be stored in the memory and 
+					how much percentage to forget. Operations like dot product, 
+					additions are performed here.
+					
+			- update: Forget from the early state and operations are performed and updated.
+	
+		- tanh(x): values from -1 to 1
+		- sigmoid(x): values from 0 to 1
+		
+## 06. Multi Layer Perceptron (MLP): One or more non-linear hidden layers.
 
 	A multilayer perceptron has three or more layers. It is used to classify data that cannot be
 	separated linearly. It is a type of artificial neural network that is fully connected. 
@@ -346,83 +404,24 @@
 					least tol if ‘early_stopping’ is on, the current learning rate is divided by 5.
 					Only used when solver='sgd'
 								
-			momentum 	: float, default 0.9
-			
-## 06. Recurrent Neural Network(RNN):
-
-	A Recurrent Neural Network is a type of artificial neural network in which the output of a particular 
-	layer is saved and fed back to the input. This helps predict the outcome of the layer. The first layer 
-	is formed in the same way as it is in the feedforward network. That is, with the product of the sum of 
-	the weights and features. However, in subsequent layers, the recurrent neural network process begins.
-	From each time-step to the next, each node will remember some information that it had in the previous 
-	time-step. In other words, each node acts as a memory cell while computing and carrying out operations. 
-	The neural network begins with the front propagation as usual but remembers the information it may 
-	need to use later. If the prediction is wrong, the system self-learns and works towards making the right 
-	prediction during the backpropagation. 
-	This type of neural network is very effective in text-to-speech conversion technology.  
-
-	So far the neural networks that we’ve examined have always had forward connections. The input layer always
-	connects to the first hidden layer. Each hidden layer always connects to the next hidden layer. 
-	The final hidden layer always connects to the output layer. This manner to connect layers is the 
-	reason that these networks are called “feedforward.” Recurrent neural networks are not so rigid, 
-	as backward connections are also allowed. A recurrent connection links a neuron in a layer to 
-	either a previous layer or the neuron itself. Most recurrent neural network architectures maintain 
-	state in the recurrent connections. Feedforward neural networks don’t maintain any state. 
-	A recurrent neural network’s state acts as a sort of short-term memory for the neural network. 
-	Consequently, a recurrent neural network will not always produce the same output for a given input.
-
-	Recurrent neural networks do not force the connections to flow only from one layer to the next, 
-	from input layer to output layer. A recurrent connection occurs when a connection is formed
-	between a neuron and one of the following other types of neurons:
-
-		- The neuron itself
-		- A neuron on the same level
-		- A neuron on a previous level
-
-	Recurrent connections can never target the input neurons or the bias neurons.
-	The processing of recurrent connections can be challenging. Because the recurrent links create endless
-	loops, the neural network must have some way to know when to stop. A neural network that entered an 
-	endless loop would not be useful. To prevent endless loops, we can calculate the recurrent connections 
-	with the following three approaches:
-
-		- Context neurons
-		- Calculating output over a fixed number of iterations
-		- Calculating output until neuron output stabilizes
+			momentum 	: float, default 0.9	
 		
-	For sequence of events, languages, models, time series, Predicting stock prices, Speech recognition,
-	Image captions, Word predictions, Language translation.
-	
-	Time series analysis such as stock prediction like price, price at time t1, t2 etc.. can be done using 
-	Recurrent neural network. Predictions depend on earlier data, in order to predict time t2, we get the 
-	earlier state information t1, this is known as recurrent neural network. Maintains memory from previous
-	state. Length of the memory is very limited. 
-	Variants of RNN :
-		- Long Short Term Memory (LSTM)
-		- GRU :Gated recurrent unit
-		- End to end network
-		- Memory network
+## 07. Radial Basis Function Neural Network
 
-## 07. Long Short Term Memory:
+	Actually FF (feed forward), that use radial basis function as activation function instead of 
+	logistic function. What makes the difference? Logistic function map some arbitrary value 
+	to a 0…1 range, answering a “yes or no” question. It is good for classification and decision 
+	making systems, but works bad for continuous values. Contrary, radial basis functions answer 
+	the question “how far are we from the target”? This is perfect for function approximation, 
+	and machine control. 
+	To be short, these are just FF networks with different activation function and appliance.
 	
-	Special type of RNN. They are explicitly designed to address the long term dependency problem, there are 
-	gates to remember, where to forget in LSTM. RNN with LSTM prevents vanishing gradient effect by passing 
-	errors recursively to the next NN. It controls the gradient flow & enable better preservation of “long-range 
-	dependencies” by using gates. Maintains memory from previous and even other states. Length of the memory is 
-	quite large. Long short-term memory (LSTM) is explicitly designed to address the long-term dependency problem, 
-	by maintaining a state of what to remember and what to forget.
-	Key components of LSTM : 
-		- Gates
-			- forget: Earlier gate which has data to be remembered are concatenated with the new data to 
-					be remembered.
-					
-			- memory: Here it is used to determine how much information should be stored in the memory and 
-					how much percentage to forget. Operations like dot product, 
-					additions are performed here.
-					
-			- update: Forget from the early state and operations are performed and updated.
-	
-		- tanh(x): values from -1 to 1
-		- sigmoid(x): values from 0 to 1
+	A radial basis function considers the distance of any point relative to the centre. Such neural networks 
+	have two layers. In the inner layer, the features are combined with the radial basis function.
+	The radial basis function neural network is applied extensively in power restoration systems. 
+	In recent decades, power systems have become bigger and more complex. This increases the risk 
+	of a blackout. This neural network is used in the power restoration systems in order to restore 
+	power in the shortest possible time.
 
 ## 08. Modular Neural Network:
 	
