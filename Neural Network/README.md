@@ -37,10 +37,23 @@
 
 ## Activation Function:
  
- It’s just a thing function that you use to get the output of node. It is also known as Transfer Function. It is used to determine the output of neural network like yes or no. The Activation Functions can be basically divided into 2 types:
- - Linear Activation Function: Range is -infinity to infinity. Not possible to use backpropagation as the derivative of the function is a constant. no matter how many layers in the neural network, the last layer will be a 	linear function of the first layer so a linear activation function turns the neural network into just one layer. A neural network with a linear activation function is simply a linear regression model. 
-- Non-linear Activation Functions: It makes it easy for the model to generalize or adapt with variety of data and to differentiate between the output. It allows backpropagation because they have a derivative function which is related to the inputs. It allows “stacking” of multiple layers of neurons to create a deep neural network. Multiple hidden layers of neurons are needed to learn complex data sets with high levels of accuracy.
-	- Sigmoid or Logistic Activation Function: Sigmoid Function curve looks like a S-shape. The logistic sigmoid function can cause a neural network to get stuck at the training time. The softmax function is a more generalized logistic activation function which is used for multiclass classification. The main reason why we use sigmoid function is because it exists between (0 to 1). Vanishing gradient problem.
+ 	It’s just a thing function that you use to get the output of node. It is also known as Transfer Function. 
+	It is used to determine the output of neural network like yes or no. 
+	The Activation Functions can be basically divided into 2 types:
+ 	- Linear Activation Function: 
+	Range is -infinity to infinity. Not possible to use backpropagation as the derivative of the function 
+	is a constant. no matter how many layers in the neural network, the last layer will be a linear function 
+	of the first layer so a linear activation function turns the neural network into just one layer. 
+	A neural network with a linear activation function is simply a linear regression model. 
+	- Non-linear Activation Functions: It makes it easy for the model to generalize or adapt with variety of 
+	data and to differentiate between the output. It allows backpropagation because they have a derivative function
+	which is related to the inputs. It allows “stacking” of multiple layers of neurons to create a deep neural network.
+	Multiple hidden layers of neurons are needed to learn complex data sets with high levels of accuracy.
+	- Sigmoid or Logistic Activation Function: Sigmoid Function curve looks like a S-shape. 
+	The logistic sigmoid function can cause a neural network to get stuck at the training time. 
+	The softmax function is a more generalized logistic activation function which is used for 
+	multiclass classification. The main reason why we use sigmoid function is because 
+	it exists between (0 to 1). Vanishing gradient problem.
 	- Tanh or hyperbolic tangent Activation Function: tanh is also like logistic sigmoid but better. The range of the tanh function is from (-1 to 1). tanh is also sigmoidal (s - shaped). Both tanh and logistic sigmoid activation functions are used in feed-forward nets. Vanishing gradient problem.
 	- ReLU (Rectified Linear Unit) Activation Function: The ReLU is the most used activation function in the world right now.Since, it is used in almost all the convolutional neural networks or deep learning. As you can see, the ReLU is half rectified. f(z) is zero when z is less than zero and f(z) is equal to z when z is above or equal to zero. Range is 0 to infinity. But the issue is that all the negative values become zero immediately which decreases the ability of the model to fit or train from the data properly. That means any negative input given to the ReLU activation function turns the value into zero immediately in the graph, which in turns affects the resulting graph by not mapping the negative values appropriately. It rectifies vanishing gradient problem . Almost all deep learning Models use ReLu nowadays. it should only be used within Hidden layers of a Neural Network Model. Hence for output layers we should use a Softmax function for a Classification problem to compute the probabilites for the classes , and for a regression problem it should simply use a linear function. Another problem with ReLu is that some gradients can be fragile during training and can die. It can cause a weight update which will makes it never activate on any data point again. The draw backs of ReLU is when the gradient hits zero for the negative values, it does not converge towards the minima which will result in a dead neuron while back propagation. To fix this problem another modification was introduced called Leaky ReLu to fix the problem of dying neurons. It introduces a small slope to keep the updates alive. 
 	- Leaky ReLU: Range of the Leaky ReLU is -infinity to infinity.
