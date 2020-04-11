@@ -35,10 +35,11 @@
  	It’s just a thing function that you use to get the output of node. It is also known as Transfer Function. 
 	It is used to determine the output of neural network like yes or no. 
 	
-	Some examples: CUBE, ELU, HARDSIGMOID, HARDTANH, IDENTITY, LEAKYRELU, RATIONALTANH, RELU, RRELU, 
-	SIGMOID, SOFTMAX, SOFTPLUS, SOFTSIGN, TANH
+	Some examples: SIGMOID, RELU, LEAKYRELU, TANH, SOFTMAX, CUBE, ELU, RRELU, HARDSIGMOID, HARDTANH, IDENTITY,  
+			RATIONALTANH, SOFTPLUS, SOFTSIGN, 
 	
 	The Activation Functions can be basically divided into 2 types:
+	
  	- Linear Activation Function: 
 	
 	Range is -infinity to infinity. Not possible to use backpropagation as the derivative of the function is a 
