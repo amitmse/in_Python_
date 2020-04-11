@@ -114,7 +114,7 @@
 	at the training time. The softmax function is a more generalized logistic activation function which is used for 
 	multiclass classification. The main reason why we use sigmoid function is because it exists between (0 to 1). 
 	Vanishing gradient problem.
-	
+---------------------------------------------------------------------------------------------------------
 	- Tanh or hyperbolic tangent Activation Function: 
 	tanh is also like logistic sigmoid but better. The range of the tanh function is from (-1 to 1). 
 	tanh is also sigmoidal (s - shaped). Both tanh and logistic sigmoid activation functions are used in 
