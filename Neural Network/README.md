@@ -10,16 +10,6 @@
 		In logistic regression, there are only two layers i.e. input and output but in neural network, 
 		there is at least one hidden layer between input and output layer.
  	
-## Problem in NN:
-	Well due to Fully Connected Layer Architecture we experience two problems:
-			-	Vanishing Gradient Problem 
-			-	Exploding Gradient Problem 
-	while training Deep Neural Networks which makes it hard to train deep neural networks.
-	To prevent that we make use of a different architecture called as Convolutional Nets 
-	which uses three main ideas:
-			-	Local Receptive fields 
-			-	Shared Weights 
-			- 	Pooling
  ---------------------------------------------------------------------------------------------------------
  
  ## Cost function :
@@ -287,151 +277,85 @@
 	high risk of a blackout. This neural network is used in the power restoration systems in order to restore 
 	power in the shortest possible time.
 
-## 08. Modular Neural Network:
-	
-	A modular neural network has a number of different networks that function independently and perform sub-tasks. 
-	The different networks do not really interact with or signal each other during the computation process. 
-	They work independently towards achieving the output.
+## 08. Deep neural network
 
-	As a result, a large and complex computational process can be done significantly faster by breaking it down 
-	into independent components. The computation speed increases because the networks are not interacting with 
-	or even connected to each other.
-	
-## 09. Sequence-To-Sequence Models
-
-	A sequence to sequence model consists of two recurrent neural networks. There’s an encoder that processes 
-	the input and a decoder that processes the output. The encoder and decoder can either use the same or 
-	different parameters. This model is particularly applicable in those cases where the length of the input 
-	data is not the same as the length of the output data. Sequence-to-sequence models are applied mainly 
-	in chatbots, machine translation, and question answering systems.	
-	
-## 10. DFF neural networks 
-	These are just FF NNs, but with more than one hidden layer. training a traditional FF, we pass only a small
-	amount of error to previous layer. Because of that stacking more layers led to exponential growth of 
-	training times, making DFFs quite impractical. in early 2000s we developed a bunch of approaches 
-	that allowed to train DFFs effectively; now they form a core of modern Machine Learning systems, 
-	covering the same purposes as FFs, but with much better results.
-	
-## 11. Autoencoders are used for classification, clustering and feature compression.
-
-	When you train FF neural networks for classification you mostly must feed then X examples in Y categories, 
-	and expect one of Y output cells to be activated. This is called “supervised learning”.
-	AEs, on the other hand, can be trained without supervision. Their structure — when number of hidden cells 
-	is smaller than number of input cells (and number of output cells equals number of input cells), 
-	and when the AE is trained the way the output is as close to input as possible, 
-	forces AEs to generalise data and search for common patterns.
-
-## 12. Dropout Regularization
-
-	Most neural network frameworks implement dropout as a separate layer. Dropout layers function as a regular, 
-	densely connected neural network layer. The only difference is that the dropout layers will periodically 
-	drop some of their neurons during training. You can use dropout layers on regular feedforward neural networks.
-
-	 A network with dropout means that some weights will be randomly set to zero. 
-	 Imagine you have an array of weights [0.1, 1.7, 0.7, -0.9]. If the neural network has 
-	a dropout, it will become [0.1, 0, 0, -0.9] with randomly distributed 0. The parameter that controls 
-	the dropout is the dropout rate. The rate defines how many weights to be set to zeroes.
-
-## 13. Deep neural network
-
-	-Deep learning works because of the architecture of the network AND the optimization routine applied 
-		to that architecture.
+	Deep neural networks were a set of techniques that were discovered to overcome the vanishing gradient 
+	problem which was severely limiting the depth of neural networks.
 		
-	-Deep neural networks were a set of techniques that were discovered to overcome the vanishing gradient 
-		problem which was severely limiting the depth of neural networks.
+	The use of simple Rectified Linear Units (ReLU) instead of sigmoid and tanh functions is probably 
+	the biggest building block in making training of DNNs possible. 
 		
-	-The use of simple Rectified Linear Units (ReLU) instead of sigmoid and tanh functions is probably 
-		the biggest building block in making training of DNNs possible. Note that both sigmoid and 
-		tanh functions have almost zero gradient almost everywhere, depending on how fast they transit 
-		from the low activation level to high; in the extreme case, when the transition is sudden, 
-		we get a step function that has slope zero everywhere except at one point where the transition happens.
-		
-	- One of the main differences between deep neural networks and 
-		traditional neural networks is that we don't just use backpropagation for deep neural nets. 
-		Because backpropagation trains later layers more efficiently than it trains earlier layers--as you 
-		go earlier and earlier in the network, the errors get smaller and more diffuse. So a ten-layer 
-		network will basically be seven layers of random weights followed by three layers of fitted weights, 
-		and do just as well as a three layer network.
-		
- -----------------------------------------------------------------------------------------------------------
- 
-
+	One of the main differences between deep neural networks and traditional neural networks is that we don't 
+	just use backpropagation for deep neural nets. Because backpropagation trains later layers more efficiently 
+	than it trains earlier layers, the errors get smaller and more diffuse. 
 
 -------------------------------------------------------------------------------------------------------------
 
 ![List of Neural Network](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/All%20Type.png)
 
 Note: sourced from [Link](https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464)
-
-
+			
 ---------------------------------------------------------------------------------------------------------
 
 ## Algorithm
 
 	1. Feed-forward computation: Calculate hidden layer nodes & output layer.
-		a. Calculate all hidden layer nodes 	: Multiply input layer and their weights (random for 1st time)
-							  And then apply sigmod function(Logistic function)
+		a. Calculate all hidden layer nodes: Multiply input layer and their weights (random for 1st time)
+		And then apply sigmod function(Logistic function)
 							  
-		b. Output layer node 			: Multiply hidden layer and their weights (random for 1st time)
-							  And then apply sigmod function(Logistic function)
+		b. Output layer node: Multiply hidden layer and their weights (random for 1st time) and then apply 
+		sigmod function(Logistic function)
 
 	2. Back propagation to the output layer: calculate error of output layer & weights adjustment for hidden layer
-		Error in output layer node 		: Substract actual output and predicted Output layer node
+		a. Error in output layer node: Substract actual output and predicted Output layer node
 		
-		Rate of change (weight for hidden) 	: Multiply Learning rate, Error in output layer node and 
-							  Hidden layer nodes
+		b. Rate of change (weight for hidden): Multiply Learning rate, Error in output layer node and Hidden layer 
+		nodes
 							  
-		Adjusted weights for hidden layer 	: Add previous weights for hidden layer, Rate of change 
-			(weight for hidden) and Momentum term into previous delta change of the weight 
-			(will be 0 for 1st time)
+		c. Adjusted weights for hidden layer: Add previous weights for hidden layer, Rate of change (weight for 
+		hidden) and Momentum term into previous delta change of the weight (will be 0 for 1st time)
 
 	3. Back propagation to the hidden layer	: calculate error of hidden layer & weights adjustment input layer
-		Error in hidden layer node		: Multiply Error in output layer node and adjusted 
-								weights for hidden layer
+		a. Error in hidden layer node: Multiply Error in output layer node and adjusted weights for hidden layer
 								
-		Rate of change (weight for input)	: Multiply Learning rate, Error in hidden layer nodes and 
-								input layer nodes
+		b. Rate of change (weight for input): Multiply Learning rate, Error in hidden layer nodes and input
+		layer nodes
 								
-		Adjusted weights for input layer	: Add previous weights for input layer, 
-			Rate of change (weight for input) and Momentum term into previous delta change of 
-			the weight (will be 0 for 1st time)
+		c. Adjusted weights for input layer: Add previous weights for input layer, Rate of change (weight for 
+		input) and Momentum term into previous delta change of the weight (will be 0 for 1st time)
 
 	4. Weight updates: Use new weight to calculate hidden layer nodes, output layer & Error in output layer node
-		Updated hidden layer nodes		: Multiply input layer and their updated weights
-								And then apply sigmod function(Logistic function)
+		a. Updated hidden layer nodes: Multiply input layer and their updated weights and then apply sigmod 
+		function(Logistic function)
 								
-		Updated output layer node		: Multiply hidden layer and their updated weights
-								And then apply sigmod function(Logistic function)
+		b. Updated output layer node: Multiply hidden layer and their updated weights and then apply sigmod 
+		function(Logistic function)
 								
-		Updated Error in output layer node	: Substract actual output and Output layer node
+		c. Updated Error in output layer node: Substract actual output and Output layer node
 		
-		Change in error				: Substract previous error and current error
+		d. Change in error: Substract previous error and current error
 		
 -------------------------------------------------------------------------------------------------------------
  
 ## Types of Gradient Descent:
 	1. Batch Gradient Descent: 
-		In batch gradient descent, we use the complete dataset available to compute the gradient of 
-		the cost function. Batch gradient descent is very slow because we need to calculate the gradient 
-		on the complete dataset to perform just one update, and if the dataset is large then it will 
-		be a difficult task. 
+		It uses a complete dataset available to compute the gradient of the cost function hence and it's 
+		very slow. 
 		- Cost function is calculated after the initialization of parameters.
 		- It reads all the records into memory from the disk.
 		- After calculating sigma for one iteration, we move one step further, and repeat the process.
 	
 	2. Mini-batch Gradient Descent:
 		It is a widely used algorithm that makes faster and accurate results. The dataset, here, 
-		is clustered into small groups of ‘n’ training datasets. It is faster because it does not 
-		use the complete dataset. In every iteration, we use a batch of ‘n’ training datasets to 
-		compute the gradient of the cost function. It reduces the variance of the parameter updates, 
-		which can lead to more stable convergence. It can also make use of a highly optimized matrix
-		that makes computing of the gradient very efficient.
+		is clustered into small groups of ‘n’ training datasets hence it's faster. In every iteration, 
+		it uses a batch of ‘n’ training datasets to compute the gradient of the cost function.
+		It reduces the variance of the parameter updates, which can lead to more stable convergence. 
+		It can also make use of a highly optimized matrix that makes computing of the gradient very efficient.
 
 	3. Stochastic Gradient Descent:
-		We use stochastic gradient descent for faster computation. The first step is to randomize 
-		the complete dataset. Then, we use only one training example in every iteration to calculate 
-		the gradient of the cost function for updating every parameter. It is faster for larger datasets 
-		also because it uses only one training example in each iteration.
+		Stochastic gradient descent used for faster computation. First, it randomizes the complete dataset, 
+		and then uses only one training example in every iteration to calculate the gradient. Its benifical 
+		for huge datasets.
 
 ---------------------------------------------------------------------------------------------------------
 
@@ -439,95 +363,66 @@ Note: sourced from [Link](https://towardsdatascience.com/the-mostly-complete-cha
 
 	Why it is called hidden: Because hidden layer does not see inputs(training set)
 	
-	- if data is linearly separable then don't need any hidden layers at all. Of course, you don't need an 
-		NN to resolve your data either, but it will still do the job.
+	If data is linearly separable then don't need any hidden layers at all and no need to use NN. Should be verified.
+	Assuming data does require separation by a non-linear technique, then always start with one hidden layer
 		
-	- One issue within this subject on which there is a consensus is the performance difference from adding 
-		additional hidden layers: the situations in which performance improves with a second (or third, etc.) 
-		hidden layer are very small. One hidden layer is sufficient for the large majority of problems.
+	Additonal hidden layer creates major performance issue. Most of times, one hidden layer is sufficient for the 
+	majority of problems.
 		
-	- Get decent performance (even without a second optimization step) by setting the hidden layer configuration 
-		using just two rules: 
-			i. number of hidden layers equals one
-			ii. number of neurons in that layer is the mean of the neurons in the input and output layers
-			
-	- Pruning describes a set of techniques to trim network size (by nodes not layers) to improve computational 
-		performance and sometimes resolution performance. Get a rough idea of which nodes are not important by 
-		looking at your weight (weights very close to zero) matrix after training.
-		
-	- Using too many neurons in the hidden layers can result in several problems. 
-		- First, too many neurons in the hidden layers may result in overfitting.
-		- A second problem can occur even when the training data is sufficient. An inordinately large number of 
-			neurons in the hidden layers can increase the time it takes to train the network. 
-		- There are many rule-of-thumb methods for determining the correct number of neurons to use in the 
-			hidden layers, such as the following:
-		- #hidden neurons should be between the size of the input layer and the size of the output layer
-		- #hidden neurons should be 2/3 the size of the input layer, plus the size of the output layer
-		- #hidden neurons should be less than twice the size of the input layer
-							
-	- A model with zero hidden layers will resolve linearly separable data. So unless you already know your data 
-		isn't linearly separable, it doesn't hurt to verify this.
-		
-	- Assuming your data does require separation by a non-linear technique, then always start with one hidden layer
+	Using too many neurons in the hidden layers can result in several problems:
+		- Overfitting.
+		- Extra time to train the network. 
+		- Number of neurons:
+			- In between the size of the input layer and the size of the output layer
+			- 2/3 of size of the input layer, plus the size of the output layer
+			- Less than twice the size of the input layer
 
 ---------------------------------------------------------------------------------------------------------
 
 ## Back-propagation
 	
-	When we feel that outputs are not correct, we back propagate the values to adjust the weights 
-	to produce the right output. The architecture, activation functions remains the same in each 
-	perceptron. Adjusts using gradient descent.
-
-	Back-propagation is considered the standard method in artificial neural networks to calculate 
-	the error contribution of each neuron after a batch of data is processed. However, there are 
-	some major problems using back-propagation. Firstly, it requires labeled training data; 
-	while almost all data is unlabeled. Secondly, the learning time does not scale well, 
-	which means it is very slow in networks with multiple hidden layers. Thirdly, it can 
-	get stuck in poor local optima, so for deep nets they are far from optimal.
+	Back-propagation is a standard method in artificial neural networks to calculate the error contribution 
+	of each neuron. However, there are some major problems using back-propagation:
 	
-	Neural networks are trained using backpropagation gradient descent. That is, you update the weights of 
-	each layer as a function of the derivative of the previous layer. The problem is that the update 
-	signal was lost as you increased the depth of the neural network. The math is pretty simple. 
-	Therefore, in the old days, people pretty much only used neural networks with a single hidden-layer.
-	
-	The errors are getting propagated in a backward fashion. We start by first finding the error terms 
-	of the output layer using BP1. And then using BP2 we get error terms of the layer previous to that. 
-	keep on using BP2 to get error terms of all neurons in all inside layer right till first input layer. 
-	So this way we are propagating the error from the output layer all the way to the first layer. 
-	Back Propagation is nothing but the chain rule of calculus. So the reason this error propagation 
-	is happening backwards is because the initial cost function is used as a function of output
-	activation and chain rule of calculus then causes it to behave that way.
+		1. Requires labeled training data
 		
-	Back propagation has some problems associated with it which include :
+		2. Slow convergence: Very slow in networks with multiple hidden layers. 
+		
+		3. Local minima: It happens because the algorithm always changes the weights to reduce the error. 
+		But the error might briefly have to rise as part of a more general fall, If this is the case, 
+		the algorithm will “get stuck” (because it can‟t go uphill) and the error will not decrease further.
+		
+	 	4. Network paralysis: It occurs when the weights are adjusted to very large values during training, 
+	 	large weights can force most of the units to operate at extreme values, in a region where the derivative 
+		of the activation function is very small.
+		
+		
+	It updates the weights of each layer as a function of the derivative of the previous layer. The problem is 
+	that the update signal was lost as depth increases.  
 	
-	 - Network paralysis: It occurs when the weights are adjusted to very large values during training, 
-	 		large weights can force most of the units to operate at extreme values, in a region 
-			where the derivative of the activation function is very small
-	 
-	 - Local minima : Perhaps the best known is called “Local Minima”. This occurs because 
-	 		the algorithm always changes the weights in such a way as to cause 
-			the error to fall. But the error might briefly have to rise as part of a more
-			general fall, If this is the case, the algorithm will “get stuck” 
-			(because it can‟t go uphill) and the error will not decrease further
-			
-	 - Slow convergence
-	
-	- A multilayer neural network requires many repeated presentations of the input patterns, 
-			for which the weights need to be adjusted before the network is able to 
-			settle down into an optimal solution
 			
 ---------------------------------------------------------------------------------------------------------
 
-## Choosing the correct learning rate and momentum will help in weight adjustment
+## Problem in NN:
+	Well due to Fully Connected Layer Architecture we experience two problems:
+			-	Vanishing Gradient Problem 
+			-	Exploding Gradient Problem 
+	while training Deep Neural Networks which makes it hard to train deep neural networks.
+	To prevent that we make use of a different architecture called as Convolutional Nets 
+	which uses three main ideas:
+			-	Local Receptive fields 
+			-	Shared Weights 
+			- 	Pooling
+
+---------------------------------------------------------------------------------------------------------
+
+### Choosing the correct learning rate and momentum will help in weight adjustment
 
 ## Learning rate /step size:
-	The learning rate is how fast the network learns its parameters. 
-	Setting right learning rate could be difficult task. The learning rate is a parameter that determines 
-	how much an updating step influences the current value of the weights.If learning rate is too small, 
-	algorithm might take long time to converges. choosing large learning rate could have opposite effect 
-	algorithm could diverge. Sometimes in NN every weight has it’s own learning rate. Learning rate of 0.35 
-	proved to be popular choice when training NN. This paper will use rate of 0.45 but this value is used 
-	because of simple architecture of NN used in example.
+	The learning rate: how fast the network learns its parameters. Setting right learning rate could be 
+	difficult task. The learning rate is a parameter that determines how much an updating step influences 
+	the current value of the weights. If learning rate is too small, algorithm might take long time to 
+	converges. Choosing large learning rate could have opposite effect.
 						
 ## Momentum term: 
 	It is a parameter that helps to come out of the local minima and smoothen the jumps while gradient descent.
@@ -549,26 +444,27 @@ Note: sourced from [Link](https://towardsdatascience.com/the-mostly-complete-cha
 	
 ## Number of epochs: 
 	The number of times the entire training data is fed to the network while training is referred to as 
-	the number of epochs. We increase the number of epochs until the validation accuracy starts decreasing, 
+	the number of epochs. Increase the number of epochs until the validation accuracy starts decreasing, 
 	even if the training accuracy is increasing (overfitting).
 
 ## Parameters vs Hyperparameters
 	Parameters are learned by the model during the training time, while hyperparameters can be changed 
-	before training the model. Parameters of a deep neural network are weight, Beta etc, which the model 
-	updates during the backpropagation step. 
-	On the other hand, there are a lot of hyperparameters for a deep NN, including:
-		Learning rate – ⍺
-		Number of iterations
-		Number of hidden layers
-		Units in each hidden layer
-		Choice of activation function
+	before training the model. 
+	
+	Parameters of a deep neural network are weight, Beta etc, which the model updates during the backpropagation step. 
+	
+	There are a lot of hyperparameters for a deep NN, including:
+		1. Learning rate – ⍺
+		2. Number of iterations
+		3. Number of hidden layers
+		4. Units in each hidden layer
+		5. Choice of activation function
 
 ## Neuron Saturation:
 	If we use sigmoid function as the activation function, then the error term in the output layer 
-	slows down as activation saturates. If you see as Z tends to grow higher 
-	(refer to graph for logistic sigmod function) or smaller the function flattens either to 1 or 0. 
-	This is called neuron saturation as it can't go beyond that. Which means the differential at 
-	that time becomes very low or close to zero. This means if the output neuron saturates, 
+	slows down as activation saturates. If you see as Z tends to grow higher or smaller the function 
+	flattens either to 1 or 0. This is called neuron saturation as it can't go beyond that. Which means 
+	the differential at that time becomes very low or close to zero. This means if the output neuron saturates, 
 	then the error for that neuron would be very low. Now error as defined above is just the change 
 	of cost with respect to that neuron's weighted input (z), the cost would change slowly, 
 	with respect to that weight and hence the gradient of that neuron is very low. This means the 
