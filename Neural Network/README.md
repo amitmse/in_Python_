@@ -177,7 +177,7 @@
 	
 	- Leaky ReLU: Range of the Leaky ReLU is -infinity to infinity.
 
-![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Leaky%20ReLU.PNG)
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Leaky_ReLU.PNG)
 
 	- Softmax: 
 	Softmax is a very interesting activation function because it not only maps our output to a [0,1] range but also 
