@@ -156,10 +156,8 @@
 	A convolutional neural network(CNN) contains one or more than one convolutional layers. These layers 
 	can either be completely interconnected or pooled. Before passing the result to the next layer, 
 	the convolutional layer uses a convolutional operation on the input. Due to this convolutional operation, 
-	the network can be much deeper but with much fewer parameters. Due to this ability, convolutional neural 
-	networks show very effective results in image and video recognition, natural language processing, 
-	and recommender systems. 
-	
+	the network can be much deeper but with much fewer parameters. 
+		
 	Convolutional neural networks also show great results in semantic parsing and paraphrase detection.
 	They are also applied in signal processing and image classification. CNNs are also being used in image 
 	analysis and recognition in agriculture where weather features are extracted from satellites like 
@@ -177,6 +175,8 @@
 		- Dense (fully connected layer)
 		- Model compile and train
 	
+	Use: image and video recognition, natural language processing, and recommender systems. 
+
 ## 04. Recurrent Neural Network(RNN):
 
 	In this, the output of a particular layer is saved and fed back to the input. This helps predict the 
@@ -216,9 +216,7 @@
 		- Calculating output over a fixed number of iterations
 		- Calculating output until neuron output stabilizes
 		
-	Use: For sequence of events, languages, models, time series, Predicting stock prices, Speech recognition,
-	Image captions, Word predictions, Language translation.
-	
+		
 	Time series analysis such as stock prediction like price, price at time t1, t2 etc.. can be done using 
 	Recurrent neural network. Predictions depend on earlier data, in order to predict time t2, we get the 
 	earlier state information t1, this is known as recurrent neural network. Maintains memory from previous
@@ -228,10 +226,13 @@
 		- GRU :Gated recurrent unit
 		- End to end network
 		- Memory network
-
+		
+	Use: For sequence of events, languages, models, time series, Predicting stock prices, Speech recognition,
+	Image captions, Word predictions, Language translation.
+	
 ## 05. Long Short Term Memory:
 	
-	Special type of RNN. They are explicitly designed to address the long term dependency problem, there are 
+	It's special type of RNN and explicitly designed to address the long term dependency problem, there are 
 	gates to remember, where to forget in LSTM. RNN with LSTM prevents vanishing gradient effect by passing 
 	errors recursively to the next NN. It controls the gradient flow & enable better preservation of “long-range 
 	dependencies” by using gates. Maintains memory from previous and even other states. Length of the memory is 
@@ -251,80 +252,39 @@
 		- tanh(x): values from -1 to 1
 		- sigmoid(x): values from 0 to 1
 		
+	Use: For sequence of events, languages, models, time series, Predicting stock prices, Speech recognition,
+	Image captions, Word predictions, Language translation.
+	
 ## 06. Multi Layer Perceptron (MLP): One or more non-linear hidden layers.
 
-	A multilayer perceptron has three or more layers. It is used to classify data that cannot be
-	separated linearly. It is a type of artificial neural network that is fully connected. 
-	This is because every single node in a layer is connected to each node in the following layer.
-	
-	A multilayer perceptron uses a nonlinear activation function (mainly hyperbolic tangent or logistic function). 
-	The activation functions are: Sigmoid (0 to 1) & Tanh (-1 to 1). 
-	This type of neural network is applied extensively in speech recognition and machine translation technologies.
+	A multilayer perceptron has three or more layers. It is used to classify data that cannot be separated linearly. 
+	This is because every single node in a layer is connected to each node in the following layer. A multilayer 
+	perceptron uses a nonlinear activation function (mainly hyperbolic tangent or logistic function).
 	
 	Advantages:
 		- Capability to learn non-linear models.
 		- Capability to learn models in real-time (on-line learning) using partial_fit.
+		
 	Disadvantages:
-		- MLP with hidden layers have a non-convex loss function where there exists more than 
-		  one local minimum. Therefore different random weight initializations can lead to 
-		  different validation accuracy.
-		- MLP requires tuning a number of hyperparameters such as the number of hidden neurons, 
-		  layers, and iterations.
+		- MLP with hidden layers have a non-convex loss function where there exists more than one local minimum. 
+		  Therefore different random weight initializations can lead to different validation accuracy.
+		- MLP requires tuning of hyperparameters i.e. number of hidden neurons, layers, and iterations.
 		- MLP is sensitive to feature scaling.
 		- ReLU overcomes the vanishing gradient problem in the multi layer neural network.
-
-	number of neurons in hidden layer (hidden_layer_sizes):
-		- no of hidden layer is length of tuple. for below example hidden layers are  1,3,2:
-			- len(7,) 	is 1 
-			- len(10,10,10) is 3
-			- len(5, 2) 	is 2
-		- hidden unit is number inside tuple: 
-			- hidden_layer_sizes = (7,) this refers to 1 hidden layer with 7 hidden units.
-			- length = n_layers - 2 is because you have 1 input layer and 1 output layer.
-			- 3 hidden layers with 10 hidden units each - (10,10,10)
-			- (5, 2) i.e 1st hidden layer has 5 neurons. 2nd hidden layer has 2 neurons.
 				
-		Activation function for the hidden layer: (default is relu)
-			identity: no-op activation, useful to implement linear bottleneck, returns f(x) = x
-			logistic: logistic sigmoid function, returns f(x) = 1 / (1 + exp(-x)).
-			tanh	: hyperbolic tan function, returns f(x) = tanh(x).
-			relu	: rectified linear unit function, returns f(x) = max(0, x)
-
-		The solver for weight optimization: (default is adam)
-			lbfgs	: optimizer in the family of quasi-Newton methods.
-			sgd	: stochastic gradient descent.
-			adam	: stochastic gradient-based optimizer
-			
-		alpha 		: default 0.0001
-
-		Learning rate: (default constant)
-			constant   : constant learning rate given by ‘learning_rate_init’.
-			invscaling : gradually decreases the learning rate learning_rate_ at each time step ‘t’ 
-					using an inverse scaling exponent of ‘power_t’. 
-					effective_learning_rate = learning_rate_init / pow(t, power_t)
-			adaptive   : keeps the learning rate constant to ‘learning_rate_init’ as long as training 
-					loss keeps decreasing. Each time two consecutive epochs fail to decrease 
-					training loss by at least tol, or fail to increase validation score by at 
-					least tol if ‘early_stopping’ is on, the current learning rate is divided by 5.
-					Only used when solver='sgd'
-								
-			momentum 	: float, default 0.9	
+	Activation function for the hidden layer: (default is relu)
 		
+	Use: speech recognition and machine translation technologies.
+	
 ## 07. Radial Basis Function Neural Network
 
-	Actually FF (feed forward), that use radial basis function as activation function instead of 
-	logistic function. What makes the difference? Logistic function map some arbitrary value 
-	to a 0…1 range, answering a “yes or no” question. It is good for classification and decision 
-	making systems, but works bad for continuous values. Contrary, radial basis functions answer 
-	the question “how far are we from the target”? This is perfect for function approximation, 
+	It's Feed Forward (FF) networks with different activation function (not logistic function). Logistic function is 
+	good for classification and decision making systems, but works bad for continuous values. Contrary, radial 
+	basis functions answer the question “how far are we from the target”? This is perfect for function approximation, 
 	and machine control. 
-	To be short, these are just FF networks with different activation function and appliance.
 	
-	A radial basis function considers the distance of any point relative to the centre. Such neural networks 
-	have two layers. In the inner layer, the features are combined with the radial basis function.
-	The radial basis function neural network is applied extensively in power restoration systems. 
-	In recent decades, power systems have become bigger and more complex. This increases the risk 
-	of a blackout. This neural network is used in the power restoration systems in order to restore 
+	Use: Power restoration systems. In recent decades, power systems have become bigger and more complex and 
+	high risk of a blackout. This neural network is used in the power restoration systems in order to restore 
 	power in the shortest possible time.
 
 ## 08. Modular Neural Network:
