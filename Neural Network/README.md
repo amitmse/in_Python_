@@ -104,23 +104,27 @@
 	with a linear activation function is simply a linear regression model. 
 	
 	- Non-linear Activation Functions: 
+	
 	It makes it easy for the model to generalize or adapt with variety of 
 	data and to differentiate between the output. It allows backpropagation because they have a derivative function
 	which is related to the inputs. It allows “stacking” of multiple layers of neurons to create a deep neural network.
 	Multiple hidden layers of neurons are needed to learn complex data sets with high levels of accuracy.
 	
 	- Sigmoid or Logistic Activation Function: 
+	
 	Sigmoid Function curve looks like a S-shape. The logistic sigmoid function can cause a neural network to get stuck 
 	at the training time. The softmax function is a more generalized logistic activation function which is used for 
 	multiclass classification. The main reason why we use sigmoid function is because it exists between (0 to 1). 
 	Vanishing gradient problem.
----------------------------------------------------------------------------------------------------------
+
 	- Tanh or hyperbolic tangent Activation Function: 
+	
 	tanh is also like logistic sigmoid but better. The range of the tanh function is from (-1 to 1). 
 	tanh is also sigmoidal (s - shaped). Both tanh and logistic sigmoid activation functions are used in 
 	feed-forward nets. Vanishing gradient problem.
 	
 	- ReLU (Rectified Linear Unit) Activation Function: 
+	
 	The ReLU is the most used activation function in the world right now.Since, it is used in almost all 
 	the convolutional neural networks or deep learning. As you can see, the ReLU is half rectified. f(z) is 
 	zero when z is less than zero and f(z) is equal to z when z is above or equal to zero. Range is 0 to infinity. 
@@ -140,6 +144,7 @@
 	- Leaky ReLU: Range of the Leaky ReLU is -infinity to infinity.
 	
 	- Softmax: 
+	
 	It handles classification problems. Softmax is used only for the output layer, for neural networks that need to 
 	classify inputs into multiple categories. 
 
