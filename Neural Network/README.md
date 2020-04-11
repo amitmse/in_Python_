@@ -39,7 +39,7 @@
 	SIGMOID, SOFTMAX, SOFTPLUS, SOFTSIGN, TANH
 	
 	The Activation Functions can be basically divided into 2 types:
- 	< Linear Activation Function: >
+ 	- Linear Activation Function: 
 	
 	Range is -infinity to infinity. Not possible to use backpropagation as the derivative of the function is a 
 	constant. no matter how many layers in the neural network, the last layer will be a linear function of the 
