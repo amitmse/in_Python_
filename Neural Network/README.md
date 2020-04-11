@@ -222,6 +222,9 @@
 
 # Types of neural networks and their applications:
 
+![List of Neural Network](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/All%20Type.png)
+
+
 ## 01. Perceptron 
 	The simplest and oldest model of Neuron, as we know it. Takes some inputs, sums them up, 
 	applies activation function and passes them to output layer.
