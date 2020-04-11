@@ -152,7 +152,7 @@
 	tanh is also sigmoidal (s - shaped). Both tanh and logistic sigmoid activation functions are used in 
 	feed-forward nets. Vanishing gradient problem.
 	
-![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Tanh%20Function.jpg)
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Tanh.PNG)
 	
 	- ReLU (Rectified Linear Unit) Activation Function: 
 	
