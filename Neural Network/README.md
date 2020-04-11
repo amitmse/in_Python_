@@ -24,7 +24,6 @@
  
  ## Cost function :
  
- 	Sometimes the algorithm we create might predict the value incorrectly, so we need cost function. 
 	It tried to quantify the error factor of neural network. It calculates how well the neural network 
 	is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
 	
@@ -32,8 +31,8 @@
 
 ## Activation Function:
  
- 	It’s just a thing function that you use to get the output of node. It is also known as Transfer Function. 
-	It is used to determine the output of neural network like yes or no. 
+ 	It’s function to get the output of node. It is also known as Transfer Function. It is used to determine 
+	the output of neural network like YES or NO. 
 	
 	Some examples: SIGMOID, RELU, LEAKYRELU, TANH, SOFTMAX, CUBE, ELU, RRELU, HARDSIGMOID, HARDTANH, IDENTITY,  
 			RATIONALTANH, SOFTPLUS, SOFTSIGN, 
@@ -42,25 +41,27 @@
 	
 ### 1. Linear Activation Function: 
 	
-	Range is -infinity to infinity. Not possible to use backpropagation as the derivative of the function is a 
-	constant. no matter how many layers in the neural network, the last layer will be a linear function of the 
-	first layer so a linear activation function turns the neural network into just one layer. A neural network
-	with a linear activation function is simply a linear regression model. 
+	A neural network with a linear activation function is simply a linear regression model. No matter how many 
+	layers in the neural network, the last layer will be a linear function of the first layer so a linear 
+	activation function turns the neural network into just one layer. Backpropagation can't be used as  
+	the derivative of linear function is a constant.
+	Range: -infinity to infinity.
 	
 ### 2. Non-linear Activation Functions: 
 	
-	It makes it easy for the model to generalize or adapt with variety of 
-	data and to differentiate between the output. It allows backpropagation because they have a derivative function
-	which is related to the inputs. It allows “stacking” of multiple layers of neurons to create a deep neural network.
-	Multiple hidden layers of neurons are needed to learn complex data sets with high levels of accuracy.
+	It makes it easy for the model to generalize or adapt with variety of data and to differentiate between 
+	the output. It allows backpropagation because they have a derivative function which is related to the inputs. 
+	It allows “stacking” of multiple layers of neurons to create a deep neural network. Multiple hidden layers 
+	of neurons are needed to learn complex data sets with high levels of accuracy. 
 	Below are few non-linear activation functions:
 	
 #### 2.1 Sigmoid or Logistic Activation Function: 
 	
-	Sigmoid Function curve looks like a S-shape. The logistic sigmoid function can cause a neural network to get stuck 
+	Sigmoid Function looks like a S-shape. The logistic sigmoid function can cause a neural network to get stuck 
 	at the training time. The softmax function is a more generalized logistic activation function which is used for 
 	multiclass classification. The main reason why we use sigmoid function is because it exists between (0 to 1). 
-	Vanishing gradient problem.
+	
+	Problem: Vanishing gradient.
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Sigmoid.PNG)
 
@@ -69,46 +70,55 @@
 	
 	tanh is also like logistic sigmoid but better. The range of the tanh function is from (-1 to 1). 
 	tanh is also sigmoidal (s - shaped). Both tanh and logistic sigmoid activation functions are used in 
-	feed-forward nets. Vanishing gradient problem.
+	feed-forward nets. 
+	
+	Problem: Vanishing gradient.
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Tanh.PNG)
 	
 #### 2.3 ReLU (Rectified Linear Unit) Activation Function: 
 	
-	The ReLU is the most used activation function in the world right now.Since, it is used in almost all 
-	the convolutional neural networks or deep learning. As you can see, the ReLU is half rectified. f(z) is 
-	zero when z is less than zero and f(z) is equal to z when z is above or equal to zero. Range is 0 to infinity. 
-	But the issue is that all the negative values become zero immediately which decreases the ability of 
-	the model to fit or train from the data properly. 
-	That means any negative input given to the ReLU activation function turns the value into zero immediately in the 
-	graph, which in turns affects the resulting graph by not mapping the negative values appropriately. It rectifies 
-	vanishing gradient problem. Almost all deep learning Models use ReLu nowadays. it should only be used within Hidden 
-	layers of a Neural Network Model. Hence for output layers we should use a Softmax function for a Classification 
-	problem to compute the probabilites for the classes, and for a regression problem it should simply use a linear 
-	function. Another problem with ReLu is that some gradients can be fragile during training and can die. It can 
-	cause a weight update which will makes it never activate on any data point again. The draw backs of ReLU is when
+	The ReLU is the most used activation function. Since, it is used in almost all the convolutional neural 
+	networks or deep learning. It rectifies vanishing gradient problem. Range is 0 to infinity. 
+	
+	It should only be used within Hidden layers of a Neural Network Model. Hence for output layers should a 
+	Softmax function for a Classification problem to compute the probabilites for the classes, and for a 
+	regression problem it should simply use a linear function. 
+	
+	Problem: 
+	The issue is that all the negative values become zero immediately which decreases the ability of the model 
+	to fit or train from the data properly.
+	
+	Another problem with ReLu is that some gradients can be fragile during training and can die. It can cause a
+	weight update which will makes it never activate on any data point again. The draw backs of ReLU is when
 	the gradient hits zero for the negative values, it does not converge towards the minima which will result in a 
-	dead neuron while back propagation. To fix this problem another modification was introduced called Leaky ReLu to
-	fix the problem of dying neurons. It introduces a small slope to keep the updates alive. 
-	ReLU overcomes the vanishing gradient problem in the multi layer neural network.
-	Rectified Linear Unit doesn't have the saturation problem where the output might get constrained beyond a limit. 
+	dead neuron while back propagate. To fix this problem another modification was introduced called Leaky ReLu to
+	fix the problem of dying neurons. It introduces a small slope to keep the updates alive. ReLU overcomes the 
+	vanishing gradient problem in the multi layer neural network. 
+	
+	Rectified Linear Unit doesn't have the saturation problem where the output might get constrained beyond a limit.
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/ReLU.PNG)
 	
 #### 2.4 Leaky ReLU: 
-	Range of the Leaky ReLU is -infinity to infinity.
+	Range : -infinity to infinity.
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Leaky_ReLU.PNG)
 
 #### 2.5 Softmax: 
 	Softmax is a very interesting activation function because it not only maps our output to a [0,1] range but also 
 	maps each output in such a way that the total sum is 1. The output of Softmax is therefore a probability distribution.
+	
 	The softmax function is often used in the final layer of a neural network-based classifier. Such networks are 
 	commonly trained under a log loss (or cross-entropy) regime, giving a non-linear variant of multinomial logistic 
-	regression. Softmax is used for multi-classification in logistic regression model whereas Sigmoid is used for binary
-	classification in logistic regression model, the sum of probabilities is One for Softmax.
-	It handles classification problems. Softmax is used only for the output layer, for neural networks that need to 
-	classify inputs into multiple categories. 
+	regression. 
+	
+	Softmax is used for multi-classification in logistic regression model whereas Sigmoid is used for binary
+	classification in logistic regression model, the sum of probabilities is One for Softmax. It handles classification
+	problems. 
+	
+	Softmax is used only for the output layer, for neural networks that need to classify inputs into multiple 
+	categories. 
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/softmax.PNG)
 
@@ -119,53 +129,47 @@
 
 ## 01. Perceptron 
 	The simplest and oldest model of Neuron, as we know it. Takes some inputs, sums them up, 
-	applies activation function and passes them to output layer.
-
-	It's a Binary unit outputting Yes, No decisions with binary inputs. Perceptron function is a 
-	step function. Transform the normal Perceptron into a sigmoid neuron using a sigmoid function 
-	(y = 1/(1+e^-z). Sigmoid function is nothing but a smooth Step function and it gives us a range 
-	of values between 0 and 1. Using this gradual output from the neuron, we can control our weight 
-	learning and tweaking of the weights. This facilitates learning of weights in a neuron.
-
+	applies activation function and passes them to output layer. It's a Binary unit outputting 
+	"Yes/No" decisions with binary inputs. 
+	
+	Perceptron function is a step function. Transform the normal Perceptron into a sigmoid neuron 
+	using a sigmoid function.
 
 ## 02. Feedforward Neural Network
 
 	In a feedforward neural network, the data passes through the different input nodes till it reaches 
 	the output node. Data moves in only one direction from the first tier onwards until it reaches 
 	the output node. This is also known as a front propagated wave which is usually achieved by 
-	using a classifying activation function. There is no backpropagation and data moves in one direction only. 
-	A feedforward neural network may have a single layer or it may have hidden layers.
-	Feedforward neural networks are used in technologies like face recognition and computer vision. 
+	using a classifying activation function. A simple feedforward neural network is equipped to deal with
+	data which contains a lot of noise. Feedforward neural networks are also relatively simple to maintain.
+	
+	There is no backpropagation and data moves in one direction only. A feedforward neural network may 
+	have a single layer or it may have hidden layers. 
+	
+	Use: Feedforward neural networks are used in technologies like face recognition and computer vision. 
 	This is because the target classes in these applications are hard to classify.
-	A simple feedforward neural network is equipped to deal with data which contains a lot of noise. 
-	Feedforward neural networks are also relatively simple to maintain.
 	
-## This one round of forward and back propagation iteration is known as one training iteration aka “Epoch“.
+### One round of Forward and Back propagation iteration is known as one training iteration aka "Epoch".
 	
-## 03. Convolutional Neural Networks
-	It used back propagation in a feedforward net with many hidden layers, many maps of replicated units 
-	in each layer, pooling of the outputs of nearby replicated units, a wide net that can cope with 
-	several characters at once even if they overlap, and a clever way of training a complete system, 
-	not just a recognizer. Later it is formalized under the name convolutional neural networks (CNNs). 
-	They are primarily used for image processing but can also be used for other types of input such as as audio.
+## 03. Convolutional Neural Networks:
 
-	A convolutional neural network(CNN) uses a variation of the multilayer perceptrons. 
-	A CNN contains one or more than one convolutional layers. These layers can either be 
-	completely interconnected or pooled. 
-	Before passing the result to the next layer, the convolutional layer uses a convolutional operation 
-	on the input. Due to this convolutional operation, the network can be much deeper but with much 
-	fewer parameters. Due to this ability, convolutional neural networks show very effective results 
-	in image and video recognition, natural language processing, and recommender systems. 
+	A convolutional neural network(CNN) contains one or more than one convolutional layers. These layers 
+	can either be completely interconnected or pooled. Before passing the result to the next layer, 
+	the convolutional layer uses a convolutional operation on the input. Due to this convolutional operation, 
+	the network can be much deeper but with much fewer parameters. Due to this ability, convolutional neural 
+	networks show very effective results in image and video recognition, natural language processing, 
+	and recommender systems. 
+	
 	Convolutional neural networks also show great results in semantic parsing and paraphrase detection.
-	They are also applied in signal processing and image classification.
-	CNNs are also being used in image analysis and recognition in agriculture where weather features 
-	are extracted from satellites like LSAT to predict the growth and yield of a piece of land. 
+	They are also applied in signal processing and image classification. CNNs are also being used in image 
+	analysis and recognition in agriculture where weather features are extracted from satellites like 
+	LSAT to predict the growth and yield of a piece of land. 
 	
 	The neural nets exists and in addition to that an image is convoluted, converted in pixel level and studied, 
 	converted and a max pooling, this entire thing is known as convolution + pooling layers.
-	Convolution layer: Here we try to decompose RGB to multidimensional layer, and apply filter to each layer. 
-	A filter tries to learn all the combinations present in the RGB layer. A strider is used to stride to each 
-	matrix in the image. We try to understand these image using convolution strider. Steps to run a CNN :
+	Convolution layer: Decompose RGB to multidimensional layer, and apply filter to each layer. A filter tries 
+	to learn all the combinations present in the RGB layer. A strider is used to stride to each matrix in the 
+	image. We try to understand these image using convolution strider. Steps to run a CNN :
 		- Creating a model with mLP
 		- Convolutional layer
 		- Activation layer
@@ -175,24 +179,23 @@
 	
 ## 04. Recurrent Neural Network(RNN):
 
-	A Recurrent Neural Network is a type of artificial neural network in which the output of a particular 
-	layer is saved and fed back to the input. This helps predict the outcome of the layer. The first layer 
-	is formed in the same way as it is in the feedforward network. That is, with the product of the sum of 
-	the weights and features. However, in subsequent layers, the recurrent neural network process begins.
-	From each time-step to the next, each node will remember some information that it had in the previous 
-	time-step. In other words, each node acts as a memory cell while computing and carrying out operations. 
-	The neural network begins with the front propagation as usual but remembers the information it may 
-	need to use later. If the prediction is wrong, the system self-learns and works towards making the right 
-	prediction during the backpropagation. 
+	In this, the output of a particular layer is saved and fed back to the input. This helps predict the 
+	outcome of the layer. The first layer is formed in the same way as it is in the feedforward network 
+	(product of the sum of the weights and features). From each time-step to the next, each node will 
+	remember some information that it had in the previous time-step. In other words, each node acts as a 
+	memory cell while computing and carrying out operations. The neural network begins with the front 
+	propagation as usual but remembers the information it may need to use later. If the prediction is wrong, 
+	the system self-learns and works towards making the right prediction during the backpropagation. 
 	This type of neural network is very effective in text-to-speech conversion technology.  
 
 	So far the neural networks that we’ve examined have always had forward connections. The input layer always
 	connects to the first hidden layer. Each hidden layer always connects to the next hidden layer. 
 	The final hidden layer always connects to the output layer. This manner to connect layers is the 
-	reason that these networks are called “feedforward.” Recurrent neural networks are not so rigid, 
-	as backward connections are also allowed. A recurrent connection links a neuron in a layer to 
-	either a previous layer or the neuron itself. Most recurrent neural network architectures maintain 
-	state in the recurrent connections. Feedforward neural networks don’t maintain any state. 
+	reason that these networks are called “feedforward.” 
+	
+	Recurrent neural networks are not so rigid, as backward connections are also allowed. A recurrent connection 
+	links a neuron in a layer to either a previous layer or the neuron itself. Most recurrent neural network 
+	architectures maintain state in the recurrent connections. Feedforward neural networks don’t maintain any state.
 	A recurrent neural network’s state acts as a sort of short-term memory for the neural network. 
 	Consequently, a recurrent neural network will not always produce the same output for a given input.
 
@@ -204,17 +207,16 @@
 		- A neuron on the same level
 		- A neuron on a previous level
 
-	Recurrent connections can never target the input neurons or the bias neurons.
-	The processing of recurrent connections can be challenging. Because the recurrent links create endless
-	loops, the neural network must have some way to know when to stop. A neural network that entered an 
-	endless loop would not be useful. To prevent endless loops, we can calculate the recurrent connections 
-	with the following three approaches:
+	Recurrent connections can never target the input neurons or the bias neurons. The processing of recurrent 
+	connections can be challenging. Because the recurrent links create endless loops, the neural network must 
+	have some way to know when to stop. A neural network that entered an endless loop would not be useful. 
+	To prevent endless loops, we can calculate the recurrent connections with the following three approaches:
 
 		- Context neurons
 		- Calculating output over a fixed number of iterations
 		- Calculating output until neuron output stabilizes
 		
-	For sequence of events, languages, models, time series, Predicting stock prices, Speech recognition,
+	Use: For sequence of events, languages, models, time series, Predicting stock prices, Speech recognition,
 	Image captions, Word predictions, Language translation.
 	
 	Time series analysis such as stock prediction like price, price at time t1, t2 etc.. can be done using 
