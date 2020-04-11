@@ -166,6 +166,7 @@
 	the gradient hits zero for the negative values, it does not converge towards the minima which will result in a 
 	dead neuron while back propagation. To fix this problem another modification was introduced called Leaky ReLu to
 	fix the problem of dying neurons. It introduces a small slope to keep the updates alive. 
+	ReLU overcomes the vanishing gradient problem in the multi layer neural network.
 	
 	- Leaky ReLU: Range of the Leaky ReLU is -infinity to infinity.
 	
@@ -257,6 +258,19 @@
 	They are also applied in signal processing and image classification.
 	CNNs are also being used in image analysis and recognition in agriculture where weather features 
 	are extracted from satellites like LSAT to predict the growth and yield of a piece of land. 
+	
+	The neural nets exists and in addition to that an image is convoluted, converted in pixel level and studied, 
+	converted and a max pooling, this entire thing is known as convolution + pooling layers.
+	Convolution layer: Here we try to decompose RGB to multidimensional layer, and apply filter to each layer. 
+	A filter tries to learn all the combinations present in the RGB layer. A strider is used to stride to each 
+	matrix in the image. We try to understand these image using convolution strider. Steps to run a CNN :
+		- Creating a model with mLP
+		- Convolutional layer
+		- Activation layer
+		- Pooling layer
+		- Dense (fully connected layer)
+		- Model compile and train
+	
 
 ## 04. Radial Basis Function Neural Network
 
@@ -282,6 +296,7 @@
 	This is because every single node in a layer is connected to each node in the following layer.
 	
 	A multilayer perceptron uses a nonlinear activation function (mainly hyperbolic tangent or logistic function). 
+	The activation functions are: Sigmoid (0 to 1) & Tanh (-1 to 1). 
 	This type of neural network is applied extensively in speech recognition and machine translation technologies.
 	
 	Advantages:
@@ -294,6 +309,7 @@
 		- MLP requires tuning a number of hyperparameters such as the number of hidden neurons, 
 		  layers, and iterations.
 		- MLP is sensitive to feature scaling.
+		- ReLU overcomes the vanishing gradient problem in the multi layer neural network.
 
 	number of neurons in hidden layer (hidden_layer_sizes):
 		- no of hidden layer is length of tuple. for below example hidden layers are  1,3,2:
@@ -535,6 +551,7 @@
 ## Choosing the correct learning rate and momentum will help in weight adjustment
 
 ## Learning rate /step size:
+	The learning rate is how fast the network learns its parameters. 
 	Setting right learning rate could be difficult task. The learning rate is a parameter that determines 
 	how much an updating step influences the current value of the weights.If learning rate is too small, 
 	algorithm might take long time to converges. choosing large learning rate could have opposite effect 
@@ -543,6 +560,7 @@
 	because of simple architecture of NN used in example.
 						
 ## Momentum term: 
+	It is a parameter that helps to come out of the local minima and smoothen the jumps while gradient descent.
 	It represents inertia. Large values of momentum term will influence the adjustment in the current weight 
 	to move in same direction as previous adjustment. Easily get stuck in a local minima and the algorithm 
 	may think to reach global minima leading to sub-optimal results. Use a momentum term in the objective 
@@ -558,6 +576,11 @@
 	keeps pointing in the same direction, this will increase the size of the steps taken towards the minimum.
 	It's necessary to reduce the global learning rate when using a lot of momentum (m close to 1). If you 
 	combine a high learning rate with a lot of momentum, you will rush past the minimum with huge steps!
+	
+## Number of epochs: 
+	The number of times the entire training data is fed to the network while training is referred to as 
+	the number of epochs. We increase the number of epochs until the validation accuracy starts decreasing, 
+	even if the training accuracy is increasing (overfitting).
 
 ## Parameters vs Hyperparameters
 	Parameters are learned by the model during the training time, while hyperparameters can be changed 
