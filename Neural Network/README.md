@@ -143,7 +143,7 @@
 	multiclass classification. The main reason why we use sigmoid function is because it exists between (0 to 1). 
 	Vanishing gradient problem.
 
-![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Logistic%20or%20Sigmoid%20Function.jpg)
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Sigmoid.PNG)
 
 
 	- Tanh or hyperbolic tangent Activation Function: 
@@ -173,16 +173,23 @@
 	fix the problem of dying neurons. It introduces a small slope to keep the updates alive. 
 	ReLU overcomes the vanishing gradient problem in the multi layer neural network.
 	
-![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Rectified%20linear%20unit%20(ReLu)%20function.jpg)
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/ReLU.PNG)
 	
 	- Leaky ReLU: Range of the Leaky ReLU is -infinity to infinity.
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Leaky%20ReLU.PNG)
 
 	- Softmax: 
-	
+	Softmax is a very interesting activation function because it not only maps our output to a [0,1] range but also 
+	maps each output in such a way that the total sum is 1. The output of Softmax is therefore a probability distribution.
+	The softmax function is often used in the final layer of a neural network-based classifier. Such networks are 
+	commonly trained under a log loss (or cross-entropy) regime, giving a non-linear variant of multinomial logistic 
+	regression. Softmax is used for multi-classification in logistic regression model whereas Sigmoid is used for binary
+	classification in logistic regression model, the sum of probabilities is One for Softmax.
 	It handles classification problems. Softmax is used only for the output layer, for neural networks that need to 
 	classify inputs into multiple categories. 
+	
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/softmax.PNG)
 
 ---------------------------------------------------------------------------------------------------------
 
