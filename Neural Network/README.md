@@ -5,34 +5,36 @@
 	input value forms a single perception. We use activation function and based on that, the value goes 
 	to next well. And the process continues till it reaches output y’.
 	
-	Simple term: 
- 	It uses logistic regression (or any other) and repeating it more than one times.
-	In logistic regression, there are only two layers i.e. input and output but in neural network, there is at 
-	least one hidden layer between input and output layer.
+	In simple term: 
+ 		It uses logistic regression (or any other) and repeating it more than one times.
+		In logistic regression, there are only two layers i.e. input and output but in neural network, 
+		there is at least one hidden layer between input and output layer.
  
  ---------------------------------------------------------------------------------------------------------
  
 ## Types of Gradient Descent:
 	1. Batch Gradient Descent: 
-		In batch gradient descent, we use the complete dataset available to compute the gradient of the cost function. 
-		Batch gradient descent is very slow because we need to calculate the gradient on the complete dataset to perform 
-		just one update, and if the dataset is large then it will be a difficult task. 
+		In batch gradient descent, we use the complete dataset available to compute the gradient of 
+		the cost function. Batch gradient descent is very slow because we need to calculate the gradient 
+		on the complete dataset to perform just one update, and if the dataset is large then it will 
+		be a difficult task. 
 		- Cost function is calculated after the initialization of parameters.
 		- It reads all the records into memory from the disk.
 		- After calculating sigma for one iteration, we move one step further, and repeat the process.
 	
 	2. Mini-batch Gradient Descent:
-		It is a widely used algorithm that makes faster and accurate results. The dataset, here, is clustered into 
-		small groups of ‘n’ training datasets. It is faster because it does not use the complete dataset. In every 
-		iteration, we use a batch of ‘n’ training datasets to compute the gradient of the cost function. It reduces 
-		the variance of the parameter updates, which can lead to more stable convergence. It can also make use of a 
-		highly optimized matrix that makes computing of the gradient very efficient.
+		It is a widely used algorithm that makes faster and accurate results. The dataset, here, 
+		is clustered into small groups of ‘n’ training datasets. It is faster because it does not 
+		use the complete dataset. In every iteration, we use a batch of ‘n’ training datasets to 
+		compute the gradient of the cost function. It reduces the variance of the parameter updates, 
+		which can lead to more stable convergence. It can also make use of a highly optimized matrix
+		that makes computing of the gradient very efficient.
 
 	3. Stochastic Gradient Descent:
-		We use stochastic gradient descent for faster computation. The first step is to randomize the complete dataset. 
-		Then, we use only one training example in every iteration to calculate the gradient of the cost function for 
-		updating every parameter. It is faster for larger datasets also because it uses only one training example 
-		in each iteration.
+		We use stochastic gradient descent for faster computation. The first step is to randomize 
+		the complete dataset. Then, we use only one training example in every iteration to calculate 
+		the gradient of the cost function for updating every parameter. It is faster for larger datasets 
+		also because it uses only one training example in each iteration.
 		
  ---------------------------------------------------------------------------------------------------------
  
