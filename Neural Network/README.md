@@ -176,7 +176,9 @@
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Rectified%20linear%20unit%20(ReLu)%20function.jpg)
 	
 	- Leaky ReLU: Range of the Leaky ReLU is -infinity to infinity.
-	
+
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Leaky%20ReLU.PNG)
+
 	- Softmax: 
 	
 	It handles classification problems. Softmax is used only for the output layer, for neural networks that need to 
