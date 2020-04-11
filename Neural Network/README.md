@@ -35,15 +35,15 @@
 ## Activation Function:
  
  	It’s just a thing function that you use to get the output of node. It is also known as Transfer Function. 
-	It is used to determine the output of neural network like yes or no. The Activation Functions can be basically 
-	divided into 2 types:
+	It is used to determine the output of neural network like yes or no. The Activation Functions can be 
+	basically divided into 2 types:
 	
  	- Linear Activation Function:
 	
-	Range is -infinity to infinity. Not possible to use backpropagation as the derivative of the function is a constant. 
-	no matter how many layers in the neural network, the last layer will be a linear function of the first layer so a 
-	linear activation function turns the neural network into just one layer. A neural network with a linear activation 
-	function is simply a linear regression model. 
+	Range is -infinity to infinity. Not possible to use backpropagation as the derivative of the function is a 
+	constant. no matter how many layers in the neural network, the last layer will be a linear function of the 
+	first layer so a linear activation function turns the neural network into just one layer. A neural network
+	with a linear activation function is simply a linear regression model. 
 	
 	- Non-linear Activation Functions: 
 	It makes it easy for the model to generalize or adapt with variety of 
@@ -58,15 +58,16 @@
 	Vanishing gradient problem.
 	
 	- Tanh or hyperbolic tangent Activation Function: 
-	tanh is also like logistic sigmoid but better. The range of the tanh function is from (-1 to 1). tanh is also sigmoidal 
-	(s - shaped). Both tanh and logistic sigmoid activation functions are used in feed-forward nets. 
-	Vanishing gradient problem.
+	tanh is also like logistic sigmoid but better. The range of the tanh function is from (-1 to 1). 
+	tanh is also sigmoidal (s - shaped). Both tanh and logistic sigmoid activation functions are used in 
+	feed-forward nets. Vanishing gradient problem.
 	
 	- ReLU (Rectified Linear Unit) Activation Function: 
-	The ReLU is the most used activation function in the world right now.Since, it is used in almost all the convolutional 
-	neural networks or deep learning. As you can see, the ReLU is half rectified. f(z) is zero when z is less than zero 
-	and f(z) is equal to z when z is above or equal to zero. Range is 0 to infinity. But the issue is that all the 
-	negative values become zero immediately which decreases the ability of the model to fit or train from the data properly. 
+	The ReLU is the most used activation function in the world right now.Since, it is used in almost all 
+	the convolutional neural networks or deep learning. As you can see, the ReLU is half rectified. f(z) is 
+	zero when z is less than zero and f(z) is equal to z when z is above or equal to zero. Range is 0 to infinity. 
+	But the issue is that all the negative values become zero immediately which decreases the ability of 
+	the model to fit or train from the data properly. 
 	That means any negative input given to the ReLU activation function turns the value into zero immediately in the 
 	graph, which in turns affects the resulting graph by not mapping the negative values appropriately. It rectifies 
 	vanishing gradient problem. Almost all deep learning Models use ReLu nowadays. it should only be used within Hidden 
