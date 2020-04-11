@@ -10,12 +10,16 @@
 	In logistic regression, there are only two layers i.e. input and output but in neural network, there is at 
 	least one hidden layer between input and output layer.
  
+ ---------------------------------------------------------------------------------------------------------
+ 
  ## Cost function :
  
  	Sometimes the algorithm we create might predict the value incorrectly, so we need cost function. 
 	It tried to quantify the error factor of neural network. It calculates how well the neural network 
 	is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
 	
+---------------------------------------------------------------------------------------------------------
+
 ## Hidden layers
 
 	Why it is called hidden: Because hidden layer does not see inputs(training set)
@@ -51,6 +55,8 @@
 		
 	- Assuming your data does require separation by a non-linear technique, then always start with one hidden layer
 
+---------------------------------------------------------------------------------------------------------
+
 ## Back-propagation
 
 	When we feel that outputs are not correct, we back propagate the values to adjust the weights 
@@ -81,6 +87,8 @@
 	- A multilayer neural network requires many repeated presentations of the input patterns, 
 			for which the weights need to be adjusted before the network is able to 
 			settle down into an optimal solution
+
+---------------------------------------------------------------------------------------------------------
 
 ## Activation Function:
  
@@ -135,6 +143,7 @@
 	It handles classification problems. Softmax is used only for the output layer, for neural networks that need to 
 	classify inputs into multiple categories. 
 
+---------------------------------------------------------------------------------------------------------
 
 ## Algorithm
 
@@ -177,7 +186,7 @@
 		
 		Change in error				: Substract previous error and current error
 
-####################################################################################################
+---------------------------------------------------------------------------------------------------------
 
 # Types of neural networks and their applications:
 
