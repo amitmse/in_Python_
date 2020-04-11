@@ -348,7 +348,7 @@
 								
 			momentum 	: float, default 0.9
 			
-## 06. Recurrent Neural Network(RNN) – Long Short Term Memory
+## 06. Recurrent Neural Network(RNN):
 
 	A Recurrent Neural Network is a type of artificial neural network in which the output of a particular 
 	layer is saved and fed back to the input. This helps predict the outcome of the layer. The first layer 
@@ -388,8 +388,43 @@
 		- Context neurons
 		- Calculating output over a fixed number of iterations
 		- Calculating output until neuron output stabilizes
+		
+	For sequence of events, languages, models, time series, Predicting stock prices, Speech recognition,
+	Image captions, Word predictions, Language translation.
+	
+	Time series analysis such as stock prediction like price, price at time t1, t2 etc.. can be done using 
+	Recurrent neural network. Predictions depend on earlier data, in order to predict time t2, we get the 
+	earlier state information t1, this is known as recurrent neural network. Maintains memory from previous
+	state. Length of the memory is very limited. 
+	Variants of RNN :
+		- Long Short Term Memory (LSTM)
+		- GRU :Gated recurrent unit
+		- End to end network
+		- Memory network
 
-## 07. Modular Neural Network
+## 07. Long Short Term Memory:
+	
+	Special type of RNN. They are explicitly designed to address the long term dependency problem, there are 
+	gates to remember, where to forget in LSTM. RNN with LSTM prevents vanishing gradient effect by passing 
+	errors recursively to the next NN. It controls the gradient flow & enable better preservation of “long-range 
+	dependencies” by using gates. Maintains memory from previous and even other states. Length of the memory is 
+	quite large. Long short-term memory (LSTM) is explicitly designed to address the long-term dependency problem, 
+	by maintaining a state of what to remember and what to forget.
+	Key components of LSTM : 
+		- Gates
+			- forget: Earlier gate which has data to be remembered are concatenated with the new data to 
+					be remembered.
+					
+			- memory: Here it is used to determine how much information should be stored in the memory and 
+					how much percentage to forget. Operations like dot product, 
+					additions are performed here.
+					
+			- update: Forget from the early state and operations are performed and updated.
+	
+		- tanh(x): values from -1 to 1
+		- sigmoid(x): values from 0 to 1
+
+## 08. Modular Neural Network:
 	
 	A modular neural network has a number of different networks that function independently and perform sub-tasks. 
 	The different networks do not really interact with or signal each other during the computation process. 
@@ -399,7 +434,7 @@
 	into independent components. The computation speed increases because the networks are not interacting with 
 	or even connected to each other.
 	
-## 08. Sequence-To-Sequence Models
+## 09. Sequence-To-Sequence Models
 
 	A sequence to sequence model consists of two recurrent neural networks. There’s an encoder that processes 
 	the input and a decoder that processes the output. The encoder and decoder can either use the same or 
@@ -407,14 +442,14 @@
 	data is not the same as the length of the output data. Sequence-to-sequence models are applied mainly 
 	in chatbots, machine translation, and question answering systems.	
 	
-## 09. DFF neural networks 
+## 10. DFF neural networks 
 	These are just FF NNs, but with more than one hidden layer. training a traditional FF, we pass only a small
 	amount of error to previous layer. Because of that stacking more layers led to exponential growth of 
 	training times, making DFFs quite impractical. in early 2000s we developed a bunch of approaches 
 	that allowed to train DFFs effectively; now they form a core of modern Machine Learning systems, 
 	covering the same purposes as FFs, but with much better results.
 	
-## 10. Autoencoders are used for classification, clustering and feature compression.
+## 11. Autoencoders are used for classification, clustering and feature compression.
 
 	When you train FF neural networks for classification you mostly must feed then X examples in Y categories, 
 	and expect one of Y output cells to be activated. This is called “supervised learning”.
@@ -423,7 +458,7 @@
 	and when the AE is trained the way the output is as close to input as possible, 
 	forces AEs to generalise data and search for common patterns.
 
-## 11. Dropout Regularization
+## 12. Dropout Regularization
 
 	Most neural network frameworks implement dropout as a separate layer. Dropout layers function as a regular, 
 	densely connected neural network layer. The only difference is that the dropout layers will periodically 
@@ -434,7 +469,7 @@
 	a dropout, it will become [0.1, 0, 0, -0.9] with randomly distributed 0. The parameter that controls 
 	the dropout is the dropout rate. The rate defines how many weights to be set to zeroes.
 
-## 12. Deep neural network
+## 13. Deep neural network
 
 	-Deep learning works because of the architecture of the network AND the optimization routine applied 
 		to that architecture.
