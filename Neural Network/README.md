@@ -393,10 +393,7 @@
 		
  -----------------------------------------------------------------------------------------------------------
  
-# Deep Learning: multi neural network architecture : 
-	# Artificial neural network (ANN): Data in numeric format
-	# Convolutional Neural Networks(CNN) : Imgaes data
-	# Recurrent neural network(RNN): Time series data
+
 
 -------------------------------------------------------------------------------------------------------------
 
@@ -621,6 +618,11 @@ Note: sourced from [Link](https://towardsdatascience.com/the-mostly-complete-cha
 	input to the lth layer is saturated, then the weight incident on that neuron from previous 
 	layer would learn slow too. Overall, weight learning will slow down if the input activation or 
 	the output activation is saturated.
+	
+# Use of neural network: 
+	- Artificial neural network (ANN): Data in numeric format
+	- Convolutional Neural Networks(CNN) : Imgaes data
+	- Recurrent neural network(RNN): Time series data
 	
 ---------------------------------------------------------------------------------------------------------------
 
