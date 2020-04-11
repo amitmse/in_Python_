@@ -1,11 +1,61 @@
 # Neural Networks
 
+	It consists of the input value and output value. Each input value is associated with its weight, 
+	which passes on to next level, each perceptron will have an activation function. The weights and 
+	input value forms a single perception. We use activation function and based on that, the value goes 
+	to next well. And the process continues till it reaches output y’.
+	
+	Simple term: 
  	It uses logistic regression (or any other) and repeating it more than one times.
 	In logistic regression, there are only two layers i.e. input and output but in neural network, there is at 
 	least one hidden layer between input and output layer.
  
+ ## Cost function :
  
- ## Back-propagation
+ 	Sometimes the algorithm we create might predict the value incorrectly, so we need cost function. 
+	It tried to quantify the error factor of neural network. It calculates how well the neural network 
+	is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
+	
+## Hidden layers
+
+	Why it is called hidden: Because hidden layer does not see inputs(training set)
+	
+	- if data is linearly separable then don't need any hidden layers at all. Of course, you don't need an 
+		NN to resolve your data either, but it will still do the job.
+		
+	- One issue within this subject on which there is a consensus is the performance difference from adding 
+		additional hidden layers: the situations in which performance improves with a second (or third, etc.) 
+		hidden layer are very small. One hidden layer is sufficient for the large majority of problems.
+		
+	- Get decent performance (even without a second optimization step) by setting the hidden layer configuration 
+		using just two rules: 
+			i. number of hidden layers equals one
+			ii. number of neurons in that layer is the mean of the neurons in the input and output layers
+			
+	- Pruning describes a set of techniques to trim network size (by nodes not layers) to improve computational 
+		performance and sometimes resolution performance. Get a rough idea of which nodes are not important by 
+		looking at your weight (weights very close to zero) matrix after training.
+		
+	- Using too many neurons in the hidden layers can result in several problems. 
+		- First, too many neurons in the hidden layers may result in overfitting.
+		- A second problem can occur even when the training data is sufficient. An inordinately large number of 
+			neurons in the hidden layers can increase the time it takes to train the network. 
+		- There are many rule-of-thumb methods for determining the correct number of neurons to use in the 
+			hidden layers, such as the following:
+		- #hidden neurons should be between the size of the input layer and the size of the output layer
+		- #hidden neurons should be 2/3 the size of the input layer, plus the size of the output layer
+		- #hidden neurons should be less than twice the size of the input layer
+							
+	- A model with zero hidden layers will resolve linearly separable data. So unless you already know your data 
+		isn't linearly separable, it doesn't hurt to verify this.
+		
+	- Assuming your data does require separation by a non-linear technique, then always start with one hidden layer
+
+## Back-propagation
+
+	When we feel that outputs are not correct, we back propagate the values to adjust the weights 
+	to produce the right output. The architecture, activation functions remains the same in each 
+	perceptron. Adjusts using gradient descent.
 
 	Back-propagation is considered the standard method in artificial neural networks to calculate 
 	the error contribution of each neuron after a batch of data is processed. However, there are 
@@ -90,14 +140,17 @@
 
 	1. Feed-forward computation: Calculate hidden layer nodes & output layer.
 		a. Calculate all hidden layer nodes 	: Multiply input layer and their weights (random for 1st time)
-								And then apply sigmod function(Logistic function)
+							  And then apply sigmod function(Logistic function)
+							  
 		b. Output layer node 			: Multiply hidden layer and their weights (random for 1st time)
-								And then apply sigmod function(Logistic function)
+							  And then apply sigmod function(Logistic function)
 
 	2. Back propagation to the output layer: calculate error of output layer & weights adjustment for hidden layer
 		Error in output layer node 		: Substract actual output and predicted Output layer node
+		
 		Rate of change (weight for hidden) 	: Multiply Learning rate, Error in output layer node and 
-								Hidden layer nodes
+							  Hidden layer nodes
+							  
 		Adjusted weights for hidden layer 	: Add previous weights for hidden layer, Rate of change 
 			(weight for hidden) and Momentum term into previous delta change of the weight 
 			(will be 0 for 1st time)
@@ -105,8 +158,10 @@
 	3. Back propagation to the hidden layer	: calculate error of hidden layer & weights adjustment input layer
 		Error in hidden layer node		: Multiply Error in output layer node and adjusted 
 								weights for hidden layer
+								
 		Rate of change (weight for input)	: Multiply Learning rate, Error in hidden layer nodes and 
 								input layer nodes
+								
 		Adjusted weights for input layer	: Add previous weights for input layer, 
 			Rate of change (weight for input) and Momentum term into previous delta change of 
 			the weight (will be 0 for 1st time)
@@ -114,10 +169,44 @@
 	4. Weight updates: Use new weight to calculate hidden layer nodes, output layer & Error in output layer node
 		Updated hidden layer nodes		: Multiply input layer and their updated weights
 								And then apply sigmod function(Logistic function)
+								
 		Updated output layer node		: Multiply hidden layer and their updated weights
 								And then apply sigmod function(Logistic function)
+								
 		Updated Error in output layer node	: Substract actual output and Output layer node
+		
 		Change in error				: Substract previous error and current error
+
+
+## Choosing the correct learning rate and momentum will help in weight adjustment
+
+## Learning rate /step size:
+	Setting right learning rate could be difficult task. The learning rate is a parameter that determines 
+	how much an updating step influences the current value of the weights.If learning rate is too small, 
+	algorithm might take long time to converges. choosing large learning rate could have opposite effect 
+	algorithm could diverge. Sometimes in NN every weight has it’s own learning rate. Learning rate of 0.35 
+	proved to be popular choice when training NN. This paper will use rate of 0.45 but this value is used 
+	because of simple architecture of NN used in example.
+						
+## Momentum term: 
+	It represents inertia. Large values of momentum term will influence the adjustment in the current weight 
+	to move in same direction as previous adjustment. Easily get stuck in a local minima and the algorithm 
+	may think to reach global minima leading to sub-optimal results. Use a momentum term in the objective 
+	function that increases the size of the steps taken towards the minimum by trying to jump from a local 
+	minima. If the momentum term is large then the learning rate should be kept smaller. A large value of
+	momentum also means that the convergence will happen fast. But if both the momentum and learning rate 
+	are kept at large values, then you might skip the minimum with a huge step. A small value of momentum 
+	cannot reliably avoid local minima, and can also slow down the training of the system. Momentum also 
+	helps in smoothing out the variations, if the gradient keeps changing direction. A right value of 
+	momentum can be either learned by hit and trial or through cross-validation.
+												
+	Momentum simply adds a fraction of the previous weight update to the current one. When the gradient 
+	keeps pointing in the same direction, this will increase the size of the steps taken towards the minimum.
+	It's necessary to reduce the global learning rate when using a lot of momentum (m close to 1). If you 
+	combine a high learning rate with a lot of momentum, you will rush past the minimum with huge steps!
+
+
+#################################################################################################################
 
 # Types of neural networks and their applications:
 
@@ -136,8 +225,6 @@
 	This is because the target classes in these applications are hard to classify.
 	A simple feedforward neural network is equipped to deal with data which contains a lot of noise. 
 	Feedforward neural networks are also relatively simple to maintain.
-
-	In most cases this type of networks is trained using Backpropagation method.
 	
 ## This one round of forward and back propagation iteration is known as one training iteration aka “Epoch“.
 	
@@ -427,63 +514,12 @@
 	    max_error = np.max(errors)
 	    importance = [e/max_error for e in errors]
  -----------------------------------------------------------------------------------------------------------------------------
+# Deep Learning: multi neural network architecture : 
+	# Artificial neural network (ANN): Data in numeric format
+	# Convolutional Neural Networks(CNN) : Imgaes data
+	# Recurrent neural network(RNN): Time series data
 
-## Choosing the correct learning rate and momentum will help in weight adjustment
-
-	Learning rate /step size:
-		Setting right learning rate could be difficult task. The learning rate is a parameter that determines 
-		how much an updating step influences the current value of the weights.If learning rate is too small, 
-		algorithm might take long time to converges. choosing large learning rate could have opposite effect 
-		algorithm could diverge. Sometimes in NN every weight has it’s own learning rate. Learning rate of 0.35 
-		proved to be popular choice when training NN. This paper will use rate of 0.45 but this value is used 
-		because of simple architecture of NN used in example.
-						
-	Momentum term: 
-		It represents inertia. Large values of momentum term will influence the adjustment in the current weight 
-		to move in same direction as previous adjustment. Easily get stuck in a local minima and the algorithm 
-		may think to reach global minima leading to sub-optimal results. Use a momentum term in the objective 
-		function that increases the size of the steps taken towards the minimum by trying to jump from a local 
-		minima. If the momentum term is large then the learning rate should be kept smaller. A large value of
-		momentum also means that the convergence will happen fast. But if both the momentum and learning rate 
-		are kept at large values, then you might skip the minimum with a huge step. A small value of momentum 
-		cannot reliably avoid local minima, and can also slow down the training of the system. Momentum also 
-		helps in smoothing out the variations, if the gradient keeps changing direction. A right value of 
-		momentum can be either learned by hit and trial or through cross-validation.
-												
-		Momentum simply adds a fraction of the previous weight update to the current one. When the gradient 
-		keeps pointing in the same direction, this will increase the size of the steps taken towards the minimum.
-		It's necessary to reduce the global learning rate when using a lot of momentum (m close to 1). If you 
-		combine a high learning rate with a lot of momentum, you will rush past the minimum with huge steps!
-
-## Hidden layers
-
-	Why it is called hidden: Because hidden layer does not see inputs(training set)
-	
-	- if data is linearly separable then don't need any hidden layers at all. Of course, you don't need an 
-		NN to resolve your data either, but it will still do the job.
-	- One issue within this subject on which there is a consensus is the performance difference from adding 
-		additional hidden layers: the situations in which performance improves with a second (or third, etc.) 
-		hidden layer are very small. One hidden layer is sufficient for the large majority of problems.
-	- Get decent performance (even without a second optimization step) by setting the hidden layer configuration 
-		using just two rules: 
-			i. number of hidden layers equals one
-			ii. number of neurons in that layer is the mean of the neurons in the input and output layers
-	- Pruning describes a set of techniques to trim network size (by nodes not layers) to improve computational 
-		performance and sometimes resolution performance. Get a rough idea of which nodes are not important by 
-		looking at your weight (weights very close to zero) matrix after training.
-	- Using too many neurons in the hidden layers can result in several problems. 
-		- First, too many neurons in the hidden layers may result in overfitting.
-		- A second problem can occur even when the training data is sufficient. An inordinately large number of 
-			neurons in the hidden layers can increase the time it takes to train the network. 
-		- There are many rule-of-thumb methods for determining the correct number of neurons to use in the 
-			hidden layers, such as the following:
-		- #hidden neurons should be between the size of the input layer and the size of the output layer
-		- #hidden neurons should be 2/3 the size of the input layer, plus the size of the output layer
-		- #hidden neurons should be less than twice the size of the input layer
-							
-	- A model with zero hidden layers will resolve linearly separable data. So unless you already know your data 
-		isn't linearly separable, it doesn't hurt to verify this.
-	- Assuming your data does require separation by a non-linear technique, then always start with one hidden layer
+-----------------------------------------------------------------------------------------------------------------------------
 
 ## Parameters vs Hyperparameters
 	Parameters are learned by the model during the training time, while hyperparameters can be changed 
@@ -497,12 +533,8 @@
 		Choice of activation function
 
 
+
 -----------------------------------------------------------------------------------------------------------------------------
-# Deep Learning: multi neural network architecture : 
-	# Artificial neural network (ANN): Data in numeric format
-	# Convolutional Neural Networks(CNN) : Imgaes data
-	# Recurrent neural network(RNN): Time series data
-------------------------------------------------------
 
 - The Turing test is a method to test a machine’s ability to match the human-level intelligence.
 
