@@ -143,11 +143,16 @@
 	multiclass classification. The main reason why we use sigmoid function is because it exists between (0 to 1). 
 	Vanishing gradient problem.
 
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Logistic%20or%20Sigmoid%20Function.jpg)
+
+
 	- Tanh or hyperbolic tangent Activation Function: 
 	
 	tanh is also like logistic sigmoid but better. The range of the tanh function is from (-1 to 1). 
 	tanh is also sigmoidal (s - shaped). Both tanh and logistic sigmoid activation functions are used in 
 	feed-forward nets. Vanishing gradient problem.
+	
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Tanh%20Function.jpg)
 	
 	- ReLU (Rectified Linear Unit) Activation Function: 
 	
@@ -167,6 +172,8 @@
 	dead neuron while back propagation. To fix this problem another modification was introduced called Leaky ReLu to
 	fix the problem of dying neurons. It introduces a small slope to keep the updates alive. 
 	ReLU overcomes the vanishing gradient problem in the multi layer neural network.
+	
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Rectified%20linear%20unit%20(ReLu)%20function.jpg)
 	
 	- Leaky ReLU: Range of the Leaky ReLU is -infinity to infinity.
 	
