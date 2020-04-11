@@ -224,7 +224,7 @@
 
 ![List of Neural Network](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/All%20Type.png)
 
-Note: sourced from [Link](https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464)
+	Note: sourced from [Link](https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464)
 
 ## 01. Perceptron 
 	The simplest and oldest model of Neuron, as we know it. Takes some inputs, sums them up, 
