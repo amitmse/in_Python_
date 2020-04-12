@@ -120,12 +120,13 @@
 ## 01. Perceptron 
 	The simplest and oldest model of Neuron, as we know it. Takes some inputs, sums them up, 
 	applies activation function and passes them to output layer. It's a Binary unit outputting 
-	"Yes/No" decisions with binary inputs. 
+	"Yes/No" decisions with binary inputs. Logistic Regression is the best example with single 
+	perceptron / neuron.
 	
 	Perceptron function is a step function. Transform the normal Perceptron into a sigmoid neuron 
 	using a sigmoid function.
 
-## 02. Feedforward Neural Network
+## 02. Feedforward Neural Network / Artificial Neural Network
 
 	In a feedforward neural network, the data passes through the different input nodes till it reaches 
 	the output node. Data moves in only one direction from the first tier onwards until it reaches 
