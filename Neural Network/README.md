@@ -136,7 +136,7 @@
 	There is no backpropagation and data moves in one direction only. A feedforward neural network may 
 	have a single layer or it may have hidden layers. 
 	
-	Use: Feedforward neural networks are used in technologies like face recognition and computer vision. 
+	Use: face recognition, Simple classification, Speech Recognition and computer vision. 
 	This is because the target classes in these applications are hard to classify.
 	
 ### One round of Forward and Back propagation iteration is known as one training iteration aka "Epoch".
@@ -165,7 +165,8 @@
 		- Dense (fully connected layer)
 		- Model compile and train
 	
-	Use: image and video recognition, natural language processing, and recommender systems. 
+	Use: image and video recognition, natural language processing, Speech Recognition, Computer Vision
+		Machine translation, and recommender systems. 
 
 ## 04. Recurrent Neural Network(RNN):
 
@@ -218,7 +219,8 @@
 		- Memory network
 		
 	Use: For sequence of events, languages, models, time series, Predicting stock prices, Speech recognition,
-	Image captions, Word predictions, Language translation.
+	Image captions, Text to speech processing, Image tagger, Sentiment Analysis, Translation, Word predictions, 
+	Language translation, Text processing i.e. auto suggest, grammar checks.
 	
 ## 05. Long Short Term Memory:
 	
@@ -264,7 +266,8 @@
 				
 	Activation function for the hidden layer: (default is relu)
 		
-	Use: speech recognition and machine translation technologies.
+	Use: speech recognition, machine translation technologies, and Complex Classification.
+
 	
 ## 07. Radial Basis Function Neural Network
 
@@ -293,7 +296,7 @@
 
 ![List of Neural Network](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/All%20Type.png)
 
-Note: sourced from [Link](https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464)
+Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 			
 ---------------------------------------------------------------------------------------------------------
 
@@ -481,7 +484,7 @@ Note: sourced from [Link](https://towardsdatascience.com/the-mostly-complete-cha
 	- Artificial neural network (ANN): Data in numeric format
 	- Convolutional Neural Networks(CNN) : Imgaes data
 	- Recurrent neural network(RNN): Time series data
-	
+	https://www.mygreatlearning.com/blog/types-of-neural-networks/
 ---------------------------------------------------------------------------------------------------------------
 
 - The Turing test is a method to test a machine’s ability to match the human-level intelligence.
@@ -511,8 +514,12 @@ https://www.mygreatlearning.com/blog/types-of-neural-networks/
 
 https://blog.statsbot.co/neural-networks-for-beginners-d99f2235efca
 
+NN Zoo: https://www.asimovinstitute.org/author/fjodorvanveen/
+
 
 -----------------------------------------------------------------------------------
 Gradient Descend:
+
 https://towardsdatascience.com/a-comprehensive-guide-on-neural-networks-for-beginners-a4ca07cee1b7
+
 https://becominghuman.ai/step-by-step-neural-network-tutorial-for-beginner-cc71a04eedeb
