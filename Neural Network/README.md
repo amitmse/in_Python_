@@ -126,7 +126,7 @@
 	Perceptron function is a step function. Transform the normal Perceptron into a sigmoid neuron 
 	using a sigmoid function.
 
-## 02. Feedforward Neural Network / Artificial Neural Network
+## 02. Feedforward Neural Network (FFNN) / Artificial Neural Network
 
 	In a feedforward neural network, the data passes through the different input nodes till it reaches 
 	the output node. Data moves in only one direction from the first tier onwards until it reaches 
@@ -171,14 +171,16 @@
 
 ## 04. Recurrent Neural Network(RNN):
 
-	In this, the output of a particular layer is saved and fed back to the input. This helps predict the 
-	outcome of the layer. The first layer is formed in the same way as it is in the feedforward network 
-	(product of the sum of the weights and features). From each time-step to the next, each node will 
-	remember some information that it had in the previous time-step. In other words, each node acts as a 
-	memory cell while computing and carrying out operations. The neural network begins with the front 
-	propagation as usual but remembers the information it may need to use later. If the prediction is wrong, 
-	the system self-learns and works towards making the right prediction during the backpropagation. 
-	This type of neural network is very effective in text-to-speech conversion technology.  
+	RNNs are FFNNs with a time twist: they are not stateless; they have connections between passes, 
+	connections through time. Neurons are fed information not just from the previous layer but also 
+	from themselves from the previous pass. In this, the output of a particular layer is saved and 
+	fed back to the input. This helps predict the outcome of the layer. The first layer is formed in 
+	the same way as it is in the feedforward network (product of the sum of the weights and features). 
+	From each time-step to the next, each node will remember some information that it had in the previous 
+	time-step. In other words, each node acts as a memory cell while computing and carrying out operations. 
+	The neural network begins with the front propagation as usual but remembers the information it may need 
+	to use later. If the prediction is wrong, the system self-learns and works towards making the right prediction 
+	during the backpropagation. 
 
 	So far the neural networks that we’ve examined have always had forward connections. The input layer always
 	connects to the first hidden layer. Each hidden layer always connects to the next hidden layer. 
