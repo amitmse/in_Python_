@@ -1,10 +1,11 @@
 # Neural Networks (NN)
 	
 	
-	In simple term: Weighted logistic regression (or similar) in a loop and every time update the weight.  
+	In simple term: 
 	
-	Logistic regression has only two layers i.e. input and output but in neural network, there is at least 
-	one hidden layer between input and output layer.
+		NN is a weighted logistic regression (or similar) in a loop and every time weight gets updated which helps 
+		in reducing the error.  Logistic regression has only two layers i.e. input and output but in neural network, 
+		there is at least one hidden layer between input and output layer.
  	
 ### Neuron
 	Neurons are the basic unit of a neural network which takes inputs and generate an output. It consists of 
