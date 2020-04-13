@@ -1,22 +1,22 @@
-# Neural Networks
-
-	It consists of the input value and output value. Each input value is associated with its weight, 
+# Neural Networks (NN)
+	
+	
+	In simple term: Weighted logistic regression (or similar) in a loop and every time update the weight.  
+	
+	Logistic regression has only two layers i.e. input and output but in neural network, there is at least 
+	one hidden layer between input and output layer.
+ 	
+### Neuron
+	Neurons are the basic unit of a neural network which takes inputs and generate an output. It consists of 
+	inputs, weights, and an activation function. The neuron translates these inputs into a output, which can 
+	then be picked up as input for another layer of neurons later on.
+	
+	NN consists of the input value and output value. Each input value is associated with its weight, 
 	which passes on to next level, each perceptron will have an activation function. The weights and 
-	input value forms a single perception. We use activation function and based on that, the value goes 
+	input value forms a single perception. Use activation function and based on that, the value goes 
 	to next well. And the process continues till it reaches output y’.
 	
-	In simple term: 
- 		It uses logistic regression (or any other) and repeating it more than one times.
-		In logistic regression, there are only two layers i.e. input and output but in neural network, 
-		there is at least one hidden layer between input and output layer.
- 	
- ---------------------------------------------------------------------------------------------------------
- 
- ## Cost function :
- 
-	It tried to quantify the error factor of neural network. It calculates how well the neural network 
-	is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
-	
+
 ---------------------------------------------------------------------------------------------------------
 
 ## Activation Function:
@@ -118,13 +118,12 @@
 # Types of neural networks and their applications:
 
 ## 01. Perceptron 
-	The simplest and oldest model of Neuron, as we know it. Takes some inputs, sums them up, 
-	applies activation function and passes them to output layer. It's a Binary unit outputting 
-	"Yes/No" decisions with binary inputs. Logistic Regression is the best example with single 
-	perceptron / neuron.
-	
-	Perceptron function is a step function. Transform the normal Perceptron into a sigmoid neuron 
-	using a sigmoid function.
+
+	The simplest and oldest model of neural network with only one neuron which takes inputs, sums them up, 
+	applies activation function and passes them to output layer. It's a Binary unit outputting "Yes/No" 
+	decisions with binary inputs. Logistic Regression is the best example with single perceptron.
+
+	Perceptron is a single layer neural network and a multi-layer perceptron is called Neural Networks.
 
 ## 02. Feedforward Neural Network (FFNN) / Artificial Neural Network
 
@@ -343,6 +342,11 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 		
 -------------------------------------------------------------------------------------------------------------
  
+ ## Cost function :
+ 
+	It tried to quantify the error factor of neural network. It calculates how well the neural network 
+	is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
+	
 ## Types of Gradient Descent:
 	1. Batch Gradient Descent: 
 		It uses a complete dataset available to compute the gradient of the cost function hence and it's 
