@@ -59,7 +59,7 @@
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Sigmoid.PNG)
 
 
-#### 2.2 Tanh or hyperbolic tangent Activation Function: 
+#### 2.2 Hyperbolic tangent (Tanh) Activation Function: 
 	
 	tanh is also like logistic sigmoid but better. The range of the tanh function is from (-1 to 1). 
 	tanh is also sigmoidal (s - shaped). Both tanh and logistic sigmoid activation functions are used in 
@@ -69,7 +69,7 @@
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Tanh.PNG)
 	
-#### 2.3 ReLU (Rectified Linear Unit) Activation Function: 
+#### 2.3 Rectified Linear Unit (ReLU) Activation Function: 
 	
 	The ReLU is the most used activation function. Since, it is used in almost all the convolutional neural 
 	networks or deep learning. It rectifies vanishing gradient problem. Range is 0 to infinity. 
@@ -189,9 +189,9 @@
 	
 ### One round of Forward and Back propagation iteration is known as one training iteration aka "Epoch".
 	
-## 03. Convolutional Neural Networks:
+## 03. Convolutional Neural Networks (CNN):
 
-	A convolutional neural network(CNN) contains one or more than one convolutional layers. These layers 
+	A convolutional neural network contains one or more than one convolutional layers. These layers 
 	can either be completely interconnected or pooled. Before passing the result to the next layer, 
 	the convolutional layer uses a convolutional operation on the input. Due to this convolutional operation, 
 	the network can be much deeper but with much fewer parameters. 
@@ -272,13 +272,13 @@
 	Image captions, Text to speech processing, Image tagger, Sentiment Analysis, Translation, Word predictions, 
 	Language translation, Text processing i.e. auto suggest, grammar checks.
 	
-## 05. Long Short Term Memory:
+## 05. Long Short Term Memory (LSTM):
 	
 	It's special type of RNN and explicitly designed to address the long term dependency problem, there are 
 	gates to remember, where to forget in LSTM. RNN with LSTM prevents vanishing gradient effect by passing 
 	errors recursively to the next NN. It controls the gradient flow & enable better preservation of “long-range 
 	dependencies” by using gates. Maintains memory from previous and even other states. Length of the memory is 
-	quite large. Long short-term memory (LSTM) is explicitly designed to address the long-term dependency problem, 
+	quite large. Long short-term memory is explicitly designed to address the long-term dependency problem, 
 	by maintaining a state of what to remember and what to forget.
 	Key components of LSTM : 
 		- Gates
@@ -389,11 +389,6 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 		d. Change in error: Substract previous error and current error
 		
 -------------------------------------------------------------------------------------------------------------
- 
- ## Cost function :
- 
-	It tried to quantify the error factor of neural network. It calculates how well the neural network 
-	is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
 	
 ## Types of Gradient Descent:
 	1. Batch Gradient Descent: 
@@ -490,6 +485,11 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 	input to the lth layer is saturated, then the weight incident on that neuron from previous 
 	layer would learn slow too. Overall, weight learning will slow down if the input activation or 
 	the output activation is saturated.
+	
+ ## Cost function :
+ 
+	It tried to quantify the error factor of neural network. It calculates how well the neural network 
+	is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
 	
 # Use of neural network: 
 	- Artificial neural network (ANN): Data in numeric format
