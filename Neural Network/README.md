@@ -175,6 +175,8 @@
 
 ## 02. Feedforward Neural Network (FFNN) / Artificial Neural Network
 
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/FFNN.PNG)
+
 	In a feedforward neural network, the data passes through the different input nodes till it reaches 
 	the output node. Data moves in only one direction from the first tier onwards until it reaches 
 	the output node. This is also known as a front propagated wave which is usually achieved by 
@@ -186,6 +188,7 @@
 	
 	Use: face recognition, Simple classification, Speech Recognition and computer vision. 
 	This is because the target classes in these applications are hard to classify.
+	
 	
 ### One round of Forward and Back propagation iteration is known as one training iteration aka "Epoch".
 	
