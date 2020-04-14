@@ -37,6 +37,10 @@ http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 	(https://stats.stackexchange.com/questions/211848/likelihood-why-multiply)
 		= Product[(Pr^Yi){(1-Pr)^(1-Yi)}]
 		
+### Cost function :
+		It tried to quantify the error factor of neural network. It calculates how well the neural network 
+		is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
+
 	Log Likelihood Function:
 		(Applying Logs on likelihood equation and  product will become sum. Refer to property of LOG)
 		= Sum[{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}] (Apply log in above eq. and simplify it. cost function/log loss)
