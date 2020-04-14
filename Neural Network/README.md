@@ -118,6 +118,51 @@
 
 ---------------------------------------------------------------------------------------------------------
 
+## Back-propagation
+	
+	Back-propagation is a standard method in artificial neural networks to calculate the error contribution 
+	of each neuron. However, there are some major problems using back-propagation:
+	
+		1. Requires labeled training data
+		
+		2. Slow convergence: Very slow in networks with multiple hidden layers. 
+		
+		3. Local minima: It happens because the algorithm always changes the weights to reduce the error. 
+		But the error might briefly have to rise as part of a more general fall, If this is the case, 
+		the algorithm will “get stuck” (because it can‟t go uphill) and the error will not decrease further.
+		
+	 	4. Network paralysis: It occurs when the weights are adjusted to very large values during training, 
+	 	large weights can force most of the units to operate at extreme values, in a region where the derivative 
+		of the activation function is very small.
+		
+		
+	It updates the weights of each layer as a function of the derivative of the previous layer. The problem is 
+	that the update signal was lost as depth increases. 
+	
+	
+	
+---------------------------------------------------------------------------------------------------------
+
+## Hidden layers
+
+	Why it is called hidden: Because hidden layer does not see inputs(training set)
+	
+	If data is linearly separable then don't need any hidden layers at all and no need to use NN. Should be verified.
+	Assuming data does require separation by a non-linear technique, then always start with one hidden layer
+		
+	Additonal hidden layer creates major performance issue. Most of times, one hidden layer is sufficient for the 
+	majority of problems.
+		
+	Using too many neurons in the hidden layers can result in several problems:
+		- Overfitting.
+		- Extra time to train the network. 
+		- Number of neurons:
+			- In between the size of the input layer and the size of the output layer
+			- 2/3 of size of the input layer, plus the size of the output layer
+			- Less than twice the size of the input layer
+			
+---------------------------------------------------------------------------------------------------------
+
 # Types of neural networks and their applications:
 
 ## 01. Perceptron 
@@ -370,50 +415,6 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 		and then uses only one training example in every iteration to calculate the gradient. Its benifical 
 		for huge datasets.
 
----------------------------------------------------------------------------------------------------------
-
-## Hidden layers
-
-	Why it is called hidden: Because hidden layer does not see inputs(training set)
-	
-	If data is linearly separable then don't need any hidden layers at all and no need to use NN. Should be verified.
-	Assuming data does require separation by a non-linear technique, then always start with one hidden layer
-		
-	Additonal hidden layer creates major performance issue. Most of times, one hidden layer is sufficient for the 
-	majority of problems.
-		
-	Using too many neurons in the hidden layers can result in several problems:
-		- Overfitting.
-		- Extra time to train the network. 
-		- Number of neurons:
-			- In between the size of the input layer and the size of the output layer
-			- 2/3 of size of the input layer, plus the size of the output layer
-			- Less than twice the size of the input layer
-
----------------------------------------------------------------------------------------------------------
-
-## Back-propagation
-	
-	Back-propagation is a standard method in artificial neural networks to calculate the error contribution 
-	of each neuron. However, there are some major problems using back-propagation:
-	
-		1. Requires labeled training data
-		
-		2. Slow convergence: Very slow in networks with multiple hidden layers. 
-		
-		3. Local minima: It happens because the algorithm always changes the weights to reduce the error. 
-		But the error might briefly have to rise as part of a more general fall, If this is the case, 
-		the algorithm will “get stuck” (because it can‟t go uphill) and the error will not decrease further.
-		
-	 	4. Network paralysis: It occurs when the weights are adjusted to very large values during training, 
-	 	large weights can force most of the units to operate at extreme values, in a region where the derivative 
-		of the activation function is very small.
-		
-		
-	It updates the weights of each layer as a function of the derivative of the previous layer. The problem is 
-	that the update signal was lost as depth increases.  
-	
-			
 ---------------------------------------------------------------------------------------------------------
 
 ## Problem in NN:
