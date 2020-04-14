@@ -175,7 +175,7 @@
 
 ## 02. Feedforward Neural Network (FFNN) / Artificial Neural Network
 
-![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/FF.PNG)
+![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/FFNN.PNG)
 
 	In a feedforward neural network, the data passes through the different input nodes till it reaches 
 	the output node. Data moves in only one direction from the first tier onwards until it reaches 
