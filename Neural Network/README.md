@@ -3,8 +3,10 @@
 	
 	In simple term: 
 	
-		NN is a weighted logistic regression (or similar) in a loop and every time weight gets updated which helps 
-		in reducing the error.  Logistic regression has only two layers i.e. input and output but in neural network, 
+		NN is a weighted logistic regression (or similar) in a loop and every time it updates the weight 
+		which helps in reducing the error.  
+		
+		Logistic regression has only two layers i.e. input and output but in neural network, 
 		there is at least one hidden layer between input and output layer.
  	
 ### Neuron
