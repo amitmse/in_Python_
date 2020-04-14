@@ -12,21 +12,29 @@ http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 	3. Independence of errors
 	4. No perfect multicollinearity
     	  
+-----------------------------------------------------------------------------------------------------------------------
+
 ## Maximum likelihood estimation (MLE): 
 	- Finds parameter values that maximize the likelihood of making the observations given the parameters
 	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
+	
+-----------------------------------------------------------------------------------------------------------------------
 
 ## Derivation of Logistic Regression:
  	Model Equation:
 		
 		Y = a + bX (Y = dependent_variable, a=Intercept, b = coefficient, X = independent_variable)
 	
+-----------------------------------------------------------------------------------------------------------------------
+
 	Logit function/Sigmoid Function:
 		Y 		= Exp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}] = 1/(1+exp^-y)
 		1 - Y 		= Exp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}    = 1/(1+exp^y)
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
 	
+-----------------------------------------------------------------------------------------------------------------------
+
 	Maximum Likelihood: 
 		finds parameter values that maximize the likelihood of making the observations given the parameters
 		(https://onlinecourses.science.psu.edu/stat414/node/191)
@@ -37,9 +45,7 @@ http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 	(https://stats.stackexchange.com/questions/211848/likelihood-why-multiply)
 		= Product[(Pr^Yi){(1-Pr)^(1-Yi)}]
 		
-### Cost function :
-		It tried to quantify the error factor of neural network. It calculates how well the neural network 
-		is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
+-----------------------------------------------------------------------------------------------------------------------
 
 	Log Likelihood Function:
 		(Applying Logs on likelihood equation and  product will become sum. Refer to property of LOG)
@@ -53,12 +59,16 @@ http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 		= -[Sum[Yi*(a + bX)] - Sum[Log{1 + Exp(a + bX)}]] 
 		(Apply negative to minimize the Log Likelihood Function)
 		
+-----------------------------------------------------------------------------------------------------------------------
+
 	Gradient of Log Likelihood Function : 
 		First Differentiation (with respect to beta) of Log Likelihood Function
 		= [Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]
 		= -[[Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]]	
 		(Negative is part of negative log likelihood function. Refer to gradient_log_likelihood)
 		
+-----------------------------------------------------------------------------------------------------------------------
+
 	Hessian Matrix :
 		Second Differentiation (with respect to beta) of Log Likelihood Function
 		First Differentiation of Gradient of Log Likelihood Function
@@ -68,8 +78,15 @@ http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 		= -[(X*X*Exp(a + bX))/((1+Exp(a + bX))^2)]
 		= (X*X*Exp(a + bX))/((1+Exp(a + bX))^2) 
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
-			
-			
+				
+-----------------------------------------------------------------------------------------------------------------------
+		
+### Cost function :
+	It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
+	regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
+	
+-----------------------------------------------------------------------------------------------------------------------
+		
 	Jacobian is similar to first order derivative and Hessian is similar to second order derivative. 
 	The determinant of a matrix is also sometimes referred to as the Hessian. The Hessian matrix can 
 	be considered related to the Jacobian matrix. Hessian matrices are used in large-scale optimization 
@@ -130,12 +147,16 @@ http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
 		the precision of the estimate of the coefficient. 
 		The smaller the standard error, the more precise the estimate.
 		
+-----------------------------------------------------------------------------------------------------------------------
+
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3976195/
 
 http://support.minitab.com/en-us/minitab-express/1/help-and-how-to/modeling-statistics/regression/how-to/binary-logistic-regression/interpret-the-results/all-statistics-and-graphs/coefficients/
 
+-----------------------------------------------------------------------------------------------------------------------
 
-Logistic regression uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) tested in statistical analysis.
+### Logistic regression uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) 
+tested in statistical analysis.
 
 	Does not assume: 
 		- normality of variables (both DV and IVs)
@@ -146,7 +167,8 @@ Logistic regression uses MLE rather than OLS, it avoids many of the typical assu
 		
 		- normal errors
 		
-Ordinary Least Squares (OLS): Finds parameter values that minimizing the error. Assumptions of Linear regression: 
+## Ordinary Least Squares (OLS): 
+	Finds parameter values that minimizing the error. Assumptions of Linear regression: 
 
 	1. Linear in parameters :
 		Issue	: Incorrect and unreliable model which leads to error in result.
