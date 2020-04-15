@@ -115,6 +115,24 @@
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/softmax.PNG)
 
+---------------------------------------------------------------------------------------------------------
+
+## Hidden layers
+
+	Why it is called hidden: They are not visible to the external systems and are “private” to the neural network.
+	
+	If data is linearly separable then don't need any hidden layers and no need to use NN. Assuming data does 
+	require separation by a non-linear technique, then always start with one hidden layer. Additonal hidden 
+	layer creates major performance issue. Most of times, one hidden layer is sufficient for the majority of 
+	problems.
+		
+	Using too many neurons in the hidden layers can result in several problems:
+		- Overfitting.
+		- Extra time to train the network. 
+		- Number of neurons:
+			- In between the size of the input layer and the size of the output layer
+			- 2/3 of size of the input layer, plus the size of the output layer
+			- Less than twice the size of the input layer
 
 ---------------------------------------------------------------------------------------------------------
 
@@ -141,25 +159,7 @@
 	
 	
 	
----------------------------------------------------------------------------------------------------------
 
-## Hidden layers
-
-	Why it is called hidden: Because hidden layer does not see inputs(training set)
-	
-	If data is linearly separable then don't need any hidden layers at all and no need to use NN. Should be verified.
-	Assuming data does require separation by a non-linear technique, then always start with one hidden layer
-		
-	Additonal hidden layer creates major performance issue. Most of times, one hidden layer is sufficient for the 
-	majority of problems.
-		
-	Using too many neurons in the hidden layers can result in several problems:
-		- Overfitting.
-		- Extra time to train the network. 
-		- Number of neurons:
-			- In between the size of the input layer and the size of the output layer
-			- 2/3 of size of the input layer, plus the size of the output layer
-			- Less than twice the size of the input layer
 			
 ---------------------------------------------------------------------------------------------------------
 
