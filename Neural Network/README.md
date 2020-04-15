@@ -139,9 +139,12 @@
 
 ## Back-propagation
 	
-	Back-propagation is a standard method in artificial neural networks to calculate the error contribution 
-	of each neuron. However, there are some major problems using back-propagation:
 	
+	As name suggest it's backwrad process to update (optimal) the weight which helps in reducing the error
+	Another name: backward propagation of errors, gradient descent. Forward process called Forward propagation.
+	
+	Some major problems using back-propagation:
+
 		1. Requires labeled training data
 		
 		2. Slow convergence: Very slow in networks with multiple hidden layers. 
@@ -154,13 +157,8 @@
 	 	large weights can force most of the units to operate at extreme values, in a region where the derivative 
 		of the activation function is very small.
 		
-		
 	It updates the weights of each layer as a function of the derivative of the previous layer. The problem is 
-	that the update signal was lost as depth increases. 
-	
-	
-	
-
+	that the update signal was lost as depth increases.
 			
 ---------------------------------------------------------------------------------------------------------
 
