@@ -24,8 +24,9 @@
 
 ## Activation Function:
  
- 	It’s function to get the output of node. It is also known as Transfer Function. It is used to determine 
-	the output of neural network like YES or NO. 
+ 	
+	It’s function to get the output from input as it determines the output of neural network (i.e. YES or NO).
+	It's known as Transfer Function.  
 	
 	Some examples: SIGMOID, RELU, LEAKYRELU, TANH, SOFTMAX, CUBE, ELU, RRELU, HARDSIGMOID, HARDTANH, IDENTITY,  
 			RATIONALTANH, SOFTPLUS, SOFTSIGN, 
