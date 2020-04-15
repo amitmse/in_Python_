@@ -119,7 +119,8 @@
 
 ## Hidden layers
 
-	Why it is called hidden: They are not visible to the external systems and are “private” to the neural network.
+	Why it's called hidden layers: 
+		Hidden layers are only available for internal use (NN) and it's not be access outside of neural netwrok.
 	
 	If data is linearly separable then don't need any hidden layers and no need to use NN. Assuming data does 
 	require separation by a non-linear technique, then always start with one hidden layer. Additonal hidden 
