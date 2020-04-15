@@ -536,3 +536,10 @@ Gradient Descend:
 https://towardsdatascience.com/a-comprehensive-guide-on-neural-networks-for-beginners-a4ca07cee1b7
 
 https://becominghuman.ai/step-by-step-neural-network-tutorial-for-beginner-cc71a04eedeb
+
+TensorFlow
+PyTorch
+Scikit-Neural Network
+Theano
+Keras
+NLTK
