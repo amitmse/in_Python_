@@ -25,8 +25,7 @@
 ## Activation Function:
  
  	
-	It’s function to get the output from input as it determines the output of neural network (i.e. YES or NO).
-	It's known as Transfer Function.  
+	It’s function to get the output from input and It's also known as Transfer Function.  
 	
 	Some examples: SIGMOID, RELU, LEAKYRELU, TANH, SOFTMAX, CUBE, ELU, RRELU, HARDSIGMOID, HARDTANH, IDENTITY,  
 			RATIONALTANH, SOFTPLUS, SOFTSIGN, 
