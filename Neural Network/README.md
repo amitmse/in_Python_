@@ -1,6 +1,5 @@
 # Neural Networks (NN)
 	
-	
 	In simple term: 
 	
 		NN is a weighted logistic regression (or similar) in a loop and every time it updates the weight 
@@ -24,8 +23,7 @@
 
 ## Activation Function:
  
- 	
-	It’s function to get the output from input and It's also known as Transfer Function.  
+	Activation Function converts input into output and also known as Transfer Function. 	
 	
 	Some examples: SIGMOID, RELU, LEAKYRELU, TANH, SOFTMAX, CUBE, ELU, RRELU, HARDSIGMOID, HARDTANH, IDENTITY,  
 			RATIONALTANH, SOFTPLUS, SOFTSIGN, 
