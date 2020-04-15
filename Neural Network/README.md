@@ -23,7 +23,9 @@
 
 ## Activation Function:
  
-	Activation Function converts input into output and also known as Transfer Function. 	
+	Activation Function converts input into output. It takes the decision of whether or not to pass the signal 
+	to next and known as Transfer Function. Without activation functions the NN will only produce a linear output.
+	
 	
 	Some examples: SIGMOID, RELU, LEAKYRELU, TANH, SOFTMAX, CUBE, ELU, RRELU, HARDSIGMOID, HARDTANH, IDENTITY,  
 			RATIONALTANH, SOFTPLUS, SOFTSIGN, 
