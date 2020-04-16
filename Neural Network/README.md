@@ -537,9 +537,9 @@ https://towardsdatascience.com/a-comprehensive-guide-on-neural-networks-for-begi
 
 https://becominghuman.ai/step-by-step-neural-network-tutorial-for-beginner-cc71a04eedeb
 
-TensorFlow
-PyTorch
-Scikit-Neural Network
-Theano
-Keras
-NLTK
+- TensorFlow
+- PyTorch
+- Theano
+- Keras
+- NLTK
+- Scikit-Neural Network
