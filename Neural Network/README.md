@@ -537,8 +537,9 @@ https://towardsdatascience.com/a-comprehensive-guide-on-neural-networks-for-begi
 
 https://becominghuman.ai/step-by-step-neural-network-tutorial-for-beginner-cc71a04eedeb
 
-- TensorFlow
-- PyTorch
+- TensorFlow: based on Theano. entire computation graph of the model and then run your ML model. bigger community. 
+	TensorBoard for visualizing ML models.
+- PyTorch (based on Torch): Define/manipulate graph on-the-go. more intuitive. import torch.
 - Theano
 - Keras
 - NLTK
