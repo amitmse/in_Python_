@@ -539,7 +539,23 @@ https://becominghuman.ai/step-by-step-neural-network-tutorial-for-beginner-cc71a
 
 - TensorFlow: based on Theano. entire computation graph of the model and then run your ML model. bigger community. 
 	TensorBoard for visualizing ML models.
+	
+https://www.analyticsvidhya.com/blog/2020/03/tensorflow-2-tutorial-deep-learning/
+
+https://www.analyticsvidhya.com/blog/2017/03/tensorflow-understanding-tensors-and-graphs/
+
+https://www.analyticsvidhya.com/blog/2016/10/an-introduction-to-implementing-neural-networks-using-tensorflow/
+	
+https://www.analyticsvidhya.com/blog/2016/11/fine-tuning-a-keras-model-using-theano-trained-neural-network-introduction-to-transfer-learning/
+		
+	
 - PyTorch (based on Torch): Define/manipulate graph on-the-go. more intuitive. import torch.
+
+https://www.analyticsvidhya.com/blog/2019/09/introduction-to-pytorch-from-scratch/
+
+https://courses.analyticsvidhya.com/courses/take/introduction-to-pytorch-for-deeplearning/texts/10627922-getting-started-with-pytorch
+
+
 - Theano
 - Keras
 - NLTK
