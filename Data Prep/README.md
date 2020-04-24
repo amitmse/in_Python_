@@ -25,10 +25,3 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Information_value_
 # Monotonic Binning : 
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Monotonic_Binning.py
-
-
-https://github.com/srivatsan88/YouTubeLI/blob/master/Benchmarking_XGBoost_on_GPU.ipynb
-
-https://www.openml.org/search?type=data
-
-https://www.youtube.com/watch?v=X7cKC6GgyxY
