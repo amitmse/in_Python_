@@ -951,3 +951,9 @@ df.head()
 
 		       
 https://abirchakraborty.wordpress.com/
+
+https://github.com/srivatsan88/YouTubeLI/blob/master/Benchmarking_XGBoost_on_GPU.ipynb
+
+https://www.openml.org/search?type=data
+
+https://www.youtube.com/watch?v=X7cKC6GgyxY
