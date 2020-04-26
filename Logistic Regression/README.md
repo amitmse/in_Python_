@@ -170,16 +170,29 @@ tested in statistical analysis.
 ## Ordinary Least Squares (OLS): 
 	Finds parameter values that minimizing the error. Assumptions of Linear regression: 
 
+For Model:
+
 	1. Linear in parameters : 
 		Issue	: Beta not multiplied or divided by any other parameter. 
                           Incorrect and unreliable model which leads to error in result.
 		Solution: Transformations of independent variables
+
+For Variable: 
+
+	2. No perfect multicollinearity :
+		Issue: Issue: Regression coefficient variance will increase
+		Test: VIF
 		
-	2. Mean of residuals is zero :
+For Error Tearm: 
+
+	3. Normality of residuals :
+		Issue: OLS estimators won’t have the desirable BLUE property
+		
+	4. Mean of residuals is zero :
 		Issue: Error terms has zero mean and doesn’t depend on the independent variables. 
 			Thus, there must be no relationship between the independent variable and the error term
 	
-	3. Homoscedasticity of residuals /equal variance of residuals
+	5. Homoscedasticity of residuals /equal variance of residuals
 		Example	: Family income to predict luxury spending. Residuals are very small for low values of 
 			  family income (less spend on luxury) while there is great variation in the size of 
 			  the residuals for wealthier families. Standard errors are biased and it leads to 
@@ -188,23 +201,18 @@ tested in statistical analysis.
 		Solution: Weighted least squares regression.
 			  Transform the dependent variable using one of the variance stabilizing transformations
 	
-	4. No autocorrelation of residuals :
+	6. No autocorrelation of residuals :
 		Issue: correlation with own lag (stock price today linked with yesterday's price). if above fails 
 		 	then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not 
 			bias the OLS coefficient estimates, the standard errors tend to be underestimated 
 			(t-scores overestimated) when the autocorrelations of the errors at low lags are positive.
 		Test :  Durbin–Watson
 	
-	5. Normality of residuals :
-		Issue: OLS estimators won’t have the desirable BLUE property
-		
-	6. X variables and residuals are uncorrelated 
+	7. X variables and residuals are uncorrelated 
 	
-	7. No perfect multicollinearity :
-		Issue: Issue: Regression coefficient variance will increase
-		Test: VIF
+
 	
-	8. Number of observations must be greater than number of Xs
+	Number of observations must be greater than number of Xs
 
 http://r-statistics.co/Assumptions-of-Linear-Regression.html
 
