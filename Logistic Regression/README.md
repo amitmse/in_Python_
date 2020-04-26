@@ -4,7 +4,6 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 Logistic Regression is a classification technique which predicts a binary outcome.
 
 ## Logistic regression assumptions: 		
-http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 
 	1. Dependent variable should be binary
 	2. Linearity between independent & log odds 
@@ -37,12 +36,10 @@ http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 
 	Maximum Likelihood: 
 		finds parameter values that maximize the likelihood of making the observations given the parameters
-		(https://onlinecourses.science.psu.edu/stat414/node/191)
 		Pi = {Pr(Yi = 1/Xi) if Yi = 1}	= Pr^Yi (Yi is a Bernoulli random variable) P
 		{1 - Pr(Yi = 1/Xi)  if Yi = 0}	= (1-Pr)^(1-Yi)	1-P
 			
 	Likelihood function/Joint probability density function: (Yi is success and failure)
-	(https://stats.stackexchange.com/questions/211848/likelihood-why-multiply)
 		= Product[(Pr^Yi){(1-Pr)^(1-Yi)}]
 		
 -----------------------------------------------------------------------------------------------------------------------
@@ -113,9 +110,7 @@ http://www.soc.iastate.edu/sapp/soc512LogisticNotes.pdf
 	is a square matrix, both the matrix and its determinant are referred to as the Jacobian determinant. 
 	The Jacobian of the gradient of a scalar function of several variables has a special name: the Hessian matrix, 
 	which in a sense is the "second derivative" of the function.
-	
-http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
-			
+				
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 	beta(x) 	= covariance(x,y) / variance(x)
@@ -147,12 +142,6 @@ http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
 		the precision of the estimate of the coefficient. 
 		The smaller the standard error, the more precise the estimate.
 		
------------------------------------------------------------------------------------------------------------------------
-
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3976195/
-
-http://support.minitab.com/en-us/minitab-express/1/help-and-how-to/modeling-statistics/regression/how-to/binary-logistic-regression/interpret-the-results/all-statistics-and-graphs/coefficients/
-
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Logistic regression uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) 
@@ -210,11 +199,8 @@ For Error Tearm:
 	
 	7. X variables and residuals are uncorrelated 
 	
-
 	
 	Number of observations must be greater than number of Xs
-
-http://r-statistics.co/Assumptions-of-Linear-Regression.html
 
 	Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves 
 	or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
