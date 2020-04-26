@@ -170,10 +170,11 @@ tested in statistical analysis.
 ## Ordinary Least Squares (OLS): 
 	Finds parameter values that minimizing the error. Assumptions of Linear regression: 
 
-	1. Linear in parameters :
-		Issue	: Incorrect and unreliable model which leads to error in result.
+	1. Linear in parameters : 
+		Issue	: Beta not multiplied or divided by any other parameter. 
+                          Incorrect and unreliable model which leads to error in result.
 		Solution: Transformations of independent variables
-	
+		
 	2. Mean of residuals is zero :
 		Issue: Error terms has zero mean and doesn’t depend on the independent variables. 
 			Thus, there must be no relationship between the independent variable and the error term
