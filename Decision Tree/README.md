@@ -3,11 +3,8 @@
 ## Limitations of Decision Trees:
 
 	- Low-Performance
-  
 	- Poor Resolution on Data With Complex Relationships Among the Variables
-  
-	- Practically Limited to Classification							
-  
+	- Practically Limited to Classification
 	- Poor Resolution With Continuous Expectation Variables
   
 ## Gini Index:
