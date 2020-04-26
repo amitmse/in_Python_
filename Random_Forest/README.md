@@ -95,12 +95,6 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 				
 			- As m goes down, both inter-tree correlation and the strength of individual trees go down. 
 				So some optimal value of m must be discovered
-				
-	5. To understand how we test the classifier, we must explain several concepts:
-		- cross-validation 
-		- thresholds 
-		- mean precision
-		- precision above chance
 	
 ---------------------------------------------------------------------------------------------------------------------------
 
