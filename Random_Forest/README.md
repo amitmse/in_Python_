@@ -68,10 +68,39 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 		- mean precision
 		- precision above chance
 
+----------------------------------------------------------------------------------------------------------------------------
+# Bootstrap samples:
+	Draw repeated samples from the population, a large number of times. 
+	Samples are approximatively independent and identically distributed (i.i.d.).
 
+# Ensemble methods:
+	Ensemble learning is a machine learning paradigm where multiple models (often called "weak learners") 
+	are trained to solve the same problem and combined to get better results. 
+	
+# Bagging (Bootstrap aggregating):
+	Fit a weak learner (several independent models) on each of bootstarp samples and finally aggregate the outputs 
+	(average model predictions) in order to obtain a model with a lower variance. It builds model parallelly.
+
+# Boosting:
+	Similar to bagging but it fits weak learner sequentially (a model depends on the previous ones) in a very 
+	adaptative way. Each model in the sequence is fitted giving more importance to the observations which are not 
+	classified correctly (high error). Mainly focus on reducing bias.
+	
+	Bagging mainly focus at getting an ensemble model with less variance than its components whereas 
+	boosting and stacking will mainly try to produce strong models less biased than their components 
+	(even if variance can also be reduced).
+
+# Stacking:
+	Stacking mainly differ from bagging and boosting on two points. First stacking often considers heterogeneous 
+	weak learners (different learning algorithms are combined) whereas bagging and boosting consider mainly 
+	homogeneous weak learners. Second, stacking learns to combine the base models using a meta-model whereas 
+	bagging and boosting combine weak learners following deterministic algorithms.
+	
 # Bias - Variance
 	For high variance, one common solution is to add more features from which to learn. 
 	This very frequently increases bias, so there’s a tradeoff to take into consideration.
+	
+---------------------------------------------------------------------------------------------------------------------------
 
 # Tune
 	- n_estimators is not really worth optimizing. The more estimators you give it, the better it will do. 
@@ -95,15 +124,6 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 		
 	- my default setting for a first run is: 1000 trees, 1/2 features per node, out of bag performance weighting, 
 		Gini Index for node evaluation.
-
-plot_learning_curve: http://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html
-
-https://medium.com/@chris_bour/6-tricks-i-learned-from-the-otto-kaggle-challenge-a9299378cd61#.62v2igttw
-
-http://stackoverflow.com/questions/36107820/how-to-tune-parameters-in-random-forest-using-scikit-learn
-
-http://scikit-learn.org/stable/auto_examples/model_selection/randomized_search.html#sphx-glr-auto-examples-model-selection-randomized-search-py
-
 
 
 # Feature importance
