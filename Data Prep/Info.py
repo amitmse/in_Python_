@@ -583,6 +583,13 @@ ds.describe()
 	#print docstring
 	emp.__doc__
 	####################################################################
+			      
+	#Parent vs. Child Classes
+	class test(emp):	#test will have all property of emp which is parent in this case and test is a child class
+		def des(self, designation):
+			return "{} is {}".format(self.first, designation)
+	#########################################################################      
+			      
 		class exClass:
 			x1=123
 			y1='test'
