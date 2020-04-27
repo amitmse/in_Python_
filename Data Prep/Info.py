@@ -552,7 +552,37 @@ ds.describe()
 	https://www.makeuseof.com/tag/object-oriented-programming-explained/
 	https://www.programiz.com/python-programming/object-oriented-programming
 '''
+		
+	### CLass Start ##################################################
+	class emp:
+	    """ example of class """ # this is docstring. emp.__doc__
+	    def __init__(self, first, last, pay): #init refers to initialization or constructor 
+		self.first=first
+		self.last=last
+		self.pay=pay
+
+	    def fullname(self):
+		return '{} {}'.format(self.first, self.last)
 			      
+	##### CLass close ##############################################
+	###############################################################
+	#create instance 
+	emp_1 = emp('amit','kumar','45')
+	emp_2 = emp('moni','sinha','5')
+	
+	#call method
+	emp_1.fullname()
+			      
+	#call method using class 
+	print(emp.fullname(emp_1))     
+
+	#without creating instance call method 
+	emp('amit','kumar','45').fullname()
+			      
+	help(emp)
+	#print docstring
+	emp.__doc__
+	####################################################################
 		class exClass:
 			x1=123
 			y1='test'
