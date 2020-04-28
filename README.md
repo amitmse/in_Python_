@@ -37,7 +37,7 @@
                   Encapsulation is one of the ways that object-oriented programming creates abstraction. 
                   A programmer could make a change to the structure or contents of the object without worrying about the public interface.
 
-- Inheritance :	Creating new class using existing class.
+- Inheritance :	Creating new class (child) using existing class (parent). 
                 Inheritance is a way of creating new class for using details of existing class without modifying it. 
                 It allows sub-classes to use attributes from parent classes. 
                 Instead of creating new classes for everything, programmers can create a base class and then extend it to new sub-classes when they need to.
