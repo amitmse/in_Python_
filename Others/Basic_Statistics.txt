@@ -289,7 +289,7 @@ Ordinary Least Squares (OLS):
 			Test 	:  Durbin–Watson
 
 		5. Normality of residuals
-			Issue	: OLS estimators won’t have the desirable BLUE property
+			Issue	: OLS estimators won’t have the desirable Best Linear Unbiased Estimate (BLUE) property
 	
 		6. X variables and residuals are uncorrelated 
 
