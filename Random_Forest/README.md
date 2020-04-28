@@ -29,6 +29,18 @@
 	bagging and boosting combine weak learners following deterministic algorithms.
 	
 ## Bias - Variance
+	Bias: 
+		- Bias is the difference between the prediction of model and actual value. 
+		- It always leads to high error on training and test data.
+		- It creates underfitting problem.
+		- If model is too simple and has very few parameters then it may have high bias and low variance.
+	
+	Variance: 
+		- Model performs very well on development data but poor performance on on OOT validation.
+		- It creates overfitting problem.
+		- If model has large number of parameters then it’s going to have high variance and low bias
+	
+	
 	For high variance, one common solution is to add more features from which to learn. 
 	This very frequently increases bias, so there’s a tradeoff to take into consideration.
 	
