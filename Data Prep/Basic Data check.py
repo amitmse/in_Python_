@@ -364,7 +364,7 @@ def generate_lift_table(input_data=None, dependent_variable=None, score_variable
     agg1= pd.DataFrame()
     agg1['min_scr'] = grouped.min().score
     agg1['max_scr'] = grouped.max().score
-    agg1['total'] = agg1['total'] = grouped.sum().response + grouped.sum().non_response
+    agg1['total'] = grouped.sum().response + grouped.sum().non_response
     agg1['pct_total'] = (agg1.total/agg1.total.sum())
     agg1['non_response'] = grouped.sum().non_response
     agg1['pct_non_response']= (agg1.non_response/agg1.non_response.sum())
