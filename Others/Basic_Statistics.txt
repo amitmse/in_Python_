@@ -244,6 +244,8 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 Covariance:
 	- It refers to the measure of how two variables will change (directional relationship) when they are compared to each other
 	- It measures the Variance between two variables
+	- Covariance indicates the direction of the linear relationship between variables. Correlation on the other hand measures 
+	   both the strength and direction of the linear relationship between two variables. 
 
 ANOVA:
 	Known as analysis of variance, is used to compare multiple (three or more) samples with a single test 
