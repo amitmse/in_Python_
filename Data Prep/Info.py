@@ -98,6 +98,13 @@ Cons:
 #	\n			# Newline 			----> stuff = 'HelOo\nWoRlD' [it will print in two lines] 
 	!=			# Not Equal to			----> if x != 1 then do
 
+	
+#************************************************************************************************************
+	Lit: List uses square brackets
+	Tuple : sequence of immutable Python objects. Similar to lists and uses parentheses.
+	Set: Unordered collection with no duplicate elements. It uses Curly braces.
+	Dictionary: Key and Value mapping
+	
 #************************************************************************************************************
 	import nltk
 	import sklearn
@@ -363,7 +370,7 @@ ds.describe()
 		index		:tup[2]       = 3							  	  					(1, 2, 3, 4, 6.777, 'test')
 		count		:tup.count(2) = 1								  					(1, 2, 3, 4, 6.777, 'test')
 		list to tuple 	:tup          = tuple(a)  (1, 2, 3, 4, 6.777, 'test') a=[1, 2, 3, 4, 6.777, 'test']
-
+	      
 ###****** Dictionary/Hash ---- {} ----- (first key and then value. only works if hash is define) **************************
 '''			      
 	Each key is separated from its value by a colon (:), the items are separated by commas, 
