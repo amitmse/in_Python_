@@ -100,9 +100,9 @@ Cons:
 
 	
 #************************************************************************************************************
-	Lit: List uses square brackets
-	Tuple : sequence of immutable Python objects. Similar to lists and uses parentheses.
-	Set: Unordered collection with no duplicate elements. It uses Curly braces.
+	Lit: Mutable and uses square brackets
+	Tuple : Immutable and uses parentheses. Similar to lists. 
+	Set: No duplicate elements and uses curly braces.
 	Dictionary: Key and Value mapping
 	
 #************************************************************************************************************
