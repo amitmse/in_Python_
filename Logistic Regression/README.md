@@ -124,9 +124,9 @@ Logistic Regression is a classification technique which predicts a binary outcom
 	- If less number of observation (may be 1000) then its cheaper
 	
 
-Solve a equation (identify beta):  
+### Solve a equation (identify beta):  
 
-1. Calculus: 
+#### 1. Calculus: 
 	It will faster if equation is simple. But in real life equations are very complex and messy and 
 	its difficult to solve.   
 			f(x) 	= X^2 - 2X + 2   
@@ -134,7 +134,7 @@ Solve a equation (identify beta):
 			2X	= 2  
 			X	= 1   
 	
-2. Gradient Descent:   
+#### 2. Gradient Descent:   
 			Xi+1 = Xi - a f'(Xi)  	
 			[Xi = initial guess, a = learning rate or step length or jump, Xi+1 = next guess]  
 			f(x) 	= X^2 - 2X + 2  
@@ -168,7 +168,7 @@ Solve a equation (identify beta):
 	cofficients are not exactly equals to Gradient descent but its close. 
 	For BIG data its only option to apply Gradient descent in faster way.
 			
-3. Newton Raphson:   
+#### 3. Newton Raphson:   
 	Newton's method generally requires fewer iterations, but each iteration is slow as we need to 
 	compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must 
 	supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate).
