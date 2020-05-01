@@ -84,7 +84,8 @@ Logistic Regression is a classification technique which predicts a binary outcom
 		
 -----------------------------------------------------------------------------------------------------------------------
 	
-Types of Gradient Descent:
+## Types of Gradient Descent:
+
 1. Batch Gradient Descent: 
 	It uses a complete dataset available to compute the gradient of the cost function hence and it's 
 	very slow. 
@@ -103,10 +104,27 @@ Types of Gradient Descent:
 	Stochastic gradient descent used for faster computation. First, it randomizes the complete dataset, 
 	and then uses only one training example in every iteration to calculate the gradient. Its benifical 
 	for huge datasets.
-		
------------------------------------------------------------------------------------------------------------------------
 
-Solve a equation:
+## Gradient Descent vs Newton's method
+
+### Gradient Descent:
+	- Simple
+	- Need learning Rate
+	- 2nd derivate not required
+	- More number of iterations
+	- Each iteration is cheap (no 2nd derivative )
+	- If number of observation is large then its cheaper
+	
+### Newton's method:
+	- Complex
+	- No learning Rate required
+	- 2nd derivate is required
+	- Less number of iteration
+	- Each iteration is expesive (2nd derivative )
+	- If less number of observation (may be 1000) then its cheaper
+	
+
+Solve a equation (identify beta):  
 
 1. Calculus: 
 	It will faster if equation is simple. But in real life equations are very complex and messy and 
@@ -135,12 +153,11 @@ Solve a equation:
 			X3 = 1.432  
 			
 	continue doing this untill we are close to 1 which is the exact solution. As we approach to local minimum, 
-	Gradient Descent will automatically take smaller steps. So no need to decrease "a" over time.	
-	
+	Gradient Descent will automatically take smaller steps. So no need to decrease "a" over time. 
 	optimization gradient descent:
-			cX + d = Y [equation of line and solve this for c & d]  
-			(cX + d) -  Y = 0 ( "cX + d" is predected Y^, Y^-Y is error and it should be zero)   
-		min by(a,b) = sum ([cX + d]-Yi)^2		[c = cofficient, d=intercept]  
+			cX + d 		= Y [equation of line and solve this for c & d]  
+			(cX + d) -  Y 	= 0 ( "cX + d" is predected Y^, Y^-Y is error and it should be zero)   
+			min by(a,b) 	= sum ([cX + d]-Yi)^2		[c = cofficient, d=intercept]  
 		
 	First make initial guess for c & d then do the derivative by c & d seperately to get the optimium value of c & d. 
 	Above process will apply on Gradient Descent "Xi+1 = Xi - a f'(Xi)". Gradient descent is based on 1st derivatives 
@@ -151,7 +168,8 @@ Solve a equation:
 	cofficients are not exactly equals to Gradient descent but its close. 
 	For BIG data its only option to apply Gradient descent in faster way.
 			
-3. Newton Raphson: Newton's method generally requires fewer iterations, but each iteration is slow as we need to 
+3. Newton Raphson:   
+	Newton's method generally requires fewer iterations, but each iteration is slow as we need to 
 	compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must 
 	supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate).
 	(http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf)
