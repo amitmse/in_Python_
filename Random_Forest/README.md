@@ -111,7 +111,7 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 ---------------------------------------------------------------------------------------------------------------------------
 
 # Tune
-	- n_estimators is not really worth optimizing. The more estimators you give it, the better it will do. 
+	- Number of trees:  n_estimators is not really worth optimizing. The more estimators you give it, the better it will do. 
 		500 or 1000 is usually sufficient. ususally bigger the forest the better, 
 		there is small chance of overfitting here
 		
