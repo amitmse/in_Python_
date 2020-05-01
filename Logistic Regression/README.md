@@ -111,12 +111,12 @@ Solve a equation:
 1. Calculus: 
 	It will faster if equation is simple. But in real life equations are very complex and messy and 
 	its difficult to solve.   
-	                f(x) 	= X^2 - 2X + 2   
+			f(x) 	= X^2 - 2X + 2   
 			df/dx 	= 2X - 2  
 			2X	= 2  
 			X	= 1   
 	
-2. Gradient Descent: 
+2. Gradient Descent:   
 			Xi+1 = Xi - a f'(Xi)  	
 			[Xi = initial guess, a = learning rate or step length or jump, Xi+1 = next guess]  
 			f(x) 	= X^2 - 2X + 2  
@@ -133,18 +133,19 @@ Solve a equation:
 			X3 = 1.72 - 0.2(1.44)		[put 1.72 in "2X - 2": 2*1.72 - 2 = 3.44-2 =1.44]  
 			X3 = 1.72 - 0.288  
 			X3 = 1.432  
-	continue doing this untill we are close to 1 which is the exact solution.
-	As we approach to local minimum, Gradient Descent will automatically take smaller steps. 
-	So no need to decrease "a" over time.			
+			
+	continue doing this untill we are close to 1 which is the exact solution. As we approach to local minimum, 
+	Gradient Descent will automatically take smaller steps. So no need to decrease "a" over time.	
+	
 	optimization gradient descent:
 			cX + d = Y [equation of line and solve this for c & d]  
 			(cX + d) -  Y = 0 ( "cX + d" is predected Y^, Y^-Y is error and it should be zero)   
 		min by(a,b) = sum ([cX + d]-Yi)^2		[c = cofficient, d=intercept]  
+		
 	First make initial guess for c & d then do the derivative by c & d seperately to get the optimium value of c & d. 
-	Above process will apply on Gradient Descent "Xi+1 = Xi - a f'(Xi)"
-			
-	Gradient descent is based on 1st derivatives only and it use all data at one time. 
-	Gradient descent generally requires more iterations. If data size is big then it will take long time to compute.
+	Above process will apply on Gradient Descent "Xi+1 = Xi - a f'(Xi)". Gradient descent is based on 1st derivatives 
+	only and it use all data at one time. Gradient descent generally requires more iterations. If data size is big then 
+	it will take long time to compute.
 			
 	Stochastic Gradient descent: It takes portion of data at one time and do the computation and continue in same way. 
 	cofficients are not exactly equals to Gradient descent but its close. 
