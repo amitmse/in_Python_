@@ -111,7 +111,7 @@ Solve a equation:
 1. Calculus: 
 	It will faster if equation is simple. But in real life equations are very complex and messy and 
 	its difficult to solve.   
-			f(x) 	= X^2 - 2X + 2   
+	                f(x) 	= X^2 - 2X + 2   
 			df/dx 	= 2X - 2  
 			2X	= 2  
 			X	= 1   
