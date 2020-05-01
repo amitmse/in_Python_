@@ -112,10 +112,10 @@ Solve a equation:
 	It will faster if equation is simple. But in real life equations are very complex and messy and 
 	its difficult to solve. 
 	
-	f(x) 	= X^2 - 2X + 2 /n
-	df/dx 	= 2X - 2 /n
-	2X=2 /n
-	X=1 /n
+	f(x) 	= X^2 - 2X + 2 \n
+	df/dx 	= 2X - 2 \n
+	2X=2 \n
+	X=1 \n
 	
 2. Gradient Descent: 
 	Xi+1 = Xi - a f'(Xi)	
