@@ -570,6 +570,7 @@ def combine_all_functions_together_for_fitting_logistic_model(input_independent_
 
 						#cumulative density function for standard normal distribution / cumulative normal distribution	
 						p_value										= 	[2 *(1.0 - norm.cdf(abs(z))) for z in z_value]
+						#https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html
 
 						#################################################
 						#lift table
