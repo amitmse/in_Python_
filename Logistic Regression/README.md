@@ -113,8 +113,11 @@ Solve a equation:
 	its difficult to solve. 
 	
 	f(x) 	= X^2 - 2X + 2
+	
 	df/dx 	= 2X - 2
+	
 	2X=2
+	
 	X=1
 	
 2. Gradient Descent: 
