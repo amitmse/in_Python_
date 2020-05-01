@@ -37,3 +37,4 @@
 	- but some one  has to recognize that such modifications are necessarily complications, 
           	which detract from its basic simplicity.
 
+![Function](https://github.com/amitmse/in_Python_/blob/master/Naive%20Bayes/bayes%20theorem%20in%20one%20picture.png)
