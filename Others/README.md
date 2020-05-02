@@ -1,5 +1,10 @@
 # Statistical tests : 
 
+
+![Function](https://github.com/amitmse/in_Python_/blob/master/Others/distribution.png)
+
+
+
 https://github.com/amitmse/in_Python_/blob/master/Others/Basic_Statistics.txt
 
 https://github.com/amitmse/in_Python_/blob/master/Others/Common%20Probability%20Distributions.pdf
