@@ -175,6 +175,12 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 
 ## Gini Importance / Mean Decrease in Impurity (MDI) :
 
+	Gini Impurity is the probability of incorrectly classifying a randomly chosen element in the dataset if it 
+	were randomly labeled according to the class distribution in the dataset. It’s calculated as
+	Gini impurity index (G) = P * (1 - P)
+	Importance = G (parent node) - G (child node 1) - G (child node 2)
+
+
 	The initial gini index before split  Overall = 1 − P(success)^2 − P(Failure)^2
 	Node level :
 		impurity in Left node  =1 − P(Success in left node)^2  − P(Failure in left node)^2
