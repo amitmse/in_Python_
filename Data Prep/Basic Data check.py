@@ -65,6 +65,7 @@ import pandasql as ps
 
 # contents
 	df.info()
+	
 	# Pandas data type [object, int64, float64, bool, datetime64]  [timedelta, category]
 		df.dtypes 
 		dict(df.dtypes)
