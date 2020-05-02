@@ -14,7 +14,7 @@
   
 	2. Develop a tree and pick node (decision stump) with lowest weighted training error
   
-	3. Compute coefficient		(1/2 ln[{1 - weighted error(ft)}/weighted error(ft)])
+	3. Compute coefficient		SQRT[{log(odds error)}] => (1/2 ln[{1 - weighted error(ft)}/weighted error(ft)])
   
 	4. Recompute weights		( ai e^(-Wt))
   
