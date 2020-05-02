@@ -1,3 +1,28 @@
+# Type of data:
+## Nominal / categorical/qualitative /non-parametric:  
+- Example: colour,gender. 
+- Check: frequency each category. 
+- Test: Comparison/Difference: 
+	- Test for proportion (for one categorical variable)
+	- Difference of two proportions
+	- Chi-Square test for independence (for two categorical variables)
+	- Relationship: Chi-Square test for independence
+
+## Ordinal : Similar as Nominal
+- Example: rank, satisfaction.  
+- Check: frequency or mean (special case). 
+- Test: Similar as Nominal
+
+## Interval / Ratio / quantitative/continuous  : 
+- Example: number of customers, income,age. 
+- Check: Mean ..
+- Test:	Comparison/Difference:
+	- Test for a mean / T test (for one continuous variable)
+	- Difference of two means (independent samples)
+	- Difference of two means(paired T test. Pre and Post scenario)
+	- Relationship: Regression Analysis / Correlation (for two continuous variables/for relationship)
+
+---------------------------------------------------------------------------------------------------------------
 # Statistical tests : 
 
 ## T Test
