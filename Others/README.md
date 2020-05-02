@@ -9,7 +9,29 @@
 - Test of independence
 - Likelihood-ratio test for nested models
 
+## F Test:
+- Equality of variances
 
+
+## Covariance:
+- It refers to the measure of how two variables will change (directional relationship) when they are compared to each other
+- It measures the Variance between two variables
+- Covariance indicates the direction of the linear relationship between variables. Correlation on the other hand measures 
+   both the strength and direction of the linear relationship between two variables. 
+
+---------------------------------------------------------------------------------------------------------------
+
+## Correlation vs Regression:
+### Correlation: 
+- It measures the degree of relationship between two variables. 
+- correlation doesn’t capture causality.
+- Correlation between x and y is the same as the one between y and x.
+### Regression analysis:
+- It is about how one variable affects another or what changes it triggers in the other.
+- Regression is based on causality (cause and effect).
+- Regression of x and y, and y and x, yields completely different results.
+
+---------------------------------------------------------------------------------------------------------------
 
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/distribution.png)
