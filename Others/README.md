@@ -1,5 +1,16 @@
 # Statistical tests : 
 
+## T Test
+- Compares mean for two groups
+- Test the significance of regression coefficient
+
+## Chi-Squared Test:
+- Goodness of fit
+- Test of independence
+- Likelihood-ratio test for nested models
+
+
+
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/distribution.png)
 
