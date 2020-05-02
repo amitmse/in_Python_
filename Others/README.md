@@ -12,6 +12,7 @@
 ## F Test:
 - Equality of variances
 
+---------------------------------------------------------------------------------------------------------------
 
 ## Covariance:
 - It refers to the measure of how two variables will change (directional relationship) when they are compared to each other
@@ -35,7 +36,6 @@
 
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/distribution.png)
-
 
 
 https://github.com/amitmse/in_Python_/blob/master/Others/Basic_Statistics.txt
