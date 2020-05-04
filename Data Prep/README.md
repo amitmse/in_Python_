@@ -25,3 +25,7 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Information_value_
 # Monotonic Binning : 
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Monotonic_Binning.py
+
+https://www.analyticsvidhya.com/blog/2015/08/interactive-data-visualization-library-python-bokeh/
+
+https://www.geeksforgeeks.org/decorators-in-python/
