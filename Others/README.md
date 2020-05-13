@@ -120,9 +120,10 @@ https://www.english-corpora.org/coca/
 
 ------------------------------------------------------------------------------------------------------------------
 
+## Writing:
 https://www.goodreads.com/quotes/807820-a-scrupulous-writer-in-every-sentence-that-he-writes-will
 
-“A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus:
+A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus:
 
 1. What am I trying to say?
 2. What words will express it?
