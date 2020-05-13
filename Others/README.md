@@ -133,3 +133,5 @@ And he will probably ask himself two more:
 
 1. Could I put it more shortly?
 2. Have I said anything that is avoidably ugly?
+
+https://www.writingclasses.com/toolbox/tips-masters/george-orwell-6-questions-6-rules
