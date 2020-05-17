@@ -1,4 +1,6 @@
 # Pyspark
+
+- Spark is another execution framework with MapReduce.
 - Spark is based on computational engine.
 - Lazy Evaluation. It has inbuilt process to optimize the execution. 
 - Faster than Hadoop (Map Reduce frameworks). 
