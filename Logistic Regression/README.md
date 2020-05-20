@@ -36,8 +36,8 @@ Logistic Regression is a classification technique which predicts a binary outcom
 
 	Maximum Likelihood: 
 		finds parameter values that maximize the likelihood of making the observations given the parameters
-		Pi = {Pr(Yi = 1/Xi) if Yi = 1}	= Pr^Yi         (Yi is a Bernoulli random variable) (P)
-		{1 - Pr(Yi = 1/Xi)  if Yi = 0}	= (1-Pr)^(1-Yi)	(1-P)
+		Pi = {Pr(Yi = 1/Xi) if Yi = 1}	= Pr^Yi         --> (P, Yi is a Bernoulli random variable)
+		{1 - Pr(Yi = 1/Xi)  if Yi = 0}	= (1-Pr)^(1-Yi)	--> (1-P)
 			
 	Likelihood function/Joint probability density function: (Yi is success and failure)
 		= Product[(Pr^Yi){(1-Pr)^(1-Yi)}]
