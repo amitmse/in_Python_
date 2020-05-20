@@ -100,10 +100,10 @@ Cons:
 
 	
 #************************************************************************************************************
-	Lit: Mutable and uses square brackets
-	Tuple : Immutable and uses parentheses. Similar to lists. 
-	Set: No duplicate elements and uses curly braces.
-	Dictionary: Key and Value mapping
+	Lit: Mutable and uses square brackets "[1,2,3,'a','c']"
+	Tuple : Immutable and uses parentheses "(1, 2,'z'5)". Similar to lists. 
+	Set: No duplicate elements and uses curly braces "{'a','b',1,2,'d'}".
+	Dictionary: Key and Value mapping "{cust1:20,cust2:99}".
 	
 #************************************************************************************************************
 	import nltk
