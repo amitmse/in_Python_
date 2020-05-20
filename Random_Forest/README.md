@@ -41,7 +41,7 @@
 		- If model has large number of parameters then it’s going to have high variance and low bias
 	
 	
-	For high variance, one common solution is to add more features from which to learn. 
+	For high variance, one common solution is to reduce parameter/features. 
 	This very frequently increases bias, so there’s a tradeoff to take into consideration.
 	
 ----------------------------------------------------------------------------------------------------------------------
