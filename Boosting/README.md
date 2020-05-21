@@ -157,3 +157,5 @@ Boosting vs Bagging
 			give more and more weight to hard to classify observations.
 	- Bagging: It is an approach where you take random samples of data, build learning algorithms and take 
 			simple means to find bagging probabilities.
+
+https://s3.amazonaws.com/thinkific-import-development/118220/TreeBasedAlgorithms_ACompleteBookfromScratchinRPython-200403-111115.pdf
