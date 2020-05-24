@@ -123,7 +123,7 @@ Model Validation:
 Logistic Function: Perform below steps for each PDP (DRP and CO)
 
 	F(x) = c+ {k/(1+e^(a+bx) )}
-	Parameters:	
+	Parameters: Use solver to get the optimal value (objective: error, changing: K,A,B,C)	
 		K		2.3716
 		A		-1.9618
 		B		-0.0595
