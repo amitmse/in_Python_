@@ -1,5 +1,5 @@
 LGD:
-
+----------------------------------------------------------------------------------------------
 - Development Snap		Annual snapshots (Jan'08 - Jan'17)	
 - Performance Window		12 Months	
 - Default Definition		Charge off, DRP and 90+ DPD	
@@ -10,4 +10,30 @@ LGD:
 	4. Deceased customer 	
 	5. Fraud	
 	6. Lost Stolen 	
+----------------------------------------------------------------------------------------------
+Modelling Approach							
+1. Valid Base				Valid accounts post exclusion					
+2. Identification of PDP		Post Default pathways(PDP) i.e. CO, DRP & Cure					
+3. Recovery tracking			Recovery was tracked at an customer level					
+4. Flow Rate				Calculate flow rate by PDP					
+6. Cyclicity Check			Check relationship between flow rates and MEVs					
+7. Identify PIT for LGD estimation	Identify most recent snapshot for LGD model development					
+8. Recovery estimation			Fit a logistic function to estimate recovery (data used: time to recovery and recovery)					
+9. Prediction of LGD 			
+					First Step: Simulate recovery at a range of EIR (10% to 30%) using above logistic function
+					Second Step: Fit a linear model to predict LGD using EIR"					
+10. Validation of LGD model		Test above model on OOT sample to check the accuracy					
 
+
+
+----------------------------------------------------------------------------------------------
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+
+
+
+----------------------------------------------------------------------------------------------
