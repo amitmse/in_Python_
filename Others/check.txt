@@ -18,14 +18,10 @@ Modelling Approach
 4. Flow Rate				Calculate flow rate by PDP					
 6. Cyclicity Check			Check relationship between flow rates and MEVs					
 7. Identify PIT for LGD estimation	Identify most recent snapshot for LGD model development					
-8. Recovery estimation			Fit a logistic function to estimate recovery (data used: time to recovery and recovery)					
-9. Prediction of LGD 			
-					First Step: Simulate recovery at a range of EIR (10% to 30%) using above logistic function
+8. Recovery estimation			Fit a logistic function to estimate recovery (data used: time to recovery and recovery)
+9. Prediction of LGD 			First Step: Simulate recovery at a range of EIR (10% to 30%) using above logistic function
 					Second Step: Fit a linear model to predict LGD using EIR"					
-10. Validation of LGD model		Test above model on OOT sample to check the accuracy					
-
-
-
+10. Validation of LGD model		Test above model on OOT sample to check the accuracy
 ----------------------------------------------------------------------------------------------
 
 
