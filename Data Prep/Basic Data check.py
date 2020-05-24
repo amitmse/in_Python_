@@ -471,3 +471,10 @@ dev=PSI(development_data=df , validation_data=df1, score_variable='final_score',
 #####################################################################################
 # End Of Code
 #####################################################################################
+#https://www.analyticsvidhya.com/blog/2019/08/10-powerful-python-tricks-data-science/?utm_source=AVLinkedin&utm_medium=post&utm_campaign=24_may_intermediate_article
+import pandas as pd 
+import pandas_profiling 
+
+# read the dataset 
+data = pd.read_csv('add-your-data-here') 
+pandas_profiling.ProfileReport(data)
