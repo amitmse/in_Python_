@@ -62,7 +62,7 @@ LGD Model:
 	- GD for cure rate is assumed to be zero.
 	- Final LGD Equations are Flow Rate adjusted
 
-	Default type		PDP		Flow rates	Final LGD Equation	
+	Default type		PDP		Flow rates	Final LGD Equation (flow rate * LGD Model)	
 
 	Non-defaults		Cure		13.84%		0%	
 				Charge-off	57.93%		0.419667 + 0.142689 * EIR	
@@ -73,6 +73,16 @@ LGD Model:
 	Non DRP defaults	Cure		16.95%		0%	
 				Charge-off	79.60%		0.576642 + 0.196061 * EIR	
 
+	Note: 	0.419667 + 0.142689 * EIR
+		Actual Value:
+			Flow rates: 57.93%
+			Intercept : 0.7244
+			Beta	  : 0.2463
+			Model	  : Flow rates * (0.7244 + 0.2463 * EIR)
+		Adjusted value:
+			Intercept : 0.419667 	(0.7244 * 57.93%)
+			Beta	  : 0.142689	(0.2463 * 57.93%)
+			Model	  : 0.419667 + 0.142689 * EIR
 ----------------------------------------------------------------------------------------------
 Model Validation:
 
