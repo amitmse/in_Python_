@@ -74,7 +74,84 @@ LGD Model:
 				Charge-off	79.60%		0.576642 + 0.196061 * EIR	
 
 ----------------------------------------------------------------------------------------------
+Model Validation:
 
+	- Outstading Weighted
+	- Accuracy test was performed on all snaps except Development Snapshot
+	- Accuracy threshold is 10%
+
+	Existing Default:
+		SNAP	Actual LGD	Predicted LGD	Error	# Customer
+		200801	52.10%		61.191%		17%	2355
+		200901	58.03%		61.184%		5%	2086
+		201001	62.23%		61.185%		2%	1445
+		201101	64.83%		61.186%		6%	1414
+		201201	75.05%		61.183%		18%	1285
+		201301	69.04%		61.184%		11%	1570
+		201401	59.80%		61.181%		2%	1795
+		201501	60.42%		61.179%		1%	1780
+		201701	65.55%		61.189%		7%	1277
+
+		Model Developed on 201601:
+		201601	64.03%		61.19%		4%	1510
+
+
+		Accuracy Test			
+			Weighted Avg Error		Model Accuracy Result	
+			7.95%				Pass	
+
+	Non Defaults:				
+		SNAP	Actual LGD	Predicted LGD	Error	# Customer
+		200801	57.57%		63.674%		11%	12588
+		200901	63.81%		63.669%		0%	12474
+		201001	64.17%		63.669%		1%	10085
+		201101	68.12%		63.666%		7%	8611
+		201201	71.39%		63.672%		11%	9703
+		201301	65.33%		63.672%		3%	10101
+		201401	61.98%		63.649%		3%	12672
+		201501	63.05%		63.648%		1%	11023
+		201701	68.10%		63.656%		7%	8091
+		
+		Model Developed on 201601:
+		201601	65.32%		63.657%		3%	9174
+
+		Accuracy Test			
+			Weighted Avg Error		Model Accuracy Result	
+			4.49%				Pass	
+
+----------------------------------------------------------------------------------------------
+Logistic Function: Perform below steps for each PDP (DRP and CO)
+
+	F(x) = c+ {k/(1+e^(a+bx) )}
+	Parameters:	
+		K		2.3716
+		A		-1.9618
+		B		-0.0595
+		C		-2.0701
+		R-Square	99.97%
+		Error		0.85%
+		
+	Estimated Recovery:  C + ( K / SUM(1,EXP( A + B * Month to Recovery )))
+		(Month to Recovery : Will be 1 to 47 for this model as 2016 has 47 month sof recovery)
+		
+	Error: = 100  *( Actual Recovery  - Estimated Recovery  )^2
+	
+	LGD : 1 - Actual Recovery
+	
+	Simulated Estimated Recovery using simulated EIR: 
+		Estimated Recovery  / ( 1 + simulated EIR  / 12) ^ Month to Recovery
+
+	Discounted Recovery : Cumulative sum of (Simulated Estimated Recovery using simulated EIR)
+	
+	Discounted Loss : 1 - Discounted Recovery
+	
+	Estimate LGD using simulated EIR:
+		- Generate X Y Plot (X will be simulated EIR i.e. 10% to 30%, Y will be Discounted Loss)
+		- Fit a trendline for linear regression (get a model equation)
+			LGD = 0.2463* EIR + 0.7244
+			R² = 0.9954
+		
+----------------------------------------------------------------------------------------------
 
 
 
