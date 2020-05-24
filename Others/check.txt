@@ -25,20 +25,56 @@ Modelling Approach
 ----------------------------------------------------------------------------------------------
 Flow Rate: 
 
-	Defaults			Non-Default			Total			
-	Cust 	CO	DRP	Cured	Cust 	CO	DRP	Cured	Cust 	CO	DRP	Cured
-200801	2,355 	84%	7%	8%	12,588 	70%	23%	7%	14,943 	72%	20%	7%
-200901	2,086 	86%	6%	8%	12,474 	65%	28%	7%	14,560 	68%	25%	7%
-201001	1,445 	88%	4%	9%	10,085 	66%	26%	8%	11,530 	69%	23%	9%
-201101	1,414 	83%	4%	13%	8,611 	66%	26%	8%	10,025 	68%	23%	9%
-201201	1,285 	88%	5%	7%	9,703 	68%	25%	7%	10,988 	70%	23%	7%
-201301	1,570 	85%	8%	7%	10,101 	67%	22%	11%	11,671 	69%	20%	10%
-201401	1,795 	80%	6%	15%	12,672 	58%	25%	17%	14,467 	61%	23%	16%
-201501	1,780 	77%	5%	18%	11,023 	54%	29%	17%	12,803 	57%	25%	17%
-201601	1,510 	80%	3%	17%	9,202 	58%	28%	14%	10,712 	61%	25%	14%
-201701	1,277 	82%	5%	13%	8,091 	53%	34%	13%	9,368 	57%	30%	13%
+		Defaults			Non-Default			Total			
+		Cust 	CO	DRP	Cured	Cust 	CO	DRP	Cured	Cust 	CO	DRP	Cured
+	200801	2,355 	84%	7%	8%	12,588 	70%	23%	7%	14,943 	72%	20%	7%
+	200901	2,086 	86%	6%	8%	12,474 	65%	28%	7%	14,560 	68%	25%	7%
+	201001	1,445 	88%	4%	9%	10,085 	66%	26%	8%	11,530 	69%	23%	9%
+	201101	1,414 	83%	4%	13%	8,611 	66%	26%	8%	10,025 	68%	23%	9%
+	201201	1,285 	88%	5%	7%	9,703 	68%	25%	7%	10,988 	70%	23%	7%
+	201301	1,570 	85%	8%	7%	10,101 	67%	22%	11%	11,671 	69%	20%	10%
+	201401	1,795 	80%	6%	15%	12,672 	58%	25%	17%	14,467 	61%	23%	16%
+	201501	1,780 	77%	5%	18%	11,023 	54%	29%	17%	12,803 	57%	25%	17%
+	201601	1,510 	80%	3%	17%	9,202 	58%	28%	14%	10,712 	61%	25%	14%
+	201701	1,277 	82%	5%	13%	8,091 	53%	34%	13%	9,368 	57%	30%	13%
 
 ----------------------------------------------------------------------------------------------
+Correlation: 	
+		PDP	GDP	UER
+		CO	1%	12%
+		DRP	-25%	9%
+
+----------------------------------------------------------------------------------------------
+Recovery:
+
+	DRP:
+		 - Over the time ~60% recovery has been observed. 
+		 - Recovery for 2014 is low due to sudden jump in the outstanding at default( shown in chart 2). 
+		 - Also 200801 is an exceptional year where there is a spike in recovery at the very first month
+
+	CO:
+		- A recovery of ~35% has been observed over 71 months.
+		- The difference between before and after 2012 can observed due to DEBT sells.
+----------------------------------------------------------------------------------------------
+LGD Model:
+
+	- DRP is not considered as existing defaults as it is a part of IFRS9 PL model. 
+	- GD for cure rate is assumed to be zero.
+	- Final LGD Equations are Flow Rate adjusted
+
+	Default type		PDP		Flow rates	Final LGD Equation	
+
+	Non-defaults		Cure		13.84%		0%	
+				Charge-off	57.93%		0.419667 + 0.142689 * EIR	
+				DRP		28.18%		0.165099 + 0.146444 * EIR
+
+	DRP			-		-		Separate model
+
+	Non DRP defaults	Cure		16.95%		0%	
+				Charge-off	79.60%		0.576642 + 0.196061 * EIR	
+
+----------------------------------------------------------------------------------------------
+
 
 
 
