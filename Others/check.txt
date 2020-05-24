@@ -5,10 +5,10 @@ LGD:
 - Default Definition		Charge off, DRP and 90+ DPD	
 - Exclusions:
 
-    1. Observation Charge-Off ( Business exclusion, provisioning has been already done)	
-		2. Observation DRP ( Part of PL)	
-		3. Low balance Default (< 500 MYR)	
-		4. Deceased customer 	
-		5. Fraud	
-		6. Lost Stolen 	
+    	1. Observation Charge-Off ( Business exclusion, provisioning has been already done)	
+	2. Observation DRP ( Part of PL)	
+	3. Low balance Default (< 500 MYR)	
+	4. Deceased customer 	
+	5. Fraud	
+	6. Lost Stolen 	
 
