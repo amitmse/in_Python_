@@ -11,10 +11,18 @@
         Quiver plots
         Spectrograms
 
+https://www.analyticsvidhya.com/blog/2020/02/beginner-guide-matplotlib-data-visualization-exploration-python/
+
+https://www.analyticsvidhya.com/blog/2020/05/10-matplotlib-tricks-data-visualization-python/
+
 ## Seaborn
 
     Built on top of Matplotlib
+  
+https://www.analyticsvidhya.com/blog/2019/09/comprehensive-data-visualization-guide-seaborn-python/
 
+https://www.analyticsvidhya.com/blog/2020/03/6-data-visualization-python-libraries/
+  
 ## ggplot
 
     Ggplot is a Python visualization library based on R’s ggplot2 and the Grammar of Graphics.
@@ -37,7 +45,9 @@
 
 ## Altair
 
-
+    Focus on visualization and not on coding. 
+      
+https://www.analyticsvidhya.com/blog/2017/12/introduction-to-altair-a-declarative-visualization-in-python/
 
 ## Gleam
 
