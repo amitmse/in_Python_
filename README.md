@@ -48,8 +48,17 @@
 
 #########################################################################################
 
-Plot
-Pyspark
-Pytorch
-Tensorflow
+- Plot
+- Pyspark
+- Pytorch
+- Tensorflow
+
+https://courses.analyticsvidhya.com/courses/naive-bayes/?utm_source=KJLinkedin.com&utm_medium=post&utm_campaign=all_free_courses
+
+https://courses.analyticsvidhya.com/courses/getting-started-with-decision-trees/?utm_source=KJLinkedin.com&utm_medium=post&utm_campaign=all_free_courses
+
+https://courses.analyticsvidhya.com/courses/getting-started-with-neural-networks/?utm_source=KJLinkedin.com&utm_medium=post&utm_campaign=all_free_courses
+
+
+
 
