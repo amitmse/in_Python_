@@ -11,6 +11,10 @@
         Quiver plots
         Spectrograms
 
+https://matplotlib.org/tutorials/introductory/pyplot.html
+
+https://www.geeksforgeeks.org/graph-plotting-in-python-set-1/
+
 https://www.analyticsvidhya.com/blog/2020/02/beginner-guide-matplotlib-data-visualization-exploration-python/
 
 https://www.analyticsvidhya.com/blog/2020/05/10-matplotlib-tricks-data-visualization-python/
