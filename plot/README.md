@@ -11,6 +11,8 @@
         Quiver plots
         Spectrograms
 
+https://matplotlib.org/3.1.0/tutorials/introductory/sample_plots.html
+
 https://matplotlib.org/tutorials/introductory/pyplot.html
 
 https://www.geeksforgeeks.org/graph-plotting-in-python-set-1/
