@@ -136,6 +136,12 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 
 # Feature importance
 
+	Variable importance is calculated by the sum of the decrease in error when split by a variable. 
+	Then, the relative importance is the variable importance divided by the highest variable importance 
+	value so that values are bounded between 0 and 1.
+	
+https://docs.h2o.ai/h2o/latest-stable/h2o-docs/variable-importance.html
+
 ## Mean Decrease in Accuracy (MDA) / Accuracy-based importance / Permutation Importance:
 
 	the values of the variable in the out-of-bag-sample are randomly shuffled, keeping all other 
