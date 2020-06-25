@@ -184,6 +184,9 @@
 	it is not generalized. Over fitting can be removed by pruning the nodes.
 
 ## Type I / II Error
+
+![Function](https://github.com/amitmse/in_Python_/blob/master/Formula/Confusion%20Matrxi.jpg)
+
 	True Positives 	(TP) = Correctly Identified
 	True Negatives 	(TN) = Correctly Rejected
 	False Positives	(FP) = Incorrectly Identified 	= Type I Error
