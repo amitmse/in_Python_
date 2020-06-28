@@ -560,3 +560,5 @@ https://courses.analyticsvidhya.com/courses/take/introduction-to-pytorch-for-dee
 - Keras
 - NLTK
 - Scikit-Neural Network
+
+https://deep-learning-drizzle.github.io/index.html
