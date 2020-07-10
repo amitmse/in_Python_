@@ -64,5 +64,5 @@ https://courses.analyticsvidhya.com/courses/getting-started-with-decision-trees/
 https://courses.analyticsvidhya.com/courses/getting-started-with-neural-networks/?utm_source=KJLinkedin.com&utm_medium=post&utm_campaign=all_free_courses
 
 
-
+https://course.fullstackdeeplearning.com/
 
