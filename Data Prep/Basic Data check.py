@@ -154,7 +154,8 @@ import pandasql as ps
 # Missing count by row
 	df.apply(lambda x: sum(x.isnull().values), axis = 1)
 # Fill Missing		
-	df3['float_col'].fillna(mean)
+	df = df.fillna(0)		# all columns
+	df['float_col'].fillna(mean)	# one column
 # Drop Missing		
 	df.dropna()
 # subset data without missing
