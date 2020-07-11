@@ -184,8 +184,8 @@ import pandasql as ps
 	event_dictionary ={'Music' : 1500, 'Poetry' : 800, 'Comedy' : 1200} 
 	df['Price'] = df['Event'].map(event_dictionary)
 	
-# variable category
-	def ff(row):
+# variable category: similar example [var_type(input)]
+	def ff(row):			# 'c' : refers to column name which is used in the condition
 	  if row['c'] > 339: 
 		val = 0
 	  elif row['c'] in [999,888]: 
@@ -193,7 +193,7 @@ import pandasql as ps
 	  else: 
 		val = -1
 	  return val
-	a['hh'] = a.apply(ff, axis=1)
+	a['hh'] = a.apply(ff, axis=1)	#no need to change anything except 'c' in the function
 
 # Generate sequence number from Index
 	df['flag']=df.index
