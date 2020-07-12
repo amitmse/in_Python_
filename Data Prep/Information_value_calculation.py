@@ -1,3 +1,6 @@
+
+#https://towardsdatascience.com/a-data-scientists-toolkit-to-encode-categorical-variables-to-numeric-d17ad9fae03f
+    
 from __future__ import print_function
 import subprocess
 import sys
