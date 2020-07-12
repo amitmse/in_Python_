@@ -470,6 +470,34 @@ def PSI(development_data=None , validation_data=None, score_variable=None, numbe
 dev=PSI(development_data=df , validation_data=df1, score_variable='final_score', number_of_bins=10 )
 
 ### Label encoder ##########################################################################################
+def convert_string_to_number(input_data=None):
+    string_var_list=[]
+    numeric_var_list=[]
+    for i in list(input_data.columns):
+        if input_data[i].dtype == 'object':
+            string_var_list.append(i)
+        else:
+            numeric_var_list.append(i)
+
+    if len(string_var_list)  > 0 : 
+        df_string = input_data[string_var_list]
+        print ("string_var_list", string_var_list)
+    
+    df_string_to_num = df_string[:]
+    
+    string_to_number_mapping = {}
+    
+    for feat in string_var_list:
+        df_string_to_num[feat] = LabelEncoder().fit_transform(df_string_to_num[feat].astype(str))
+        
+        key_val = pd.concat([df_string.loc[:, feat].rename("key", inplace=True), df_string_to_num.loc[:, feat].rename("val", inplace=True)], axis=1).drop_duplicates()
+        string_to_number_mapping[feat] = dict(zip(key_val.key, key_val.val))
+        del key_val
+    #df_string_to_num = pd.concat([df_string_to_num, df_string], axis=1)
+    return df_string_to_num, string_to_number_mapping
+    #####################################
+df_string_to_num, string_to_number_mapping = convert_string_to_number(input_data=input_data)
+#############################################################################################
 
 
 
