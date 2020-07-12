@@ -195,6 +195,20 @@ import pandasql as ps
 	  return val
 	a['hh'] = a.apply(ff, axis=1)	#no need to change anything except 'c' in the function
 
+# Dummary variable
+	embarked_dummies = pd.get_dummies(df['Emailpermissionstatus'])
+	##########Combine with original data
+	pd.concat([df, embarked_dummies], axis=1)
+	######## Create Binary###################
+	cols = ['Prod.Buy.Last','Prod.Buy.First']
+	test = df[cols].isnull().astype(int)
+	######## Binary for Non-missing ###############################
+	df['missing'] = np.where(df['Email.Src.First'].isnull(), 0, 1)
+	########### AND / OR ##########################################
+	df['and'] = np.where(((df['Email.Src.First'].isnull()) | (df['Prod.Buy.Last'].isnull())), 0, 1)
+	df['or'] = np.where(((df['Email.Src.First'].isnull()) & (df['Prod.Buy.Last'].isnull())), 0, 1)
+	df['points'] = np.where( ( (df['gender'] == 'male') & (df['pet1'] == df['pet2'] ) ) | ( (df['gender'] == 'female') & (df['pet1'].isin(['cat','dog'] ) ) ), 1, 0)
+
 # Generate sequence number from Index
 	df['flag']=df.index
 	
