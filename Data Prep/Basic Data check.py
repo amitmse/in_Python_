@@ -469,7 +469,8 @@ def PSI(development_data=None , validation_data=None, score_variable=None, numbe
 
 dev=PSI(development_data=df , validation_data=df1, score_variable='final_score', number_of_bins=10 )
 
-###  ##########################################################################################
+### Label encoder ##########################################################################################
+
 
 
 # Another way to define argument in function
