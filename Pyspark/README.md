@@ -29,12 +29,11 @@
       -
 
 
-Sample : https://github.com/amitmse/in_Python_/blob/master/Pyspark/Try_Pyspark.py
+Sample Code : https://github.com/amitmse/in_Python_/blob/master/Pyspark/Try_Pyspark.py
 
+Cheat Sheet : https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf
 
-https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf
-
-https://www.guru99.com/pyspark-tutorial.html
+Tutorial    : https://www.guru99.com/pyspark-tutorial.html
 
 http://spark.apache.org/docs/latest/api/python/
 
