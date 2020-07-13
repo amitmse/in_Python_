@@ -111,10 +111,15 @@ import pandasql as ps
 
 # Freq
 	# Single
-		df['Sex'].value_counts() 
 		df.groupby('Sex').size()
+		df['Sex'].value_counts() 
+		
 	# Cross Freq
-		a.groupby(['time_period', 'hh']).hh.count().unstack().fillna(0)
+		df.groupby(["Group", "Size"]).size()
+		df.groupby(["Group", "Size"]).size().reset_index(name="Time")
+		pd.crosstab(df.Group,df.Size)
+		pd.crosstab(df.Group,df.Size).replace(0,np.nan).\stack().reset_index().rename(columns={0:'Time'})
+		df.groupby(['time_period', 'hh']).hh.count().unstack().fillna(0)
 
 # Mean
 	# single variable
