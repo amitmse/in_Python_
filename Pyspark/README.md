@@ -35,8 +35,6 @@ Cheat Sheet : https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_C
 
 Tutorial    : https://www.guru99.com/pyspark-tutorial.html
 
-http://spark.apache.org/docs/latest/api/python/
+Spark site  : http://spark.apache.org/docs/latest/api/python/
 
-https://towardsdatascience.com/a-neanderthals-guide-to-apache-spark-in-python-9ef1f156d427
-
-https://www.kaggle.com/amitmse/pyspark/edit?rvi=1
+Kaggle      : https://www.kaggle.com/amitmse/pyspark/edit?rvi=1
