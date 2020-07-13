@@ -562,3 +562,4 @@ https://courses.analyticsvidhya.com/courses/take/introduction-to-pytorch-for-dee
 - Scikit-Neural Network
 
 https://deep-learning-drizzle.github.io/index.html
+https://github.com/ritchieng/the-incredible-pytorch
