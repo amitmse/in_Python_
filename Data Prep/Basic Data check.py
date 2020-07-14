@@ -178,6 +178,8 @@ import pandasql as ps
 ######### Create/Drop variable ###################################################
 # Drop a column		
 	input_data=input_data.drop('reservation',1)
+# Select column
+	df.loc[:, ['City', 'State']]
 
 # Create new variable
 	a['c'] = a.apply(lambda row: row.stand_factor_value + row.Factor_Value, axis=1)
@@ -229,7 +231,8 @@ df.head()
 ######## Subset data ###############################################################
 #Filter column		
 	df.loc[:, 'City']				# .loc is to access row and column together		
-	df.loc[:, ['City', 'State']]
+	df.loc[:, ['City', 'State']]	
+	df=df.drop('reservation',1)
 # Few row and columns
 	a=df.loc[0:5,['time_period','stand_factor_value']]	 
 	b=df.loc[0:5,['time_period','Factor_Value']]
