@@ -1,29 +1,5 @@
 
 ## Matplotlib
-  
-    Matplotlob is the first Python data visualization library. Visualization types:
-        Scatter plots
-        Bar charts and Histograms
-        Line plots
-        Pie charts
-        Stem plots
-        Contour plots
-        Quiver plots
-        Spectrograms
-
-https://matplotlib.org/3.1.0/tutorials/introductory/sample_plots.html
-
-https://matplotlib.org/tutorials/introductory/pyplot.html
-
-https://www.geeksforgeeks.org/graph-plotting-in-python-set-1/
-
-https://scipy-lectures.org/intro/matplotlib/index.html
-
-
-https://www.analyticsvidhya.com/blog/2020/02/beginner-guide-matplotlib-data-visualization-exploration-python/
-
-https://www.analyticsvidhya.com/blog/2020/05/10-matplotlib-tricks-data-visualization-python/
-
 ## Seaborn
 
     Built on top of Matplotlib
