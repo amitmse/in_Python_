@@ -1,13 +1,6 @@
 
 ## Matplotlib
-## Seaborn
-
-    Built on top of Matplotlib
-  
-https://www.analyticsvidhya.com/blog/2019/09/comprehensive-data-visualization-guide-seaborn-python/
-
-https://www.analyticsvidhya.com/blog/2020/03/6-data-visualization-python-libraries/
-  
+## Seaborn 
 ## ggplot
 
     Ggplot is a Python visualization library based on R’s ggplot2 and the Grammar of Graphics.
