@@ -1,7 +1,7 @@
 
 ## Matplotlib
 ## Seaborn 
-## ggplot
+## Plotnine / ggplot
 
     Ggplot is a Python visualization library based on R’s ggplot2 and the Grammar of Graphics.
 
