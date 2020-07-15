@@ -24,6 +24,10 @@ Add formula:
 
 10. Type of data / Distribution / Test : https://github.com/amitmse/in_Python_/blob/master/Others/Basic_Statistics.txt
 
+11. Pyspark : https://github.com/amitmse/in_Python_/tree/master/Pyspark
+
+12. Plot / Chart : https://github.com/amitmse/in_Python_/tree/master/plot
+
 #########################################################################################
 
 # Python Object Oriented Programming (OOP)
