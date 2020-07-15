@@ -31,7 +31,7 @@ df = input_data[:]
 
 df.head()
 
-#####################################################################
+############################################################################################################
 ###### matplotlib ####################################
 X_axis='home_ownership'
 Y_axis='recoveries'
@@ -51,6 +51,20 @@ plt.plot(df[X_axis],df[Y_axis])
 plt.scatter(df[X_axis],df[Y_axis])
 plt.hist(df[Y_axis])
 plt.pie(df[Y_axis])
-########################################################
+###############################################################################################################
+######### Seaborn #####################################
+#X_axis='home_ownership'
+X_axis='annual_inc'
+Y_axis='recoveries'
 
-
+sns.barplot(x=X_axis, y=Y_axis, data = df)                        # Bar plot
+sns.pointplot(x=X_axis, y=Y_axis, data = df)                      # Line with dot
+sns.relplot(x=X_axis, y=Y_axis, data = df)                        # scatter plot
+sns.distplot(df[Y_axis], kde=False, rug = True)                   # Histograms 
+sns.countplot(x=X_axis, data = df)                                # Bar chart. Show the counts of observations in each categorical bin.
+sns.jointplot(x=X_axis, y=Y_axis, data = df)                      # bivariate and univariate graphs
+sns.catplot(x=X_axis, y=Y_axis, data = df)                        # scatterplots (Categorical)
+sns.regplot(x=X_axis, y=Y_axis, data = df)                        # linear regression model fit
+sns.lmplot(x=X_axis, y=Y_axis, data = df)                         # Combination of regplot & FacetGrid. 
+sns.residplot(x=X_axis, y=Y_axis, data=df);                       # Residual values
+############################################################################################################
