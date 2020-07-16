@@ -2,9 +2,6 @@
 ## Matplotlib
 ## Seaborn 
 ## Plotnine / ggplot
-
-    Ggplot is a Python visualization library based on R’s ggplot2 and the Grammar of Graphics.
-
 ## Bokeh
 
     Bokeh, native to Python is also based on The Grammar of Graphics like ggplot. 
