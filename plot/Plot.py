@@ -74,3 +74,31 @@ sns.regplot(x=X_axis, y=Y_axis, data = df)                        # linear regre
 sns.lmplot(x=X_axis, y=Y_axis, data = df)                         # Combination of regplot & FacetGrid. 
 sns.residplot(x=X_axis, y=Y_axis, data=df);                       # Residual values
 ############################################################################################################
+######### ggplot ###########################################
+X_axis='annual_inc'
+Y_axis='recoveries'
+##################
+X_axis_cat_1='home_ownership'
+X_axis_cat_2='income_category'
+##################
+#https://medium.com/@gscheithauer/data-visualization-in-python-like-in-rs-ggplot2-bc62f8debbf5
+##################
+
+#ggplot(df, aes(x=X_axis , y=Y_axis )) + geom_point()                               # Scatter
+#ggplot(df, aes(x=X_axis_cat_1)) + geom_bar()                                       # Bar
+#ggplot(df, aes(x=X_axis_cat_1)) + geom_bar() + coord_flip()                        # Bar: Flip
+#ggplot(df, aes(x=X_axis_cat_1)) + geom_bar(stat = 'count')                         # Bar: Count
+#ggplot(df, aes(x=X_axis_cat_1, fill = X_axis_cat_2)) + geom_bar(stat = 'count')    # Bar: Stack with count
+#ggplot(df, aes(x=X_axis , y=Y_axis )) + geom_line()                                # Line
+#ggplot(df, aes(x=X_axis )) + geom_histogram()                                      # Histogram
+############################################################################################################
+
+############################################################################################################
+
+############################################################################################################
+
+############################################################################################################
+
+############################################################################################################
+
+############################################################################################################
