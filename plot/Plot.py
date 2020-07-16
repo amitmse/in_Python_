@@ -1,3 +1,4 @@
+##########################################
 from __future__ import print_function
 import subprocess
 import sys
@@ -16,12 +17,12 @@ import matplotlib.pyplot as plt
 ##########################################
 import seaborn as sns
 ##########################################
-
+from plotnine import *
 ##########################################
 
 ##########################################
 plt.style.use('seaborn')
-
+##########################################
 
 #os.chdir(r"C:\Users\AMIT\Google Drive\Study\ML\07.Boosting")
 #input_data = pd.read_csv('Dev1_Hilton_Model_Data.csv')
@@ -29,12 +30,11 @@ plt.style.use('seaborn')
 #df['target'] = np.where(df['reservation']>0, 'Yes', 'No')
 #df = df.set_index('target')
 #df.head()
-
+##########################################
 
 os.chdir(r"C:\Users\AMIT\Google Drive\Study\ML\06.Random_Forest")
 input_data = pd.read_csv('IV_Data.csv')
 df = input_data[:]
-
 df.head()
 
 ############################################################################################################
