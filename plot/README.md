@@ -4,9 +4,8 @@
 ## Plotnine / ggplot
 ## Bokeh
 
-    Bokeh, native to Python is also based on The Grammar of Graphics like ggplot. 
+
     It also supports streaming, and real-time data.
-    Bokeh has three interfaces with varying degrees of control to accommodate different types of users.
     
     
 ## Plotly
