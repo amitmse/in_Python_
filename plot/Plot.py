@@ -195,7 +195,9 @@ slider.js_on_change('value', update_curve)
 
 show(column(slider, plot))
 
-#https://s3.amazonaws.com/assets.datacamp.com/production/course_2244/slides/ch4_slides.pdf
+# Slider : https://s3.amazonaws.com/assets.datacamp.com/production/course_2244/slides/ch4_slides.pdf
+# Real Time: https://stackoverflow.com/questions/37724660/streaming-two-line-graphs-using-bokeh
+
 ############################################################################################################
 
 ############################################################################################################
