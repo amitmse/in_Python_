@@ -3,11 +3,6 @@
 ## Seaborn 
 ## Plotnine / ggplot
 ## Bokeh
-
-
-    It also supports streaming, and real-time data.
-    
-    
 ## Plotly
 
     Like Bokeh, Plotly’s strength lies in making interactive plots
