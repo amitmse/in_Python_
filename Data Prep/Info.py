@@ -909,7 +909,30 @@ for dirnames,folders,files in os.walk('Copy'):
     for file in files:
         zf.write(os.path.join('Copy',file))		
 zf.close()
+#---------------------zip all files 
+import os
+import sys
+import zipfile
 
+source_dir = r'C:\Users\AMIT\Downloads'  
+dest_dir = r'C:\Users\AMIT\Downloads'
+os.chdir(dest_dir)
+
+def csv_files(source_dir):
+    for filename in os.listdir(source_dir):
+        if filename.endswith('.sas7bdat'):
+            yield filename
+            #print (filename)
+        
+#csv_files(r'C:\Users\AMIT\Downloads')
+        
+for csv_filename in csv_files(source_dir):
+    file_root = os.path.splitext(csv_filename)[0]
+    zip_file_name = file_root + '.zip'
+    zip_file_path = os.path.join(dest_dir, zip_file_name)
+    with zipfile.ZipFile(zip_file_path, mode='w') as zf:
+        zf.write(csv_filename, compress_type=zipfile.ZIP_DEFLATED)		       
+		       
 #-----------Unzip a file
 import zipfile
 zip_ref = zipfile.ZipFile(r'C:\Users\AMIT\Desktop\New folder\201405.zip', 'r')
