@@ -932,8 +932,37 @@ for csv_filename in csv_files(source_dir):
     zip_file_path = os.path.join(dest_dir, zip_file_name)
     with zipfile.ZipFile(zip_file_path, mode='w') as zf:
         zf.write(csv_filename, compress_type=zipfile.ZIP_DEFLATED)		       
+		  
 		       
-#-----------Unzip a file
+#-----------------Zip individual file. Folder and sub-folders
+# https://stackoverflow.com/questions/43881491/how-to-recursively-zip-multiple-folders-as-individual-zip-files
+
+import os
+import zipfile
+
+start_path = r'C:\Users\1567478\MyData\05.MY CC IFRS9\test'
+file_type = ".sas7bdat"
+
+def zipdir(start_path):
+    dir_count = 0
+    file_count = 0
+    for (path,dirs,files) in os.walk(start_path):
+        print('Directory: {:s}'.format(path))
+        dir_count += 1
+        for file in files:
+            if file.endswith(file_type): 
+                file_path = os.path.join(path, file)
+                print('\nAttempting to zip: \'{}\''.format(file_path))
+                with zipfile.ZipFile(file_path + '.zip', 'w', zipfile.ZIP_DEFLATED) as ziph:
+                    ziph.write(file_path, file)
+                print('Done')
+                file_count += 1
+
+    print('\nProcessed {} files in {} directories.'.format(file_count,dir_count))
+
+if __name__ == '__main__':
+    zipdir(start_path)		       	       
+#---------------------------------Unzip a file
 import zipfile
 zip_ref = zipfile.ZipFile(r'C:\Users\AMIT\Desktop\New folder\201405.zip', 'r')
 zip_ref.extractall(r'C:\Users\AMIT\Desktop\New folder')
