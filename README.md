@@ -67,3 +67,4 @@ https://courses.analyticsvidhya.com/courses/getting-started-with-neural-networks
 
 https://course.fullstackdeeplearning.com/
 
+https://application.univ.ai/applications?program=Univ.AI%20100:%20Basics%20of%20ML%20&%20AI&cohort=15%20September%202020
