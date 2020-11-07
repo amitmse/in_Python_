@@ -29,3 +29,5 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Monotonic_Binning.
 https://www.analyticsvidhya.com/blog/2015/08/interactive-data-visualization-library-python-bokeh/
 
 https://www.geeksforgeeks.org/decorators-in-python/
+
+https://open.oregonstate.edu/courses/permaculture/
