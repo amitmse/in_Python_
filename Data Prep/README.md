@@ -38,4 +38,5 @@ https://horticulture.oregonstate.edu/users/andrew-millison
 
 https://workspace.oregonstate.edu/course/permaculture-design-certificate-online?hsLang=en
 
+https://permaculture.vipmembervault.com/products/units/view/1056860/?lesson=1128419
 
