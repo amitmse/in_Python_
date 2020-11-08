@@ -30,4 +30,12 @@ https://www.analyticsvidhya.com/blog/2015/08/interactive-data-visualization-libr
 
 https://www.geeksforgeeks.org/decorators-in-python/
 
+------------------------------------------------------------
+
 https://open.oregonstate.edu/courses/permaculture/
+
+https://horticulture.oregonstate.edu/users/andrew-millison
+
+https://workspace.oregonstate.edu/course/permaculture-design-certificate-online?hsLang=en
+
+
