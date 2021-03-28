@@ -2,7 +2,7 @@ Add formula:
 
 # Hands on Machine Learning with PYTHON (2.7)
 
-###########################################################################################
+######################################################################################
 
 01. Data Preparation : https://github.com/amitmse/in_Python_/tree/master/Data%20Prep
 
@@ -28,7 +28,7 @@ Add formula:
 
 12. Plot / Chart : https://github.com/amitmse/in_Python_/tree/master/plot
 
-#########################################################################################
+#####################################################################################
 
 # Python Object Oriented Programming (OOP)
 
@@ -52,7 +52,7 @@ Add formula:
                   It allows objects and methods to deal with multiple different situations with a single interface. 
                   Polymorphism is a result of inheritance.
 
-#########################################################################################
+####################################################################################
 
 To do list:
 - Pytorch
