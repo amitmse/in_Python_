@@ -53,18 +53,3 @@ Add formula:
                   Polymorphism is a result of inheritance.
 
 ####################################################################################
-
-To do list:
-- Pytorch
-- Tensorflow
-
-https://courses.analyticsvidhya.com/courses/naive-bayes/?utm_source=KJLinkedin.com&utm_medium=post&utm_campaign=all_free_courses
-
-https://courses.analyticsvidhya.com/courses/getting-started-with-decision-trees/?utm_source=KJLinkedin.com&utm_medium=post&utm_campaign=all_free_courses
-
-https://courses.analyticsvidhya.com/courses/getting-started-with-neural-networks/?utm_source=KJLinkedin.com&utm_medium=post&utm_campaign=all_free_courses
-
-
-https://course.fullstackdeeplearning.com/
-
-https://application.univ.ai/applications?program=Univ.AI%20100:%20Basics%20of%20ML%20&%20AI&cohort=15%20September%202020
