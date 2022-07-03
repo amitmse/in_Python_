@@ -3,26 +3,24 @@
 		Example	: 	colour,gender. 
 		check	: 	frequency each category. 
 		Test	: 	Comparison/Difference: 
-					Test for proportion (for one categorical variable)
-					Difference of two proportions
-					Chi-Square test for independence (for two categorical variables)
-				Relationship:
-					Chi-Square test for independence
+					- Test for proportion (for one categorical variable)
+					- Difference of two proportions
+					- Chi-Square test for independence (for two categorical variables)
+		Relationship:	Chi-Square test for independence
 	
-	Ordinal : Similar as Nominal
+## Ordinal : Similar as Nominal
 		Example	:	rank, satisfaction.  
 		Check	: 	frequency or mean (special case). 
 		Test	:	Similar as Nominal
 		
-	Interval / Ratio / quantitative/continuous  : 
+## Interval / Ratio / quantitative/continuous  : 
 		Example	:	number of customers, income,age. 
 		Check	: 	Mean ..
 		Test	:	Comparison/Difference:
-					Test for a mean / T test (for one continuous variable)
-					Difference of two means (independent samples)
-					Difference of two means(paired T test. Pre and Post scenario)
-				Relationship:
-					Regression Analysis / Correlation (for two continuous variables/for relationship)
+					- Test for a mean / T test (for one continuous variable)
+					- Difference of two means (independent samples)
+					- Difference of two means(paired T test. Pre and Post scenario)
+		Relationship:	Regression Analysis / Correlation (for two continuous variables/for relationship)
 					
 	One categorical and one continuous: T test (Anova when more than 2 category)
 	https://www.youtube.com/watch?v=tfiDu--7Gmg
