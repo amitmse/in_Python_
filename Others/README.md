@@ -346,15 +346,15 @@ Finds parameter values that minimizing the error.
 - BIC		= {No of variable*log(No of obs)}  - (2*-Log Likelihood)
 - VIF 		= 1.0 / (1.0 - R Squared)
 - Gini/Somer’s D = [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
-- Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]	
-		     [meanG = mean of score only for good, varB= variance of score only for bad ]
+- Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]
+		  
+		  [meanG = mean of score only for good, varB= variance of score only for bad ]
 - Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied		
 	The ROC curve is a graphical plot that illustrates the performance of any binary classifier 
 	system as its discrimination threshold is varied. True positive rate (Sensitivity : Y axis ) 
 	is plotted in function of the false positive rate (100-Specificity : X axis) for different 
 	cut-off points. Each point on the ROC curve represents a sensitivity/specificity pair 
 	corresponding to a particular decision threshold.
-
 - Standard Error Coef: 
 	Linear regression standard error of Coef : SE  = sqrt [ S(yi - yi)2 / (n - 2) ] / sqrt [ S(xi - x)2 ]
 	The standard error of the coefficient estimates the variability between coefficient estimates 
@@ -363,18 +363,15 @@ Finds parameter values that minimizing the error.
 	the same if you sampled again and again. Use the standard error of the coefficient to measure 
 	the precision of the estimate of the coefficient. 
 	The smaller the standard error, the more precise the estimate.
-	
 - Recall and Precision:
 	Recall is the fraction of instances that have been classified as true. On the contrary, 
 	precision is a measure of weighing instances that are actually true. 
 	While recall is an approximation, precision is a true value that represents factual knowledge.
-
 - ROC curve:
 	Receiver Operating Characteristic is a measurement of the True Positive Rate (TPR) against False 
 	Positive Rate (FPR). We calculate True Positive (TP) as TPR = TP/ (TP + FN). On the contrary, 
 	false positive rate is determined as FPR = FP/FP+TN where where TP = true positive, TN = true negative, 
 	FP = false positive, FN = false negative.
-
 - AUC vs ROC:
 	AUC curve is a measurement of precision against the recall. Precision = TP/(TP + FP) and TP/(TP + FN).
 	This is in contrast with ROC that measures and plots True Positive against False positive rate.
