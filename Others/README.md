@@ -1,5 +1,5 @@
 # Type of data:
-	## Nominal / categorical/qualitative /non-parametric:  
+## Nominal / categorical/qualitative /non-parametric:  
 		Example	: 	colour,gender. 
 		check	: 	frequency each category. 
 		Test	: 	Comparison/Difference: 
