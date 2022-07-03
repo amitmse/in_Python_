@@ -1,5 +1,5 @@
 # Type of data:
-## Nominal / categorical/qualitative /non-parametric:  
+### Nominal / categorical/qualitative /non-parametric:  
 		Example	: 	colour,gender. 
 		check	: 	frequency each category. 
 		Test	: 	Comparison/Difference: 
@@ -9,13 +9,13 @@
 		Relationship:	Chi-Square test for independence
 	
 	
-## Ordinal : Similar as Nominal
+### Ordinal : Similar as Nominal
 		Example	:	rank, satisfaction.  
 		Check	: 	frequency or mean (special case). 
 		Test	:	Similar as Nominal
 		
 		
-## Interval / Ratio / quantitative/continuous  : 
+### Interval / Ratio / quantitative/continuous  : 
 		Example	:	number of customers, income,age. 
 		Check	: 	Mean ..
 		Test	:	Comparison/Difference:
@@ -24,7 +24,10 @@
 					- Difference of two means(paired T test. Pre and Post scenario)
 		Relationship:	Regression Analysis / Correlation (for two continuous variables/for relationship)
 			
-			
+		
+### Imbalanced data
+- Imbalanced data refers to those types of datasets where the target class has an uneven distribution of observations, i.e one class label has a very high number of observations and the other has a very low number of observations (rare event i.e., Fraud)
+
 #### One categorical and one continuous: T test (Anova when more than 2 category)
 	https://www.youtube.com/watch?v=tfiDu--7Gmg
 	
