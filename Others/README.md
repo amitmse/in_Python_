@@ -35,12 +35,12 @@
 - A statistical model is a set of probability distributions. We assume that the observations are generated 
   from one of these distributions.
 - Chart: Horizontal axis set of possible numeric outcomes. Vertical axis probability of outcomes.
-Example: 
-		- Flipping a fair coin has two outcomes: it lands heads or tails. 
-		  Before the flip, we believe there’s a 0.5 probability, of heads and same for tails. 
-		  That’s a probability distribution over the two outcomes of the flip (Bernoulli distribution).
+- Example:
+	- Flipping a fair coin has two outcomes: it lands heads or tails. 
+	- Before the flip, we believe there’s a 0.5 probability, of heads and same for tails. 
+	- That’s a probability distribution over the two outcomes of the flip (Bernoulli distribution).
 	
-Bernoulli distribution:
+## Bernoulli distribution:
 	- Bernoulli distribution has only two possible outcomes i.e. success and failure in a single trial
 	- The Bernoulli PDF has two lines of equal height, representing the two equally-probable outcomes of 0 and 1 at either end.
 	- Bernoulli Distribution is a special case of Binomial Distribution with a single trial
@@ -48,11 +48,11 @@ Bernoulli distribution:
 		- PDF		: P^x*(1-P)^(1-x)       {x in 0 or 1}
 		- Mean  	: P
 		- Variance 	: P(1-P)
-	Example: 
+	- Example: 
 		- Flipping a fair coin
 		- it’s going to rain tomorrow or not
 	
-Uniform distribution:
+## Uniform distribution:
 	- Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
 	- It can be defined for any number of outcomes or even as a continuous distribution.
 	- Function
@@ -62,7 +62,7 @@ Uniform distribution:
 	Example: 
 		- Imagine rolling a fair die. The outcomes 1 to 6 are equally likely.
 
-Binomial distribution:
+## Binomial distribution:
 	- The binomial distribution may be thought of as the sum of outcomes of things that follow a Bernoulli distribution.
 	- Function
 		- PDF		: [n!/(n-x)!*x!] * [P^x*(Q)^(n-x)]	{! factorial}
@@ -78,7 +78,7 @@ Binomial distribution:
 		  then put it back and Repeat this process. How many times black ball was drawn? 
 		  This count also follows a binomial distribution.
 		
-Hyper-Geometric distribution:
+## Hyper-Geometric distribution:
 	Example: 
 		- This is the distribution of that same count if the balls were drawn without replacement instead. 
 		  Undeniably it’s a cousin to the binomial distribution, but not the same, because the probability 
@@ -86,7 +86,7 @@ Hyper-Geometric distribution:
 		- If the number of balls is large relative to the number of draws, the distributions are similar
 		  because the chance of success changes less with each draw.
 	
-Poisson distribution:
+## Poisson distribution:
 	- Simialr to the binomial distribution, the Poisson distribution is the distribution of a 
 	  count - the count of times something happened. 
 	- The Poisson distribution is when trying to count events over a time given the continuous rate of events occurring
@@ -105,18 +105,18 @@ Poisson distribution:
 		- The number of printing errors at each page of the book.
 		- The number of incoming calls at a call center in a day.
 	
-Geometric distribution:
+## Geometric distribution:
 	- If the binomial distribution is “How many successes?” then the geometric distribution is
 	  “How many failures until a success?”
 	Example:
 		- From simple Bernoulli trials arises another distribution. How many times does a flipped coin 
 		  come up tails before it first comes up heads? This count of tails follows a geometric distribution.
 
-Negative Binomial distribution:
+## Negative Binomial distribution:
 	- It's a simple generalization. It’s the number of failures until r successes have occurred,not just 1.
 	Example: 
 	
-Exponential distribution:
+## Exponential distribution:
 	- The exponential distribution is one of the widely used continuous distributions. 
 	- It is often used to model the time elapsed between events.
 	- The exponential distribution should come to mind when thinking of "time until event", maybe "time until failure".
@@ -139,14 +139,14 @@ Exponential distribution:
 		- Age of plants or animals
 		- Very simple model used by insurance companies
 
-Weibull:
+## Weibull:
 	- Weibull distribution can model increasing (or decreasing) rates of failure over time. 
 	- The exponential is merely a special case.
 	- Commonly used to assess product reliability, analyze life data and model failure times
 	- Weibull isn’t an appropriate model for every situation i.e. chemical reactions and corrosion failures are 
 	  usually modeled with the lognormal distribution.
 
-Normal Distribution:
+## Normal Distribution:
 	- The sum of Bernoulli trials follows a binomial distribution, and as the number of trials increases, 
 	  that binomial distribution becomes more like the normal distribution. 
 	- Its cousin the hyper-geometric distribution does too. 
@@ -182,7 +182,7 @@ Normal Distribution:
 			- Mean  	: 0
 			- Variance 	: 1			  
 
-t /Student  Distribution:
+## t /Student  Distribution:
 	- The t test tells how significant the differences between groups are. A t-test is used to compare the mean of 
 	  two given samples.
 	- A t-test is used when the population mean and population standard deviation are unknown.
@@ -202,7 +202,7 @@ t /Student  Distribution:
 		- Paired sample t-test which compares means from the same group at different times. 
 		  Choose the paired t-test if you have two measurements on the same item, person or thing
 		  
-Chi-Squared Distribution :
+## Chi-Squared Distribution :
 	- Tests for the strength of the association between two categorical variables. Chi Square lets you know whether 
 	  two groups have significantly different opinions, which makes it a very useful statistic for survey research.
 	- Population mean is known and test the variance of normal distributed. chi squared distribution is the square 
@@ -222,10 +222,10 @@ Chi-Squared Distribution :
 		- Cochran–Mantel–Haenszel test for stratified contingency tables
 
 
-Likelihood-ratio :
+## Likelihood-ratio :
 	- This test assesses the goodness of fit of two competing statistical models based on the ratio of their likelihoods
 
-F-test:
+## F-test:
 	- F-test of equality of variances is a test for the null hypothesis that two normal populations have the same variance. 
 
 	- It is most often used when comparing statistical models that have been fitted to a data set, 
@@ -239,13 +239,13 @@ https://blog.cloudera.com/blog/2015/12/common-probability-distributions-the-data
 https://www.johndcook.com/blog/distribution_chart/
 https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 -----------------------------------------------------------------------------------------------------------------------------------
-Covariance:
+# Covariance:
 	- It refers to the measure of how two variables will change (directional relationship) when they are compared to each other
 	- It measures the Variance between two variables
 	- Covariance indicates the direction of the linear relationship between variables. Correlation on the other hand measures 
 	   both the strength and direction of the linear relationship between two variables. 
 
-Correlation vs Regression:
+## Correlation vs Regression:
 	- Correlation 
 		- It measures the degree of relationship between two variables. 
 		- correlation doesn’t capture causality.
@@ -255,11 +255,11 @@ Correlation vs Regression:
 		- Regression is based on causality (cause and effect).
 		- Regression of x and y, and y and x, yields completely different results.
 	
-ANOVA:
+# ANOVA:
 	Known as analysis of variance, is used to compare multiple (three or more) samples with a single test 
 	i.e. all sample means are equal
 	
-Ordinary Least Squares (OLS): 
+# Ordinary Least Squares (OLS): 
 	- Finds parameter values that minimizing the error. 
 	- Assumptions of Linear regression:
 		1. Linear in parameters 
@@ -300,30 +300,30 @@ Ordinary Least Squares (OLS):
 	- Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves 
 	  or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
-Maximum likelihood estimation (MLE):
+## Maximum likelihood estimation (MLE):
 	- Finds parameter values that maximize the likelihood of making the observations given the parameters
 	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
 	
-Logistic regression assumptions:
+# Logistic regression assumptions:
 	1. Dependent variable should be binary
 	2. Linearity between independent & log odds 
      	   (non-linear relationship between the dependent and independent variables)
 	3. Independence of errors
 	4. No perfect multicollinearity
 
-Model Metrics:
-	- beta(x) 		= covariance(x,y) / variance(x)
-	- correlation(x,y)	= covariance(x,y) / [variance(x)*variance(y)]
-	- TSS 			= SUM[y-mean(y)]^2
-	- RSS 			= SUM[y-predicted(y)]^2
-	- R Squared		= 1.0 - (RSS/TSS)
-	- AIC			= (No of variable*2)               - (2*-Log Likelihood)
-	- BIC			= {No of variable*log(No of obs)}  - (2*-Log Likelihood)
-	- VIF 			= 1.0 / (1.0 - R Squared)
-	- Gini/Somer’s D 	= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
-	- Divergence 		= [(meanG – meanB)^2] / [0.5(varG + varB)]	
-		     		  [meanG = mean of score only for good, varB= variance of score only for bad ]
-	- Area under curve 	= Percent Concordant + 0.5 * Percent Tied 	(Also refered as C statistics)
+# Model Metrics:
+- beta(x) 		= covariance(x,y) / variance(x)
+- correlation(x,y)	= covariance(x,y) / [variance(x)*variance(y)]
+- TSS 			= SUM[y-mean(y)]^2
+- RSS 			= SUM[y-predicted(y)]^2
+- R Squared		= 1.0 - (RSS/TSS)
+- AIC			= (No of variable*2)               - (2*-Log Likelihood)
+- BIC			= {No of variable*log(No of obs)}  - (2*-Log Likelihood)
+- VIF 			= 1.0 / (1.0 - R Squared)
+- Gini/Somer’s D 	= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+- Divergence 		= [(meanG – meanB)^2] / [0.5(varG + varB)]	
+	     		  [meanG = mean of score only for good, varB= variance of score only for bad ]
+- Area under curve 	= Percent Concordant + 0.5 * Percent Tied 	(Also refered as C statistics)
 
 -----------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------
