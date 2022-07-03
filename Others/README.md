@@ -551,17 +551,19 @@ Gini index says, if we select two items from a population at random then they mu
 	- Above, we can see that Gini score for Split on Gender is higher (0.59> 0.51) than Class so node will split on Gender
 
 4. Above is Gini and below is for Gini Index (1-gini)
-		https://github.com/amitmse/in_Python_/tree/master/Random_Forest
+
+	https://github.com/amitmse/in_Python_/tree/master/Random_Forest
+	
 	- Gini Index:
-	    for each branch in split:
-		Calculate percent branch represents #Used for weighting
-		for each class in branch:
-		    Calculate probability of class in the given branch.
-		    Square the class probability.
-		Sum the squared class probabilities.
-		Subtract the sum from 1. #This is the Ginin Index for branch
-	    Weight each branch based on the baseline probability.
-	    Sum the weighted gini index for each split.
+		- for each branch in split:
+			- Calculate percent branch represents #Used for weighting
+			- for each class in branch:
+		    		- Calculate probability of class in the given branch.
+		    		- Square the class probability.
+			- Sum the squared class probabilities.
+			- Subtract the sum from 1. #This is the Ginin Index for branch
+	    	- Weight each branch based on the baseline probability.
+	    	- Sum the weighted gini index for each split.
 
 ## Chi-Square:
 - It is an algorithm to find out the statistical significance between the differences between sub-nodes and parent node. We measures it by sum of squares of standardized differences between observed and expected frequencies of target variable.
@@ -584,18 +586,18 @@ Gini index says, if we select two items from a population at random then they mu
 		4. Calculate Chi-square of node for “Play Cricket” and “Not Play Cricket” using formula with formula, = ((Actual – Expected)^2 / Expected)^1/2.
 		5. Follow similar steps for calculating Chi-square value for Male node.			
 		6. Now add all Chi-square values to calculate Chi-square for split Gender.
-		       Play Cricket	 			PC
-		       Play not Cricket 			NPC 		
-		       Expected 	Play Cricket 		EPC	[Total*%oftarget ]
-		       Expected 	Play not Cricket	ENPC	[Total*%oftarget ]
-		       Deviatation 	Play Cricket		DPC	[PC - EPC]
-		       Deviatation 	NOT Play Cricket	DNPC	[NPC - ENPC]
-		       Chi-Square  	Play Cricket		CPC 	[(DPC^2)/EPC]^1/2
-		       Chi-Square  	Not Play Cricket	CNPC	[(DNPC^2)/ENPC]^1/2
+			- Play Cricket	 			PC
+			- Play not Cricket 			NPC 		
+			- Expected 	Play Cricket 		EPC	[Total*%oftarget ]
+			- Expected 	Play not Cricket	ENPC	[Total*%oftarget ]
+			- Deviatation 	Play Cricket		DPC	[PC - EPC]
+			- Deviatation 	NOT Play Cricket	DNPC	[NPC - ENPC]
+			- Chi-Square  	Play Cricket		CPC 	[(DPC^2)/EPC]^1/2
+			- Chi-Square  	Not Play Cricket	CNPC	[(DNPC^2)/ENPC]^1/2
 
 
-		TOTAL CHI-SQUARE for Gender = 1.34 + 1.34 + 0.95 + 0.95 = 4.58
-		TOTAL CHI-SQUARE for Class  = 0.38 + 0.38 + 0.35 + 0.35 = 1.46
+		7. TOTAL CHI-SQUARE for Gender = 1.34 + 1.34 + 0.95 + 0.95 = 4.58
+		8. TOTAL CHI-SQUARE for Class  = 0.38 + 0.38 + 0.35 + 0.35 = 1.46
 
 ## Information Gain
 - We can say that less impure node requires less information to describe it and more impure node requires more information. Information theory has a measure to define this degree of disorganization in a system, which is called Entropy. Lower Entropy is better. If the sample is completely homogeneous, then the entropy is zero and if the sample is an equally divided it has entropy of one. 
