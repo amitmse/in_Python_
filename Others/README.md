@@ -421,6 +421,14 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 	AUC curve is a measurement of precision against the recall. Precision = TP/(TP + FP) and TP/(TP + FN).
 	This is in contrast with ROC that measures and plots True Positive against False positive rate.
 
+- Feature importances: 
+	It is also known as the Gini importance. The importance of a feature is computed as the (normalized) total reduction of the criterion brought by that feature.  	That reduction or weighted information gain is defined as. The weighted impurity decrease equation is the following: 
+
+	N_t / N * (impurity - N_t_R / N_t * right_impurity - N_t_L / N_t * left_impurity)
+			N 	: Total number of samples
+			N_t 	: No. of samples at the current node
+			N_t_L 	: No. of samples in the left child 
+			N_t_R 	: No. of samples in the right child
 
 # Types of Gradient Descent:
 1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost function hence and it's very slow.
