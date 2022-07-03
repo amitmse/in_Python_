@@ -27,15 +27,15 @@
 	
 ---------------------------------------------------------------------------------------------
 
-Probability Distribution:
-	- Probability distributions describe what we think the probability of each outcome is.
-	- They come in many shapes, but in only one size: probabilities in a distribution always add up to 1.
-	- A probability distribution is a function that assigns to each event a number in [0,1] which is 
-	  the probability that this event occurs.
-	- A statistical model is a set of probability distributions. We assume that the observations are generated 
-	  from one of these distributions.
-	- Chart: Horizontal axis set of possible numeric outcomes. Vertical axis probability of outcomes.
-	Example: 
+# Probability Distribution:
+- Probability distributions describe what we think the probability of each outcome is.
+- They come in many shapes, but in only one size: probabilities in a distribution always add up to 1.
+- A probability distribution is a function that assigns to each event a number in [0,1] which is 
+  the probability that this event occurs.
+- A statistical model is a set of probability distributions. We assume that the observations are generated 
+  from one of these distributions.
+- Chart: Horizontal axis set of possible numeric outcomes. Vertical axis probability of outcomes.
+Example: 
 		- Flipping a fair coin has two outcomes: it lands heads or tails. 
 		  Before the flip, we believe there’s a 0.5 probability, of heads and same for tails. 
 		  That’s a probability distribution over the two outcomes of the flip (Bernoulli distribution).
