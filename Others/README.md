@@ -326,7 +326,7 @@ Finds parameter values that minimizing the error.
 - VIF 			= 1.0 / (1.0 - R Squared)
 - Gini/Somer’s D 	= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
 - Divergence 		= [(meanG – meanB)^2] / [0.5(varG + varB)]	
-- 
+
 	     		  [meanG = mean of score only for good, varB= variance of score only for bad ]
 - Area under curve 	= Percent Concordant + 0.5 * Percent Tied 	(Also refered as C statistics)
 
