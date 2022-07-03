@@ -383,8 +383,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 - Negative Predictive Value : 		    TN  / (TN + FN)
 - False Discovery Rate: 			    FP  / (FP + TP) = 1 - Positive Predictive Value	
 - Accuracy : 				   (TP + TN)/ (TP  + TN + FP + FN)
-- F1-Score : 
-	- 2*TP/ (2TP + FP + FN) 	=   [2 * (Precision * Recall) / (Precision + Recall)]
+- F1-Score : 2*TP/ (2TP + FP + FN)   =   [2 * (Precision * Recall) / (Precision + Recall)]
 	- F1 score (also F-score or F-measure) is a measure of a test's accuracy. 
 	- The F1-score gives you the harmonic mean of precision and recall.
 	- The scores corresponding to every class will tell you the accuracy of the classifier in classifying the data points in that particular class compared to all other classes.
