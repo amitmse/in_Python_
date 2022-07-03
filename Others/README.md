@@ -42,6 +42,18 @@
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/distribution.png)
 
+
+## Uniform distribution:
+- Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
+- It can be defined for any number of outcomes or even as a continuous distribution.
+- Function
+	- PDF		: 1/(b-a) 	       {-infinite <- (a,b) -> infinite}
+	- Mean  	: (a+b)/2
+	- Variance 	: (b-a)^2/12
+Example: 
+	- Imagine rolling a fair die. The outcomes 1 to 6 are equally likely.
+
+
 ## Bernoulli distribution:
 - Bernoulli distribution has only two possible outcomes i.e. success and failure in a single trial
 - The Bernoulli PDF has two lines of equal height, representing the two equally-probable outcomes of 0 and 1 at either end.
@@ -53,16 +65,7 @@
 - Example: 
 	- Flipping a fair coin
 	- it’s going to rain tomorrow or not
-	
-## Uniform distribution:
-- Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
-- It can be defined for any number of outcomes or even as a continuous distribution.
-- Function
-	- PDF		: 1/(b-a) 	       {-infinite <- (a,b) -> infinite}
-	- Mean  	: (a+b)/2
-	- Variance 	: (b-a)^2/12
-Example: 
-	- Imagine rolling a fair die. The outcomes 1 to 6 are equally likely.
+
 
 ## Binomial distribution:
 - The binomial distribution may be thought of as the sum of outcomes of things that follow a Bernoulli distribution.
