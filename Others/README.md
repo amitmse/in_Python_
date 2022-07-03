@@ -321,21 +321,26 @@ Finds parameter values that minimizing the error.
 
 8. Number of observations must be greater than number of Xs
 		
-#### Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves 
-#### or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
+#### Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
+	
+# Logistic regression 
+- It uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) tested in statistical analysis.
+- Assumptions:
+	1. Dependent variable should be binary
+	2. Linearity between independent & log odds. (non-linear relationship between the dependent and independent variables)
+	3. Independence of errors
+	4. No perfect multicollinearity
+- Does not assume: 
+	- normality of variables (both DV and IVs)
+	- linearity between DV and IVs
+	- homoscedasticity
+	- normal errors
+	
 ## Maximum likelihood estimation (MLE):
 - Finds parameter values that maximize the likelihood of making the observations given the parameters
 - MLE allows more flexibility in the data and analysis because it has fewer restrictions
 	
-# Logistic regression assumptions:
-1. Dependent variable should be binary
-2. Linearity between independent & log odds 
-   (non-linear relationship between the dependent and independent variables)
-3. Independence of errors
-4. No perfect multicollinearity
-
-
 # Model Metrics:
 - beta(x) 	= covariance(x,y) / variance(x)
 - correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
