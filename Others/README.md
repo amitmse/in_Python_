@@ -654,6 +654,39 @@ Gini index says, if we select two items from a population at random then they mu
 Above, you can see that Gender split has lower variance compare to parent node so 
 the split would be on Gender only.
 
+# Random FOrest
+## Bootstrap samples:
+- Draw repeated samples from the population, a large number of times. 
+- Samples are approximatively independent and identically distributed (i.i.d.).
+
+## Ensemble methods:
+- Ensemble learning is a machine learning paradigm where multiple models (often called "weak learners") are trained to solve the same problem and combined to get better results. 
+	
+## Bagging (Bootstrap aggregating):
+- Fit a weak learner (several independent models) on each of bootstarp samples and finally aggregate the outputs (average model predictions) in order to obtain a model with a lower variance. It builds model parallelly.
+
+## Boosting:
+- Similar to bagging but it fits weak learner sequentially (a model depends on the previous ones) in a very adaptative way. Each model in the sequence is fitted giving more importance to the observations which are not classified correctly (high error). Mainly focus on reducing bias.
+	
+- Bagging mainly focus at getting an ensemble model with less variance than its components whereas boosting and stacking will mainly try to produce strong models less biased than their components (even if variance can also be reduced).
+
+## Stacking:
+- Stacking mainly differ from bagging and boosting on two points. First stacking often considers heterogeneous weak learners (different learning algorithms are combined) whereas bagging and boosting consider mainly homogeneous weak learners. Second, stacking learns to combine the base models using a meta-model whereas bagging and boosting combine weak learners following deterministic algorithms.
+	
+## Bias - Variance
+### Bias: 
+- Bias is the difference between the prediction of model and actual value. 
+- It always leads to high error on training and test data.
+- It creates underfitting problem.
+- If model is too simple and has very few parameters then it may have high bias and low variance.
+
+### Variance: 
+- Model performs very well on development data but poor performance on on OOT validation.
+- It creates overfitting problem.
+- If model has large number of parameters then it’s going to have high variance and low bias
+- For high variance, one common solution is to reduce parameter/features. 
+- This very frequently increases bias, so there’s a tradeoff to take into consideration.
+
 -----------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------
 https://machinelearningmastery.com/how-to-code-the-students-t-test-from-scratch-in-python/
