@@ -284,24 +284,24 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 	i.e. all sample means are equal
 	
 
-## Ordinary Least Squares (OLS): 
+# Ordinary Least Squares (OLS): 
 - Finds parameter values that minimizing the error. 
-- Assumptions of Linear regression: 
+## Assumptions of Linear regression: 
 
-For Model:
+### For Model:
 
 	1. Linear in parameters : 
 		Issue	: Beta not multiplied or divided by any other parameter. 
                           Incorrect and unreliable model which leads to error in result.
 		Solution: Transformations of independent variables
 
-For Variable: 
+### For Variable: 
 
 	2. No perfect multicollinearity :
 		Issue: Issue: Regression coefficient variance will increase
 		Test: VIF
 		
-For Error Tearm: 
+### For Error Tearm: 
 
 	3. Normality of residuals :
 		Issue: OLS estimators won’t have the desirable BLUE property
