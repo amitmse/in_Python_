@@ -2,6 +2,8 @@
 
 ######################################################################################
 
+00. Type of data / Distribution / Test : https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+
 01. Data Preparation : https://github.com/amitmse/in_Python_/tree/master/Data%20Prep
 
 02. Logistic Regression : https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
@@ -19,8 +21,6 @@
 08. Cluster Analysis : https://github.com/amitmse/in_Python_/tree/master/Cluster%20Analysis
 
 09. SVM : https://github.com/amitmse/in_Python_/tree/master/SVM
-
-10. Type of data / Distribution / Test : https://github.com/amitmse/in_Python_/blob/master/Others/Basic_Statistics.txt
 
 11. Pyspark : https://github.com/amitmse/in_Python_/tree/master/Pyspark
 
