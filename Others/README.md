@@ -26,7 +26,8 @@
 			
 		
 ### Imbalanced data
-- Imbalanced data refers to those types of datasets where the target class has an uneven distribution of observations, i.e one class label has a very high number of observations and the other has a very low number of observations (rare event i.e., Fraud)
+		Imbalanced data refers to those types of datasets where the target class has an uneven distribution of observations, 
+		i.e one class label has a very high number of observations and the other has a very low number of observations (rare event i.e., Fraud)
 
 #### One categorical and one continuous: T test (Anova when more than 2 category)
 	https://www.youtube.com/watch?v=tfiDu--7Gmg
