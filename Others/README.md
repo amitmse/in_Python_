@@ -687,6 +687,45 @@ the split would be on Gender only.
 - For high variance, one common solution is to reduce parameter/features. 
 - This very frequently increases bias, so there’s a tradeoff to take into consideration.
 
+
+## Mean Decrease in Accuracy (MDA) / Accuracy-based importance / Permutation Importance:
+- The values of the variable in the out-of-bag-sample are randomly shuffled, keeping all other variables the same. Finally, the decrease in prediction accuracy on the shuffled data is measured. 
+- The mean decrease in accuracy across all trees is reported. 
+- For example, age is important for predicting that a person earns over $50,000, but not important for predicting a person earns less. Intuitively, the random shuffling means that, on average, the shuffled variable has no predictive power. This importance is a measure of by how much removing a variable decreases accuracy, and vice versa — by how much including a variable increases accuracy.
+
+- Note that if a variable has very little predictive power, shuffling may lead to a slight increase in accuracy due to random noise. This in turn can give rise to small negative importance scores, which can be essentially regarded as equivalent to zero importance.	
+		
+- This is most interesting measure, because it is based on experiments on out-of-bag(OOB) samples, via destroying the predictive power of a feature without changing its marginal distribution.
+	
+- Percentage increase in mean square error is analogous to accuracy-based importance, and is calculated by shuffling the values of the out-of-bag samples.
+
+## Gini Importance / Mean Decrease in Impurity (MDI) :
+- Gini Impurity is the probability of incorrectly classifying a randomly chosen element in the dataset if it were randomly labeled according to the class distribution in the dataset. It’s calculated as 
+- Gini impurity index (G) = P * (1 - P)
+- Importance = G (parent node) - G (child node 1) - G (child node 2)
+- The initial gini index before split  Overall = 1 − P(success)^2 − P(Failure)^2
+- Node level :
+	- impurity in Left node  =1 − P(Success in left node)^2  − P(Failure in left node)^2
+	- impurity in Right node =1 − P(Success in right node)^2 − P(Failure in right node)^2
+- Now the final formula for GiniGain would be = Overall − impurity in  Left node − impurity in Right node
+	- Lets assume we have 3 classes and 80 objects. 19 objects are in class 1, 21 objects in class 2, and 40 objects in class 3 (denoted as (19,21,40) ). 
+	- The Gini index would be: 	= 1 - [ (19/80)^2 + (21/80)^2 + (40/80)^2] = 0.6247      
+		- costbefore Gini(19,21,40) = 0.6247
+
+	- In order to decide where to split, we test all possible splits. For example splitting at 2.0623, 
+		- which results in a split (16,9,0) and (3,12,40).
+		- After testing x1 < 2.0623:
+			- costL Gini(16,9,0)  = 0.4608
+			- costR Gini(3,12,40) = 0.4205
+	- Then we weight branch impurity by empirical branch probabilities: costx1<2.0623 = 25/80 costL + 55/80 costR = 0.4331
+	- We do that for every possible split, for example x1 < 1:
+		- costx1<1 = FractionL Gini(8,4,0) + FractionR Gini(11,17,40) = 12/80 * 0.4444 + 68/80 * 0.5653 = 0.5417
+	- After that, we chose the split with the lowest cost. This is the split x1 < 2.0623 with a cost of 0.4331.
+
+
+
+
+
 -----------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------
 https://machinelearningmastery.com/how-to-code-the-students-t-test-from-scratch-in-python/
