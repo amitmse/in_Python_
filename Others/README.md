@@ -423,7 +423,8 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 
 - Feature importances: 
 	It is also known as the Gini importance. The importance of a feature is computed as the (normalized) total reduction of the criterion brought by that feature.  	That reduction or weighted information gain is defined as. The weighted impurity decrease equation is the following: 
-	N_t / N * (impurity - N_t_R / N_t * right_impurity - N_t_L / N_t * left_impurity)
+	
+		N_t / N * (impurity - N_t_R / N_t * right_impurity - N_t_L / N_t * left_impurity)
 	
 			N 	: Total number of samples
 			N_t 	: No. of samples at the current node
