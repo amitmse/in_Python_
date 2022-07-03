@@ -362,7 +362,7 @@ Finds parameter values that minimizing the error.
 
 3. Stochastic Gradient Descent: Stochastic gradient descent used for faster computation. First, it randomizes the complete dataset, and then uses only one training example in every iteration to calculate the gradient. Its benifical for huge datasets.
 
-## Gradient Descent vs Newton's method
+### Gradient Descent vs Newton's method
 ### Gradient Descent:
 - Simple
 - Need learning Rate
