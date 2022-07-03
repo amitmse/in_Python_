@@ -375,6 +375,7 @@ Precision 	     = Ability of the classifier not to label as positive a sample th
 Specificity 	     = Measures the proportion of actual negatives that are correctly identified
 			(true negative rate)
 
+![Function](https://github.com/amitmse/in_Python_/blob/master/Formula/Confusion%20Matrxi.jpg)
 
 - True Positive Rate / Sensitivity / Recall : TP  / (TP + FN) = TP / Actual Positives
 - True Negative Rate / Specificity : 	    TN  / (TN + FP) = TN / Actual Negatives
