@@ -283,6 +283,57 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 - Known as analysis of variance, is used to compare multiple (three or more) samples with a single test 
 	i.e. all sample means are equal
 	
+
+## Ordinary Least Squares (OLS): 
+- Finds parameter values that minimizing the error. 
+- Assumptions of Linear regression: 
+
+For Model:
+
+	1. Linear in parameters : 
+		Issue	: Beta not multiplied or divided by any other parameter. 
+                          Incorrect and unreliable model which leads to error in result.
+		Solution: Transformations of independent variables
+
+For Variable: 
+
+	2. No perfect multicollinearity :
+		Issue: Issue: Regression coefficient variance will increase
+		Test: VIF
+		
+For Error Tearm: 
+
+	3. Normality of residuals :
+		Issue: OLS estimators won’t have the desirable BLUE property
+		
+	4. Mean of residuals is zero :
+		Issue: Error terms has zero mean and doesn’t depend on the independent variables. 
+			Thus, there must be no relationship between the independent variable and the error term
+	
+	5. Homoscedasticity of residuals /equal variance of residuals
+		Example	: Family income to predict luxury spending. Residuals are very small for low values of 
+			  family income (less spend on luxury) while there is great variation in the size of 
+			  the residuals for wealthier families. Standard errors are biased and it leads to 
+			  incorrect conclusions about the significance of the regression coefficients
+		Test	: Breush-Pagan test
+		Solution: Weighted least squares regression.
+			  Transform the dependent variable using one of the variance stabilizing transformations
+	
+	6. No autocorrelation of residuals :
+		Issue: correlation with own lag (stock price today linked with yesterday's price). if above fails 
+		 	then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not 
+			bias the OLS coefficient estimates, the standard errors tend to be underestimated 
+			(t-scores overestimated) when the autocorrelations of the errors at low lags are positive.
+		Test :  Durbin–Watson
+	
+	7. X variables and residuals are uncorrelated 
+	
+	
+	Number of observations must be greater than number of Xs
+
+	Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves 
+	or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
+
 # Ordinary Least Squares (OLS): 
 Finds parameter values that minimizing the error. 
 ## Assumptions of Linear regression:
