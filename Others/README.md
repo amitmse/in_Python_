@@ -22,7 +22,7 @@
 					- Difference of two means(paired T test. Pre and Post scenario)
 		Relationship:	Regression Analysis / Correlation (for two continuous variables/for relationship)
 					
-	One categorical and one continuous: T test (Anova when more than 2 category)
+#### One categorical and one continuous: T test (Anova when more than 2 category)
 	https://www.youtube.com/watch?v=tfiDu--7Gmg
 	
 ---------------------------------------------------------------------------------------------
