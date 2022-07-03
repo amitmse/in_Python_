@@ -8,10 +8,12 @@
 					- Chi-Square test for independence (for two categorical variables)
 		Relationship:	Chi-Square test for independence
 	
+	
 ## Ordinal : Similar as Nominal
 		Example	:	rank, satisfaction.  
 		Check	: 	frequency or mean (special case). 
 		Test	:	Similar as Nominal
+		
 		
 ## Interval / Ratio / quantitative/continuous  : 
 		Example	:	number of customers, income,age. 
@@ -21,9 +23,11 @@
 					- Difference of two means (independent samples)
 					- Difference of two means(paired T test. Pre and Post scenario)
 		Relationship:	Regression Analysis / Correlation (for two continuous variables/for relationship)
-					
+			
+			
 #### One categorical and one continuous: T test (Anova when more than 2 category)
 	https://www.youtube.com/watch?v=tfiDu--7Gmg
+	
 	
 ---------------------------------------------------------------------------------------------
 
@@ -82,7 +86,8 @@ Example:
 	- Imagine an urn with equal numbers of white and black balls. Draw a ball and note whether it is black, 
 	  then put it back and Repeat this process. How many times black ball was drawn? 
 	  This count also follows a binomial distribution.
-		
+	
+	
 ## Hyper-Geometric distribution:
 - Example: 
 	- This is the distribution of that same count if the balls were drawn without replacement instead. 
@@ -90,6 +95,7 @@ Example:
 	  of success changes as balls are removed. 
 	- If the number of balls is large relative to the number of draws, the distributions are similar
 	  because the chance of success changes less with each draw.
+	
 	
 ## Poisson distribution:
 - Simialr to the binomial distribution, the Poisson distribution is the distribution of a 
@@ -110,6 +116,7 @@ Example:
 	- The number of printing errors at each page of the book.
 	- The number of incoming calls at a call center in a day.
 	
+	
 ## Geometric distribution:
 - If the binomial distribution is “How many successes?” then the geometric distribution is
   “How many failures until a success?”
@@ -117,9 +124,11 @@ Example:
 	- From simple Bernoulli trials arises another distribution. How many times does a flipped coin 
 	  come up tails before it first comes up heads? This count of tails follows a geometric distribution.
 
+
 ## Negative Binomial distribution:
 - It's a simple generalization. It’s the number of failures until r successes have occurred,not just 1.
 - Example: 
+	
 	
 ## Exponential distribution:
 - The exponential distribution is one of the widely used continuous distributions. 
@@ -144,12 +153,14 @@ Example:
 	- Age of plants or animals
 	- Very simple model used by insurance companies
 
+
 ## Weibull:
 - Weibull distribution can model increasing (or decreasing) rates of failure over time. 
 - The exponential is merely a special case.
 - Commonly used to assess product reliability, analyze life data and model failure times
 - Weibull isn’t an appropriate model for every situation i.e. chemical reactions and corrosion failures are 
   usually modeled with the lognormal distribution.
+
 
 ## Normal Distribution:
 - The sum of Bernoulli trials follows a binomial distribution, and as the number of trials increases, 
@@ -177,6 +188,7 @@ Example:
   	  better in English than in Math. However, in Math, your score is 2 standard deviations above 
 	  the mean. In English, it’s only one standard deviation above the mean. It tells you that in Math, 
   	  your score is far higher than most of the students (your score falls into the tail).
+
 
 ### Z-test:
 - The sample is assumed to be normally distributed. A z-score is calculated with population parameters 
@@ -206,7 +218,8 @@ Example:
 
 	- Paired sample t-test which compares means from the same group at different times. 
 	  Choose the paired t-test if you have two measurements on the same item, person or thing
-		  
+		
+		
 ## Chi-Squared Distribution :
 - Tests for the strength of the association between two categorical variables. Chi Square lets you know whether 
   two groups have significantly different opinions, which makes it a very useful statistic for survey research.
@@ -230,12 +243,14 @@ Example:
 ## Likelihood-ratio :
 - This test assesses the goodness of fit of two competing statistical models based on the ratio of their likelihoods
 
+
 ## F-test:
 - F-test of equality of variances is a test for the null hypothesis that two normal populations have the same variance. 
 
 - It is most often used when comparing statistical models that have been fitted to a data set, 
   in order to identify the model that best fits the population from which the data were sampled. 
   "F-tests" mainly arise when the models have been fitted to the data using least squares.
+
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
