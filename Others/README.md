@@ -363,6 +363,41 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 - Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]       
 
 			[meanG = mean of score only for good, varB= variance of score only for bad ]
+			
+
+True Positives 	(TP) = Correctly Identified
+True Negatives 	(TN) = Correctly Rejected
+False Positives	(FP) = Incorrectly Identified 	= Type I Error
+False Negatives	(FN) = Incorrectly Rejected	= Type II Error
+Recall (Sensitivity) = Ability of the classifier to find positive samples from all positive samples
+Precision 	     = Ability of the classifier not to label as positive a sample that is negative
+			(positive predictive value)
+Specificity 	     = Measures the proportion of actual negatives that are correctly identified
+			(true negative rate)
+
+
+- True Positive Rate / Sensitivity / Recall : TP  / (TP + FN) = TP / Actual Positives
+- True Negative Rate / Specificity : 	    TN  / (TN + FP) = TN / Actual Negatives
+- False Positive Rate / Type I Error: 	    FP  / (FP + TN) = FP / Actual Negatives = 1 - Specificity
+- False Negative Rate / Type II Error : 	    FN  / (FN + TP) = FN / Actual Positives = 1 - True Positive Rate
+- Positive Predictive Value / Precision :     TP  / (TP + FP)
+- Negative Predictive Value : 		    TN  / (TN + FN)
+- False Discovery Rate: 			    FP  / (FP + TP) = 1 - Positive Predictive Value	
+- Accuracy : 				   (TP + TN)/ (TP  + TN + FP + FN)
+- F1-Score : 2*TP/ (2TP + FP + FN) 	=   [2 * (Precision * Recall) / (Precision + Recall)]
+	F1 score (also F-score or F-measure) is a measure of a test's accuracy. 
+	The F1-score gives you the harmonic mean of precision and recall.
+	The scores corresponding to every class will tell you the accuracy of the classifier in 
+	classifying the data points in that particular class compared to all other classes.
+	The F1 score is the harmonic average of the precision and recall, where an F1 score reaches 
+	its best value at 1 (perfect precision and recall) and worst at 0.
+	It considers both the precision and the recall of the test to compute the score: 
+	 	- precision is the number of correct positive results divided by the number of all positive 
+			results returned by the classifier, 
+		- recall is the number of correct positive results divided by the number of all relevant 
+			samples (all samples that should have been identified as positive). 
+			F1-Score : 2*TP	/ (2TP + FP + FN) = [2 * (Precision * Recall) / (Precision + Recall)]
+			
 - Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied		
 	The ROC curve is a graphical plot that illustrates the performance of any binary classifier 
 	system as its discrimination threshold is varied. True positive rate (Sensitivity : Y axis ) 
@@ -480,6 +515,11 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 			X3	= X2 - f(X2)/f'(X2)  
 				= 17/6 - [(17/6)^2 - 8]/[2(17/6)]  
 				= 2.828 
+
+
+
+
+
 -----------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------
 https://machinelearningmastery.com/how-to-code-the-students-t-test-from-scratch-in-python/
