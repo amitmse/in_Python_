@@ -40,6 +40,8 @@
 	- Before the flip, we believe there’s a 0.5 probability, of heads and same for tails. 
 	- That’s a probability distribution over the two outcomes of the flip (Bernoulli distribution).
 	
+![Function](https://github.com/amitmse/in_Python_/blob/master/Others/distribution.png)
+
 ## Bernoulli distribution:
 - Bernoulli distribution has only two possible outcomes i.e. success and failure in a single trial
 - The Bernoulli PDF has two lines of equal height, representing the two equally-probable outcomes of 0 and 1 at either end.
