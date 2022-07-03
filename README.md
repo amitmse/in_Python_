@@ -2,7 +2,7 @@
 
 ######################################################################################
 
-00. Type of data / Distribution / Test : https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+00. Basic Stat (test) : https://github.com/amitmse/in_Python_/blob/master/Others/README.md
 
 01. Data Preparation : https://github.com/amitmse/in_Python_/tree/master/Data%20Prep
 
