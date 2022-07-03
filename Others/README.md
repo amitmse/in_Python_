@@ -165,22 +165,22 @@ Example:
 
 
 ### Standard Normal distribution: 
-	- It is also known as the Z distribution and it follows normal distribution 
-  	  with a mean of zero and a variance of one.
-	Example: 
-		- For example, if you get a score of 90 in Math and 95 in English, you might think that you are 
-	  	  better in English than in Math. However, in Math, your score is 2 standard deviations above 
-		  the mean. In English, it’s only one standard deviation above the mean. It tells you that in Math, 
-	  	  your score is far higher than most of the students (your score falls into the tail).
+- It is also known as the Z distribution and it follows normal distribution 
+  with a mean of zero and a variance of one.
+- Example: 
+	- For example, if you get a score of 90 in Math and 95 in English, you might think that you are 
+  	  better in English than in Math. However, in Math, your score is 2 standard deviations above 
+	  the mean. In English, it’s only one standard deviation above the mean. It tells you that in Math, 
+  	  your score is far higher than most of the students (your score falls into the tail).
 
 ### Z-test:
-	- The sample is assumed to be normally distributed. A z-score is calculated with population parameters 
-	  such as "population mean" and "population standard deviation" and is used to validate a hypothesis 
-	  that the sample drawn belongs to the same population. Sample mean is same as the population mean.
-	- Function								
-		- PDF		: (x - mean)/standard deviation
-		- Mean  	: 0
-		- Variance 	: 1			  
+- The sample is assumed to be normally distributed. A z-score is calculated with population parameters 
+  such as "population mean" and "population standard deviation" and is used to validate a hypothesis 
+  that the sample drawn belongs to the same population. Sample mean is same as the population mean.
+- Function								
+	- PDF		: (x - mean)/standard deviation
+	- Mean  	: 0
+	- Variance 	: 1			  
 
 ## t /Student  Distribution:
 - The t test tells how significant the differences between groups are. A t-test is used to compare the mean of 
@@ -301,8 +301,8 @@ Finds parameter values that minimizing the error.
 
 8. Number of observations must be greater than number of Xs
 		
-- Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves 
-	  or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
+#### Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves 
+#### or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
 ## Maximum likelihood estimation (MLE):
 - Finds parameter values that maximize the likelihood of making the observations given the parameters
