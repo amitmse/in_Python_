@@ -427,10 +427,18 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 			F1-Score : 2*TP	/ (2TP + FP + FN) = [2 * (Precision * Recall) / (Precision + Recall)]
 	- If the classifier predicts the minority class but the prediction is erroneous and false-positive increases, the precision metric will be low and so as F1 score. Also, if the classifier identifies the minority class poorly, i.e. more of this class wrongfully predicted as the majority class then false negatives will increase, so recall and F1 score will low. F1 score only increases if both the number and quality of prediction improves. F1 score keeps the balance between precision and recall and improves the score only if the classifier identifies more of a certain class correctly.
 	
-	
+- Precision/Specificity: how many selected instances are relevant.
+- Recall/Sensitivity: how many relevant instances are selected.
+- F1 score: harmonic mean of precision and recall.
+- MCC: correlation coefficient between the observed and predicted binary classifications.
+- AUC: relation between true-positive rate and false positive rate.
+- Accuracy is not appropriate when the data is imbalanced. Because the model can achieve higher accuracy by just predicting accurately the majority class while performing poorly on the minority class which in most cases is the class we care about the most.
+
+
+
 - Accuracy paradox: if the incidence of category A is dominant, being found in 99% of cases, then predicting that every case is category A will have an accuracy of 99%. Precision and recall are better measures in such cases. The underlying issue is that there is a class imbalance between the positive class and the negative class. Prior probabilities for these classes need to be accounted for in error analysis. Precision and recall help, but precision too can be biased by very unbalanced class priors in the test sets.
 
-- Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied		
+- Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied ( https://www.geeksforgeeks.org/how-to-handle-imbalanced-classes-in-machine-learning/ )
 	The ROC curve is a graphical plot that illustrates the performance of any binary classifier 
 	system as its discrimination threshold is varied. True positive rate (Sensitivity : Y axis ) 
 	is plotted in function of the false positive rate (100-Specificity : X axis) for different 
