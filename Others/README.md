@@ -61,10 +61,6 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 #### Cluster the abundant class: 
 - An elegant approach was proposed by Sergey on Quora. Instead of relying on random samples to cover the variety of the training samples, he suggests clustering the abundant class in r groups, with r being the number of cases in r. For each group, only the medoid (centre of cluster) is kept. The model is then trained with the rare class and the medoids only.
 
-
-### Accuracy paradox: 
-- if the incidence of category A is dominant, being found in 99% of cases, then predicting that every case is category A will have an accuracy of 99%. Precision and recall are better measures in such cases. The underlying issue is that there is a class imbalance between the positive class and the negative class. Prior probabilities for these classes need to be accounted for in error analysis. Precision and recall help, but precision too can be biased by very unbalanced class priors in the test sets.
-
 ---------------------------------------------------------------------------------------------
 
 # Probability Distribution:
@@ -425,11 +421,15 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 	- The scores corresponding to every class will tell you the accuracy of the classifier in classifying the data points in that particular class compared to all other classes.
 	- The F1 score is the harmonic average of the precision and recall, where an F1 score reaches its best value at 1 (perfect precision and recall) and worst at 0.
 	- It considers both the precision and the recall of the test to compute the score: 
-		- precision is the number of correct positive results divided by the number of all positive results returned by the classifier, 
-		- recall is the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive).
+		- precision is the number of correct positive results divided by the number of all positive results returned by the classifier. precision is the measure of how accurate the classifier’s prediction of a specific class
+		- recall is the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive). recall is the measure of the classifier’s ability to identify a class.
 	 
 			F1-Score : 2*TP	/ (2TP + FP + FN) = [2 * (Precision * Recall) / (Precision + Recall)]
+	- If the classifier predicts the minority class but the prediction is erroneous and false-positive increases, the precision metric will be low and so as F1 score. Also, if the classifier identifies the minority class poorly, i.e. more of this class wrongfully predicted as the majority class then false negatives will increase, so recall and F1 score will low. F1 score only increases if both the number and quality of prediction improves. F1 score keeps the balance between precision and recall and improves the score only if the classifier identifies more of a certain class correctly.
 	
+	
+- Accuracy paradox: if the incidence of category A is dominant, being found in 99% of cases, then predicting that every case is category A will have an accuracy of 99%. Precision and recall are better measures in such cases. The underlying issue is that there is a class imbalance between the positive class and the negative class. Prior probabilities for these classes need to be accounted for in error analysis. Precision and recall help, but precision too can be biased by very unbalanced class priors in the test sets.
+
 - Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied		
 	The ROC curve is a graphical plot that illustrates the performance of any binary classifier 
 	system as its discrimination threshold is varied. True positive rate (Sensitivity : Y axis ) 
