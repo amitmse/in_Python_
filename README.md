@@ -27,27 +27,3 @@
 12. Plot / Chart : https://github.com/amitmse/in_Python_/tree/master/plot
 
 #####################################################################################
-
-# Python Object Oriented Programming (OOP)
-
-- Abstraction : Process happens inside and not visible to public.
-                It hides the inner workings of an object when it’s not necessary to see them.
-
-- Encapsulation	: Prevent data modification.
-                  This prevent data from direct modification which is called encapsulation. 
-                  Represent by prefix i.e single “ _ “ or double “ __“. 
-                  It stores related variables and methods within objects and protects them.
-                  Encapsulation is one of the ways that object-oriented programming creates abstraction. 
-                  A programmer could make a change to the structure or contents of the object without worrying about the public interface.
-
-- Inheritance :	Creating new class (child) using existing class (parent). 
-                Inheritance is a way of creating new class for using details of existing class without modifying it. 
-                It allows sub-classes to use attributes from parent classes. 
-                Instead of creating new classes for everything, programmers can create a base class and then extend it to new sub-classes when they need to.
-
-- Polymorphism :	Allows to define methods in the child class with the same name as defined in the parent class.
-                  Polymorphism is an ability (in OOP) to use common interface for multiple form (data types).
-                  It allows objects and methods to deal with multiple different situations with a single interface. 
-                  Polymorphism is a result of inheritance.
-
-####################################################################################
