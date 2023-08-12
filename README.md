@@ -20,9 +20,9 @@
 
 09. SVM : https://github.com/amitmse/in_Python_/tree/master/SVM
 
-11. Pyspark : https://github.com/amitmse/in_Python_/tree/master/Pyspark
+11. Pyspark (WIP) : https://github.com/amitmse/in_Python_/tree/master/Pyspark
 
-12. Plot / Chart : https://github.com/amitmse/in_Python_/tree/master/plot
+12. Plot / Chart (WIP) : https://github.com/amitmse/in_Python_/tree/master/plot
 
 #####################################################################################
 
