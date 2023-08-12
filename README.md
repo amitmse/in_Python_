@@ -2,8 +2,6 @@
 
 ######################################################################################
 
-00. Basic Stat (test) : https://github.com/amitmse/in_Python_/blob/master/Others/README.md
-
 01. Data Preparation : https://github.com/amitmse/in_Python_/tree/master/Data%20Prep
 
 02. Logistic Regression : https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
@@ -27,3 +25,4 @@
 12. Plot / Chart : https://github.com/amitmse/in_Python_/tree/master/plot
 
 #####################################################################################
+Basic Stat (test) : https://github.com/amitmse/in_Python_/blob/master/Others/README.md
