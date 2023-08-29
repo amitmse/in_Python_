@@ -4,9 +4,9 @@
 
 01. Logistic Regression: https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 
-02. Decision Tree: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree
+02. Naive Bayes: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes
 
-03. Naive Bayes: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes
+03. Decision Tree: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree
 
 04. Random Forest: https://github.com/amitmse/in_Python_/tree/master/Random_Forest
 
