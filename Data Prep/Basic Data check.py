@@ -530,3 +530,5 @@ import pandas_profiling
 # read the dataset 
 data = pd.read_csv('add-your-data-here') 
 pandas_profiling.ProfileReport(data)
+
+monobinpy
