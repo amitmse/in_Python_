@@ -4,11 +4,11 @@
 
 01. Logistic Regression: https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 
-02. Naive Bayes: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes
+02. Decision Tree: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree
 
-03. Decision Tree: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree
+03. Random Forest: https://github.com/amitmse/in_Python_/tree/master/Random_Forest
 
-04. Random Forest: https://github.com/amitmse/in_Python_/tree/master/Random_Forest
+04. Naive Bayes: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes
 
 05. Boosting (ADA & GBM): https://github.com/amitmse/in_Python_/tree/master/Boosting
 
