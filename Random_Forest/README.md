@@ -1,6 +1,11 @@
 # Random Forest
 
 ----------------------------------------------------------------------------------------------------------------------------
+## Random Forest in Python
+
+https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Try.py
+
+----------------------------------------------------------------------------------------------------------------------------
 ## Bootstrap samples:
 	Draw repeated samples from the population, a large number of times. 
 	Samples are approximatively independent and identically distributed (i.i.d.).
