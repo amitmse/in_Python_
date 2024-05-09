@@ -16,7 +16,7 @@
 
 07. Cluster Analysis: https://github.com/amitmse/in_Python_/tree/master/Cluster%20Analysis
 
-08. SVM: https://github.com/amitmse/in_Python_/tree/master/SVM
+08. SVM (WIP): https://github.com/amitmse/in_Python_/tree/master/SVM
 
 09. Pyspark (WIP): https://github.com/amitmse/in_Python_/tree/master/Pyspark
     
