@@ -1,5 +1,5 @@
 # Neural Networks (NN)
-	
+
 	In simple term: 
 	
 		NN is a weighted logistic regression (or similar) in a loop and every time it updates the weight 
@@ -20,6 +20,17 @@
 	
 
 ---------------------------------------------------------------------------------------------------------
+## Manually computed Back-Propagation in excel:
+
+https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
+
+---------------------------------------------------------------------------------------------------------
+## Neural Network in Python:
+
+https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN.py
+
+---------------------------------------------------------------------------------------------------------
+
 
 ## Activation Function:
  
