@@ -1,4 +1,4 @@
-# Handson Machine Learning with PYTHON (2.7)
+# Hands On Machine Learning with PYTHON (2.7)
 
 #######################################################################################
 
