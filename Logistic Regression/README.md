@@ -2,7 +2,7 @@
 https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
 Logistic Regression is a classification technique which predicts a binary outcome.
-
+-----------------------------------------------------------------------------------------------------------------------
 ## Logistic regression assumptions: 		
 
 	1. Dependent variable should be binary
@@ -18,6 +18,12 @@ Logistic Regression is a classification technique which predicts a binary outcom
 	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
 	
 -----------------------------------------------------------------------------------------------------------------------
+
+## Logistic Regression coded in Python:
+
+https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic_Regression.py
+
+----------------------------------------------------------------------------------------------------------------------- 
 
 ## Derivation of Logistic Regression:
  	Model Equation:
@@ -77,11 +83,7 @@ Logistic Regression is a classification technique which predicts a binary outcom
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 				
 -----------------------------------------------------------------------------------------------------------------------
-## Logistic Regression coded in Python:
 
-https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic_Regression.py
-
------------------------------------------------------------------------------------------------------------------------ 
 ### Cost function :
 	It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
 	regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
