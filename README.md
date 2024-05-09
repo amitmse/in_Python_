@@ -16,13 +16,13 @@
 
 07. Cluster Analysis: https://github.com/amitmse/in_Python_/tree/master/Cluster%20Analysis
 
-08. SVM (WIP): https://github.com/amitmse/in_Python_/tree/master/SVM
+08. Data Preparation: https://github.com/amitmse/in_Python_/tree/master/Data%20Prep
 
 09. Pyspark (WIP): https://github.com/amitmse/in_Python_/tree/master/Pyspark
     
 10. Plot / Chart (WIP): https://github.com/amitmse/in_Python_/tree/master/plot
 
-11. Data Preparation: https://github.com/amitmse/in_Python_/tree/master/Data%20Prep
+11. SVM (WIP): https://github.com/amitmse/in_Python_/tree/master/SVM
 
 12. Basic Stat (test): https://github.com/amitmse/in_Python_/blob/master/Others/README.md
 
