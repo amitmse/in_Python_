@@ -77,7 +77,11 @@ Logistic Regression is a classification technique which predicts a binary outcom
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 				
 -----------------------------------------------------------------------------------------------------------------------
-		
+## Logistic Regression coded in Python:
+
+https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic_Regression.py
+
+----------------------------------------------------------------------------------------------------------------------- 
 ### Cost function :
 	It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
 	regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
