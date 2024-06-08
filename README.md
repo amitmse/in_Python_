@@ -9,7 +9,7 @@
 
 03. **Random Forest**: https://github.com/amitmse/in_Python_/tree/master/Random_Forest#readme
 
-04. **Naive Bayes**: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes
+04. **Naive Bayes**: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes#readme
 
 05. **Boosting (ADA & GBM)**: https://github.com/amitmse/in_Python_/tree/master/Boosting
 
