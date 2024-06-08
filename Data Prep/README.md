@@ -27,4 +27,5 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Information_value_
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Bin.py
 
+    Monotonic Binning of a variable
 
