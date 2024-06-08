@@ -5,7 +5,7 @@
 01. **Logistic Regression Algorithm Coded in Python**: 
     https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 
-02. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree
+02. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#readme
 
 03. **Random Forest**: https://github.com/amitmse/in_Python_/tree/master/Random_Forest
 
