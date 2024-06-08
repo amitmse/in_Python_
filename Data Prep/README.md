@@ -21,15 +21,13 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/EDA.py
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Information_value_calculation.py
 
+    Compute Information value of a variable
+
 # Monotonic Binning : 
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Monotonic_Binning.py
 
-https://www.analyticsvidhya.com/blog/2015/08/interactive-data-visualization-library-python-bokeh/
 
-https://www.geeksforgeeks.org/decorators-in-python/
-
--  sample code : https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Info.py
 ------------------------------------------------------------
 
 https://open.oregonstate.edu/courses/permaculture/
