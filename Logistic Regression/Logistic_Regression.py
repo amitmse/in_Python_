@@ -1,6 +1,7 @@
 
 ###################################################################################
-### Logistic Regression Algorithm coded in Python (https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression)
+### Logistic Regression Algorithm coded in Python
+### https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 ### Data Preparation for Logistic Regression
 ###################################################################################
 #Import python libraries
