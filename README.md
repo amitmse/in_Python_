@@ -3,7 +3,7 @@
 #######################################################################################
 
 01. **Logistic Regression Algorithm Coded in Python**: 
-    https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
+    https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression#readme
 
 02. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#readme
 
