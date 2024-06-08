@@ -11,9 +11,6 @@ Basic operation in Python 2.7
     - Lift table/KS
     - PSI
     
--  sample code : https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Info.py
-
-
 # Exploratory Data Analysis (EDA) :   
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/EDA.py
@@ -30,6 +27,7 @@ https://www.analyticsvidhya.com/blog/2015/08/interactive-data-visualization-libr
 
 https://www.geeksforgeeks.org/decorators-in-python/
 
+-  sample code : https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Info.py
 ------------------------------------------------------------
 
 https://open.oregonstate.edu/courses/permaculture/
