@@ -2,9 +2,9 @@
 
 Basic operation in Python 2.7
 
-# Basic Syntex : 
+# SAS to Python:
 
--  SAS to Python : https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20check.py
+https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20check.py
 
     - Basic SAS functions in python
     - Proc contents
