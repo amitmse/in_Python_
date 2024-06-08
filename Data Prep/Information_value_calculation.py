@@ -1,6 +1,6 @@
-
-#https://towardsdatascience.com/a-data-scientists-toolkit-to-encode-categorical-variables-to-numeric-d17ad9fae03f
-    
+####################################################################
+## Compute Information value of a variable
+####################################################################    
 from __future__ import print_function
 import subprocess
 import sys
@@ -168,4 +168,4 @@ info_val_overall.columns = info_val_overall.columns.str.split('|').str[0]
 info_val_overall.rename(columns = {'sum':'Information_value'}, inplace = True)
 info_val_overall
 #################################################################################################
-
+#https://towardsdatascience.com/a-data-scientists-toolkit-to-encode-categorical-variables-to-numeric-d17ad9fae03f
