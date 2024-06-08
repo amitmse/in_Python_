@@ -20,7 +20,7 @@
 08. **Data Preparation**: Basic SAS functions in python, Exploratory Data Analysis, Info Val 
     https://github.com/amitmse/in_Python_/tree/master/Data%20Prep#readme
 
-09. **Basic statistics**: Probability Distribution
+09. **Basic statistics**:
     https://github.com/amitmse/in_Python_/blob/master/Others/README.md
     
 #######################################################################################
