@@ -13,7 +13,7 @@
 
 05. **Boosting (ADA & GBM)**: https://github.com/amitmse/in_Python_/tree/master/Boosting#readme
 
-06. **Neural Network**: https://github.com/amitmse/in_Python_/tree/master/Neural%20Network
+06. **Neural Network**: https://github.com/amitmse/in_Python_/tree/master/Neural%20Network#readme
 
 07. **Cluster Analysis**: https://github.com/amitmse/in_Python_/tree/master/Cluster%20Analysis
 
