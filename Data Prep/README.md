@@ -2,7 +2,8 @@
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20check.py
 
-    - Proc contents
+    - Import, Export, Proc contents, Freq, Means
+    - Create variable, duplicate, append, merge, Transpose, Correlation, Lag, first dot, 
     - Lift table/KS
     - PSI
     
