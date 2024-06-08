@@ -1,5 +1,5 @@
 ###################################################################
-### Python codes are written similar to SAS codes
+### Python codes are written similar to SAS function
 ###################################################################
 
 
