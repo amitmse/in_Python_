@@ -19,13 +19,13 @@
 
 08. **Data Preparation**: https://github.com/amitmse/in_Python_/tree/master/Data%20Prep
 
-09. **Pyspark (WIP)**: https://github.com/amitmse/in_Python_/tree/master/Pyspark
+09. **Basic statistics**: https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+
+WIP: 
+Pyspark (WIP): https://github.com/amitmse/in_Python_/tree/master/Pyspark
     
-10. **Plot / Chart (WIP)**: https://github.com/amitmse/in_Python_/tree/master/plot
+Plot / Chart (WIP): https://github.com/amitmse/in_Python_/tree/master/plot
 
-11. **SVM (WIP)**: https://github.com/amitmse/in_Python_/tree/master/SVM
-
-12. **Basic statistics**: https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+SVM (WIP): https://github.com/amitmse/in_Python_/tree/master/SVM
     
-
 #######################################################################################
