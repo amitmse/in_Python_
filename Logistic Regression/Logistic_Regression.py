@@ -1,6 +1,6 @@
 
 ###################################################################################
-### Implementation of Logistic Regression in Python
+### Logistic Regression Algorithm coded in Python
 ###################################################################################
 #Import python libraries
 import os
