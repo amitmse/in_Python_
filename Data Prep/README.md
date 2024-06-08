@@ -1,7 +1,3 @@
-# Python 2.7 : 
-
-Basic operation in Python 2.7
-
 # SAS to Python:
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20check.py
@@ -29,3 +25,6 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Bin.py
 
     Monotonic Binning of a variable
 
+# Python 2.7 : 
+
+    all codes are written in Python 2.7
