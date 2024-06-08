@@ -2,7 +2,8 @@
 
 #######################################################################################
 
-01. Logistic Regression: https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
+01. Logistic Regression: Statistical Derivation and Algorithm coded in Python
+    https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 
 02. Decision Tree: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree
 
@@ -25,5 +26,6 @@
 11. SVM (WIP): https://github.com/amitmse/in_Python_/tree/master/SVM
 
 12. Basic Stat (test): https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+    
 
 #######################################################################################
