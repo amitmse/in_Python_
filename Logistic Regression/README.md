@@ -1,7 +1,7 @@
 # Logistic Regression
-Logistic Regression is a classification technique which predicts a binary outcome.
+	Logistic Regression is a classification technique which predicts a binary outcome.
 
-https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
+	https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
 -----------------------------------------------------------------------------------------------------------------------
 ## Logistic regression assumptions: 		
