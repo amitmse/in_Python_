@@ -2,7 +2,7 @@
 
 #######################################################################################
 
-01. **Logistic Regression**: Algorithm coded in Python
+01. **Logistic Regression Algorithm coded in Python**: 
     https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 
 02. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree
