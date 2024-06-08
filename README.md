@@ -11,7 +11,7 @@
 
 04. **Naive Bayes**: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes#readme
 
-05. **Boosting (ADA & GBM)**: https://github.com/amitmse/in_Python_/tree/master/Boosting
+05. **Boosting (ADA & GBM)**: https://github.com/amitmse/in_Python_/tree/master/Boosting#readme
 
 06. **Neural Network**: https://github.com/amitmse/in_Python_/tree/master/Neural%20Network
 
