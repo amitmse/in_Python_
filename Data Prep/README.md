@@ -1,8 +1,7 @@
-# SAS to Python:
+# SAS to Python: Basic SAS functions in python
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20check.py
 
-    - Basic SAS functions in python
     - Proc contents
     - Lift table/KS
     - PSI
