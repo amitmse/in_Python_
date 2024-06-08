@@ -12,14 +12,7 @@ Logistic Regression is a classification technique which predicts a binary outcom
 	4. No perfect multicollinearity
     	  
 -----------------------------------------------------------------------------------------------------------------------
-
-## Maximum likelihood estimation (MLE): 
-	- Finds parameter values that maximize the likelihood of making the observations given the parameters
-	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
-	
------------------------------------------------------------------------------------------------------------------------
-
-## Logistic Regression coded in Python:
+## Logistic Regression Algorithm Coded in Python:
 
 https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic_Regression.py
 
@@ -81,15 +74,18 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		= -[(X*X*Exp(a + bX))/((1+Exp(a + bX))^2)]
 		= (X*X*Exp(a + bX))/((1+Exp(a + bX))^2) 
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
-				
------------------------------------------------------------------------------------------------------------------------
 
+-----------------------------------------------------------------------------------------------------------------------
+## Maximum likelihood estimation (MLE): 
+	- Finds parameter values that maximize the likelihood of making the observations given the parameters
+	- MLE allows more flexibility in the data and analysis because it has fewer restrictions
+	    
+-----------------------------------------------------------------------------------------------------------------------
 ### Cost function :
 	It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
 	regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
 		
 -----------------------------------------------------------------------------------------------------------------------
-	
 ## Types of Gradient Descent:
 
 1. Batch Gradient Descent: 
