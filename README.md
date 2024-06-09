@@ -7,7 +7,6 @@
 
             - Derivation of Logistic Regression
             - Algorithm Coded in Python
-            - Data Preparation for Logistic Regression
 
 3. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#readme
 
