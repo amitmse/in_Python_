@@ -6,7 +6,7 @@
     https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression#readme
 
             - Derivation of Logistic Regression
-            - Algorithm Coded in Python
+            - Logistic Regression Algorithm Coded in Python
 
 3. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#readme
 
