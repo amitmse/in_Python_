@@ -1,6 +1,6 @@
 # Hands-On Machine Learning with PYTHON (2.7)
 
-##########################################################################################################
+##############################################################################################
 
 1. **Logistic Regression**: https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression#readme
     
