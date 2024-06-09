@@ -10,6 +10,8 @@
 
 3. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#readme
 
+            - Explain Decision Tree Algorithms
+
 4. **Random Forest**: https://github.com/amitmse/in_Python_/tree/master/Random_Forest#readme
 
 5. **Naive Bayes**: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes#readme
