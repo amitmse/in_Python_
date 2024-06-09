@@ -22,17 +22,29 @@
 
             - Explain Naive Bayes Algorithms
 
-
 5. **Boosting (ADA & GBM)**: https://github.com/amitmse/in_Python_/tree/master/Boosting#readme
 
-6. **Neural Network**: https://github.com/amitmse/in_Python_/tree/master/Neural%20Network#readme
+            - Explain Boosting Algorithms
+            - Exmaple
 
-7. **Cluster Analysis**: https://github.com/amitmse/in_Python_/tree/master/Cluster%20Analysis#readme
+7. **Neural Network**: https://github.com/amitmse/in_Python_/tree/master/Neural%20Network#readme
 
-8. **Data Preparation**: Basic SAS functions in python, Exploratory Data Analysis, Info Val 
-    https://github.com/amitmse/in_Python_/tree/master/Data%20Prep#readme
+            - Explain Neural Network Algorithms
+            - Computation Neural Network in excel
 
-9. **Basic statistics**:
+9. **Cluster Analysis**: https://github.com/amitmse/in_Python_/tree/master/Cluster%20Analysis#readme
+
+            - Explain Cluster Analysis Algorithms
+            - K means
+            - Hierarchical Clustering      
+
+11. **Data Preparation**:  https://github.com/amitmse/in_Python_/tree/master/Data%20Prep#readme
+    
+            - Basic SAS functions in python
+            - Exploratory Data Analysis
+            - Computation of Information Value
+
+13. **Basic statistics**:
     https://github.com/amitmse/in_Python_/blob/master/Others/README.md
     
 #######################################################################################
