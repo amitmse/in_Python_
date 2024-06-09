@@ -44,7 +44,11 @@
             - Exploratory Data Analysis
             - Computation of Information Value
 
-13. **Basic statistics**:
-    https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+13. **Basic statistics**: https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+
+            - Probability Distribution
+            - Assumptions of Ordinary Least Squares
+            - Computation of Model Metrics
+            - Explain Gradient Descent    
     
 #######################################################################################
