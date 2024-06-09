@@ -1,10 +1,9 @@
 # Hands-On Machine Learning with PYTHON (2.7)
 
-#######################################################################################
+#############################################################################################################
 
-1. **Logistic Regression**: 
-    https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression#readme
-
+1. **Logistic Regression**: https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression#readme
+    
             - Derivation of Logistic Regression
             - Logistic Regression Algorithm Coded in Python
 
@@ -51,4 +50,4 @@
             - Computation of Model Metrics
             - Explain Gradient Descent    
     
-#######################################################################################
+#######################################################################################################
