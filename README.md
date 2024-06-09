@@ -30,7 +30,7 @@
 7. **Neural Network**: https://github.com/amitmse/in_Python_/tree/master/Neural%20Network#readme
 
             - Explain Neural Network Algorithms
-            - Computation Neural Network in excel
+            - Computation of Neural Network in excel
 
 9. **Cluster Analysis**: https://github.com/amitmse/in_Python_/tree/master/Cluster%20Analysis#readme
 
