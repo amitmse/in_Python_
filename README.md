@@ -10,12 +10,12 @@
 2. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#readme
 
             - Explain Decision Tree Algorithms
-            - Exmaple
+            - Exmaple: Test Run 
 
 3. **Random Forest**: https://github.com/amitmse/in_Python_/tree/master/Random_Forest#readme
 
             - Explain Random Forest Algorithms
-            - Exmaple
+            - Exmaple: Test Run 
    
 4. **Naive Bayes**: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes#readme
 
@@ -24,7 +24,7 @@
 5. **Boosting (ADA & GBM)**: https://github.com/amitmse/in_Python_/tree/master/Boosting#readme
 
             - Explain Boosting Algorithms
-            - Exmaple
+            - Exmaple: Test Run 
 
 7. **Neural Network**: https://github.com/amitmse/in_Python_/tree/master/Neural%20Network#readme
 
