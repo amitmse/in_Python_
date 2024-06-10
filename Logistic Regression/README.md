@@ -19,7 +19,7 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic_Regression.py
 
 ----------------------------------------------------------------------------------------------------------------------- 
-## Derivation of Logistic Regression:
+## Statistical Derivation of Logistic Regression:
  	Model Equation:
 		
 		Y = a + bX (Y = dependent_variable, a=Intercept, b = coefficient, X = independent_variable)
