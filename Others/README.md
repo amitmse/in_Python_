@@ -381,7 +381,11 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 ### Maximum likelihood estimation (MLE):
 - Finds parameter values that maximize the likelihood of making the observations given the parameters
 - MLE allows more flexibility in the data and analysis because it has fewer restrictions
-	
+
+### Cost function :
+	It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
+	regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
+ 
 # Model Metrics:
 - beta(x) 	= covariance(x,y) / variance(x)
 - correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
