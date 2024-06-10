@@ -4,7 +4,7 @@
 
 1. **Logistic Regression**: https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression#readme
     
-            - Derivation of Logistic Regression
+            - Statistical Derivation of Logistic Regression
             - Logistic Regression Algorithm Coded in Python
 
 2. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#readme
