@@ -87,30 +87,30 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		= (X*X*Exp(a + bX))/((1+Exp(a + bX))^2) 
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 
-		Jacobian is similar to first order derivative and Hessian is similar to second order derivative. 
-		The determinant of a matrix is also sometimes referred to as the Hessian. The Hessian matrix can 
-		be considered related to the Jacobian matrix. 
+	Jacobian is similar to first order derivative and Hessian is similar to second order derivative. 
+	The determinant of a matrix is also sometimes referred to as the Hessian. The Hessian matrix can 
+	be considered related to the Jacobian matrix. 
 
-  		Hessian matrices are used in large-scale optimization problems within Newton-type methods because 
-    		they are the coefficient of the quadratic term of a local Taylor expansion of a function. 
+  	Hessian matrices are used in large-scale optimization problems within Newton-type methods because 
+    	they are the coefficient of the quadratic term of a local Taylor expansion of a function. 
       
-      		A bordered Hessian (Lagrange function) is used for the second-derivative test in certain 
-		constrained optimization problems.
+      	A bordered Hessian (Lagrange function) is used for the second-derivative test in certain 
+	constrained optimization problems.
   
-  		The Hessian matrix of a convex function is positive semi-definite. And this property allows us to test 
-    		if a critical point x is a local maximum, local minimum, or a saddle point, as follows:
-	 		- If the Hessian is positive definite at x, then f attains an isolated local minimum at x (concave up)	
-	 		- If the Hessian is negative definite at x, then f attains an isolated local maximum at x (concave down)	 
-	 		- If the Hessian has both positive and negative eigenvalues then x is a saddle point for f. 
-	   		  Otherwise the test is inconclusive. Graph is concave up in one direction and concave down in the other.
-			- This implies that, at a local minimum (respectively, a local maximum), the Hessian is 
-   			positive-semi-definite (respectively, negative semi-definite).
+  	The Hessian matrix of a convex function is positive semi-definite. And this property allows us to test 
+    	if a critical point x is a local maximum, local minimum, or a saddle point, as follows:
+	- If the Hessian is positive definite at x, then f attains an isolated local minimum at x (concave up)	
+	- If the Hessian is negative definite at x, then f attains an isolated local maximum at x (concave down)	 
+	- If the Hessian has both positive and negative eigenvalues then x is a saddle point for f. 
+	  Otherwise the test is inconclusive. Graph is concave up in one direction and concave down in the other.
+	- This implies that, at a local minimum (respectively, a local maximum), the Hessian is 
+   	  positive-semi-definite (respectively, negative semi-definite).
 	  
-		If the gradient (the vector of the partial derivatives) of a function f is zero at some point x, 
-  		then f has a critical point (or stationary point) at x. 
+	If the gradient (the vector of the partial derivatives) of a function f is zero at some point x, 
+  	then f has a critical point (or stationary point) at x. 
   
-  		The determinant of the Hessian at x is then called the discriminant. If this determinant is zero 
-    		then x is called a degenerate critical point of f. Otherwise it is non-degenerate.
+  	The determinant of the Hessian at x is then called the discriminant. If this determinant is zero 
+    	then x is called a degenerate critical point of f. Otherwise it is non-degenerate.
 	  
 -----------------------------------------------------------------------------------------------------------------------
 
