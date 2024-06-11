@@ -31,7 +31,10 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		1 - Y 		= Exp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}    = 1/(1+exp^y)
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
-	
+		  
+   		A sigmoid function is any mathematical function whose graph has a characteristic S-shaped or sigmoid curve, and 
+     		logistic / logit function has the same property of a sigmoid function.     		
+ 
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Maximum Likelihood: 
