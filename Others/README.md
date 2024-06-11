@@ -79,7 +79,7 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/distribution.png)
 
-
+---------------------------------------------------------------------------------------------
 ## Uniform distribution:
 - Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
 - It can be defined for any number of outcomes or even as a continuous distribution.
@@ -90,7 +90,7 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 Example: 
 	- Imagine rolling a fair die. The outcomes 1 to 6 are equally likely.
 
-
+---------------------------------------------------------------------------------------------
 ## Bernoulli distribution:
 - Bernoulli distribution has only two possible outcomes i.e. success and failure in a single trial
 - The Bernoulli PDF has two lines of equal height, representing the two equally-probable outcomes of 0 and 1 at either end.
@@ -103,7 +103,7 @@ Example:
 	- Flipping a fair coin
 	- it’s going to rain tomorrow or not
 
-
+---------------------------------------------------------------------------------------------
 ## Binomial distribution:
 - The binomial distribution may be thought of as the sum of outcomes of things that follow a Bernoulli distribution.
 - Function
@@ -120,7 +120,7 @@ Example:
 	  then put it back and Repeat this process. How many times black ball was drawn? 
 	  This count also follows a binomial distribution.
 	
-	
+---------------------------------------------------------------------------------------------	
 ## Hyper-Geometric distribution:
 - Example: 
 	- This is the distribution of that same count if the balls were drawn without replacement instead. 
@@ -129,7 +129,7 @@ Example:
 	- If the number of balls is large relative to the number of draws, the distributions are similar
 	  because the chance of success changes less with each draw.
 	
-	
+---------------------------------------------------------------------------------------------	
 ## Poisson distribution:
 - Simialr to the binomial distribution, the Poisson distribution is the distribution of a 
   count - the count of times something happened. 
@@ -149,7 +149,7 @@ Example:
 	- The number of printing errors at each page of the book.
 	- The number of incoming calls at a call center in a day.
 	
-	
+---------------------------------------------------------------------------------------------	
 ## Geometric distribution:
 - If the binomial distribution is “How many successes?” then the geometric distribution is
   “How many failures until a success?”
@@ -157,11 +157,12 @@ Example:
 	- From simple Bernoulli trials arises another distribution. How many times does a flipped coin 
 	  come up tails before it first comes up heads? This count of tails follows a geometric distribution.
 
-
+---------------------------------------------------------------------------------------------
 ## Negative Binomial distribution:
 - It's a simple generalization. It’s the number of failures until r successes have occurred,not just 1.
 - Example: 
-		
+
+---------------------------------------------------------------------------------------------  
 ## Exponential distribution:
 - The exponential distribution is one of the widely used continuous distributions. 
 - It is often used to model the time elapsed between events.
@@ -185,7 +186,7 @@ Example:
 	- Age of plants or animals
 	- Very simple model used by insurance companies
 
-
+---------------------------------------------------------------------------------------------
 ## Weibull:
 - Weibull distribution can model increasing (or decreasing) rates of failure over time. 
 - The exponential is merely a special case.
@@ -193,7 +194,7 @@ Example:
 - Weibull isn’t an appropriate model for every situation i.e. chemical reactions and corrosion failures are 
   usually modeled with the lognormal distribution.
 
-
+---------------------------------------------------------------------------------------------
 ## Normal Distribution:
 - The sum of Bernoulli trials follows a binomial distribution, and as the number of trials increases, 
   that binomial distribution becomes more like the normal distribution. 
@@ -211,6 +212,7 @@ Example:
 - Example:
 	- Heights of people, Measurement errors, Blood pressure, Points on a test, IQ scores, Salaries.
 
+---------------------------------------------------------------------------------------------
 ### Standard Normal distribution: 
 - It is also known as the Z distribution and it follows normal distribution 
   with a mean of zero and a variance of one.
@@ -220,7 +222,7 @@ Example:
 	  the mean. In English, it’s only one standard deviation above the mean. It tells you that in Math, 
   	  your score is far higher than most of the students (your score falls into the tail).
 
-
+---------------------------------------------------------------------------------------------
 ### Z-test:
 - The sample is assumed to be normally distributed. A z-score is calculated with population parameters 
   such as "population mean" and "population standard deviation" and is used to validate a hypothesis 
@@ -230,6 +232,7 @@ Example:
 	- Mean  	: 0
 	- Variance 	: 1			  
 
+---------------------------------------------------------------------------------------------
 ## t /Student  Distribution:
 - The t test tells how significant the differences between groups are. A t-test is used to compare the mean of 
   two given samples.
@@ -250,7 +253,7 @@ Example:
 	- Paired sample t-test which compares means from the same group at different times. 
 	  Choose the paired t-test if you have two measurements on the same item, person or thing
 		
-		
+---------------------------------------------------------------------------------------------		
 ## Chi-Squared Distribution :
 - Tests for the strength of the association between two categorical variables. Chi Square lets you know whether 
   two groups have significantly different opinions, which makes it a very useful statistic for survey research.
@@ -270,11 +273,11 @@ Example:
 	- Log-rank test in survival analysis
 	- Cochran–Mantel–Haenszel test for stratified contingency tables
 
-
+---------------------------------------------------------------------------------------------
 ## Likelihood-ratio :
 - This test assesses the goodness of fit of two competing statistical models based on the ratio of their likelihoods
 
-
+---------------------------------------------------------------------------------------------
 ## F-test:
 - F-test of equality of variances is a test for the null hypothesis that two normal populations have the same variance. 
 
