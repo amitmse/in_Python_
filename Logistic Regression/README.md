@@ -132,7 +132,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
        		   Its benifical for huge datasets.
 
 ### Gradient Descent vs Newton's method
-		### Gradient Descent:
+#### Gradient Descent:
 		- Simple
 		- Need learning Rate
 		- 2nd derivate not required
@@ -140,7 +140,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		- Each iteration is cheap (no 2nd derivative )
 		- If number of observation is large then its cheaper
 
-### Newton's method:
+#### Newton's method:
 		- Complex
 		- No learning Rate required
 		- 2nd derivate is required
