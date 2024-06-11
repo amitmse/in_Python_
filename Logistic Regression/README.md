@@ -103,9 +103,10 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	  
 -----------------------------------------------------------------------------------------------------------------------
 ### Maximum likelihood estimation (MLE):
-- Logistic Regression uses Maximum likelihood estimation finds parameter values that maximize the likelihood of making
-  the observations given the parameters. Linear regression uses Ordinary Least Squares (OLS) which finds parameter values that minimizing the error.
-- MLE allows more flexibility in the data and analysis because it has fewer restrictions
+		- Logistic Regression uses Maximum likelihood estimation finds parameter values that maximize 
+  		  the likelihood of making the observations given the parameters. 
+      		  Linear regression uses Ordinary Least Squares (OLS) which finds parameter values that minimizing the error.
+		- MLE allows more flexibility in the data and analysis because it has fewer restrictions
 
 ### Cost function :
 	- It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
