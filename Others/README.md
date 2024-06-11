@@ -65,12 +65,18 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 ---------------------------------------------------------------------------------------------
 
 # Probability Distribution:
-- Probability distributions describe what we think the probability of each outcome is.
+- Probability distributions function (PDF) describe what we think the probability of each outcome is.
+- probability mass function is used to describe the probabilities of discrete random variables,
+  while the PDF is used to describe the probabilities of continuous random variables.
 - They come in many shapes, but in only one size: probabilities in a distribution always add up to 1.
 - A probability distribution is a function that assigns to each event a number in [0,1] which is 
   the probability that this event occurs.
 - A statistical model is a set of probability distributions. We assume that the observations are generated 
   from one of these distributions.
+- Why Probability Density and why not Probability: The concept of probability density is used for continuous random variables because in such cases, the probability of any specific value is infinitesimally small.
+  This is because the number of possible values that a continuous random variable can take is infinite, making it impossible to assign a non-zero probability to any individual value.
+  Instead, we use probability density to describe the distribution of continuous random variables.
+- The probability distribution shows the probability of a point, and the CDF tells the probability of everything up to that point.  
 - Chart: Horizontal axis set of possible numeric outcomes. Vertical axis probability of outcomes.
 - Example:
 	- Flipping a fair coin has two outcomes: it lands heads or tails. 
@@ -135,6 +141,7 @@ Example:
   count - the count of times something happened. 
 - The Poisson distribution is when trying to count events over a time given the continuous rate of events occurring
 - Poisson Distribution is a limiting case of binomial distribution.
+  As n approaches ∞ and p approaches 0 with the product np held fixed, the Binomial (n, p) distribution approaches the Poisson distribution with expected value λ = np.
 - Function								
 	- PDF		: Expo(-Mean)*{(Mean^x)/x!} 		{x in o,1,2,3,4,5}
 	- Mean  	: Mean
@@ -195,7 +202,7 @@ Example:
   usually modeled with the lognormal distribution.
 
 ---------------------------------------------------------------------------------------------
-## Normal Distribution:
+## Normal Distribution / Gaussian distribution:
 - The sum of Bernoulli trials follows a binomial distribution, and as the number of trials increases, 
   that binomial distribution becomes more like the normal distribution. 
 - Its cousin the hyper-geometric distribution does too. 
@@ -204,7 +211,12 @@ Example:
 - The mean, median and mode of the distribution coincide.
 - The curve of the distribution is bell-shaped and symmetrical about the line x=μ.
 - Normal distribution is another limiting form of binomial distribution.
+- As n approaches ∞ while p remains fixed, the distribution of approaches the normal distribution with expected value 0 and variance 1.
+  This result is sometimes loosely stated by saying that the distribution of X is asymptotically normal with expected value 0 and variance 1.
+  This result is a specific case of the central limit theorem.
 - Its popular due to Central Limit Theorem.
+  The central limit theorem states that under certain (fairly common) conditions, the sum of many random variables will have an approximately normal distribution.
+  The logarithm of various variables tend to have a normal distribution, that is, they tend to have a log-normal distribution 
 - Function								
 	- PDF		: [1/{SQRT(2Pai)*STD}]*Expo[(X-Mean)^2/-2Variance]   {-infinite <-x-> infinite}
 	- Mean  	: Mean
@@ -212,6 +224,10 @@ Example:
 - Example:
 	- Heights of people, Measurement errors, Blood pressure, Points on a test, IQ scores, Salaries.
 
+
+- In the Bayesian approach, all uncertainty is measured by probability.
+  The Bayesian approach assumes the 'a priori' knowledge of probability models, in such a way that it is possible to build exact models of phenomena starting
+  from experimental data, and then use the models to make predictions.
 ---------------------------------------------------------------------------------------------
 ### Standard Normal distribution: 
 - It is also known as the Z distribution and it follows normal distribution 
