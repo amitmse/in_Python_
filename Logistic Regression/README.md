@@ -65,8 +65,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	Cost function :
 		- The logistic regression cost function, also known as the log loss.
 		- It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
-		  regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual. 	
- 		- Sigmoid function  
+		  regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
+    
 -----------------------------------------------------------------------------------------------------------------------
 
 	Gradient of Log Likelihood Function : 
@@ -203,4 +203,37 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 			X3	= X2 - f(X2)/f'(X2)  
 				= 17/6 - [(17/6)^2 - 8]/[2(17/6)]  
 				= 2.828 
------------------------------------------------------------------------------------------------------------------------    
+    
+-----------------------------------------------------------------------------------------------------------------------
+
+### Metrics:
+
+	beta(x) 					= covariance(x,y) / variance(x)
+	Standard Error of Coefficient 			= The standard error of the coefficient estimates the variability that would be obtained if samples are taken from the same population again and again. 
+ 							  The calculation assumes that the sample size and the coefficients to estimate would remain same if the sample is taken repeatedly. 
+	  						  Use standard error of the coefficient to measure the precision of the estimate of the coefficient. The smaller the standard error, the more precise the estimate.
+	   
+	correlation(x,y) 				= covariance(x,y) / [variance(x)*variance(y)]
+ 
+	AIC						= (No of variable*2) - (2*-Log Likelihood)
+ 							   "2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. 
+	  						   Ordinary least squares minimizes RSS and LR minimizes deviance.
+ 
+	BIC						= {No of variable*log(No of obs)} - (2*-Log Likelihood)
+ 
+	Gini/Somer’s D 					= [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+	Area under curve /C statistics 			= Percent Concordant + 0.5 * Percent Tied	
+								(The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.)
+								True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate (100-Specificity : X axis) for different cut-off points. 
+								Each point on the ROC curve represents a sensitivity/specificity pair corresponding to a particular decision threshold. 
+
+ 	Divergence 					= [(meanG – meanB)^2] / [0.5(varG + varB)]	[meanG = mean of score only for good, varB= variance of score only for bad ]
+
+	TSS 						= SUM[y-mean(y)]^2
+	RSS 						= SUM[y-predicted(y)]^2
+	R Squared					= 1.0 - (RSS/TSS)
+	VIF 						= 1.0 / (1.0 - R Squared)
+
+
+-----------------------------------------------------------------------------------------------------------------------
+    
