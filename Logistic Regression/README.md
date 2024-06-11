@@ -26,7 +26,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	
 -----------------------------------------------------------------------------------------------------------------------
 
-### Logit function/Sigmoid Function:
+### Logit function / Sigmoid Function:
 		Y 		= Exp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}] = 1/(1+exp^-y)
 		1 - Y 		= Exp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}    = 1/(1+exp^y)
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
