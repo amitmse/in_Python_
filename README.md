@@ -6,7 +6,8 @@
     
             - Statistical Derivation of Logistic Regression
             - Logistic Regression Algorithm Coded in Python
-            - Explain: Gradient Descent, Metrics
+            - Brief of Gradient Descent
+            - Computation of Metrics
 
 3. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#readme
 
