@@ -1,3 +1,4 @@
+------------------------------------------------------------------------------------------------------
 # Type of data:
 ### Nominal / categorical/qualitative /non-parametric:  
 		Example	: 	colour,gender. 
@@ -32,7 +33,7 @@
 		Imbalanced data refers to those types of datasets where the target class has an uneven 
 		distribution of observations, i.e one class label has a very high number of observations 
 		and the other has a very low number of observations (rare event i.e., Fraud)
-		
+------------------------------------------------------------------------------------------------------		
 #### Under-sampling: 
 - Under-sampling balances the dataset by reducing the size of the abundant class. This method is used when quantity of data is sufficient. By keeping all samples in the rare class and randomly selecting an equal number of samples in the abundant class, a balanced new dataset can be retrieved for further modelling.
 
@@ -160,8 +161,7 @@ Example:
 ## Negative Binomial distribution:
 - It's a simple generalization. It’s the number of failures until r successes have occurred,not just 1.
 - Example: 
-	
-	
+		
 ## Exponential distribution:
 - The exponential distribution is one of the widely used continuous distributions. 
 - It is often used to model the time elapsed between events.
@@ -210,7 +210,6 @@ Example:
 	- Variance 	: Variance
 - Example:
 	- Heights of people, Measurement errors, Blood pressure, Points on a test, IQ scores, Salaries.
-
 
 ### Standard Normal distribution: 
 - It is also known as the Z distribution and it follows normal distribution 
@@ -315,7 +314,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 - Known as analysis of variance, is used to compare multiple (three or more) samples with a single test 
 	i.e. all sample means are equal
 	
-
+------------------------------------------------------------------------------------------------------
 # Ordinary Least Squares (OLS): 
 - Finds parameter values that minimizing the error. 
 ## Assumptions of Linear regression: 
@@ -364,7 +363,8 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 
 #### Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
-	
+------------------------------------------------------------------------------------------------------
+
 # Logistic regression 
 - It uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) tested in statistical analysis.
 ### Assumptions:
@@ -378,14 +378,6 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 	- homoscedasticity
 	- normal errors
 	
-### Maximum likelihood estimation (MLE):
-- Finds parameter values that maximize the likelihood of making the observations given the parameters
-- MLE allows more flexibility in the data and analysis because it has fewer restrictions
-
-### Cost function :
-	It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
-	regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
- 
 # Model Metrics:
 - beta(x) 	= covariance(x,y) / variance(x)
 - correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
@@ -400,7 +392,6 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 
 			[meanG = mean of score only for good, varB= variance of score only for bad ]
 			
-
 - True Positives (TP) = Correctly Identified
 - True Negatives (TN) = Correctly Rejected
 - False Positives (FP) = Incorrectly Identified = Type I Error
@@ -437,8 +428,6 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 - MCC: correlation coefficient between the observed and predicted binary classifications.
 - AUC: relation between true-positive rate and false positive rate.
 - Accuracy is not appropriate when the data is imbalanced. Because the model can achieve higher accuracy by just predicting accurately the majority class while performing poorly on the minority class which in most cases is the class we care about the most.
-
-
 
 - Accuracy paradox: if the incidence of category A is dominant, being found in 99% of cases, then predicting that every case is category A will have an accuracy of 99%. Precision and recall are better measures in such cases. The underlying issue is that there is a class imbalance between the positive class and the negative class. Prior probabilities for these classes need to be accounted for in error analysis. Precision and recall help, but precision too can be biased by very unbalanced class priors in the test sets.
 
@@ -478,98 +467,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 			N_t 	: No. of samples at the current node
 			N_t_L 	: No. of samples in the left child 
 			N_t_R 	: No. of samples in the right child
-
-# Types of Gradient Descent:
-1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost function hence and it's very slow.
-	- Cost function is calculated after the initialization of parameters.
-	- It reads all the records into memory from the disk.
-	- After calculating sigma for one iteration, we move one step further, and repeat the process.
-
-2. Mini-batch Gradient Descent: It is a widely used algorithm that makes faster and accurate results. The dataset, here, is clustered into small groups of ‘n’ training datasets hence it's faster. In every iteration, it uses a batch of ‘n’ training datasets to compute the gradient of the cost function. It reduces the variance of the parameter updates, which can lead to more stable convergence. It can also make use of a highly optimized matrix that makes computing of the gradient very efficient.
-
-3. Stochastic Gradient Descent: Stochastic gradient descent used for faster computation. First, it randomizes the complete dataset, and then uses only one training example in every iteration to calculate the gradient. Its benifical for huge datasets.
-
-### Gradient Descent vs Newton's method
-### Gradient Descent:
-- Simple
-- Need learning Rate
-- 2nd derivate not required
-- More number of iterations
-- Each iteration is cheap (no 2nd derivative )
-- If number of observation is large then its cheaper
-
-### Newton's method:
-- Complex
-- No learning Rate required
-- 2nd derivate is required
-- Less number of iteration
-- Each iteration is expesive (2nd derivative )
-- If less number of observation (may be 1000) then its cheaper
-
-### Solve a equation (identify beta):  
-
-#### 1. Calculus: 
-	It will faster if equation is simple. But in real life equations are very complex and messy and 
-	its difficult to solve.   
-			f(x) 	= X^2 - 2X + 2   
-			df/dx 	= 2X - 2  
-			2X	= 2  
-			X	= 1   
-	
-#### 2. Gradient Descent:   
-			Xi+1 = Xi - a f'(Xi)  	
-			[Xi = initial guess, a = learning rate or step length or jump, Xi+1 = next guess]  
-			f(x) 	= X^2 - 2X + 2  
-			df/dx 	= 2X - 2  
-			apply "Xi+1 = Xi - a f'(Xi)" on above equation. start with zero "0"  
-			X1 = X0 - 0.2f'(3)			X0= 3 (initial guess), a=0.2 (guess)  
-			X1 = 3  - 0.2(4)			[put 3 in "2X - 2": 2*3 - 2 = 6-2 =4]  
-			X1 = 3 - 0.8  
-			X1 = 2.2  
-			X2 = X1 - 0.2f'(X1)  
-			X2 = 2.2 - 0.2(2.4)			[put 2.2 in "2X - 2": 2*2.2 - 2 = 4.4-2 =2.4]  
-			X2 = 1.72  
-			X3 = X2 - 0.2f'(X2)  
-			X3 = 1.72 - 0.2(1.44)		[put 1.72 in "2X - 2": 2*1.72 - 2 = 3.44-2 =1.44]  
-			X3 = 1.72 - 0.288  
-			X3 = 1.432  
-			
-	continue doing this untill we are close to 1 which is the exact solution. As we approach to local minimum, 
-	Gradient Descent will automatically take smaller steps. So no need to decrease "a" over time. 
-	optimization gradient descent:
-			cX + d 		= Y [equation of line and solve this for c & d]  
-			(cX + d) -  Y 	= 0 ( "cX + d" is predected Y^, Y^-Y is error and it should be zero)   
-			min by(a,b) 	= sum ([cX + d]-Yi)^2		[c = cofficient, d=intercept]  
-		
-	First make initial guess for c & d then do the derivative by c & d seperately to get the optimium value of c & d. 
-	Above process will apply on Gradient Descent "Xi+1 = Xi - a f'(Xi)". Gradient descent is based on 1st derivatives 
-	only and it use all data at one time. Gradient descent generally requires more iterations. If data size is big then 
-	it will take long time to compute.
-			
-	Stochastic Gradient descent: It takes portion of data at one time and do the computation and continue in same way. 
-	cofficients are not exactly equals to Gradient descent but its close. 
-	For BIG data its only option to apply Gradient descent in faster way.
-			
-#### 3. Newton Raphson:   
-	Newton's method generally requires fewer iterations, but each iteration is slow as we need to 
-	compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must 
-	supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate).
-	(http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf)
-	
-			Xn+1 	= Xn - f(X)/f'(X)  
-			f(X) 	= X^2 - 8  
-			f'(X)	= 2X  
-			X1	= 3 (guess)  
-			X2	= X1 - f(X)/f'(X)  
-				= 3  - [(3^2-8)/2*3]  
-				= 3  - (1/6)  
-				= 18-1/6  
-				= 17/6  
-			X3	= X2 - f(X2)/f'(X2)  
-				= 17/6 - [(17/6)^2 - 8]/[2(17/6)]  
-				= 2.828 
-
-
+------------------------------------------------------------------------------------------------------
 # Decision Tree 
 ## Gini Index:
 Gini index says, if we select two items from a population at random then they must be of same class and probability for this is 1 if population is pure.
@@ -612,7 +510,7 @@ Gini index says, if we select two items from a population at random then they mu
 			- Subtract the sum from 1. #This is the Ginin Index for branch
 	    	- Weight each branch based on the baseline probability.
 	    	- Sum the weighted gini index for each split.
-
+------------------------------------------------------------------------------------------------------
 ## Chi-Square:
 - It is an algorithm to find out the statistical significance between the differences between sub-nodes and parent node. We measures it by sum of squares of standardized differences between observed and expected frequencies of target variable.
 - It works with categorical target variable “Success” or “Failure”.
@@ -701,8 +599,8 @@ Gini index says, if we select two items from a population at random then they mu
 	- Variance for Split Gender =Weighted Variance of Sub-nodes = (14/30)*0.24 + (16/30) *0.25 = 0.25
 Above, you can see that Gender split has lower variance compare to parent node so 
 the split would be on Gender only.
-
-# Random FOrest
+------------------------------------------------------------------------------------------------------
+# Random Forest
 ## Bootstrap samples:
 - Draw repeated samples from the population, a large number of times. 
 - Samples are approximatively independent and identically distributed (i.i.d.).
@@ -720,7 +618,7 @@ the split would be on Gender only.
 
 ## Stacking:
 - Stacking mainly differ from bagging and boosting on two points. First stacking often considers heterogeneous weak learners (different learning algorithms are combined) whereas bagging and boosting consider mainly homogeneous weak learners. Second, stacking learns to combine the base models using a meta-model whereas bagging and boosting combine weak learners following deterministic algorithms.
-	
+------------------------------------------------------------------------------------------------------	
 ## Bias - Variance
 ### Bias: 
 - Bias is the difference between the prediction of model and actual value. 
@@ -734,7 +632,6 @@ the split would be on Gender only.
 - If model has large number of parameters then it’s going to have high variance and low bias
 - For high variance, one common solution is to reduce parameter/features. 
 - This very frequently increases bias, so there’s a tradeoff to take into consideration.
-
 
 ## Mean Decrease in Accuracy (MDA) / Accuracy-based importance / Permutation Importance:
 - The values of the variable in the out-of-bag-sample are randomly shuffled, keeping all other variables the same. Finally, the decrease in prediction accuracy on the shuffled data is measured. 
@@ -770,35 +667,6 @@ the split would be on Gender only.
 		- costx1<1 = FractionL Gini(8,4,0) + FractionR Gini(11,17,40) = 12/80 * 0.4444 + 68/80 * 0.5653 = 0.5417
 	- After that, we chose the split with the lowest cost. This is the split x1 < 2.0623 with a cost of 0.4331.
 
------------------------------------------------------------------------------------------------------------------------
-		
-	Jacobian is similar to first order derivative and Hessian is similar to second order derivative. 
-	The determinant of a matrix is also sometimes referred to as the Hessian. The Hessian matrix can 
-	be considered related to the Jacobian matrix. Hessian matrices are used in large-scale optimization 
-	problems within Newton-type methods because they are the coefficient of the quadratic term of a local 
-	Taylor expansion of a function. A bordered Hessian (Lagrange function) is used for the second-derivative 
-	test in certain constrained optimization problems. The Hessian matrix of a convex function is positive 
-	semi-definite. And this property allows us to test if a critical point x is a local maximum, local minimum, 
-	or a saddle point, as follows:
-	 - If the Hessian is positive definite at x, then f attains an isolated local minimum at x (concave up)
-	 
-	 - If the Hessian is negative definite at x, then f attains an isolated local maximum at x (concave down)
-	 
-	 - If the Hessian has both positive and negative eigenvalues then x is a saddle point for f. 
-	   Otherwise the test is inconclusive. Graph is concave up in one direction and concave down in the other.
-	   
-	- This implies that, at a local minimum (respectively, a local maximum), the Hessian is positive-semi-definite
-	  (respectively, negative semi-definite).
-	  
-	If the gradient (the vector of the partial derivatives) of a function f is zero at some point x, then f has a
-	critical point (or stationary point) at x. The determinant of the Hessian at x is then called the discriminant.
-	If this determinant is zero then x is called a degenerate critical point of f. Otherwise it is non-degenerate.
-	  
-	Jacobian matrix is the matrix of first-order partial derivatives of a vector-valued function. When the matrix 
-	is a square matrix, both the matrix and its determinant are referred to as the Jacobian determinant. 
-	The Jacobian of the gradient of a scalar function of several variables has a special name: the Hessian matrix, 
-	which in a sense is the "second derivative" of the function.
-				
 -----------------------------------------------------------------------------------------------------------------------
 WIP: 
 
