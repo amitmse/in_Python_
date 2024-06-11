@@ -92,14 +92,14 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	 		- If the Hessian is negative definite at x, then f attains an isolated local maximum at x (concave down)	 
 	 		- If the Hessian has both positive and negative eigenvalues then x is a saddle point for f. 
 	   		  Otherwise the test is inconclusive. Graph is concave up in one direction and concave down in the other.
-			- This implies that, at a local minimum (respectively, a local maximum), the Hessian is positive-semi-definite
-	  		  (respectively, negative semi-definite).
+			- This implies that, at a local minimum (respectively, a local maximum), the Hessian is 
+   			positive-semi-definite (respectively, negative semi-definite).
 	  
-		If the gradient (the vector of the partial derivatives) of a function f is zero at some point x, then f has a
-		critical point (or stationary point) at x. 
+		If the gradient (the vector of the partial derivatives) of a function f is zero at some point x, 
+  		then f has a critical point (or stationary point) at x. 
   
-  		The determinant of the Hessian at x is then called the discriminant. If this determinant is zero then x is called 
-    		a degenerate critical point of f. Otherwise it is non-degenerate.
+  		The determinant of the Hessian at x is then called the discriminant. If this determinant is zero 
+    		then x is called a degenerate critical point of f. Otherwise it is non-degenerate.
 	  
 -----------------------------------------------------------------------------------------------------------------------
 ### Maximum likelihood estimation (MLE):
