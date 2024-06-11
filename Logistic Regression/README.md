@@ -224,7 +224,12 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
  		the same population again and again. The calculation assumes that the sample size and the coefficients to estimate 
   		would remain same if the sample is taken repeatedly. Use standard error of the coefficient to measure the precision 
    		of the estimate of the coefficient. The smaller the standard error, the more precise the estimate.
-	   
+
+		https://www.proteus.co.nz/news-tips-and-tricks/calculating-standard-errors-for-logistic-regressionlogit-link-using-the-delta-method
+		P 	= ( e^b ) / ( 1 + e^b )		e: Exponential, b: Beta
+		SE(P) 	= SE(b) X [P X ( 1-P )]		SE:Standard Error, P: Probability
+		SE(b) 	= SE(P) / [P X ( 1-P )]		
+		
 	- correlation(x,y): covariance(x,y) / [variance(x)*variance(y)]
  
 	- AIC: (No of variable*2) - (2*-Log Likelihood)
