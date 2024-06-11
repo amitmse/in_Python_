@@ -77,6 +77,44 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 
 -----------------------------------------------------------------------------------------------------------------------
+Jacobian is similar to first order derivative and Hessian is similar to second order derivative. 
+	The determinant of a matrix is also sometimes referred to as the Hessian. The Hessian matrix can 
+	be considered related to the Jacobian matrix. Hessian matrices are used in large-scale optimization 
+	problems within Newton-type methods because they are the coefficient of the quadratic term of a local 
+	Taylor expansion of a function. A bordered Hessian (Lagrange function) is used for the second-derivative 
+	test in certain constrained optimization problems. The Hessian matrix of a convex function is positive 
+	semi-definite. And this property allows us to test if a critical point x is a local maximum, local minimum, 
+	or a saddle point, as follows:
+	 - If the Hessian is positive definite at x, then f attains an isolated local minimum at x (concave up)
+	 
+	 - If the Hessian is negative definite at x, then f attains an isolated local maximum at x (concave down)
+	 
+	 - If the Hessian has both positive and negative eigenvalues then x is a saddle point for f. 
+	   Otherwise the test is inconclusive. Graph is concave up in one direction and concave down in the other.
+	   
+	- This implies that, at a local minimum (respectively, a local maximum), the Hessian is positive-semi-definite
+	  (respectively, negative semi-definite).
+	  
+	If the gradient (the vector of the partial derivatives) of a function f is zero at some point x, then f has a
+	critical point (or stationary point) at x. The determinant of the Hessian at x is then called the discriminant.
+	If this determinant is zero then x is called a degenerate critical point of f. Otherwise it is non-degenerate.
+	  
+	Jacobian matrix is the matrix of first-order partial derivatives of a vector-valued function. When the matrix 
+	is a square matrix, both the matrix and its determinant are referred to as the Jacobian determinant. 
+	The Jacobian of the gradient of a scalar function of several variables has a special name: the Hessian matrix, 
+	which in a sense is the "second derivative" of the function.
+
+-----------------------------------------------------------------------------------------------------------------------
+### Maximum likelihood estimation (MLE):
+- Finds parameter values that maximize the likelihood of making the observations given the parameters
+- MLE allows more flexibility in the data and analysis because it has fewer restrictions
+
+### Cost function :
+	It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
+	regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
+ 
+-----------------------------------------------------------------------------------------------------------------------
+
 # Types of Gradient Descent:
 1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost function hence and it's very slow.
 	- Cost function is calculated after the initialization of parameters.
