@@ -77,3 +77,93 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 
 -----------------------------------------------------------------------------------------------------------------------
+# Types of Gradient Descent:
+1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost function hence and it's very slow.
+	- Cost function is calculated after the initialization of parameters.
+	- It reads all the records into memory from the disk.
+	- After calculating sigma for one iteration, we move one step further, and repeat the process.
+
+2. Mini-batch Gradient Descent: It is a widely used algorithm that makes faster and accurate results. The dataset, here, is clustered into small groups of ‘n’ training datasets hence it's faster. In every iteration, it uses a batch of ‘n’ training datasets to compute the gradient of the cost function. It reduces the variance of the parameter updates, which can lead to more stable convergence. It can also make use of a highly optimized matrix that makes computing of the gradient very efficient.
+
+3. Stochastic Gradient Descent: Stochastic gradient descent used for faster computation. First, it randomizes the complete dataset, and then uses only one training example in every iteration to calculate the gradient. Its benifical for huge datasets.
+
+### Gradient Descent vs Newton's method
+### Gradient Descent:
+- Simple
+- Need learning Rate
+- 2nd derivate not required
+- More number of iterations
+- Each iteration is cheap (no 2nd derivative )
+- If number of observation is large then its cheaper
+
+### Newton's method:
+- Complex
+- No learning Rate required
+- 2nd derivate is required
+- Less number of iteration
+- Each iteration is expesive (2nd derivative )
+- If less number of observation (may be 1000) then its cheaper
+
+### Solve a equation (identify beta):  
+
+#### 1. Calculus: 
+	It will faster if equation is simple. But in real life equations are very complex and messy and 
+	its difficult to solve.   
+			f(x) 	= X^2 - 2X + 2   
+			df/dx 	= 2X - 2  
+			2X	= 2  
+			X	= 1   
+	
+#### 2. Gradient Descent:   
+			Xi+1 = Xi - a f'(Xi)  	
+			[Xi = initial guess, a = learning rate or step length or jump, Xi+1 = next guess]  
+			f(x) 	= X^2 - 2X + 2  
+			df/dx 	= 2X - 2  
+			apply "Xi+1 = Xi - a f'(Xi)" on above equation. start with zero "0"  
+			X1 = X0 - 0.2f'(3)			X0= 3 (initial guess), a=0.2 (guess)  
+			X1 = 3  - 0.2(4)			[put 3 in "2X - 2": 2*3 - 2 = 6-2 =4]  
+			X1 = 3 - 0.8  
+			X1 = 2.2  
+			X2 = X1 - 0.2f'(X1)  
+			X2 = 2.2 - 0.2(2.4)			[put 2.2 in "2X - 2": 2*2.2 - 2 = 4.4-2 =2.4]  
+			X2 = 1.72  
+			X3 = X2 - 0.2f'(X2)  
+			X3 = 1.72 - 0.2(1.44)		[put 1.72 in "2X - 2": 2*1.72 - 2 = 3.44-2 =1.44]  
+			X3 = 1.72 - 0.288  
+			X3 = 1.432  
+			
+	continue doing this untill we are close to 1 which is the exact solution. As we approach to local minimum, 
+	Gradient Descent will automatically take smaller steps. So no need to decrease "a" over time. 
+	optimization gradient descent:
+			cX + d 		= Y [equation of line and solve this for c & d]  
+			(cX + d) -  Y 	= 0 ( "cX + d" is predected Y^, Y^-Y is error and it should be zero)   
+			min by(a,b) 	= sum ([cX + d]-Yi)^2		[c = cofficient, d=intercept]  
+		
+	First make initial guess for c & d then do the derivative by c & d seperately to get the optimium value of c & d. 
+	Above process will apply on Gradient Descent "Xi+1 = Xi - a f'(Xi)". Gradient descent is based on 1st derivatives 
+	only and it use all data at one time. Gradient descent generally requires more iterations. If data size is big then 
+	it will take long time to compute.
+			
+	Stochastic Gradient descent: It takes portion of data at one time and do the computation and continue in same way. 
+	cofficients are not exactly equals to Gradient descent but its close. 
+	For BIG data its only option to apply Gradient descent in faster way.
+			
+#### 3. Newton Raphson:   
+	Newton's method generally requires fewer iterations, but each iteration is slow as we need to 
+	compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must 
+	supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate).
+	(http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf)
+	
+			Xn+1 	= Xn - f(X)/f'(X)  
+			f(X) 	= X^2 - 8  
+			f'(X)	= 2X  
+			X1	= 3 (guess)  
+			X2	= X1 - f(X)/f'(X)  
+				= 3  - [(3^2-8)/2*3]  
+				= 3  - (1/6)  
+				= 18-1/6  
+				= 17/6  
+			X3	= X2 - f(X2)/f'(X2)  
+				= 17/6 - [(17/6)^2 - 8]/[2(17/6)]  
+				= 2.828 
+-----------------------------------------------------------------------------------------------------------------------    
