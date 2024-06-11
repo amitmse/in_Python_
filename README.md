@@ -6,22 +6,23 @@
     
             - Statistical Derivation of Logistic Regression
             - Logistic Regression Algorithm Coded in Python
+            - Explain: Gradient Descent, Metrics
 
-2. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#readme
+3. **Decision Tree**: https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#readme
 
             - Explain Decision Tree Algorithms
             - Exmaple: Test Run 
 
-3. **Random Forest**: https://github.com/amitmse/in_Python_/tree/master/Random_Forest#readme
+4. **Random Forest**: https://github.com/amitmse/in_Python_/tree/master/Random_Forest#readme
 
             - Explain Random Forest Algorithms
             - Exmaple: Test Run 
    
-4. **Naive Bayes**: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes#readme
+5. **Naive Bayes**: https://github.com/amitmse/in_Python_/tree/master/Naive%20Bayes#readme
 
             - Explain Naive Bayes Algorithms
 
-5. **Boosting (ADA & GBM)**: https://github.com/amitmse/in_Python_/tree/master/Boosting#readme
+6. **Boosting (ADA & GBM)**: https://github.com/amitmse/in_Python_/tree/master/Boosting#readme
 
             - Explain Boosting Algorithms
             - Exmaple: Test Run 
