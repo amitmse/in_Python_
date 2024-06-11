@@ -41,7 +41,13 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 			
 	Likelihood function/Joint probability density function: (Yi is success and failure)
 		= Product[(Pr^Yi){(1-Pr)^(1-Yi)}]
-		
+
+	Maximum likelihood estimation (MLE):
+		- Logistic Regression uses Maximum likelihood estimation finds parameter values that maximize 
+  		  the likelihood of making the observations given the parameters. 
+      		  Linear regression uses Ordinary Least Squares (OLS) which finds parameter values that minimizing the error.
+		- MLE allows more flexibility in the data and analysis because it has fewer restrictions  
+  
 -----------------------------------------------------------------------------------------------------------------------
 
 	Log Likelihood Function:
@@ -55,7 +61,12 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		= Sum[Yi*(a + bX)] - Sum[Log{1 + Exp(a + bX)}]				
 		= -[Sum[Yi*(a + bX)] - Sum[Log{1 + Exp(a + bX)}]] 
 		(Apply negative to minimize the Log Likelihood Function)
-		
+
+	Cost function :
+		- The logistic regression cost function, also known as the log loss.
+		- It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
+		  regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual. 	
+ 		- Sigmoid function  
 -----------------------------------------------------------------------------------------------------------------------
 
 	Gradient of Log Likelihood Function : 
@@ -101,19 +112,6 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
   		The determinant of the Hessian at x is then called the discriminant. If this determinant is zero 
     		then x is called a degenerate critical point of f. Otherwise it is non-degenerate.
 	  
------------------------------------------------------------------------------------------------------------------------
-### Maximum likelihood estimation (MLE):
-		- Logistic Regression uses Maximum likelihood estimation finds parameter values that maximize 
-  		  the likelihood of making the observations given the parameters. 
-      		  Linear regression uses Ordinary Least Squares (OLS) which finds parameter values that minimizing the error.
-		- MLE allows more flexibility in the data and analysis because it has fewer restrictions
-
-### Cost function :
-	- It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
-	regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
- 	- The logistic regression cost function, also known as the log loss.
- 	Sigmoid function
- 
 -----------------------------------------------------------------------------------------------------------------------
 
 # Types of Gradient Descent:
