@@ -20,13 +20,13 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 ----------------------------------------------------------------------------------------------------------------------- 
 ## Statistical Derivation of Logistic Regression:
- 	Model Equation:
+### Model Equation:
 		
 		Y = a + bX (Y = dependent_variable, a=Intercept, b = coefficient, X = independent_variable)
 	
 -----------------------------------------------------------------------------------------------------------------------
 
-	Logit function/Sigmoid Function:
+### Logit function/Sigmoid Function:
 		Y 		= Exp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}] = 1/(1+exp^-y)
 		1 - Y 		= Exp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}    = 1/(1+exp^y)
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
@@ -34,7 +34,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	
 -----------------------------------------------------------------------------------------------------------------------
 
-	Maximum Likelihood: 
+### Maximum Likelihood: 
 		finds parameter values that maximize the likelihood of making the observations given the parameters
 		Pi = {Pr(Yi = 1/Xi) if Yi = 1}	= Pr^Yi         --> (P, Yi is a Bernoulli random variable)
 		{1 - Pr(Yi = 1/Xi)  if Yi = 0}	= (1-Pr)^(1-Yi)	--> (1-P)
@@ -50,7 +50,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
   
 -----------------------------------------------------------------------------------------------------------------------
 
-	Log Likelihood Function:
+### Log Likelihood Function:
 		(Applying Logs on likelihood equation and  product will become sum. Refer to property of LOG)
 		= Sum[{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}] (Apply log in above eq. and simplify it. cost function/log loss)
 		= Sum[Yi*Log(Pr) - Yi*Log(1-Pr) + Log(1-Pr)]
@@ -69,7 +69,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
     
 -----------------------------------------------------------------------------------------------------------------------
 
-	Gradient of Log Likelihood Function : 
+### Gradient of Log Likelihood Function : 
 		First Differentiation (with respect to beta) of Log Likelihood Function
 		= [Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]
 		= -[[Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]]	
@@ -77,7 +77,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		
 -----------------------------------------------------------------------------------------------------------------------
 
-	Hessian Matrix :
+#### Hessian Matrix :
 		Second Differentiation (with respect to beta) of Log Likelihood Function
 		First Differentiation of Gradient of Log Likelihood Function
 		= 0 - [{(X*Exp(a + bX)*X)/(1 + Exp(a + bX))} + {(X*Exp(a + bX))/((1+Exp(a + bX))^2)*(Exp(a + bX)*X)}]	
@@ -150,7 +150,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 ### Solve a equation (identify beta):  
 
-		#### 1. Calculus: 
+##### 1. Calculus: 
 			It will faster if equation is simple. But in real life equations are very complex and messy and 
 			its difficult to solve.   
 					f(x) 	= X^2 - 2X + 2   
@@ -158,7 +158,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 					2X	= 2  
 					X	= 1   
 	
-		#### 2. Gradient Descent:   
+##### 2. Gradient Descent:   
 					Xi+1 = Xi - a f'(Xi)  	
 					[Xi = initial guess, a = learning rate or step length or jump, Xi+1 = next guess]  
 					f(x) 	= X^2 - 2X + 2  
@@ -192,7 +192,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 			cofficients are not exactly equals to Gradient descent but its close. 
 			For BIG data its only option to apply Gradient descent in faster way.
 			
-		#### 3. Newton Raphson:   
+##### 3. Newton Raphson:   
 			Newton's method generally requires fewer iterations, but each iteration is slow as we need to 
 			compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must 
 			supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate).
