@@ -87,14 +87,14 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		= (X*X*Exp(a + bX))/((1+Exp(a + bX))^2) 
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 
-	Jacobian is similar to first order derivative and Hessian is similar to second order derivative. 
-	The determinant of a matrix is also sometimes referred to as the Hessian. The Hessian matrix can 
-	be considered related to the Jacobian matrix. 
+Jacobian is similar to first order derivative and Hessian is similar to second order derivative. 
+The determinant of a matrix is also sometimes referred to as the Hessian. The Hessian matrix can 
+be considered related to the Jacobian matrix. 
 
-  	Hessian matrices are used in large-scale optimization problems within Newton-type methods because 
-    	they are the coefficient of the quadratic term of a local Taylor expansion of a function. 
+Hessian matrices are used in large-scale optimization problems within Newton-type methods because 
+they are the coefficient of the quadratic term of a local Taylor expansion of a function. 
       
-      	A bordered Hessian (Lagrange function) is used for the second-derivative test in certain 
+ 	A bordered Hessian (Lagrange function) is used for the second-derivative test in certain 
 	constrained optimization problems.
   
   	The Hessian matrix of a convex function is positive semi-definite. And this property allows us to test 
