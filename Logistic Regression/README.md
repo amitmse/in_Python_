@@ -34,8 +34,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		  
 	- The sigmoid function is a mathematical function used to map the predicted values to probabilities 
  	  which has a characteristic S-shaped or sigmoid curve. 
-    
-     	- Logistic / logit function has the same property of a sigmoid function.
+    	- Logistic / logit function has the same property of a sigmoid function.
 	
 	- The sigmoid function takes any real number as input and outputs a value between 0 and 1, 
  	so it forms a curve like the “S”.
