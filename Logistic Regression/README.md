@@ -80,8 +80,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		First Differentiation (with respect to beta) of Log Likelihood Function
 		= [Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]
 		= -[[Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]]	
-		(Negative is part of negative log likelihood function. Refer to gradient_log_likelihood)
-		
+		(Negative is part of negative log likelihood function. Refer to gradient_log_likelihood)  		
+  
 -----------------------------------------------------------------------------------------------------------------------
 
 #### Hessian Matrix :
@@ -121,7 +121,11 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	  
 -----------------------------------------------------------------------------------------------------------------------
 
-# Types of Gradient Descent:
+# Gradient Descent
+
+ 	Gradient Descent is an optimization algorithm which finds global or local minima of a differentiable function (error or cost function).
+
+## Types of Gradient Descent:
 	1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost 
   	   function hence and it's very slow.
 		- Cost function is calculated after the initialization of parameters.
