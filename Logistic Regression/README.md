@@ -32,10 +32,12 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
 		  
-	- A sigmoid function is any mathematical function whose graph has a characteristic S-shaped or sigmoid curve, and 
-     	  logistic / logit function has the same property of a sigmoid function.
+	- The sigmoid function is a mathematical function used to map the predicted values to probabilities which has a characteristic S-shaped or sigmoid curve. 
+     	- Logistic / logit function has the same property of a sigmoid function.
 	
-	- The sigmoid function takes any real number as input and outputs a value between 0 and 1.
+	- The sigmoid function takes any real number as input and outputs a value between 0 and 1, so it forms a curve like the “S”.
+
+	- Due to Sigmoid function, Logistic Regression is not a Linear Regression model.
  
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -52,7 +54,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
   		  the likelihood of making the observations given the parameters. Linear regression uses 
       		  Ordinary Least Squares (OLS) which finds parameter values that minimizing the error.
 		- MLE allows more flexibility in the data and analysis because it has fewer restrictions  
-  
+    
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Log Likelihood Function:
