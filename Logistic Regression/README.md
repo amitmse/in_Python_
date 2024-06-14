@@ -32,10 +32,13 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
 		  
-	- The sigmoid function is a mathematical function used to map the predicted values to probabilities which has a characteristic S-shaped or sigmoid curve. 
+	- The sigmoid function is a mathematical function used to map the predicted values to probabilities 
+ 	  which has a characteristic S-shaped or sigmoid curve. 
+    
      	- Logistic / logit function has the same property of a sigmoid function.
 	
-	- The sigmoid function takes any real number as input and outputs a value between 0 and 1, so it forms a curve like the “S”.
+	- The sigmoid function takes any real number as input and outputs a value between 0 and 1, 
+ 	so it forms a curve like the “S”.
 
 	- Due to Sigmoid function, Logistic Regression is not a Linear Regression model.
  
