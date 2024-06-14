@@ -123,7 +123,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 # Gradient Descent
 
- 	Gradient Descent is an optimization algorithm which finds global or local minima of a differentiable function (error or cost function).
+ 	Gradient Descent is an optimization algorithm which finds global or local minima of a 
+  	differentiable function (error or cost function).
 
 ## Types of Gradient Descent:
 	1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost 
