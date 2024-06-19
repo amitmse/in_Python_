@@ -228,7 +228,11 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 ### Metrics:
 
 	- beta(x): covariance(x,y) / variance(x)
-		The standard error of the coefficient estimates the variability that would be obtained if samples are taken from 
+		Standardized beta: Beta * [ standard deviation of a model variable / {Pi / SQRT(3)}] 	standard deviation of a model variable get it from proc means 'Std Dev'
+			Pi / SQRT(3): standard deviation of standard logistic regression =  1.81379936423422
+			Value of Pi: 3.14159265358979 	SQRT of 3: 1.73205080756888 
+
+   		The standard error of the coefficient estimates the variability that would be obtained if samples are taken from 
  		the same population again and again. The calculation assumes that the sample size and the coefficients to estimate 
   		would remain same if the sample is taken repeatedly. Use standard error of the coefficient to measure the precision 
    		of the estimate of the coefficient. The smaller the standard error, the more precise the estimate.
