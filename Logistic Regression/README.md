@@ -33,16 +33,16 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
 		  
 	- The sigmoid function is a mathematical function used to map the predicted values to probabilities 
- 	  which has a characteristic S-shaped or sigmoid curve. 
+ 	  which has a characteristic of S-shaped or sigmoid curve. 
     	- Logistic / logit function has the same property of a sigmoid function.	
-	- The sigmoid function takes any real number as input and outputs a value between 0 and 1, 
- 	  so it forms a curve like the “S”.
+	- The sigmoid function takes any real number as input and output probabilities (a value between 0 to 1), 
+ 	  which forms a S-shaped curve.
 	- Due to Sigmoid function, Logistic Regression is not a Linear Regression model.
  
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Maximum Likelihood: 
-		finds parameter values that maximize the likelihood of making the observations given the parameters
+	Finds parameter values that maximize the likelihood of making the observations given the parameters
 		Pi = {Pr(Yi = 1/Xi) if Yi = 1}	= Pr^Yi         --> (P, Yi is a Bernoulli random variable)
 		{1 - Pr(Yi = 1/Xi)  if Yi = 0}	= (1-Pr)^(1-Yi)	--> (1-P)
 			
@@ -53,7 +53,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		- Logistic Regression uses Maximum likelihood estimation finds parameter values that maximize 
   		  the likelihood of making the observations given the parameters. Linear regression uses 
       		  Ordinary Least Squares (OLS) which finds parameter values that minimizing the error.
-		- MLE allows more flexibility in the data and analysis because it has fewer restrictions  
+		- MLE allows more flexibility because it has fewer restrictions.  
     
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -70,9 +70,9 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		(Apply negative to minimize the Log Likelihood Function)
 
 	Cost function :
-		- The logistic regression cost function, also known as the log loss.
-		- It tried to quantify the error factor of logistic regression. It calculates how well the logistic 
-		  regression is performing based on the actual vs predicted value. Error factor = Predicted – Actual.
+		- Log Loss is cost function of logistic regression.
+    		- It quantifies the error of a logistic regression by assessing how effectively it separates actual 
+      		  from predicted. Error = Predicted – Actual.
     
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -94,30 +94,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		= (X*X*Exp(a + bX))/((1+Exp(a + bX))^2) 
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 
-	Jacobian is similar to first order derivative and Hessian is similar to second order derivative. 
-	The determinant of a matrix is also sometimes referred to as the Hessian. The Hessian matrix can 
-	be considered related to the Jacobian matrix. 
-
-	Hessian matrices are used in large-scale optimization problems within Newton-type methods because 
-	they are the coefficient of the quadratic term of a local Taylor expansion of a function. 
-      
- 	A bordered Hessian (Lagrange function) is used for the second-derivative test in certain 
-	constrained optimization problems.
-  
-  	The Hessian matrix of a convex function is positive semi-definite. And this property allows us to test 
-    	if a critical point x is a local maximum, local minimum, or a saddle point, as follows:
-	- If the Hessian is positive definite at x, then f attains an isolated local minimum at x (concave up)	
-	- If the Hessian is negative definite at x, then f attains an isolated local maximum at x (concave down)	 
-	- If the Hessian has both positive and negative eigenvalues then x is a saddle point for f. 
-	  Otherwise the test is inconclusive. Graph is concave up in one direction and concave down in the other.
-	- This implies that, at a local minimum (respectively, a local maximum), the Hessian is 
-   	  positive-semi-definite (respectively, negative semi-definite).
-	  
-	If the gradient (the vector of the partial derivatives) of a function f is zero at some point x, 
-  	then f has a critical point (or stationary point) at x. 
-  
-  	The determinant of the Hessian at x is then called the discriminant. If this determinant is zero 
-    	then x is called a degenerate critical point of f. Otherwise it is non-degenerate.
+	Jacobian is similar to first order derivative.
+ 	Hessian is similar to second order derivative. 
 	  
 -----------------------------------------------------------------------------------------------------------------------
 
