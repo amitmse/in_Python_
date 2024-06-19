@@ -233,10 +233,6 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
   		would remain same if the sample is taken repeatedly. Use standard error of the coefficient to measure the precision 
    		of the estimate of the coefficient. The smaller the standard error, the more precise the estimate.
 
-		Standardized beta: Beta * ( standard deviation of a model variable / (Pi / SQRT(3)) 	standard deviation of a model variable get it from proc means 'Std Dev'
-			(Pi / SQRT(3) is standard deviation of standard logistic regression		
-			Pi / SQRT(3): 1.81379936423422 		Value of Pi: 3.14159265358979 		SQRT of 3: 1.73205080756888 
-
 		https://www.proteus.co.nz/news-tips-and-tricks/calculating-standard-errors-for-logistic-regressionlogit-link-using-the-delta-method
 		P 	= ( e^b ) / ( 1 + e^b )		e: Exponential, b: Beta
 		SE(P) 	= SE(b) X [P X ( 1-P )]		SE:Standard Error, P: Probability
