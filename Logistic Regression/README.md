@@ -94,8 +94,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		= (X*X*Exp(a + bX))/((1+Exp(a + bX))^2) 
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 
-	Jacobian is similar to first order derivative.
- 	Hessian is similar to second order derivative. 
+		Jacobian is similar to first order derivative.
+ 		Hessian is similar to second order derivative. 
 	  
 -----------------------------------------------------------------------------------------------------------------------
 
