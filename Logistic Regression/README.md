@@ -58,7 +58,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Log Likelihood Function:
-		(Applying Logs on likelihood equation and  product will become sum. Refer to property of LOG)
+	(Applying Logs on likelihood equation and  product will become sum. Refer to property of LOG)
 		= Sum[{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}] (Apply log in above eq. and simplify it. cost function/log loss)
 		= Sum[Yi*Log(Pr) - Yi*Log(1-Pr) + Log(1-Pr)]
 		= Sum[Yi*Log{Pr/(1-Pr)}] + Sum[Log(1-Pr)] 
@@ -77,7 +77,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Gradient of Log Likelihood Function : 
-		First Differentiation (with respect to beta) of Log Likelihood Function
+	First Differentiation (with respect to beta) of Log Likelihood Function
 		= [Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]
 		= -[[Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]]	
 		(Negative is part of negative log likelihood function. Refer to gradient_log_likelihood)  		
@@ -85,8 +85,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 -----------------------------------------------------------------------------------------------------------------------
 
 #### Hessian Matrix :
-		Second Differentiation (with respect to beta) of Log Likelihood Function
-		First Differentiation of Gradient of Log Likelihood Function
+	Second Differentiation (with respect to beta) of Log Likelihood Function
+	First Differentiation of Gradient of Log Likelihood Function
 		= 0 - [{(X*Exp(a + bX)*X)/(1 + Exp(a + bX))} + {(X*Exp(a + bX))/((1+Exp(a + bX))^2)*(Exp(a + bX)*X)}]	
 			(Differentiation of [Yi*X] will be 0 due to no beta.
 		= [(X*X*Exp(a + bX))/((1+Exp(a + bX))^2)*{Exp(a + bX) - (1+Exp(a + bX))}]
@@ -94,8 +94,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		= (X*X*Exp(a + bX))/((1+Exp(a + bX))^2) 
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 
-		Jacobian is similar to first order derivative.
- 		Hessian is similar to second order derivative. 
+	Jacobian is similar to first order derivative.
+ 	Hessian is similar to second order derivative. 
 	  
 -----------------------------------------------------------------------------------------------------------------------
 
