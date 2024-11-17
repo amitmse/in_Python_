@@ -1,4 +1,4 @@
-# Hands-On Machine Learning with PYTHON
+# Hands-On Machine Learning in Python
 
 #######################################################################################
 
