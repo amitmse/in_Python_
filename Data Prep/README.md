@@ -6,7 +6,12 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20che
     - Create variable, duplicate, append, merge, Transpose, Correlation, Lag, first dot, 
     - Lift table/KS
     - PSI
-    
+
+# Dask: Handle big size data processing problems in pandas
+
+https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Dask.py
+
+
 # Exploratory Data Analysis (EDA):
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/EDA.py
