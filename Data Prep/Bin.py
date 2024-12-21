@@ -1,7 +1,14 @@
 
 #######################################################################################################################################################################
 ###	Monotonic Binning of a variable 	
+###	correlation
+###	KS
 #######################################################################################################################################################################
+
+
+#################################################################################################
+###	Monotonic Binning of a variable 	
+#################################################################################################
 	# import packages
 	import pandas as pd
 	import numpy as np
@@ -36,7 +43,7 @@
 	mono_bin(data.bad, data.tot_income)
 
 #######################################################################################################################################################################
-#####Statistical correlation: Pearson or Spearman?			http://stackoverflow.com/questions/6731540/statistical-correlation-pearson-or-spearman
+##### Statistical correlation: Pearson or Spearman?			http://stackoverflow.com/questions/6731540/statistical-correlation-pearson-or-spearman
 #######################################################################################################################################################################
 	import numpy as np
 	import scipy.stats
@@ -46,7 +53,7 @@
 	#(-0.013847401847401847, 0.66184551507218536)
 	#The first number (-0.01) is the rank correlation coefficient; the second number (0.66) is the associated p-value.
 #######################################################################################################################################################################
-##Calculating K-S Statistic with Python. 	https://statcompute.wordpress.com/2012/11/18/calculating-k-s-statistic-with-python/
+## Calculating K-S Statistic with Python. 	https://statcompute.wordpress.com/2012/11/18/calculating-k-s-statistic-with-python/
 #######################################################################################################################################################################
 	# IMPORT PACKAGES
 	import pandas as pd
