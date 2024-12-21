@@ -7,7 +7,7 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20che
     - Lift table/KS
     - PSI
 
-# Dask: Handle big size data processing problems in pandas
+# Dask: Handle big size data processing which Panda unable to do
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Dask.py
 
