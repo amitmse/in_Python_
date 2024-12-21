@@ -32,4 +32,4 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Bin.py
 	correlation
 	KS    
 
-### all codes are written in Python 2.7
+all codes are written in Python 2.7
