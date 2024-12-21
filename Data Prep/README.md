@@ -24,11 +24,12 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Information_value_
 
     Compute Information value of a variable
 
-# Monotonic Binning : 
+# Monotonic Binning / correlation / KS
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Bin.py
 
     Monotonic Binning of a variable
-
+	correlation
+	KS    
 
 ### all codes are written in Python 2.7
