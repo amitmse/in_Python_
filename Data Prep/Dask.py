@@ -493,6 +493,16 @@ if name == '__main__':
 
 ------------------------------------------------------------------------------------------
 
+python -m pip install --upgrade pip
+python -m pip install jupyter
+jupyter notebook
+
+python -m ensurepip --upgrade
+pip install notebook
+
+
+
+
 UTF-8 encoding	: # -*- coding: encoding -*-
 detect errors	: PyChecker to detect errors in python code.
 Find bugs	: pylint and pyflakes.
