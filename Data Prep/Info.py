@@ -34,9 +34,22 @@ Cons:
 ######################## Python 2.7 #####################################################################
 
 #********************************************************************************************************
+	Find Python: 		# where python
+				# import os, sys
+					os.path.dirname(sys.executable)
+
 	Set path		# set PATH=%PATH%;C:\python27\	
 	http://pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/
-	
+
+	python -m pip install --upgrade pip
+	python -m pip install jupyter
+	jupyter notebook
+
+	python -m ensurepip --upgrade
+	pip install notebook
+
+	python -m notebook
+
 	packages installed 	# help("modules")
 	
 	Install Library 	# First install pip then 
@@ -51,7 +64,20 @@ Cons:
 				#			  /python setup.py install 
 
 	Graphviz 		# Install software and add path C:\Program Files (x86)\Graphviz2.38\bin 
-	
+
+
+	---------------------------------------------------------
+
+	UTF-8 encoding		: # -*- coding: encoding -*-
+	detect errors		: PyChecker to detect errors in python code.
+	Find bugs		: pylint and pyflakes.
+	Decorator		: use @ symbol.
+	Join function		: ''.join(['John','Ray'])
+	Pass			: It is just a placeholder and doesn't execute any code or command.
+	Docstring		: To adding comments or summarizing a piece of code in Python. '__doc__' 
+	code debugging		: pdb
+###################################################################################################################
+
 	
 #*********************************************************************************************************	
 	version	Library		# print igraph.__version__	
@@ -1045,7 +1071,273 @@ df.head()
 #----------------------------------------------------------------
 ####### END of Code #############################################
 
-		       
+
+######################################################################################################################################
+
+#######################################################################
+### Get list of file with owner name, file size #######################
+#######################################################################
+import os
+import win32api
+import win32con
+import win32security
+import csv
+import pandas as pd
+import time
+#######################################################################
+def list_of_files(data_location, output_location, output):
+    ##### Change Directory #############################################
+    os.getcwd()
+    os.chdir(data_location)
+    os.listdir()   
+    ##### Get list of files from folder and sub-folder ##################################
+    listOfFiles = list()
+    for (dirpath, dirnames, filenames) in os.walk(data_location):
+        listOfFiles += [os.path.join(dirpath, file) for file in filenames]
+
+    #### Add owner of file, size of file and last access timestamp ######################
+    Final = list()
+    for filename in listOfFiles:
+        #name, domain, type = win32security.LookupAccountSid(None, win32security.GetFileSecurity(filename, win32security.OWNER_SECURITY_INFORMATION).GetSecurityDescriptorOwner())
+        Final.append(tuple([filename]+[int(os.path.getsize(filename))]+[time.strftime('%Y-%m-%d', time.localtime(os.path.getatime(filename)))]))
+
+    #### Convert data in pandas and export in csv #######################################    
+    labels = ['File', 'Size in bytes', 'Last Access Time']
+    df = pd.DataFrame.from_records(Final, columns=labels)
+    df.rename(columns = {'File':'Full_File_location'}, inplace = True)
+    df['file_name'] = df['Full_File_location'].str.split('\\').str[-1]
+    df['location'] = df.apply(lambda row : row['Full_File_location'].replace(str(row['file_name']), ''), axis=1)
+    df['File_extension'] = df['file_name'].str.split('.').str[-1]
+    df = df[['file_name', 'location', 'Full_File_location', 'File_extension', 'Size in bytes', 'Last Access Time']]
+
+    ##### Save CSV file ###########################
+    os.chdir(output_location)
+    #output  = 'List_of_Files_Data_Tokenization.csv'
+    df.to_csv(output, encoding='utf-8', index=False)
+    df.head()
+    ##### END of Function ############################################################################
+
+##################################################################################################################
+
+#### Call Function ###############################################################################################
+if name == '__main__':
+    data_location=r"C:\Users"
+    output_location=r"C:\Users\"
+    output  = 'List_of_Files.csv'
+    list_of_files(data_location, output_location, output)
+
+#################################################################################################################
+
+##############################################################################################################
+
+### Get list of file with owner name, file size
+	import os
+	import win32api
+	import win32con
+	import win32security
+	import csv
+	import pandas as pd
+	import time
+
+# Change below
+	os.getcwd() #Current directory
+	dirName = r"C:\Users\"
+	os.chdir(dirName)
+	os.listdir()
+	output  = 'test.csv'
+
+#Get list of files from folder and sub-folder
+	listOfFiles = list()
+	for (dirpath, dirnames, filenames) in os.walk(dirName):
+		listOfFiles += [os.path.join(dirpath, file) for file in filenames]
+#Add owner of file, size of file and last access timestamp   
+	Final = list()
+	for filename in listOfFiles:
+		name, domain, type = win32security.LookupAccountSid(None, win32security.GetFileSecurity(filename, win32security.OWNER_SECURITY_INFORMATION).GetSecurityDescriptorOwner())
+		Final.append(tuple([filename]+[name.encode("utf-8")]+[int(os.path.getsize(filename))]+[time.strftime('%Y-%m-%d', time.localtime(os.path.getatime(filename)))]))
+
+#Convert data in pandas and export in csv
+	labels = ['File', 'Owner - ID', 'Size in bytes', 'Last Access Time']
+	df = pd.DataFrame.from_records(Final, columns=labels)
+	df.to_csv(output, encoding='utf-8', index=False)
+	df.head()
+	/******* Zip a file/folder  using Python ***********************************************************************/
+	os.chdir(r'C:\Users\')
+
+-------------------------------
+
+#Zip a file
+
+	import os
+
+	import zipfile
+
+	jungle_zip = zipfile.ZipFile('jungle.zip', 'w')
+
+	jungle_zip.write('9781441996121-c2.pdf', compress_type=zipfile.ZIP_DEFLATED)
+
+	jungle_zip.close()
+
+-------------------------------
+
+#Zip All PDF Files
+
+	import os
+	import zipfile
+	fantasy_zip = zipfile.ZipFile('archive.zip', 'w')
+	for folder, subfolders, files in os.walk(r'C:\Users'):
+		for file in files:
+			if file.endswith('.pdf'):
+				fantasy_zip.write(os.path.join(folder, file), os.path.relpath(os.path.join(folder,file), r'C:\Users\Downloads\Copy'), compress_type = zipfile.ZIP_DEFLATED)    
+	fantasy_zip.close()
+
+-------------------------------
+
+#Zip a folder
+
+	import shutil
+	os.chdir(r'C:\Users')
+	# Copy is the folder which is getting zipped
+	shutil.make_archive('filename', 'zip', 'Copy')
+
+-------------------------------
+
+#Zip a Folder
+
+	import os,zipfile
+	# Change the directory where you want your new zip file to be
+	os.chdir(r'C:\Users')
+	zf = zipfile.ZipFile('myfile.zip','w')
+	# Copy is the folder which is getting zipped
+	for dirnames,folders,files in os.walk('Copy'):
+		zf.write('Copy')
+		for file in files:
+			zf.write(os.path.join('Copy',file))	
+	zf.close()
+
+	---------------------------------------
+
+	import os
+	import sys
+	import zipfile
+	source_dir = r'C:\Users'  
+	dest_dir = r'C:\Users'
+	os.chdir(dest_dir)
+	def csv_files(source_dir):
+		for filename in os.listdir(source_dir):
+			if filename.endswith('.sas7bdat'):
+				yield filename
+				#print (filename)
+
+	#csv_files(r'C:\Users')
+
+	for csv_filename in csv_files(source_dir):
+		file_root = os.path.splitext(csv_filename)[0]
+		zip_file_name = file_root + '.zip'
+		zip_file_path = os.path.join(dest_dir, zip_file_name)
+		with zipfile.ZipFile(zip_file_path, mode='w') as zf:
+			zf.write(csv_filename, compress_type=zipfile.ZIP_DEFLATED)
+
+---------------------------------------
+#Zip individual file. Folder and sub-folders
+	# https://stackoverflow.com/questions/43881491/how-to-recursively-zip-multiple-folders-as-individual-zip-files
+	import os
+	import zipfile
+	start_path = r'C:\Users'
+	file_type = ".sas7bdat"
+	def zipdir(start_path):
+		dir_count = 0
+		file_count = 0
+		for (path,dirs,files) in os.walk(start_path):
+			print('Directory: {:s}'.format(path))
+			dir_count += 1
+			for file in files:
+				if file.endswith(file_type): 
+					file_path = os.path.join(path, file)
+					print('\nAttempting to zip: \'{}\''.format(file_path))
+					with zipfile.ZipFile(file_path + '.zip', 'w', zipfile.ZIP_DEFLATED) as ziph:
+						ziph.write(file_path, file)
+					print('Done')
+					file_count += 1
+		print('\nProcessed {} files in {} directories.'.format(file_count,dir_count))
+		
+	if name == '__main__':
+		zipdir(start_path)
+
+-------------------------------------------------------------------------------------------
+
+#Unzip a file
+	import zipfile
+	zip_ref = zipfile.ZipFile(r'C:\Users', 'r')
+	zip_ref.extractall(r'C:\Users')
+	zip_ref.close()
+
+---------------------------------------
+
+#Unzip a folder
+
+	import os, zipfile
+	dir_name = 'C:\Users'
+	extension = ".zip"
+	os.chdir(dir_name) # change directory from working dir to dir with files
+	for item in os.listdir(dir_name): 			# loop through items in dir
+		if item.endswith(extension): 			# check for ".zip" extension
+			file_name = os.path.abspath(item) 	# get full path of files
+			zip_ref = zipfile.ZipFile(file_name)    # create zipfile object
+			zip_ref.extractall(dir_name) 		# extract file to dir
+			zip_ref.close() 			# close file
+			#os.remove(file_name) 			# delete zipped file
+
+---------------------------------------------------------
+
+#Unzip .7z file
+	from pyunpack import Archive
+	import os
+	#Not requredimport patool
+	os.chdir(r'C:\Users')
+	Archive('qc.7z').extractall("")
+----------------------------------------------------------
+
+#Unzip .7z folder
+
+	import os
+	from pyunpack import Archive
+	dir_name = r'C:\Users'
+	extension = ".7z"
+	os.chdir(dir_name) # change directory from working dir to dir with files
+	for item in os.listdir(dir_name): 			# loop through items in dir
+		if item.endswith(extension): 			# check for ".zip" extension
+			file_name = os.path.abspath(item) 	# get full path of files
+			Archive(file_name).extractall("")
+
+------------------------------------------------------------------------------------------
+
+#Copy data from one dir to another dir
+	import shutil
+	shutil.copy2(r'C:\Users\Downloads\9781441996121-c2.pdf', r'C:\Users\Downloads\test\9781441996121-c2.pdf')
+---------------------------------------
+
+#Copy a folder one dir to another dir
+	from distutils.dir_util import copy_tree
+	---------------------------------------
+	fromDirectory = r'C:\Users\Downloads\Copy'
+	toDirectory = r'C:\Users\Downloads\test'
+	copy_tree(fromDirectory, toDirectory)
+
+------ Lambda ------------------------------------------------------------------------------------
+
+	#Lambda function is a small anonymous function. It can take any number of arguments, but can only have one expression.
+	#lambda 	arguments 		: expression
+	#x 		= 	lambda a, b 	: a * b
+	#print(x(5, 6))
+	miss 	= df1[['X','Y']][df1.X.isnull()]
+	notmiss = df1[['X','Y']][df1.X.notnull()]
+	“from sklearn.feature_selection import RFE
+	rfe = RFE(estimator=DecisionTreeClassifier(), n_features_to_select=5)”
+
+#########################################################################################################################
+
+       
 https://abirchakraborty.wordpress.com/
 
 https://github.com/srivatsan88/YouTubeLI/blob/master/Benchmarking_XGBoost_on_GPU.ipynb
