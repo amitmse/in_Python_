@@ -169,3 +169,9 @@ info_val_overall.rename(columns = {'sum':'Information_value'}, inplace = True)
 info_val_overall
 #################################################################################################
 #https://towardsdatascience.com/a-data-scientists-toolkit-to-encode-categorical-variables-to-numeric-d17ad9fae03f
+#https://statcompute.wordpress.com/2012/12/08/monotonic-binning-with-python/
+#https://gnpalencia.org/optbinning/tutorials/tutorial_binary.html
+# https://snyk.io/advisor/python/woe-monotonic-binning
+# https://github.com/statcompute/py_mob
+# https://cemsarier.github.io/algorithm/credit%20scoring/scorecard/woe_binning/
+# https://github.com/jstephenj14/Monotonic-WOE-Binning-Algorithm
