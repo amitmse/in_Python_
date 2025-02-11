@@ -209,8 +209,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		Standardized beta: Beta * [ standard deviation of a model variable / {Pi / SQRT(3)}] 	standard deviation of a model variable get it from proc means 'Std Dev'
 			Pi / SQRT(3): standard deviation of standard logistic regression =  1.81379936423422
 			Value of Pi: 3.14159265358979 	SQRT of 3: 1.73205080756888 
-
-
+   
 	- Standard Error of Beta: Square root of variance of beta coefficient.
  
 	- correlation(x,y): covariance(x,y) / [variance(x)*variance(y)]
