@@ -87,6 +87,13 @@ Standard Error Coef:
 Interpretation : Use the standard error of the coefficient to measure the precision of the estimate of the coefficient. The smaller the standard error, the more precise the estimate.
 - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3976195/
 
+- The standard error of the coefficient estimates the variability that would be obtained if samples are taken from the same population again and again. 
+   The calculation assumes that the sample size and the coefficients to estimate would remain same if the sample is taken repeatedly. 
+   Use standard error of the coefficient to measure the precision of the estimate of the coefficient. The smaller the standard error, the more precise the estimate.
+	https://www.proteus.co.nz/news-tips-and-tricks/calculating-standard-errors-for-logistic-regressionlogit-link-using-the-delta-method
+		P 	= ( e^b ) / ( 1 + e^b )		e: Exponential, b: Beta
+		SE(P) 	= SE(b) X [P X ( 1-P )]		SE:Standard Error, P: Probability
+		SE(b) 	= SE(P) / [P X ( 1-P )]		
 
 Jacobian is similar to first order derivative and Hessian is similar to second order derivative.
 The determinant of a matrix is also sometimes referred to as the Hessian. The Hessian matrix can be considered related to the Jacobian matrix. 
@@ -99,8 +106,6 @@ The Hessian matrix of a convex function is positive semi-definite. And this prop
 	-	This implies that, at a local minimum (respectively, a local maximum), the Hessian is positive-semi-definite (respectively, negative semi-definite).
 
 If the gradient (the vector of the partial derivatives) of a function f is zero at some point x, then f has a critical point (or stationary point) at x. The determinant of the Hessian at x is then called the discriminant. If this determinant is zero then x is called a degenerate critical point of f. Otherwise it is non-degenerate.
-
-
 
 Jacobian matrix is the matrix of first-order partial derivatives of a vector-valued function. When the matrix is a square matrix, both the matrix and its determinant are referred to as the Jacobian determinant.
 The Jacobian of the gradient of a scalar function of several variables has a special name: the Hessian matrix, which in a sense is the "second derivative" of the function.
