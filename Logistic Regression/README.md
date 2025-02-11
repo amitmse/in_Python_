@@ -210,16 +210,9 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 			Pi / SQRT(3): standard deviation of standard logistic regression =  1.81379936423422
 			Value of Pi: 3.14159265358979 	SQRT of 3: 1.73205080756888 
 
-   		The standard error of the coefficient estimates the variability that would be obtained if samples are taken from 
- 		the same population again and again. The calculation assumes that the sample size and the coefficients to estimate 
-  		would remain same if the sample is taken repeatedly. Use standard error of the coefficient to measure the precision 
-   		of the estimate of the coefficient. The smaller the standard error, the more precise the estimate.
 
-		https://www.proteus.co.nz/news-tips-and-tricks/calculating-standard-errors-for-logistic-regressionlogit-link-using-the-delta-method
-		P 	= ( e^b ) / ( 1 + e^b )		e: Exponential, b: Beta
-		SE(P) 	= SE(b) X [P X ( 1-P )]		SE:Standard Error, P: Probability
-		SE(b) 	= SE(P) / [P X ( 1-P )]		
-
+	- Standard Error of Beta: Square root of variance of beta coefficient.
+ 
 	- correlation(x,y): covariance(x,y) / [variance(x)*variance(y)]
  
 	- AIC: (No of variable*2) - (2*-Log Likelihood)
