@@ -37,7 +37,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
     	- Logistic / logit function has the same property of a sigmoid function.	
 	- The sigmoid function takes any real number as input and output probabilities (a value between 0 to 1), 
  	  which forms a S-shaped curve.
-	- Due to Sigmoid function, Logistic Regression is not a Linear Regression model.
+	- Due to Sigmoid function, Logistic Regression is not a Linear Regression model (Sigmoid introduces non-linearity).
+
  
 -----------------------------------------------------------------------------------------------------------------------
 
