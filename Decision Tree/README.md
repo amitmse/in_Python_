@@ -1,13 +1,21 @@
-# Decision Tree Algorithms
+# Decision Tree
 
 -----------------------------------------------------------------------------------------------------
 
-### structure of tree: 
+## Type of Decision Tree
+	- Classification trees: Target variable is category.
+		Example: Customer will 'pay' or 'not pay'. 
+  
+    	- Regression trees :Target variable is continuous. 
+     		Example: How much customer will pay.
+       
+-----------------------------------------------------------------------------------------------------
+
+## structure of tree: 
 	Root Node: The starting point of the tree.
 	Branches: Paths connecting nodes based on decisions.
 	Internal Nodes: Intermediate nodes that facilitate further splitting.
 	Leaf Nodes: Final or terminal nodes of the tree.
-
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/structure.PNG)
 
@@ -18,14 +26,24 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 
 -----------------------------------------------------------------------------------------------------
 
+## Advantages of Decision Trees
+
+	- Easy to Interpret
+    	- No data massaging required, unlike regression
+    	- Handles Non-linear Relationships
+    
 ## Limitations of Decision Trees:
 
-	- Low-Performance
+	- Overfitting: May capture noise
+ 	- Low-Performance
 	- Poor Resolution on Data With Complex Relationships Among the Variables
 	- Practically Limited to Classification
 	- Poor Resolution With Continuous Expectation Variables
-  
-## Gini Index:
+
+-----------------------------------------------------------------------------------------------------
+## Variable selection measures:
+
+### Gini Index:
 
 	Gini index says, if we select two items from a population at random then they must be of same class 
       		and probability for this is 1 if population is pure.
@@ -74,7 +92,7 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 	    Weight each branch based on the baseline probability.
 	    Sum the weighted gini index for each split.
 
-## Chi-Square
+### Chi-Square
 
 	It is an algorithm to find out the statistical significance between the differences between sub-nodes and 
 	parent node. We measures it by sum of squares of standardized differences between observed and expected 
@@ -121,7 +139,7 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 			TOTAL CHI-SQUARE for Gender = 1.34 + 1.34 + 0.95 + 0.95 = 4.58
 			TOTAL CHI-SQUARE for Class  = 0.38 + 0.38 + 0.35 + 0.35 = 1.46
 
-## Information Gain
+### Information Gain
 	We can say that less impure node requires less information to describe it and more impure node 
 	requires more information. Information theory has a measure to define this degree of disorganization 
 	in a system, which is called Entropy. Lower Entropy is better. If the sample is completely homogeneous, 
@@ -165,7 +183,7 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 	    Sum the weighted entropy for each split.
 
 
-## Reduction in Variance
+### Reduction in Variance
 	Till now, we have discussed the algorithms for categorical target variable. Reduction in Variance 
 	is an algorithm for continuous target variable. This algorithm uses the same formula of variance to 
 	choose the right split that we went through the descriptive statistics. 
@@ -188,7 +206,9 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 		- Variance for Split Gender =Weighted Variance of Sub-nodes = (14/30)*0.24 + (16/30) *0.25 = 0.25
 		Above, you can see that Gender split has lower variance compare to parent node so 
 		the split would be on Gender only.
-		
+
+-----------------------------------------------------------------------------------------------------
+
 ## Splitting / Pruning
 	Above, we have have looked at various algorithms to split a node into sub nodes. Now to create a decision tree, 
 	sub-nodes are further split into two or more sub-nodes and all input variables are considered for creating 
@@ -200,6 +220,8 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 	but that would be a very complex tree. If we are expanding decision tree towards more complexity based 
 	on training data set, then it causes over fitting and losses the predictive power of the model because 
 	it is not generalized. Over fitting can be removed by pruning the nodes.
+
+-----------------------------------------------------------------------------------------------------
 
 ## Type I / II Error
 
