@@ -423,7 +423,7 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 			
 ---------------------------------------------------------------------------------------------------------
 
-## Algorithm
+## Flow of computation:
 
 	1. Feed-forward computation: Calculate hidden layer nodes & output layer.
 		a. Calculate all hidden layer nodes: Multiply input layer and their weights (random for 1st time)
@@ -460,7 +460,32 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 		c. Updated Error in output layer node: Substract actual output and Output layer node
 		
 		d. Change in error: Substract previous error and current error
-		
+
+
+### Algorithms
+
+    	1. Back-propagation: The most widely used algorithm for training neural networks, 
+    		involving gradient descent to minimize the error. 
+
+    	2. Stochastic Gradient Descent (SGD): A variant of gradient descent where 
+     		the model is updated for each training example.
+
+    	3. Mini-batch Gradient Descent: A compromise between batch gradient descent and SGD, 
+     		updating the model using small batches of data.
+
+    	4. Adaptive Moment Estimation(Adam): An optimization algorithm that combines the advantages of AdaGrad and RMSProp.
+
+    	5. RMSProp: An optimization algorithm that adjusts the learning rate for each parameter.
+
+   	6. AdaGrad: An optimization algorithm that adapts the learning rate based on the frequency of updates.
+
+    	7. Adadelta: An extension of AdaGrad that seeks to reduce its aggressive, monotonically decreasing learning rate.
+
+    	8. Nesterov Accelerated Gradient (NAG): An optimization algorithm that improves upon 
+     		momentum by looking ahead at the future position of the parameters.
+
+    	9. Momentum: An optimization algorithm that helps accelerate SGD by adding a fraction of the previous update to the current update.
+    
 -------------------------------------------------------------------------------------------------------------
 	
 ## Types of Gradient Descent:
