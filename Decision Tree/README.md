@@ -11,7 +11,7 @@
        
 -----------------------------------------------------------------------------------------------------
 
-## structure of tree: 
+## Structure of Decision Tree: 
 	Root Node: The starting point of the tree.
 	Branches: Paths connecting nodes based on decisions.
 	Internal Nodes: Intermediate nodes that facilitate further splitting.
