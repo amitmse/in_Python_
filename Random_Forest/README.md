@@ -1,5 +1,15 @@
 # Random Forest
 
+	Collection of decision trees.
+
+### Advantages:
+    	Same as decision Tree 
+    	Better predction 
+    
+### Limitations:
+    	Computationally expensive
+    	Black-box model; harder to interpret than single decision trees
+     
 ----------------------------------------------------------------------------------------------------------------------------
 ## Random Forest in Python
 
