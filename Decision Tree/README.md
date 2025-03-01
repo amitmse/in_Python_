@@ -9,7 +9,7 @@
 	Leaf Nodes: Final or terminal nodes of the tree.
 
 
-![Function](https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Node.PNG)
+![Function](https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/structure.PNG)
 
 -----------------------------------------------------------------------------------------------------
 ## Decision Trees in Python:
