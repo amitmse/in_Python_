@@ -7,7 +7,41 @@
 		
 		Logistic regression has only two layers i.e. input and output but in neural network, 
 		there is at least one hidden layer between input and output layer.
- 	
+
+
+## Key Components of Neural Networks:
+
+	1. Neurons (Nodes): The basic units of a neural network that receive input, process it, 
+ 		and pass the output to the next layer. Each neuron applies an activation function to its input.
+
+	2. Layers: Input Layer, Hidden Layers, Output Layer
+
+	3. Weights and Biases: Parameters that are adjusted during training to minimize the error in 
+ 		the network's predictions. Weights determine the strength of the connections between neurons, 
+   		while biases allow the model to fit the data better.
+
+	4. Activation Functions: Activation functions decide whether a neuron should be activated or not. 
+ 		Decide if it should pass its signal to the next layer. Functions applied to the output of 
+   		each neuron to introduce non-linearity into the model, enabling it to learn complex patterns.
+		Applied to the output of each neuron in the hidden and output layers.
+		Common Activation Functions:ReLU, Sigmoid, Tanh, Softmax
+		Example: Think of a light switch. The activation function decides if the light (neuron) 
+  		should be on or off based on the input.			
+
+	5. Loss Function: The loss function measures how well the neural network's predictions match the actual results. 
+ 		It tells the network how wrong it is. This "grade" helps the network adjust and improve.
+		A function that measures the difference between the predicted output and the actual output. 
+  		The goal of training is to minimize this loss. 
+		Applied to the output of the neural network as a whole, comparing the predicted values to the true values.
+		Common loss functions include mean squared error for regression tasks and categorical 
+  		cross-entropy for classification tasks.	
+		Example: Think of a teacher grading a test. 
+  		The loss function is the grade that tells the student (network) how many mistakes they made.
+
+	6. Training: The process of adjusting the weights and biases of the neural network to minimize the loss. 
+		This is typically done using a technique called back-propagation and 
+  		an optimization algorithm like gradient descent.
+  
 ### Neuron
 	Neurons are the basic unit of a neural network which takes inputs and generate an output. It consists of 
 	inputs, weights, and an activation function. The neuron translates these inputs into a output, which can 
@@ -30,7 +64,6 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
 https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN.py
 
 ---------------------------------------------------------------------------------------------------------
-
 
 ## Activation Function:
  
@@ -170,9 +203,36 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN.py
 		
 	It updates the weights of each layer as a function of the derivative of the previous layer. The problem is 
 	that the update signal was lost as depth increases.
-			
----------------------------------------------------------------------------------------------------------
 
+	Steps in Backpropagation:
+    		Forward Pass: Compute the output of the network by passing the input data through the layers 
+      		and applying activation functions.
+
+    		Compute Loss: Calculate the loss using the loss function.
+
+    		Backward Pass: Compute the gradients of the loss with respect to each weight in the network 
+      		using the chain rule of calculus.
+
+    		Update Weights: Adjust the weights using an optimization algorithm (e.g., gradient descent) 
+      		to minimize the loss.
+
+### Connection Between Activation Functions, Loss Function, and Backpropagation
+
+    	Forward Pass: Input data is passed through the network., 
+     		Activation functions are applied at each layer to produce the output.
+
+    	Loss Calculation: The output of the network is compared to the actual target values using the loss function. 
+     		The loss function computes the error (loss).
+
+    	Backward Pass (Backpropagation): The loss is propagated backward through the network. 
+     		Gradients of the loss with respect to each weight are computed. 
+       		Activation functions' derivatives are used in this step to calculate the gradients correctly.
+
+   	 Weight Update: Weights are updated using the computed gradients to minimize the loss. 
+     		This process is repeated iteratively to train the network.
+
+
+---------------------------------------------------------------------------------------------------------------
 # Types of neural networks and their applications:
 
 ## 01. Perceptron 
