@@ -648,7 +648,43 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 
 - Perceptron : Number of  Hidden Layer
 
+---------------------------------------------------------------------------------------------------------------
 
+Alternative Training Algorithms
+
+    Genetic Algorithms: Evolutionary algorithms that optimize the network's weights using principles of natural selection.
+
+    Particle Swarm Optimization (PSO): An optimization algorithm inspired by the social behavior of birds flocking or fish schooling.
+
+    Simulated Annealing: An optimization technique that explores the solution space and gradually reduces the probability of accepting worse solutions.
+
+    Extreme Learning Machines (ELM): A learning algorithm for single-layer feedforward neural networks with randomly assigned hidden layer weights.
+
+    Reservoir Computing (Echo State Networks and Liquid State Machines): Frameworks for training recurrent neural networks with fixed, randomly initialized recurrent layers.
+
+---------------------------------------------------------------------------------------------------------------
+
+Specialized Neural Network Algorithms
+
+    Convolutional Neural Networks (CNNs): Specialized for processing grid-like data such as images.
+
+    Recurrent Neural Networks (RNNs): Designed for sequential data, with connections between nodes forming a directed graph along a temporal sequence.
+
+    Long Short-Term Memory (LSTM): A type of RNN that can learn long-term dependencies.
+
+    Gated Recurrent Unit (GRU): A variant of LSTM with a simpler architecture.
+
+    Autoencoders: Neural networks used for unsupervised learning of efficient codings.
+
+    Generative Adversarial Networks (GANs): Consist of two networks, a generator and a discriminator, that compete against each other.
+
+    Self-Organizing Maps (SOMs): Used for unsupervised learning and visualization of high-dimensional data.
+
+    Boltzmann Machines: Stochastic recurrent neural networks capable of learning internal representations.
+
+    Hopfield Networks: Recurrent neural networks with binary threshold nodes.
+
+---------------------------------------------------------------------------------------------------------------
 
 https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/
 
