@@ -3,9 +3,9 @@
 -----------------------------------------------------------------------------------------------------
 
 ## Type of Decision Tree
-	- Classification trees: Target variable is category.
+- Classification trees: Target variable is category.
 		Example: Customer will 'pay' or 'not pay'. 
-    	- Regression trees :Target variable is continuous. 
+- Regression trees :Target variable is continuous. 
      		Example: How much customer will pay.
        
 -----------------------------------------------------------------------------------------------------
