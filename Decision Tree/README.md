@@ -3,7 +3,7 @@
 
 
 
-![Function](https://github.com/amitmse/in_Python_/blob/master/Formula/Node.webp)
+![Function](https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Node.webp)
 
 -----------------------------------------------------------------------------------------------------
 ## Decision Trees in Python:
