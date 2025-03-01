@@ -29,19 +29,18 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 ## Advantages of Decision Trees
 
 	- Easy to Interpret
-    	- No data massaging required, unlike regression
-    	- Handles Non-linear Relationships
+	- No data massaging required, unlike regression
+	- Handles Non-linear Relationships
     
 ## Limitations of Decision Trees:
-
 	- Overfitting: May capture noise
- 	- Low-Performance
-	- Poor Resolution on Data With Complex Relationships Among the Variables
-	- Practically Limited to Classification
-	- Poor Resolution With Continuous Expectation Variables
+	- Low-Performance
+ 	- Poor Resolution on Data With Complex Relationships Among the Variables
+  	- Practically Limited to Classification
+   	- Poor Resolution With Continuous Expectation Variables
 
 -----------------------------------------------------------------------------------------------------
-## Variable selection measures:
+## Variable selection method:
 
 ### Gini Index:
 
