@@ -1,4 +1,8 @@
 # Decision Tree
+	The foundation of decision trees comes from Hunt's algorithm, 
+ 		developed in the 1960s to model human learning in psychology.
+	
+ 	A non-parametric supervised learning technique for classification and regression.
 
 -----------------------------------------------------------------------------------------------------
 
@@ -40,7 +44,7 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
    	- Poor Resolution With Continuous Expectation Variables
 
 -----------------------------------------------------------------------------------------------------
-## Variable selection method:
+## Variable Selection method:
 
 ### Gini Index:
 
@@ -220,6 +224,20 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 	on training data set, then it causes over fitting and losses the predictive power of the model because 
 	it is not generalized. Over fitting can be removed by pruning the nodes.
 
+-----------------------------------------------------------------------------------------------------
+
+### Algorithms
+
+	- Iterative Dichotomiser 3 (ID3): Developed by Ross Quinlan, 
+ 		it uses entropy and information gain to evaluate candidate splits.
+ 
+
+	- C4.5: A later iteration of ID3, developed by Quinlan, 
+ 		it evaluates split points using information gain or gain ratios.
+
+	- classification and regression trees (CART): Introduced by Leo Breiman, 
+ 		it uses Gini impurity to identify the ideal attribute to split.
+ 
 -----------------------------------------------------------------------------------------------------
 
 ## Type I / II Error
