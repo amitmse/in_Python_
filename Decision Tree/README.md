@@ -3,7 +3,7 @@
 
 
 
-![Function](https://github.com/amitmse/in_Python_/blob/master/Formula/Confusion%20Matrxi.jpg)
+![Function](https://github.com/amitmse/in_Python_/blob/master/Formula/Node.webp)
 
 -----------------------------------------------------------------------------------------------------
 ## Decision Trees in Python:
