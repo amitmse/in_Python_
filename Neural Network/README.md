@@ -8,6 +8,16 @@
 		Logistic regression has only two layers i.e. input and output but in neural network, 
 		there is at least one hidden layer between input and output layer.
 
+---------------------------------------------------------------------------------------------------------
+## Neural Network in Python:
+
+https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN.py
+
+---------------------------------------------------------------------------------------------------------
+
+## Manually computed Back-Propagation in excel:
+
+https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
 
 ## Key Components of Neural Networks:
 
@@ -41,7 +51,64 @@
 	6. Training: The process of adjusting the weights and biases of the neural network to minimize the loss. 
 		This is typically done using a technique called back-propagation and 
   		an optimization algorithm like gradient descent.
+
+---------------------------------------------------------------------------------------------------------
+
+## Problem in NN:
+	Well due to Fully Connected Layer Architecture we experience two problems:
+			-	Vanishing Gradient Problem 
+			-	Exploding Gradient Problem 
+	while training Deep Neural Networks which makes it hard to train deep neural networks.
+	To prevent that we make use of a different architecture called as Convolutional Nets 
+	which uses three main ideas:
+			-	Local Receptive fields 
+			-	Shared Weights 
+			- 	Pooling
+
+### Vanishing Gradients: 
+	In deep networks, during back-propagation, gradients are calculated using the chain rule. 
+ 	The gradients are multiplied many times during back-propagation.
+	If the gradients are small, repeated multiplication can make them exponentially smaller, 
+ 	leading to vanishing gradients.
+
+	This can significantly slow down or even halt the training process because the weights update very slowly.
+	The derivative of the sigmoid function is small for large positive or negative input values. 
+
+	Sigmoid and Tanh Activation Functions squash their input into 
+ 	a small range (e.g., 0 to 1 for Sigmoid, -1 to 1 for Tanh). 
+	When the input to these functions is in the saturated region (very high or very low), 
+ 	the gradients become very small.
+
+	Example: Imagine trying to climb a hill (optimize the network) with very tiny steps (small gradients). 
+	If your steps are too tiny, it will take a very long time to reach the top, 
+ 	or you might not make any noticeable progress at all.
+	
+	Logistic regression, being a shallow model with no hidden layers, does not suffer from this issue. 
+	The gradients in logistic regression are directly computed from the output layer, 
+ 	making the vanishing gradient problem irrelevant in this context.
+	In logistic regression, the sigmoid function is used to convert the linear combination of input features into a 
+ 	probability value between 0 and 1. 
+	The binary cross-entropy loss function measures how well the model's predictions match the actual labels, 
+ 	and the goal of training is to minimize this loss function.
+
+	Solutions: 
+	Rectified Linear Unit (ReLU) activation function does not suffer from the vanishing gradient problem as much 
+ 	because it does not squash its input into a small range. 
+  	Variants like Leaky ReLU and Parametric ReLU can also be used.
+
+	Proper initialization of weights can help mitigate the vanishing gradient problem. 
+
+	Techniques like Xavier (Glorot) initialization and He initialization are designed 
+ 	to keep the gradients in a reasonable range.	
+
+	Batch Normalization technique normalizes the inputs of each layer, 
+ 	which helps maintain the gradients at a healthy scale throughout the network.
+
+	Gradient Clipping involves setting a threshold to clip the gradients during back-propagation, 
+ 	preventing them from becoming too small or too large.
   
+---------------------------------------------------------------------------------------------------------
+
 ### Neuron
 	Neurons are the basic unit of a neural network which takes inputs and generate an output. It consists of 
 	inputs, weights, and an activation function. The neuron translates these inputs into a output, which can 
@@ -51,17 +118,26 @@
 	which passes on to next level, each perceptron will have an activation function. The weights and 
 	input value forms a single perception. Use activation function and based on that, the value goes 
 	to next well. And the process continues till it reaches output y’.
+
+---------------------------------------------------------------------------------------------------------
+
+## Hidden layers
+
+	Why it's called hidden layers: 
+		Hidden layers are only available for internal use (NN) and it's not be access outside of neural netwrok.
 	
-
----------------------------------------------------------------------------------------------------------
-## Manually computed Back-Propagation in excel:
-
-https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
-
----------------------------------------------------------------------------------------------------------
-## Neural Network in Python:
-
-https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN.py
+	If data is linearly separable then don't need any hidden layers and no need to use NN. Assuming data does 
+	require separation by a non-linear technique, then always start with one hidden layer. Additonal hidden 
+	layer creates major performance issue. Most of times, one hidden layer is sufficient for the majority of 
+	problems.
+		
+	Using too many neurons in the hidden layers can result in several problems:
+		- Overfitting.
+		- Extra time to train the network. 
+		- Number of neurons:
+			- In between the size of the input layer and the size of the output layer
+			- 2/3 of size of the input layer, plus the size of the output layer
+			- Less than twice the size of the input layer
 
 ---------------------------------------------------------------------------------------------------------
 
@@ -161,26 +237,6 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN.py
 
 ---------------------------------------------------------------------------------------------------------
 
-## Hidden layers
-
-	Why it's called hidden layers: 
-		Hidden layers are only available for internal use (NN) and it's not be access outside of neural netwrok.
-	
-	If data is linearly separable then don't need any hidden layers and no need to use NN. Assuming data does 
-	require separation by a non-linear technique, then always start with one hidden layer. Additonal hidden 
-	layer creates major performance issue. Most of times, one hidden layer is sufficient for the majority of 
-	problems.
-		
-	Using too many neurons in the hidden layers can result in several problems:
-		- Overfitting.
-		- Extra time to train the network. 
-		- Number of neurons:
-			- In between the size of the input layer and the size of the output layer
-			- 2/3 of size of the input layer, plus the size of the output layer
-			- Less than twice the size of the input layer
-
----------------------------------------------------------------------------------------------------------
-
 ## Back-propagation
 	
 	
@@ -230,7 +286,6 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN.py
 
    	 Weight Update: Weights are updated using the computed gradients to minimize the loss. 
      		This process is repeated iteratively to train the network.
-
 
 ---------------------------------------------------------------------------------------------------------------
 # Types of neural networks and their applications:
@@ -507,63 +562,6 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 		Stochastic gradient descent used for faster computation. First, it randomizes the complete dataset, 
 		and then uses only one training example in every iteration to calculate the gradient. Its benifical 
 		for huge datasets.
-
----------------------------------------------------------------------------------------------------------
-
-## Problem in NN:
-	Well due to Fully Connected Layer Architecture we experience two problems:
-			-	Vanishing Gradient Problem 
-			-	Exploding Gradient Problem 
-	while training Deep Neural Networks which makes it hard to train deep neural networks.
-	To prevent that we make use of a different architecture called as Convolutional Nets 
-	which uses three main ideas:
-			-	Local Receptive fields 
-			-	Shared Weights 
-			- 	Pooling
-
-
-### Vanishing Gradients: 
-	In deep networks, during back-propagation, gradients are calculated using the chain rule. 
- 	The gradients are multiplied many times during back-propagation.
-	If the gradients are small, repeated multiplication can make them exponentially smaller, 
- 	leading to vanishing gradients.
-
-	This can significantly slow down or even halt the training process because the weights update very slowly.
-	The derivative of the sigmoid function is small for large positive or negative input values. 
-
-	Sigmoid and Tanh Activation Functions squash their input into 
- 	a small range (e.g., 0 to 1 for Sigmoid, -1 to 1 for Tanh). 
-	When the input to these functions is in the saturated region (very high or very low), 
- 	the gradients become very small.
-
-	Example: Imagine trying to climb a hill (optimize the network) with very tiny steps (small gradients). 
-	If your steps are too tiny, it will take a very long time to reach the top, 
- 	or you might not make any noticeable progress at all.
-	
-	Logistic regression, being a shallow model with no hidden layers, does not suffer from this issue. 
-	The gradients in logistic regression are directly computed from the output layer, 
- 	making the vanishing gradient problem irrelevant in this context.
-	In logistic regression, the sigmoid function is used to convert the linear combination of input features into a 
- 	probability value between 0 and 1. 
-	The binary cross-entropy loss function measures how well the model's predictions match the actual labels, 
- 	and the goal of training is to minimize this loss function.
-
-	Solutions: 
-	Rectified Linear Unit (ReLU) activation function does not suffer from the vanishing gradient problem as much 
- 	because it does not squash its input into a small range. 
-  	Variants like Leaky ReLU and Parametric ReLU can also be used.
-
-	Proper initialization of weights can help mitigate the vanishing gradient problem. 
-
-	Techniques like Xavier (Glorot) initialization and He initialization are designed 
- 	to keep the gradients in a reasonable range.	
-
-	Batch Normalization technique normalizes the inputs of each layer, 
- 	which helps maintain the gradients at a healthy scale throughout the network.
-
-	Gradient Clipping involves setting a threshold to clip the gradients during back-propagation, 
- 	preventing them from becoming too small or too large.
-
 
 ---------------------------------------------------------------------------------------------------------
 
