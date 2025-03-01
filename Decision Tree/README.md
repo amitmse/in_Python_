@@ -2,7 +2,7 @@
 
 -----------------------------------------------------------------------------------------------------
 
-### structure of tree:
+### structure of tree: 
 
     - Root Node is the starting point that represents the entire dataset.
     - Branches are the lines that connect nodes. It shows the flow from one decision to another.
