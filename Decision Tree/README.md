@@ -3,7 +3,7 @@
  		developed in the 1960s to model human learning in psychology.
 	
  	A non-parametric (Assumes no underlying data distribution) 
-  	supervised learning technique for classification and regression.
+  		supervised learning technique for classification and regression.
    
 -----------------------------------------------------------------------------------------------------
 
