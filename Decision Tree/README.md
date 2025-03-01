@@ -51,9 +51,11 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 
 	- C4.5: A later iteration of ID3, developed by Quinlan, it evaluates split points using information gain or gain ratios.
 
-	- Classification And Regression Trees (CART): Introduced by Leo Breiman, it uses Gini impurity to identify the ideal attribute to split.
+	- Classification And Regression Trees (CART): Introduced by Leo Breiman, 
+ 		it uses Gini impurity to identify the ideal attribute to split.
 
-	- Chi-Squared automatic interaction detection (CHAID): Performs multi-level splits in classification trees, using the F-test for attribute selection.
+	- Chi-Squared automatic interaction detection (CHAID): Performs multi-level splits in classification trees, 
+ 		using the F-test for attribute selection.
    
 
 ## Variable Selection method:
