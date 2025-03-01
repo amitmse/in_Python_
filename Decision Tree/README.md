@@ -1,6 +1,13 @@
 # Decision Tree Algorithms
 
+-----------------------------------------------------------------------------------------------------
 
+### structure of tree:
+
+    	- Root Node is the starting point that represents the entire dataset.
+    	- Branches are the lines that connect nodes. It shows the flow from one decision to another.
+    	- Internal Nodes are Points where decisions are made based on the input features.
+    	- Leaf Nodes: These are the terminal nodes at the end of branches that represent final outcomes or predictions
 
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Node.PNG)
