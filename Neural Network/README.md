@@ -440,16 +440,20 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 ### Vanishing Gradients: 
 	In deep networks, during back-propagation, gradients are calculated using the chain rule. 
  	The gradients are multiplied many times during back-propagation.
-	If the gradients are small, repeated multiplication can make them exponentially smaller, leading to vanishing gradients.
+	If the gradients are small, repeated multiplication can make them exponentially smaller, 
+ 	leading to vanishing gradients.
 
 	This can significantly slow down or even halt the training process because the weights update very slowly.
 	The derivative of the sigmoid function is small for large positive or negative input values. 
 
-	Sigmoid and Tanh Activation Functions squash their input into a small range (e.g., 0 to 1 for Sigmoid, -1 to 1 for Tanh). 
-	When the input to these functions is in the saturated region (very high or very low), the gradients become very small.
+	Sigmoid and Tanh Activation Functions squash their input into 
+ 	a small range (e.g., 0 to 1 for Sigmoid, -1 to 1 for Tanh). 
+	When the input to these functions is in the saturated region (very high or very low), 
+ 	the gradients become very small.
 
 	Example: Imagine trying to climb a hill (optimize the network) with very tiny steps (small gradients). 
-	If your steps are too tiny, it will take a very long time to reach the top, or you might not make any noticeable progress at all.
+	If your steps are too tiny, it will take a very long time to reach the top, 
+ 	or you might not make any noticeable progress at all.
 	
 	Logistic regression, being a shallow model with no hidden layers, does not suffer from this issue. 
 	The gradients in logistic regression are directly computed from the output layer, 
@@ -461,11 +465,13 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 
 	Solutions: 
 	Rectified Linear Unit (ReLU) activation function does not suffer from the vanishing gradient problem as much 
- 	because it does not squash its input into a small range. Variants like Leaky ReLU and Parametric ReLU can also be used.
+ 	because it does not squash its input into a small range. 
+  	Variants like Leaky ReLU and Parametric ReLU can also be used.
 
 	Proper initialization of weights can help mitigate the vanishing gradient problem. 
 
-	Techniques like Xavier (Glorot) initialization and He initialization are designed to keep the gradients in a reasonable range.	
+	Techniques like Xavier (Glorot) initialization and He initialization are designed 
+ 	to keep the gradients in a reasonable range.	
 
 	Batch Normalization technique normalizes the inputs of each layer, 
  	which helps maintain the gradients at a healthy scale throughout the network.
