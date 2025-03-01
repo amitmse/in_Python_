@@ -1,9 +1,7 @@
 # Decision Tree
-	The foundation of decision trees comes from Hunt's algorithm, 
- 		developed in the 1960s to model human learning in psychology.
+	The foundation of decision trees comes from Hunt's algorithm, developed in the 1960s to model human learning in psychology.
 	
- 	A non-parametric (Assumes no underlying data distribution) 
-  		supervised learning technique for classification and regression.
+ 	A non-parametric (Assumes no underlying data distribution) supervised learning technique for classification and regression.
    
 -----------------------------------------------------------------------------------------------------
 
