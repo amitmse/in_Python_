@@ -239,7 +239,6 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
 
 ## Back-propagation
 	
-	
 	As name suggest it's backwrad process to update (optimal) the weight which helps in reducing the error
 	Another name: backward propagation of errors, gradient descent. Forward process called Forward propagation.
 	
@@ -261,15 +260,15 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
 	that the update signal was lost as depth increases.
 
 	Steps in Backpropagation:
-    		Forward Pass: Compute the output of the network by passing the input data through the layers 
+    	Forward Pass: Compute the output of the network by passing the input data through the layers 
       		and applying activation functions.
 
-    		Compute Loss: Calculate the loss using the loss function.
+    	Compute Loss: Calculate the loss using the loss function.
 
-    		Backward Pass: Compute the gradients of the loss with respect to each weight in the network 
+    	Backward Pass: Compute the gradients of the loss with respect to each weight in the network 
       		using the chain rule of calculus.
 
-    		Update Weights: Adjust the weights using an optimization algorithm (e.g., gradient descent) 
+    	Update Weights: Adjust the weights using an optimization algorithm (e.g., gradient descent) 
       		to minimize the loss.
 
 ### Connection Between Activation Functions, Loss Function, and Backpropagation
