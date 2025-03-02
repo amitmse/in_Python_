@@ -57,31 +57,12 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 			Normalize weights for wrongly   classified = 0.167
   
 	3. Final Tree: Combine all models using weights.
- 
-	3. Compute coefficient		SQRT[{log(odds error)}] => (1/2 ln[{1 - weighted error(ft)}/weighted error(ft)])
-  
-  	-------------------------------------------------------------------------------------
 
-	y^ = sign(sum(Wt ft(X))) 	(Wt=Coefficient)
-	
-	first compute Wt (Coefficient)
-		Wt = 1/2 ln[{1 - weighted error(ft)}/weighted error(ft)] 
-			(weighted error	= total weight of mistake/total weight of all data point)
-			
-	second compute ai(weight)
-		for first iteration ai = 1/N (N=no of observation)
-		ai = "ai e^(-Wt)" if ft(Xi)=Yi OR "ai e^(Wt)" if ft(Xi) not equal to Yi	(ai=Weight)
-		
-	Normalize weight ai
-		ai = ai/(sum of all a's)
-		
-	Function	: (1/sum (Wi)) sum(Wi exp(-2Yi -1)f(Xi))
-	
-	Initial Value	: 1/2 log [(sum (Yi Wi e^-oi))/sum ((1-Yi)Wi e^oi)]
-	
-	Gradient	: Zi = -(2Yi - 1) exp(-(2Yi-1)fXi))
+https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
+   
+
   
-  	-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
   
  ## GBM
  
