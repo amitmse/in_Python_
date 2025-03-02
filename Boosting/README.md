@@ -34,7 +34,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting.PNG)
 
-## ADA Boost
+## ADA Boost: Adapts from mistakes
 
 	--------------------------------------------------------------------------------------------------
 	1. Assign same weight to all obs ( 1/No. of obs )
