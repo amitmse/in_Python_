@@ -34,22 +34,26 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 
 	--------------------------------------------------------------------------------------------------
 	1. Initialize Weights: Assign same weight to all obs ( 1/No. of obs ). The sum of weights is 1.
+ 		If there are 10 total obs then weight is 0.1 (1/10).
   
 	2. Iterative Learning: In each iteration, a model is trained.
- 		Each tree learns from previous ones. Misclassified observations gain more weight in the next iteration.
- 		Correctly classified observations retain their weights. All weights are adjusted to sum to 1.
-     
+ 		- Each tree learns from previous ones. Misclassified observations gain more weight in the next iteration.
+ 		- Correctly classified observations retain their weights. All weights are adjusted to sum to 1.
+   
+		- For each iteration compute accuracy: (1/2) * ln [ (1 - Total Error) / Total Error ] 
+			3 obs are misclassified out of 10 in the first iteration, the total error is 3/10.
+   			accuracy: 0.43
+   
+		- Recompute weights: Adjust weight for misclassified observation: 
+			correctly classified = Previous Weight * e^(-accuracy) = 0.07
+			wrongly classified   = Previous Weight * e^(+accuracy) = 0.15
+  
+		- Normalize weights: All weights are adjusted to sum to 1.
+  
 	3. Final Tree: Combine all models using weights.
  
 	3. Compute coefficient		SQRT[{log(odds error)}] => (1/2 ln[{1 - weighted error(ft)}/weighted error(ft)])
- 
-		performance of model: (1/2) * ln [ (1 - Error) / Total Error ] 
-		If there are 10 total obs and one is misclassified in the first iteration, the total error is 1/10.
   
-	4. Recompute weights		( ai e^(-Wt))
-  
-	5. Normalize weights
- 
   	-------------------------------------------------------------------------------------
 
 	y^ = sign(sum(Wt ft(X))) 	(Wt=Coefficient)
