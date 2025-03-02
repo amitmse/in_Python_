@@ -42,8 +42,9 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 	3. Final Tree: Combine all models using weights.
  
 	3. Compute coefficient		SQRT[{log(odds error)}] => (1/2 ln[{1 - weighted error(ft)}/weighted error(ft)])
-
-Influence: (1/2) * log [ (1 - Error) / Total Error ] 
+ 
+		performance of model: (1/2) * ln [ (1 - Error) / Total Error ] 
+		If there are 10 total obs and one is misclassified in the first iteration, the total error is 1/10.
   
 	4. Recompute weights		( ai e^(-Wt))
   
