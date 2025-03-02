@@ -12,9 +12,6 @@
 	boosting and stacking will mainly try to produce strong models less biased than their components 
 	(even if variance can also be reduced).
 
- 	Bootstrap samples: Draw repeated samples from the population, a large number of times. 
-	Samples are approximatively independent and identically distributed (i.i.d.).
-
     	Following techniques are based on Boosting:
 		- AdaBoost (Adaptive Boosting)
   		- Gradient Tree Boosting (GBM)
