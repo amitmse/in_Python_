@@ -32,7 +32,10 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 ### Bagging (Bootstrap aggregating): Decrease Variance
 	Fit a weak learner (several independent models) on each of bootstarp samples and finally aggregate the outputs 
 	(average model predictions) in order to obtain a model with a lower variance. It builds model parallelly.
-	
+
+ 	Bootstrap samples: Draw repeated samples from the population, a large number of times. 
+	Samples are approximatively independent and identically distributed (i.i.d.).
+ 
  	Bagging ensembles methods applied on Random Forest.
  
 ### Boosting: Decrease Bias
@@ -43,9 +46,6 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 	Bagging mainly focus at getting an ensemble model with less variance than its components whereas 
 	boosting and stacking will mainly try to produce strong models less biased than their components 
 	(even if variance can also be reduced).
-
- 	Bootstrap samples: Draw repeated samples from the population, a large number of times. 
-	Samples are approximatively independent and identically distributed (i.i.d.).
 
     	Following techniques are based on Boosting:
 		- AdaBoost (Adaptive Boosting)
