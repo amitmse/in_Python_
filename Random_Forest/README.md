@@ -80,9 +80,6 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 
 ## Algorithm (for both classification and regression)
 
-
-![Function](https://github.com/amitmse/in_Python_/blob/master/Random_Forest/RF.PNG)
-
 	1. Select a subset of data and variables: Draw ntree bootstrap samples from the original data
     
 	2. Develop decision trees on the selected data: For each of the bootstrap samples, 
@@ -102,10 +99,11 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 			the times, so aggregate these predictions.)  
 			Calcuate the error rate, and call it the OOB estimate of error rate.
 	
-  Our experience has been that the OOB estimate of error rate is quite accurate, given that enough trees have 
-  been grown (otherwise the OOB estimate can bias upward; see Bylander (2002))
-  
+  	Our experience has been that the OOB estimate of error rate is quite accurate, given that enough trees have 
+  		been grown (otherwise the OOB estimate can bias upward; see Bylander (2002))
 http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
+
+![Function](https://github.com/amitmse/in_Python_/blob/master/Random_Forest/RF.PNG)
 
 ## Implementation 
 
