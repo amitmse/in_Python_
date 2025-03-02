@@ -35,8 +35,10 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 	--------------------------------------------------------------------------------------------------
 	1. Initialize Weights: Assign same weight to all obs ( 1/No. of obs )
   
-	2. Iterative Learning: In each iteration, a model is trained. Misclassified observations receive more weight in the next model. 
- 		Correctly classified observations retain their weights. All weights are adjusted to sum to 1.
+	2. Iterative Learning: In each iteration, a model is trained. 
+ 		Misclassified observations receive more weight in the next model. 
+ 		Correctly classified observations retain their weights. 
+   		All weights are adjusted to sum to 1.
   
 	3. Compute coefficient		SQRT[{log(odds error)}] => (1/2 ln[{1 - weighted error(ft)}/weighted error(ft)])
   
