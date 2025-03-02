@@ -2,34 +2,42 @@
 
 	A group of decision trees.
 
-### Advantages:
+## Advantages:
 	Same as decision Tree 
 	Each decision tree in the forest is independent.
 	Better predction
     
-### Limitations:
+## Limitations:
 	Computationally expensive
 	Black-box model; harder to interpret than single decision trees
-     
+
+## Eaxmple:
+	To choose the best strategy for an upcoming product launch, a project manager seeks advice 
+ 	from multiple teams and tailors the strategy based on their responses.
+
 ----------------------------------------------------------------------------------------------------------------------------
 ## Random Forest in Python
 
 https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Try.py
 
 ----------------------------------------------------------------------------------------------------------------------------
-## Bootstrap samples:
-	Draw repeated samples from the population, a large number of times. 
-	Samples are approximatively independent and identically distributed (i.i.d.).
+## Key Element
 
-## Ensemble methods:
+	Decision trees use the entire data, while random forests utilize an ensemble method to reduce variance.
+
+### Ensemble methods:
 	Ensemble learning is a machine learning paradigm where multiple models (often called "weak learners") 
 	are trained to solve the same problem and combined to get better results. 
-	
-## Bagging (Bootstrap aggregating):
+
+### Bagging (Bootstrap aggregating):
 	Fit a weak learner (several independent models) on each of bootstarp samples and finally aggregate the outputs 
 	(average model predictions) in order to obtain a model with a lower variance. It builds model parallelly.
 
-## Boosting:
+### Bootstrap samples:
+	Draw repeated samples from the population, a large number of times. 
+	Samples are approximatively independent and identically distributed (i.i.d.).
+
+### Boosting:
 	Similar to bagging but it fits weak learner sequentially (a model depends on the previous ones) in a very 
 	adaptative way. Each model in the sequence is fitted giving more importance to the observations which are not 
 	classified correctly (high error). Mainly focus on reducing bias.
@@ -38,13 +46,13 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 	boosting and stacking will mainly try to produce strong models less biased than their components 
 	(even if variance can also be reduced).
 
-## Stacking:
+### Stacking:
 	Stacking mainly differ from bagging and boosting on two points. First stacking often considers heterogeneous 
 	weak learners (different learning algorithms are combined) whereas bagging and boosting consider mainly 
 	homogeneous weak learners. Second, stacking learns to combine the base models using a meta-model whereas 
 	bagging and boosting combine weak learners following deterministic algorithms.
 	
-## Bias - Variance
+### Bias - Variance
 	Bias: 
 		- Bias is the difference between the prediction of model and actual value. 
 		- It always leads to high error on training and test data.
@@ -64,14 +72,15 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 
 ## Algorithm (for both classification and regression)
 
-	1. Draw ntree bootstrap samples from the original data
+	1. Select a subset of data and variables: Draw ntree bootstrap samples from the original data
     
-	2. For each of the bootstrap samples, grow an unpruned classification or regression tree, with the following
+	2. Develop decision trees on the selected data: For each of the bootstrap samples, 
+ 		grow an unpruned classification or regression tree, with the following
 		modification: at each node, rather than choosing the best split among all predictors, randomly sample
 		mtry of the predictors and choose the best split from among those variables. (Bagging can be thought 
 		of as the special case of random forests obtained when mtry = p, the number of predictors)
         
-	3. Predict new data by aggregating the predictions of the ntree trees 
+	3. Final tree based on averaging: Predict new data by aggregating the predictions of the ntree trees 
         	(i.e., majority votes for classification, average for regression).
 		
 	An estimate of the error rate can be obtained, based on the training data, by the following:
