@@ -29,8 +29,6 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 	Ensemble learning is a machine learning paradigm where multiple models (often called "weak learners") 
 	are trained to solve the same problem and combined to get better results. 
 
-![Function](https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Bagging%20vs%20Boosting.PNG)
-
 ### Bagging (Bootstrap aggregating): Decrease Variance
 	Fit a weak learner (several independent models) on each of bootstarp samples and finally aggregate the outputs 
 	(average model predictions) in order to obtain a model with a lower variance. It builds model parallelly.
@@ -53,6 +51,8 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 		- AdaBoost (Adaptive Boosting)
   		- Gradient Tree Boosting (GBM)
 		- XGBoost
+
+![Function](https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Bagging%20vs%20Boosting.PNG)
 
 ### Stacking: Improve Predictions
 	Stacking mainly differ from bagging and boosting on two points. First stacking often considers heterogeneous 
