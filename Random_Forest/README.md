@@ -3,13 +3,13 @@
 	A group of decision trees.
 
 ## Advantages:
-	Same as decision Tree 
+	Same as decision Tree.
 	Each decision tree in the forest is independent.
-	Better predction
+	Enhanced accuracy over a decision tree.
     
 ## Limitations:
-	Computationally expensive
-	Black-box model; harder to interpret than single decision trees
+	Computationally expensive.
+	Black-box model; harder to interpret than single decision trees.
 
 ## Eaxmple:
 	To choose the best strategy for an upcoming product launch, a project manager seeks advice 
