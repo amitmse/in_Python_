@@ -29,15 +29,11 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 	Ensemble learning is a machine learning paradigm where multiple models (often called "weak learners") 
 	are trained to solve the same problem and combined to get better results. 
 
-### Bagging (Bootstrap aggregating):
+### Bagging (Bootstrap aggregating): Decrease Variance
 	Fit a weak learner (several independent models) on each of bootstarp samples and finally aggregate the outputs 
 	(average model predictions) in order to obtain a model with a lower variance. It builds model parallelly.
 
-### Bootstrap samples:
-	Draw repeated samples from the population, a large number of times. 
-	Samples are approximatively independent and identically distributed (i.i.d.).
-
-### Boosting:
+### Boosting: Decrease Bias
 	Similar to bagging but it fits weak learner sequentially (a model depends on the previous ones) in a very 
 	adaptative way. Each model in the sequence is fitted giving more importance to the observations which are not 
 	classified correctly (high error). Mainly focus on reducing bias.
@@ -46,7 +42,11 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 	boosting and stacking will mainly try to produce strong models less biased than their components 
 	(even if variance can also be reduced).
 
-### Stacking:
+### Bootstrap samples:
+	Draw repeated samples from the population, a large number of times. 
+	Samples are approximatively independent and identically distributed (i.i.d.).
+ 
+### Stacking: Improve Predictions
 	Stacking mainly differ from bagging and boosting on two points. First stacking often considers heterogeneous 
 	weak learners (different learning algorithms are combined) whereas bagging and boosting consider mainly 
 	homogeneous weak learners. Second, stacking learns to combine the base models using a meta-model whereas 
