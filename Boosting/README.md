@@ -1,6 +1,26 @@
 
 ----------------------------------------------------------------------------------------------------------------
-## Boosting in Python:
+## Boosting:
+
+
+## Boosting: Decrease Bias
+	Similar to bagging but it fits weak learner sequentially (a model depends on the previous ones) in a very 
+	adaptative way. Each model in the sequence is fitted giving more importance to the observations which are not 
+	classified correctly (high error). Mainly focus on reducing bias.
+	
+	Bagging mainly focus at getting an ensemble model with less variance than its components whereas 
+	boosting and stacking will mainly try to produce strong models less biased than their components 
+	(even if variance can also be reduced).
+
+ 	Bootstrap samples: Draw repeated samples from the population, a large number of times. 
+	Samples are approximatively independent and identically distributed (i.i.d.).
+
+    	Following techniques are based on Boosting:
+		- AdaBoost (Adaptive Boosting)
+  		- Gradient Tree Boosting (GBM)
+		- XGBoost
+  
+----------------------------------------------------------------------------------------------------------------
 
 https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 
@@ -11,6 +31,8 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 | Ensembling	| Bagging	| RF	| Handle Overfitting	| Reduce Variance		| Independent Calssifiers |
 | Ensembling	| Boosting	| GBM	| Can Overfit		| Reduce Bias and Variance	| Sequential Classifier   |
 
+
+![Function](https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting.PNG)
 
 ## ADA Boost
 
