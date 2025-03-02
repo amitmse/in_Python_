@@ -33,19 +33,22 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 ## ADA Boost: Adapts from mistakes
 
 	--------------------------------------------------------------------------------------------------
-	1. Initialize Weights: Assign same weight to all obs ( 1/No. of obs )
+	1. Initialize Weights: Assign same weight to all obs ( 1/No. of obs ). The sum of weights is 1.
   
-	2. Iterative Learning: In each iteration, a model is trained. 
- 		Misclassified observations gain more weight in the next iteration.
- 		Correctly classified observations retain their weights. 
-   		All weights are adjusted to sum to 1.
-  
+	2. Iterative Learning: In each iteration, a model is trained.
+ 		Each tree learns from previous ones. Misclassified observations gain more weight in the next iteration.
+ 		Correctly classified observations retain their weights. All weights are adjusted to sum to 1.
+     
+	3. Final Tree: Combine all models using weights.
+ 
 	3. Compute coefficient		SQRT[{log(odds error)}] => (1/2 ln[{1 - weighted error(ft)}/weighted error(ft)])
+
+Influence: (1/2) * log [ (1 - Error) / Total Error ] 
   
 	4. Recompute weights		( ai e^(-Wt))
   
 	5. Normalize weights
-	
+ 
   	-------------------------------------------------------------------------------------
 
 	y^ = sign(sum(Wt ft(X))) 	(Wt=Coefficient)
