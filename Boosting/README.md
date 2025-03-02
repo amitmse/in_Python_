@@ -10,10 +10,10 @@
 	boosting and stacking will mainly try to produce strong models less biased than their components 
 	(even if variance can also be reduced).
 
-    	Following techniques are based on Boosting:
-		- AdaBoost (Adaptive Boosting)
-  		- Gradient Tree Boosting (GBM)
-		- XGBoost
+	Following techniques are based on Boosting:
+	- AdaBoost (Adaptive Boosting)
+	- Gradient Tree Boosting (GBM)
+	- XGBoost
   
 ----------------------------------------------------------------------------------------------------------------
 ## Boosting in Python
