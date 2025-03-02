@@ -1,6 +1,6 @@
 # Random Forest
 
-	Collection of decision trees.
+	A group of decision trees.
 
 ### Advantages:
     	Same as decision Tree 
