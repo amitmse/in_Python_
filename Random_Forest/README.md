@@ -72,6 +72,9 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
 
 ## Algorithm (for both classification and regression)
 
+
+![Function](https://github.com/amitmse/in_Python_/blob/master/Random_Forest/RF.PNG)
+
 	1. Select a subset of data and variables: Draw ntree bootstrap samples from the original data
     
 	2. Develop decision trees on the selected data: For each of the bootstrap samples, 
