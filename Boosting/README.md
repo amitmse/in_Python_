@@ -35,6 +35,9 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 	--------------------------------------------------------------------------------------------------
 	1. Initialize Weights: Assign same weight to all obs ( 1/No. of obs ). The sum of weights is 1.
  		If there are 10 total obs then weight is 0.1 (1/10).
+		Actual weight for target "Yes" = +0.1
+		Actual weight for target "No" = -0.1 
+  
   
 	2. Iterative Learning: In each iteration, a model is trained.
  		- Each tree learns from previous ones. Misclassified observations gain more weight in the next iteration.
@@ -48,7 +51,10 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 			correctly classified = Previous Weight * e^(-accuracy) = 0.07
 			wrongly classified   = Previous Weight * e^(+accuracy) = 0.15
   
-		- Normalize weights: All weights are adjusted to sum to 1.
+		- Normalize weights: All weights are adjusted to sum to 1. Divide each weight by the sum of all weights.
+   			7 correctly classified and 3 wrongly classified, sum of weight = (0.07 X 7) + (0.15 X 3) =  0.92
+      			Normalize weights for correctly classified = 0.071
+			Normalize weights for wrongly   classified = 0.167
   
 	3. Final Tree: Combine all models using weights.
  
