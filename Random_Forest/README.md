@@ -3,12 +3,12 @@
 	A group of decision trees.
 
 ### Advantages:
-    	Same as decision Tree 
-    	Better predction 
+	Same as decision Tree 
+	Better predction 
     
 ### Limitations:
-    	Computationally expensive
-    	Black-box model; harder to interpret than single decision trees
+	Computationally expensive
+	Black-box model; harder to interpret than single decision trees
      
 ----------------------------------------------------------------------------------------------------------------------------
 ## Random Forest in Python
