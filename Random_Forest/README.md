@@ -4,7 +4,8 @@
 
 ### Advantages:
 	Same as decision Tree 
-	Better predction 
+	Each decision tree in the forest is independent.
+	Better predction
     
 ### Limitations:
 	Computationally expensive
