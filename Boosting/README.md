@@ -90,7 +90,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 		2. Iterate from 1 to total number of trees
 	
 		  	2.1 Update the weights for targets based on previous run (higher for the ones mis-classified) 
-			[weight = 0.5log(1-error/error)]	
+			[weight = 0.5*log[(1-error)/error]
 			It would indicate higher weights to trees with lower error rate.
 			
 		  	2.2 Fit the model on selected subsample of data
