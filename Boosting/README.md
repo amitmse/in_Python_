@@ -32,6 +32,8 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 
 ## ADA Boost: Adapts from mistakes
 
+https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
+
 	--------------------------------------------------------------------------------------------------
 	1. Initialize Weights: Assign same weight to all obs ( 1/No. of obs ). The sum of weights is 1.
  		If there are 10 total obs then weight is 0.1 (1/10).
@@ -58,10 +60,6 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
   
 	3. Final Tree: Combine all models using weights.
 
-https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
-   
-
-  
 -------------------------------------------------------------------------------------
   
  ## GBM
