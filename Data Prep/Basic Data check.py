@@ -536,3 +536,14 @@ data = pd.read_csv('add-your-data-here')
 pandas_profiling.ProfileReport(data)
 
 monobinpy
+######################################################################################
+
+The development of the pandas library relies on several other libraries to provide its functionality and performance. Some of the key libraries used in the development of pandas include:
+NumPy: As mentioned earlier, pandas is built on top of numpy, leveraging its efficient array processing capabilities.
+Python: The base language in which pandas is implemented.
+Cython: Used to optimize performance-critical parts of the pandas codebase by compiling Python code to C.
+dateutil: A library for parsing and handling dates, used extensively in pandas.
+pytz: A library for working with time zones, utilized by pandas to handle time zone-aware datetime objects.
+matplotlib: Often used in conjunction with pandas for data visualization, although not a direct dependency.
+pytest: Used for testing the pandas codebase to ensure reliability and correctness.
+These libraries collectively enable pandas to offer its powerful data manipulation and analysis capabilities.
