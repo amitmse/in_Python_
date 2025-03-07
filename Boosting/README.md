@@ -30,7 +30,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting.PNG)
 
-## ADA Boost: Adapts from mistakes
+## Adaptive (ADA) Boosting: Adapts from mistakes
 
 https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 
@@ -62,7 +62,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 
 -------------------------------------------------------------------------------------
   
- ## GBM
+ ## Gradient Boosting Machine (GBM)
  
  	--------------------------------------
 	1. Learn a regression predictor
