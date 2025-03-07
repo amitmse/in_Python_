@@ -539,7 +539,8 @@ monobinpy
 ######################################################################################
 
 The development of the pandas library relies on several other libraries to provide its functionality and performance. Some of the key libraries used in the development of pandas include:
-NumPy: As mentioned earlier, pandas is built on top of numpy, leveraging its efficient array processing capabilities.
+NumPy: pandas is built on top of numpy, leveraging its efficient array processing capabilities. 
+	NumPy  data structure is ndarray while pandas structures are Series ( one-dimensional array,) and DataFrame (two-dimensional).
 Python: The base language in which pandas is implemented.
 Cython: Used to optimize performance-critical parts of the pandas codebase by compiling Python code to C.
 dateutil: A library for parsing and handling dates, used extensively in pandas.
