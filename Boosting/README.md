@@ -17,6 +17,8 @@
 		- Light Gradient Boosting Machine (LightGBM)
 		- Categorical Boosting (CatBoost)
 
+![Function](https://github.com/amitmse/in_Python_/blob/master/Boosting/Compare.PNG)
+
 ----------------------------------------------------------------------------------------------------------------
 
 ## Pros:
