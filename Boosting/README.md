@@ -89,16 +89,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 	4. Combine previous models and check accuracy
 	5. Repeat #2,3,4 until target achieved
 	6. Final: Sum up all models
-
-
-
-	 
- 	--------------------------------------
-	1. Learn a regression predictor
-	2. compute the error of residual
-	3. learn to predict the residual
-	4. identify good weights
-	---------------------------------------	
+ 
  
 	1. Y 	  = M(x) + error (Logistic Regression if dep is binay). get the weight as well
   
@@ -109,7 +100,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
   
 	4. Y 	  = M(x) + G(x) + H(x) + error3	(combine all model together)
   
-	5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 	(alpha, beta, gamma are weight /learning rates of each model)
+	5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 	(alpha, beta, gamma are weight / learning rates of each model)
   
 	--------------------------------------
   	Pseudo-code of the GBM algorithm
