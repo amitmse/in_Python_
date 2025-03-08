@@ -11,10 +11,28 @@
 	(even if variance can also be reduced).
 
 	Following techniques are based on Boosting:
-	- AdaBoost (Adaptive Boosting)
-	- Gradient Tree Boosting (GBM)
-	- XGBoost
-  
+		- AdaBoost (Adaptive Boosting)
+		- Gradient Tree Boosting (GBM)
+		- eXtreme Gradient Boosting (XGBoost)
+		- Light Gradient Boosting Machine (LightGBM)
+		- Categorical Boosting (CatBoost)
+
+----------------------------------------------------------------------------------------------------------------
+
+## Pros:
+	1. Step-by-Step Error Fixing:
+	2. Flexible Error Measures
+	3. High Accuracy
+    
+## Cons:
+	1. Overfitting: No of trees or models    
+	2. Computationally Expensive: Cost of #1, Gradient Boosting, Optimal learning rate, tree depth, and number of trees
+	3. Slow Training Process: sequential learning
+
+## Loss Functions:
+	1. Mean Squared Error (MSE): ( 1/2 ) * ( Actual - Predicted )^2
+	2. Cross-entropy: Difference between two probability distributions
+
 ----------------------------------------------------------------------------------------------------------------
 ## Boosting in Python
 
@@ -64,6 +82,17 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
   
  ## Gradient Boosting Machine (GBM)
  
+	--------------------------------------
+	1. Initialize with a base model
+	2. Calculate residuals
+	3. Predict the residuals with learning rate (0 to 1) or weight of model
+	4. Combine previous models and check accuracy
+	5. Repeat #2,3,4 until target achieved
+	6. Final: Sum up all models
+
+
+
+	 
  	--------------------------------------
 	1. Learn a regression predictor
 	2. compute the error of residual
@@ -74,13 +103,13 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 	1. Y 	  = M(x) + error (Logistic Regression if dep is binay). get the weight as well
   
 	2. Error  = G(x) + error2 (Regress error with other ind var. Apply linear regression as error is continuous. 
-				   get the weight as well
+				   Apply learning rate (0 to 1) or weight of the model.
                   
 	3. Error2 = H(x) + error3 (continue the #2 until you get low error)
   
 	4. Y 	  = M(x) + G(x) + H(x) + error3	(combine all model together)
   
-	5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 	(alpha, beta, gamma are weight of each model)
+	5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 	(alpha, beta, gamma are weight /learning rates of each model)
   
 	--------------------------------------
   	Pseudo-code of the GBM algorithm
