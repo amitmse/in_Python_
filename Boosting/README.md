@@ -1,7 +1,8 @@
 
 ----------------------------------------------------------------------------------------------------------------
 # Boosting: 
-	it decreases Bias.
+
+	It decreases Bias.
 	Similar to bagging but it fits weak learner sequentially (a model depends on the previous ones) in a very 
 	adaptative way. Each model in the sequence is fitted giving more importance to the observations which are not 
 	classified correctly (high error). Mainly focus on reducing bias.
