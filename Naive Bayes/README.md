@@ -1,5 +1,12 @@
 # Naïve Bayes
 
+	It computes probability based on prior knowledge.
+
+ 
+	It's Naive as it assumes one feature's presence doesn't affect another's
+	Bayes refers Bayes’ Theorem which is based on sequential events.
+
+
 ## Assumption
 
   1. Violation of Independence Assumption:
