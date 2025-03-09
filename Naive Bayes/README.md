@@ -29,7 +29,8 @@
 
   2. Zero conditional probability Problem:
       
-	- If a given class and feature value never occur together in the training set then the frequency-based probability estimate will be zero.
+	- If a given class and feature value never occur together in the training set then the frequency-based 
+ 		probability estimate will be zero.
             
 	- This is problematic since it will wipe out all information in the other probabilities when they are multiplied. 
           
@@ -66,7 +67,6 @@
  		given that the email is spam. For instance, if the word "free" appears in spam emails 80% of the time.
 		Likelihood 𝑃(𝐵∣𝐴)=0.8
 		
-
 	Posterior Probability: This is the updated probability that the email is spam after considering both 
  		the prior probability and the observed feature. If the email contains the word "free", 
    		the posterior probability would be higher than the prior probability, 
