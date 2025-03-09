@@ -2,15 +2,15 @@
 
 	It computes probability (conditional probability) based on prior probability / knowledge.
  
-	It's Naive as it assumes one feature's presence doesn't affect another's
-	Bayes refers Bayes’ Theorem which is based on sequential events.
+	- It's Naive as it assumes one feature doesn't affect another.
+	- Bayes refers Bayes’ Theorem which is based on sequential events.
  
 	P(A|B) = [P(B|A) * P(A)] / [P(B)]
  
-	P(A) and P(B): Prior probability refers to probability of a particular class occurring, 
+	- P(A) and P(B): Prior probability refers to probability of a particular class occurring, 
  			without any condition.
-	P(B|A): Likelihood refers to the conditional probability.
-	P(A|B): Posterior probability which is combination of prior probability and likelihood.
+	- P(B|A): Likelihood refers to the conditional probability.
+	- P(A|B): Posterior probability which is combination of prior probability and likelihood.
    
 ## Assumption
 
