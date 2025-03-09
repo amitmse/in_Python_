@@ -29,11 +29,9 @@
 
   2. Zero conditional probability Problem:
       
-	- If a given class and feature value never occur together in the training set then the frequency-based 
-          	probability estimate will be zero.
+	- If a given class and feature value never occur together in the training set then the frequency-based probability estimate will be zero.
             
-	- This is problematic since it will wipe out all information in the other probabilities 
-	  	when they are multiplied. 
+	- This is problematic since it will wipe out all information in the other probabilities when they are multiplied. 
           
 	- It is therefore often desirable to incorporate a small-sample correction in all probability estimates such 
           	that no probability is ever set to be exactly zero.
