@@ -8,8 +8,7 @@
  
 	P(A|B) = [P(B|A) * P(A)] / [P(B)]
  
-	- P(A) and P(B): Prior probability refers to probability of a particular class occurring, 
- 			without any condition.
+	- P(A) and P(B): Prior probability refers to probability of a particular class occurring, without any condition.
 	- P(B|A): Likelihood refers to the conditional probability.
 	- P(A|B): Posterior probability which is combination of prior probability and likelihood.
 
