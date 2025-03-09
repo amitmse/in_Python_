@@ -103,7 +103,8 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
   
 	4. Y 	  = M(x) + G(x) + H(x) + error3	(combine all model together)
   
-	5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 	(alpha, beta, gamma are weight / learning rates of each model)
+	5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 	
+ 			(alpha, beta, gamma are weight / learning rates of each model)
   
 	--------------------------------------
   	Pseudo-code of the GBM algorithm
