@@ -72,7 +72,7 @@
    		the posterior probability would be higher than the prior probability, 
      		reflecting the increased likelihood of the email being spam given the presence of the word "free".
 		Posterior Probability is higher than 30%, updated based on the presence of the word "free".
- 		Prior probability 𝑃(B)=0.2  [probability of the word "free"]
+ 		Prior probability 𝑃(B)=0.25  [probability of the word "free"]
 		Posterior Probability P(A|B) = [P(B|A) * P(A)] / [P(B)] = (0.8 * 0.3) / 0.25 = 0.96
 		This means that given the presence of the word "free," the updated belief that the email is spam is 96%.
 
