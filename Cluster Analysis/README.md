@@ -1,12 +1,6 @@
 # Clustering 
 
 -------------------------------------------------------------------------------------------------
-## Clustering in Python:
-https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Analysis.py
-
--------------------------------------------------------------------------------------------------
-
-## Basic: 	
 
 	- Clustering algorithms are a part of unsupervised (no target variable) machine learning algorithms
 	
@@ -21,6 +15,14 @@ https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Ana
 				
 		- Use of a particular distance measure depends on the variable types; i.e., formula for calculating 
 			distance between numerical variables is different than categorical variables.
+
+-------------------------------------------------------------------------------------------------
+
+## Clustering in Python:
+
+https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Analysis.py
+
+-------------------------------------------------------------------------------------------------
 
 ## K means clustering: 
 	This technique partitions the data set into unique homogeneous clusters whose observations are similar 
