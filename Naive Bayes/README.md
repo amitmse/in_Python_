@@ -11,26 +11,7 @@
  			without any condition.
 	P(B|A): Likelihood refers to the conditional probability.
 	P(A|B): Posterior probability which is combination of prior probability and likelihood.
- 
-	Example: Let's consider an example related to email spam detection:
-	Prior Probability: This is the initial belief about the probability of an email being spam 
- 		before analyzing its content. Suppose 30% of the emails are usually spam. 
-   		Prior probability 𝑃(𝐴)=0.3
-
-	Likelihood: This is the probability of observing a certain feature in the email (like a specific word) 
- 		given that the email is spam. For instance, if the word "free" appears in spam emails 80% of the time.
-		Likelihood 𝑃(𝐵∣𝐴)=0.8
-		
-
-	Posterior Probability: This is the updated probability that the email is spam after considering both 
- 		the prior probability and the observed feature. If the email contains the word "free", 
-   		the posterior probability would be higher than the prior probability, 
-     		reflecting the increased likelihood of the email being spam given the presence of the word "free".
-		Posterior Probability is higher than 30%, updated based on the presence of the word "free".
- 		Prior probability 𝑃(B)=0.2  [probability of the word "free"]
-		Posterior Probability P(A|B) = [P(B|A) * P(A)] / [P(B)] = (0.8 * 0.3) / 0.25 = 0.96
-		This means that given the presence of the word "free," the updated belief that the email is spam is 96%.
-  
+   
 ## Assumption
 
   1. Violation of Independence Assumption:
@@ -69,3 +50,26 @@
           	which detract from its basic simplicity.
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Naive%20Bayes/bayes%20theorem%20in%20one%20picture.png)
+
+
+
+### Example: 
+	Let's consider an example related to email spam detection:
+	Prior Probability: This is the initial belief about the probability of an email being spam 
+ 		before analyzing its content. Suppose 30% of the emails are usually spam. 
+   		Prior probability 𝑃(𝐴)=0.3
+
+	Likelihood: This is the probability of observing a certain feature in the email (like a specific word) 
+ 		given that the email is spam. For instance, if the word "free" appears in spam emails 80% of the time.
+		Likelihood 𝑃(𝐵∣𝐴)=0.8
+		
+
+	Posterior Probability: This is the updated probability that the email is spam after considering both 
+ 		the prior probability and the observed feature. If the email contains the word "free", 
+   		the posterior probability would be higher than the prior probability, 
+     		reflecting the increased likelihood of the email being spam given the presence of the word "free".
+		Posterior Probability is higher than 30%, updated based on the presence of the word "free".
+ 		Prior probability 𝑃(B)=0.2  [probability of the word "free"]
+		Posterior Probability P(A|B) = [P(B|A) * P(A)] / [P(B)] = (0.8 * 0.3) / 0.25 = 0.96
+		This means that given the presence of the word "free," the updated belief that the email is spam is 96%.
+
