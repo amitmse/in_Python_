@@ -1,5 +1,6 @@
 # Naïve Bayes
 
+--------------------------------------------------------------------------------------------------
 	It computes probability (conditional probability) based on prior probability / knowledge.
  
 	- It's Naive as it assumes one feature doesn't affect another.
@@ -11,7 +12,10 @@
  			without any condition.
 	- P(B|A): Likelihood refers to the conditional probability.
 	- P(A|B): Posterior probability which is combination of prior probability and likelihood.
-   
+
+
+--------------------------------------------------------------------------------------------------   
+
 ## Assumption
 
   1. Violation of Independence Assumption:
@@ -35,6 +39,8 @@
 	- It is therefore often desirable to incorporate a small-sample correction in all probability estimates such 
           	that no probability is ever set to be exactly zero.
 
+--------------------------------------------------------------------------------------------------
+
 ## Conclusions:
 	- The naive Bayes model is tremendously appealing because of its simplicity, elegance, and robustness.
       
@@ -51,7 +57,7 @@
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Naive%20Bayes/bayes%20theorem%20in%20one%20picture.png)
 
-
+--------------------------------------------------------------------------------------------------
 
 ### Example: 
 	Let's consider an example related to email spam detection:
@@ -73,3 +79,4 @@
 		Posterior Probability P(A|B) = [P(B|A) * P(A)] / [P(B)] = (0.8 * 0.3) / 0.25 = 0.96
 		This means that given the presence of the word "free," the updated belief that the email is spam is 96%.
 
+--------------------------------------------------------------------------------------------------
