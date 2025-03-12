@@ -1,8 +1,8 @@
 
 # Pandas
 	In Python Panda library is similar to SAS.
-	The development of the pandas library relies on several other libraries to provide its functionality and performance. 
- 	Some of the key libraries used in the development of pandas include:
+	
+ 	The development of the pandas library relies on several other libraries. Some of the key libraries:
 		- NumPy: pandas is built on top of numpy, leveraging its efficient array processing capabilities. 
 			 NumPy data structure is ndarray while pandas structures are Series 
     			 (one-dimensional array,) and DataFrame (two-dimensional).
