@@ -56,8 +56,5 @@
 #######################################################################################
 
 WIP: 
-
-https://github.com/amitmse/in_Python_/tree/master/Pyspark
-
 https://github.com/amitmse/in_Python_/tree/master/plot
 
