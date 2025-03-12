@@ -29,7 +29,72 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20che
     - Lift table/KS
     - PSI
 
-# Dask: Handle big size data processing which Panda unable to do
+# Distributed computing: Pyspark vs Dask
+
+	- Dask and Apache Spark is a distributed computing tool. Spark is mature and all-inclusive.
+	- Dask is smaller and lighter weight than Spark. Dask is often faster than Spark.
+	- Dask has limited  features but integrated with other libraries: Pandas, Scikit-Learn for high-level functionality. 
+
+Language:
+
+Spark is written in Scala with some support of Python and R, and work with JVM code.
+
+Dask is written in Python, and work with C/C++/Fortran/LLVM.
+
+Ecosystem:
+
+Spark is an all-in-one project that has own ecosystem.
+
+Dask is a component of the Python ecosystem and depends on other libraries: NumPy, pandas, and Scikit-learn.
+
+Age:
+
+Spark came into existence in 2010 and popular in Big Data world.
+
+Dask came into existence in 2014.
+
+Scope:
+
+Spark is focused on SQL and lightweight ML.
+
+Dask is focused on scientific and custom situations.
+
+Internal Design:
+
+Spark is an extension of the Map-Shuffle-Reduce paradigm and provides high level optimizations but lacking flexibility 
+
+Dask is generic task scheduling and works on lower level, so lacks high level optimizations. Wroks well with sophisticated algorithms.
+
+Scale:
+
+Spark scales from a single node to thousand-node clusters.
+
+Dask is same as spark.
+
+DataFrames:
+
+Spark DataFrame has its own API and memory model. It also implements a large subset of the SQL language. 
+
+Dask DataFrame reuses the Pandas API and memory model. It implements neither SQL nor a query optimizer. 
+
+Machine Learning:
+
+Spark uses MLLib along with JVM-based ML libraries like H2O.
+
+Dask relies Scikit-learn and XGBoost.
+
+Arrays
+
+Spark does support multi-dimensional arrays natively.
+
+Dask fully supports multi-dimensional arrays.
+
+
+
+
+
+
+Dask: Handle big size data processing which Panda unable to do
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Dask.py
 
