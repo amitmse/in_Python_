@@ -41,7 +41,8 @@
 
 11. **Data Preparation**:  https://github.com/amitmse/in_Python_/tree/master/Data%20Prep#readme
     
-            - Basic SAS functions in python
+            - Basic SAS functions coded in python using Pandas
+            - Distributed computing: Spark (Pyspark) vs Dask
             - Exploratory Data Analysis
             - Computation of Information Value
 
