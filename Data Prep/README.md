@@ -29,23 +29,24 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20che
     - Lift table/KS
     - PSI
 
-# Distributed computing: Pyspark vs Dask
+# Distributed computing: Spark (Pyspark) vs Dask
 
-	- Dask and Apache Spark is a distributed computing tool. Spark is mature and all-inclusive.
-	- Dask is smaller and lighter weight than Spark. Dask is often faster than Spark.
-	- Dask has limited  features but integrated with other libraries: Pandas, Scikit-Learn for high-level functionality. 
+	- Dask and Apache Spark are distributed computing tools. Spark is mature and all-inclusive.
+	- Dask is smaller and lighter in weight than Spark. It is often faster than Spark.
+	- Dask has limited features but integrates with other libraries like Pandas and Scikit-Learn for high-level functionality.
+
 
 	Language:
-	- Spark is written in Scala with some support of Python and R, and work with JVM code.
-	- Dask is written in Python, and work with C/C++/Fortran/LLVM.
+	- Spark is written in Scala, with some support for Python and R.
+	- Dask is written in Python.
 
 	Ecosystem:
 	- Spark is an all-in-one project that has own ecosystem.
-	- Dask is a component of the Python ecosystem and depends on other libraries: NumPy, pandas, and Scikit-learn.
+	- Dask is a component of the Python ecosystem and depends on other libraries like NumPy, Pandas, and Scikit-Learn.
 
 	Age:
-	- Spark came into existence in 2010 and popular in Big Data world.
-	- Dask came into existence in 2014.
+	- Spark was introduced in 2010 and is popular in the Big Data world.
+	- Dask was introduced in 2014.
 
 	Scope:
 	- Spark is focused on SQL and lightweight ML.
@@ -53,7 +54,8 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20che
 
 	Internal Design:
 	- Spark is an extension of the Map-Shuffle-Reduce paradigm and provides high level optimizations but lacking flexibility 
-	- Dask is generic task scheduling and works on lower level, so lacks high level optimizations. Wroks well with sophisticated algorithms.
+	- Dask is generic task scheduling and works on lower level, so lacks high level optimizations. 
+ 		Wroks well with sophisticated algorithms.
 
 	Scale:
 	- Spark scales from a single node to thousand-node clusters.
