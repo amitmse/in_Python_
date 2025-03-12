@@ -1,6 +1,12 @@
 
 # Pandas
-	In Python Panda library is similar to SAS.
+	The Python Pandas library is similar to SAS, providing equivalent functionalities.
+  	
+   	Limitation: 
+		The Pandas loads datasets into memory, meaning the data size must not exceed the available RAM. 
+  		This limitation arises because Pandas does not support distributed computing. 
+		To manage larger datasets, libraries such as PySpark or Dask can be utilized 
+  		as they provide distributed computing capabilities. Comparison is provided below.
 	
  	The development of the pandas library relies on several other libraries. Some of the key libraries:
 		- NumPy: pandas is built on top of numpy, leveraging its efficient array processing capabilities. 
