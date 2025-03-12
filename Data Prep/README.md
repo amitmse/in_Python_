@@ -35,59 +35,41 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20che
 	- Dask is smaller and lighter weight than Spark. Dask is often faster than Spark.
 	- Dask has limited  features but integrated with other libraries: Pandas, Scikit-Learn for high-level functionality. 
 
-Language:
+	Language:
+	- Spark is written in Scala with some support of Python and R, and work with JVM code.
+	- Dask is written in Python, and work with C/C++/Fortran/LLVM.
 
-Spark is written in Scala with some support of Python and R, and work with JVM code.
+	Ecosystem:
+	- Spark is an all-in-one project that has own ecosystem.
+	- Dask is a component of the Python ecosystem and depends on other libraries: NumPy, pandas, and Scikit-learn.
 
-Dask is written in Python, and work with C/C++/Fortran/LLVM.
+	Age:
+	- Spark came into existence in 2010 and popular in Big Data world.
+	- Dask came into existence in 2014.
 
-Ecosystem:
+	Scope:
+	- Spark is focused on SQL and lightweight ML.
+	- Dask is focused on scientific and custom situations.
 
-Spark is an all-in-one project that has own ecosystem.
+	Internal Design:
+	- Spark is an extension of the Map-Shuffle-Reduce paradigm and provides high level optimizations but lacking flexibility 
+	- Dask is generic task scheduling and works on lower level, so lacks high level optimizations. Wroks well with sophisticated algorithms.
 
-Dask is a component of the Python ecosystem and depends on other libraries: NumPy, pandas, and Scikit-learn.
+	Scale:
+	- Spark scales from a single node to thousand-node clusters.
+	- Dask is same as spark.
 
-Age:
+	DataFrames:
+	- Spark DataFrame has its own API and memory model. It also implements a large subset of the SQL language. 
+	- Dask DataFrame reuses the Pandas API and memory model. It implements neither SQL nor a query optimizer. 
 
-Spark came into existence in 2010 and popular in Big Data world.
+	Machine Learning:
+	- Spark uses MLLib along with JVM-based ML libraries like H2O.
+	- Dask relies Scikit-learn and XGBoost.
 
-Dask came into existence in 2014.
-
-Scope:
-
-Spark is focused on SQL and lightweight ML.
-
-Dask is focused on scientific and custom situations.
-
-Internal Design:
-
-Spark is an extension of the Map-Shuffle-Reduce paradigm and provides high level optimizations but lacking flexibility 
-
-Dask is generic task scheduling and works on lower level, so lacks high level optimizations. Wroks well with sophisticated algorithms.
-
-Scale:
-
-Spark scales from a single node to thousand-node clusters.
-
-Dask is same as spark.
-
-DataFrames:
-
-Spark DataFrame has its own API and memory model. It also implements a large subset of the SQL language. 
-
-Dask DataFrame reuses the Pandas API and memory model. It implements neither SQL nor a query optimizer. 
-
-Machine Learning:
-
-Spark uses MLLib along with JVM-based ML libraries like H2O.
-
-Dask relies Scikit-learn and XGBoost.
-
-Arrays
-
-Spark does support multi-dimensional arrays natively.
-
-Dask fully supports multi-dimensional arrays.
+	Arrays
+	- Spark does support multi-dimensional arrays natively.
+	- Dask fully supports multi-dimensional arrays.
 
 
 
