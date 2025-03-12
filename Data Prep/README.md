@@ -73,13 +73,7 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20che
 	- Spark does support multi-dimensional arrays natively.
 	- Dask fully supports multi-dimensional arrays.
 
-
-
-
-
-
-Dask: Handle big size data processing which Panda unable to do
-
+### Dask Sample Code:
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Dask.py
 
 
