@@ -20,12 +20,7 @@
 		- pytest: Used for testing the pandas codebase to ensure reliability and correctness.
 		These libraries collectively enable pandas to offer its powerful data manipulation and analysis capabilities.
 
-# Dask: Handle big size data processing which Panda unable to do
-
-https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Dask.py
-
-
-# SAS to Python: Basic SAS functions in python
+### SAS to Python: Basic SAS functions coded in python using Pandas
 
 https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20check.py
 
@@ -33,6 +28,13 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Basic%20Data%20che
     - Create variable, duplicate, append, merge, Transpose, Correlation, Lag, first dot, 
     - Lift table/KS
     - PSI
+
+# Dask: Handle big size data processing which Panda unable to do
+
+https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Dask.py
+
+
+
 
 # Exploratory Data Analysis (EDA):
 
