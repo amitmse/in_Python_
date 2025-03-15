@@ -27,8 +27,6 @@
 	- It was designed to closely resemble MATLAB
  	- Some libraries like pandas and Seaborn are “wrappers” over matplotlib
   	- it's not very useful for creating publication-quality charts quickly and easily
-	- 
-
 
  
 ## Seaborn 
