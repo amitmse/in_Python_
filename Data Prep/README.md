@@ -1,6 +1,6 @@
 
 # Python
-		- Object Oriented Programming (OOP- Abstraction : Process happens inside and not visible to public.
+	- Object Oriented Programming (OOP- Abstraction : Process happens inside and not visible to public.
                 It hides the inner workings of an object when it’s not necessary to see them.
 
 	- Encapsulation	: Prevent data modification.
