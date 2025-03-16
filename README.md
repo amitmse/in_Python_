@@ -45,6 +45,7 @@
             - Distributed computing: Dask vs Spark (Pyspark)
             - Exploratory Data Analysis
             - Computation of Information Value
+            - Charts in Python
 
 13. **Basic statistics**: https://github.com/amitmse/in_Python_/blob/master/Others/README.md
 
@@ -54,7 +55,4 @@
             - Explain Gradient Descent    
     
 #######################################################################################
-
-WIP: 
-https://github.com/amitmse/in_Python_/tree/master/plot
 
