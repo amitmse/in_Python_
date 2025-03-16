@@ -59,10 +59,11 @@ https://github.com/amitmse/in_Python_/blob/master/plot/Plot.py
     
 
 ## Altair
-	- Like Seaborn, Altair is a declarative visualization library that allows you to create aesthetically pleasing graphs & charts
+	- Like Seaborn, Altair is a declarative visualization library that allows 
+ 		you to create aesthetically pleasing graphs & charts
 	- Focus on visualization and not on coding. 
       
-https://www.analyticsvidhya.com/blog/2017/12/introduction-to-altair-a-declarative-visualization-in-python/
+	https://www.analyticsvidhya.com/blog/2017/12/introduction-to-altair-a-declarative-visualization-in-python/
 
 
 ## Gleam
