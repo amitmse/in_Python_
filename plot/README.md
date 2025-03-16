@@ -45,6 +45,9 @@
  	- Its strength lies in the ability to create interactive, web-ready plots
 
 
+https://github.com/amitmse/in_Python_/blob/master/plot/Plot.py
+
+
 ## Plotly
 	- Like Bokeh, Plotly’s strength lies in making interactive plots
  	- Plotly as one of the best data visualization tools
