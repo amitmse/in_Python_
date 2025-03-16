@@ -103,7 +103,7 @@ https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Bin.py
 	KS    
 
 
-# CHarts in Python
+# Charts in Python
 
 https://github.com/amitmse/in_Python_/tree/master/plot
 
