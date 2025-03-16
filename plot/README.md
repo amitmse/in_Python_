@@ -21,6 +21,9 @@
 
 ---------------------------------------------------------------------------------------------------------
 
+## Charts in Python
+
+https://github.com/amitmse/in_Python_/blob/master/plot/Plot.py
 
 ## Matplotlib
 	- First Python data visualization library
@@ -44,8 +47,6 @@
 	- Like ggplot, Bokeh is based on The Grammar of Graphics
  	- Its strength lies in the ability to create interactive, web-ready plots
 
-
-https://github.com/amitmse/in_Python_/blob/master/plot/Plot.py
 
 
 ## Plotly
