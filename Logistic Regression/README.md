@@ -241,4 +241,11 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	- VIF: 1.0 / (1.0 - R Squared)
 
 -----------------------------------------------------------------------------------------------------------------------
+
+Check: any good model always has weakness
+	Where does this model fail?
+	What are its hidden weaknesses?
+	Under what conditions does it break down?
+	How can it be exploited or misused?
+ 	Find a blind spots before they become costly failures
     
