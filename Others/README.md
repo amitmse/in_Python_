@@ -857,10 +857,12 @@ and Kolmogorov-Smirnov (KS) measures the difference between two distributions.
 				If the model cannot differentiate between positives and negatives, 
     				then it is as if the model selects cases randomly from the population. The KS would be 0.			
 
-		How to interpret: In the context of machine learning, the KS test can be used to evaluate the performance 
-  				of a model by comparing the distribution of predicted probabilities with the distribution 
-      				of actual outcomes. A higher KS value indicates a greater difference between the two distributions, 
-	  			suggesting that the model is better at distinguishing between the two groups.
+		How to interpret: In the context of machine learning, the KS test can be used to evaluate 
+  				the performance of a model by comparing the distribution of predicted 
+      				probabilities with the distribution of actual outcomes. 
+	  			A higher KS value indicates a greater difference between 
+	  			the two distributions, suggesting that the model is better at distinguishing 
+      				between the two groups.
 
 		Use Cases: The KS test is useful for evaluating the performance of a model in a more nuanced way 
   				than AUC or Gini, as it considers the entire distribution of predicted probabilities. 
