@@ -791,17 +791,18 @@ ML Model Issue:
 
 --------------------------------------------------------------------------------------------------------------------------
 
-AUC measures how well a model distinguishes between two groups, Accuracy is the percentage of correct predictions, 
-F1 Score balances precision and recall, Gini is a measure of model discrimination derived from AUC, 
-and Kolmogorov-Smirnov (KS) measures the difference between two distributions. 
+AUC measures how well a model distinguishes between two groups, Accuracy is the percentage of correct 
+predictions, F1 Score balances precision and recall, Gini is a measure of model discrimination derived 
+from AUC, and Kolmogorov-Smirnov (KS) measures the difference between two distributions. 
 
 	1. AUC (Area Under the Curve) / ROC (Receiver operating characteristic) :
 		What it is: 	AUC represents the area under the Receiver Operating Characteristic (ROC) curve,
 				which plots the true positive rate (how well the model identifies positives) 
     				against the false positive rate 
-				(how often the model incorrectly identifies negatives as positives) at various thresholds.
-				Trade-off between the true positive rate (TPR) and the false positive rate (FPR).
-				Advantage of ROC curve is that it is independent of the change in the proportion of responders.
+				(how often the model incorrectly identifies negatives as positives) 
+    				at various thresholds. Trade-off between the true positive rate (TPR) 
+				and the false positive rate (FPR). Advantage of ROC curve is that 
+    				it is independent of the change in the proportion of responders.
     
 		How to interpret: An AUC of 1 means the model perfectly distinguishes between the two groups. 
   				An AUC of 0.5 means the model is no better than random guessing. 
@@ -832,8 +833,8 @@ and Kolmogorov-Smirnov (KS) measures the difference between two distributions.
     				that considers both. Why harmonic mean and not an arithmetic mean. 
 				This is because HM punishes extreme values more.	
 
-		Use Cases: F1 score is particularly useful in scenarios where both precision and recall are important, 
-  				or when dealing with imbalanced datasets. 
+		Use Cases: F1 score is particularly useful in scenarios where both precision and recall 
+  				are important, or when dealing with imbalanced datasets. 
 
 	4. Gini Coefficient:
 		What it is: The Gini coefficient is derived from the AUC and represents the model's ability to 
@@ -855,7 +856,8 @@ and Kolmogorov-Smirnov (KS) measures the difference between two distributions.
 				The K-S is 100 if the scores partition the population into two separate groups in 
     				which one group contains all the positives and the other all the negatives.
 				If the model cannot differentiate between positives and negatives, 
-    				then it is as if the model selects cases randomly from the population. The KS would be 0.			
+    				then it is as if the model selects cases randomly from the population. 
+				The KS would be 0.			
 
 		How to interpret: In the context of machine learning, the KS test can be used to evaluate 
   				the performance of a model by comparing the distribution of predicted 
@@ -886,10 +888,10 @@ and Kolmogorov-Smirnov (KS) measures the difference between two distributions.
    			then accuracy is the metric you should choose. 
 
 	F1 score vs ROC AUC:
-		- One big difference between the F1 score and the ROC AUC is that the first one takes predicted classes, 
-  			and the second takes predicted scores as input. 
-			Because of that, with the F1 score, you need to choose a threshold that assigns your 
-   			observations to those classes. 
+		- One big difference between the F1 score and the ROC AUC is that the first one 
+  			takes predicted classes, and the second takes predicted scores as input. 
+			Because of that, with the F1 score, you need to choose a threshold that 
+   			assigns your observations to those classes. 
 			Often, you can improve your model performance a lot if you choose it well.
 
 https://www.kaggle.com/discussions/getting-started/170389
