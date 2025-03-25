@@ -824,9 +824,9 @@ ML Model Issue:
 
 --------------------------------------------------------------------------------------------------------------------------
 
-AUC measures how well a model distinguishes between two groups, Accuracy is the percentage of correct 
-predictions, F1 Score balances precision and recall, Gini is a measure of model discrimination derived 
-from AUC, and Kolmogorov-Smirnov (KS) measures the difference between two distributions. 
+	AUC measures how well a model distinguishes between two groups, Accuracy is the percentage of correct 
+	predictions, F1 Score balances precision and recall, Gini is a measure of model discrimination derived 
+	from AUC, and Kolmogorov-Smirnov (KS) measures the difference between two distributions. 
 
 	1. AUC (Area Under the Curve) / ROC (Receiver operating characteristic) :
 		What it is: 	AUC represents the area under the Receiver Operating Characteristic (ROC) curve,
