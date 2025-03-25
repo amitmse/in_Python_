@@ -945,39 +945,9 @@ from AUC, and Kolmogorov-Smirnov (KS) measures the difference between two distri
 
 https://www.kaggle.com/discussions/getting-started/170389
 
-------------------------------------------------------------------------------------------------------------
-
-
-
-WIP: 
-
-Pyspark (WIP): https://github.com/amitmse/in_Python_/tree/master/Pyspark
-    
-Plot / Chart (WIP): https://github.com/amitmse/in_Python_/tree/master/plot
-
-SVM (WIP): https://github.com/amitmse/in_Python_/tree/master/SVM
-
 -----------------------------------------------------------------------------------------------------------------------------------
-https://machinelearningmastery.com/how-to-code-the-students-t-test-from-scratch-in-python/
 
-
-
-https://github.com/amitmse/Stock
-
-https://github.com/amitmse/en
-
-https://github.com/amitmse/Presentation
-
-https://github.com/amitmse/Agri
-
-https://github.com/amitmse/test
-
-https://github.com/amitmse/CCAR
-
-https://github.com/amitmse/Work
-
-https://github.com/amitmse/Risk
-
-https://github.com/amitmse/FRM
+	https://machinelearningmastery.com/how-to-code-the-students-t-test-from-scratch-in-python/
+	Stock-en-Presentation-Agri-test-CCAR-Work-Risk-FRM
 
 -----------------------------------------------------------------------------------------------------------------------------------
