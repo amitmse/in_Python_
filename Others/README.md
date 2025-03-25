@@ -702,11 +702,12 @@ Check:
 
 ML Model Issue:
 
-	1. A high-performing model can still be completely wrong: Instead of a logical monotonic relationship (higher credit score → lower default risk), 
- 		the model learned a non-monotonic pattern.
+	1. A high-performing model can still be completely wrong: Instead of a logical monotonic relationship 
+ 		(higher credit score → lower default risk), the model learned a non-monotonic pattern.
 
-	2. Hidden Model Weaknesses Lurking Beyond Aggregate Metrics: Failure clustering analysis uncovered a major issue—model performance is not homogeneous across input segments.
-		Some clusters exhibit large mean absolute residuals (especially cluster 0) meaning our model struggles significantly in certain regions of the input space.
+	2. Hidden Model Weaknesses Lurking Beyond Aggregate Metrics: Failure clustering analysis uncovered a major issue—model performance 
+ 		is not homogeneous across input segments. Some clusters exhibit large mean absolute residuals (especially cluster 0) 
+   		meaning our model struggles significantly in certain regions of the input space.
 
 	3. Harmful Side Effects of Variables: credit score is not only influencing model predictions significantly but is also a primary driver of model errors (particularly, for medium and low scores). 
 		Its interaction with credit utilization further amplifies these errors, as shown clearly by the main effect and interaction plots.
