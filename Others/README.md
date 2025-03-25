@@ -741,8 +741,9 @@ ML Model Issue:
 		Measuring feature distribution drift is pivotal in understanding how drift impacts model performance. 
 		Various metrics can be employed to quantify feature drift and assess model stability.
 		
-  		Kolmogorov-Smirnov (KS):The KS test compares the cumulative distributions of two datasets and identifies 
-    			any significant differences. It helps quantify how the distribution of features has altered over time.
+  		Kolmogorov-Smirnov (KS):The KS test compares the cumulative distributions of two datasets 
+    			and identifies any significant differences. 
+       			It helps quantify how the distribution of features has altered over time.
        
 		Wasserstein Distance: The Wasserstein Distance, also known as Earth Mover's Distance, measures the minimum 
   			amount of work required to transform one distribution into another. 
