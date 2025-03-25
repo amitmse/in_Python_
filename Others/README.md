@@ -822,22 +822,6 @@ ML Model Issue:
   		crumble when faced with real-world data. By diagnosing where and why a model is overly sensitive, 
     		you can shore up these “holes” and build a more stable foundation for long-term success.
 
-
-
-https://www.linkedin.com/posts/agus-sudjianto-76519619_does-your-model-have-more-holes-than-swiss-activity-7307963627938992128-K6uD/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
-
-https://www.linkedin.com/posts/agus-sudjianto-76519619_does-your-model-have-more-holes-than-swiss-activity-7308415223051223041-3o9a/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
-
-https://www.linkedin.com/posts/agus-sudjianto-76519619_does-your-model-have-more-holes-than-swiss-activity-7308807687390003201-4wX1/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
-
-https://www.linkedin.com/posts/agus-sudjianto-76519619_does-your-model-have-more-holes-than-swiss-activity-7309182083241816065-NiGG/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
-
-https://www.linkedin.com/posts/agus-sudjianto-76519619_hole-5-performance-fragility-weak-resilience-activity-7309521010972655616-zDH0/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
-
-https://www.linkedin.com/posts/agus-sudjianto-76519619_hole-6-silent-uncertaintywhich-parts-of-activity-7309959171263660032-wBkg/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
-
-https://www.linkedin.com/posts/agus-sudjianto-76519619_hole-7-the-noise-trapthreat-of-benign-activity-7310308433537171456-fIJE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJdJL4BriNQhSVKeKIC1Ppfn_ZfLrujGCo
-
 --------------------------------------------------------------------------------------------------------------------------
 
 AUC measures how well a model distinguishes between two groups, Accuracy is the percentage of correct 
@@ -946,6 +930,19 @@ from AUC, and Kolmogorov-Smirnov (KS) measures the difference between two distri
 https://www.kaggle.com/discussions/getting-started/170389
 
 -----------------------------------------------------------------------------------------------------------------------------------
+	https://www.linkedin.com/posts/agus-sudjianto-76519619_does-your-model-have-more-holes-than-swiss-activity-7307963627938992128-K6uD/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
+	
+	https://www.linkedin.com/posts/agus-sudjianto-76519619_does-your-model-have-more-holes-than-swiss-activity-7308415223051223041-3o9a/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
+	
+	https://www.linkedin.com/posts/agus-sudjianto-76519619_does-your-model-have-more-holes-than-swiss-activity-7308807687390003201-4wX1/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
+	
+	https://www.linkedin.com/posts/agus-sudjianto-76519619_does-your-model-have-more-holes-than-swiss-activity-7309182083241816065-NiGG/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
+	
+	https://www.linkedin.com/posts/agus-sudjianto-76519619_hole-5-performance-fragility-weak-resilience-activity-7309521010972655616-zDH0/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
+	
+	https://www.linkedin.com/posts/agus-sudjianto-76519619_hole-6-silent-uncertaintywhich-parts-of-activity-7309959171263660032-wBkg/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
+	
+	https://www.linkedin.com/posts/agus-sudjianto-76519619_hole-7-the-noise-trapthreat-of-benign-activity-7310308433537171456-fIJE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJdJL4BriNQhSVKeKIC1Ppfn_ZfLrujGCo
 
 	https://machinelearningmastery.com/how-to-code-the-students-t-test-from-scratch-in-python/
 	Stock-en-Presentation-Agri-test-CCAR-Work-Risk-FRM
