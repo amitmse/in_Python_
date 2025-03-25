@@ -687,6 +687,199 @@ the split would be on Gender only.
 	- After that, we chose the split with the lowest cost. This is the split x1 < 2.0623 with a cost of 0.4331.
 
 -----------------------------------------------------------------------------------------------------------------------
+
+Check: 
+
+	- Any good model always has weakness
+	- Where does this model fail?
+	- What are its hidden weaknesses?
+	- Under what conditions does it break down?
+	- How can it be exploited or misused?
+ 	- Find a blind spots before they become costly failures
+
+
+
+
+ML Model Issue:
+
+	1. A high-performing model can still be completely wrong: Instead of a logical monotonic relationship (higher credit score → lower default risk), the model learned a non-monotonic pattern.
+
+	2. Hidden Model Weaknesses Lurking Beyond Aggregate Metrics: Failure clustering analysis uncovered a major issue—model performance is not homogeneous across input segments.
+		Some clusters exhibit large mean absolute residuals (especially cluster 0) meaning our model struggles significantly in certain regions of the input space.
+
+	3. Harmful Side Effects of Variables: credit score is not only influencing model predictions significantly but is also a primary driver of model errors (particularly, for medium and low scores). 
+		Its interaction with credit utilization further amplifies these errors, as shown clearly by the main effect and interaction plots.
+		When a variable strongly impacts both model outputs and errors, it's a flashing red flag that your model might be misaligned, unstable, or missing critical interactions. 
+		Ignoring this could mean you're building on shaky ground.
+
+	4. Segment-level Miscalibration: Machine learning models, like XGBoost, often struggle with probability miscalibration—particularly within specific segments of your data. 
+		Proper calibration—using techniques like Platt Scaling, Isotonic Regression, or Venn-Abers Prediction—is not merely beneficial; 
+		it's essential for critical tasks such as credit default prediction, where accurate probabilities directly influence business decisions.
+
+	5. Performance Fragility--Weak Resilience against Distribution Drift:
+		Performance fragility due to distribution drift can significantly impact the effectiveness of models in production environments. 
+		Distribution drift occurs when the statistical properties of the input data change over time
+		This fragility manifests as deteriorating prediction performance when model performance is not homogeneous across input clusters. 
+		From the observations related to Holes #2, #3, and #4, we recognize that model performance is not uniform across different data segments. 
+		Such non-homogeneity translates into fragility during distribution drift in production.
+		To anticipate and mitigate the risk associated with distribution drift, it is essential to simulate various drift scenarios (https://lnkd.in/eAfngeAA). 
+		Model resilience testing involves creating synthetic drift conditions that the model may encounter in real-world applications as shown in the Figures below. 
+		Measuring feature distribution drift is pivotal in understanding how drift impacts model performance. 
+		Various metrics can be employed to quantify feature drift and assess model stability.
+		Kolmogorov-Smirnov (KS):The KS test compares the cumulative distributions of two datasets and identifies any significant differences. 
+			It helps quantify how the distribution of features has altered over time.
+		Wasserstein Distance: The Wasserstein Distance, also known as Earth Mover's Distance, measures the minimum amount of work required to transform one distribution into another. 
+			It provides a clear indication of feature distribution shifts.
+		Jensen-Shannon Distance (Population Stability Index, PSI): The Jensen-Shannon Distance is a symmetric measure of divergence between two probability distributions. 
+			The Population Stability Index (PSI) is frequently used to assess the stability of features and detect drift over time.
+			By proactively assessing these metrics, valuable insights are gained into which features are most vulnerable to drift and 
+			how significantly model performance could deteriorate in production.
+			Conducting a feature vulnerability analysis helps pinpoint features susceptible to drift. 
+			By understanding these vulnerabilities, strategies can be devised to bolster model resilience and monitoring plan to mitigate risks. 
+
+	6. Silent Uncertainty:
+		Understanding where your model is uncertain isn’t just a technical curiosity — it’s a necessity.
+		Uncertainty Is a Signal: high predictive uncertainty indicates model unreliability in specific regions of the input space. 
+		These are areas where the model is unsure — and decisions based on its outputs are riskier.
+		Find Risky Zones in the Input Space (see https://lnkd.in/eMSQkxWd): use conformal prediction intervals across many test samples to locate regions of high uncertainty. 
+		These are typically:
+			- Sparse in the training data
+			- Contain overlapping class distributions
+			- Have inconsistent feature patterns
+		Conformal prediction gives statistically valid uncertainty intervals around predictions. It allows us to say: “With 90% confidence, the true value lies within this range.”
+		When those ranges are wide, the model is less certain. When they’re tight, the model is confident.
+		In our credit model example (see Figures below), a few clusters (0 and 7) have high uncertainty with 90% confidence, 
+		the decisions are both default and non default (width == 2: decision is both classes). Clusters 4, 5 and 8 have higher uncertainty as well. 
+		In these regions, our model is unsure whether they’ll repay or default — and business risk increases.
+		What to Do About It?
+			- Flag high-uncertainty cases for manual review
+			- Use uncertainty to prioritize retraining data collection
+			- Adjust decision thresholds or introduce fallback rules in uncertain areas
+			- Build explainability reports showing which input features (e.g., Score, DTI, Utilization) drive high uncertainty
+		It’s Not Just About Accuracy: accuracy alone is misleading. What matters is how confident your model is when making decisions — especially in regulated, 
+		high-stakes settings like lending or healthcare.
+
+
+
+============================
+
+AUC measures how well a model distinguishes between two groups, Accuracy is the percentage of correct predictions, F1 Score balances precision and recall, Gini is a measure of model discrimination derived from AUC, and Kolmogorov-Smirnov (KS) measures the difference between two distributions. 
+
+1. AUC (Area Under the Curve) / ROC (Receiver operating characteristic) :
+
+What it is: AUC represents the area under the Receiver Operating Characteristic (ROC) curve, 
+
+	which plots the true positive rate (how well the model identifies positives) against the false positive rate 
+
+	(how often the model incorrectly identifies negatives as positives) at various thresholds.
+
+	Trade-off between the true positive rate (TPR) and the false positive rate (FPR).
+
+	Advantage of ROC curve is that it is independent of the change in the proportion of responders. 	
+
+How to interpret: An AUC of 1 means the model perfectly distinguishes between the two groups. An AUC of 0.5 means the model is no better than random guessing. 
+
+	A higher AUC indicates better model performance. 
+
+Use Cases: AUC is particularly useful for evaluating models in scenarios with imbalanced datasets (where one group is much larger than the other) 
+
+	because it considers the trade-off between true and false positives. 
+
+2. Accuracy:
+
+What it is: Accuracy is the percentage of predictions that the model gets right, calculated as (correct predictions / total predictions) * 100.
+
+How to interpret: A higher accuracy means the model is making more correct predictions overall.
+
+Use Cases: Accuracy is a good general metric, but it can be misleading in imbalanced datasets, as a model might achieve high accuracy by simply predicting the majority class. 
+
+3. F1 Score:
+
+What it is: The F1 score is a metric that balances precision and recall, which are both important in evaluating a model's performance. 
+
+How to interpret: Precision is the percentage of positive predictions that were actually correct (true positives / total positive predictions). 
+
+	Recall (also known as sensitivity) is the percentage of actual positive cases that the model correctly identified (true positives / total actual positives). 
+
+	F1 score is the harmonic mean of precision and recall, providing a single score that considers both.
+
+	Why harmonic mean and not an arithmetic mean. This is because HM punishes extreme values more.	
+
+Use Cases: F1 score is particularly useful in scenarios where both precision and recall are important, or when dealing with imbalanced datasets. 
+
+4. Gini Coefficient:
+
+What it is: The Gini coefficient is derived from the AUC and represents the model's ability to discriminate between the two groups.
+
+			Gini is nothing but the ratio between the area between the ROC curve and the diagonal line & the area of the above triangle.
+
+How to interpret: Gini = 2 * AUC - 1.
+
+	A Gini of 0 means the model is no better than random guessing.
+
+	A Gini of 1 means the model perfectly distinguishes between the two groups.
+
+Use Cases: The Gini coefficient provides a simple and intuitive measure of model performance, especially for non-technical audiences. 
+
+5. Kolmogorov-Smirnov (KS) Test:
+
+What it is: The KS test is a statistical test used to determine if two distributions are significantly different.
+
+			KS measures the degree of separation between the positive and negative distributions. 
+
+			The K-S is 100 if the scores partition the population into two separate groups in which one group contains all the positives and the other all the negatives.
+
+			If the model cannot differentiate between positives and negatives, then it is as if the model selects cases randomly from the population. The KS would be 0.			
+
+How to interpret: In the context of machine learning, the KS test can be used to evaluate the performance of a model by comparing the distribution of 
+
+	predicted probabilities with the distribution of actual outcomes.
+
+	A higher KS value indicates a greater difference between the two distributions, suggesting that the model is better at distinguishing between the two groups.
+
+Use Cases: The KS test is useful for evaluating the performance of a model in a more nuanced way than AUC or Gini, as it considers the entire distribution of predicted probabilities. 
+
+Accuracy vs ROC AUC:
+
+	First difference is that you calculate accuracy on the predicted classes while you calculate ROC AUC on predicted scores. 
+
+		That means you will have to find the optimal threshold for your problem. 
+
+	Secondly, accuracy scores start at 0.93 for the very worst model and go up to 0.97 for the best one. 
+
+		Remember that predicting all observations as majority class 0 would give 0.9 accuracy, so our worst experiment, BIN-98 is only slightly better than that. 
+
+		Yet the score itself is quite high, and it shows that you should always take an imbalance into consideration when looking at accuracy. 
+
+		
+
+F1 score vs Accuracy:
+
+	F1 score balances precision and recall in the positive class, while accuracy looks at correctly classified observations, both positive and negative. 
+
+		That makes a big difference, especially for the imbalanced problems, where by default our model will be good at predicting true negatives and hence accuracy will be high. 
+
+		However, if you care equally about true negatives and true positives, then accuracy is the metric you should choose. 
+
+F1 score vs ROC AUC:
+
+	One big difference between the F1 score and the ROC AUC is that the first one takes predicted classes, and the second takes predicted scores as input. 
+
+		Because of that, with the F1 score, you need to choose a threshold that assigns your observations to those classes. 
+
+		Often, you can improve your model performance a lot if you choose it well.
+
+	
+
+	
+
+	Machine Learning Metrics (Brief) | Kaggle
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+
 WIP: 
 
 Pyspark (WIP): https://github.com/amitmse/in_Python_/tree/master/Pyspark
