@@ -705,61 +705,89 @@ ML Model Issue:
 	1. A high-performing model can still be completely wrong: Instead of a logical monotonic relationship 
  		(higher credit score → lower default risk), the model learned a non-monotonic pattern.
 
-	2. Hidden Model Weaknesses Lurking Beyond Aggregate Metrics: Failure clustering analysis uncovered a major issue—model performance 
- 		is not homogeneous across input segments. Some clusters exhibit large mean absolute residuals (especially cluster 0) 
-   		meaning our model struggles significantly in certain regions of the input space.
+	2. Hidden Model Weaknesses Lurking Beyond Aggregate Metrics: Failure clustering analysis uncovered a 
+ 		major issue—model performance is not homogeneous across input segments. Some clusters exhibit 
+   		large mean absolute residuals (especially cluster 0) meaning our model struggles significantly 
+     		in certain regions of the input space.
 
-	3. Harmful Side Effects of Variables: credit score is not only influencing model predictions significantly but is also a primary driver of model errors (particularly, for medium and low scores). 
-		Its interaction with credit utilization further amplifies these errors, as shown clearly by the main effect and interaction plots.
-		When a variable strongly impacts both model outputs and errors, it's a flashing red flag that your model might be misaligned, unstable, or missing critical interactions. 
+	3. Harmful Side Effects of Variables: credit score is not only influencing model predictions significantly 
+ 		but is also a primary driver of model errors (particularly, for medium and low scores). 
+		Its interaction with credit utilization further amplifies these errors, as shown clearly 
+  		by the main effect and interaction plots. 
+    		When a variable strongly impacts both model outputs and errors, it's a flashing red flag that 
+      		your model might be misaligned, unstable, or missing critical interactions. 
 		Ignoring this could mean you're building on shaky ground.
 
-	4. Segment-level Miscalibration: Machine learning models, like XGBoost, often struggle with probability miscalibration—particularly within specific segments of your data. 
-		Proper calibration—using techniques like Platt Scaling, Isotonic Regression, or Venn-Abers Prediction—is not merely beneficial; 
-		it's essential for critical tasks such as credit default prediction, where accurate probabilities directly influence business decisions.
+	4. Segment-level Miscalibration: Machine learning models, like XGBoost, often struggle with probability 
+ 		miscalibration—particularly within specific segments of your data. 
+		Proper calibration—using techniques like Platt Scaling, Isotonic Regression, or Venn-Abers 
+  		Prediction—is not merely beneficial; 
+		it's essential for critical tasks such as credit default prediction, where accurate probabilities 
+  		directly influence business decisions.
 
 	5. Performance Fragility--Weak Resilience against Distribution Drift:
-		Performance fragility due to distribution drift can significantly impact the effectiveness of models in production environments. 
+		Performance fragility due to distribution drift can significantly impact the effectiveness of models 
+  		in production environments. 
 		Distribution drift occurs when the statistical properties of the input data change over time
-		This fragility manifests as deteriorating prediction performance when model performance is not homogeneous across input clusters. 
-		From the observations related to Holes #2, #3, and #4, we recognize that model performance is not uniform across different data segments. 
+		This fragility manifests as deteriorating prediction performance when model performance is 
+  		not homogeneous across input clusters. 
+		From the observations related to Holes #2, #3, and #4, we recognize that model performance 
+  		is not uniform across different data segments. 
 		Such non-homogeneity translates into fragility during distribution drift in production.
-		To anticipate and mitigate the risk associated with distribution drift, it is essential to simulate various drift scenarios (https://lnkd.in/eAfngeAA). 
-		Model resilience testing involves creating synthetic drift conditions that the model may encounter in real-world applications as shown in the Figures below. 
+		To anticipate and mitigate the risk associated with distribution drift, 
+  		it is essential to simulate various drift scenarios (https://lnkd.in/eAfngeAA). 
+		Model resilience testing involves creating synthetic drift conditions that the model may encounter 
+  		in real-world applications as shown in the Figures below. 
 		Measuring feature distribution drift is pivotal in understanding how drift impacts model performance. 
 		Various metrics can be employed to quantify feature drift and assess model stability.
-		Kolmogorov-Smirnov (KS):The KS test compares the cumulative distributions of two datasets and identifies any significant differences. 
-			It helps quantify how the distribution of features has altered over time.
-		Wasserstein Distance: The Wasserstein Distance, also known as Earth Mover's Distance, measures the minimum amount of work required to transform one distribution into another. 
-			It provides a clear indication of feature distribution shifts.
-		Jensen-Shannon Distance (Population Stability Index, PSI): The Jensen-Shannon Distance is a symmetric measure of divergence between two probability distributions. 
-			The Population Stability Index (PSI) is frequently used to assess the stability of features and detect drift over time.
-			By proactively assessing these metrics, valuable insights are gained into which features are most vulnerable to drift and 
-			how significantly model performance could deteriorate in production.
+		
+  		Kolmogorov-Smirnov (KS):The KS test compares the cumulative distributions of two datasets and identifies 
+    			any significant differences. It helps quantify how the distribution of features has altered over time.
+       
+		Wasserstein Distance: The Wasserstein Distance, also known as Earth Mover's Distance, measures the minimum 
+  			amount of work required to transform one distribution into another. 
+     			It provides a clear indication of feature distribution shifts.
+	
+		Jensen-Shannon Distance (Population Stability Index, PSI): The Jensen-Shannon Distance is a symmetric measure 
+  			of divergence between two probability distributions. 
+			The Population Stability Index (PSI) is frequently used to assess the stability of features 
+   			and detect drift over time.
+			By proactively assessing these metrics, valuable insights are gained into which features 
+   			are most vulnerable to drift and how significantly model performance could deteriorate in production.
 			Conducting a feature vulnerability analysis helps pinpoint features susceptible to drift. 
-			By understanding these vulnerabilities, strategies can be devised to bolster model resilience and monitoring plan to mitigate risks. 
+			By understanding these vulnerabilities, strategies can be devised to bolster 
+   			model resilience and monitoring plan to mitigate risks. 
 
 	6. Silent Uncertainty:
 		Understanding where your model is uncertain isn’t just a technical curiosity — it’s a necessity.
-		Uncertainty Is a Signal: high predictive uncertainty indicates model unreliability in specific regions of the input space. 
+		Uncertainty Is a Signal: high predictive uncertainty indicates model unreliability in specific 
+  		regions of the input space. 
 		These are areas where the model is unsure — and decisions based on its outputs are riskier.
-		Find Risky Zones in the Input Space (see https://lnkd.in/eMSQkxWd): use conformal prediction intervals across many test samples to locate regions of high uncertainty. 
+		Find Risky Zones in the Input Space (see https://lnkd.in/eMSQkxWd): use conformal prediction intervals 
+  		across many test samples to locate regions of high uncertainty. 
+    
 		These are typically:
 			- Sparse in the training data
 			- Contain overlapping class distributions
 			- Have inconsistent feature patterns
-		Conformal prediction gives statistically valid uncertainty intervals around predictions. It allows us to say: “With 90% confidence, the true value lies within this range.”
+   
+		Conformal prediction gives statistically valid uncertainty intervals around predictions. 
+  		It allows us to say: “With 90% confidence, the true value lies within this range.”
 		When those ranges are wide, the model is less certain. When they’re tight, the model is confident.
-		In our credit model example (see Figures below), a few clusters (0 and 7) have high uncertainty with 90% confidence, 
-		the decisions are both default and non default (width == 2: decision is both classes). Clusters 4, 5 and 8 have higher uncertainty as well. 
+		In our credit model example (see Figures below), a few clusters (0 and 7) have high uncertainty 
+  		with 90% confidence, the decisions are both default and non default (width == 2: decision is both classes). 
+    		Clusters 4, 5 and 8 have higher uncertainty as well. 
 		In these regions, our model is unsure whether they’ll repay or default — and business risk increases.
+  
 		What to Do About It?
 			- Flag high-uncertainty cases for manual review
 			- Use uncertainty to prioritize retraining data collection
 			- Adjust decision thresholds or introduce fallback rules in uncertain areas
-			- Build explainability reports showing which input features (e.g., Score, DTI, Utilization) drive high uncertainty
-		It’s Not Just About Accuracy: accuracy alone is misleading. What matters is how confident your model is when making decisions — especially in regulated, 
-		high-stakes settings like lending or healthcare.
+			- Build explainability reports showing which input features 
+   				(e.g., Score, DTI, Utilization) drive high uncertainty
+   
+		It’s Not Just About Accuracy: accuracy alone is misleading. What matters is how confident your model is 
+  		when making decisions — especially in regulated, high-stakes settings like lending or healthcare.
 
 
 
