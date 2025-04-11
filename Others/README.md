@@ -356,8 +356,19 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		
 ### For Error Tearm: 
 
-	3. Normality of residuals :
-		Issue: OLS estimators won’t have the desirable BLUE property
+	3. Normality of residuals : Differences between observed and predicted values
+ 		It's crucial for the validity of many statistical tests used in linear regression, 
+   		such as hypothesis tests for regression coefficients and confidence intervals.
+     
+		Issue: OLS estimators won’t have the desirable BLUE property. 
+  		Standard errors and t-values used to calculate the statistical significance of regression 
+  		parameters may be inaccurate, leading to potentially misleading conclusions.
+    
+  		Test: Kolmogorov-Smirnov Test, Shapiro-Wilk test, histograms or Q-Q plots
+    
+		Solution: Transforming the dependent or independent variables, Use robust statistical methods 
+  				that are less sensitive to non-normality may be appropriate.
+    
 		
 	4. Mean of residuals is zero :
 		Issue: Error terms has zero mean and doesn’t depend on the independent variables. 
