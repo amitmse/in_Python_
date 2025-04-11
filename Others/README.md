@@ -371,24 +371,51 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
     
 		
 	4. Mean of residuals is zero :
+		The sum of the residuals is always zero when an intercept is included in the regression model. 
+  		This is because the regression line is fitted in a way that the total distance of the data points 
+    		above the line is equal to the total distance of the data points below the line.
+  
 		Issue: Error terms has zero mean and doesn’t depend on the independent variables. 
 			Thus, there must be no relationship between the independent variable and the error term
+   
+		Test: Plot of residuals against the fitted values. If the residuals are randomly scattered around zero, 
+  			with no apparent trend, it suggests that the mean-zero assumption is met. 
+     			A flat, horizontal line at zero in this plot would indicate a good fit.
+  
+		Solution: The sum of residuals can always be zero; if they had some mean that differed from zero 
+  			you could make it zero by adjusting the intercept by that amount. 
+  
 	
 	5. Homoscedasticity of residuals /equal variance of residuals
 		Example	: Family income to predict luxury spending. Residuals are very small for low values of 
 			  family income (less spend on luxury) while there is great variation in the size of 
 			  the residuals for wealthier families. Standard errors are biased and it leads to 
 			  incorrect conclusions about the significance of the regression coefficients
+     
 		Test	: Breush-Pagan test
+  
 		Solution: Weighted least squares regression.
 			  Transform the dependent variable using one of the variance stabilizing transformations
 	
-	6. No autocorrelation of residuals :
+	6. No autocorrelation (serial correlation) of residuals :
 		Issue: correlation with own lag (stock price today linked with yesterday's price). if above fails 
 		 	then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not 
 			bias the OLS coefficient estimates, the standard errors tend to be underestimated 
 			(t-scores overestimated) when the autocorrelations of the errors at low lags are positive.
-		Test :  Durbin–Watson
+			Low variance in unbiased estimator. Autocorrelation can lead to biased and unreliable standard errors, 
+   			affecting the validity of statistical tests and confidence intervals.
+			Potentially missing key variables or an incorrect functional form. 
+   
+		Test :  Plotting the residuals over time can reveal patterns or trends, indicating autocorrelation. 
+			Durbin-Watson Test: This test checks for autocorrelation of order one (correlation between consecutive residuals). 
+			Breusch-Godfrey Test: This test is designed to detect autocorrelation of any order in the residuals. 
+			Autocorrelation Function (ACF) Plot: This plot displays the correlation of the residuals with 
+   			their lagged values, helping to identify the lag order of autocorrelation
+
+		Solution: Include lagged values of the dependent variable or independent variables in the regression model. 
+			  Transform the Data: Apply mathematical transformations to the data to reduce autocorrelation. 
+			  Use Time Series Models: If the data is time-series, consider using models specifically designed 
+     			  for time series analysis, such as ARIMA models      
 	
 	7. X variables and residuals are uncorrelated 
 	
