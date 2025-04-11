@@ -349,10 +349,12 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 
 	2. No perfect multicollinearity :
 		Issue: Issue: Regression coefficient variance will increase
+  
 		Test: VIF 
   		VIF: [1.0 / (1.0 - R Squared)]	
-    		R^2 is regressing each independent variable on the other independent variables.
-      		Solution: Transformations of independent variables
+		R^2 is regressing each independent variable on the other independent variables.
+  
+		Solution: Transformations of independent variables
 		
 ### For Error Tearm: 
 
