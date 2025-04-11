@@ -402,12 +402,13 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		 	then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not 
 			bias the OLS coefficient estimates, the standard errors tend to be underestimated 
 			(t-scores overestimated) when the autocorrelations of the errors at low lags are positive.
-			Low variance in unbiased estimator. Autocorrelation can lead to biased and unreliable standard errors, 
-   			affecting the validity of statistical tests and confidence intervals.
+			Low variance in unbiased estimator. Autocorrelation can lead to biased and unreliable 
+			standard errors, affecting the validity of statistical tests and confidence intervals.
 			Potentially missing key variables or an incorrect functional form. 
    
 		Test :  Plotting the residuals over time can reveal patterns or trends, indicating autocorrelation. 
-			Durbin-Watson Test: This test checks for autocorrelation of order one (correlation between consecutive residuals). 
+			Durbin-Watson Test: This test checks for autocorrelation of order one 
+   			(correlation between consecutive residuals). 
 			Breusch-Godfrey Test: This test is designed to detect autocorrelation of any order in the residuals. 
 			Autocorrelation Function (ACF) Plot: This plot displays the correlation of the residuals with 
    			their lagged values, helping to identify the lag order of autocorrelation
