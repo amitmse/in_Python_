@@ -336,7 +336,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 ------------------------------------------------------------------------------------------------------
 # Ordinary Least Squares (OLS): 
 - Finds parameter values that minimizing the error. 
-## Assumptions of Linear regression: 
+## Assumptions of Linear regression: 6
 
 ### For Model:
 
