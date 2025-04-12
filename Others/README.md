@@ -146,7 +146,7 @@ Example:
 - Unlike the normal distribution, the logistic distribution has heavier tails,
   meaning it assigns more probability to extreme values (values further away from the mean).
 
-![Function]()
+![Function](https://github.com/amitmse/in_Python_/blob/master/Others/Logistic%20vs%20Normal.png)
 
 
 ---------------------------------------------------------------------------------------------	
