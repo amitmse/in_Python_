@@ -62,6 +62,55 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 #### Cluster the abundant class: 
 - An elegant approach was proposed by Sergey on Quora. Instead of relying on random samples to cover the variety of the training samples, he suggests clustering the abundant class in r groups, with r being the number of cases in r. For each group, only the medoid (centre of cluster) is kept. The model is then trained with the rare class and the medoids only.
 
+
+---------------------------------------------------------------------------------------------
+### Hypothesis Testing: 
+- Hypothesis testing is a form of statistical inference that uses data from a sample to draw conclusions about a population parameter or a population probability distribution. 
+	First, a tentative assumption is made about the parameter or distribution which is called the null hypothesis.
+	It help to make better decisions.
+- Avoiding Misleading Conclusions (Type I and Type II Errors): It helps you avoid jumping to the wrong conclusions.
+  For instance, a Type I error could occur if a company launches a new product thinking it will be a hit, only to find out later that the data misled them.
+  A Type II error might happen when a company overlooks a potentially successful product because their testing wasn’t thorough enough.
+  By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
+
+- Making Smarter Choices: Evidence-based decisions. Let’s say a city planner wants to determine if building a new park will increase community engagement.
+  By testing the hypothesis using data from similar projects, they can make an informed choice.
+  Similarly, a teacher might use hypothesis testing to see if a new teaching method actually improves student performance.
+  It’s about taking the guesswork out of decisions and relying on solid evidence instead.
+
+- Optimizing Business Tactics: In business, hypothesis testing is invaluable for testing new ideas and strategies before fully committing to them.
+  For example, an e-commerce company might want to test whether offering free shipping increases sales.
+  By using hypothesis testing, they can compare sales data from customers who received free shipping offers and those who didn’t.
+  This allows them to base their business decisions on data, not hunches, reducing the risk of costly mistakes.
+  
+- Null Hypothesis (H0): This hypothesis states that there is no effect or difference, and it is the hypothesis you attempt to reject with your test.
+- Alternative Hypothesis (H1 or Ha): This hypothesis is what you might believe to be true or hope to prove true. It is usually considered the opposite of the null hypothesis.
+  
+- Significance level: Often denoted by alpha (α), is the probability of rejecting the null hypothesis when it is true. Common choices for α are 0.05 (5%), 0.01 (1%), and 0.10 (10%).
+  The confidence level and significance level are related. If you have a 95% confidence interval, it corresponds to a 5% significance level in the hypothesis test.
+- Confidence Intervals: It is a range of values within which the true population value likely falls, with a certain level of confidence.
+  Think of it as an estimate, but instead of just giving a single number, it provides a range.
+  This range is calculated from a sample of data and tells you how accurately your sample represents the entire population.
+  Margin of Error: The width of the confidence interval is related to the margin of error, which indicates how much your sample estimate might vary from the true population value. 
+
+- P-value: Probability of observing test results at least as extreme as the results observed, assuming the null hypothesis is correct. It helps determine the strength of the evidence against the null hypothesis.
+  If the p-value ≤ α: Reject the null hypothesis, suggesting sufficient evidence in the data supports the alternative hypothesis.
+  If the p-value > α: Do not reject the null hypothesis, suggesting insufficient evidence to support the alternative hypothesis.
+
+- One-Tailed test Hypothesis Testing: Also called a directional test. critical distribution area is one-sided, meaning the test sample is either greater or lesser than a specific value.
+- Two tails: the critical distribution area is two-sided.
+  
+- Statistical power refers to the probability that a statistical test will correctly reject a false null hypothesis.
+
+- Limitations of Hypothesis Testing
+  It cannot prove or establish the truth: Hypothesis testing provides evidence to support or reject a hypothesis, but it cannot confirm the absolute truth of the research question.
+  Results are sample-specific: Hypothesis testing is based on analyzing a sample from a population, and the conclusions drawn are specific to that particular sample.
+  Possible errors: During hypothesis testing, there is a chance of committing type I error (rejecting a true null hypothesis) or type II error (failing to reject a false null hypothesis).
+  	Type 1 Error: A Type-I error occurs when sample results reject the null hypothesis despite being true.
+  	Type 2 Error: A Type-II error occurs when the null hypothesis is not rejected when it is false, unlike a Type-I error.
+  Assumptions and requirements: Different tests have specific assumptions and requirements that must be met to accurately interpret results.
+
+  
 ---------------------------------------------------------------------------------------------
 
 # Probability Distribution:
