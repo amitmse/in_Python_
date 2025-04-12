@@ -99,7 +99,7 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
   	the confidence level decreases, and vice versa. If you want to be more certain of the conclusions you draw, your confidence level needs to be higher.
   Both confidence level and significance level are used to determine the confidence interval.  Confidence level = 1-Significance level
 
-![Function](https://github.com/amitmse/in_Python_/blob/master/Others/Significance%20Level%2C%20Confidence%20Level.png)
+![Function](https://github.com/amitmse/in_Python_/blob/master/Others/Significance%20Level%20Confidence%20Level.png)
 
 - Confidence Intervals: It is a range of values within which the true population value likely falls, with a certain level of confidence.
   Think of it as an estimate, but instead of just giving a single number, it provides a range.
