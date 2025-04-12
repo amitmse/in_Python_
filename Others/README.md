@@ -210,6 +210,7 @@ Example:
   meaning there's a higher probability of observing values further from the mean.
   This characteristic makes the logistic distribution more robust to outliers and extreme values.
 
+- The logistic distribution is a probability distribution (PDF), and its cumulative distribution function (CDF) is the sigmoid function.
 - It's used in various fields, including logistic regression, neural networks, and modeling growth patterns.
 - The key feature is that its cumulative distribution function (CDF) is the logistic function,
   which is crucial in mapping real numbers to probabilities, especially in machine learning applications.
