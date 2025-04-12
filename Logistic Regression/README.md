@@ -21,7 +21,8 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 	
  	- The errors in logistic regression are not normally distributed, as the outcome is a probability.
 
-	- Logistic regression does not require homoscedasticity as the variance of the errors can vary depending on the predicted probability, as it's a binomial random variable.
+	- Logistic regression does not require homoscedasticity as the variance of the errors can vary depending on 
+ 		the predicted probability, as it's a binomial random variable.
        
 -----------------------------------------------------------------------------------------------------------------------
 ## Logistic Regression Algorithm Coded in Python:
