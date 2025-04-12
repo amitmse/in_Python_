@@ -8,10 +8,19 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 ## Logistic Regression Assumptions:
 
 	1. Dependent variable should be binary
+ 
 	2. Linearity between independent & log odds 
-	     (non-linear relationship between the dependent and independent variables)
-      	     Test: Box-Tidwell test
+		(non-linear relationship between the dependent and independent variables) 
+		Test: Box-Tidwell test
+  
 	3. Independence of errors
+		Each observation in the dataset is unrelated to any other observation,
+		If observations are not independent, the error terms (residuals) will be correlated.
+		This can lead to biased coefficient estimates and inflated standard errors.
+  		Example: Data collected from the same individuals over time. 
+		Observations collected at consecutive time points.
+		Test: Durbin-Watson test, Residual plots
+  
 	4. No perfect multicollinearity
 
 	-------------------------------------------------------------
