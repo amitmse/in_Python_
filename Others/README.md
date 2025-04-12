@@ -450,8 +450,16 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 ### For Variable: 
 
 	2. No perfect multicollinearity :
-		Issue: Issue: Regression coefficient variance will increase
+		Issue: Regression coefficient variance will increase.
   
+		It inflates standard errors, leading to unstable and unreliable coefficient estimates, making it difficult to determine the individual 
+  		effect of each predictor on the outcome and potentially leading to misleading conclusions about variable importance.
+		
+		The presence of multicollinearity makes the coefficient estimates highly sensitive to small changes in the data or model specification. 
+  		Even a slight shift in the data can cause the coefficients to fluctuate significantly, making the model's interpretation unreliable
+
+		Multicollinearity can also reduce the overall precision of the model, making it less reliable for making predictions.
+
 		Test: VIF 
   		VIF: [1.0 / (1.0 - R Squared)]	
 		R^2 is regressing each independent variable on the other independent variables.
