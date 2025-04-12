@@ -326,9 +326,15 @@ Example:
   from experimental data, and then use the models to make predictions.
 ---------------------------------------------------------------------------------------------
 ### Standard Normal distribution: 
-- It is also known as the Z distribution and it follows normal distribution 
-  with a mean of zero and a variance of one.
-- Example: 
+- It is also known as the Z distribution and it follows normal distribution with a mean of zero and a variance of one.
+  The Standard Normal Distribution is used to standardize and compare different normal distributions by converting them into a single, common reference.
+  This allows for easier calculation of probabilities and comparison of data points across various datasets.
+  It also helps in hypothesis testing and identifying the probability of sample means significantly differing from population means.
+  The standard normal distribution is a specific type of normal distribution with a mean of 0 and a standard deviation of 1. It is often used to calculate z-scores and probabilities.
+  
+  z = (x - μ) / σ  (x is raw value, μ mean and σ standard deviation)
+
+  - Example: 
 	- For example, if you get a score of 90 in Math and 95 in English, you might think that you are 
   	  better in English than in Math. However, in Math, your score is 2 standard deviations above 
 	  the mean. In English, it’s only one standard deviation above the mean. It tells you that in Math, 
