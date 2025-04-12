@@ -465,11 +465,14 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
     		The model can still make accurate predictions despite the presence of multicollinearity.
 
 		Test: VIF 
-  		VIF: [1.0 / (1.0 - R Squared)]	
+  		VIF: [1.0 / (1.0 - R Squared)]
+      		VIF = 1/T  (T refers to Tolerance = 1 – R² which is unexplained portion)
 		R^2 is regressing each independent variable on the other independent variables.
-  		Tolerance: It measures the influence of one independent variable on all other independent variables; 
-    		Tolerance is defined as T = 1 – R². VIF = 1/T. 
-       
+  
+  		Tolerance: It measures the influence of one independent variable on all other independent variables.
+		It measures of how much a predictor variable's variance is not explained by the other predictor variables 
+  		in the model. It essentially assesses the degree to which a variable is independent of the others.
+           
 		Solution: Transformations of independent variables
 		
 ### For Error Tearm: 
