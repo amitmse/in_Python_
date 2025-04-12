@@ -210,12 +210,20 @@ Example:
   The logistic distribution's PDF decays more slowly in the tails compared to the normal distribution,
   meaning there's a higher probability of observing values further from the mean.
   This characteristic makes the logistic distribution more robust to outliers and extreme values.
-
+  
+  sigmoid function  / logistic function (Cumulative Distribution Function) =  1 / (1+exp^-y)
+  Probability Density Function: exp^-y / (1 + exp^-y)^2
+  Mean = 0
+  Variance = Phi^2 / 3
+  
 - The logistic distribution is a probability distribution (PDF), and its cumulative distribution function (CDF) is the sigmoid function.
 - It's used in various fields, including logistic regression, neural networks, and modeling growth patterns.
 - The key feature is that its cumulative distribution function (CDF) is the logistic function,
   which is crucial in mapping real numbers to probabilities, especially in machine learning applications.
 - The distribution is symmetrical around its mean. The mode and median of the logistic distribution are equal to its mean.
+- Below chart is Probability Density Function. CDF is S shaped.
+
+https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/Logistic-%20Normal.png)
 
