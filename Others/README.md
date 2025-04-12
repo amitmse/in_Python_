@@ -130,7 +130,11 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
   	Type 2 Error: A Type-II error occurs when the null hypothesis is not rejected when it is false, unlike a Type-I error.
   Assumptions and requirements: Different tests have specific assumptions and requirements that must be met to accurately interpret results.
 
-  
+- Degrees of Freedom refer to the number of independent pieces of information available when calculating a statistic.
+  Trying to find the average of a group of numbers given total sum and the count of numbers are know.
+  It means the last number is automatically determined for average computation, meaning it doesn't have freedom to vary independently.
+  So, the degrees of freedom would be one less than the count of numbers, as freely choose all but the last one.
+
 ---------------------------------------------------------------------------------------------
 
 # Probability Distribution:
