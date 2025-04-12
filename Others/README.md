@@ -210,17 +210,12 @@ Example:
   meaning there's a higher probability of observing values further from the mean.
   This characteristic makes the logistic distribution more robust to outliers and extreme values.
 
-
-
 - It's used in various fields, including logistic regression, neural networks, and modeling growth patterns.
 - The key feature is that its cumulative distribution function (CDF) is the logistic function,
   which is crucial in mapping real numbers to probabilities, especially in machine learning applications.
 - The distribution is symmetrical around its mean. The mode and median of the logistic distribution are equal to its mean.
-- Unlike the normal distribution, the logistic distribution has heavier tails,
-  meaning it assigns more probability to extreme values (values further away from the mean).
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/Logistic-%20Normal.png)
-
 
 ---------------------------------------------------------------------------------------------	
 ## Hyper-Geometric distribution:
