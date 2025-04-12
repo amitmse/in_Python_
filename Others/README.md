@@ -258,7 +258,12 @@ Example:
 ---------------------------------------------------------------------------------------------
 ## Negative Binomial distribution:
 - It's a simple generalization. It’s the number of failures until r successes have occurred,not just 1.
-- Example: 
+- Example:
+	- If we flip a coin a fixed number of times and count the number of times the coin turns out heads is a binomial distribution.
+   		If we continue flipping the coin until it has turned a particular number of heads say the third head-on flipping 5 times, then this is a case of the negative binomial distribution.
+   	- For a situation involving three glasses to be hit with 7 balls, the probability of hitting the third glass successfully with the seventh ball can be obtained with the help of negative binomial distribution.
+	- In a class, if there is a rumor that there is a math test, and the fifth is the second person to believe the rumor, then the probability of this fifth person to be the second person to
+   		believe the rumor can be computed using the negative binomial distribution.
 
 ---------------------------------------------------------------------------------------------  
 ## Exponential distribution:
