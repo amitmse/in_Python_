@@ -458,10 +458,11 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		
 		The presence of multicollinearity makes the coefficient estimates highly sensitive to 
   		small changes in the data or model specification. Even a slight shift in the data can cause 
-    		the coefficients to fluctuate significantly, making the model's interpretation unreliable
+    		the coefficients to fluctuate significantly, making the model's interpretation unreliable.
 
-		Multicollinearity can also reduce the overall precision of the model, 
-  		making it less reliable for making predictions.
+		Multicollinearity does not directly affect the goodness-of-fit statistics of the model, 
+  		such as R-squared or the overall F-test. 
+    		The model can still make accurate predictions despite the presence of multicollinearity.
 
 		Test: VIF 
   		VIF: [1.0 / (1.0 - R Squared)]	
