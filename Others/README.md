@@ -70,8 +70,8 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 	It help to make better decisions.
 
   Avoiding Misleading Conclusions (Type I and Type II Errors): It helps you avoid jumping to the wrong conclusions.
-  For instance, a Type I error could occur if a company launches a new product thinking it will be a hit, only to find out later that the data misled them.
-  A Type II error might happen when a company overlooks a potentially successful product because their testing wasn’t thorough enough.
+  For instance, a Type I error could occur if a bank launches a new product thinking it will be a hit, only to find out later that the data misled them.
+  A Type II error might happen when a bank overlooks a potentially successful product because their testing wasn’t thorough enough.
   By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
 
   Making Smarter Choices: Evidence-based decisions. Let’s say a city planner wants to determine if building a new park will increase community engagement.
