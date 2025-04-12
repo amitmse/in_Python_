@@ -211,10 +211,10 @@ Example:
   meaning there's a higher probability of observing values further from the mean.
   This characteristic makes the logistic distribution more robust to outliers and extreme values.
   
-  sigmoid function  / logistic function (Cumulative Distribution Function) =  1 / (1+exp^-y)
-  Probability Density Function: exp^-y / (1 + exp^-y)^2
-  Mean = 0
-  Variance = Phi^2 / 3
+- sigmoid function  / logistic function (Cumulative Distribution Function) =  1 / (1+exp^-y)
+- Probability Density Function: exp^-y / (1 + exp^-y)^2
+- Mean = 0
+- Variance = Phi^2 / 3
   
 - The logistic distribution is a probability distribution (PDF), and its cumulative distribution function (CDF) is the sigmoid function.
 - It's used in various fields, including logistic regression, neural networks, and modeling growth patterns.
