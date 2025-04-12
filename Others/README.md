@@ -144,6 +144,7 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 - They come in many shapes, but in only one size: probabilities in a distribution always add up to 1.
 - A probability distribution is a function that assigns to each event a number in [0,1] which is 
   the probability that this event occurs.
+- PDF shows the probability at a single point, and the cumulative distribution function (CDF) shows the cumulative probability up to that point.
 - A statistical model is a set of probability distributions. We assume that the observations are generated 
   from one of these distributions.
 - Why Probability Density and why not Probability: The concept of probability density is used for continuous random variables because in such cases, the probability of any specific value is infinitesimally small.
