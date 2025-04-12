@@ -246,9 +246,9 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	- Area under curve / C statistics: Percent Concordant + 0.5 * Percent Tied
 		(The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its 
  		discrimination threshold is varied.) 
-		True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate (100-Specificity : X axis) 
- 		for different cut-off points. Each point on the ROC curve represents a sensitivity/specificity pair corresponding to a 
-  		particular decision threshold. 
+		True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate 
+  		(100-Specificity : X axis) for different cut-off points. Each point on the ROC curve represents 
+    		a sensitivity/specificity pair corresponding to a particular decision threshold. 
 
 	- Somer’s D (Gini): [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
  
