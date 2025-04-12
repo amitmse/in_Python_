@@ -65,9 +65,8 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 ---------------------------------------------------------------------------------------------
 ### Hypothesis Testing: 
-- Hypothesis testing is a form of statistical inference that uses data from a sample to draw conclusions about a population parameter or a population probability distribution. 
-	First, a tentative assumption is made about the parameter or distribution which is called the null hypothesis.
-	It help to make better decisions.
+- Hypothesis testing is a statistical method used to determine if there's enough evidence in a sample to reject a null hypothesis in favor of an alternative hypothesis.
+  It uses data from a sample to draw conclusions about a population parameter or a population probability distribution. It help to make better decisions.
 
   Avoiding Misleading Conclusions (Type I and Type II Errors): It helps you avoid jumping to the wrong conclusions.
   For instance, a Type I error could occur if a bank launches a new product thinking it will be a hit, only to find out later that the data misled them.
