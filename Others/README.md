@@ -353,7 +353,9 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		Test: VIF 
   		VIF: [1.0 / (1.0 - R Squared)]	
 		R^2 is regressing each independent variable on the other independent variables.
-  
+  		Tolerance: It measures the influence of one independent variable on all other independent variables; 
+    		Tolerance is defined as T = 1 – R². VIF = 1/T. 
+       
 		Solution: Transformations of independent variables
 		
 ### For Error Tearm: 
@@ -394,7 +396,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 			  the residuals for wealthier families. Standard errors are biased and it leads to 
 			  incorrect conclusions about the significance of the regression coefficients
      
-		Test	: Breush-Pagan test
+		Test	: Breush-Pagan test, Goldfeld-Quandt
   
 		Solution: Weighted least squares regression.
 			  Transform the dependent variable using one of the variance stabilizing transformations
