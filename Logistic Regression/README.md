@@ -15,11 +15,11 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 	4. No perfect multicollinearity
 
 	-------------------------------------------------------------
-	- Logistic regression relaxes several key assumptions 
+	- Logistic regression relaxes several key assumptions of linear regression
  		(linearity between the dependent and independent variables, normality of errors, or homoscedasticity) 
   		required by linear regression, particularly concerning the relationship between variables and error distributions.
 	
- 	- Logistic regression model the response as a Bernoulli / binomial distribution, not as a normal distribution.
+ 	- Logistic regression the target variable follows Bernoulli / binomial distribution, not normal distribution.
   		The errors in logistic regression are not normally distributed, as the outcome is a probability (0 to 1).
   		
 	- Logistic regression does not require homoscedasticity as the variance of the errors can vary depending on 
