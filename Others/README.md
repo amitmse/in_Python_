@@ -68,17 +68,18 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 - Hypothesis testing is a form of statistical inference that uses data from a sample to draw conclusions about a population parameter or a population probability distribution. 
 	First, a tentative assumption is made about the parameter or distribution which is called the null hypothesis.
 	It help to make better decisions.
-- Avoiding Misleading Conclusions (Type I and Type II Errors): It helps you avoid jumping to the wrong conclusions.
+
+  Avoiding Misleading Conclusions (Type I and Type II Errors): It helps you avoid jumping to the wrong conclusions.
   For instance, a Type I error could occur if a company launches a new product thinking it will be a hit, only to find out later that the data misled them.
   A Type II error might happen when a company overlooks a potentially successful product because their testing wasn’t thorough enough.
   By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
 
-- Making Smarter Choices: Evidence-based decisions. Let’s say a city planner wants to determine if building a new park will increase community engagement.
+  Making Smarter Choices: Evidence-based decisions. Let’s say a city planner wants to determine if building a new park will increase community engagement.
   By testing the hypothesis using data from similar projects, they can make an informed choice.
   Similarly, a teacher might use hypothesis testing to see if a new teaching method actually improves student performance.
   It’s about taking the guesswork out of decisions and relying on solid evidence instead.
 
-- Optimizing Business Tactics: In business, hypothesis testing is invaluable for testing new ideas and strategies before fully committing to them.
+  Optimizing Business Tactics: In business, hypothesis testing is invaluable for testing new ideas and strategies before fully committing to them.
   For example, an e-commerce company might want to test whether offering free shipping increases sales.
   By using hypothesis testing, they can compare sales data from customers who received free shipping offers and those who didn’t.
   This allows them to base their business decisions on data, not hunches, reducing the risk of costly mistakes.
@@ -88,6 +89,7 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
   
 - Significance level: Often denoted by alpha (α), is the probability of rejecting the null hypothesis when it is true. Common choices for α are 0.05 (5%), 0.01 (1%), and 0.10 (10%).
   The confidence level and significance level are related. If you have a 95% confidence interval, it corresponds to a 5% significance level in the hypothesis test.
+  
 - Confidence Intervals: It is a range of values within which the true population value likely falls, with a certain level of confidence.
   Think of it as an estimate, but instead of just giving a single number, it provides a range.
   This range is calculated from a sample of data and tells you how accurately your sample represents the entire population.
