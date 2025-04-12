@@ -87,9 +87,19 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 - Null Hypothesis (H0): This hypothesis states that there is no effect or difference, and it is the hypothesis you attempt to reject with your test.
 - Alternative Hypothesis (H1 or Ha): This hypothesis is what you might believe to be true or hope to prove true. It is usually considered the opposite of the null hypothesis.
   
-- Significance level: Often denoted by alpha (α), is the probability of rejecting the null hypothesis when it is true. Common choices for α are 0.05 (5%), 0.01 (1%), and 0.10 (10%).
-  The confidence level and significance level are related. If you have a 95% confidence interval, it corresponds to a 5% significance level in the hypothesis test.
+- Significance level: A significance level is used to determine if the null hypothesis is true or not. Often denoted by alpha (α), is the probability of accurately rejecting the null hypothesis. 
+  Common choices for α are 0.05 (5%), 0.01 (1%), and 0.10 (10%).
+  The significance level is the probability of a Type I error, i.e., rejecting a null hypothesis that is true.
   
+- Confidence level: The confidence level indicates the probability of obtaining the same results if you repeat the same data collection processes like tests, polls, or surveys.
+  The confidence level is established before conducting the data integration and collection, typically between 90% and 99%. It helps you determine whether the results from sample data apply to the entire population.
+  The confidence level and significance level are related. If you have a 95% confidence interval, it corresponds to a 5% significance level in the hypothesis test.
+  Confidence level indicates the probability of drawing accurate conclusions based on sample data. The significance level is a concept that deals with testing a hypothesis and avoiding a type I error,
+  	while the confidence level deals more with the precision of the results despite the repetition of the test. These two concepts have an inverse relationship, meaning that if the significance level increases,
+  	the confidence level decreases, and vice versa. If you want to be more certain of the conclusions you draw, your confidence level needs to be higher.
+  Both confidence level and significance level are used to determine the confidence interval.  Confidence level = 1-Significance level
+
+
 - Confidence Intervals: It is a range of values within which the true population value likely falls, with a certain level of confidence.
   Think of it as an estimate, but instead of just giving a single number, it provides a range.
   This range is calculated from a sample of data and tells you how accurately your sample represents the entire population.
