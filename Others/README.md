@@ -148,6 +148,7 @@ Example:
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/Logistic%20vs%20Normal.png)
 
+
 ---------------------------------------------------------------------------------------------	
 ## Hyper-Geometric distribution:
 - Example: 
