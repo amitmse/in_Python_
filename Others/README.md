@@ -107,11 +107,18 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
   Margin of Error: The width of the confidence interval is related to the margin of error, which indicates how much your sample estimate might vary from the true population value. 
 
 - P-value: Probability of observing test results at least as extreme as the results observed, assuming the null hypothesis is correct. It helps determine the strength of the evidence against the null hypothesis.
+  P value is compared with a significance level. It does not provide information about the magnitude of the effect. 
+  The p-value is calculated based on the data and the test statistic (e.g., t-statistic, z-statistic) used to test the hypothesis.
+  Once test statistic "t" calculted, find the associated p-value by referring to a t-distribution table.
+  
   If the p-value ≤ α: Reject the null hypothesis, suggesting sufficient evidence in the data supports the alternative hypothesis.
   If the p-value > α: Do not reject the null hypothesis, suggesting insufficient evidence to support the alternative hypothesis.
 
+- Critical region: All sets of values that lead to rejecting the null hypothesis lie in the critical region. Critical value separates the critical region from the non-critical region.
+  Critical value is the value of the test statistic which defines the upper and lower bounds of a confidence interval.
+  
 - One-Tailed test Hypothesis Testing: Also called a directional test. critical distribution area is one-sided, meaning the test sample is either greater or lesser than a specific value.
-- Two tails: the critical distribution area is two-sided.
+  Two tails: the critical distribution area is two-sided.
   
 - Statistical power refers to the probability that a statistical test will correctly reject a false null hypothesis.
 
