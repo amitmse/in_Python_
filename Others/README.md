@@ -485,7 +485,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
            
 		Solution: Transformations of independent variables
 		
-### For Error Tearm: 
+### For Error Tearm: 4
 
 	3. Normality of residuals : Differences between observed and predicted values
 		In linear regression, the assumption that "errors follow a normal distribution" 
