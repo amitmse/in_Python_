@@ -65,8 +65,7 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 ---------------------------------------------------------------------------------------------
 ### Hypothesis Testing: 
-- Hypothesis testing uses data from a sample to draw conclusions about a population parameter or a population probability distribution.
-  
+- Hypothesis testing uses data from a sample to draw conclusions about a population parameter or a population probability distribution.  
   It's a statistical method used to determine if there's enough evidence in a sample to reject a null hypothesis in favor of an alternative hypothesis.
   It help to make better decisions.
 
