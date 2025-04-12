@@ -10,6 +10,7 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 	1. Dependent variable should be binary
 	2. Linearity between independent & log odds 
 	     (non-linear relationship between the dependent and independent variables)
+      	     Test: Box-Tidwell test
 	3. Independence of errors
 	4. No perfect multicollinearity
     	  
@@ -39,7 +40,6 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
  	  which forms a S-shaped curve.
 	- Due to Sigmoid function, Logistic Regression is not a Linear Regression model (Sigmoid introduces non-linearity).
 
- 
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Maximum Likelihood: 
@@ -69,7 +69,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		= Sum[Yi*(a + bX)] - Sum[Log{1 + Exp(a + bX)}]				
 		= -[Sum[Yi*(a + bX)] - Sum[Log{1 + Exp(a + bX)}]] 
 		(Apply negative to minimize the Log Likelihood Function)
-
+	
 	Cost function :
 		- Log Loss is cost function of logistic regression.
     		- It quantifies the error of a logistic regression by assessing how effectively it separates actual 
