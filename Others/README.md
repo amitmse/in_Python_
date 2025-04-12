@@ -512,6 +512,15 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
   
 	
 	5. Homoscedasticity of residuals /equal variance of residuals
+		Homoscedasticity in the context of residuals refers to the assumption that the variance of 
+  		the error terms (residuals) is constant across all levels of the independent variables 
+    		in a regression model.
+
+		Issue: Homoscedasticity is necessary for accurately estimating the standard errors of 
+  			the regression coefficients. The standard errors of the coefficients may be biased, 
+     			leading to unreliable hypothesis tests and confidence intervals.
+			Homoscedasticity ensures that the estimated coefficients are unbiased and have minimum variance.
+  
 		Example	: Family income to predict luxury spending. Residuals are very small for low values of 
 			  family income (less spend on luxury) while there is great variation in the size of 
 			  the residuals for wealthier families. Standard errors are biased and it leads to 
