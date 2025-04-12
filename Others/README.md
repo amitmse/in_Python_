@@ -85,6 +85,9 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/distribution.png)
 
+- Continuous Probability Distribution: Gaussian Normal, Standard Normal (Z- dist.), Student-t, Uniform, Log-Normal, Chi-Square.
+- Discrete Probability Distribution: Bernoulli, Binomial, Negative Binomial, Geometric, Poisson, Uniform (defined both).
+
 ---------------------------------------------------------------------------------------------
 ## Uniform distribution:
 - Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
@@ -125,7 +128,24 @@ Example:
 	- Imagine an urn with equal numbers of white and black balls. Draw a ball and note whether it is black, 
 	  then put it back and Repeat this process. How many times black ball was drawn? 
 	  This count also follows a binomial distribution.
-	
+
+-------------------------------------------------------------------------------------------------
+## Logistic distribution:
+- The logistic distribution is a continuous probability distribution similar in shape to the normal distribution but with heavier tails.
+  Heavier tail is due to its mathematical structure. While logistic and normal distribution both are symmetric and unimodal.
+  The logistic distribution's PDF decays more slowly in the tails compared to the normal distribution,
+  meaning there's a higher probability of observing values further from the mean.
+  This characteristic makes the logistic distribution more robust to outliers and extreme values.
+
+
+
+- It's used in various fields, including logistic regression, neural networks, and modeling growth patterns.
+- The key feature is that its cumulative distribution function (CDF) is the logistic function,
+  which is crucial in mapping real numbers to probabilities, especially in machine learning applications.
+- The distribution is symmetrical around its mean. The mode and median of the logistic distribution are equal to its mean.
+- Unlike the normal distribution, the logistic distribution has heavier tails,
+  meaning it assigns more probability to extreme values (values further away from the mean).
+-  
 ---------------------------------------------------------------------------------------------	
 ## Hyper-Geometric distribution:
 - Example: 
