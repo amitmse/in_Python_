@@ -19,8 +19,9 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
  		(linearity between the dependent and independent variables, normality of errors, or homoscedasticity) 
   		required by linear regression, particularly concerning the relationship between variables and error distributions.
 	
- 	- The errors in logistic regression are not normally distributed, as the outcome is a probability.
-
+ 	- Logistic regression model the response as a Bernoulli / binomial distribution, not as a normal distribution.
+  		The errors in logistic regression are not normally distributed, as the outcome is a probability (0 to 1).
+  		
 	- Logistic regression does not require homoscedasticity as the variance of the errors can vary depending on 
  		the predicted probability, as it's a binomial random variable.
        
