@@ -73,15 +73,15 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
   A Type II error might happen when a bank overlooks a potentially successful product because their testing wasn’t thorough enough.
   By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
 
-  Making Smarter Choices: Evidence-based decisions. Let’s say a city planner wants to determine if building a new park will increase community engagement.
+  Making Smarter Choices: Evidence-based decisions. Let’s say a bank wants to determine if new strategy will increase revenue.
   By testing the hypothesis using data from similar projects, they can make an informed choice.
-  Similarly, a teacher might use hypothesis testing to see if a new teaching method actually improves student performance.
+  Similarly, a bank might use hypothesis testing to see if a credit limit increse actually improves credit card spending.
   It’s about taking the guesswork out of decisions and relying on solid evidence instead.
 
   Optimizing Business Tactics: In business, hypothesis testing is invaluable for testing new ideas and strategies before fully committing to them.
-  For example, an e-commerce company might want to test whether offering free shipping increases sales.
-  By using hypothesis testing, they can compare sales data from customers who received free shipping offers and those who didn’t.
-  This allows them to base their business decisions on data, not hunches, reducing the risk of costly mistakes.
+  For example, bank company might want to test whether offering upgraded credit card increases spending.
+  By using hypothesis testing, bank can compare spend data from customers who received upgraded credit card vs who didn’t.
+  This allows bank to base decisions on data, not hunches, reducing the risk of costly mistakes.
   
 - Null Hypothesis (H0): This hypothesis states that there is no effect or difference, and it is the hypothesis you attempt to reject with your test.
 - Alternative Hypothesis (H1 or Ha): This hypothesis is what you might believe to be true or hope to prove true. It is usually considered the opposite of the null hypothesis.
