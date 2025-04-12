@@ -478,8 +478,12 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 ### For Error Tearm: 
 
 	3. Normality of residuals : Differences between observed and predicted values
- 		It's crucial for the validity of many statistical tests used in linear regression, 
-   		such as hypothesis tests for regression coefficients and confidence intervals.
+		In linear regression, the assumption that "errors follow a normal distribution" 
+  		means the difference between the observed values and the values predicted by the model 
+    		(the residuals) are assumed to be distributed according to a normal distribution. 
+      		This assumption is crucial for the validity of statistical tests used in linear regression, 
+		such as t-tests and ANOVA, which rely on the normality of the errors to provide accurate 
+  		p-values and hypothesis tests for regression coefficients and confidence intervals.
      
 		Issue: OLS estimators won’t have the desirable BLUE property. 
   		Standard errors and t-values used to calculate the statistical significance of regression 
@@ -497,7 +501,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
     		above the line is equal to the total distance of the data points below the line.
   
 		Issue: Error terms has zero mean and doesn’t depend on the independent variables. 
-			Thus, there must be no relationship between the independent variable and the error term
+			Thus, there must be no relationship between the independent variable and the error term.
    
 		Test: Plot of residuals against the fitted values. If the residuals are randomly scattered around zero, 
   			with no apparent trend, it suggests that the mean-zero assumption is met. 
