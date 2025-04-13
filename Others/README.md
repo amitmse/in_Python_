@@ -918,29 +918,43 @@ the split would be on Gender only.
     		Bias towards the Majority Class, Actual Performance of the Minority Class. Below metrics help to indentify:
     		F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing 
       			their importance.
+	 
     		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture 
       			of performance across all classes.
+	 
     		AUC-ROC: Measures the model's ability to discriminate between classes, offering a robust evaluation 
       			independent of class distribution.
+	 
     		Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, 
       			enabling a deeper understanding of the model's performance under various scenarios.
     
 	- Check Bias and Variance:
- 		Assess model's bias (error due to assumptions).
-  		Assess model's Variance (sensitivity to training data fluctuations).
-		To check above perform: 
-		Cross-Validation: Split your data into multiple subsets (folds), train the model on some folds, 
-  		and validate it on others. This helps assess the model's performance across different data samples, providing insights into bias and variance.
-  
-Learning Curves, Analyzing Error Differences
-    
-		Sensitivity Analysis: Test the model's sensitivity to changes in input variables.
-		
 		Check bias in human decision-making is carried over to the development.
 		The data-generating process itself can be biased.
 		One way to identify data bias is by benchmarking with other models.
 		Random selection of development sample.
-
+ 
+ 		Assess model's bias (error due to assumptions).
+  		Assess model's Variance (sensitivity to training data fluctuations).
+		To check above perform: 
+  
+		- Cross-Validation: It reveals model's performance is consistent across different data samples, 
+  			indicating lower variance. 
+     			It also helps identify if the model's assumptions are too restrictive, leading to high bias.
+  
+		- Learning Curves: Plot the training and validation errors against the size of the training dataset.
+  			Interpreting the curves:
+			High Bias (Underfitting): If both training and validation errors are high and close together, 
+   				the model may be too simple and not capturing the underlying patterns in the data.
+       				High Training Error, High Validation Error: Suggests underfitting (high bias).
+       
+			High Variance (Overfitting): If the training error is low but the validation error is high, 
+   				the model is overfitting the training data and not generalizing well to unseen data
+				Low Training Error, High Validation Error: Indicates overfitting (high variance).
+  
+  		- Analyzing Error Differences
+    
+		Sensitivity Analysis: Test the model's sensitivity to changes in input variables.
   
 	- Model Interpretability and Explainability in Validation:
  		Interpretability: It helps identify potential model weaknesses, fostering robustness and reliability.
