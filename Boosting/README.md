@@ -231,8 +231,7 @@ Boosting vs Bagging
    
 ------------------------------------------------------------------------------------------------------------
 ### XGBoost hyperparameters: 
-	- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data 
-		but may also lead to overfitting.
+	- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data but may also lead to overfitting.
 	- minimum sum of instance weights (Hessian) needed in a child. It helps prevent overfitting 
 		by controlling the creation of new nodes in the tree. 
 	- subsample: This determines the fraction of training instances used for each tree, reducing the risk of overfitting. 
