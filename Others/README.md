@@ -887,6 +887,8 @@ the split would be on Gender only.
 
 ## Model Validation:
 
+	----------------------------------------------------------------------------------------------------
+ 
 	- Any good model always has weakness
 	- Where does this model fail?
 	- What are its hidden weaknesses?
@@ -910,6 +912,8 @@ the split would be on Gender only.
 		Validation guides model refinement during development, and testing validates its performance 
   		in real-world contexts, ensuring it behaves reliably and effectively beyond the training data.
 
+	----------------------------------------------------------------------------------------------------
+ 
 	- Check Bias and Variance:
 		Check bias in human decision-making is carried over to the development.
 		The data-generating process itself can be biased.
@@ -935,7 +939,9 @@ the split would be on Gender only.
 			Low Training Error, High Validation Error: Indicates overfitting (high variance).
     
 		- Sensitivity Analysis: Test the model's sensitivity to changes in input variables.
- 
+
+ 	----------------------------------------------------------------------------------------------------
+  
 	- Check model metrics: accuracy, precision, recall, F1-Score, and error rates (MAE, RMSE).
 		Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values.
 		Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
@@ -975,38 +981,45 @@ the split would be on Gender only.
 		Accuracy: Measures the overall proportion of correct predictions. 
 		Precision: Measures the proportion of true positives among all positive predictions.
 		Recall (Sensitivity): Measures the proportion of actual positives that are correctly identified.
-    		Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, 
-      			enabling a deeper understanding of the model's performance under various scenarios.
+		Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, 
+			enabling a deeper understanding of the model's performance under various scenarios.
 	 
-  		Log Loss: Measures the performance of a classification model based on probability predictions.
-    			It's a negative average of the log of corrected predicted probabilities.
+		Log Loss: Measures the performance of a classification model based on probability predictions.
+			It's a negative average of the log of corrected predicted probabilities.
        
 		R-squared (Coefficient of Determination): Measures the proportion of variance in the dependent variable 
-  			that can be predicted from the independent variables.
+			that can be predicted from the independent variables.
      
-  		----------------------------------------------------------------------------------------------------
+  	----------------------------------------------------------------------------------------------------
     
 	- Model Interpretability and Explainability in Validation:
+ 
 		Interpretability: It helps identify potential model weaknesses, fostering robustness and reliability.
-		credit-scoring model relies too heavily on a single variable, leading to biased decisions.
+			credit-scoring model relies too heavily on a single variable, leading to biased decisions.
    		
 		Explainability: It builds trust by shedding light on the factors driving the model's decisions.
-		why certain financial behaviors contribute more to the model's risk assessment.
+			why certain financial behaviors contribute more to the model's risk assessment.
   
 		To provide explanations for complex models like neural networks, RF and GBM use methods like:
+  
   		------------------------------------------------------------------------------------------------------
+    
   		LIME: Local Interpretable Model-Agnostic Explanations. 
     		It creates a simplified, interpretable model to explain the predictions of a complex model.
     		It provides Local Explanations for individual predictions, focusing on how each input feature 
       		contributes to that specific prediction.
+	
 		-------------------------------------------------------------------------------------------------------
+  
 		SHAP: SHapley Additive exPlanations. It explain the output of machine learning models by assigning 
 		importance values to each feature based on their contribution to the prediction. 
     		It's a game-theoretic approach that calculates the average marginal contribution of each feature, 
       		helping to understand how each feature affects the model's output
       		SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, 
 		focusing on the overall influence of each feature.
+  
       		--------------------------------------------------------------------------------------------------------
+	
 		Feature Importance: Analyze the importance of each input feature in the model's predictions. 
 		Techniques like tree-based models or methods that calculate the importance of each feature based 
   		on its contribution to the model's predictions.
@@ -1019,7 +1032,8 @@ the split would be on Gender only.
   		via gradient analysis is used to understand the contribution of individual features.
 		Permutation Feature Importance: This technique measures the contribution of a feature by measuring 
   		the changes in the model performance after randomly shuffling its values. 
-		------------------------------------------------------------------------------------------------------------
+    
+	------------------------------------------------------------------------------------------------------------
 
 	- Vendor-model: outcomes analysis, sensitivity analysis, benchmarking, monitoring.
 
@@ -1138,9 +1152,6 @@ the split would be on Gender only.
     				Can be parallelized to speed up the search process. 
 			Cons: Can be computationally expensive for each iteration, especially with complex models.
 				Requires a suitable Gaussian process model and careful selection of hyperparameters for the model.
-
-
-
 
 ------------------------------------------------------------------------------------------------------------------------
 
