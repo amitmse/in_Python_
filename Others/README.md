@@ -885,7 +885,7 @@ the split would be on Gender only.
 
 -----------------------------------------------------------------------------------------------------------------------
 
-Check: 
+## Model Validation:
 
 	- Any good model always has weakness
 	- Where does this model fail?
@@ -894,9 +894,30 @@ Check:
 	- How can it be exploited or misused?
  	- Find a blind spots before they become costly failures
 
+	-------------------------------------------------------------------------------------------------------------------
+	- Out of time validation. Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used. 
+ 
+	- Check model metrics: accuracy, precision, recall, F1-Score, and error rates (MAE, RMSE).
+        	Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values.
+    		Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
+    		Root Mean Squared Error (RMSE): The square root of MSE helps interpret errors in the same units as the target variable.
+    		Bias towards the Majority Class, Actual Performance of the Minority Class. Below metrics help to indentify:
+    		F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing their importance.
+    		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture of performance across all classes.
+    		AUC-ROC: Measures the model's ability to discriminate between classes, offering a robust evaluation independent of class distribution.
+    		Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, enabling a deeper understanding of the model's performance under various scenarios.
+    
+	- Check Bias and Variance. 
+ 		Assess model's bias (error due to assumptions).
+  		Assess model's Variance (sensitivity to training data fluctuations).
+  
+	- Validation is crucial for selecting the best model, tuning hyperparameters, and ensuring the model can adapt to new situations. 
+     
+	- Model Interpretability and Explainability in Validation
+
 ------------------------------------------------------------------------------------------------------------------------
 
-ML Model Issue:
+## ML Model Issue:
 
 	1. A high-performing model can still be completely wrong: Instead of a logical monotonic relationship 
  		(higher credit score → lower default risk), the model learned a non-monotonic pattern.
