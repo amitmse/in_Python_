@@ -147,7 +147,8 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 # Tune
 	- Number of trees:  n_estimators is not really worth optimizing. The more estimators you give it, the better it will do. 
 		500 or 1000 is usually sufficient. ususally bigger the forest the better, 
-		there is small chance of overfitting here
+		there is small chance of overfitting here.
+		a larger number of trees can improve accuracy but also increase training time.
 		
 	- max_features is worth exploring for many different values. It may have a large impact on the behavior 
 		of the RF because it decides how many features each tree in the RF considers at each split. 
@@ -158,16 +159,35 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 	- max depth of each tree (default none, leading to full tree) - reduction of the maximum depth helps 
 		fighting with overfitting. This will reduce the complexity of the learned models, lowering over 
 		fitting risk. Try starting small, say 5-10, and increasing you get the best result.
+		A deeper tree can capture more complex relationships in the data but may also lead to overfitting.  	
 		
-	- criterion may have a small impact, but usually the default is fine. If you have the time, try it out.
-	
+	- Minimum number of samples required to split a node:  Helps prevent overfitting by ensuring 
+		that nodes aren't split on very small subsets of the data.
+  
+	- Minimum number of samples per leaf node: The minimum number of samples required to be at a leaf node. 
+ 		It helps to prevent overfitting by ensuring that leaf nodes have a sufficient number of samples.
+   
+	- Number of features to consider when making a split: IT controls the diversity of the trees 
+		in the forest, with more features leading to potentially more diverse trees.
+  
+	- Bootstrap: Determines whether or not to use bootstrap sampling when building the trees. 
+		Bootstrap sampling involves drawing samples with replacement, which can help increase diversity. 
+  
+	- Criterion: The function used to measure the quality of a split. 
+ 		Common choices include "gini" for Gini impurity and "entropy" for information gain.
+		criterion may have a small impact, but usually the default is fine. If you have the time, try it out.
+   
+	- Class weight: To adjust the weights of classes in imbalanced datasets, which can be useful 
+		when one class is significantly more prevalent than others.
+
 	- Make sure to use sklearn's GridSearch (preferably GridSearchCV, but your data set size is too small) 
 		when trying out these parameters.
-		
-	- my default setting for a first run is: 1000 trees, 1/2 features per node, out of bag performance weighting, 
+
+	- Default setting for a first run is: 1000 trees, 1/2 features per node, out of bag performance weighting, 
 		Gini Index for node evaluation.
 
-
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+  
 # Feature importance
 
 	Variable importance is calculated by the sum of the decrease in error when split by a variable. 
