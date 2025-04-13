@@ -84,7 +84,12 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
 		LIME: Local Interpretable Model-Agnostic Explanations. 
 		SHAP: SHapley Additive exPlanations.
 		Details are in below link
-  
+
+	- Neural Networks Techniques like SHAP (SHapley Additive exPlanations) values or feature importance 
+		via gradient analysis is used to understand the contribution of individual features.
+	- Permutation Feature Importance: This technique measures the contribution of a feature by measuring 
+		the changes in the model performance after randomly shuffling its values. 
+ 
 https://github.com/amitmse/in_Python_/blob/master/Others/README.md
 
 ## Problem in NN:
