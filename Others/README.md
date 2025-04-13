@@ -922,7 +922,7 @@ the split would be on Gender only.
   
 		- Cross-Validation: It reveals model's performance is consistent across different data samples, 
 			indicating lower variance. 
-     			It also helps identify if the model's assumptions are too restrictive, leading to high bias.
+			It also helps identify if the model's assumptions are too restrictive, leading to high bias.
   
 		- Learning Curves: Plot the training and validation errors against the size of the training dataset.
   			Interpreting the curves:
