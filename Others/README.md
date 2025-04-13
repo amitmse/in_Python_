@@ -937,17 +937,17 @@ the split would be on Gender only.
 		- Sensitivity Analysis: Test the model's sensitivity to changes in input variables.
  
 	- Check model metrics: accuracy, precision, recall, F1-Score, and error rates (MAE, RMSE).
-        	Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values.
-    		Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
-    		Root Mean Squared Error (RMSE): It helps interpret errors in the same units as the target variable.
+		Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values.
+		Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
+		Root Mean Squared Error (RMSE): It helps interpret errors in the same units as the target variable.
 			It follows an assumption that errors are unbiased and follow a normal distribution. 
       
-    		Bias towards the Majority Class, Actual Performance of the Minority Class. Below metrics help to indentify:
-    		F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing 
-      			their importance. Why harmonic mean and not an arithmetic mean: HM punishes extreme values.
+		Bias towards the Majority Class, Actual Performance of the Minority Class. Below metrics help to indentify:
+		F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing 
+			their importance. Why harmonic mean and not an arithmetic mean: HM punishes extreme values.
 	 
-    		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture 
-      			of performance across all classes.
+		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture 
+			of performance across all classes.
 	 
 		----------------------------------------------------------------------------------------------------
 		Gini coefficient: It's ratio between the area between the ROC curve and the diagonal line & 
