@@ -986,7 +986,36 @@ the split would be on Gender only.
    		
 		Explainability: It builds trust by shedding light on the factors driving the model's decisions.
 		why certain financial behaviors contribute more to the model's risk assessment.
-   		
+  
+		To provide explanations for complex models like neural networks, RF and GBM use methods like:
+  
+  		LIME: Local Interpretable Model-Agnostic Explanations. 
+    		It creates a simplified, interpretable model to explain the predictions of a complex model.
+    		It provides Local Explanations for individual predictions, focusing on how each input feature 
+      		contributes to that specific prediction.
+
+    		SHAP: SHapley Additive exPlanations.
+		It explain the output of machine learning models by assigning importance values to each feature 
+  		based on their contribution to the prediction. 
+    		It's a game-theoretic approach that calculates the average marginal contribution of each feature, 
+      		helping to understand how each feature affects the model's output
+      		SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, 
+		focusing on the overall influence of each feature.
+      
+		Feature Importance: Analyze the importance of each input feature in the model's predictions. 
+		Techniques like tree-based models or methods that calculate the importance of each feature based 
+  		on its contribution to the model's predictions.
+		Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity 
+  		(e.g., Gini index or information gain) in the decision tree nodes.
+    		Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
+		Linear Models (Logistic Regression, Linear Regression) feature importance is derived from the coefficients 
+  		of the linear model. Features with larger absolute coefficient values are considered more important. 
+		Neural Networks Techniques like SHAP (SHapley Additive exPlanations) values or feature importance 
+  		via gradient analysis is used to understand the contribution of individual features.
+		Permutation Feature Importance: This technique measures the contribution of a feature by measuring 
+  		the changes in the model performance after randomly shuffling its values. 
+
+
 	- Vendor-model: outcomes analysis, sensitivity analysis, benchmarking, monitoring.
 
 	- Hyperparameters: Validation is crucial for selecting the best model, tuning hyperparameters, 
