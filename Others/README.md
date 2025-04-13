@@ -948,7 +948,8 @@ the split would be on Gender only.
 	 
     		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture 
       			of performance across all classes.
-
+	 
+		----------------------------------------------------------------------------------------------------
 		Gini coefficient: It's ratio between the area between the ROC curve and the diagonal line & 
   			the area of the above triangle. 
   			Gini = 2*AUC – 1
@@ -959,7 +960,7 @@ the split would be on Gender only.
    			of the population changes, the same model will give a different lift chart.
      
 		Kolomogorov Smirnov Chart: KS measures the degree of separation between the positive and negative.
-  
+  		----------------------------------------------------------------------------------------------------
     		AUC-ROC: Model's ability to distinguish between classes.
 			The biggest advantage of using the ROC curve is that it is independent of the change 
    			in the proportion of positive class.
@@ -967,7 +968,7 @@ the split would be on Gender only.
    			Issue: it only takes into account the order of probabilities, and does not take into account 
       			the model’s capability to predict a higher probability for samples more likely to be positive.
 			The ROC curve is the plot between sensitivity and (1- specificity). (1- specificity).
-  
+  		----------------------------------------------------------------------------------------------------
 		Accuracy: Measures the overall proportion of correct predictions. 
 		Precision: Measures the proportion of true positives among all positive predictions.
 		Recall (Sensitivity): Measures the proportion of actual positives that are correctly identified.
@@ -979,7 +980,8 @@ the split would be on Gender only.
        
 		R-squared (Coefficient of Determination): Measures the proportion of variance in the dependent variable 
   			that can be predicted from the independent variables.
-  
+  		----------------------------------------------------------------------------------------------------
+    
 	- Model Interpretability and Explainability in Validation:
 		Interpretability: It helps identify potential model weaknesses, fostering robustness and reliability.
 		credit-scoring model relies too heavily on a single variable, leading to biased decisions.
@@ -988,20 +990,19 @@ the split would be on Gender only.
 		why certain financial behaviors contribute more to the model's risk assessment.
   
 		To provide explanations for complex models like neural networks, RF and GBM use methods like:
-  
+  		------------------------------------------------------------------------------------------------------
   		LIME: Local Interpretable Model-Agnostic Explanations. 
     		It creates a simplified, interpretable model to explain the predictions of a complex model.
     		It provides Local Explanations for individual predictions, focusing on how each input feature 
       		contributes to that specific prediction.
-
-    		SHAP: SHapley Additive exPlanations.
-		It explain the output of machine learning models by assigning importance values to each feature 
-  		based on their contribution to the prediction. 
+		-------------------------------------------------------------------------------------------------------
+		SHAP: SHapley Additive exPlanations. It explain the output of machine learning models by assigning 
+		importance values to each feature based on their contribution to the prediction. 
     		It's a game-theoretic approach that calculates the average marginal contribution of each feature, 
       		helping to understand how each feature affects the model's output
       		SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, 
 		focusing on the overall influence of each feature.
-      
+      		--------------------------------------------------------------------------------------------------------
 		Feature Importance: Analyze the importance of each input feature in the model's predictions. 
 		Techniques like tree-based models or methods that calculate the importance of each feature based 
   		on its contribution to the model's predictions.
@@ -1014,14 +1015,15 @@ the split would be on Gender only.
   		via gradient analysis is used to understand the contribution of individual features.
 		Permutation Feature Importance: This technique measures the contribution of a feature by measuring 
   		the changes in the model performance after randomly shuffling its values. 
-
+		------------------------------------------------------------------------------------------------------------
 
 	- Vendor-model: outcomes analysis, sensitivity analysis, benchmarking, monitoring.
 
 	- Hyperparameters: Validation is crucial for selecting the best model, tuning hyperparameters, 
  		and ensuring the model can adapt to new situations. 
 		It is the process of finding the best set of hyperparameters for a model to maximize its performance.
-    
+  
+		------------------------------------------------------------------------------------------------------------    
 		Random Forest hyperparameters:
   			- Number of trees: The number of decision trees in the forest. Generally, 
      				a larger number of trees can improve accuracy but also increase training time.
@@ -1040,20 +1042,22 @@ the split would be on Gender only.
    				Common choices include "gini" for Gini impurity and "entropy" for information gain. 
 			- Class weight: To adjust the weights of classes in imbalanced datasets, which can be useful 
    				when one class is significantly more prevalent than others.
-
+       
+		------------------------------------------------------------------------------------------------------------
 		AdaBoost hyperparameters:
   			- Number of Estimators: This determines how many weak learners (e.g., decision trees) are 
-     				combined in the ensemble. More estimators can improve accuracy but also increase training time. 
+			combined in the ensemble. More estimators can improve accuracy but also increase training time. 
 			- Learning Rate: This controls the contribution of each weak learner to the final prediction. 
-   				A smaller learning rate means each weak learner has less influence, potentially requiring 
-       				more estimators to achieve the same performance. 
+				A smaller learning rate means each weak learner has less influence, potentially requiring 
+				more estimators to achieve the same performance. 
 			- Base Estimator Hyperparameters: If the base estimator (e.g., decision trees) has its own hyperparameters 
-   				(like max_depth for decision trees), tuning these can also impact the AdaBoost model's performance. 
+			(like max_depth for decision trees), tuning these can also impact the AdaBoost model's performance. 
 			- Loss Function (loss): AdaBoost supports different loss functions for classification, like exponential, 
-   				linear, and square, which affect how weights are assigned to misclassified samples. 
+			linear, and square, which affect how weights are assigned to misclassified samples. 
 			- Random Seed: Setting a random seed ensures reproducibility, but experimenting with different random seeds 
-   				during hyperparameter tuning can improve the robustness of the model.
-
+			during hyperparameter tuning can improve the robustness of the model.
+   
+		------------------------------------------------------------------------------------------------------------
 		Gradient Boosting hyperparameters:
 			- Learning Rate: This controls the contribution of each tree to the final prediction. 
    				A smaller learning rate leads to more stable and robust models, but requires more trees 
@@ -1066,7 +1070,8 @@ the split would be on Gender only.
 			- Subsampling: This involves randomly selecting a subset of the training data for each tree. 
    				Subsampling helps to prevent overfitting and can improve the generalizability of the model, 
        				explains a guide on Hands-On Machine Learning with R. 
-       
+	   
+		------------------------------------------------------------------------------------------------------------
    		XGBoost hyperparameters: 
   			- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data 
      				but may also lead to overfitting.
@@ -1086,10 +1091,10 @@ the split would be on Gender only.
    				of the coefficients, helping to prevent overfitting. 
 			- L1 regularization: This parameter adds a penalty proportional to the absolute value of 
    				the coefficients, promoting sparsity in the model. 
-
-		In neural networks, hyperparameters are settings that are not learned during training but are set beforehand 
-  		and influence the model's architecture, learning process, and overall performance. Key hyperparameters to tune 
-    		include the number of layers and neurons, the learning rate, batch size, and the activation function.
+       
+		------------------------------------------------------------------------------------------------------------
+		In neural networks, hyperparameters are settings that are not learned during training but are 
+  		set beforehand and influence the model's architecture, learning process, and overall performance.
 		- Number of Layers: The number of hidden layers significantly impacts the model's complexity and 
   			ability to learn intricate patterns. 
 		- Number of Neurons per Layer: The width of each hidden layer influences the model's capacity to represent 
@@ -1108,7 +1113,7 @@ the split would be on Gender only.
 		- Dropout Rate: Randomly drops out neurons during training, preventing over-reliance on specific neurons 
   			and improving generalization.
 
-
+		------------------------------------------------------------------------------------------------------------
 		Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore 
   		the parameter space and find the optimal combination.
 		- Grid Search: Defines a grid of hyperparameter values and tests all possible combinations. 
