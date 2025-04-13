@@ -542,7 +542,8 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 			  the residuals for wealthier families. Standard errors are biased and it leads to 
 			  incorrect conclusions about the significance of the regression coefficients
      
-		Test	: Breush-Pagan test, Goldfeld-Quandt
+		Test	: Breush-Pagan test, Goldfeld-Quandt, Koenker-Bassett (generalized Breusch-Pagan)
+			  Breush-Pagan: Calculate the Square the residuals, and Regress it on the independent variables.
   
 		Solution: Weighted least squares regression.
 			  Transform the dependent variable using one of the variance stabilizing transformations
@@ -556,17 +557,21 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 			standard errors, affecting the validity of statistical tests and confidence intervals.
 			Potentially missing key variables or an incorrect functional form. 
    
-		Test :  Plotting the residuals over time can reveal patterns or trends, indicating autocorrelation. 
-			Durbin-Watson Test: This test checks for autocorrelation of order one 
-   			(correlation between consecutive residuals). 
-			Breusch-Godfrey Test: This test is designed to detect autocorrelation of any order in the residuals. 
+		Test :  Durbin-Watson Test: This test checks for autocorrelation of order one 
+  			(correlation between consecutive residuals). This test ranges from 0 to 4.
+			2: Indicates no autocorrelation. 
+   			< 2: positive autocorrelation 
+			> 2: Indicates negative autocorrelation.
+   			Breusch-Godfrey Test: This test is designed to detect autocorrelation of any order in the residuals. 
 			Autocorrelation Function (ACF) Plot: This plot displays the correlation of the residuals with 
    			their lagged values, helping to identify the lag order of autocorrelation
+			Plotting the residuals over time can reveal patterns or trends, indicating autocorrelation. 
 
-		Solution: Include lagged values of the dependent variable or independent variables in the regression model. 
-			  Transform the Data: Apply mathematical transformations to the data to reduce autocorrelation. 
-			  Use Time Series Models: If the data is time-series, consider using models specifically designed 
-     			  for time series analysis, such as ARIMA models      
+		Solution: Generalized Least Squares (GLS), 
+  			Include lagged values of the dependent variable or independent variables in the regression model. 
+			Transform the Data: Apply mathematical transformations to the data to reduce autocorrelation. 
+			Use Time Series Models: If the data is time-series, consider using models specifically designed 
+     			for time series analysis, such as ARIMA models      
 	
 	7. X variables and residuals are uncorrelated 
 	
