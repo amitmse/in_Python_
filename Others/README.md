@@ -1041,6 +1041,19 @@ the split would be on Gender only.
 			- Class weight: To adjust the weights of classes in imbalanced datasets, which can be useful 
    				when one class is significantly more prevalent than others.
 
+		AdaBoost hyperparameters:
+  			- Number of Estimators: This determines how many weak learners (e.g., decision trees) are 
+     				combined in the ensemble. More estimators can improve accuracy but also increase training time. 
+			- Learning Rate: This controls the contribution of each weak learner to the final prediction. 
+   				A smaller learning rate means each weak learner has less influence, potentially requiring 
+       				more estimators to achieve the same performance. 
+			- Base Estimator Hyperparameters: If the base estimator (e.g., decision trees) has its own hyperparameters 
+   				(like max_depth for decision trees), tuning these can also impact the AdaBoost model's performance. 
+			- Loss Function (loss): AdaBoost supports different loss functions for classification, like exponential, 
+   				linear, and square, which affect how weights are assigned to misclassified samples. 
+			- Random Seed: Setting a random seed ensures reproducibility, but experimenting with different random seeds 
+   				during hyperparameter tuning can improve the robustness of the model.
+
 		Gradient Boosting hyperparameters:
 			- Learning Rate: This controls the contribution of each tree to the final prediction. 
    				A smaller learning rate leads to more stable and robust models, but requires more trees 
@@ -1073,6 +1086,28 @@ the split would be on Gender only.
    				of the coefficients, helping to prevent overfitting. 
 			- L1 regularization: This parameter adds a penalty proportional to the absolute value of 
    				the coefficients, promoting sparsity in the model. 
+
+		In neural networks, hyperparameters are settings that are not learned during training but are set beforehand 
+  		and influence the model's architecture, learning process, and overall performance. Key hyperparameters to tune 
+    		include the number of layers and neurons, the learning rate, batch size, and the activation function.
+		- Number of Layers: The number of hidden layers significantly impacts the model's complexity and 
+  			ability to learn intricate patterns. 
+		- Number of Neurons per Layer: The width of each hidden layer influences the model's capacity to represent 
+  			complex relationships. 
+		- Learning Rate: This determines the step size during optimization, affecting how quickly the model converges 
+  			to the minimum loss.
+		- Batch Size: The number of training examples processed before updating model parameters. 
+  			Larger batch sizes can lead to faster convergence but might require more memory. 
+		- Optimizer: The algorithm used to update model weights (e.g., Adam, SGD) influences the speed and 
+  			stability of training. 
+		- Epochs: The number of times the entire training dataset is passed through the model.
+		- Activation Function: The activation function introduced nonlinearity into the model, 
+  			enabling it to learn complex relationships.
+		- Regularization Techniques: These help prevent overfitting by adding penalties to the model's complexity 
+  			(e.g., L1, L2 regularization).
+		- Dropout Rate: Randomly drops out neurons during training, preventing over-reliance on specific neurons 
+  			and improving generalization.
+
 
 		Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore 
   		the parameter space and find the optimal combination.
