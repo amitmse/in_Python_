@@ -180,20 +180,32 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 	- Class weight: To adjust the weights of classes in imbalanced datasets, which can be useful 
 		when one class is significantly more prevalent than others.
 
-	- Make sure to use sklearn's GridSearch (preferably GridSearchCV, but your data set size is too small) 
-		when trying out these parameters.
-
 	- Default setting for a first run is: 1000 trees, 1/2 features per node, out of bag performance weighting, 
 		Gini Index for node evaluation.
+
+	- Make sure to use sklearn's GridSearch (preferably GridSearchCV, but your data set size is too small) 
+		when trying out these parameters. Details are in below link.
 
 https://github.com/amitmse/in_Python_/blob/master/Others/README.md
   
 # Feature importance
 
-	Variable importance is calculated by the sum of the decrease in error when split by a variable. 
+	Feature Importance: Analyze the importance of each input feature in the model's predictions. 
+	Techniques like tree-based models or methods that calculate the importance of each feature based 
+	on its contribution to the model's predictions.
+	Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity 
+	(e.g., Gini index or information gain) in the decision tree nodes.
+		Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
+  
+  	Variable importance is calculated by the sum of the decrease in error when split by a variable. 
 	Then, the relative importance is the variable importance divided by the highest variable importance 
 	value so that values are bounded between 0 and 1.
-	
+
+	Below both are similar to Feature importance:
+		LIME: Local Interpretable Model-Agnostic Explanations.  
+		SHAP: SHapley Additive exPlanations.
+  	Details are in https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+
 https://docs.h2o.ai/h2o/latest-stable/h2o-docs/variable-importance.html
 
 ## Mean Decrease in Accuracy (MDA) / Accuracy-based importance / Permutation Importance:
