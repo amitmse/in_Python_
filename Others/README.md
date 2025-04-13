@@ -1021,8 +1021,6 @@ the split would be on Gender only.
 	- Hyperparameters: Validation is crucial for selecting the best model, tuning hyperparameters, 
  		and ensuring the model can adapt to new situations. 
 		It is the process of finding the best set of hyperparameters for a model to maximize its performance.
-		Use techniques like Grid Search or Randomized Search to explore the parameter space and 
-  		find the optimal combination.
     
 		Random Forest hyperparameters:
   			- Number of trees: The number of decision trees in the forest. Generally, 
@@ -1076,7 +1074,26 @@ the split would be on Gender only.
 			- L1 regularization: This parameter adds a penalty proportional to the absolute value of 
    				the coefficients, promoting sparsity in the model. 
 
-
+		Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore 
+  		the parameter space and find the optimal combination.
+		- Grid Search: Defines a grid of hyperparameter values and tests all possible combinations. 
+			Pro: Simple to understand and implement. Finding the best combination within the defined grid.
+			Cons: Computationally expensive, especially with many hyperparameters or large grids.
+  				May miss the optimal hyperparameters if the grid is not fine-grained enough.
+		- Random Search: Randomly samples hyperparameters from a defined range or distribution, 
+  			without evaluating all combinations.
+			Pros: More efficient than grid search, especially with high-dimensional hyperparameter spaces.
+				Can find good hyperparameters with fewer evaluations. 
+			Cons: May not find the optimal hyperparameters, especially if the search space is large.
+				Requires careful selection of the number of iterations to balance exploration and efficiency. 
+		- Bayesian Optimization: Uses a probabilistic model (typically a Gaussian process) to learn the relationship 
+  			between hyperparameters and performance. It then intelligently explores the hyperparameter space, 
+     			focusing on regions with the highest probability of containing the optimal hyperparameters.
+			Pros: Efficient than grid and random search, requirs fewer evaluations to find good hyperparameters.
+				Can handle non-convex and noisy objective functions. 
+    				Can be parallelized to speed up the search process. 
+			Cons: Can be computationally expensive for each iteration, especially with complex models.
+				Requires a suitable Gaussian process model and careful selection of hyperparameters for the model.
 
 
 
