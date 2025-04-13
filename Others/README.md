@@ -909,25 +909,7 @@ the split would be on Gender only.
 	- Out of time validation. Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used.
 		Validation guides model refinement during development, and testing validates its performance 
   		in real-world contexts, ensuring it behaves reliably and effectively beyond the training data.
- 
-	- Check model metrics: accuracy, precision, recall, F1-Score, and error rates (MAE, RMSE).
-        	Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values.
-    		Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
-    		Root Mean Squared Error (RMSE): It helps interpret errors in the same units as the target variable.
-      
-    		Bias towards the Majority Class, Actual Performance of the Minority Class. Below metrics help to indentify:
-    		F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing 
-      			their importance.
-	 
-    		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture 
-      			of performance across all classes.
-	 
-    		AUC-ROC: Measures the model's ability to discriminate between classes, offering a robust evaluation 
-      			independent of class distribution.
-	 
-    		Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, 
-      			enabling a deeper understanding of the model's performance under various scenarios.
-    
+
 	- Check Bias and Variance:
 		Check bias in human decision-making is carried over to the development.
 		The data-generating process itself can be biased.
@@ -939,29 +921,68 @@ the split would be on Gender only.
 		To check above perform: 
   
 		- Cross-Validation: It reveals model's performance is consistent across different data samples, 
-  			indicating lower variance. 
+			indicating lower variance. 
      			It also helps identify if the model's assumptions are too restrictive, leading to high bias.
   
 		- Learning Curves: Plot the training and validation errors against the size of the training dataset.
   			Interpreting the curves:
 			High Bias (Underfitting): If both training and validation errors are high and close together, 
-   				the model may be too simple and not capturing the underlying patterns in the data.
-       				High Training Error, High Validation Error: Suggests underfitting (high bias).
+			the model may be too simple and not capturing the underlying patterns in the data.
+			High Training Error, High Validation Error: Suggests underfitting (high bias).
        
 			High Variance (Overfitting): If the training error is low but the validation error is high, 
-   				the model is overfitting the training data and not generalizing well to unseen data
-				Low Training Error, High Validation Error: Indicates overfitting (high variance).
-  
-  		- Analyzing Error Differences
+			the model is overfitting the training data and not generalizing well to unseen data
+			Low Training Error, High Validation Error: Indicates overfitting (high variance).
     
-		Sensitivity Analysis: Test the model's sensitivity to changes in input variables.
+		- Sensitivity Analysis: Test the model's sensitivity to changes in input variables.
+ 
+	- Check model metrics: accuracy, precision, recall, F1-Score, and error rates (MAE, RMSE).
+        	Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values.
+    		Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
+    		Root Mean Squared Error (RMSE): It helps interpret errors in the same units as the target variable.
+			It follows an assumption that errors are unbiased and follow a normal distribution. 
+      
+    		Bias towards the Majority Class, Actual Performance of the Minority Class. Below metrics help to indentify:
+    		F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing 
+      			their importance. Why harmonic mean and not an arithmetic mean: HM punishes extreme values.
+	 
+    		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture 
+      			of performance across all classes.
+	 
+    		AUC-ROC: Model's ability to distinguish between classes.
+			The biggest advantage of using the ROC curve is that it is independent of the change 
+   			in the proportion of positive class.
+			It considers the predicted probabilities for determining our model’s performance. 
+   			Issue: it only takes into account the order of probabilities, and does not take into account 
+      			the model’s capability to predict a higher probability for samples more likely to be positive.
+			The ROC curve is the plot between sensitivity and (1- specificity). (1- specificity).
+
+
+		Gini coefficient: It's ratio between the area between the ROC curve and the diagonal line & 
+  			the area of the above triangle. 
+  			Gini = 2*AUC – 1
+
+		Gain and Lift charts: Check the rank ordering of the probabilities.
+  			This graph tells how well is model is segregating positive from negative.
+     
+		Kolomogorov Smirnov Chart: KS measures the degree of separation between the positive and negative. 
+  
+		Accuracy: Measures the overall proportion of correct predictions. 
+		Precision: Measures the proportion of true positives among all positive predictions.
+		Recall (Sensitivity): Measures the proportion of actual positives that are correctly identified.
+    		Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, 
+      			enabling a deeper understanding of the model's performance under various scenarios.
+  		Log Loss: Measures the performance of a classification model based on probability predictions.
+    			It's a negative average of the log of corrected predicted probabilities.
+		R-squared (Coefficient of Determination): Measures the proportion of variance in the dependent variable 
+  			that can be predicted from the independent variables.
   
 	- Model Interpretability and Explainability in Validation:
- 		Interpretability: It helps identify potential model weaknesses, fostering robustness and reliability.
-   			credit-scoring model relies too heavily on a single variable, leading to biased decisions.
+		Interpretability: It helps identify potential model weaknesses, fostering robustness and reliability.
+		credit-scoring model relies too heavily on a single variable, leading to biased decisions.
    		
-     		Explainability: It builds trust by shedding light on the factors driving the model's decisions.
-       			why certain financial behaviors contribute more to the model's risk assessment.
+		Explainability: It builds trust by shedding light on the factors driving the model's decisions.
+		why certain financial behaviors contribute more to the model's risk assessment.
    		
 	- Vendor-model: outcomes analysis, sensitivity analysis, benchmarking, monitoring.
 
