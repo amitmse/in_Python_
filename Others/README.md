@@ -948,15 +948,6 @@ the split would be on Gender only.
 	 
     		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture 
       			of performance across all classes.
-	 
-    		AUC-ROC: Model's ability to distinguish between classes.
-			The biggest advantage of using the ROC curve is that it is independent of the change 
-   			in the proportion of positive class.
-			It considers the predicted probabilities for determining our model’s performance. 
-   			Issue: it only takes into account the order of probabilities, and does not take into account 
-      			the model’s capability to predict a higher probability for samples more likely to be positive.
-			The ROC curve is the plot between sensitivity and (1- specificity). (1- specificity).
-
 
 		Gini coefficient: It's ratio between the area between the ROC curve and the diagonal line & 
   			the area of the above triangle. 
@@ -964,16 +955,28 @@ the split would be on Gender only.
 
 		Gain and Lift charts: Check the rank ordering of the probabilities.
   			This graph tells how well is model is segregating positive from negative.
+			Lift is dependent on the total response rate of the population. Hence, if the response rate 
+   			of the population changes, the same model will give a different lift chart.
      
-		Kolomogorov Smirnov Chart: KS measures the degree of separation between the positive and negative. 
+		Kolomogorov Smirnov Chart: KS measures the degree of separation between the positive and negative.
+  
+    		AUC-ROC: Model's ability to distinguish between classes.
+			The biggest advantage of using the ROC curve is that it is independent of the change 
+   			in the proportion of positive class.
+			It considers the predicted probabilities for determining our model’s performance. 
+   			Issue: it only takes into account the order of probabilities, and does not take into account 
+      			the model’s capability to predict a higher probability for samples more likely to be positive.
+			The ROC curve is the plot between sensitivity and (1- specificity). (1- specificity).
   
 		Accuracy: Measures the overall proportion of correct predictions. 
 		Precision: Measures the proportion of true positives among all positive predictions.
 		Recall (Sensitivity): Measures the proportion of actual positives that are correctly identified.
     		Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, 
       			enabling a deeper understanding of the model's performance under various scenarios.
+	 
   		Log Loss: Measures the performance of a classification model based on probability predictions.
     			It's a negative average of the log of corrected predicted probabilities.
+       
 		R-squared (Coefficient of Determination): Measures the proportion of variance in the dependent variable 
   			that can be predicted from the independent variables.
   
