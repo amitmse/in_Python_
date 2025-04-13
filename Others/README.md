@@ -1011,39 +1011,46 @@ the split would be on Gender only.
 	
 		-------------------------------------------------------------------------------------------------------
   
-		SHAP: SHapley Additive exPlanations. It explain the output of machine learning models by assigning 
-		importance values to each feature based on their contribution to the prediction. 
-    		It's a game-theoretic approach that calculates the average marginal contribution of each feature, 
-      		helping to understand how each feature affects the model's output
-      		SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, 
-		focusing on the overall influence of each feature.
+		SHAP: SHapley Additive exPlanations. 
+			It explain the output of machine learning models by assigning importance values to each feature 
+				based on their contribution to the prediction. 
+			It's a game-theoretic approach that calculates the average marginal contribution of each feature, 
+				helping to understand how each feature affects the model's output
+			SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, 
+				focusing on the overall influence of each feature.
   
       		--------------------------------------------------------------------------------------------------------
 	
-		Feature Importance: Analyze the importance of each input feature in the model's predictions. 
-		Techniques like tree-based models or methods that calculate the importance of each feature based 
-  		on its contribution to the model's predictions.
-		Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity 
-  		(e.g., Gini index or information gain) in the decision tree nodes.
-    		Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
-		Linear Models (Logistic Regression, Linear Regression) feature importance is derived from the coefficients 
-  		of the linear model. Features with larger absolute coefficient values are considered more important. 
-		Neural Networks Techniques like SHAP (SHapley Additive exPlanations) values or feature importance 
-  		via gradient analysis is used to understand the contribution of individual features.
-		Permutation Feature Importance: This technique measures the contribution of a feature by measuring 
-  		the changes in the model performance after randomly shuffling its values. 
+		Feature Importance: 
+			Analyze the importance of each input feature in the model's predictions. 
+			Techniques like tree-based models or methods that calculate the importance of each feature based 
+				on its contribution to the model's predictions.
+			Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity 
+				(e.g., Gini index or information gain) in the decision tree nodes.
+				Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
+			Linear Models (Logistic Regression, Linear Regression) feature importance is derived from 
+				the coefficients of the linear model. Features with larger absolute coefficient values are 
+				considered more important.
+			Neural Networks Techniques like SHAP (SHapley Additive exPlanations) values or feature importance 
+				via gradient analysis is used to understand the contribution of individual features.
+			Permutation Feature Importance: This technique measures the contribution of a feature by measuring 
+				the changes in the model performance after randomly shuffling its values. 
     
 	------------------------------------------------------------------------------------------------------------
 
 	- Vendor-model: outcomes analysis, sensitivity analysis, benchmarking, monitoring.
 
-	- Hyperparameters: Validation is crucial for selecting the best model, tuning hyperparameters, 
- 		and ensuring the model can adapt to new situations. 
+	------------------------------------------------------------------------------------------------------------
+
+	- Hyperparameters: 
+		Validation is crucial for selecting the best model, tuning hyperparameters, and ensuring the model can adapt 
+  		to new situations. 
 		It is the process of finding the best set of hyperparameters for a model to maximize its performance.
   
-		------------------------------------------------------------------------------------------------------------    
+		------------------------------------------------------------------------------------------------------------
+  
 		Random Forest hyperparameters:
-  			- Number of trees: The number of decision trees in the forest. Generally, 
+			- Number of trees: The number of decision trees in the forest. Generally, 
      				a larger number of trees can improve accuracy but also increase training time.
   			- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data 
      				but may also lead to overfitting.
