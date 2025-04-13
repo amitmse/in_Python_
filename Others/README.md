@@ -895,25 +895,60 @@ the split would be on Gender only.
  	- Find a blind spots before they become costly failures
 
 	-------------------------------------------------------------------------------------------------------------------
-	- Out of time validation. Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used. 
+
+ 	Regulators expect ML models to comply with the standards of SR 11-7 part of model risk management (MRM).
+	
+	- Conceptual Soundness: Assess the quality of the model design and construction, limitations,
+ 		reviewing the model documentation, assessing empirical evidence, and confirming that 
+  		the variable selection process used in the model is conceptually sound.
+    		Decisions based on incorrect or misused model outputs and reports.
+    
+    		Data Integrity/Representativeness: the data used for model development be representative 
+      			of the bank’s portfolio and market/business conditions
+
+		Bias: Check bias in human decision-making is carried over to the development.
+  			The data-generating process itself can be biased.
+     			One way to identify data bias is by benchmarking with other models.
+			Random selection of development.
+
+		Vendor-model: outcomes analysis, sensitivity analysis, benchmarking, monitoring.
+   
+	- Out of time validation. Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used.
+		Validation guides model refinement during development, and testing validates its performance 
+  		in real-world contexts, ensuring it behaves reliably and effectively beyond the training data.
  
 	- Check model metrics: accuracy, precision, recall, F1-Score, and error rates (MAE, RMSE).
         	Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values.
     		Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
-    		Root Mean Squared Error (RMSE): The square root of MSE helps interpret errors in the same units as the target variable.
+    		Root Mean Squared Error (RMSE): It helps interpret errors in the same units as the target variable.
+      
     		Bias towards the Majority Class, Actual Performance of the Minority Class. Below metrics help to indentify:
-    		F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing their importance.
-    		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture of performance across all classes.
-    		AUC-ROC: Measures the model's ability to discriminate between classes, offering a robust evaluation independent of class distribution.
-    		Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, enabling a deeper understanding of the model's performance under various scenarios.
+    		F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing 
+      			their importance.
+    		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture 
+      			of performance across all classes.
+    		AUC-ROC: Measures the model's ability to discriminate between classes, offering a robust evaluation 
+      			independent of class distribution.
+    		Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, 
+      			enabling a deeper understanding of the model's performance under various scenarios.
     
-	- Check Bias and Variance. 
+	- Check Bias and Variance:
  		Assess model's bias (error due to assumptions).
   		Assess model's Variance (sensitivity to training data fluctuations).
   
-	- Validation is crucial for selecting the best model, tuning hyperparameters, and ensuring the model can adapt to new situations. 
+	- Model Interpretability and Explainability in Validation:
+ 		Interpretability: It helps identify potential model weaknesses, fostering robustness and reliability.
+   			credit-scoring model relies too heavily on a single variable, leading to biased decisions.
+   		
+     		Explainability: It builds trust by shedding light on the factors driving the model's decisions.
+       			why certain financial behaviors contribute more to the model's risk assessment.
+   		
+     		
+   
+	- Hyperparameters: Validation is crucial for selecting the best model, tuning hyperparameters, 
+ 		and ensuring the model can adapt to new situations. 
      
-	- Model Interpretability and Explainability in Validation
+   
 
 ------------------------------------------------------------------------------------------------------------------------
 
