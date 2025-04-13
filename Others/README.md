@@ -499,7 +499,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
   		Standard errors and t-values used to calculate the statistical significance of regression 
   		parameters may be inaccurate, leading to potentially misleading conclusions.
     
-  		Test: Kolmogorov-Smirnov Test, Shapiro-Wilk test, histograms or Q-Q plots
+  		Test: Jarque-Bera test, Kolmogorov-Smirnov Test, Shapiro-Wilk test, histograms or Q-Q plots
     
 		Solution: Transforming the dependent or independent variables, Use robust statistical methods 
   				that are less sensitive to non-normality may be appropriate.
@@ -509,13 +509,19 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		The sum of the residuals is always zero when an intercept is included in the regression model. 
   		This is because the regression line is fitted in a way that the total distance of the data points 
     		above the line is equal to the total distance of the data points below the line.
+		If a model without an intercept is used, the residuals will not necessarily have a mean of zero.
+		The mean of residuals is zero is a direct result of how the least squares method calculates 
+  		the regression line. It's not an assumption that needs to be tested.
   
 		Issue: Error terms has zero mean and doesn’t depend on the independent variables. 
 			Thus, there must be no relationship between the independent variable and the error term.
+			A model with a zero mean for residuals suggests that the model is, on average, 
+   			neither overestimating nor underestimating the response variable
    
 		Test: Plot of residuals against the fitted values. If the residuals are randomly scattered around zero, 
   			with no apparent trend, it suggests that the mean-zero assumption is met. 
      			A flat, horizontal line at zero in this plot would indicate a good fit.
+			This can be done by calculating the mean of the residuals and comparing it to zero.
   
 		Solution: The sum of residuals can always be zero; if they had some mean that differed from zero 
   			you could make it zero by adjusting the intercept by that amount. 
