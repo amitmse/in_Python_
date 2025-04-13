@@ -202,6 +202,28 @@ Boosting vs Bagging
 			simple means to find bagging probabilities.
 
 ------------------------------------------------------------------------------------------------------------
+
+### Feature Importance
+
+	- Analyze the importance of each input feature in the model's predictions. 
+	- Techniques like tree-based models or methods that calculate the importance of each feature based 
+		on its contribution to the model's predictions.
+	- Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity 
+		(e.g., Gini index or information gain) in the decision tree nodes.
+		Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
+  	- Below are same as Feature Importance
+		LIME: Local Interpretable Model-Agnostic Explanations. 
+ 		SHAP: SHapley Additive exPlanations.
+  		Details are below in link
+    
+------------------------------------------------------------------------------------------------------------
+
+## hyperparameters
+	- Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter 
+ 		space and find the optimal combination. Details are below in link
+   
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+ 
 ### AdaBoost hyperparameters:
 	- Number of Estimators: This determines how many weak learners (e.g., decision trees) are 
 		combined in the ensemble. More estimators can improve accuracy but also increase training time. 
@@ -231,7 +253,8 @@ Boosting vs Bagging
    
 ------------------------------------------------------------------------------------------------------------
 ### XGBoost hyperparameters: 
-	- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data but may also lead to overfitting.
+	- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data 
+ 		but may also lead to overfitting.
 	- minimum sum of instance weights (Hessian) needed in a child. It helps prevent overfitting 
 		by controlling the creation of new nodes in the tree. 
 	- subsample: This determines the fraction of training instances used for each tree, reducing the risk of overfitting. 
@@ -245,8 +268,7 @@ Boosting vs Bagging
 		of the coefficients, helping to prevent overfitting. 
 	- L1 regularization: This parameter adds a penalty proportional to the absolute value of 
 		the coefficients, promoting sparsity in the model. 
-   
-------------------------------------------------------------------------------------------------------------
 
+------------------------------------------------------------------------------------------------------------  
 
 https://s3.amazonaws.com/thinkific-import-development/118220/TreeBasedAlgorithms_ACompleteBookfromScratchinRPython-200403-111115.pdf
