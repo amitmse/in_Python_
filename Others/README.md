@@ -1019,8 +1019,8 @@ the split would be on Gender only.
 			SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, 
 				focusing on the overall influence of each feature.
   
-      		--------------------------------------------------------------------------------------------------------
-	
+		--------------------------------------------------------------------------------------------------------
+
 		Feature Importance: 
 			Analyze the importance of each input feature in the model's predictions. 
 			Techniques like tree-based models or methods that calculate the importance of each feature based 
