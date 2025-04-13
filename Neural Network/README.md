@@ -23,17 +23,24 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
 
 	1. Neurons (Nodes): The basic units of a neural network that receive input, process it, 
  		and pass the output to the next layer. Each neuron applies an activation function to its input.
-
+		The width of each hidden layer influences the model's capacity to represent complex relationships. 
+  
 	2. Layers: Input Layer, Hidden Layers, Output Layer
+ 		The number of hidden layers significantly impacts the model's complexity and 
+		ability to learn intricate patterns. 
 
 	3. Weights and Biases: Parameters that are adjusted during training to minimize the error in 
  		the network's predictions. Weights determine the strength of the connections between neurons, 
    		while biases allow the model to fit the data better.
+		Learning Rate determines the step size during optimization, affecting how quickly the model 
+		converges to the minimum loss.
 
 	4. Activation Functions: Activation functions decide whether a neuron should be activated or not. 
  		Decide if it should pass its signal to the next layer. Functions applied to the output of 
    		each neuron to introduce non-linearity into the model, enabling it to learn complex patterns.
 		Applied to the output of each neuron in the hidden and output layers.
+		The activation function introduced nonlinearity into the model, enabling it to learn complex relationships.
+  
 		Common Activation Functions:ReLU, Sigmoid, Tanh, Softmax
 		Example: Think of a light switch. The activation function decides if the light (neuron) 
   		should be on or off based on the input.			
@@ -52,7 +59,33 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
 		This is typically done using a technique called back-propagation and 
   		an optimization algorithm like gradient descent.
 
+	7. Batch Size: The number of training examples processed before updating model parameters. 
+		Larger batch sizes can lead to faster convergence but might require more memory. 
+  
+	8. Optimizer: The algorithm used to update model weights (e.g., Adam, SGD) influences the speed and 
+		stability of training. 
+  
+	9. Epochs: The number of times the entire training dataset is passed through the model.
+
+	10. Regularization Techniques: These help prevent overfitting by adding penalties to the model's complexity 
+		(e.g., L1, L2 regularization).
+  
+	11. Dropout Rate: Randomly drops out neurons during training, preventing over-reliance on specific neurons 
+		and improving generalization.
+
+	Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter space and 
+ 	find the optimal combination. Details are in below link
+  
 ---------------------------------------------------------------------------------------------------------
+
+## Feature Importance
+	- Analyze the importance of each input feature in the model's predictions. 
+ 	- Below are same as Feature Importance
+		LIME: Local Interpretable Model-Agnostic Explanations. 
+		SHAP: SHapley Additive exPlanations.
+		Details are in below link
+  
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md
 
 ## Problem in NN:
 	Well due to Fully Connected Layer Architecture we experience two problems:
