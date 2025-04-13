@@ -1029,12 +1029,13 @@ the split would be on Gender only.
      				a larger number of trees can improve accuracy but also increase training time.
   			- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data 
      				but may also lead to overfitting.
-    			- Minimum number of samples required to split a node:  Helps prevent overfitting by ensuring 
+			- Minimum number of samples required to split a node:  Helps prevent overfitting by ensuring 
        				that nodes aren't split on very small subsets of the data.
-      			- Minimum number of samples per leaf node: The minimum number of samples required to be at a leaf node. 
-	 			It helps to prevent overfitting by ensuring that leaf nodes have a sufficient number of samples.
-			- Number of features to consider when making a split: IT controls the diversity of the trees in the forest, 
-   				with more features leading to potentially more diverse trees.
+			- Minimum number of samples per leaf node: The minimum number of samples required to be 
+   				at a leaf node. It helps to prevent overfitting by ensuring that leaf nodes have a 
+       				sufficient number of samples.
+			- Number of features to consider when making a split: IT controls the diversity of the trees 
+   				in the forest, with more features leading to potentially more diverse trees.
 			- Bootstrap: Determines whether or not to use bootstrap sampling when building the trees. 
    				Bootstrap sampling involves drawing samples with replacement, which can help increase diversity. 
 			- Criterion: The function used to measure the quality of a split. 
