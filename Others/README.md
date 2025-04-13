@@ -1070,56 +1070,57 @@ the split would be on Gender only.
        
 		------------------------------------------------------------------------------------------------------------
 		AdaBoost hyperparameters:
-  			- Number of Estimators: This determines how many weak learners (e.g., decision trees) are 
-			combined in the ensemble. More estimators can improve accuracy but also increase training time. 
+			- Number of Estimators: This determines how many weak learners (e.g., decision trees) are 
+				combined in the ensemble. More estimators can improve accuracy but also increase training time. 
 			- Learning Rate: This controls the contribution of each weak learner to the final prediction. 
 				A smaller learning rate means each weak learner has less influence, potentially requiring 
 				more estimators to achieve the same performance. 
 			- Base Estimator Hyperparameters: If the base estimator (e.g., decision trees) has its own hyperparameters 
-			(like max_depth for decision trees), tuning these can also impact the AdaBoost model's performance. 
+				(like max_depth for decision trees), tuning these can also impact the AdaBoost model's performance. 
 			- Loss Function (loss): AdaBoost supports different loss functions for classification, like exponential, 
-			linear, and square, which affect how weights are assigned to misclassified samples. 
+				linear, and square, which affect how weights are assigned to misclassified samples. 
 			- Random Seed: Setting a random seed ensures reproducibility, but experimenting with different random seeds 
-			during hyperparameter tuning can improve the robustness of the model.
+				during hyperparameter tuning can improve the robustness of the model.
    
 		------------------------------------------------------------------------------------------------------------
 		Gradient Boosting hyperparameters:
 			- Learning Rate: This controls the contribution of each tree to the final prediction. 
-   				A smaller learning rate leads to more stable and robust models, but requires more trees 
-       				to achieve optimal performance. 
+				A smaller learning rate leads to more stable and robust models, but requires more trees 
+				to achieve optimal performance. 
 			- Number of Estimators (Trees): This parameter dictates how many trees are used in the ensemble. 
-   				A larger number of trees can improve performance, but also increases computational cost 
-       				and risk of overfitting. 
+				A larger number of trees can improve performance, but also increases computational cost 
+				and risk of overfitting. 
 			- Max Depth: This limits the complexity of individual trees, preventing overfitting by restricting 
-   				how deep they can grow. 
+				how deep they can grow. 
 			- Subsampling: This involves randomly selecting a subset of the training data for each tree. 
-   				Subsampling helps to prevent overfitting and can improve the generalizability of the model, 
-       				explains a guide on Hands-On Machine Learning with R. 
+				Subsampling helps to prevent overfitting and can improve the generalizability of the model, 
+				explains a guide on Hands-On Machine Learning with R. 
 	   
 		------------------------------------------------------------------------------------------------------------
    		XGBoost hyperparameters: 
   			- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data 
-     				but may also lead to overfitting.
+				but may also lead to overfitting.
 			- minimum sum of instance weights (Hessian) needed in a child. It helps prevent overfitting 
-   				by controlling the creation of new nodes in the tree. 
+				by controlling the creation of new nodes in the tree. 
 			- subsample: This determines the fraction of training instances used for each tree, 
-   				reducing the risk of overfitting. 
+				reducing the risk of overfitting. 
 			- colsample bytree: This parameter specifies the fraction of features used for each tree. 
-   				Similar to subsample, it helps prevent overfitting by reducing the model's 
-       				reliance on specific features. 
+				Similar to subsample, it helps prevent overfitting by reducing the model's 
+				reliance on specific features. 
 			- learning rate (eta): This parameter controls the step size of the gradient descent algorithm. 
-   				A smaller learning rate can lead to more stable training 
-       				but may require more iterations to converge. 
+				A smaller learning rate can lead to more stable training 
+				but may require more iterations to converge. 
 			- gamma: This parameter specifies the minimum loss reduction required to make a split. 
-   				It can be useful for pruning the tree and preventing overfitting. 
+				It can be useful for pruning the tree and preventing overfitting. 
 			- L2 regularization: This parameter adds a penalty proportional to the squared magnitude 
-   				of the coefficients, helping to prevent overfitting. 
+				of the coefficients, helping to prevent overfitting. 
 			- L1 regularization: This parameter adds a penalty proportional to the absolute value of 
-   				the coefficients, promoting sparsity in the model. 
+				the coefficients, promoting sparsity in the model. 
        
 		------------------------------------------------------------------------------------------------------------
 		In neural networks, hyperparameters are settings that are not learned during training but are 
   		set beforehand and influence the model's architecture, learning process, and overall performance.
+    
 		- Number of Layers: The number of hidden layers significantly impacts the model's complexity and 
   			ability to learn intricate patterns. 
 		- Number of Neurons per Layer: The width of each hidden layer influences the model's capacity to represent 
@@ -1141,6 +1142,7 @@ the split would be on Gender only.
 		------------------------------------------------------------------------------------------------------------
 		Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore 
   		the parameter space and find the optimal combination.
+    
 		- Grid Search: Defines a grid of hyperparameter values and tests all possible combinations. 
 			Pro: Simple to understand and implement. Finding the best combination within the defined grid.
 			Cons: Computationally expensive, especially with many hyperparameters or large grids.
@@ -1156,7 +1158,7 @@ the split would be on Gender only.
      			focusing on regions with the highest probability of containing the optimal hyperparameters.
 			Pros: Efficient than grid and random search, requirs fewer evaluations to find good hyperparameters.
 				Can handle non-convex and noisy objective functions. 
-    				Can be parallelized to speed up the search process. 
+				Can be parallelized to speed up the search process. 
 			Cons: Can be computationally expensive for each iteration, especially with complex models.
 				Requires a suitable Gaussian process model and careful selection of hyperparameters for the model.
 
