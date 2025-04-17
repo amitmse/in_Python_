@@ -32,6 +32,7 @@ https://github.com/empathy87/The-Elements-of-Statistical-Learning-Python-Noteboo
 ------------------------------------------------------------------------------------------------------------------------------
 
 ## Ridge Regression: L2 norm (sum of square of coefficients)
+
 	- Objective = RSS + α * (sum of square of coefficients) 
 		RSS refers to Residual Sum of Squares. 
 		sum of squares of errors (predicted vs actual) also known as the cost function or 
@@ -44,6 +45,8 @@ https://github.com/empathy87/The-Elements-of-Statistical-Learning-Python-Noteboo
 			α = ∞: The coefficients will be zero because of infinite weightage on the square of 
 					coefficients, anything less than zero will make the objective infinite.
 			0 < α < ∞: The magnitude of α will decide the weightage given to different parts of the objective.
+	- Ridge regression is a technique used to eliminate multicollinearity in data models.
+	- Works better in a case where observations are fewer than predictor variables.
 	- The value of alpha increases, the model complexity reduces.
 	- Higher values of alpha reduce overfitting, significantly high values can cause underfitting as well. 
  	- alpha should be chosen wisely. A widely accepted technique is cross-validation, 
@@ -64,6 +67,11 @@ https://github.com/empathy87/The-Elements-of-Statistical-Learning-Python-Noteboo
 	- Ridge works well even in the presence of highly correlated features, as it will include all of them in the model. 
 		The coefficients will be distributed among them depending on the correlation.
 	- Ridge Regression handles multicollinearity by reducing the impact of correlated features on the coefficients.
+	- Feature Selection: Does not perform feature selection. All predictors are retained, although their coefficients 
+		are reduced in size to minimize overfitting.
+	- Usecase: Best suited for situations where all predictors are potentially relevant, and the goal is to reduce 
+		overfitting rather than eliminate features.
+ 
 
 ## Lasso (Least Absolute Shrinkage and Selection Operator): L1 norm (sum of absolute value of coefficients)
 	- Objective = RSS + α * (sum of absolute value of coefficients)
@@ -77,8 +85,17 @@ https://github.com/empathy87/The-Elements-of-Statistical-Learning-Python-Noteboo
 		exactly zero, which is equivalent to the particular feature being excluded from the model. 
 	- Lasso selects any feature among the highly correlated ones and reduces the coefficients of the rest to zero. 
 	- Lasso Regression automatically selects important features by setting the coefficients of 
-		less important features to zero, resulting in a sparse model. 
-		
+		less important features to zero, resulting in a sparse model.
+	- Feature Selection: Performs automatic feature selection. Less important predictors are completely excluded 
+ 		by setting their coefficients to zero.
+	- Usecase: Ideal when you suspect that only a subset of predictors is important, and the model should focus 
+ 		on those while ignoring the irrelevant ones.
+	- Shrinks some coefficients to exactly zero, effectively removing their influence from the model. 
+		This leads to a simpler model with fewer features.
+	- Lasso regression generates a sparse models with fewer non-zero coefficients making model simpler to understand.
+
+	https://www.geeksforgeeks.org/implementation-of-lasso-regression-from-scratch-using-python/
+
 ## Disadvantage :
 	- For the same values of alpha, the coefficients of lasso regression are much smaller as compared 
 		to ridge regression. For the same alpha, lasso has higher RSS (poorer fit) as compared 
@@ -124,6 +141,7 @@ Both L1 and L2 work differently in the way that they penalize the size of a weig
 				lasso : b=1
 
 	- Elastic Net is another useful technique that combines both L1 and L2 regularization.
+	- The elastic net method performs variable selection and regularization simultaneously. 
 
   
 ## Dropout Regularization
