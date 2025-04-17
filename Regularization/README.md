@@ -1,6 +1,5 @@
 # Regularization
 
-
 ## Bias–variance trade-off
 
 	- The bias (under-fitting) is an error from erroneous assumptions in the learning algorithm. 
@@ -18,9 +17,30 @@
 		generalize on the data which it hasn’t seen before. As a result, such models perform very well on 
 		training data but has high error rates on test data.
 		
+------------------------------------------------------------------------------------------------------------------------------
+- Regression often faces the challenge of overfitting, especially with a high number of parameters.
+- Regularization techniques are used to address overfitting and enhance model generalizability.
+- The model complexity increases when the models tend to fit smaller deviations in the training data set. This leads to overfitting.
+- The size of coefficients increases exponentially with an increase in model complexity.
+- Large coefficient signify that we are putting a lot of emphasis on that feature and driving the outcome.
+- That's why putting a constraint on the magnitude of coefficients can be a good idea to reduce model complexity.
+- Regularization techniques (Ridge and lasso regression) are effective methods in machine learning, that introduce penalties on the magnitude of regression coefficients.
+- Regularization works by penalizing the magnitude of coefficients of features and minimizing the error between predicted and actual observations. These are called ‘regularization’ techniques. 
+
+------------------------------------------------------------------------------------------------------------------------------
 
 ## Ridge Regression: L2 norm (sum of square of coefficients)
-	- Objective = RSS + α * (sum of square of coefficients) [RSS : Residual Sum of Squares]
+	- Objective = RSS + α * (sum of square of coefficients) 
+		RSS refers to Residual Sum of Squares. 
+		sum of squares of errors (predicted vs actual) also known as the cost function or the loss function for linear regression. 
+		Adds penalty equivalent to the square of the magnitude of coefficients.
+		α (alpha) balances the amount of emphasis given to minimizing RSS vs minimizing the sum of squares of coefficients.
+			α = 0: The objective becomes the same as simple linear regression. and coefficients same as linear regression.
+    			α = ∞: The coefficients will be zero because of infinite weightage on the square of coefficients, anything less than zero will make the objective infinite.
+    			0 < α < ∞: The magnitude of α will decide the weightage given to different parts of the objective.
+        
+
+  
 	- Shrink the estimated association of each variable with the response, except the intercept β0. 
 		Intercept is a measure of the mean value of the response
 	- The coefficients that are produced by the standard least squares method are scale equi-variant 
@@ -34,6 +54,7 @@
 
 ## Lasso (Least Absolute Shrinkage and Selection Operator): L1 norm (sum of absolute value of coefficients)
 	- Objective = RSS + α * (sum of absolute value of coefficients)
+	- adds penalty equivalent to the absolute value of the magnitude of coefficients 
 	- Differs from ridge regression only in penalizing the high coefficients
 		
 ## Disadvantage :
