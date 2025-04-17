@@ -26,7 +26,6 @@
 - That's why putting a constraint on the magnitude of coefficients can be a good idea to reduce model complexity.
 - Regularization techniques (Ridge and lasso regression) are effective methods in machine learning, that introduce penalties on the magnitude of regression coefficients.
 - Regularization works by penalizing the magnitude of coefficients of features and minimizing the error between predicted and actual observations. These are called ‘regularization’ techniques.
-- Elastic Net is another useful technique that combines both L1 and L2 regularization.
 
 https://github.com/empathy87/The-Elements-of-Statistical-Learning-Python-Notebooks
 
@@ -124,6 +123,9 @@ Both L1 and L2 work differently in the way that they penalize the size of a weig
 				ridge : b=0
 				lasso : b=1
 
+	- Elastic Net is another useful technique that combines both L1 and L2 regularization.
+
+  
 ## Dropout Regularization
 
 Most neural network frameworks implement dropout as a separate layer. Dropout layers function as a regular, densely connected neural network layer. The only difference is that the dropout layers will periodically drop some of their neurons during training. You can use dropout layers on regular feedforward neural networks.
