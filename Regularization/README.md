@@ -42,9 +42,11 @@
 			α = ∞: The coefficients will be zero because of infinite weightage on the square of 
 					coefficients, anything less than zero will make the objective infinite.
 			0 < α < ∞: The magnitude of α will decide the weightage given to different parts of the objective.
-        
-
-  
+	- The value of alpha increases, the model complexity reduces.
+	- Higher values of alpha reduce overfitting, significantly high values can cause underfitting as well. 
+ 	- alpha should be chosen wisely. A widely accepted technique is cross-validation, 
+		i.e., the value of alpha is iterated over a range of values, 
+		and the one giving a higher cross-validation score is chosen.
 	- Shrink the estimated association of each variable with the response, except the intercept β0. 
 		Intercept is a measure of the mean value of the response
 	- The coefficients that are produced by the standard least squares method are scale equi-variant 
@@ -59,7 +61,10 @@
 ## Lasso (Least Absolute Shrinkage and Selection Operator): L1 norm (sum of absolute value of coefficients)
 	- Objective = RSS + α * (sum of absolute value of coefficients)
 	- adds penalty equivalent to the absolute value of the magnitude of coefficients 
+	- alpha works similar to the ridge.
 	- Differs from ridge regression only in penalizing the high coefficients
+	- In Lasso function max_iter is the maximum number of iterations for which we want the model to run if it doesn’t converge before. This exists for Ridge as well, but setting this to a higher than default value was required in this case. Why? I’ll come to this in the next section.
+ 
 		
 ## Disadvantage :
 	- For the same values of alpha, the coefficients of lasso regression are much smaller as compared 
