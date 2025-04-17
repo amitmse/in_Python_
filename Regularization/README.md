@@ -33,15 +33,15 @@
 	- Objective = RSS + α * (sum of square of coefficients) 
 		RSS refers to Residual Sum of Squares. 
 		sum of squares of errors (predicted vs actual) also known as the cost function or 
-			the loss function for linear regression. 
+				the loss function for linear regression. 
 		Adds penalty equivalent to the square of the magnitude of coefficients.
 		α (alpha) balances the amount of emphasis given to minimizing RSS vs minimizing 
-			the sum of squares of coefficients.
+					the sum of squares of coefficients.
 			α = 0: The objective becomes the same as simple linear regression 
-   					and coefficients same as linear regression.
-    			α = ∞: The coefficients will be zero because of infinite weightage on the square of 
-       					coefficients, anything less than zero will make the objective infinite.
-    			0 < α < ∞: The magnitude of α will decide the weightage given to different parts of the objective.
+					and coefficients same as linear regression.
+			α = ∞: The coefficients will be zero because of infinite weightage on the square of 
+					coefficients, anything less than zero will make the objective infinite.
+			0 < α < ∞: The magnitude of α will decide the weightage given to different parts of the objective.
         
 
   
