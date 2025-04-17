@@ -25,7 +25,10 @@
 - Large coefficient signify that we are putting a lot of emphasis on that feature and driving the outcome.
 - That's why putting a constraint on the magnitude of coefficients can be a good idea to reduce model complexity.
 - Regularization techniques (Ridge and lasso regression) are effective methods in machine learning, that introduce penalties on the magnitude of regression coefficients.
-- Regularization works by penalizing the magnitude of coefficients of features and minimizing the error between predicted and actual observations. These are called ‘regularization’ techniques. 
+- Regularization works by penalizing the magnitude of coefficients of features and minimizing the error between predicted and actual observations. These are called ‘regularization’ techniques.
+- Elastic Net is another useful technique that combines both L1 and L2 regularization.
+
+https://github.com/empathy87/The-Elements-of-Statistical-Learning-Python-Notebooks
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -57,14 +60,25 @@
 		before performing ridge regression.
 	- The ridge coefficients are a reduced factor of the simple linear regression coefficients and thus 
 		never attain zero values but very small values
+	- Ridge includes all of the features in the model, and major advantage of ridge regression is 
+		coefficient shrinkage and reducing model complexity.
+	- Ridge works well even in the presence of highly correlated features, as it will include all of them in the model. 
+		The coefficients will be distributed among them depending on the correlation.
+	- Ridge Regression handles multicollinearity by reducing the impact of correlated features on the coefficients.
 
 ## Lasso (Least Absolute Shrinkage and Selection Operator): L1 norm (sum of absolute value of coefficients)
 	- Objective = RSS + α * (sum of absolute value of coefficients)
 	- adds penalty equivalent to the absolute value of the magnitude of coefficients 
 	- alpha works similar to the ridge.
 	- Differs from ridge regression only in penalizing the high coefficients
-	- In Lasso function max_iter is the maximum number of iterations for which we want the model to run if it doesn’t converge before. This exists for Ridge as well, but setting this to a higher than default value was required in this case. Why? I’ll come to this in the next section.
- 
+	- For the same values of alpha, the coefficients of lasso regression are much smaller than that of ridge regression.
+	- For the same alpha, lasso has higher RSS (poorer fit) as compared to ridge regression.
+	- Many of the coefficients are zero, even for very small values of alpha. Thi sis called sparsity.
+	- Lasso along with shrinking coefficients, also performs feature selection. some of the coefficients become 
+		exactly zero, which is equivalent to the particular feature being excluded from the model. 
+	- Lasso selects any feature among the highly correlated ones and reduces the coefficients of the rest to zero. 
+	- Lasso Regression automatically selects important features by setting the coefficients of 
+		less important features to zero, resulting in a sparse model. 
 		
 ## Disadvantage :
 	- For the same values of alpha, the coefficients of lasso regression are much smaller as compared 
