@@ -369,8 +369,18 @@ Improvements to Basic Gradient Boosting
 			Convert above value to probability with logistic function
 			Probability = Exp^log(odds) / [1 + Exp^log(odds)]
 
+		- Example: 
+  
+			https://medium.com/@ryassminh/xgboost-with-a-simple-example-92d5d91789e2
+
+			https://medium.com/@fraidoonomarzai99/xgboost-regression-in-depth-cb2b3f623281
+
+   			https://www.linkedin.com/pulse/demystifying-xgboost-real-world-example-rany-elhousieny-phd%E1%B4%AC%E1%B4%AE%E1%B4%B0-uapmf/
+
+			https://github.com/krishnaik06/Hyperparameter-Optimization
 
 
+      
 ------------------------------------------------------------------------------------------------------------
 
 Adaboost vs Gradient Boosting: 
@@ -438,21 +448,34 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md
 ------------------------------------------------------------------------------------------------------------
 ### XGBoost hyperparameters: 
 	- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data 
- 		but may also lead to overfitting.
+ 		but may also lead to overfitting. max_depth: [ 3, 4, 5, 6, 8, 10, 12, 15]
 	- minimum sum of instance weights (Hessian) needed in a child. It helps prevent overfitting 
-		by controlling the creation of new nodes in the tree. 
+		by controlling the creation of new nodes in the tree.
+		min_child_weight:[ 1, 3, 5, 7 ]
 	- subsample: This determines the fraction of training instances used for each tree, reducing the risk of overfitting. 
 	- colsample bytree: This parameter specifies the fraction of features used for each tree. 
 		Similar to subsample, it helps prevent overfitting by reducing the model's reliance on specific features. 
+		colsample_bytree:[ 0.3, 0.4, 0.5 , 0.7 ]
 	- learning rate (eta): This parameter controls the step size of the gradient descent algorithm. 
-		A smaller learning rate can lead to more stable training but may require more iterations to converge. 
+		A smaller learning rate can lead to more stable training but may require more iterations to converge.
+  		learning_rate: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30 ]
 	- gamma: This parameter specifies the minimum loss reduction required to make a split. 
-		It can be useful for pruning the tree and preventing overfitting. 
+		It can be useful for pruning the tree and preventing overfitting.
+		gamma:[ 0.0, 0.1, 0.2 , 0.3, 0.4 ]
 	- L2 regularization: This parameter adds a penalty proportional to the squared magnitude 
 		of the coefficients, helping to prevent overfitting. 
 	- L1 regularization: This parameter adds a penalty proportional to the absolute value of 
 		the coefficients, promoting sparsity in the model. 
 
+	- Hyper Parameter Optimization: RandomizedSearchCV
+		params={
+		 	"learning_rate"    : [0.05, 0.10, 0.15, 0.20, 0.25, 0.30 ] ,
+		 	"max_depth"        : [ 3, 4, 5, 6, 8, 10, 12, 15],
+		 	"min_child_weight" : [ 1, 3, 5, 7 ],
+		 	"gamma"            : [ 0.0, 0.1, 0.2 , 0.3, 0.4 ],
+		 	"colsample_bytree" : [ 0.3, 0.4, 0.5 , 0.7 ]
+			}
+		https://github.com/krishnaik06/Hyperparameter-Optimization
 ------------------------------------------------------------------------------------------------------------  
 
 https://s3.amazonaws.com/thinkific-import-development/118220/TreeBasedAlgorithms_ACompleteBookfromScratchinRPython-200403-111115.pdf
