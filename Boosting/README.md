@@ -293,9 +293,6 @@ Improvements to Basic Gradient Boosting
 		
 		Total loss will be the sum of this function
  
-	https://github.com/Devinterview-io/xgboost-interview-questions
-
-
 	- Steps:
 		- The first step in XGBoost is to make the first guess, that is, to determine the base score. 
 			The base score is usually set at 0.5. So the initial prediction values are 0.5. 
@@ -371,13 +368,8 @@ Improvements to Basic Gradient Boosting
 
 		- Example: 
   
-			https://medium.com/@ryassminh/xgboost-with-a-simple-example-92d5d91789e2
-
-			https://medium.com/@fraidoonomarzai99/xgboost-regression-in-depth-cb2b3f623281
-
-   			https://www.linkedin.com/pulse/demystifying-xgboost-real-world-example-rany-elhousieny-phd%E1%B4%AC%E1%B4%AE%E1%B4%B0-uapmf/
-
-			https://github.com/krishnaik06/Hyperparameter-Optimization
+https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx  
+  
 
 
       
