@@ -215,21 +215,21 @@ Improvements to Basic Gradient Boosting
 
 		XGBoost employs parallel computing primarily to speed up the training process, 
 		not to build trees concurrently. It can parallelize tasks like:
-		Data loading and preprocessing: The initial steps of preparing the data for training 
+		- Data loading and preprocessing: The initial steps of preparing the data for training 
 			can be done in parallel. 
-		Tree construction: Building the individual decision trees can also be parallelized, 
+		- Tree construction: Building the individual decision trees can also be parallelized, 
 			allowing for faster computation. 
-		Gradient calculation and update: Calculating the gradient and updating model parameters during 
+		- Gradient calculation and update: Calculating the gradient and updating model parameters during 
 			each iteration can be parallelized.
    
 		It leverages Column Block for Parallel Learning, Weighted Quantile Sketch and Cache-aware Access.
-		Column Block for Parallel Learning: XGBoost organizes the data into blocks of columns, 
+		- Column Block for Parallel Learning: XGBoost organizes the data into blocks of columns, 
 			where each block corresponds to a subset of features. By independently processing column blocks, 
 			multiple CPU cores of computing nodes can simultaneously work on the tree-building process.
-		Weighted Quantile Sketch: It’s a data structure that approximates the distribution of feature values, 
+		- Weighted Quantile Sketch: It’s a data structure that approximates the distribution of feature values, 
 			which helps quickly identifying potential split points for decision tress without having 
 			to sort the entire dataset.
-		Cache-aware Access: XGBoost organizes its data structures and computations to align with the CPU cache 
+		- Cache-aware Access: XGBoost organizes its data structures and computations to align with the CPU cache 
 			architecture. By doing so, frequently accessed elements are more likely to be present in the cache.
     
 
