@@ -288,6 +288,11 @@ Improvements to Basic Gradient Boosting
 		- Adaptive Log Loss (ALogLoss): Introduced in XGBoost, this loss function provides a balance between speed 
 			and accuracy. It's derived by approximating the Poisson likelihood.
 
+		Regression 	= (1/2)*(actual - predicted)^2
+		Classification 	= -[y*log(p) - (1-y)log(1-p)]
+		
+		Total loss will be the sum of this function
+ 
 	https://github.com/Devinterview-io/xgboost-interview-questions
 
 
@@ -296,6 +301,7 @@ Improvements to Basic Gradient Boosting
 			The base score is usually set at 0.5. So the initial prediction values are 0.5. 
 			Then the residuals are obtained by subtracting 0.5 from the actual y values. 
 			A tree model is established with these residues obtained as in GBM.
+			Initial Prediction is 0.5 for both regression and classification.
 
 		- Residuals are collected at the initial node and the similarity score of this node is calculated. 
 			Then, trees are created by dividing each independent variable by threshold values. 
@@ -305,14 +311,36 @@ Improvements to Basic Gradient Boosting
 			Similarity score is the evaluation metric for nodes. 
 			Gain score is an evaluation criterion for trees.
 
-		- Similarity Score = 
+		- Similarity Score:
+			The smaller the similarity, the less they are similar.  
+			To get all the residuals into one leaf and calculate the similarity score.
+   
 			For regressor = (Sum of Residuals)^2 / (number of Residuals + λ )
-				λ  is a regularisation parameter
+				λ (lambda) is the regularization parameter, which helps prevent overfitting.    
     
-			For classifier = (Sum of Residuals)^2 / pr(1-pr)
-					pr  is probability
+			For classifier = (Sum of Residuals)^2 / [pr*(1-pr) + λ]
+					pr  is previous probability
   
-    		- Gain = Left Similarity + Right Similarity - Root Similarity
+    		- Gain:
+			How great is it the leaves classify similar residuals compared to the root.
+   
+			Gain = Left Similarity + Right Similarity - Root Similarity
+				Root Similarity: The Similarity Score of the Previous Tree is the Similarity Score.
+    
+			Gain — Gamma > 0 Keep the tree.
+			Gain — Gamma < 0 Prune the tree.
+
+
+		- Lambda (λ): regularisation parameter
+			As the lambda increases, the similarity score will decrease and therefore this will also decrease 
+			the gain score. This allows for more pruning, only branches with a high gain score are preserved 
+			and overfitting can be prevented.
+   
+			The fewer instances in the branch, the lower the similarity score and the higher the probability 
+			of these branches being pruned. It prevents overfitting and having less instances in leaf nodes.
+
+			Lambda value is in the denominator in the output formula, as the lambda increases, the output value 
+   			will decrease. The correct prediction will be reached with more iterations, that is, the number of trees.
 
 		- Calculating these similarity and gain scores would take a long time on large datasets, 
 			xgboost divides the data into quantiles instead of examining each value in the data.
@@ -331,7 +359,15 @@ Improvements to Basic Gradient Boosting
 			the learning rate and added to the prediction value of the first tree, and a new prediction value is formed. 
 			These operations continue until the specified number of iterations, namely n_estimators 
 			(number of boosting trees).
-			New Prediction = First Prediction + (Learnin Rate)* (Second Prediction)
+   
+			Predicted value (regressor) = 
+   				First Prediction + (Learnin Rate)* (Second Prediction)
+       
+			Predicted Value (classifier) = 
+   				log of odds of Initial prediction + eta(learning rate) * output from the leaves(mean value)
+			
+			Convert above value to probability with logistic function
+			Probability = Exp^log(odds) / [1 + Exp^log(odds)]
 
 
 
