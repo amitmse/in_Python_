@@ -239,7 +239,12 @@ Improvements to Basic Gradient Boosting
 	- Feature Importance: Mechanisms to rank and select features, empowering better decision-making.
 		Provides a way to calculate feature importance scores based on the number of times a feature is used 
 		in the model and how much it contributes to reducing the objective function.
- 
+
+		Different ways to get feature importance
+			- use built-in feature importance.
+			- use permutation based importance.
+			- use shap based importance.
+
 	- Handling Missing Data: It can manage missing data in both the training and evaluation phases.
  
 	- Parallel Processing: Parallel and distributed computing, deliver high efficiency.
@@ -276,6 +281,16 @@ Improvements to Basic Gradient Boosting
 		- Iterating: This process of calculating residuals, training a new tree, and updating predictions is 
 			repeated iteratively until the desired level of accuracy is achieved. 
 
+	- Feature Selection: 
+ 		Featurewiz
+		- Start with Everything. Feed the entire dataset into the selection process.
+		- XGBoost Feature Ranking. Train an XGBoost model to assess feature importance.
+		- Select Key Features. Extract the most significant features based on importance scores.
+		- Prune and Repeat. Keep only the top-ranked features and rerun the process on a refined subset.
+		- Iterate Until Optimal. Continue the cycle until a stopping criterion (like stability or diminishing returns) is met.
+		- Finalize the Feature Set. Merge selected features from all cycles, eliminating duplicates to form the final optimized set.
+
+    
 	- Quality score or Similarity score for the Residuals:
  		It's used to split. Info gain 
 		For regressor = (sum of residuals squared) / (number of residuals + λ)
@@ -283,13 +298,11 @@ Improvements to Basic Gradient Boosting
 		For classifier = (sum of residuals squared) / [ pr(1-pr) + λ ]
 					pr  is probability
 
-
 		Feature importance scores:
     			- Gain: Average loss reduction gained when using a feature for splitting.
     			- Cover: The number of times a feature is used to split data across trees weighted 
        				by training data points.
     			- Weight: Total number of times a feature is used to split data across all trees.
-
      
 	- Loss Functions
 		- Logistic Loss: Commonly employed in binary classification problems. It calculates the likelihood of 
