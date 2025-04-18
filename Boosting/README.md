@@ -86,6 +86,11 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 -------------------------------------------------------------------------------------
   
  ## Gradient Boosting Machine (GBM)
+
+	- GBM is ensemble methods that build models in a forward stepwise manner, using decision trees as base learners. 
+		The algorithm can be computationally intensive, making it a somewhat challenging learning model. 
+
+	- Pre-sorting approach to find best split which is computationally expensive.
  
 	--------------------------------------
 	1. Initialize with a base model
@@ -198,15 +203,34 @@ Improvements to Basic Gradient Boosting
  ## eXtreme Gradient Boosting (XGBoost)
 
 	- XGBoost builds a series of trees to make predictions, and each tree corrects errors made by the previous ones. 
+	- Offers speed and performance both.
 	- Minimizes a loss function: mean squared error for regression and the log loss for classification.
 	- Regularization: Controls model complexity to prevent overfitting.
 		L1 (Lasso) and L2 (Ridge) regularization terms are added to the objective function. 
 		This penalizes overly complex trees to avoid overfitting by discouraging the overly deep or detailed trees.
 
-	- Shrinkage: Each tree's contribution is modulated, reducing the impact of outliers.
+	- Shrinkage (Learning Rate): Each tree's contribution is modulated, reducing the impact of outliers.
+		This mechanism is designed to improve the balance between model complexity and learning speed. 
+		
+  
 	- Cross-Validation: XGBoost internally performs cross-validation tasks to fine-tune hyperparameters, 
 		such as the number of trees, boosting round, etc.
+
+	- The algorithm minimizes a predefined loss function by following the steepest descent in the model's parameter space.
+ 
+	- histogram based approach to find best split and reduces complexity.
+		Computational efficiency via split finding algorithms using approximate tree boosting.
+		Employs the exact or approximate greedy algorithm for split discovery.
+  
+	- Early stopping
+ 
+	- It allows to specify whether the model should have a positive or negative relationship with each feature, 
+		implementing business logic into the model.
+
 	- Feature Importance: Mechanisms to rank and select features, empowering better decision-making.
+		Provides a way to calculate feature importance scores based on the number of times a feature is used 
+		in the model and how much it contributes to reducing the objective function.
+ 
 	- Handling Missing Data: It can manage missing data in both the training and evaluation phases.
  
 	- Parallel Processing: Parallel and distributed computing, deliver high efficiency.
@@ -244,10 +268,22 @@ Improvements to Basic Gradient Boosting
 		- Iterating: This process of calculating residuals, training a new tree, and updating predictions is 
 			repeated iteratively until the desired level of accuracy is achieved. 
 
-    
+	- Quality score or Similarity score for the Residuals:
+ 		It's used to split. Info gain 
+		For regressor = (sum of residuals squared) / (number of residuals + λ)
+					λ  is a regularisation parameter
+		For classifier = (sum of residuals squared) / pr(1-pr)
+					pr  is probability
+     
+	- Loss Functions
+		- Logistic Loss: Commonly employed in binary classification problems. It calculates the likelihood of 
+			the predicted class, converting it to a probability with a sigmoid function.
+ 		- Softmax Loss: Generally used for multi-class classification tasks. It calculates a probability distribution 
+			for each class and maximizes the likelihood across all classes.
+		- Adaptive Log Loss (ALogLoss): Introduced in XGBoost, this loss function provides a balance between speed 
+			and accuracy. It's derived by approximating the Poisson likelihood.
 
-
- 
+	https://github.com/Devinterview-io/xgboost-interview-questions
 
 ------------------------------------------------------------------------------------------------------------
 
