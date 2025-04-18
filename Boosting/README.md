@@ -215,7 +215,6 @@ Improvements to Basic Gradient Boosting
 	- Shrinkage (Learning Rate): Each tree's contribution is modulated, reducing the impact of outliers.
 		This mechanism is designed to improve the balance between model complexity and learning speed. 
 		
-  
 	- Cross-Validation: XGBoost internally performs cross-validation tasks to fine-tune hyperparameters, 
 		such as the number of trees, boosting round, etc.
 
@@ -226,7 +225,12 @@ Improvements to Basic Gradient Boosting
 		Employs the exact or approximate greedy algorithm for split discovery.
   		Splits up to the specified max_depth and then starts pruning back the tree, 
     			removing splits beyond which there is no positive gain.
+
+		Gini index or information gain are used to evaluate to split.
   
+		XGBoost employs a greedy search, evaluating each possible split and choosing the one that 
+  			results in the greatest gain in the split quality metric.  
+    
 	- Early stopping
  
 	- It allows to specify whether the model should have a positive or negative relationship with each feature, 
@@ -261,7 +265,6 @@ Improvements to Basic Gradient Boosting
 		- Cache-aware Access: XGBoost organizes its data structures and computations to align with the CPU cache 
 			architecture. By doing so, frequently accessed elements are more likely to be present in the cache.
     
-
 	- Despite the parallelization capabilities, XGBoost's core learning mechanism remains sequential. 
 		It starts with a base model (usually a simple tree) and then iteratively adds new trees. 
 		Each new tree focuses on correcting the errors made by the previous trees. This is achieved by: 
@@ -279,6 +282,14 @@ Improvements to Basic Gradient Boosting
 					λ  is a regularisation parameter
 		For classifier = (sum of residuals squared) / [ pr(1-pr) + λ ]
 					pr  is probability
+
+
+		Feature importance scores:
+    			- Gain: Average loss reduction gained when using a feature for splitting.
+    			- Cover: The number of times a feature is used to split data across trees weighted 
+       				by training data points.
+    			- Weight: Total number of times a feature is used to split data across all trees.
+
      
 	- Loss Functions
 		- Logistic Loss: Commonly employed in binary classification problems. It calculates the likelihood of 
