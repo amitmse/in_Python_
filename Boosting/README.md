@@ -277,7 +277,7 @@ Improvements to Basic Gradient Boosting
  		It's used to split. Info gain 
 		For regressor = (sum of residuals squared) / (number of residuals + λ)
 					λ  is a regularisation parameter
-		For classifier = (sum of residuals squared) / pr(1-pr)
+		For classifier = (sum of residuals squared) / [ pr(1-pr) + λ ]
 					pr  is probability
      
 	- Loss Functions
