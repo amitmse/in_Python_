@@ -51,6 +51,8 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting.PNG)
 
+------------------------------------------------------------------------------------------------------------
+
 ## Adaptive (ADA) Boosting: Adapts from mistakes
 
 https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
@@ -124,7 +126,9 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 		  	2.4 Update the output with current results taking into account the learning rate
 			
 		3. Return the final output.
-		
+  
+	---------------------------------------------------------------------
+ 
 Gradient boosting involves three elements: 
 
 	1. A loss function to be optimized: 
@@ -160,6 +164,8 @@ Gradient boosting involves three elements:
 			parameters of the tree and move in the right direction by reducing the residual loss.
 		- Generally this approach is called functional gradient descent or gradient descent with functions.
 
+	---------------------------------------------------------------------
+ 
 Improvements to Basic Gradient Boosting
 
 	- Gradient boosting is a greedy algorithm and can overfit a training dataset quickly.
@@ -187,7 +193,63 @@ Improvements to Basic Gradient Boosting
 		3. Random sampling:				
 		4. Penalized Learning:
 
+------------------------------------------------------------------------------------------------------------
 
+ ## eXtreme Gradient Boosting (XGBoost)
+
+	- XGBoost builds a series of trees to make predictions, and each tree corrects errors made by the previous ones. 
+	- Minimizes a loss function: mean squared error for regression and the log loss for classification.
+	- Regularization: Controls model complexity to prevent overfitting.
+		L1 (Lasso) and L2 (Ridge) regularization terms are added to the objective function. 
+		This penalizes overly complex trees to avoid overfitting by discouraging the overly deep or detailed trees.
+
+	- Shrinkage: Each tree's contribution is modulated, reducing the impact of outliers.
+	- Cross-Validation: XGBoost internally performs cross-validation tasks to fine-tune hyperparameters, 
+		such as the number of trees, boosting round, etc.
+	- Feature Importance: Mechanisms to rank and select features, empowering better decision-making.
+	- Handling Missing Data: It can manage missing data in both the training and evaluation phases.
+ 
+	- Parallel Processing: Parallel and distributed computing, deliver high efficiency.
+		While it can parallelize certain aspects of training, it fundamentally operates by sequentially 
+		building decision trees, with each tree learning from the errors of its predecessors. 
+
+		XGBoost employs parallel computing primarily to speed up the training process, 
+		not to build trees concurrently. It can parallelize tasks like:
+		Data loading and preprocessing: The initial steps of preparing the data for training 
+			can be done in parallel. 
+		Tree construction: Building the individual decision trees can also be parallelized, 
+			allowing for faster computation. 
+		Gradient calculation and update: Calculating the gradient and updating model parameters during 
+			each iteration can be parallelized.
+   
+		It leverages Column Block for Parallel Learning, Weighted Quantile Sketch and Cache-aware Access.
+		Column Block for Parallel Learning: XGBoost organizes the data into blocks of columns, 
+			where each block corresponds to a subset of features. By independently processing column blocks, 
+			multiple CPU cores of computing nodes can simultaneously work on the tree-building process.
+		Weighted Quantile Sketch: It’s a data structure that approximates the distribution of feature values, 
+			which helps quickly identifying potential split points for decision tress without having 
+			to sort the entire dataset.
+		Cache-aware Access: XGBoost organizes its data structures and computations to align with the CPU cache 
+			architecture. By doing so, frequently accessed elements are more likely to be present in the cache.
+    
+
+	- Despite the parallelization capabilities, XGBoost's core learning mechanism remains sequential. 
+		It starts with a base model (usually a simple tree) and then iteratively adds new trees. 
+		Each new tree focuses on correcting the errors made by the previous trees. This is achieved by: 
+		- Calculating Residuals: The algorithm calculates the difference between the actual target values 
+			and the predictions made by the ensemble of existing trees (the "residual errors"). 
+		- Training a New Tree: A new decision tree is trained to predict these residuals. 
+		- Updating Predictions: The predictions from the new tree are added to the predictions of 
+			the previous trees, effectively reducing the residual errors. 
+		- Iterating: This process of calculating residuals, training a new tree, and updating predictions is 
+			repeated iteratively until the desired level of accuracy is achieved. 
+
+    
+
+
+ 
+
+------------------------------------------------------------------------------------------------------------
 
 Adaboost vs Gradient Boosting: 
 
