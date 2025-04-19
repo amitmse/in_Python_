@@ -41,8 +41,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 -----------------------------------------------------------------------------------------------------------------------
 ## Points
 
-	- Why use odds and log-odds, not probability?
- 	- Probability output ranges from 0 to 1  
+	- Why use odds and log-odds.
+	- Probability output ranges from 0 to 1  
 	- Odds Ratio = P/(1-P)		[Odds output range from 0 to ∞ ]
 		odds = 0 when p = 0     [ 0 / (1-0) = 0] 
 		odds = ∞ when p = 1	[ 1 / (0-1) = ∞  where 0-1 is very small number]
