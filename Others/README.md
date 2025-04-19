@@ -499,7 +499,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
   
   			This assumption is crucial for the validity of statistical tests used in linear regression, 
 			such as hypothesis tests, t-tests, p-values and ANOVA, which rely on the normality of 
-			the errors to provide accurate and for regression coefficients and confidence intervals.
+			the errors to provide accurate regression coefficients and confidence intervals.
   
   			Standard errors and t-values used to calculate the statistical significance of regression 
   			parameters may be inaccurate, leading to potentially misleading conclusions.
@@ -531,9 +531,9 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 			  Transform the dependent variable using one of the variance stabilizing transformations
 	
 	5. No autocorrelation (serial correlation) of residuals :
-		Issue: correlation with own lag (stock price today linked with yesterday's price). if above fails 
-		 	then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not 
-			bias the OLS coefficient estimates, the standard errors tend to be underestimated 
+		Issue: correlation with own lag (stock price today linked with yesterday's price). If above fails 
+			then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not bias 
+			the OLS coefficient estimates, the standard errors tend to be underestimated 
 			(t-scores overestimated) when the autocorrelations of the errors at low lags are positive.
 			Low variance in unbiased estimator. Autocorrelation can lead to biased and unreliable 
 			standard errors, affecting the validity of statistical tests and confidence intervals.
