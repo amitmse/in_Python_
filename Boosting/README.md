@@ -122,8 +122,9 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 				reducing training time. 
     
 		SHAP Values (SHapley Additive exPlanations): values provide a way to understand how each feature contributes 
-				to the model's predictions.
-			They can help in identifying the most important features and understanding their impact on the model. 
+				to the model's predictions. Similar to the beta of linear regression.
+			They can help in identifying the most important features and understanding their impact on the model.
+			
  
 		mRMR (Minimum Redundancy, Maximum Relevance): It's a feature selection algorithm that identifies 
 			the most relevant features for predicting the target variable while minimizing redundancy 
