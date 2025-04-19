@@ -53,156 +53,6 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 
 ------------------------------------------------------------------------------------------------------------
 
-## Adaptive (ADA) Boosting: Adapts from mistakes
-
-https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
-
-	--------------------------------------------------------------------------------------------------
-	1. Initialize Weights: Assign same weight to all obs ( 1/No. of obs ). The sum of weights is 1.
- 		If there are 10 total obs then weight is 0.1 (1/10).
-		Actual weight for target "Yes" = +0.1
-		Actual weight for target "No" = -0.1 
-  
-  
-	2. Iterative Learning: In each iteration, a model is trained.
- 		- Each tree learns from previous ones. Misclassified observations gain more weight in the next iteration.
- 		- Correctly classified observations retain their weights. All weights are adjusted to sum to 1.
-   
-		- For each iteration compute accuracy: (1/2) * ln [ (1 - Total Error) / Total Error ] 
-			3 obs are misclassified out of 10 in the first iteration, the total error is 3/10.
-   			accuracy: 0.43
-   
-		- Recompute weights: Adjust weight for misclassified observation: 
-			correctly classified = Previous Weight * e^(-accuracy) = 0.07
-			wrongly classified   = Previous Weight * e^(+accuracy) = 0.15
-  
-		- Normalize weights: All weights are adjusted to sum to 1. Divide each weight by the sum of all weights.
-   			7 correctly classified and 3 wrongly classified, sum of weight = (0.07 X 7) + (0.15 X 3) =  0.92
-      			Normalize weights for correctly classified = 0.071
-			Normalize weights for wrongly   classified = 0.167
-  
-	3. Final Tree: Combine all models using weights.
-
--------------------------------------------------------------------------------------
-  
- ## Gradient Boosting Machine (GBM)
-
-	- GBM is ensemble methods that build models in a forward stepwise manner, using decision trees as base learners. 
-		The algorithm can be computationally intensive, making it a somewhat challenging learning model. 
-
-	- Pre-sorting approach to find best split which is computationally expensive.
-	- GBM stops splitting a node when it encounters a negative loss in the split. 
-		Therefore it is more of a greedy algorithm.
-
- 
-	--------------------------------------
-	1. Initialize with a base model
-	2. Calculate residuals
-	3. Predict the residuals with learning rate (0 to 1) or weight of model
-	4. Combine previous models and check accuracy
-	5. Repeat #2,3,4 until target achieved
-	6. Final: Sum up all models
- 
- 
-	1. Y 	  = M(x) + error (Logistic Regression if dep is binay). get the weight as well
-  
-	2. Error  = G(x) + error2 (Regress error with other ind var. Apply linear regression as error is continuous. 
-				   Apply learning rate (0 to 1) or weight of the model.
-                  
-	3. Error2 = H(x) + error3 (continue the #2 until you get low error)
-  
-	4. Y 	  = M(x) + G(x) + H(x) + error3	(combine all model together)
-  
-	5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 	
- 			(alpha, beta, gamma are weight / learning rates of each model)
-  
-	--------------------------------------
-  	Pseudo-code of the GBM algorithm
-	
-		1. Initialize the outcome
-		
-		2. Iterate from 1 to total number of trees
-	
-		  	2.1 Update the weights for targets based on previous run (higher for the ones mis-classified) 
-			[weight = 0.5*log[(1-error)/error]
-			It would indicate higher weights to trees with lower error rate.
-			
-		  	2.2 Fit the model on selected subsample of data
-		  
-		  	2.3 Make predictions on the full set of observations
-			
-		  	2.4 Update the output with current results taking into account the learning rate
-			
-		3. Return the final output.
-  
-	---------------------------------------------------------------------
- 
-Gradient boosting involves three elements: 
-
-	1. A loss function to be optimized: 
-		- The loss function used depends on the type of problem being solved.
-		- It must be differentiable, but many standard loss functions are supported and you can define your own. 
-			For example, regression may use a squared error and classification may use logarithmic loss.
-		- A benefit of the gradient boosting framework is that a new boosting algorithm does not have to 
-			be derived for each loss function that may want to be used, instead, it is a generic enough 
-			framework that any differentiable loss function can be used.
-	
-	2. A weak learner to make predictions: 
-		- Decision trees are used as the weak learner in gradient boosting.
-		- Specifically regression trees are used that output real values for splits and whose output 
-			can be added together, allowing subsequent models outputs to be added and “correct” 
-			the residuals in the predictions.
-		- Trees are constructed in a greedy manner, choosing the best split points based on purity 
-			scores like Gini or to minimize the loss.
-		- Initially, such as in the case of AdaBoost, very short decision trees were used that only had 
-			a single split, called a decision stump. Larger trees can be used generally with 4-to-8 levels.
-		- It is common to constrain the weak learners in specific ways, such as a maximum number of layers, 
-			nodes, splits or leaf nodes.
-		- This is to ensure that the learners remain weak, but can still be constructed in a greedy manner.
-
-	3. An additive model to add weak learners to minimize the loss function:
-		- Trees are added one at a time, and existing trees in the model are not changed.
-		- A gradient descent procedure is used to minimize the loss when adding trees.
-		- Traditionally, gradient descent is used to minimize a set of parameters, such as the coefficients 
-			in a regression equation or weights in a neural network. After calculating error or loss, 
-			the weights are updated to minimize that error.
-		- Instead of parameters, we have weak learner sub-models or more specifically decision trees. After 
-			calculating the loss, to perform the gradient descent procedure, we must add a tree to 
-			the model that reduces the loss. We do this by parameterizing the tree, then modify the 
-			parameters of the tree and move in the right direction by reducing the residual loss.
-		- Generally this approach is called functional gradient descent or gradient descent with functions.
-
-	---------------------------------------------------------------------
- 
-Improvements to Basic Gradient Boosting
-
-	- Gradient boosting is a greedy algorithm and can overfit a training dataset quickly.
-	- It can benefit from regularization methods that penalize various parts of the algorithm and generally 
-		improve the performance of the algorithm by reducing overfitting.
-	- In this this section we will look at 4 enhancements to basic gradient boosting:
-		1. Tree Constraints:
-			- It is important that the weak learners have skill but remain weak.
-			- There are a number of ways that the trees can be constrained.
-			- A good general heuristic is that the more constrained tree creation is, the more trees 
-				you will need in the model, and the reverse, where less constrained individual trees, 
-				the fewer trees that will be required.
-			- Below are some constraints that can be imposed on the construction of decision trees:
-				# Number of trees: generally adding more trees to the model can be very slow to overfit. 
-					The advice is to keep adding trees until no further improvement is observed.
-				# Tree depth: deeper trees are more complex trees and shorter trees are preferred. 
-					Generally, better results are seen with 4-8 levels.
-				# Number of nodes or number of leaves: like depth, this can constrain the size of tree, 
-					but is not constrained to a symmetrical structure if other constraints are used.
-				# Number of observations per split: imposes a minimum constraint on the amount of 
-					training data at a training node before a split can be considered
-				# Minimum improvement to loss:
-					is a constraint on the improvement of any split added to a tree
-		2. Shrinkage:
-		3. Random sampling:				
-		4. Penalized Learning:
-
-------------------------------------------------------------------------------------------------------------
-
  ## eXtreme Gradient Boosting (XGBoost)
 
 	- XGBoost builds a series of trees to make predictions, and each tree corrects errors made by the previous ones. 
@@ -456,6 +306,158 @@ Improvements to Basic Gradient Boosting
   
 https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx  
   
+------------------------------------------------------------------------------------------------------------
+
+## Adaptive (ADA) Boosting: Adapts from mistakes
+
+https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
+
+	--------------------------------------------------------------------------------------------------
+	1. Initialize Weights: Assign same weight to all obs ( 1/No. of obs ). The sum of weights is 1.
+ 		If there are 10 total obs then weight is 0.1 (1/10).
+		Actual weight for target "Yes" = +0.1
+		Actual weight for target "No" = -0.1 
+  
+  
+	2. Iterative Learning: In each iteration, a model is trained.
+ 		- Each tree learns from previous ones. Misclassified observations gain more weight in the next iteration.
+ 		- Correctly classified observations retain their weights. All weights are adjusted to sum to 1.
+   
+		- For each iteration compute accuracy: (1/2) * ln [ (1 - Total Error) / Total Error ] 
+			3 obs are misclassified out of 10 in the first iteration, the total error is 3/10.
+   			accuracy: 0.43
+   
+		- Recompute weights: Adjust weight for misclassified observation: 
+			correctly classified = Previous Weight * e^(-accuracy) = 0.07
+			wrongly classified   = Previous Weight * e^(+accuracy) = 0.15
+  
+		- Normalize weights: All weights are adjusted to sum to 1. Divide each weight by the sum of all weights.
+   			7 correctly classified and 3 wrongly classified, sum of weight = (0.07 X 7) + (0.15 X 3) =  0.92
+      			Normalize weights for correctly classified = 0.071
+			Normalize weights for wrongly   classified = 0.167
+  
+	3. Final Tree: Combine all models using weights.
+
+-------------------------------------------------------------------------------------
+  
+ ## Gradient Boosting Machine (GBM)
+
+	- GBM is ensemble methods that build models in a forward stepwise manner, using decision trees as base learners. 
+		The algorithm can be computationally intensive, making it a somewhat challenging learning model. 
+
+	- Pre-sorting approach to find best split which is computationally expensive.
+	- GBM stops splitting a node when it encounters a negative loss in the split. 
+		Therefore it is more of a greedy algorithm.
+
+ 
+	--------------------------------------
+	1. Initialize with a base model
+	2. Calculate residuals
+	3. Predict the residuals with learning rate (0 to 1) or weight of model
+	4. Combine previous models and check accuracy
+	5. Repeat #2,3,4 until target achieved
+	6. Final: Sum up all models
+ 
+ 
+	1. Y 	  = M(x) + error (Logistic Regression if dep is binay). get the weight as well
+  
+	2. Error  = G(x) + error2 (Regress error with other ind var. Apply linear regression as error is continuous. 
+				   Apply learning rate (0 to 1) or weight of the model.
+                  
+	3. Error2 = H(x) + error3 (continue the #2 until you get low error)
+  
+	4. Y 	  = M(x) + G(x) + H(x) + error3	(combine all model together)
+  
+	5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 	
+ 			(alpha, beta, gamma are weight / learning rates of each model)
+  
+	--------------------------------------
+  	Pseudo-code of the GBM algorithm
+	
+		1. Initialize the outcome
+		
+		2. Iterate from 1 to total number of trees
+	
+		  	2.1 Update the weights for targets based on previous run (higher for the ones mis-classified) 
+			[weight = 0.5*log[(1-error)/error]
+			It would indicate higher weights to trees with lower error rate.
+			
+		  	2.2 Fit the model on selected subsample of data
+		  
+		  	2.3 Make predictions on the full set of observations
+			
+		  	2.4 Update the output with current results taking into account the learning rate
+			
+		3. Return the final output.
+  
+	---------------------------------------------------------------------
+ 
+Gradient boosting involves three elements: 
+
+	1. A loss function to be optimized: 
+		- The loss function used depends on the type of problem being solved.
+		- It must be differentiable, but many standard loss functions are supported and you can define your own. 
+			For example, regression may use a squared error and classification may use logarithmic loss.
+		- A benefit of the gradient boosting framework is that a new boosting algorithm does not have to 
+			be derived for each loss function that may want to be used, instead, it is a generic enough 
+			framework that any differentiable loss function can be used.
+	
+	2. A weak learner to make predictions: 
+		- Decision trees are used as the weak learner in gradient boosting.
+		- Specifically regression trees are used that output real values for splits and whose output 
+			can be added together, allowing subsequent models outputs to be added and “correct” 
+			the residuals in the predictions.
+		- Trees are constructed in a greedy manner, choosing the best split points based on purity 
+			scores like Gini or to minimize the loss.
+		- Initially, such as in the case of AdaBoost, very short decision trees were used that only had 
+			a single split, called a decision stump. Larger trees can be used generally with 4-to-8 levels.
+		- It is common to constrain the weak learners in specific ways, such as a maximum number of layers, 
+			nodes, splits or leaf nodes.
+		- This is to ensure that the learners remain weak, but can still be constructed in a greedy manner.
+
+	3. An additive model to add weak learners to minimize the loss function:
+		- Trees are added one at a time, and existing trees in the model are not changed.
+		- A gradient descent procedure is used to minimize the loss when adding trees.
+		- Traditionally, gradient descent is used to minimize a set of parameters, such as the coefficients 
+			in a regression equation or weights in a neural network. After calculating error or loss, 
+			the weights are updated to minimize that error.
+		- Instead of parameters, we have weak learner sub-models or more specifically decision trees. After 
+			calculating the loss, to perform the gradient descent procedure, we must add a tree to 
+			the model that reduces the loss. We do this by parameterizing the tree, then modify the 
+			parameters of the tree and move in the right direction by reducing the residual loss.
+		- Generally this approach is called functional gradient descent or gradient descent with functions.
+
+	---------------------------------------------------------------------
+ 
+Improvements to Basic Gradient Boosting
+
+	- Gradient boosting is a greedy algorithm and can overfit a training dataset quickly.
+	- It can benefit from regularization methods that penalize various parts of the algorithm and generally 
+		improve the performance of the algorithm by reducing overfitting.
+	- In this this section we will look at 4 enhancements to basic gradient boosting:
+		1. Tree Constraints:
+			- It is important that the weak learners have skill but remain weak.
+			- There are a number of ways that the trees can be constrained.
+			- A good general heuristic is that the more constrained tree creation is, the more trees 
+				you will need in the model, and the reverse, where less constrained individual trees, 
+				the fewer trees that will be required.
+			- Below are some constraints that can be imposed on the construction of decision trees:
+				# Number of trees: generally adding more trees to the model can be very slow to overfit. 
+					The advice is to keep adding trees until no further improvement is observed.
+				# Tree depth: deeper trees are more complex trees and shorter trees are preferred. 
+					Generally, better results are seen with 4-8 levels.
+				# Number of nodes or number of leaves: like depth, this can constrain the size of tree, 
+					but is not constrained to a symmetrical structure if other constraints are used.
+				# Number of observations per split: imposes a minimum constraint on the amount of 
+					training data at a training node before a split can be considered
+				# Minimum improvement to loss:
+					is a constraint on the improvement of any split added to a tree
+		2. Shrinkage:
+		3. Random sampling:				
+		4. Penalized Learning:
+
+------------------------------------------------------------------------------------------------------------
+
 
 
       
