@@ -66,10 +66,12 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		- Log odds with a negative value indicating the odds of failure and 
 			a positive value showing higher chances of success.
 
-	- Sigmoid function: The inverse of the logit function. 1/(1+exp^-y)
+	- Sigmoid function: 1/(1+exp^-y) 
+ 		- The inverse of the logit function.
 		- The sigmoid function maps arbitrary real values back to the range [0, 1].
 		- Generalised form of logit function. For probability p, sigmoid(logit(p)) = p. 
 		 
+	- Cost Function: [{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}]
  
 ----------------------------------------------------------------------------------------------------------------------- 
 ## Statistical Derivation of Logistic Regression:
