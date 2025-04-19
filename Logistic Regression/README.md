@@ -50,7 +50,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		the strength of association between the predictor and the outcome.
   
 	- Log of Odds: log (p/(1-P))  	[Log output ranges from −∞ to ∞]
-		- This is nothing but the logit function.
+		- Log of Odds is also called logit function.
 		- Logit established a linear relationship between Predictors and Target.
 		- The logit function takes a probability (0 to 1) and 
 			converts it back into a linear combination of predictors.
