@@ -466,15 +466,15 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
   
 		It inflates standard errors, leading to unstable and unreliable coefficient estimates, 
   		making it difficult to determine the individual effect of each predictor on the outcome and 
-    		potentially leading to misleading conclusions about variable importance.
+		potentially leading to misleading conclusions about variable importance.
 		
 		The presence of multicollinearity makes the coefficient estimates highly sensitive to 
   		small changes in the data or model specification. Even a slight shift in the data can cause 
-    		the coefficients to fluctuate significantly, making the model's interpretation unreliable.
+		the coefficients to fluctuate significantly, making the model's interpretation unreliable.
 
 		Multicollinearity does not directly affect the goodness-of-fit statistics of the model, 
   		such as R-squared or the overall F-test. 
-    		The model can still make accurate predictions despite the presence of multicollinearity.
+		The model can still make accurate predictions despite the presence of multicollinearity.
 
 		Test: VIF 
   		VIF: [1.0 / (1.0 - R Squared)]
@@ -510,11 +510,11 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 	4. Homoscedasticity of residuals /equal variance of residuals
 		Homoscedasticity in the context of residuals refers to the assumption that the variance of 
   		the error terms (residuals) is constant across all levels of the independent variables 
-    		in a regression model.
+		in a regression model.
 
 		Issue: Homoscedasticity is necessary for accurately estimating the standard errors of 
   			the regression coefficients. The standard errors of the coefficients may be biased, 
-     			leading to unreliable hypothesis tests and confidence intervals.
+			leading to unreliable hypothesis tests and confidence intervals.
 			Homoscedasticity ensures that the estimated coefficients are unbiased and have minimum variance.
   
 		Example	: Family income to predict luxury spending. Residuals are very small for low values of 
@@ -551,13 +551,13 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
   			Include lagged values of the dependent variable or independent variables in the regression model. 
 			Transform the Data: Apply mathematical transformations to the data to reduce autocorrelation. 
 			Use Time Series Models: If the data is time-series, consider using models specifically designed 
-     			for time series analysis, such as ARIMA models      
+			for time series analysis, such as ARIMA models      
 
 
 	6. Mean of residuals is zero :
 		The sum of the residuals is always zero when an intercept is included in the regression model. 
   		This is because the regression line is fitted in a way that the total distance of the data points 
-    		above the line is equal to the total distance of the data points below the line.
+		above the line is equal to the total distance of the data points below the line.
 		If a model without an intercept is used, the residuals will not necessarily have a mean of zero.
 		The mean of residuals is zero is a direct result of how the least squares method calculates 
   		the regression line. It's not an assumption that needs to be tested.
@@ -569,7 +569,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
    
 		Test: Plot of residuals against the fitted values. If the residuals are randomly scattered around zero, 
   			with no apparent trend, it suggests that the mean-zero assumption is met. 
-     			A flat, horizontal line at zero in this plot would indicate a good fit.
+			A flat, horizontal line at zero in this plot would indicate a good fit.
 			This can be done by calculating the mean of the residuals and comparing it to zero.
   
 		Solution: The sum of residuals can always be zero; if they had some mean that differed from zero 
