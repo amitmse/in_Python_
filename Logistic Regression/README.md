@@ -46,7 +46,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	- Odds Ratio = P/(1-P)		[Odds output range from 0 to ∞ ]
 		odds = 0 when p = 0     [ 0 / (1-0) = 0] 
 		odds = ∞ when p = 1	[ when denominator is very small number]
-		Ratio of the odds of an event occurring in one group compared to another,
+		Odds of an event occurring in one group compared to another,
 		provides a measure of the strength of association between 
 		the predictor and the outcome.
   
