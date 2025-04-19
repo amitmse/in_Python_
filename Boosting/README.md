@@ -95,10 +95,18 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 			- use permutation based importance.
 			- use shap based importance.
 
-	- Feature Selection:
-		XGBoost uses a few criteria for feature selection. 
+	- Feature Selection: Refer below Similarity Score.
+		XGBoost uses a few criteria for feature selection.		
 		Feature importance scores: gain, cover, weight.
 			- Gain: Average loss reduction when using a feature for splitting.
+				- XGBoost considers the impurity (e.g., Gini impurity, entropy) of the parent node 
+					(before the split) and the impurity of the child nodes (after the split). 
+				- Gain Calculation: Difference between the impurity of the parent node and the weighted 
+					sum of the impurity of the child nodes. 
+					This represents the reduction in impurity achieved by the split. 
+				- Feature Importance: The feature with the highest gain value is considered the most important 
+					feature for that particular split and, cumulatively, for the entire tree.
+					https://xgboost.readthedocs.io/en/latest/tutorials/model.html
 			- Cover: Indicates how many times a feature is used to split data across all trees, 
 				weighted by the number of data points that go through those splits. 
 			- Weight: Represents the total number of times a feature is used to split data across all trees.
