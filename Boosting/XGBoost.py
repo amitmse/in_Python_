@@ -52,7 +52,8 @@ shap.decision_plot(explainer.expected_value[0], shap_values[0], X_test.columns)
 
 #### https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability
 
-
+# prediction's explanation
+shap.plots.waterfall(shap_values[0])
 
 
 
