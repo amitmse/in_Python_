@@ -283,7 +283,7 @@ Improvements to Basic Gradient Boosting
 				use the SULOV (Searching for Uncorrelated List of Variables) method to ensure low redundancy 
 				and high relevance in the selection process. 
 			- Benefits: Improved Model Performance, Reduced Complexity, Faster Training.
-			- Limitation: mRMR may not capture feature interactions, as XGBoost can exploit interactions between features.
+			- Limitation: May not capture feature interactions.
  
  		Featurewiz: It's feature selection is powered by recursive XGBoost ranking.  
 		- Start with Everything. Feed the entire dataset into the selection process.
