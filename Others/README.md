@@ -506,30 +506,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		Solution: Transforming the dependent or independent variables, Use robust statistical methods 
   				that are less sensitive to non-normality may be appropriate.
     
-		
-	4. Mean of residuals is zero :
-		The sum of the residuals is always zero when an intercept is included in the regression model. 
-  		This is because the regression line is fitted in a way that the total distance of the data points 
-    		above the line is equal to the total distance of the data points below the line.
-		If a model without an intercept is used, the residuals will not necessarily have a mean of zero.
-		The mean of residuals is zero is a direct result of how the least squares method calculates 
-  		the regression line. It's not an assumption that needs to be tested.
-  
-		Issue: Error terms has zero mean and doesn’t depend on the independent variables. 
-			Thus, there must be no relationship between the independent variable and the error term.
-			A model with a zero mean for residuals suggests that the model is, on average, 
-   			neither overestimating nor underestimating the response variable
-   
-		Test: Plot of residuals against the fitted values. If the residuals are randomly scattered around zero, 
-  			with no apparent trend, it suggests that the mean-zero assumption is met. 
-     			A flat, horizontal line at zero in this plot would indicate a good fit.
-			This can be done by calculating the mean of the residuals and comparing it to zero.
-  
-		Solution: The sum of residuals can always be zero; if they had some mean that differed from zero 
-  			you could make it zero by adjusting the intercept by that amount. 
-  
-	
-	5. Homoscedasticity of residuals /equal variance of residuals
+	4. Homoscedasticity of residuals /equal variance of residuals
 		Homoscedasticity in the context of residuals refers to the assumption that the variance of 
   		the error terms (residuals) is constant across all levels of the independent variables 
     		in a regression model.
@@ -550,7 +527,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		Solution: Weighted least squares regression.
 			  Transform the dependent variable using one of the variance stabilizing transformations
 	
-	6. No autocorrelation (serial correlation) of residuals :
+	5. No autocorrelation (serial correlation) of residuals :
 		Issue: correlation with own lag (stock price today linked with yesterday's price). if above fails 
 		 	then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not 
 			bias the OLS coefficient estimates, the standard errors tend to be underestimated 
@@ -574,7 +551,29 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 			Transform the Data: Apply mathematical transformations to the data to reduce autocorrelation. 
 			Use Time Series Models: If the data is time-series, consider using models specifically designed 
      			for time series analysis, such as ARIMA models      
-	
+
+
+	6. Mean of residuals is zero :
+		The sum of the residuals is always zero when an intercept is included in the regression model. 
+  		This is because the regression line is fitted in a way that the total distance of the data points 
+    		above the line is equal to the total distance of the data points below the line.
+		If a model without an intercept is used, the residuals will not necessarily have a mean of zero.
+		The mean of residuals is zero is a direct result of how the least squares method calculates 
+  		the regression line. It's not an assumption that needs to be tested.
+  
+		Issue: Error terms has zero mean and doesn’t depend on the independent variables. 
+			Thus, there must be no relationship between the independent variable and the error term.
+			A model with a zero mean for residuals suggests that the model is, on average, 
+   			neither overestimating nor underestimating the response variable
+   
+		Test: Plot of residuals against the fitted values. If the residuals are randomly scattered around zero, 
+  			with no apparent trend, it suggests that the mean-zero assumption is met. 
+     			A flat, horizontal line at zero in this plot would indicate a good fit.
+			This can be done by calculating the mean of the residuals and comparing it to zero.
+  
+		Solution: The sum of residuals can always be zero; if they had some mean that differed from zero 
+  			you could make it zero by adjusting the intercept by that amount. 
+ 
 	7. X variables and residuals are uncorrelated 
 	
 	8. Number of observations must be greater than number of Xs
