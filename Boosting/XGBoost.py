@@ -49,13 +49,13 @@ shap.plots.force(explainer.expected_value[1], shap_values[1][6, :], X_test.iloc[
 shap.decision_plot(explainer.expected_value[1], shap_values[1], X_test.columns)
 
 shap.decision_plot(explainer.expected_value[0], shap_values[0], X_test.columns)
-
 #### https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability
+
+# -----------------------------------------------------------------------------
 
 # prediction's explanation
 shap.plots.waterfall(shap_values[0])
-
-
+#### https://github.com/shap/shap
 
 
 
