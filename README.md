@@ -23,7 +23,7 @@
 
             - Explain Naive Bayes Algorithms
 
-6. **Boosting (ADA & GBM)**: https://github.com/amitmse/in_Python_/tree/master/Boosting#readme
+6. **Boosting (XGboost, ADA & GBM)**: https://github.com/amitmse/in_Python_/tree/master/Boosting#readme
 
             - Explain Boosting Algorithms
             - Exmaple: Test Run 
