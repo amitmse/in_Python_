@@ -425,14 +425,16 @@ https://www.johndcook.com/blog/distribution_chart/
 https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 
 -----------------------------------------------------------------------------------------------------------------------------------
-## Covariance:
+## Covariance: 
+	Covariance(X,Y) = E[(X−EX)(Y−EY)] = E[XY]−(EX)(EY)
+ 	correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
 - It refers to the measure of how two variables will change (directional relationship) when they are compared to each other
 - It measures the Variance between two variables
 - Covariance indicates the direction of the linear relationship between variables. Correlation on the other hand measures 
    both the strength and direction of the linear relationship between two variables. 
 
 ## Correlation vs Regression:
-- Correlation 
+- Correlation: 
 	- It measures the degree of relationship between two variables. 
 	- correlation doesn’t capture causality.
 	- Correlation between x and y is the same as the one between y and x.
