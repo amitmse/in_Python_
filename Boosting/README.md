@@ -245,6 +245,28 @@ Improvements to Basic Gradient Boosting
 			- use permutation based importance.
 			- use shap based importance.
 
+	- Feature Selection: 
+ 		Featurewiz: It's feature selection is powered by recursive XGBoost ranking.  
+		- Start with Everything. Feed the entire dataset into the selection process.
+		- XGBoost Feature Ranking. Train an XGBoost model to assess feature importance.
+		- Select Key Features. Extract the most significant features based on importance scores.
+		- Prune and Repeat. Keep only the top-ranked features and rerun the process on a refined subset.
+		- Iterate Until Optimal. Continue the cycle until a stopping criterion 
+			(like stability or diminishing returns) is met.
+		- Finalize the Feature Set. Merge selected features from all cycles, eliminating duplicates 
+			to form the final optimized set.
+
+		Split-Driven Recursive: This improved method introduces validation-based feature selection, 
+  			leveraging Polars for speed and efficiency.
+		- Split Data for Validation: The dataset is divided into training and validation sets.
+		- Feature Ranking (with Validation): Features are ranked based on importance in the training set 
+			while evaluating performance on the validation set.
+		- Select Key Features (with Validation): Features are chosen based on both importance scores 
+			and how well they generalize.
+		- Repeat with New Splits: The process is rerun multiple times with different train/validation splits.
+		- Stabilized Feature Set: Selected features from all runs are merged, removing duplicates, 
+			leading to a more robust and reliable selection.
+
 	- Handling Missing Data: It can manage missing data in both the training and evaluation phases.
  
 	- Parallel Processing: Parallel and distributed computing, deliver high efficiency.
@@ -280,18 +302,6 @@ Improvements to Basic Gradient Boosting
 			the previous trees, effectively reducing the residual errors. 
 		- Iterating: This process of calculating residuals, training a new tree, and updating predictions is 
 			repeated iteratively until the desired level of accuracy is achieved. 
-
-	- Feature Selection: 
- 		Featurewiz
-		- Start with Everything. Feed the entire dataset into the selection process.
-		- XGBoost Feature Ranking. Train an XGBoost model to assess feature importance.
-		- Select Key Features. Extract the most significant features based on importance scores.
-		- Prune and Repeat. Keep only the top-ranked features and rerun the process on a refined subset.
-		- Iterate Until Optimal. Continue the cycle until a stopping criterion 
-			(like stability or diminishing returns) is met.
-		- Finalize the Feature Set. Merge selected features from all cycles, eliminating duplicates 
-			to form the final optimized set.
-
     
 	- Quality score or Similarity score for the Residuals:
  		It's used to split. Info gain 
