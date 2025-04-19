@@ -273,7 +273,16 @@ Improvements to Basic Gradient Boosting
 			the most important information and reducing overfitting.
    
 			- Relevance: mRMR aims to select features that have a strong relationship with the target variable 
-   				(high correlation).
+   					(high correlation).
+				The F-statistic, which is derived from ANOVA if the target is discrete or correlation 
+					if the target is categorical.
+				The F-statistic determines the degree of linear association between the features and the target. 
+				If the target is categorical, the F-statistic is calculated using Scikit-learn’s f_classif function. 
+				If the target is continuous, the F-statistic is determined using f_regression.
+				Mutual information: Quantifies how much we know about one variable, by examining the values of a 
+					second variable. In other words, it measures the non-linear association between features. 
+					Higher values indicate stronger associations.
+
 			- Redundancy: It also strives to minimize the correlation between the selected features themselves, 
 				meaning they should not be highly correlated with each other.
 			- Feature Ranking: mRMR ranks features based on a score that considers both relevance and redundancy. 
