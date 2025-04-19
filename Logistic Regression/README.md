@@ -39,7 +39,7 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic_Regression.py
 
 -----------------------------------------------------------------------------------------------------------------------
-## Few Points
+## Points
 
 	- Why use odds and log-odds, not probability?
  	- Probability output ranges from 0 to 1  
