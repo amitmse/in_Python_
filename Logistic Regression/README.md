@@ -46,6 +46,10 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	- Odds Ratio = P/(1-P)		[Odds output range from 0 to ∞ ]
 		odds = 0 when p = 0     [ 0 / (1-0) = 0] 
 		odds = ∞ when p = 1	[ 1 / (0-1) = ∞  where 0-1 is very small number]
+		Ratio of the odds of an event occurring in one group compared to another,
+		provides a measure of the strength of association between 
+		the predictor and the outcome.
+  
   
 	- Log of Odds: log (p/(1-P))  	[Log output ranges from −∞ to ∞]
 		- This is nothing but the logit function.
@@ -61,6 +65,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		- One unit increase in logit means exactly is still challenging. 
 			Thus, convert regression coefficients to something easier for interpretation, 
 			like odds ratios. This can be done easily by exponentiating the coefficient.
+		- Log odds with a negative value indicating the odds of failure and 
+			a positive value showing higher chances of success.
 
 	- Sigmoid function: The inverse of the logit function.
 		- The sigmoid function maps arbitrary real values back to the range [0, 1].
