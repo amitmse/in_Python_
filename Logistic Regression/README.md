@@ -127,9 +127,9 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	
 	Cost function :
 		- Log Loss is cost function of logistic regression.
-    		- It quantifies the error of a logistic regression by assessing how effectively it separates actual 
-      		  from predicted. Error = Predicted – Actual.
-    
+		- It quantifies the error of a logistic regression by assessing how effectively it separates actual 
+			from predicted. Error = Predicted – Actual.
+
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Gradient of Log Likelihood Function : 
