@@ -1,5 +1,128 @@
 
-XG Boost: 
+#### XG Boost ############
+#########################
+
+pip install shap
+
+
+import shap
+import pandas as pd
+import numpy as np
+shap.initjs()
+
+customer = pd.read_csv("data/customer_churn.csv")
+customer.head()
+
+from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
+
+X = customer.drop("Churn", axis=1) # Independent variables
+y = customer.Churn # Dependent variable
+
+# Split into train and test 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
+
+# Train a machine learning model
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier()
+clf.fit(X_train, y_train)
+
+# Make prediction on the testing data
+y_pred = clf.predict(X_test)
+
+# Classification Report
+print(classification_report(y_pred, y_test))
+
+xplainer = shap.Explainer(clf)
+shap_values = explainer.shap_values(X_test)
+
+shap.summary_plot(shap_values, X_test)
+
+shap.summary_plot(shap_values[0], X_test)
+
+shap.dependence_plot("Subscription Length", shap_values[0], X_test,interaction_index="Age")
+
+shap.plots.force(explainer.expected_value[0], shap_values[0][0,:], X_test.iloc[0, :], matplotlib = True)
+
+shap.plots.force(explainer.expected_value[1], shap_values[1][6, :], X_test.iloc[6, :],matplotlib = True)
+
+shap.decision_plot(explainer.expected_value[1], shap_values[1], X_test.columns)
+
+shap.decision_plot(explainer.expected_value[0], shap_values[0], X_test.columns)
+
+#### https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			https://www.quora.com/What-is-the-difference-between-the-R-gbm-gradient-boosting-machine-and-xgboost-extreme-gradient-boosting
 			https://www.quora.com/When-would-one-use-Random-Forests-over-Gradient-Boosted-Machines-GBMs/answer/Tianqi-Chen-1
 			https://www.quora.com/What-makes-xgboost-run-much-faster-than-many-other-implementations-of-gradient-boosting/answer/Tianqi-Chen-1
