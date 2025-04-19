@@ -287,8 +287,10 @@ Improvements to Basic Gradient Boosting
 		- XGBoost Feature Ranking. Train an XGBoost model to assess feature importance.
 		- Select Key Features. Extract the most significant features based on importance scores.
 		- Prune and Repeat. Keep only the top-ranked features and rerun the process on a refined subset.
-		- Iterate Until Optimal. Continue the cycle until a stopping criterion (like stability or diminishing returns) is met.
-		- Finalize the Feature Set. Merge selected features from all cycles, eliminating duplicates to form the final optimized set.
+		- Iterate Until Optimal. Continue the cycle until a stopping criterion 
+			(like stability or diminishing returns) is met.
+		- Finalize the Feature Set. Merge selected features from all cycles, eliminating duplicates 
+			to form the final optimized set.
 
     
 	- Quality score or Similarity score for the Residuals:
@@ -307,8 +309,8 @@ Improvements to Basic Gradient Boosting
 	- Loss Functions
 		- Logistic Loss: Commonly employed in binary classification problems. It calculates the likelihood of 
 			the predicted class, converting it to a probability with a sigmoid function.
- 		- Softmax Loss: Generally used for multi-class classification tasks. It calculates a probability distribution 
-			for each class and maximizes the likelihood across all classes.
+ 		- Softmax Loss: Generally used for multi-class classification tasks. It calculates a 
+			probability distribution for each class and maximizes the likelihood across all classes.
 		- Adaptive Log Loss (ALogLoss): Introduced in XGBoost, this loss function provides a balance between speed 
 			and accuracy. It's derived by approximating the Poisson likelihood.
 
@@ -361,7 +363,8 @@ Improvements to Basic Gradient Boosting
 			of these branches being pruned. It prevents overfitting and having less instances in leaf nodes.
 
 			Lambda value is in the denominator in the output formula, as the lambda increases, the output value 
-   			will decrease. The correct prediction will be reached with more iterations, that is, the number of trees.
+   			will decrease. The correct prediction will be reached with more iterations, 
+			that is, the number of trees.
 
 		- Calculating these similarity and gain scores would take a long time on large datasets, 
 			xgboost divides the data into quantiles instead of examining each value in the data.
@@ -377,7 +380,8 @@ Improvements to Basic Gradient Boosting
 			the bottom to the top. If the bottom branch is not pruned, the upper branches are not examined.
 
 		- Prediction is made after the pruning process is completed. The tree prediction is multiplied by 
-			the learning rate and added to the prediction value of the first tree, and a new prediction value is formed. 
+			the learning rate and added to the prediction value of the first tree, 
+			and a new prediction value is formed. 
 			These operations continue until the specified number of iterations, namely n_estimators 
 			(number of boosting trees).
    
