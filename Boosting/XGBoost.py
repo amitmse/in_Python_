@@ -57,14 +57,54 @@ shap.decision_plot(explainer.expected_value[0], shap_values[0], X_test.columns)
 shap.plots.waterfall(shap_values[0])
 #### https://github.com/shap/shap
 
+# -----------------------------------------------------------------------------
+
+pip install lime shap
+
+
+import numpy as np
+import sklearn
+import shap
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.pipeline import make_pipeline
+from lime.lime_text import LimeTextExplainer
+
+X, y = shap.datasets.imdb()
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=7, stratify=y)
+
+vectorizer = TfidfVectorizer(min_df=10)
+X_train_vec = vectorizer.fit_transform(X_train).toarray()
+X_test_vec = vectorizer.transform(X_test).toarray()
+
+print(len(y_train), len([t for t in y_train if t])) # 20000 10000
+print(len(y_test), len([t for t in y_test if t])) # 5000 2500
+
+model = RandomForestClassifier()
+model.fit(X_train_vec, y_train)
+
+pipeline = make_pipeline(vectorizer, model)
+
+class_names = ['negative', 'positive']
+explainer = LimeTextExplainer(class_names=class_names)
+
+ind = 6
+text = X_test[ind]
+print(text)
+# This amazing documentary gives us a glimpse into the lives of the
+# brave women in Cameroun's judicial system-- policewomen, lawyers and
+# judges. Despite tremendous difficulties-- lack of means, the desperate
+# poverty of the people, multiple languages and multiple legal precedents
+# depending on the region of the country and the religious/ethnic
+# background of the plaintiffs and defendants-- these brave, [...]
+
+exp = explainer.explain_instance(text, pipeline.predict_proba, num_features=6)
+exp.show_in_notebook(text=True)
 
 
 
-
-
-
-
-
+https://medium.com/nlplanet/two-minutes-nlp-explain-predictions-with-lime-aec46c7c25a2
 
 
 
