@@ -491,11 +491,12 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 
 	3. Normality of residuals : Differences between observed and predicted values
 		In linear regression, the assumption that "errors follow a normal distribution" 
-  		means the difference between the observed values and the values predicted by the model 
-    		(the residuals) are assumed to be distributed according to a normal distribution. 
-      		This assumption is crucial for the validity of statistical tests used in linear regression, 
+		means the difference between the observed values and the values predicted by the model 
+		(the residuals) are assumed to be distributed according to a normal distribution. 
+		
+  		This assumption is crucial for the validity of statistical tests used in linear regression, 
 		such as t-tests and ANOVA, which rely on the normality of the errors to provide accurate 
-  		p-values and hypothesis tests for regression coefficients and confidence intervals.
+		p-values and hypothesis tests for regression coefficients and confidence intervals.
      
 		Issue: OLS estimators won’t have the desirable BLUE property. 
   		Standard errors and t-values used to calculate the statistical significance of regression 
