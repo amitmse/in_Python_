@@ -464,48 +464,50 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 	2. No perfect multicollinearity :
 		Issue: Regression coefficient variance will increase.
   
-		It inflates standard errors, leading to unstable and unreliable coefficient estimates, 
-  		making it difficult to determine the individual effect of each predictor on the outcome and 
-		potentially leading to misleading conclusions about variable importance.
+			It inflates standard errors, leading to unstable and unreliable coefficient estimates, 
+  			making it difficult to determine the individual effect of each predictor on the outcome and 
+			potentially leading to misleading conclusions about variable importance.
 		
-		The presence of multicollinearity makes the coefficient estimates highly sensitive to 
-  		small changes in the data or model specification. Even a slight shift in the data can cause 
-		the coefficients to fluctuate significantly, making the model's interpretation unreliable.
+			The presence of multicollinearity makes the coefficient estimates highly sensitive to 
+  			small changes in the data or model specification. Even a slight shift in the data can cause 
+			the coefficients to fluctuate significantly, making the model's interpretation unreliable.
 
-		Multicollinearity does not directly affect the goodness-of-fit statistics of the model, 
-  		such as R-squared or the overall F-test. 
-		The model can still make accurate predictions despite the presence of multicollinearity.
+			Multicollinearity does not directly affect the goodness-of-fit statistics of the model, 
+  			such as R-squared or the overall F-test. 
+			The model can still make accurate predictions despite the presence of multicollinearity.
 
 		Test: VIF 
-  		VIF: [1.0 / (1.0 - R Squared)]
-      		VIF = 1/T  (T refers to Tolerance = 1 – R² which is unexplained portion)
-		R^2 is regressing each independent variable on the other independent variables.
+  			VIF: [1.0 / (1.0 - R Squared)]
+      			VIF = 1/T  (T refers to Tolerance = 1 – R² which is unexplained portion)
+			R^2 is regressing each independent variable on the other independent variables.
   
   		Tolerance: It measures the influence of one independent variable on all other independent variables.
-		It measures of how much a predictor variable's variance is not explained (1 – R²) by the other predictor variables 
-  		in the model. It essentially assesses the degree to which a variable is independent of the others.
+			It measures of how much a predictor variable's variance is not explained (1 – R²) by 
+			the other predictor variables in the model. 
+			It essentially assesses the degree to which a variable is independent of the others.
            
 		Solution: Transformations of independent variables
 		
 ### For Error Tearm: 4
 
 	3. Normality of residuals : Differences between observed and predicted values
-		In linear regression, the assumption that "errors follow a normal distribution" 
-		means the difference between the observed values and the values predicted by the model 
-		(the residuals) are assumed to be distributed according to a normal distribution. 
-		
-  		This assumption is crucial for the validity of statistical tests used in linear regression, 
-		such as t-tests and ANOVA, which rely on the normality of the errors to provide accurate 
-		p-values and hypothesis tests for regression coefficients and confidence intervals.
+			In linear regression, the assumption that "errors follow a normal distribution" 
+			means the difference between the observed values and the values predicted by the model 
+			(the residuals) are assumed to be distributed according to a normal distribution. 
      
-		Issue: OLS estimators won’t have the desirable BLUE property. 
-  		Standard errors and t-values used to calculate the statistical significance of regression 
-  		parameters may be inaccurate, leading to potentially misleading conclusions.
-    
+		Issue: OLS estimators won’t have the desirable BLUE property.
+  
+  			This assumption is crucial for the validity of statistical tests used in linear regression, 
+			such as hypothesis tests, t-tests, p-values and ANOVA, which rely on the normality of 
+			the errors to provide accurate and for regression coefficients and confidence intervals.
+  
+  			Standard errors and t-values used to calculate the statistical significance of regression 
+  			parameters may be inaccurate, leading to potentially misleading conclusions.
+
   		Test: Jarque-Bera test, Kolmogorov-Smirnov Test, Shapiro-Wilk test, histograms or Q-Q plots
     
 		Solution: Transforming the dependent or independent variables, Use robust statistical methods 
-  				that are less sensitive to non-normality may be appropriate.
+  			that are less sensitive to non-normality may be appropriate.
     
 	4. Homoscedasticity of residuals /equal variance of residuals
 		Homoscedasticity in the context of residuals refers to the assumption that the variance of 
