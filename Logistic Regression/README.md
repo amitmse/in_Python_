@@ -38,6 +38,36 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
 https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic_Regression.py
 
+-----------------------------------------------------------------------------------------------------------------------
+## Few Points
+
+	- Why use odds and log-odds, not probability?
+ 	- Probability output ranges from 0 to 1  
+	- Odds Ratio = P/(1-P)		[Odds output range from 0 to ∞ ]
+		odds = 0 when p = 0     [ 0 / (1-0) = 0] 
+		odds = ∞ when p = 1	[ 1 / (0-1) = ∞  where 0-1 is very small number]
+  
+	- Log of Odds: log (p/(1-P))  	[Log output ranges from −∞ to ∞]
+		- This is nothing but the logit function.
+		- Logit established a linear relationship between Predictors and Target.
+		- The logit function takes a probability (0 to 1) and 
+			converts it back into a linear combination of predictors.
+ 		- Converting a sigmoid function to logit for an easier interpretation of 
+			the output results in the logistic model equation.
+		- Converting the probability to the logit (log odds), it transforms 
+			the nonlinear relationship into a linear one, making it easier to interpret. 
+		- The coefficients in the logit model tell us how a one-unit change in a 
+			predictor affects the log odds (i.e., logit) of the outcome.
+		- One unit increase in logit means exactly is still challenging. 
+			Thus, convert regression coefficients to something easier for interpretation, 
+			like odds ratios. This can be done easily by exponentiating the coefficient.
+
+	- Sigmoid function: The inverse of the logit function.
+		- The sigmoid function maps arbitrary real values back to the range [0, 1].
+		- Generalised form of logit function.
+  			For probability p, sigmoid(logit(p)) = p. 
+		 1/(1+exp^-y)
+ 
 ----------------------------------------------------------------------------------------------------------------------- 
 ## Statistical Derivation of Logistic Regression:
 ### Model Equation:
