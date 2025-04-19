@@ -245,7 +245,46 @@ Improvements to Basic Gradient Boosting
 			- use permutation based importance.
 			- use shap based importance.
 
-	- Feature Selection: 
+	- Feature Selection:
+		XGBoost uses a few criteria for feature selection. 
+		Feature importance scores: gain, cover, weight.
+			- Gain: Average loss reduction when using a feature for splitting.
+			- Cover: Indicates how many times a feature is used to split data across all trees, 
+				weighted by the number of data points that go through those splits. 
+			- Weight: Represents the total number of times a feature is used to split data across all trees.
+   			Access above using the get_feature_importance() method after training your XGBoost model.
+  
+		Thresholding above scores: Recursive Feature Elimination (RFE), SHAP values. 
+			You can set a threshold on the feature importance scores and select features that exceed that threshold. 
+			The `SelectFromModel` class in Scikit-learn can be used to apply this threshold-based selection.
+
+		Recursive Feature Elimination (RFE): It iteratively removes features based on their importance 
+				and evaluates the model's performance on the remaining features. 
+			This can help identify the most relevant features while improving model performance and 
+				reducing training time. 
+    
+		SHAP Values (SHapley Additive exPlanations): values provide a way to understand how each feature contributes 
+				to the model's predictions.
+			They can help in identifying the most important features and understanding their impact on the model. 
+ 
+		mRMR (Minimum Redundancy, Maximum Relevance): It's a feature selection algorithm that identifies 
+			the most relevant features for predicting the target variable while minimizing redundancy 
+			between selected features. This process improves model performance by focusing on 
+			the most important information and reducing overfitting.
+   
+			- Relevance: mRMR aims to select features that have a strong relationship with the target variable 
+   				(high correlation).
+			- Redundancy: It also strives to minimize the correlation between the selected features themselves, 
+				meaning they should not be highly correlated with each other.
+			- Feature Ranking: mRMR ranks features based on a score that considers both relevance and redundancy. 
+			- Selection Process: The algorithm iteratively selects features, starting with the highest-ranking feature, 
+				and adds features that maximize the score. 
+			- SULOV Method: Some implementations, like those in Featurewiz, 
+				use the SULOV (Searching for Uncorrelated List of Variables) method to ensure low redundancy 
+				and high relevance in the selection process. 
+			- Benefits: Improved Model Performance, Reduced Complexity, Faster Training.
+			- Limitation: mRMR may not capture feature interactions, as XGBoost can exploit interactions between features.
+ 
  		Featurewiz: It's feature selection is powered by recursive XGBoost ranking.  
 		- Start with Everything. Feed the entire dataset into the selection process.
 		- XGBoost Feature Ranking. Train an XGBoost model to assess feature importance.
