@@ -455,12 +455,12 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		guaranteeing that the resulting estimates are BLUE. 
 	- Best Linear Unbiased Estimator (BLUE) refers to the Ordinary Least Squares (OLS) estimator.	
   	- Why OLS is BLUE:
+		- Most Efficient (Best): Because OLS has the smallest variance, it is considered 
+  				the most efficient estimator for estimating the regression coefficients. 
+		- Linear: An estimator is linear.   
 		- Unbiasedness: The OLS estimator is unbiased under the Gauss-Markov assumptions. 
 		- Minimizes Variance: The Gauss-Markov theorem guarantees that the OLS estimator 
 				has the smallest variance among all unbiased linear estimators. 
-		- Most Efficient (Best): Because OLS has the smallest variance, it is considered 
-  				the most efficient estimator for estimating the regression coefficients. 
-		- Linear: An estimator is linear.
 
 ## Assumptions of Linear regression: 6
 
