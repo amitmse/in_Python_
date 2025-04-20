@@ -902,6 +902,29 @@ the split would be on Gender only.
 
 	-------------------------------------------------------------------------------------------------------------------
 
+	SS 1/23:
+	- Principle 1: Model identification and model risk classification
+	- Principle 2: Governance
+	- Principle 3: Model development, implementation and use
+	- Principle 4: Independent model validation
+	- Principle 5: Model risk mitigants
+
+	--------------------------------------------------------
+
+	- Group Model Risk Standards (GMRS): It state how things must be done to meet the requirements set out in the GMRP.
+	- Group Model Risk Policy (GMRP): It sets out requirements and responsibilities for the identification, measurement, and monitoring of Model Risk.
+	- Model Family Standards (MFS): Model Family Standards state how things must be done within a given model family.
+
+	--------------------------------------------------------
+ 
+	Model Risk Policy and Governance:
+	- Responsible for ongoing assessment of the model risk management framework
+	- Responsible for preparing model risk oversight reporting
+	- Responsible for the governance and execution of the annual status assessment for models
+	- Responsible for preparing Group’s model risk assessments and Group’s model risk profile reporting
+
+	------------------------------------------------------------------------------------------------------------------- 
+
  	Regulators expect ML models to comply with the standards of SR 11-7 part of model risk management (MRM).
 	
 	- Conceptual Soundness: Assess the quality of the model design and construction, limitations,
