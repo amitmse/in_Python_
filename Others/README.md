@@ -893,10 +893,8 @@ the split would be on Gender only.
 
 	----------------------------------------------------------------------------------------------------
  
-	- Any good model always has weakness
-	- Where does this model fail?
-	- What are its hidden weaknesses?
-	- Under what conditions does it break down?
+	- Any good model always has weakness or hidden weaknesses.
+	- Where does this model fail and under what conditions?	
 	- How can it be exploited or misused?
  	- Find a blind spots before they become costly failures
 
