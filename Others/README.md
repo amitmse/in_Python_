@@ -539,7 +539,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		Test	: Breush-Pagan test, Goldfeld-Quandt, Koenker-Bassett (generalized Breusch-Pagan)
 			  Breush-Pagan: Calculate the Square the residuals, and Regress it on the independent variables.
   
-		Solution: Weighted least squares regression.
+		Solution: Weighted least squares regression (heavier weights given to smaller error variances)
 			  Transform the dependent variable using one of the variance stabilizing transformations
 	
 	5. No autocorrelation (serial correlation) of residuals :
