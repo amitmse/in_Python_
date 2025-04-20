@@ -614,12 +614,12 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 	
 # Model Metrics:
 - beta(x) 	= covariance(x,y) / variance(x)
-- correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
+- correlation(x,y)= covariance(x,y) / [variance(x) * variance(y)]
 - TSS 		= SUM[y-mean(y)]^2
 - RSS 		= SUM[y-predicted(y)]^2
 - R Squared	= 1.0 - (RSS/TSS)
-- AIC		= (No of variable*2)               - (2*-Log Likelihood)
-- BIC		= {No of variable*log(No of obs)}  - (2*-Log Likelihood)
+- AIC		= ( No of variable * 2)             - ( 2 * -Log Likelihood )
+- BIC		= { No of variable * log(No of obs)}  - ( 2* -Log Likelihood )
 - VIF 		= 1.0 / (1.0 - R Squared)
 - Gini/Somer’s D = [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
 - Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]       
@@ -653,7 +653,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		- precision is the number of correct positive results divided by the number of all positive results returned by the classifier. precision is the measure of how accurate the classifier’s prediction of a specific class
 		- recall is the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive). recall is the measure of the classifier’s ability to identify a class.
 	 
-			F1-Score : 2*TP	/ (2TP + FP + FN) = [2 * (Precision * Recall) / (Precision + Recall)]
+			F1-Score : 2 * TP / (2TP + FP + FN) = [2 * (Precision * Recall) / (Precision + Recall)]
 	- If the classifier predicts the minority class but the prediction is erroneous and false-positive increases, the precision metric will be low and so as F1 score. Also, if the classifier identifies the minority class poorly, i.e. more of this class wrongfully predicted as the majority class then false negatives will increase, so recall and F1 score will low. F1 score only increases if both the number and quality of prediction improves. F1 score keeps the balance between precision and recall and improves the score only if the classifier identifies more of a certain class correctly.
 	
 - Precision/Specificity: how many selected instances are relevant.
