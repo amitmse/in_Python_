@@ -912,7 +912,8 @@ the split would be on Gender only.
 	--------------------------------------------------------
 
 	- Group Model Risk Standards (GMRS): It state how things must be done to meet the requirements set out in the GMRP.
-	- Group Model Risk Policy (GMRP): It sets out requirements and responsibilities for the identification, measurement, and monitoring of Model Risk.
+	- Group Model Risk Policy (GMRP): It sets out requirements and responsibilities for the identification, 
+			measurement, and monitoring of Model Risk.
 	- Model Family Standards (MFS): Model Family Standards state how things must be done within a given model family.
 
 	--------------------------------------------------------
