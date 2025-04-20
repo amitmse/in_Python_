@@ -898,6 +898,23 @@ the split would be on Gender only.
 	- How can it be exploited or misused?
  	- Find a blind spots before they become costly failures
 
+
+	------------------------------------------------------------------------------------------------------------------- 
+
+ 	Regulators expect ML models to comply with the standards of SR 11-7 part of model risk management (MRM).
+	
+	- Conceptual Soundness: Assess the quality of the model design and construction, limitations,
+		reviewing the model documentation, assessing empirical evidence, and confirming that 
+		the variable selection process used in the model is conceptually sound.
+		Decisions based on incorrect or misused model outputs and reports.
+    
+	- Data Integrity/Representativeness: the data used for model development be representative 
+		of the bank’s portfolio and market/business conditions
+  
+	- Out of time validation. Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used.
+		Validation guides model refinement during development, and testing validates its performance 
+  		in real-world contexts, ensuring it behaves reliably and effectively beyond the training data.
+    
 	-------------------------------------------------------------------------------------------------------------------
 
 	SS 1/23:
@@ -935,22 +952,6 @@ the split would be on Gender only.
 	- Review of the model change management process
 	- Validation team to review the validation conducted by the vendor and document the key findings 
 		and recommendations in the model approval request template.
-
-	------------------------------------------------------------------------------------------------------------------- 
-
- 	Regulators expect ML models to comply with the standards of SR 11-7 part of model risk management (MRM).
-	
-	- Conceptual Soundness: Assess the quality of the model design and construction, limitations,
-		reviewing the model documentation, assessing empirical evidence, and confirming that 
-		the variable selection process used in the model is conceptually sound.
-		Decisions based on incorrect or misused model outputs and reports.
-    
-	- Data Integrity/Representativeness: the data used for model development be representative 
-		of the bank’s portfolio and market/business conditions
-  
-	- Out of time validation. Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used.
-		Validation guides model refinement during development, and testing validates its performance 
-  		in real-world contexts, ensuring it behaves reliably and effectively beyond the training data.
 
 	----------------------------------------------------------------------------------------------------
  
