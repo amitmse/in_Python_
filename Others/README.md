@@ -567,6 +567,8 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 			Use Time Series Models: If the data is time-series, consider using models specifically designed 
 			for time series analysis, such as ARIMA models      
 
+			OLS vs GLS: OLS assumes the error is independent, identically distributed, and have constant variance. 
+				GLS relaxes above assumption and allows for heteroscedasticity, and autocorrelation.
 
 	6. Mean of residuals is zero :
 		The sum of the residuals is always zero when an intercept is included in the regression model. 
