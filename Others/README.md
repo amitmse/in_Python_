@@ -924,6 +924,19 @@ the split would be on Gender only.
 	- Responsible for the governance and execution of the annual status assessment for models
 	- Responsible for preparing Group’s model risk assessments and Group’s model risk profile reporting
 
+	--------------------------------------------------------
+ 
+	Third Party Model:
+	- Assessment of model development design and methodology
+	- Assessment of input data quality, security, privacy, integrity, bias and representativeness
+	- Assessment of any overlays or post model output adjustments
+	- Assessment of the Model Control Framework and Implementation
+	- Assessment of the Monitoring approach
+	- Assessment for Regulatory Compliance
+	- Model performance testing on recent out of time data
+	- Review of the model change management process
+    	- Validation team to review the validation conducted by the vendor and document the key findings and recommendations in the model approval request template.
+
 	------------------------------------------------------------------------------------------------------------------- 
 
  	Regulators expect ML models to comply with the standards of SR 11-7 part of model risk management (MRM).
