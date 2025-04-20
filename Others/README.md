@@ -935,7 +935,8 @@ the split would be on Gender only.
 	- Assessment for Regulatory Compliance
 	- Model performance testing on recent out of time data
 	- Review of the model change management process
-    	- Validation team to review the validation conducted by the vendor and document the key findings and recommendations in the model approval request template.
+	- Validation team to review the validation conducted by the vendor and document the key findings 
+		and recommendations in the model approval request template.
 
 	------------------------------------------------------------------------------------------------------------------- 
 
