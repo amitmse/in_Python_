@@ -897,10 +897,8 @@ the split would be on Gender only.
 	Regulators expect ML models to comply with the standards of SR 11-7 part of model risk management (MRM).
 	
 	- Conceptual Soundness: 
-		- Assess the quality of the model design and construction, limitations,
-			reviewing the model documentation, assessing empirical evidence, and confirming that 
-			the variable selection process used in the model is conceptually sound.
-			Decisions based on incorrect or misused model outputs and reports.
+		- Assess model design, construct, variable selection, decisions based on incorrect info,  
+			empirical evidence, documentation, limitations, misuse of model outputs.
 
 		- Any good model always has weakness or hidden weaknesses.
 		- Where does this model fail and under what conditions?	
@@ -920,11 +918,12 @@ the split would be on Gender only.
 	-------------------------------------------------------------
 
 	SS 1/23:
-	- Model identification and model risk classification
-	- Governance
 	- Model development, implementation and use
 	- Independent model validation
-	- Model risk mitigants
+	- Model risk mitigants 
+	- model risk classification
+	- Model identification
+	- Governance
 
 	--------------------------------------------------------
 
