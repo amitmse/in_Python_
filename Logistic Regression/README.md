@@ -1,6 +1,6 @@
 # Logistic Regression
 
-	Logistic Regression is a classification technique which predicts a binary outcome.
+	- Logistic Regression is a classification technique which predicts a binary outcome.
 
 https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
@@ -9,9 +9,10 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
 	1. Dependent variable should be binary
  
-	2. Linearity between independent & log odds 
+	2. Linearity between independent & log odds
+		Log converts odds into linear form. log(p/q) = [log(p) - log(q)] 
 		(non-linear relationship between the dependent and independent variables) 
-		Test: Box-Tidwell test
+		Test: Box-Tidwell test	
   
 	3. Independence of errors
 		Each observation in the dataset is unrelated to any other observation,
@@ -40,7 +41,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 -----------------------------------------------------------------------------------------------------------------------
 ## Points
-
+  
 	- Why use odds and log-odds.
 	- Probability output ranges from 0 to 1  
 	- Odds Ratio = P/(1-P)		[Odds output range from 0 to ∞ ]
@@ -72,7 +73,14 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		- Generalised form of logit function. For probability p, sigmoid(logit(p)) = p. 
 		 
 	- Cost Function: [{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}]
- 
+
+	- Logistic regression estimates an unknown probability for any given
+		linear combination (log odds #2Assumptions) of the independent variables.
+			logit(p) => Log(Odds) => log[p/(1-P)] => [log(p) - log(1-P)] => logit(p)
+			log[p/(1-P)] = a + bX (Logistic Model)
+		Anti Log is exponential function which converts logit to sigmoid for probability.
+  			inverse of logit(p)= 1/[1+exp^(a+bX)] (output is probability between 0 to 1)
+  
 ----------------------------------------------------------------------------------------------------------------------- 
 ## Statistical Derivation of Logistic Regression:
 ### Model Equation:
@@ -82,10 +90,12 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Logit function / Sigmoid Function:
+		Below shows probability to logit
 		Y 		= Exp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}] = 1/(1+exp^-y)
 		1 - Y 		= Exp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}    = 1/(1+exp^y)
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
+  		If not clear then read from bottom to top (above 4 lines) to understand logit to probability.
 		  
 	- The sigmoid function is a mathematical function used to map the predicted values to probabilities 
 		which has a characteristic of S-shaped or sigmoid curve. 
