@@ -544,12 +544,45 @@ Boosting vs Bagging
 
 ### SHapley Additive exPlanations (SHAP) 
 
-- SHAP does not go on and retrain the model for each subset. Instead, for the removed or left out feature, 
-	it just replaces it with the average value of the feature and generates the predictions.
-
 - SHAP Values provide a way to understand how each feature contributes to the model's predictions.
 	Similar to the beta of linear regression.
 	It helps in identifying the most important features and understanding their impact on the model.
+
+- This method uses random feature combinations as input and compute the changes in the model performance. 
+	The features which impact the performance the most are considered the most important ones.
+
+- SHAP does not go on and retrain the model for each subset. Instead, for the removed or left out feature, 
+	it just replaces it with the average value of the feature and generates the predictions.
+
+Step-by-step:
+- Baseline: The SHAP value calculation starts with a baseline value, which represents
+	the expected output of the model when no features are present.
+	This is often the mean or median of the model's predictions across the training data.
+- Combinations of Features: For each data point and feature, SHAP examines all possible
+	combinations of features (coalitions) that could be present in the prediction.
+- Marginal Contributions: For each coalition, the model's prediction is calculated with and without
+	the specific feature in question. The difference between these predictions represents
+	the marginal contribution of that feature to the prediction for that coalition.
+- Shapley Values: The SHAP value for a feature is the weighted average of all its marginal contributions
+	across all possible coalitions. This weighted average ensures that each feature's contribution is fairly
+	distributed across all possible combinations of features.
+
+	SHAP value =  sum [weight * (prediction with feature - prediction without feature)]
+		weight assigned to a particular coalition based on the number of ways
+  			the feature could have joined the coalition.
+		prediction with feature is the model prediction when the feature is included in the coalition.
+		prediction without feature is the model prediction when the feature is excluded from the coalition.
+
+-  Interpretion of SHAP Values: The SHAP values indicate the degree to which a feature influences the model's prediction.
+	A positive SHAP value suggests that the feature contributes to a higher prediction,
+		while a negative SHAP value suggests a lower prediction.
+	The magnitude of the SHAP value reflects the strength of the feature's influence.
+	The sum of SHAP values for all features equals the difference between the model prediction and
+		the baseline prediction.
+	If a feature has no impact on the prediction, its SHAP value will be zero.
+	If a feature's impact changes when other features are included or excluded, the SHAP value reflects that change.
+	E[f(X)] refers to the baseline (mean or median in the case of regression).
+	f(x) is the value predicted by our model. 
 
 ------------------------------------------------------------------------------------------------------------
 
