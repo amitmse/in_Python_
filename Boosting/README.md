@@ -545,7 +545,11 @@ Boosting vs Bagging
 ### SHapley Additive exPlanations (SHAP) 
 
 - SHAP does not go on and retrain the model for each subset. Instead, for the removed or left out feature, 
-		it just replaces it with the average value of the feature and generates the predictions.
+	it just replaces it with the average value of the feature and generates the predictions.
+
+- SHAP Values provide a way to understand how each feature contributes to the model's predictions.
+	Similar to the beta of linear regression.
+	It helps in identifying the most important features and understanding their impact on the model.
 
 ------------------------------------------------------------------------------------------------------------
 
