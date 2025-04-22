@@ -143,8 +143,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 		Classification 	= -[y*log(p) - (1-y)log(1-p)]
 		
 		Total loss will be the sum of this function
-  
-	---------------------------------------------------------------
+
  
 ### XGBoost Feature Selection: 
 	- Refer below Similarity Score.
@@ -225,8 +224,6 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 		- Stabilized Feature Set: Selected features from all runs are merged, removing duplicates, 
 			leading to a more robust and reliable selection.
 
-	---------------------------------------------------------------
-
 ### XGBoost algorithm:
 	- The first step in XGBoost is to make the first guess, that is, to determine the base score. 
 		The base score is usually set at 0.5. So the initial prediction values are 0.5. 
@@ -267,7 +264,6 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
     
 			Gain — Gamma > 0 Keep the tree.
 			Gain — Gamma < 0 Prune the tree.
-
 
 	- Lambda (λ): regularisation parameter
 		As the lambda increases, the similarity score will decrease and therefore this will also decrease 
