@@ -95,85 +95,6 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 			- use permutation based importance.
 			- use shap based importance.
 
-	- Feature Selection: Refer below Similarity Score.
-		XGBoost uses a few criteria for feature selection.		
-		Feature importance scores: gain, cover, weight.
-			- Gain: Average loss reduction when using a feature for splitting.
-				- XGBoost considers the impurity (e.g., Gini impurity, entropy) of the parent node 
-					(before the split) and the impurity of the child nodes (after the split). 
-				- Gain Calculation: Difference between the impurity of the parent node and the weighted 
-					sum of the impurity of the child nodes. 
-					This represents the reduction in impurity achieved by the split. 
-				- Feature Importance: The feature with the highest gain value is considered the most important 
-					feature for that particular split and, cumulatively, for the entire tree.
-					https://xgboost.readthedocs.io/en/latest/tutorials/model.html
-			- Cover: Indicates how many times a feature is used to split data across all trees, 
-				weighted by the number of data points that go through those splits. 
-			- Weight: Represents the total number of times a feature is used to split data across all trees.
-   			Access above using the get_feature_importance() method after training your XGBoost model.
-  
-		Thresholding above scores: Recursive Feature Elimination (RFE), SHAP values. 
-			You can set a threshold on the feature importance scores and select features that exceed that threshold. 
-			The `SelectFromModel` class in Scikit-learn can be used to apply this threshold-based selection.
-
-		Recursive Feature Elimination (RFE): It iteratively removes features based on their importance 
-				and evaluates the model's performance on the remaining features. 
-			This can help identify the most relevant features while improving model performance and 
-				reducing training time. 
-    
-		SHAP Values (SHapley Additive exPlanations): values provide a way to understand how each feature contributes 
-				to the model's predictions. Similar to the beta of linear regression.
-			They can help in identifying the most important features and understanding their impact on the model.
-			
- 
-		mRMR (Minimum Redundancy, Maximum Relevance): It's a feature selection algorithm that identifies 
-			the most relevant features for predicting the target variable while minimizing redundancy 
-			between selected features. This process improves model performance by focusing on 
-			the most important information and reducing overfitting.
-   
-			- Relevance: mRMR aims to select features that have a strong relationship with the target variable 
-   					(high correlation).
-				The F-statistic, which is derived from ANOVA if the target is discrete or correlation 
-					if the target is categorical.
-				The F-statistic determines the degree of linear association between the features and the target. 
-				If the target is categorical, the F-statistic is calculated using Scikit-learn’s f_classif function. 
-				If the target is continuous, the F-statistic is determined using f_regression.
-				Mutual information: Quantifies how much we know about one variable, by examining the values of a 
-					second variable. In other words, it measures the non-linear association between features. 
-					Higher values indicate stronger associations.
-
-			- Redundancy: It also strives to minimize the correlation between the selected features themselves, 
-				meaning they should not be highly correlated with each other.
-			- Feature Ranking: mRMR ranks features based on a score that considers both relevance and redundancy. 
-			- Selection Process: The algorithm iteratively selects features, starting with the highest-ranking feature, 
-				and adds features that maximize the score. 
-			- SULOV Method: Some implementations, like those in Featurewiz, 
-				use the SULOV (Searching for Uncorrelated List of Variables) method to ensure low redundancy 
-				and high relevance in the selection process. 
-			- Benefits: Improved Model Performance, Reduced Complexity, Faster Training.
-			- Limitation: May not capture feature interactions.
- 
- 		Featurewiz: It's feature selection is powered by recursive XGBoost ranking.  
-		- Start with Everything. Feed the entire dataset into the selection process.
-		- XGBoost Feature Ranking. Train an XGBoost model to assess feature importance.
-		- Select Key Features. Extract the most significant features based on importance scores.
-		- Prune and Repeat. Keep only the top-ranked features and rerun the process on a refined subset.
-		- Iterate Until Optimal. Continue the cycle until a stopping criterion 
-			(like stability or diminishing returns) is met.
-		- Finalize the Feature Set. Merge selected features from all cycles, eliminating duplicates 
-			to form the final optimized set.
-
-		Split-Driven Recursive: This improved method introduces validation-based feature selection, 
-  			leveraging Polars for speed and efficiency.
-		- Split Data for Validation: The dataset is divided into training and validation sets.
-		- Feature Ranking (with Validation): Features are ranked based on importance in the training set 
-			while evaluating performance on the validation set.
-		- Select Key Features (with Validation): Features are chosen based on both importance scores 
-			and how well they generalize.
-		- Repeat with New Splits: The process is rerun multiple times with different train/validation splits.
-		- Stabilized Feature Set: Selected features from all runs are merged, removing duplicates, 
-			leading to a more robust and reliable selection.
-
 	- Handling Missing Data: It can manage missing data in both the training and evaluation phases.
  
 	- Parallel Processing: Parallel and distributed computing, deliver high efficiency.
@@ -210,19 +131,6 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 		- Iterating: This process of calculating residuals, training a new tree, and updating predictions is 
 			repeated iteratively until the desired level of accuracy is achieved. 
     
-	- Quality score or Similarity score for the Residuals:
- 		It's used to split. Info gain 
-		For regressor = (sum of residuals squared) / (number of residuals + λ)
-					λ  is a regularisation parameter
-		For classifier = (sum of residuals squared) / [ pr(1-pr) + λ ]
-					pr  is probability
-
-		Feature importance scores:
-    			- Gain: Average loss reduction gained when using a feature for splitting.
-    			- Cover: The number of times a feature is used to split data across trees weighted 
-       				by training data points.
-    			- Weight: Total number of times a feature is used to split data across all trees.
-     
 	- Loss Functions
 		- Logistic Loss: Commonly employed in binary classification problems. It calculates the likelihood of 
 			the predicted class, converting it to a probability with a sigmoid function.
@@ -235,7 +143,90 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 		Classification 	= -[y*log(p) - (1-y)log(1-p)]
 		
 		Total loss will be the sum of this function
+  
+	---------------------------------------------------------------
  
+### XGBoost Feature Selection: 
+	- Refer below Similarity Score.
+	- XGBoost uses a few criteria for feature selection.		
+	- Feature importance scores: gain, cover, weight.
+		- Gain: Average loss reduction when using a feature for splitting.
+			- XGBoost considers the impurity (e.g., Gini impurity, entropy) of the parent node 
+				(before the split) and the impurity of the child nodes (after the split). 
+			- Gain Calculation: Difference between the impurity of the parent node and the weighted 
+				sum of the impurity of the child nodes. 
+				This represents the reduction in impurity achieved by the split. 
+			- Feature Importance: The feature with the highest gain value is considered the most important 
+				feature for that particular split and, cumulatively, for the entire tree.
+				https://xgboost.readthedocs.io/en/latest/tutorials/model.html
+		- Cover: Indicates how many times a feature is used to split data across all trees, 
+			weighted by the number of data points that go through those splits. 
+		- Weight: Represents the total number of times a feature is used to split data across all trees.
+			Access above using the get_feature_importance() method after training your XGBoost model.
+  
+	- Thresholding above scores: Recursive Feature Elimination (RFE), SHAP values. 
+		You can set a threshold on the feature importance scores and select features that exceed that threshold. 
+		The `SelectFromModel` class in Scikit-learn can be used to apply this threshold-based selection.
+
+	- Recursive Feature Elimination (RFE): It iteratively removes features based on their importance 
+			and evaluates the model's performance on the remaining features. 
+		This can help identify the most relevant features while improving model performance and 
+			reducing training time. 
+    
+	- SHAP Values (SHapley Additive exPlanations): values provide a way to understand how each feature contributes 
+			to the model's predictions. Similar to the beta of linear regression.
+		They can help in identifying the most important features and understanding their impact on the model.
+			
+	- mRMR (Minimum Redundancy, Maximum Relevance): It's a feature selection algorithm that identifies 
+		the most relevant features for predicting the target variable while minimizing redundancy 
+		between selected features. This process improves model performance by focusing on 
+		the most important information and reducing overfitting.
+   
+		- Relevance: mRMR aims to select features that have a strong relationship with the target variable 
+				(high correlation).
+			The F-statistic, which is derived from ANOVA if the target is discrete or correlation 
+				if the target is categorical.
+			The F-statistic determines the degree of linear association between the features and the target. 
+			If the target is categorical, the F-statistic is calculated using Scikit-learn’s f_classif function. 
+			If the target is continuous, the F-statistic is determined using f_regression.
+			Mutual information: Quantifies how much we know about one variable, by examining the values of a 
+			second variable. In other words, it measures the non-linear association between features. 
+			Higher values indicate stronger associations.
+
+		- Redundancy: It also strives to minimize the correlation between the selected features themselves, 
+			meaning they should not be highly correlated with each other.
+		- Feature Ranking: mRMR ranks features based on a score that considers both relevance and redundancy. 
+		- Selection Process: The algorithm iteratively selects features, starting with the highest-ranking feature, 
+			and adds features that maximize the score. 
+		- SULOV Method: Some implementations, like those in Featurewiz, 
+			use the SULOV (Searching for Uncorrelated List of Variables) method to ensure low redundancy 
+			and high relevance in the selection process. 
+		- Benefits: Improved Model Performance, Reduced Complexity, Faster Training.
+		- Limitation: May not capture feature interactions.
+ 
+	- Featurewiz: It's feature selection is powered by recursive XGBoost ranking.  
+		- Start with Everything. Feed the entire dataset into the selection process.
+		- XGBoost Feature Ranking. Train an XGBoost model to assess feature importance.
+		- Select Key Features. Extract the most significant features based on importance scores.
+		- Prune and Repeat. Keep only the top-ranked features and rerun the process on a refined subset.
+		- Iterate Until Optimal. Continue the cycle until a stopping criterion 
+			(like stability or diminishing returns) is met.
+		- Finalize the Feature Set. Merge selected features from all cycles, eliminating duplicates 
+			to form the final optimized set.
+
+	- Split-Driven Recursive: This improved method introduces validation-based feature selection, 
+  			leveraging Polars for speed and efficiency.
+		- Split Data for Validation: The dataset is divided into training and validation sets.
+		- Feature Ranking (with Validation): Features are ranked based on importance in the training set 
+			while evaluating performance on the validation set.
+		- Select Key Features (with Validation): Features are chosen based on both importance scores 
+			and how well they generalize.
+		- Repeat with New Splits: The process is rerun multiple times with different train/validation splits.
+		- Stabilized Feature Set: Selected features from all runs are merged, removing duplicates, 
+			leading to a more robust and reliable selection.
+
+	---------------------------------------------------------------
+
 ### XGBoost algorithm:
 	- The first step in XGBoost is to make the first guess, that is, to determine the base score. 
 		The base score is usually set at 0.5. So the initial prediction values are 0.5. 
@@ -251,15 +242,22 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 		Similarity score is the evaluation metric for nodes. 
 		Gain score is an evaluation criterion for trees.
 
-	- Similarity Score:
-		The smaller the similarity, the less they are similar.  
+	- Similarity score or Quality score for the Residuals:
+ 		It's used to split. Info gain
+		The smaller the similarity, the less they are similar.
 		To get all the residuals into one leaf and calculate the similarity score.
-   
+  
 		For regressor = (Sum of Residuals)^2 / (number of Residuals + λ )
-			λ (lambda) is the regularization parameter, which helps prevent overfitting.    
-    
+			λ (lambda) is the regularization parameter, which helps prevent overfitting.
+   
 		For classifier = (Sum of Residuals)^2 / [pr*(1-pr) + λ]
-			pr  is previous probability
+			pr  is probability
+
+		Feature importance scores:
+    			- Gain: Average loss reduction gained when using a feature for splitting.
+    			- Cover: The number of times a feature is used to split data across trees weighted 
+       				by training data points.
+    			- Weight: Total number of times a feature is used to split data across all trees.
   
 	- Gain:
 		How great is it the leaves classify similar residuals compared to the root.
