@@ -549,6 +549,14 @@ Boosting vs Bagging
     
 ------------------------------------------------------------------------------------------------------------
 
+### SHapley Additive exPlanations (SHAP) 
+
+- SHAP does not go on and retrain the model for each subset. Instead, for the removed or left out feature, 
+		it just replaces it with the average value of the feature and generates the predictions.
+
+------------------------------------------------------------------------------------------------------------
+
+
 ## hyperparameters
 	- Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter 
  		space and find the optimal combination. Details are below in link
