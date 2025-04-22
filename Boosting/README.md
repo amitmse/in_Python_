@@ -236,82 +236,81 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 		
 		Total loss will be the sum of this function
  
-	- Steps:
-		- The first step in XGBoost is to make the first guess, that is, to determine the base score. 
-			The base score is usually set at 0.5. So the initial prediction values are 0.5. 
-			Then the residuals are obtained by subtracting 0.5 from the actual y values. 
-			A tree model is established with these residues obtained as in GBM.
-			Initial Prediction is 0.5 for both regression and classification.
+### XGBoost algorithm:
+	- The first step in XGBoost is to make the first guess, that is, to determine the base score. 
+		The base score is usually set at 0.5. So the initial prediction values are 0.5. 
+		Then the residuals are obtained by subtracting 0.5 from the actual y values. 
+		A tree model is established with these residues obtained as in GBM.
+		Initial Prediction is 0.5 for both regression and classification.
 
-		- Residuals are collected at the initial node and the similarity score of this node is calculated. 
-			Then, trees are created by dividing each independent variable by threshold values. 
-			The similarity score and gain value in each tree are calculated.
-			In this way, all possible trees are created and the tree with the highest gain value is continued. 
-			These operations are done with greedy algorithm logic.
-			Similarity score is the evaluation metric for nodes. 
-			Gain score is an evaluation criterion for trees.
+	- Residuals are collected at the initial node and the similarity score of this node is calculated. 
+		Then, trees are created by dividing each independent variable by threshold values. 
+		The similarity score and gain value in each tree are calculated.
+		In this way, all possible trees are created and the tree with the highest gain value is continued. 
+		These operations are done with greedy algorithm logic.
+		Similarity score is the evaluation metric for nodes. 
+		Gain score is an evaluation criterion for trees.
 
-		- Similarity Score:
-			The smaller the similarity, the less they are similar.  
-			To get all the residuals into one leaf and calculate the similarity score.
+	- Similarity Score:
+		The smaller the similarity, the less they are similar.  
+		To get all the residuals into one leaf and calculate the similarity score.
    
-			For regressor = (Sum of Residuals)^2 / (number of Residuals + λ )
-				λ (lambda) is the regularization parameter, which helps prevent overfitting.    
+		For regressor = (Sum of Residuals)^2 / (number of Residuals + λ )
+			λ (lambda) is the regularization parameter, which helps prevent overfitting.    
     
-			For classifier = (Sum of Residuals)^2 / [pr*(1-pr) + λ]
-					pr  is previous probability
+		For classifier = (Sum of Residuals)^2 / [pr*(1-pr) + λ]
+			pr  is previous probability
   
-    		- Gain:
-			How great is it the leaves classify similar residuals compared to the root.
+	- Gain:
+		How great is it the leaves classify similar residuals compared to the root.
    
-			Gain = Left Similarity + Right Similarity - Root Similarity
-				Root Similarity: The Similarity Score of the Previous Tree is the Similarity Score.
+		Gain = Left Similarity + Right Similarity - Root Similarity
+			Root Similarity: The Similarity Score of the Previous Tree is the Similarity Score.
     
 			Gain — Gamma > 0 Keep the tree.
 			Gain — Gamma < 0 Prune the tree.
 
 
-		- Lambda (λ): regularisation parameter
-			As the lambda increases, the similarity score will decrease and therefore this will also decrease 
-			the gain score. This allows for more pruning, only branches with a high gain score are preserved 
-			and overfitting can be prevented.
+	- Lambda (λ): regularisation parameter
+		As the lambda increases, the similarity score will decrease and therefore this will also decrease 
+		the gain score. This allows for more pruning, only branches with a high gain score are preserved 
+		and overfitting can be prevented.
    
-			The fewer instances in the branch, the lower the similarity score and the higher the probability 
-			of these branches being pruned. It prevents overfitting and having less instances in leaf nodes.
+		The fewer instances in the branch, the lower the similarity score and the higher the probability 
+		of these branches being pruned. It prevents overfitting and having less instances in leaf nodes.
 
-			Lambda value is in the denominator in the output formula, as the lambda increases, the output value 
-   			will decrease. The correct prediction will be reached with more iterations, 
-			that is, the number of trees.
+		Lambda value is in the denominator in the output formula, as the lambda increases, the output value 
+		will decrease. The correct prediction will be reached with more iterations, 
+		that is, the number of trees.
 
-		- Calculating these similarity and gain scores would take a long time on large datasets, 
-			xgboost divides the data into quantiles instead of examining each value in the data.
-   			The default number of quantile is 33. As the number of quantiles increases, 
-			xgboost will look at smaller ranges and make better predictions, but at the same time 
-			the training time will be longer.An algorithm called "Sketches" is used to overcome 
-			this training time problem. The “Sketches” algorithm converges to find the quantiles.
+	- Calculating these similarity and gain scores would take a long time on large datasets, 
+		xgboost divides the data into quantiles instead of examining each value in the data.
+		The default number of quantile is 33. As the number of quantiles increases, 
+		xgboost will look at smaller ranges and make better predictions, but at the same time 
+		the training time will be longer.An algorithm called "Sketches" is used to overcome 
+		this training time problem. The “Sketches” algorithm converges to find the quantiles.
 
-		- After the tree with the highest gain score is determined, the pruning process is started.
-			During the pruning process, the "gamma" hyperparameter is used as a metric. 
-			if Gain Score < Gamma,the branch is pruned. As gamma increases, the most valuable branches 
-			remain on the tree, and this pruning helps prevent overfitting. Pruning is done from 
-			the bottom to the top. If the bottom branch is not pruned, the upper branches are not examined.
+	- After the tree with the highest gain score is determined, the pruning process is started.
+		During the pruning process, the "gamma" hyperparameter is used as a metric. 
+		if Gain Score < Gamma,the branch is pruned. As gamma increases, the most valuable branches 
+		remain on the tree, and this pruning helps prevent overfitting. Pruning is done from 
+		the bottom to the top. If the bottom branch is not pruned, the upper branches are not examined.
 
-		- Prediction is made after the pruning process is completed. The tree prediction is multiplied by 
-			the learning rate and added to the prediction value of the first tree, 
-			and a new prediction value is formed. 
-			These operations continue until the specified number of iterations, namely n_estimators 
-			(number of boosting trees).
+	- Prediction is made after the pruning process is completed. The tree prediction is multiplied by 
+		the learning rate and added to the prediction value of the first tree, 
+		and a new prediction value is formed. 
+		These operations continue until the specified number of iterations, namely n_estimators 
+		(number of boosting trees).
    
-			Predicted value (regressor) = 
-   				First Prediction + (Learnin Rate)* (Second Prediction)
+		Predicted value (regressor) = First Prediction + (Learnin Rate)* (Second Prediction)
        
-			Predicted Value (classifier) = 
-   				log of odds of Initial prediction + eta(learning rate) * output from the leaves(mean value)
+		Predicted Value (classifier) =  
+  			log of odds of Initial prediction + eta(learning rate) * output from the leaves(mean value)
 			
 			Convert above value to probability with logistic function
 			Probability = Exp^log(odds) / [1 + Exp^log(odds)]
 
-		- Example: 
+	- Example: 
   
 https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx  
 
