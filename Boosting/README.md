@@ -586,7 +586,6 @@ Step-by-step:
 
 ------------------------------------------------------------------------------------------------------------
 
-
 ## hyperparameters
 	- Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter 
  		space and find the optimal combination. Details are below in link
