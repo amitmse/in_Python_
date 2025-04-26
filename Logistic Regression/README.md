@@ -236,6 +236,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
   	   the complete dataset, and then uses only one training example in every iteration to calculate the gradient.
        	   Its benifical for huge datasets.
 
+![image](https://github.com/user-attachments/assets/4c300ff5-7a12-4625-84b4-1c7bf4aafa7d)
+
 ### Gradient Descent vs Newton's method
 #### Gradient Descent:
 	- Simple
