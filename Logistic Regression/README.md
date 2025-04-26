@@ -211,12 +211,13 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 - Local minima and saddle points: For convex problems, gradient descent can find the global minimum with ease, but as nonconvex problems emerge, gradient descent can struggle to find the global minimum, where the model achieves the best results.
 
-- Vanishing and Exploding Gradients: In deeper neural networks, particular recurrent neural networks, we can also encounter two other problems when the model is trained with gradient descent and backpropagation. 
+![image](https://github.com/user-attachments/assets/ecba556f-d6e5-4dd2-a710-d0c3245d8c82)
 
-- Vanishing gradients: This occurs when the gradient is too small. As we move backwards during backpropagation, the gradient continues to become smaller, causing the earlier layers in the network to learn more slowly than later layers. When this happens, the weight parameters update until they become insignificant—i.e. 0—resulting in an algorithm that is no longer learning.
+- Vanishing and Exploding Gradients mostly happes in deeper neural networks, particular recurrent neural networks. Activation functions, like the logistic function (sigmoid), have a huge difference between the variance of their inputs and the outputs. In simpler words, they shrink and transform a larger input space into a smaller output space between the range of [0,1].
+	- Vanishing gradients: This occurs when the gradient is too small. As move backwards during backpropagation, the gradient continues to become smaller, causing the earlier layers in the network to learn more slowly than later layers. When this happens, the weight parameters update until they become insignificant—i.e. 0—resulting in an algorithm that is no longer learning.
 
-- Exploding gradients: This happens when the gradient is too large, creating an unstable model. In this case, the model weights will grow too large, and they will eventually be represented as NaN. One solution to this issue is to leverage a dimensionality reduction technique, which can help to minimize complexity within the model.
-    
+	- Exploding gradients: This happens when the gradient is too large, creating an unstable model. In this case, the model weights will grow too large, and they will eventually be represented as NaN. One solution to this issue is to leverage a dimensionality reduction technique, which can help to minimize complexity within the model.
+
 
 ## Types of Gradient Descent:
 	1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost 
