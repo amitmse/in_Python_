@@ -166,9 +166,12 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 # Gradient Descent
 
+![image](https://github.com/user-attachments/assets/ff5e905d-df2d-4e38-8d9e-503498cfdd62)
+
+
 	- Gradient Descent is an optimization algorithm which finds global or local minima of a cost/loss function.
 		(Cost Function quantifies the error between predicted values and expected values)
-		A gradient is nothing but a derivative.
+		A gradient (slope) is nothing but a derivative (first-order) of cost function.  
 	- The gradient of the loss function is a vector that indicates the direction and magnitude of the steepest 
 		increase in the loss. It tells which way to change the model's parameters to increase the loss.
 	- Gradient Descent Process:
@@ -204,6 +207,17 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 ![image](https://github.com/user-attachments/assets/ea2009ca-5cac-4334-af54-bfd6226fb7af)
 
+
+### Challenges with gradient descent
+
+- Local minima and saddle points: For convex problems, gradient descent can find the global minimum with ease, but as nonconvex problems emerge, gradient descent can struggle to find the global minimum, where the model achieves the best results.
+
+- Vanishing and Exploding Gradients: In deeper neural networks, particular recurrent neural networks, we can also encounter two other problems when the model is trained with gradient descent and backpropagation. 
+
+- Vanishing gradients: This occurs when the gradient is too small. As we move backwards during backpropagation, the gradient continues to become smaller, causing the earlier layers in the network to learn more slowly than later layers. When this happens, the weight parameters update until they become insignificant—i.e. 0—resulting in an algorithm that is no longer learning.
+
+- Exploding gradients: This happens when the gradient is too large, creating an unstable model. In this case, the model weights will grow too large, and they will eventually be represented as NaN. One solution to this issue is to leverage a dimensionality reduction technique, which can help to minimize complexity within the model.
+    
 
 ## Types of Gradient Descent:
 	1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost 
