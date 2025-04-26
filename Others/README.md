@@ -470,134 +470,85 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 
 ### For Model:
 
-	1. Linear in parameters : 
-		Issue	: Beta not multiplied or divided by any other parameter. 
-                          Incorrect and unreliable model which leads to error in result.
-		Solution: Transformations of independent variables
+1. Linear in parameters : 
+	- Issue	: Beta not multiplied or divided by any other parameter. Incorrect and unreliable model which leads to error in result.
+	- Solution: Transformations of independent variables
 
 ### For Variable: 
 
-	2. No perfect multicollinearity :
-		Issue: Regression coefficient variance will increase.
+2. No perfect multicollinearity :
+	- Issue: Regression coefficient variance will increase.
   
-			It inflates standard errors, leading to unstable and unreliable coefficient estimates, 
-  			making it difficult to determine the individual effect of each predictor on the outcome and 
-			potentially leading to misleading conclusions about variable importance.
+	- It inflates standard errors, leading to unstable and unreliable coefficient estimates, making it difficult to determine the individual effect of each predictor on the outcome and potentially leading to misleading conclusions about variable importance.
 		
-			The presence of multicollinearity makes the coefficient estimates highly sensitive to 
-  			small changes in the data or model specification. Even a slight shift in the data can cause 
-			the coefficients to fluctuate significantly, making the model's interpretation unreliable.
+	- The presence of multicollinearity makes the coefficient estimates highly sensitive to small changes in the data or model specification. Even a slight shift in the data can cause the coefficients to fluctuate significantly, making the model's interpretation unreliable.
 
-			Multicollinearity does not directly affect the goodness-of-fit statistics of the model, 
-  			such as R-squared or the overall F-test. 
-			The model can still make accurate predictions despite the presence of multicollinearity.
+	- Multicollinearity does not directly affect the goodness-of-fit statistics of the model, such as R-squared or the overall F-test. The model can still make accurate predictions despite the presence of multicollinearity.
 
-		Test: VIF 
-  			VIF: [1.0 / (1.0 - R Squared)]
-      			VIF = 1/T  (T refers to Tolerance = 1 – R² which is unexplained portion)
+	- Test: VIF 
+		VIF: [1.0 / (1.0 - R Squared)]
+		VIF = 1/T  (T refers to Tolerance = 1 – R² which is unexplained portion)
 			R^2 is regressing each independent variable on the other independent variables.
   
-  		Tolerance: It measures the influence of one independent variable on all other independent variables.
+		Tolerance: It measures the influence of one independent variable on all other independent variables.
 			It measures of how much a predictor variable's variance is not explained (1 – R²) by 
 			the other predictor variables in the model. 
 			It essentially assesses the degree to which a variable is independent of the others.
            
-		Solution: Transformations of independent variables
+	- Solution: Transformations of independent variables
 		
 ### For Error Tearm: 4
 
-	3. Normality of residuals : Differences between observed and predicted values
-			In linear regression, the assumption that "errors follow a normal distribution" 
-			means the difference between the observed values and the values predicted by the model 
-			(the residuals) are assumed to be distributed according to a normal distribution. 
+3. Normality of residuals : Differences between observed and predicted values.
+	- In linear regression, the assumption that "errors follow a normal distribution" means the difference between the observed values and the values predicted by the model (the residuals) are assumed to be distributed according to a normal distribution. 
      
-		Issue: OLS estimators won’t have the desirable BLUE property.
+	- Issue: OLS estimators won’t have the desirable BLUE property. 
   
-  			This assumption is crucial for the validity of statistical tests used in linear regression, 
-			such as hypothesis tests, t-tests, p-values and ANOVA, which rely on the normality of 
-			the errors to provide accurate regression coefficients and confidence intervals.
+	- This assumption is crucial for the validity of statistical tests used in linear regression, such as hypothesis tests, t-tests, p-values and ANOVA, which rely on the normality of the errors to provide accurate regression coefficients and confidence intervals.
   
-  			Standard errors and t-values used to calculate the statistical significance of regression 
-  			parameters may be inaccurate, leading to potentially misleading conclusions.
+	- Standard errors and t-values used to calculate the statistical significance of regression parameters may be inaccurate, leading to potentially misleading conclusions.
 
-  		Test: Jarque-Bera test, Kolmogorov-Smirnov Test, Shapiro-Wilk test, histograms or Q-Q plots
+	- Test: Jarque-Bera test, Kolmogorov-Smirnov Test, Shapiro-Wilk test, histograms or Q-Q plots
     
-		Solution: Transforming the dependent or independent variables, Use robust statistical methods 
-  			that are less sensitive to non-normality may be appropriate.
+	- Solution: Transforming the dependent or independent variables, Use robust statistical methods that are less sensitive to non-normality may be appropriate.
     
-	4. Homoscedasticity of residuals /equal variance of residuals
-		Homoscedasticity in the context of residuals refers to the assumption that the variance of 
-  		the error terms (residuals) is constant across all levels of the independent variables 
-		in a regression model.
+4. Homoscedasticity of residuals /equal variance of residuals
+	- Homoscedasticity in the context of residuals refers to the assumption that the variance of the error terms (residuals) is constant across all levels of the independent variables in a regression model.
 
-		Issue: Homoscedasticity is necessary for accurately estimating the standard errors of 
-  			the regression coefficients. The standard errors of the coefficients may be biased, 
-			leading to unreliable hypothesis tests and confidence intervals.
-			Homoscedasticity ensures that the estimated coefficients are unbiased and have minimum variance.
+	- Issue: Homoscedasticity is necessary for accurately estimating the standard errors of the regression coefficients. The standard errors of the coefficients may be biased, leading to unreliable hypothesis tests nd confidence intervals. Homoscedasticity ensures that the estimated coefficients are unbiased and have minimum variance.
   
-		Example	: Family income to predict luxury spending. Residuals are very small for low values of 
-			  family income (less spend on luxury) while there is great variation in the size of 
-			  the residuals for wealthier families. Standard errors are biased and it leads to 
-			  incorrect conclusions about the significance of the regression coefficients
+	- Example	: Family income to predict luxury spending. Residuals are very small for low values of family income (less spend on luxury) while there is great variation in the size of the residuals for wealthier families. Standard errors are biased and it leads to incorrect conclusions about the significance of the regression coefficients
      
-		Test	: Breush-Pagan test, Goldfeld-Quandt, Koenker-Bassett (generalized Breusch-Pagan)
-			  Breush-Pagan: Calculate the Square the residuals, and Regress it on the independent variables.
-  
-		Solution: Weighted least squares regression (heavier weights given to smaller error variances)
-			  Transform the dependent variable using one of the variance stabilizing transformations
+	- Test	: Breush-Pagan test, Goldfeld-Quandt, Koenker-Bassett (generalized Breusch-Pagan)
+		Breush-Pagan: Calculate the Square the residuals, and Regress it on the independent variables.
+
+  	- Solution: Weighted least squares regression (heavier weights given to smaller error variances) Transform the dependent variable using one of the variance stabilizing transformations
 	
-	5. No autocorrelation (serial correlation) of residuals :
-		Issue: correlation with own lag (stock price today linked with yesterday's price). If above fails 
-			then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not bias 
-			the OLS coefficient estimates, the standard errors tend to be underestimated 
-			(t-scores overestimated) when the autocorrelations of the errors at low lags are positive.
-			Low variance in unbiased estimator. Autocorrelation can lead to biased and unreliable 
-			standard errors, affecting the validity of statistical tests and confidence intervals.
-			Potentially missing key variables or an incorrect functional form. 
+5. No autocorrelation (serial correlation) of residuals :
+	- Issue: correlation with own lag (stock price today linked with yesterday's price). If above fails then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not bias the OLS coefficient estimates, the standard errors tend to be underestimated (t-scores overestimated) when the autocorrelations of the errors at low lags are positive. Low variance in unbiased estimator. Autocorrelation can lead to biased and unreliable standard errors, affecting the validity of statistical tests and confidence intervals. Potentially missing key variables or an incorrect functional form. 
    
-		Test :  Durbin-Watson Test: This test checks for autocorrelation of order one 
-  			(correlation between consecutive residuals). This test ranges from 0 to 4.
+	- Test :  Durbin-Watson Test: This test checks for autocorrelation of order one (correlation between consecutive residuals). This test ranges from 0 to 4.
 			2: Indicates no autocorrelation. 
    			< 2: positive autocorrelation 
 			> 2: Indicates negative autocorrelation.
-   			Breusch-Godfrey Test: This test is designed to detect autocorrelation of any order in the residuals. 
-			Autocorrelation Function (ACF) Plot: This plot displays the correlation of the residuals with 
-   			their lagged values, helping to identify the lag order of autocorrelation
-			Plotting the residuals over time can reveal patterns or trends, indicating autocorrelation. 
+	Breusch-Godfrey Test: This test is designed to detect autocorrelation of any order in the residuals. Autocorrelation Function (ACF) Plot: This plot displays the correlation of the residuals with their lagged values, helping to identify the lag order of autocorrelation Plotting the residuals over time can reveal patterns or trends, indicating autocorrelation. 
 
-		Solution: Generalized Least Squares (GLS), 
-  			Include lagged values of the dependent variable or independent variables in the regression model. 
-			Transform the Data: Apply mathematical transformations to the data to reduce autocorrelation. 
-			Use Time Series Models: If the data is time-series, consider using models specifically designed 
-			for time series analysis, such as ARIMA models      
+	- Solution: Generalized Least Squares (GLS), Include lagged values of the dependent variable or independent variables in the regression model. Transform the Data: Apply mathematical transformations to the data to reduce autocorrelation. Use Time Series Models: If the data is time-series, consider using models specifically designed for time series analysis, such as ARIMA models      
 
-			OLS vs GLS: OLS assumes the error is independent, identically distributed, and have constant variance. 
-				GLS relaxes above assumption and allows for heteroscedasticity, and autocorrelation.
+	OLS vs GLS: OLS assumes the error is independent, identically distributed, and have constant variance. GLS relaxes above assumption and allows for heteroscedasticity, and autocorrelation.
 
-	6. Mean of residuals is zero :
-		The sum of the residuals is always zero when an intercept is included in the regression model. 
-  		This is because the regression line is fitted in a way that the total distance of the data points 
-		above the line is equal to the total distance of the data points below the line.
-		If a model without an intercept is used, the residuals will not necessarily have a mean of zero.
-		The mean of residuals is zero is a direct result of how the least squares method calculates 
-  		the regression line. It's not an assumption that needs to be tested.
+6. Mean of residuals is zero :
+	- The sum of the residuals is always zero when an intercept is included in the regression model. This is because the regression line is fitted in a way that the total distance of the data points above the line is equal to the total distance of the data points below the line. If a model without an intercept is used, the residuals will not necessarily have a mean of zero. The mean of residuals is zero is a direct result of how the least squares method calculates the regression line. It's not an assumption that needs to be tested.
   
-		Issue: Error terms has zero mean and doesn’t depend on the independent variables. 
-			Thus, there must be no relationship between the independent variable and the error term.
-			A model with a zero mean for residuals suggests that the model is, on average, 
-   			neither overestimating nor underestimating the response variable
+	- Issue: Error terms has zero mean and doesn’t depend on the independent variables. Thus, there must be no relationship between the independent variable and the error term. A model with a zero mean for residuals suggests that the model is, on average, neither overestimating nor underestimating the response variable.
    
-		Test: Plot of residuals against the fitted values. If the residuals are randomly scattered around zero, 
-  			with no apparent trend, it suggests that the mean-zero assumption is met. 
-			A flat, horizontal line at zero in this plot would indicate a good fit.
-			This can be done by calculating the mean of the residuals and comparing it to zero.
+	- Test: Plot of residuals against the fitted values. If the residuals are randomly scattered around zero, with no apparent trend, it suggests that the mean-zero assumption is met. A flat, horizontal line at zero in this plot would indicate a good fit. This can be done by calculating the mean of the residuals and comparing it to zero.
   
-		Solution: The sum of residuals can always be zero; if they had some mean that differed from zero 
-  			you could make it zero by adjusting the intercept by that amount. 
+	- Solution: The sum of residuals can always be zero; if they had some mean that differed from zero you could make it zero by adjusting the intercept by that amount. 
  
-	7. X variables and residuals are uncorrelated 
+7. X variables and residuals are uncorrelated 
 	
-	8. Number of observations must be greater than number of Xs
+8. Number of observations must be greater than number of Xs
 
 #### Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
