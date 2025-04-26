@@ -1075,8 +1075,7 @@ the split would be on Gender only.
 			SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, 
 				focusing on the overall influence of each feature.
 
-https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-explanations-shap
-
+[Go to Real Cool Heading section](#https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-explanations-shap)
   
 		--------------------------------------------------------------------------------------------------------
 
