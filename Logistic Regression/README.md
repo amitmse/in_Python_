@@ -207,16 +207,16 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 ![image](https://github.com/user-attachments/assets/ea2009ca-5cac-4334-af54-bfd6226fb7af)
 
 
-### Challenges with gradient descent
+### Challenges with Gradient Descent
 
 - Local minima and saddle points: For convex problems, gradient descent can find the global minimum with ease, but as nonconvex problems emerge, gradient descent can struggle to find the global minimum, where the model achieves the best results.
 
 ![image](https://github.com/user-attachments/assets/ecba556f-d6e5-4dd2-a710-d0c3245d8c82)
 
-- Vanishing and Exploding Gradients mostly happes in deeper neural networks, particular recurrent neural networks. Activation functions, like the logistic function (sigmoid), have a huge difference between the variance of their inputs and the outputs. In simpler words, they shrink and transform a larger input space into a smaller output space between the range of [0,1].
-	- Vanishing gradients: This occurs when the gradient is too small. As move backwards during backpropagation, the gradient continues to become smaller, causing the earlier layers in the network to learn more slowly than later layers. When this happens, the weight parameters update until they become insignificant—i.e. 0—resulting in an algorithm that is no longer learning.
+- Vanishing and Exploding Gradients mostly happes in deeper neural networks, particular recurrent neural networks. Activation functions, like the logistic function (sigmoid), have a huge difference between the variance of their inputs and the outputs. In simpler words, they shrink and transform a larger input space into a smaller output space between the range of [0,1]. Cen be fixed with proper weight initialization, activation functions like ReLU, gradient clipping, and batch normalization. 
+	- Vanishing gradients: This occurs when the gradient is too small. As move backwards during backpropagation, the gradient continues to become smaller, causing the earlier layers in the network to learn more slowly than later layers. When this happens, the weight parameters update until they become insignificant—i.e. 0—resulting in an algorithm that is no longer learning. The parameters of the higher layers change significantly whereas the parameters of lower layers would not change much (or not at all). The model weights may become 0 during training. The model learns very slowly and perhaps the training stagnates at a very early stage just after a few iterations. 
 
-	- Exploding gradients: This happens when the gradient is too large, creating an unstable model. In this case, the model weights will grow too large, and they will eventually be represented as NaN. One solution to this issue is to leverage a dimensionality reduction technique, which can help to minimize complexity within the model.
+	- Exploding gradients: This happens when the gradient is too large, creating an unstable model. In this case, the model weights will grow too large, and they will eventually be represented as NaN. One solution to this issue is to leverage a dimensionality reduction technique, which can help to minimize complexity within the model. There is an exponential growth in the model parameters. The model weights may become NaN during training. The model experiences avalanche learning.
 
 
 ## Types of Gradient Descent:
