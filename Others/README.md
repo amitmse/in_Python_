@@ -827,33 +827,28 @@ the split would be on Gender only.
 
 # Model Validation:
 
-	------------------------------------------------------------------------------------------------------------------- 
-
- 	SR 11-7: 
-	Regulators expect ML models to comply with the standards of SR 11-7 part of model risk management (MRM).
+#### SR 11-7: 
+- Regulators expect ML models to comply with the standards of SR 11-7 part of model risk management (MRM).
 	
-	- Conceptual Soundness: 
-		- Assess model design, construct, variable selection, decisions based on incorrect info,  
-			empirical evidence, documentation, limitations, misuse of model outputs.
+- Conceptual Soundness: 
+	- Assess model design, construct, variable selection, decisions based on incorrect info, empirical evidence, documentation, limitations, misuse of model outputs.
 
-		- Any good model always has weakness or hidden weaknesses.
-		- Where does this model fail and under what conditions?	
-		- How can it be exploited or misused?
-		- Find a blind spots before they become costly failures
+	- Any good model always has weakness or hidden weaknesses.
+	- Where does this model fail and under what conditions?	
+	- How can it be exploited or misused?
+	- Find a blind spots before they become costly failures
   
-	- Data Integrity/Representativeness: 
-		- The data used for model development be representative 
-			of the bank’s portfolio and market/business conditions
+- Data Integrity/Representativeness: 
+	- The data used for model development be representative of the bank’s portfolio and market/business conditions
   
-	- Validation:
-		- Out of time validation. 
-		- Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used.
-		- Validation guides model refinement during development, and testing validates its performance 
-			in real-world contexts, ensuring it behaves reliably and effectively beyond the training data.
+- Validation:
+	- Out of time validation. 
+	- Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used.
+	- Validation guides model refinement during development, and testing validates its performance in real-world contexts, ensuring it behaves reliably and effectively beyond the training data.
 
 	-------------------------------------------------------------
 
-	SS 1/23:
+#### SS 1/23:
 	- Model development, implementation and use
 	- Independent model validation
 	- Model risk mitigants 
