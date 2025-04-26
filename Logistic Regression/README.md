@@ -166,9 +166,6 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 # Gradient Descent
 
-![image](https://github.com/user-attachments/assets/ff5e905d-df2d-4e38-8d9e-503498cfdd62)
-
-
 	- Gradient Descent is an optimization algorithm which finds global or local minima of a cost/loss function.
 		(Cost Function quantifies the error between predicted values and expected values)
 		A gradient (slope) is nothing but a derivative (first-order) of cost function.  
@@ -180,7 +177,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		- Learning Rate: A parameter that determines how large of a step to take during each iteration. 
 			A smaller learning rate may lead to slower convergence but avoid overshooting the minimum, 
 			while a larger learning rate can converge faster but potentially overshoot and 
-			oscillate around the minimum. 
+			oscillate around the minimum.
 	- By iteratively adjusting the model's parameters in the direction of the negative gradient, gradient descent 
 		aims to find the set of parameters that minimizes the loss function.
   
@@ -194,6 +191,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 				- if it is too small, then the model will take some time to learn.
 				- if it is too large, model will converge as our pointer will shoot 
 					and we’ll not be able to get to minima.
+
+![image](https://github.com/user-attachments/assets/ff5e905d-df2d-4e38-8d9e-503498cfdd62)
 
 - Regression: Loss function is mean squared loss. only positive values (squared loss) are picked to obtain positive, and squaring is done to obtain the model’s real performance. When positive and negative numbers are added together, the result could be 0. This will inform the model that, although the net error is zero and it is operating well, it is still operating poorly. Larger errors are likewise given more weight when squaring. Squaring the error will penalize the model more and help it approach the minimal value faster when the cost function is far from its minimal value.
 
