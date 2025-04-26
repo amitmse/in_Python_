@@ -1167,9 +1167,9 @@ https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-expl
 	- Contain overlapping class distributions
 	- Have inconsistent feature patterns
  
-Conformal prediction gives statistically valid uncertainty intervals around predictions. It allows us to say: “With 90% confidence, the true value lies within this range.” When those ranges are wide, the model is less certain. When they’re tight, the model is confident. In our credit model example (see Figures below), a few clusters (0 and 7) have high uncertainty with 90% confidence, the decisions are both default and non default (width == 2: decision is both classes). Clusters 4, 5 and 8 have higher uncertainty as well. In these regions, our model is unsure whether they’ll repay or default — and business risk increases.
+	Conformal prediction gives statistically valid uncertainty intervals around predictions. It allows us to say: “With 90% confidence, the true value lies within this range.” When those ranges are wide, the model is less certain. When they’re tight, the model is confident. In our credit model example (see Figures below), a few clusters (0 and 7) have high uncertainty with 90% confidence, the decisions are both default and non default (width == 2: decision is both classes). Clusters 4, 5 and 8 have higher uncertainty as well. In these regions, our model is unsure whether they’ll repay or default — and business risk increases.
   
-What to Do About It?
+	What to Do About It?
 	- Flag high-uncertainty cases for manual review
 	- Use uncertainty to prioritize retraining data collection
 	- Adjust decision thresholds or introduce fallback rules in uncertain areas
@@ -1188,19 +1188,19 @@ Key Takeaways:
 	- Identifying Fragile Clusters (like clusters 0 and 8 here) is crucial to pinpoint where the model needs improvement.
 	- Understanding Feature Drivers of robustness problems (e.g., “Score,” “Utilization,” “Income”) helps us prioritize feature engineering and model tuning.
 
-Robustness testing—especially under varying noise conditions—is essential to ensure your model doesn’t crumble when faced with real-world data. By diagnosing where and why a model is overly sensitive, you can shore up these “holes” and build a more stable foundation for long-term success.
+	Robustness testing—especially under varying noise conditions—is essential to ensure your model doesn’t crumble when faced with real-world data. By diagnosing where and why a model is overly sensitive, you can shore up these “holes” and build a more stable foundation for long-term success.
       
 8. Heterogeneity Blindspots—Masked Hidden Diversity: One of the most critical pitfalls in machine learning is assuming that a single, monolithic model can capture all the nuances and complexities of real-world data without segmentation. In reality, data is inherently heterogeneous, and overlooking this diversity can lead to spurious relationships, poor performance, and vulnerabilities to distribution drift.
 
-Consider our credit modeling example: distinct sub-populations exhibit unique characteristics and risk drivers. This means that: Unconstrained Single Models: They may inadvertently capture nonsensical effects in certain clusters.
+	Consider our credit modeling example: distinct sub-populations exhibit unique characteristics and risk drivers. This means that: Unconstrained Single Models: They may inadvertently capture nonsensical effects in certain clusters.
 
-Monotonically Constrained Models: While they enforce logical behavior, they can be too rigid to adapt to the data’s diverse nature.
+	Monotonically Constrained Models: While they enforce logical behavior, they can be too rigid to adapt to the data’s diverse nature.
 
-Mixture of Experts (MoE) Framework: This approach allows each “expert” to specialize in a specific sub-population, uncovering hidden diversity and leading to models that are more resilient, interpretable, and conceptually sound. See Feature Importance plots of two very distinct sub-populations below. 
+	Mixture of Experts (MoE) Framework: This approach allows each “expert” to specialize in a specific sub-population, uncovering hidden diversity and leading to models that are more resilient, interpretable, and conceptually sound. See Feature Importance plots of two very distinct sub-populations below. 
 
-Revealing hidden diversity and addressing heterogeneity in the population is not only boosts overall performance but also enhances performance uniformity, making the model more resilient against distribution drift. For instance, in the figure provided, Cluster 0 the worst-performing region under a single model—shows marked improvement when modeled using MoE. Even the "worst" expert in the MoE framework outperforms many segments of the single model.
+	Revealing hidden diversity and addressing heterogeneity in the population is not only boosts overall performance but also enhances performance uniformity, making the model more resilient against distribution drift. For instance, in the figure provided, Cluster 0 the worst-performing region under a single model—shows marked improvement when modeled using MoE. Even the "worst" expert in the MoE framework outperforms many segments of the single model.
 
-Mixture of Experts is far more sophisticated than simple segmentation. While segmentation typically divides the data into static groups, MoE employs a dynamic gating mechanism that assigns varying weights to different expert models based on the input features. This adaptive process allows the model to capture subtle, continuous variations in data heterogeneity, handle overlapping regions, and respond to changes in the data distribution. Instead of treating each segment as completely independent, MoE enables experts to collaborate—learning how to optimally combine their predictions for each specific input. This results in a more expressive and flexible modeling framework that uncovers hidden diversity and significantly enhances overall performance. 
+	Mixture of Experts is far more sophisticated than simple segmentation. While segmentation typically divides the data into static groups, MoE employs a dynamic gating mechanism that assigns varying weights to different expert models based on the input features. This adaptive process allows the model to capture subtle, continuous variations in data heterogeneity, handle overlapping regions, and respond to changes in the data distribution. Instead of treating each segment as completely independent, MoE enables experts to collaborate—learning how to optimally combine their predictions for each specific input. This results in a more expressive and flexible modeling framework that uncovers hidden diversity and significantly enhances overall performance. 
 	
 --------------------------------------------------------------------------------------------------------------------------
 
