@@ -574,6 +574,15 @@ Step-by-step:
 		prediction with feature is the model prediction when the feature is included in the coalition.
 		prediction without feature is the model prediction when the feature is excluded from the coalition.
 
+![image](https://github.com/user-attachments/assets/e97c45c3-c565-473e-82ca-b2d11b95c244)
+
+	- n is total number of features
+	- N contains all the possible feature subsets not containing feature i
+	- S is one feature set from N
+	- v(x) is the trained model prediction function f(x), x is a model input instance
+	- |S|is the number of not missing features in set S
+    
+
 -  Interpretion of SHAP Values: The SHAP values indicate the degree to which a feature influences the model's prediction.
 	A positive SHAP value suggests that the feature contributes to a higher prediction,
 		while a negative SHAP value suggests a lower prediction.
@@ -585,7 +594,7 @@ Step-by-step:
 	E[f(X)] refers to the baseline (mean or median in the case of regression).
 	f(x) is the value predicted by our model. 
 
-![image](https://github.com/user-attachments/assets/cec7ebe0-a67c-42ad-9142-742928394034)
+
 
 
 ------------------------------------------------------------------------------------------------------------
