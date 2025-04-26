@@ -49,7 +49,8 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 | Ensembling	| Boosting	| GBM	| Can Overfit		| Reduce Bias and Variance	| Sequential Classifier   |
 
 
-![Function](https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Bagging%20vs%20Boosting.PNG)
+![image](https://github.com/user-attachments/assets/8d897aa8-c272-4612-810a-fc89d5c952ee)
+
 
 ------------------------------------------------------------------------------------------------------------
 
