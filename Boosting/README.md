@@ -56,12 +56,12 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 
  ## eXtreme Gradient Boosting (XGBoost)
 
-	- XGBoost builds a series of trees to make predictions, and each tree corrects errors made by the previous ones. 
-	- Offers speed and performance both.
-	- Minimizes a loss function: mean squared error for regression and the log loss for classification.
-	- Regularization: Controls model complexity to prevent overfitting.
-		L1 (Lasso) and L2 (Ridge) regularization terms are added to the objective function. 
-		This penalizes overly complex trees to avoid overfitting by discouraging the overly deep or detailed trees.
+- XGBoost builds a series of trees to make predictions, and each tree corrects errors made by the previous ones. 
+- Offers speed and performance both.
+- Minimizes a loss function: mean squared error for regression and the log loss for classification.
+- Regularization: Controls model complexity to prevent overfitting. L1 (Lasso) and L2 (Ridge) regularization terms are added to the objective function. This penalizes overly complex trees to avoid overfitting by discouraging the overly deep or detailed trees.
+
+https://github.com/amitmse/in_Python_/blob/master/Regularization/README.md#regularization
 
 	- Shrinkage (Learning Rate): Each tree's contribution is modulated, reducing the impact of outliers.
 		This mechanism is designed to improve the balance between model complexity and learning speed. 
