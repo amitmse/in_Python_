@@ -221,24 +221,25 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 ## Types of Gradient Descent:
 	1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost 
-  	   function hence and it's very slow.
+	function hence and it's very slow.
 		- Cost function is calculated after the initialization of parameters.
 		- It reads all the records into memory from the disk.
 		- After calculating sigma for one iteration, we move one step further, and repeat the process.
 
 	2. Mini-batch Gradient Descent: It is a widely used algorithm that makes faster and accurate results. 
-  	   The dataset, here, is clustered into small groups of ‘n’ training datasets hence it's faster. 
-       	   In every iteration, it uses a batch of ‘n’ training datasets to compute the gradient of the cost function. 
-	   It reduces the variance of the parameter updates, which can lead to more stable convergence. 
-	   It can also make use of a highly optimized matrix that makes computing of the gradient very efficient.
+	The dataset, here, is clustered into small groups of ‘n’ training datasets hence it's faster. 
+	In every iteration, it uses a batch of ‘n’ training datasets to compute the gradient of the cost function. 
+	It reduces the variance of the parameter updates, which can lead to more stable convergence. 
+	It can also make use of a highly optimized matrix that makes computing of the gradient very efficient.
 
 	3. Stochastic Gradient Descent: Stochastic gradient descent used for faster computation. First, it randomizes
-  	   the complete dataset, and then uses only one training example in every iteration to calculate the gradient.
-       	   Its benifical for huge datasets.
+	the complete dataset, and then uses only one training example in every iteration to calculate the gradient.
+	Its benifical for huge datasets.
 
 ![image](https://github.com/user-attachments/assets/4c300ff5-7a12-4625-84b4-1c7bf4aafa7d)
 
 ### Gradient Descent vs Newton's method
+
 #### Gradient Descent:
 	- Simple
 	- Need learning Rate
@@ -260,35 +261,34 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 ##### 1. Calculus: 
 	It will faster if equation is simple. But in real life equations are very complex and messy and 
 	its difficult to solve.   
-					f(x) 	= X^2 - 2X + 2   
-					df/dx 	= 2X - 2  
-					2X	= 2  
-					X	= 1   
+		f(x) 	= X^2 - 2X + 2   
+		df/dx 	= 2X - 2  
+		2X	= 2  
+		X	= 1   
 	
-##### 2. Gradient Descent:   
-					Xi+1 = Xi - a f'(Xi)  	
-					[Xi = initial guess, a = learning rate or step length or jump, Xi+1 = next guess]  
-					f(x) 	= X^2 - 2X + 2  
-					df/dx 	= 2X - 2  
-					apply "Xi+1 = Xi - a f'(Xi)" on above equation. start with zero "0"  
-					X1 = X0 - 0.2f'(3)	X0= 3 (initial guess), a=0.2 (guess)  
-					X1 = 3  - 0.2(4)	[put 3 in "2X - 2": 2*3 - 2 = 6-2 =4]  
-					X1 = 3 - 0.8  
-					X1 = 2.2  
-					X2 = X1 - 0.2f'(X1)  
-					X2 = 2.2 - 0.2(2.4)	[put 2.2 in "2X - 2": 2*2.2 - 2 = 4.4-2 =2.4]  
-					X2 = 1.72  
-					X3 = X2 - 0.2f'(X2)  
-					X3 = 1.72 - 0.2(1.44)	[put 1.72 in "2X - 2": 2*1.72 - 2 = 3.44-2 =1.44]  
-					X3 = 1.72 - 0.288  
-					X3 = 1.432  
+##### 2. Gradient Descent:
+		f(x) 	= X^2 - 2X + 2  
+		df/dx 	= 2X - 2
+		Gradient Descent: Xi+1 = Xi - a f'(Xi)
+			(Xi+1 is next guess, Xi = initial guess, a = learning rate, f'(Xi) = df/dx)  
+		apply "Xi+1 on above function. 
+		X1 = X0 - 0.2f'(3)
+		Initial guess X0=3, a=0.2
+		X1 = 3  - 0.2*f'(Xi) 				[f'(Xi) = df/dx = 2X - 2 = 2*3 -2 = 4]
+		X1 = 3  - 0.2(4) = 3 - 0.8 = 2.2
+		X1 = 2.2
+		X2 = X1 - 0.2f'(X1) = 2.2 - 0.2(2.4) 		[f'(Xi) = 2*2.2 - 2 = 4.4-2 =2.4 ]
+		X2 = 1.72  
+		X3 = X2 - 0.2f'(X2)  = 1.72 - 0.2(1.44)		[f'(Xi) 2*1.72 - 2 = 3.44-2 =1.44]  
+		X3 = 1.72 - 0.288  
+		X3 = 1.432  
 			
 	continue doing this untill we are close to 1 which is the exact solution. As we approach to local minimum, 
 	Gradient Descent will automatically take smaller steps. So no need to decrease "a" over time. 
 	optimization gradient descent:
-					cX + d 		= Y [equation of line and solve this for c & d]  
-					(cX + d) -  Y 	= 0 ( "cX + d" is predected Y^, Y^-Y is error and it should be zero)   
-					min by(a,b) 	= sum ([cX + d]-Yi)^2		[c = cofficient, d=intercept]  
+		cX + d 	        = Y 			[equation of line and solve this for c & d]  
+		(cX + d) -  Y 	= 0 			("cX + d" is predected Y^, Y^-Y is error and it should be zero)   
+		min by(a,b) = sum ([cX + d]-Yi)^2	[c = cofficient, d=intercept]  
 		
 	First make initial guess for c & d then do the derivative by c & d seperately to get the optimium value of c & d. 
 	Above process will apply on Gradient Descent "Xi+1 = Xi - a f'(Xi)". Gradient descent is based on 1st derivatives 
@@ -300,23 +300,40 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	For BIG data its only option to apply Gradient descent in faster way.
 			
 ##### 3. Newton Raphson:   
-	Newton's method generally requires fewer iterations, but each iteration is slow as we need to 
-	compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must 
-	supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate).
-	(http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf)
-			
-					Xn+1 	= Xn - f(X)/f'(X)  
-					f(X) 	= X^2 - 8  
-					f'(X)	= 2X  
-					X1	= 3 (guess)  
-					X2	= X1 - f(X)/f'(X)  
-						= 3  - [(3^2-8)/2*3]  
-						= 3  - (1/6)  
-						= 18-1/6  
-						= 17/6  
-					X3	= X2 - f(X2)/f'(X2)  
-						= 17/6 - [(17/6)^2 - 8]/[2(17/6)]  
-						= 2.828 
+	- Newton's method generally requires fewer iterations, but each iteration is slow as we need to compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must  	supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate). http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf
+   
+	- The Newton-Raphson method requires the second derivative because it uses a quadratic approximation of the function, and the second derivative provides information about the curvature of the function, allowing the method to converge faster than methods that use only the first derivative.
+
+
+	- Second derivative tells about the concavity of the function's graph:
+		- Positive second derivative means the graph is concave up (like a "U" shape), indicating a minimum.
+		- A negative second derivative means the graph is concave down (like a hump), indicating a maximum
+
+	- The second derivative is used to determine whether a critical point of a function is a local minimum, maximum, or neither. A positive second derivative at a critical point indicates a local minimum, while a negative second derivative indicates a local maximum.
+	- Find Critical Points: Start by finding the points where the first derivative of the function is equal to zero. These points are potential candidates for local minima or maxima.
+	-  Second Derivative Test: second derivative of the function at each of the critical points
+		- minimum: second derivative > 0 at a critical point
+		- maximum: second derivative < 0 at a critical point
+		- inconclusive: second derivative = 0 at a critical point
+
+	f(x) = x² - 4x + 5
+	first derivative: f'(x) = 2x - 4
+	Set f'(x) = 0 and solve for x: 2x - 4 = 0 => x = 2. This is a critical point.
+	second derivative: f''(x) = 2
+    	Evaluate f''(x) at x = 2: f''(2) = 2. Since f''(2) > 0, the function has a local minimum at x = 2.
+
+
+	- Newton Raphson without second derivative
+		Xn+1 	= Xn - f(X)/f'(X)
+			(Xn is initail guess, f'(X) first derivative)
+		f(X) 	= X^2 - 8  
+		f'(X)	= 2X  
+		X1	= 3 (initail guess)  
+		X2	= X1 - f(X)/f'(X)  
+			= 3  - [( 3^2 - 8 )/ 2*3 ]   = 3  - (1/6)  = 18-1/6  
+		X2	= 17/6
+		X3	= X2 - f(X2)/f'(X2)  = 17/6 - [(17/6)^2 - 8] / [2(17/6)] 
+		X3	= 2.828
     
 -----------------------------------------------------------------------------------------------------------------------
 
