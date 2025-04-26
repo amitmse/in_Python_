@@ -166,8 +166,27 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 # Gradient Descent
 
- 	Gradient Descent is an optimization algorithm which finds global or local minima of a 
-  	differentiable function (error or cost function).
+	- Gradient Descent is an optimization algorithm which finds global or local minima of a cost/loss function.
+		(Cost Function quantifies the error between predicted values and expected values)
+	- The gradient of the loss function is a vector that indicates the direction and magnitude of the steepest 
+		increase in the loss. It tells which way to change the model's parameters to increase the loss.
+	- Gradient Descent Process:
+		- Initialization: Start with an initial set of model parameters (e.g., weights and biases).
+		- Iteration: Calculate the gradient of the loss function with respect to the current parameters.
+		- Learning Rate: A parameter that determines how large of a step to take during each iteration. 
+			A smaller learning rate may lead to slower convergence but avoid overshooting the minimum, 
+			while a larger learning rate can converge faster but potentially overshoot and 
+			oscillate around the minimum. 
+	- By iteratively adjusting the model's parameters in the direction of the negative gradient, gradient descent 
+		aims to find the set of parameters that minimizes the loss function.
+
+
+
+- Regression: loss function is mean squared loss . only positive values (squared loss) are picked to obtain positive, and squaring is done to obtain the model’s real performance. When positive and negative numbers are added together, the result could be 0. This will inform the model that, although the net error is zero and it is operating well, it is still operating poorly. Larger errors are likewise given more weight when squaring. Squaring the error will penalize the model more and help it approach the minimal value faster when the cost function is far from its minimal value. Mean of Absolute of error (MAE) is difference between the actual and the predicted prediction by the model. The absolute of residuals is done to convert negative values to positive values. Mean is taken to make the loss function independent of number of datapoints in the training set. MAE is generally less preferred over MSE as it is harder to calculate the derivative of the absolute function because absolute function is not differentiable at the minima.
+
+- classification: loss function is cross entropy loss. Cross-entropy, also known as logarithmic loss or log loss or Negative Log Likelihood.
+
+  
 
 ## Types of Gradient Descent:
 	1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost 
