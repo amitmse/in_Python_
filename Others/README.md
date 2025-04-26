@@ -470,13 +470,15 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 
 ### For Model:
 
-1. Linear in parameters : 
+1. Linear in parameters :
+   
 	- Issue	: Beta not multiplied or divided by any other parameter. Incorrect and unreliable model which leads to error in result.
 	- Solution: Transformations of independent variables
 
 ### For Variable: 
 
 2. No perfect multicollinearity :
+   
 	- Issue: Regression coefficient variance will increase.
   
 	  It inflates standard errors, leading to unstable and unreliable coefficient estimates, making it difficult to determine the individual effect of each predictor on the outcome and potentially leading to misleading conclusions about variable importance.
@@ -499,7 +501,10 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 		
 ### For Error Tearm: 4
 
-3. Normality of residuals : Differences between observed and predicted values.
+3. Normality of residuals :
+
+	Differences between observed and predicted values.
+
 	In linear regression, the assumption that "errors follow a normal distribution" means the difference between the observed values and the values predicted by the model (the residuals) are assumed to be distributed according to a normal distribution. 
      
 	- Issue: OLS estimators won’t have the desirable BLUE property. 
@@ -512,7 +517,8 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
     
 	- Solution: Transforming the dependent or independent variables, Use robust statistical methods that are less sensitive to non-normality may be appropriate.
     
-4. Homoscedasticity of residuals /equal variance of residuals
+5. Homoscedasticity of residuals /equal variance of residuals:
+   
 	Homoscedasticity in the context of residuals refers to the assumption that the variance of the error terms (residuals) is constant across all levels of the independent variables in a regression model.
 
 	- Issue: Homoscedasticity is necessary for accurately estimating the standard errors of the regression coefficients. The standard errors of the coefficients may be biased, leading to unreliable hypothesis tests nd confidence intervals. Homoscedasticity ensures that the estimated coefficients are unbiased and have minimum variance.
@@ -524,7 +530,8 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 
   	- Solution: Weighted least squares regression (heavier weights given to smaller error variances) Transform the dependent variable using one of the variance stabilizing transformations
 	
-5. No autocorrelation (serial correlation) of residuals :
+7. No autocorrelation (serial correlation) of residuals :
+   
 	- Issue: correlation with own lag (stock price today linked with yesterday's price). If above fails then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not bias the OLS coefficient estimates, the standard errors tend to be underestimated (t-scores overestimated) when the autocorrelations of the errors at low lags are positive. Low variance in unbiased estimator. Autocorrelation can lead to biased and unreliable standard errors, affecting the validity of statistical tests and confidence intervals. Potentially missing key variables or an incorrect functional form. 
    
 	- Test :  Durbin-Watson Test: This test checks for autocorrelation of order one (correlation between consecutive residuals). This test ranges from 0 to 4.
@@ -537,7 +544,8 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 
 	OLS vs GLS: OLS assumes the error is independent, identically distributed, and have constant variance. GLS relaxes above assumption and allows for heteroscedasticity, and autocorrelation.
 
-6. Mean of residuals is zero :
+9. Mean of residuals is zero :
+    
 	The sum of the residuals is always zero when an intercept is included in the regression model. This is because the regression line is fitted in a way that the total distance of the data points above the line is equal to the total distance of the data points below the line. If a model without an intercept is used, the residuals will not necessarily have a mean of zero. The mean of residuals is zero is a direct result of how the least squares method calculates the regression line. It's not an assumption that needs to be tested.
   
 	- Issue: Error terms has zero mean and doesn’t depend on the independent variables. Thus, there must be no relationship between the independent variable and the error term. A model with a zero mean for residuals suggests that the model is, on average, neither overestimating nor underestimating the response variable.
@@ -546,9 +554,9 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
   
 	- Solution: The sum of residuals can always be zero; if they had some mean that differed from zero you could make it zero by adjusting the intercept by that amount. 
  
-7. X variables and residuals are uncorrelated 
+11. X variables and residuals are uncorrelated 
 	
-8. Number of observations must be greater than number of Xs
+12. Number of observations must be greater than number of Xs
 
 #### Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
