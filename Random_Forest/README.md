@@ -52,7 +52,8 @@ https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Random_Forest_Tr
   		- Gradient Tree Boosting (GBM)
 		- XGBoost
 
-![Function](https://github.com/amitmse/in_Python_/blob/master/Random_Forest/Bagging%20vs%20Boosting.PNG)
+![image](https://github.com/user-attachments/assets/b3adb086-6c00-479b-b170-76e761e9a5f4)
+
 
 ### Stacking: Improve Predictions
 	Stacking mainly differ from bagging and boosting on two points. First stacking often considers heterogeneous 
