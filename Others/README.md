@@ -830,6 +830,7 @@ the split would be on Gender only.
 -------------------------------------------------------------
 
 #### SR 11-7: 
+
 - Regulators expect ML models to comply with the standards of SR 11-7 part of model risk management (MRM).
 - Conceptual Soundness: 
 	- Assess model design, construct, variable selection, decisions based on incorrect info, empirical evidence, documentation, limitations, misuse of model outputs.
@@ -843,6 +844,7 @@ the split would be on Gender only.
 	- Out of time validation. 
 	- Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used.
 	- Validation guides model refinement during development, and testing validates its performance in real-world contexts, ensuring it behaves reliably and effectively beyond the training data.
+   
 -------------------------------------------------------------
 
 #### SS 1/23:
@@ -852,17 +854,21 @@ the split would be on Gender only.
 - model risk classification
 - Model identification
 - Governance
+  
 --------------------------------------------------------
 - Group Model Risk Standards (GMRS): It state how things must be done to meet the requirements set out in the GMRP.
 - Group Model Risk Policy (GMRP): It sets out requirements and responsibilities for the identification, measurement, and monitoring of Model Risk.
-- Model Family Standards (MFS): Model Family Standards state how things must be done within a given model family.
+- Model Family Standards (MFS): Model Family Standards state how things must be done within a given model family
+  
 --------------------------------------------------------
 Model Risk Policy and Governance:
 - Responsible for ongoing assessment of the model risk management framework
 - Responsible for preparing model risk oversight reporting
 - Responsible for the governance and execution of the annual status assessment for models
 - Responsible for preparing Group’s model risk assessments and Group’s model risk profile reporting
+  
 --------------------------------------------------------
+
 Third Party Model:
 - Assessment of model development design and methodology
 - Assessment of input data quality, security, privacy, integrity, bias and representativeness
@@ -873,247 +879,152 @@ Third Party Model:
 - Model performance testing on recent out of time data
 - Review of the model change management process
 - Validation team to review the validation conducted by the vendor and document the key findings and recommendations in the model approval request template.
+  
 ----------------------------------------------------------------------------------------------------
  
 ### Check Bias and Variance:
 - Check bias in human decision-making is carried over to the development. The data-generating process itself can be biased. One way to identify data bias is by benchmarking with other models. Random selection of development sample.
- 
 - Assess model's bias (error due to assumptions).
 - Assess model's Variance (sensitivity to training data fluctuations).
-- To check above perform: 
-	- Cross-Validation: It reveals model's performance is consistent across different data samples, indicating lower variance. It also helps identify if the model's assumptions are too restrictive, leading to high bias.
   
-	- Learning Curves: Plot the training and validation errors against the size of the training dataset. 
-		Interpreting the curves:
-			- High Bias (Underfitting): If both training and validation errors are high and close together, the model may be too simple and not capturing the underlying patterns in the data. High Training Error, High Validation Error: Suggests underfitting (high bias).
-       
-			- High Variance (Overfitting): If the training error is low but the validation error is high, the model is overfitting the training data and not generalizing well to unseen data Low Training Error, High Validation Error: Indicates overfitting (high variance).
-    
-		- Sensitivity Analysis: Test the model's sensitivity to changes in input variables.
-
- 	----------------------------------------------------------------------------------------------------
-  
-	- Check model metrics: accuracy, precision, recall, F1-Score, and error rates (MAE, RMSE).
-		Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values.
-		Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
-		Root Mean Squared Error (RMSE): It helps interpret errors in the same units as the target variable.
-			It follows an assumption that errors are unbiased and follow a normal distribution. 
-      
-		Bias towards the Majority Class, Actual Performance of the Minority Class. Below metrics help to indentify:
-		F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing 
-			their importance. Why harmonic mean and not an arithmetic mean: HM punishes extreme values.
-	 
-		G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture 
-			of performance across all classes.
-	 
-		----------------------------------------------------------------------------------------------------
-  
-		Gini coefficient: It's ratio between the area between the ROC curve and the diagonal line & 
-  			the area of the above triangle. 
-  			Gini = 2*AUC – 1
-
-		Gain and Lift charts: Check the rank ordering of the probabilities.
-  			This graph tells how well is model is segregating positive from negative.
-			Lift is dependent on the total response rate of the population. Hence, if the response rate 
-   			of the population changes, the same model will give a different lift chart.
-     
-		Kolomogorov Smirnov Chart: KS measures the degree of separation between the positive and negative.
-  
-		AUC-ROC: Model's ability to distinguish between classes.
-			The biggest advantage of using the ROC curve is that it is independent of the change 
-				in the proportion of positive class.
-			It considers the predicted probabilities for determining our model’s performance. 
-			Issue: it only takes into account the order of probabilities, and does not take into account 
-				the model’s capability to predict a higher probability for samples more likely to be positive.
-			The ROC curve is the plot between sensitivity and (1- specificity). (1- specificity).
+#### To check above performance: 
+- Cross-Validation: It reveals model's performance is consistent across different data samples, indicating lower variance. It also helps identify if the model's assumptions are too restrictive, leading to high bias.  
+- Learning Curves: Plot the training and validation errors against the size of the training dataset. 
+- Interpreting the curves:
+	- High Bias (Underfitting): If both training and validation errors are high and close together, the model may be too simple and not capturing the underlying patterns in the data. High Training Error, High Validation Error: Suggests underfitting (high bias).
+	- High Variance (Overfitting): If the training error is low but the validation error is high, the model is overfitting the training data and not generalizing well to unseen data Low Training Error, High Validation Error: Indicates overfitting (high variance).
+	- Sensitivity Analysis: Test the model's sensitivity to changes in input variables.
    
-  		----------------------------------------------------------------------------------------------------
-    
-		Accuracy: Measures the overall proportion of correct predictions. 
-		Precision: Measures the proportion of true positives among all positive predictions.
-		Recall (Sensitivity): Measures the proportion of actual positives that are correctly identified.
-		Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, 
-			enabling a deeper understanding of the model's performance under various scenarios.
+---------------------------------------------------------------------------------------------------
+
+#### Check model metrics: 
+- accuracy, precision, recall, F1-Score, and error rates (MAE, RMSE).
+- Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values. 
+- Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
+- Root Mean Squared Error (RMSE): It helps interpret errors in the same units as the target variable. It follows an assumption that errors are unbiased and follow a normal distribution. 
+      
+- Bias towards the Majority Class, Actual Performance of the Minority Class.
+- Below metrics help to indentify:
+- F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing their importance. Why harmonic mean and not an arithmetic mean: HM punishes extreme values.
+- G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture of performance across all classes.
+  
+----------------------------------------------------------------------------------------------------
+  
+- Gini coefficient: It's ratio between the area between the ROC curve and the diagonal line & the area of the above triangle. 
+	Gini = 2*AUC – 1
+- Gain and Lift charts: Check the rank ordering of the probabilities. This graph tells how well is model is segregating positive from negative. Lift is dependent on the total response rate of the population. Hence, if the response rate of the population changes, the same model will give a different lift chart.
+- Kolomogorov Smirnov Chart: KS measures the degree of separation between the positive and negative.
+- AUC-ROC: Model's ability to distinguish between classes. The biggest advantage of using the ROC curve is that it is independent of the change in the proportion of positive class. It considers the predicted probabilities for determining our model’s performance. 
+	- Issue: it only takes into account the order of probabilities, and does not take into account the model’s capability to predict a higher probability for samples more likely to be positive. The ROC curve is the plot between sensitivity and (1- specificity). (1- specificity).
+   
+----------------------------------------------------------------------------------------------------  
+
+- Accuracy: Measures the overall proportion of correct predictions. 
+	- Precision: Measures the proportion of true positives among all positive predictions.
+	- Recall (Sensitivity): Measures the proportion of actual positives that are correctly identified.
+	- Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, enabling a deeper understanding of the model's performance under various scenarios.
 	 
-		Log Loss: Measures the performance of a classification model based on probability predictions.
-			It's a negative average of the log of corrected predicted probabilities.
+	- Log Loss: Measures the performance of a classification model based on probability predictions. It's a negative average of the log of corrected predicted probabilities.
        
-		R-squared (Coefficient of Determination): Measures the proportion of variance in the dependent variable 
-			that can be predicted from the independent variables.
+	- R-squared (Coefficient of Determination): Measures the proportion of variance in the dependent variable that can be predicted from the independent variables.
      
   	----------------------------------------------------------------------------------------------------
     
-	- Model Interpretability and Explainability in Validation:
+#### Model Interpretability and Explainability in Validation:
  
-		Interpretability: It helps identify potential model weaknesses, fostering robustness and reliability.
-			credit-scoring model relies too heavily on a single variable, leading to biased decisions.
-   		
-		Explainability: It builds trust by shedding light on the factors driving the model's decisions.
-			why certain financial behaviors contribute more to the model's risk assessment.
+- Interpretability: It helps identify potential model weaknesses, fostering robustness and reliability. credit-scoring model relies too heavily on a single variable, leading to biased decisions.
+- Explainability: It builds trust by shedding light on the factors driving the model's decisions. why certain financial behaviors contribute more to the model's risk assessment.
+- To provide explanations for complex models like neural networks, RF and GBM use methods like:
   
-		To provide explanations for complex models like neural networks, RF and GBM use methods like:
-  
-  		------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
     
-  		LIME: Local Interpretable Model-Agnostic Explanations. 
-    		It creates a simplified, interpretable model to explain the predictions of a complex model.
-    		It provides Local Explanations for individual predictions, focusing on how each input feature 
-      		contributes to that specific prediction.
+##### LIME: Local Interpretable Model-Agnostic Explanations
+- It creates a simplified, interpretable model to explain the predictions of a complex model. It provides Local Explanations for individual predictions, focusing on how each input feature contributes to that specific prediction.
 	
-		-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
   
-		SHAP: SHapley Additive exPlanations. 
-			It explain the output of machine learning models by assigning importance values to each feature 
-				based on their contribution to the prediction. 
-			It's a game-theoretic approach that calculates the average marginal contribution of each feature, 
-				helping to understand how each feature affects the model's output
-			SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, 
-				focusing on the overall influence of each feature.
+##### SHAP: SHapley Additive exPlanations. 
+- It explain the output of machine learning models by assigning importance values to each feature based on their contribution to the prediction. 
+- It's a game-theoretic approach that calculates the average marginal contribution of each feature, helping to understand how each feature affects the model's output SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, focusing on the overall influence of each feature.
 
 https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-explanations-shap
   
-		--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
 
-		Feature Importance: 
-			Analyze the importance of each input feature in the model's predictions. 
-			Techniques like tree-based models or methods that calculate the importance of each feature based 
-				on its contribution to the model's predictions.
-			Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity 
-				(e.g., Gini index or information gain) in the decision tree nodes.
-				Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
-			Linear Models (Logistic Regression, Linear Regression) feature importance is derived from 
-				the coefficients of the linear model. Features with larger absolute coefficient values are 
-				considered more important.
-			Neural Networks Techniques like SHAP (SHapley Additive exPlanations) values or feature importance 
-				via gradient analysis is used to understand the contribution of individual features.
-			Permutation Feature Importance: This technique measures the contribution of a feature by measuring 
-				the changes in the model performance after randomly shuffling its values. 
+##### Feature Importance: 
+- Analyze the importance of each input feature in the model's predictions. Techniques like tree-based models or methods that calculate the importance of each feature based on its contribution to the model's predictions. Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity (e.g., Gini index or information gain) in the decision tree nodes. Tree based: Decision Trees, Random Forests, XGBoost, LightGBM. Linear Models (Logistic Regression, Linear Regression) feature importance is derived from the coefficients of the linear model. Features with larger absolute coefficient values are considered more important. Neural Networks Techniques like SHAP (SHapley Additive exPlanations) values or feature importance via gradient analysis is used to understand the contribution of individual features. Permutation Feature Importance: This technique measures the contribution of a feature by measuring the changes in the model performance after randomly shuffling its values. 
     
-	------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 
-	- Vendor-model: outcomes analysis, sensitivity analysis, benchmarking, monitoring.
+- Vendor-model: outcomes analysis, sensitivity analysis, benchmarking, monitoring.
 
-	------------------------------------------------------------------------------------------------------------
-
-	- Hyperparameters: 
-		Validation is crucial for selecting the best model, tuning hyperparameters, and ensuring the model can adapt 
-  		to new situations. 
-		It is the process of finding the best set of hyperparameters for a model to maximize its performance.
+------------------------------------------------------------------------------------------------------------
+### Hyperparameters
+- Validation is crucial for selecting the best model, tuning hyperparameters, and ensuring the model can adapt to new situations. It is the process of finding the best set of hyperparameters for a model to maximize its performance.
   
-		------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
   
-		Random Forest hyperparameters:
-			- Number of trees: The number of decision trees in the forest. Generally, 
-     				a larger number of trees can improve accuracy but also increase training time.
-  			- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data 
-     				but may also lead to overfitting.
-			- Minimum number of samples required to split a node:  Helps prevent overfitting by ensuring 
-       				that nodes aren't split on very small subsets of the data.
-			- Minimum number of samples per leaf node: The minimum number of samples required to be 
-   				at a leaf node. It helps to prevent overfitting by ensuring that leaf nodes have a 
-       				sufficient number of samples.
-			- Number of features to consider when making a split: IT controls the diversity of the trees 
-   				in the forest, with more features leading to potentially more diverse trees.
-			- Bootstrap: Determines whether or not to use bootstrap sampling when building the trees. 
-   				Bootstrap sampling involves drawing samples with replacement, which can help increase diversity. 
-			- Criterion: The function used to measure the quality of a split. 
-   				Common choices include "gini" for Gini impurity and "entropy" for information gain. 
-			- Class weight: To adjust the weights of classes in imbalanced datasets, which can be useful 
-   				when one class is significantly more prevalent than others.
+#### Random Forest hyperparameters:
+- Number of trees: The number of decision trees in the forest. Generally, a larger number of trees can improve accuracy but also increase training time.
+- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data but may also lead to overfitting.
+- Minimum number of samples required to split a node:  Helps prevent overfitting by ensuring that nodes aren't split on very small subsets of the data.
+- Minimum number of samples per leaf node: The minimum number of samples required to be at a leaf node. It helps to prevent overfitting by ensuring that leaf nodes have a sufficient number of samples.
+- Number of features to consider when making a split: IT controls the diversity of the trees in the forest, with more features leading to potentially more diverse trees.
+- Bootstrap: Determines whether or not to use bootstrap sampling when building the trees. Bootstrap sampling involves drawing samples with replacement, which can help increase diversity. 
+- Criterion: The function used to measure the quality of a split. Common choices include "gini" for Gini impurity and "entropy" for information gain. 
+- Class weight: To adjust the weights of classes in imbalanced datasets, which can be useful when one class is significantly more prevalent than others.
        
-		------------------------------------------------------------------------------------------------------------
-		AdaBoost hyperparameters:
-			- Number of Estimators: This determines how many weak learners (e.g., decision trees) are 
-				combined in the ensemble. More estimators can improve accuracy but also increase training time. 
-			- Learning Rate: This controls the contribution of each weak learner to the final prediction. 
-				A smaller learning rate means each weak learner has less influence, potentially requiring 
-				more estimators to achieve the same performance. 
-			- Base Estimator Hyperparameters: If the base estimator (e.g., decision trees) has its own hyperparameters 
-				(like max_depth for decision trees), tuning these can also impact the AdaBoost model's performance. 
-			- Loss Function (loss): AdaBoost supports different loss functions for classification, like exponential, 
-				linear, and square, which affect how weights are assigned to misclassified samples. 
-			- Random Seed: Setting a random seed ensures reproducibility, but experimenting with different random seeds 
-				during hyperparameter tuning can improve the robustness of the model.
+------------------------------------------------------------------------------------------------------------
+#### AdaBoost hyperparameters:
+- Number of Estimators: This determines how many weak learners (e.g., decision trees) are combined in the ensemble. More estimators can improve accuracy but also increase training time. 
+- Learning Rate: This controls the contribution of each weak learner to the final prediction. A smaller learning rate means each weak learner has less influence, potentially requiring more estimators to achieve the same performance. 
+- Base Estimator Hyperparameters: If the base estimator (e.g., decision trees) has its own hyperparameters (like max_depth for decision trees), tuning these can also impact the AdaBoost model's performance. 
+- Loss Function (loss): AdaBoost supports different loss functions for classification, like exponential, linear, and square, which affect how weights are assigned to misclassified samples. - Random Seed: Setting a random seed ensures reproducibility, but experimenting with different random seeds during hyperparameter tuning can improve the robustness of the model.
    
-		------------------------------------------------------------------------------------------------------------
-		Gradient Boosting hyperparameters:
-			- Learning Rate: This controls the contribution of each tree to the final prediction. 
-				A smaller learning rate leads to more stable and robust models, but requires more trees 
-				to achieve optimal performance. 
-			- Number of Estimators (Trees): This parameter dictates how many trees are used in the ensemble. 
-				A larger number of trees can improve performance, but also increases computational cost 
-				and risk of overfitting. 
-			- Max Depth: This limits the complexity of individual trees, preventing overfitting by restricting 
-				how deep they can grow. 
-			- Subsampling: This involves randomly selecting a subset of the training data for each tree. 
-				Subsampling helps to prevent overfitting and can improve the generalizability of the model, 
-				explains a guide on Hands-On Machine Learning with R. 
+------------------------------------------------------------------------------------------------------------
+#### Gradient Boosting hyperparameters:
+- Learning Rate: This controls the contribution of each tree to the final prediction. A smaller learning rate leads to more stable and robust models, but requires more trees to achieve optimal performance. 
+- Number of Estimators (Trees): This parameter dictates how many trees are used in the ensemble. A larger number of trees can improve performance, but also increases computational cost and risk of overfitting. 
+- Max Depth: This limits the complexity of individual trees, preventing overfitting by restricting how deep they can grow. 
+- Subsampling: This involves randomly selecting a subset of the training data for each tree. Subsampling helps to prevent overfitting and can improve the generalizability of the model, explains a guide on Hands-On Machine Learning with R. 
 	   
-		------------------------------------------------------------------------------------------------------------
-   		XGBoost hyperparameters: 
-  			- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data 
-				but may also lead to overfitting.
-			- minimum sum of instance weights (Hessian) needed in a child. It helps prevent overfitting 
-				by controlling the creation of new nodes in the tree. 
-			- subsample: This determines the fraction of training instances used for each tree, 
-				reducing the risk of overfitting. 
-			- colsample bytree: This parameter specifies the fraction of features used for each tree. 
-				Similar to subsample, it helps prevent overfitting by reducing the model's 
-				reliance on specific features. 
-			- learning rate (eta): This parameter controls the step size of the gradient descent algorithm. 
-				A smaller learning rate can lead to more stable training 
-				but may require more iterations to converge. 
-			- gamma: This parameter specifies the minimum loss reduction required to make a split. 
-				It can be useful for pruning the tree and preventing overfitting. 
-			- L2 regularization: This parameter adds a penalty proportional to the squared magnitude 
-				of the coefficients, helping to prevent overfitting. 
-			- L1 regularization: This parameter adds a penalty proportional to the absolute value of 
-				the coefficients, promoting sparsity in the model. 
+------------------------------------------------------------------------------------------------------------
+#### XGBoost hyperparameters: 
+- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data but may also lead to overfitting.
+- minimum sum of instance weights (Hessian) needed in a child. It helps prevent overfitting by controlling the creation of new nodes in the tree. 
+- subsample: This determines the fraction of training instances used for each tree, reducing the risk of overfitting. 
+- colsample bytree: This parameter specifies the fraction of features used for each tree. Similar to subsample, it helps prevent overfitting by reducing the model's reliance on specific features. 
+- learning rate (eta): This parameter controls the step size of the gradient descent algorithm. A smaller learning rate can lead to more stable training but may require more iterations to converge. 
+- gamma: This parameter specifies the minimum loss reduction required to make a split. It can be useful for pruning the tree and preventing overfitting. - L2 regularization: This parameter adds a penalty proportional to the squared magnitude of the coefficients, helping to prevent overfitting. 
+- L1 regularization: This parameter adds a penalty proportional to the absolute value of the coefficients, promoting sparsity in the model. 
        
-		------------------------------------------------------------------------------------------------------------
-		In neural networks, hyperparameters are settings that are not learned during training but are 
-  		set beforehand and influence the model's architecture, learning process, and overall performance.
-    
-		- Number of Layers: The number of hidden layers significantly impacts the model's complexity and 
-  			ability to learn intricate patterns. 
-		- Number of Neurons per Layer: The width of each hidden layer influences the model's capacity to represent 
-  			complex relationships. 
-		- Learning Rate: This determines the step size during optimization, affecting how quickly the model converges 
-  			to the minimum loss.
-		- Batch Size: The number of training examples processed before updating model parameters. 
-  			Larger batch sizes can lead to faster convergence but might require more memory. 
-		- Optimizer: The algorithm used to update model weights (e.g., Adam, SGD) influences the speed and 
-  			stability of training. 
-		- Epochs: The number of times the entire training dataset is passed through the model.
-		- Activation Function: The activation function introduced nonlinearity into the model, 
-  			enabling it to learn complex relationships.
-		- Regularization Techniques: These help prevent overfitting by adding penalties to the model's complexity 
-  			(e.g., L1, L2 regularization).
-		- Dropout Rate: Randomly drops out neurons during training, preventing over-reliance on specific neurons 
-  			and improving generalization.
+------------------------------------------------------------------------------------------------------------
+#### neural networks hyperparameters:
+- In neural networks, hyperparameters are settings that are not learned during training but are set beforehand and influence the model's architecture, learning process, and overall performance.
 
-		------------------------------------------------------------------------------------------------------------
-		Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore 
-  		the parameter space and find the optimal combination.
+- Number of Layers: The number of hidden layers significantly impacts the model's complexity and ability to learn intricate patterns. 
+- Number of Neurons per Layer: The width of each hidden layer influences the model's capacity to represent complex relationships. 
+- Learning Rate: This determines the step size during optimization, affecting how quickly the model converges to the minimum loss.
+- Batch Size: The number of training examples processed before updating model parameters. Larger batch sizes can lead to faster convergence but might require more memory. 
+- Optimizer: The algorithm used to update model weights (e.g., Adam, SGD) influences the speed and stability of training. 
+- Epochs: The number of times the entire training dataset is passed through the model.
+- Activation Function: The activation function introduced nonlinearity into the model, enabling it to learn complex relationships.
+- Regularization Techniques: These help prevent overfitting by adding penalties to the model's complexity (e.g., L1, L2 regularization).
+- Dropout Rate: Randomly drops out neurons during training, preventing over-reliance on specific neurons and improving generalization.
+
+	------------------------------------------------------------------------------------------------------------
+#### Grid Search, Randomized Search or Bayesian Optimization
+- Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter space and find the optimal combination.
     
-		- Grid Search: Defines a grid of hyperparameter values and tests all possible combinations. 
-			Pro: Simple to understand and implement. Finding the best combination within the defined grid.
-			Cons: Computationally expensive, especially with many hyperparameters or large grids.
-  				May miss the optimal hyperparameters if the grid is not fine-grained enough.
-		- Random Search: Randomly samples hyperparameters from a defined range or distribution, 
-  			without evaluating all combinations.
-			Pros: More efficient than grid search, especially with high-dimensional hyperparameter spaces.
-				Can find good hyperparameters with fewer evaluations. 
-			Cons: May not find the optimal hyperparameters, especially if the search space is large.
-				Requires careful selection of the number of iterations to balance exploration and efficiency. 
-		- Bayesian Optimization: Uses a probabilistic model (typically a Gaussian process) to learn the relationship 
-  			between hyperparameters and performance. It then intelligently explores the hyperparameter space, 
-     			focusing on regions with the highest probability of containing the optimal hyperparameters.
-			Pros: Efficient than grid and random search, requirs fewer evaluations to find good hyperparameters.
-				Can handle non-convex and noisy objective functions. 
-				Can be parallelized to speed up the search process. 
-			Cons: Can be computationally expensive for each iteration, especially with complex models.
-				Requires a suitable Gaussian process model and careful selection of hyperparameters for the model.
+- Grid Search: Defines a grid of hyperparameter values and tests all possible combinations. 
+	- Pro: Simple to understand and implement. Finding the best combination within the defined grid.
+	- Cons: Computationally expensive, especially with many hyperparameters or large grids. May miss the optimal hyperparameters if the grid is not fine-grained enough.
+- Random Search: Randomly samples hyperparameters from a defined range or distribution, without evaluating all combinations.
+	- Pros: More efficient than grid search, especially with high-dimensional hyperparameter spaces. Can find good hyperparameters with fewer evaluations. 
+	- Cons: May not find the optimal hyperparameters, especially if the search space is large. Requires careful selection of the number of iterations to balance exploration and efficiency. 
+- Bayesian Optimization: Uses a probabilistic model (typically a Gaussian process) to learn the relationship between hyperparameters and performance. It then intelligently explores the hyperparameter space, focusing on regions with the highest probability of containing the optimal hyperparameters. 
+	- Pros: Efficient than grid and random search, requirs fewer evaluations to find good hyperparameters. Can handle non-convex and noisy objective functions. Can be parallelized to speed up the search process. 
+	- Cons: Can be computationally expensive for each iteration, especially with complex models. Requires a suitable Gaussian process model and careful selection of hyperparameters for the model.
 
 ------------------------------------------------------------------------------------------------------------------------
 
