@@ -33,7 +33,10 @@
 		Imbalanced data refers to those types of datasets where the target class has an uneven 
 		distribution of observations, i.e one class label has a very high number of observations 
 		and the other has a very low number of observations (rare event i.e., Fraud)
-------------------------------------------------------------------------------------------------------		
+------------------------------------------------------------------------------------------------------
+
+## sampling
+
 #### Under-sampling: 
 - Under-sampling balances the dataset by reducing the size of the abundant class. This method is used when quantity of data is sufficient. By keeping all samples in the rare class and randomly selecting an equal number of samples in the abundant class, a balanced new dataset can be retrieved for further modelling.
 
@@ -64,7 +67,8 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 
 ---------------------------------------------------------------------------------------------
-### Hypothesis Testing: 
+
+## Hypothesis Testing: 
 - Hypothesis testing uses data from a sample to draw conclusions about a population parameter or a population probability distribution.  
   It's a statistical method used to determine if there's enough evidence in a sample to reject a null hypothesis in favor of an alternative hypothesis.
   It help to make better decisions.
@@ -137,7 +141,8 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 ---------------------------------------------------------------------------------------------
 
-# Probability Distribution:
+# Probability Distribution
+
 - Probability distributions function (PDF) describe what we think the probability of each outcome is.
 - probability mass function is used to describe the probabilities of discrete random variables,
   while the PDF is used to describe the probabilities of continuous random variables.
@@ -413,7 +418,6 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
   in order to identify the model that best fits the population from which the data were sampled. 
   "F-tests" mainly arise when the models have been fitted to the data using least squares.
 
-
 -----------------------------------------------------------------------------------------------------------------------------------
 
 https://medium.com/@srowen/common-probability-distributions-347e6b945ce4
@@ -600,7 +604,9 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 ------------------------------------------------------------------------------------------------------
 
 # Logistic regression 
+
 - It uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) tested in statistical analysis.
+  
 ### Assumptions:
 	1. Dependent variable should be binary
 	2. Linearity between independent & log odds. (non-linear relationship between the dependent and independent variables)
@@ -611,98 +617,9 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 	- linearity between DV and IVs
 	- homoscedasticity
 	- normal errors
-	
-# Model Metrics:
-- beta(x) 	= covariance(x,y) / variance(x)
-- correlation(x,y)= covariance(x,y) / [variance(x) * variance(y)]
-- TSS 		= SUM[y-mean(y)]^2
-- RSS 		= SUM[y-predicted(y)]^2
-- R Squared	= 1.0 - (RSS/TSS)
-- AIC		= ( No of variable * 2)             - ( 2 * -Log Likelihood )
-- BIC		= { No of variable * log(No of obs)}  - ( 2* -Log Likelihood )
-- VIF 		= 1.0 / (1.0 - R Squared)
-- Gini/Somer’s D = [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
-- Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]       
-
-			[meanG = mean of score only for good, varB= variance of score only for bad ]
-			
-- True Positives (TP) = Correctly Identified
-- True Negatives (TN) = Correctly Rejected
-- False Positives (FP) = Incorrectly Identified = Type I Error
-- False Negatives (FN) = Incorrectly Rejected	= Type II Error
-- Recall (Sensitivity) = Ability of the classifier to find positive samples from all positive samples
-- Precision = Ability of the classifier not to label as positive a sample that is negative (positive predictive value)
-- Specificity = Measures the proportion of actual negatives that are correctly identified (true negative rate)
-
-![Function](https://github.com/amitmse/in_Python_/blob/master/Formula/Confusion%20Matrxi.jpg)
-
-- True Positive Rate / Sensitivity / Recall : TP  / (TP + FN) = TP / Actual Positives
-- True Negative Rate / Specificity : 	    TN  / (TN + FP) = TN / Actual Negatives
-- False Positive Rate / Type I Error: 	    FP  / (FP + TN) = FP / Actual Negatives = 1 - Specificity
-- False Negative Rate / Type II Error : 	    FN  / (FN + TP) = FN / Actual Positives = 1 - True Positive Rate
-- Positive Predictive Value / Precision :     TP  / (TP + FP)
-- Negative Predictive Value : 		    TN  / (TN + FN)
-- False Discovery Rate: 			    FP  / (FP + TP) = 1 - Positive Predictive Value	
-- Accuracy : 				   (TP + TN)/ (TP  + TN + FP + FN)
-- F1-Score : 2*TP/ (2TP + FP + FN)   =   [2 * (Precision * Recall) / (Precision + Recall)]
-	- F1 score (also F-score or F-measure) is a measure of a test's accuracy. 
-	- The F1-score gives you the harmonic mean of precision and recall.
-	- The scores corresponding to every class will tell you the accuracy of the classifier in classifying the data points in that particular class compared to all other classes.
-	- The F1 score is the harmonic average of the precision and recall, where an F1 score reaches its best value at 1 (perfect precision and recall) and worst at 0.
-	- It considers both the precision and the recall of the test to compute the score: 
-		- precision is the number of correct positive results divided by the number of all positive results returned by the classifier. precision is the measure of how accurate the classifier’s prediction of a specific class
-		- recall is the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive). recall is the measure of the classifier’s ability to identify a class.
-	 
-			F1-Score : 2 * TP / (2TP + FP + FN) = [2 * (Precision * Recall) / (Precision + Recall)]
-	- If the classifier predicts the minority class but the prediction is erroneous and false-positive increases, the precision metric will be low and so as F1 score. Also, if the classifier identifies the minority class poorly, i.e. more of this class wrongfully predicted as the majority class then false negatives will increase, so recall and F1 score will low. F1 score only increases if both the number and quality of prediction improves. F1 score keeps the balance between precision and recall and improves the score only if the classifier identifies more of a certain class correctly.
-	
-- Precision/Specificity: how many selected instances are relevant.
-- Recall/Sensitivity: how many relevant instances are selected.
-- F1 score: harmonic mean of precision and recall.
-- MCC: correlation coefficient between the observed and predicted binary classifications.
-- AUC: relation between true-positive rate and false positive rate.
-- Accuracy is not appropriate when the data is imbalanced. Because the model can achieve higher accuracy by just predicting accurately the majority class while performing poorly on the minority class which in most cases is the class we care about the most.
-
-- Accuracy paradox: if the incidence of category A is dominant, being found in 99% of cases, then predicting that every case is category A will have an accuracy of 99%. Precision and recall are better measures in such cases. The underlying issue is that there is a class imbalance between the positive class and the negative class. Prior probabilities for these classes need to be accounted for in error analysis. Precision and recall help, but precision too can be biased by very unbalanced class priors in the test sets.
-
-- Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied ( https://www.geeksforgeeks.org/how-to-handle-imbalanced-classes-in-machine-learning/ )
-	The ROC curve is a graphical plot that illustrates the performance of any binary classifier 
-	system as its discrimination threshold is varied. True positive rate (Sensitivity : Y axis ) 
-	is plotted in function of the false positive rate (100-Specificity : X axis) for different 
-	cut-off points. Each point on the ROC curve represents a sensitivity/specificity pair 
-	corresponding to a particular decision threshold.
-- Standard Error Coef: 
-	Linear regression standard error of Coef : SE  = sqrt [ S(yi - yi)2 / (n - 2) ] / sqrt [ S(xi - x)2 ]
-	The standard error of the coefficient estimates the variability between coefficient estimates 
-	that you would obtain if you took samples from the same population again and again. 
-	The calculation assumes that the sample size and the coefficients to estimate would remain 
-	the same if you sampled again and again. Use the standard error of the coefficient to measure 
-	the precision of the estimate of the coefficient. 
-	The smaller the standard error, the more precise the estimate.
-- Recall and Precision:
-	Recall is the fraction of instances that have been classified as true. On the contrary, 
-	precision is a measure of weighing instances that are actually true. 
-	While recall is an approximation, precision is a true value that represents factual knowledge.
-- ROC curve:
-	Receiver Operating Characteristic is a measurement of the True Positive Rate (TPR) against False 
-	Positive Rate (FPR). We calculate True Positive (TP) as TPR = TP/ (TP + FN). On the contrary, 
-	false positive rate is determined as FPR = FP/FP+TN where where TP = true positive, TN = true negative, 
-	FP = false positive, FN = false negative.
-- AUC vs ROC:
-	AUC curve is a measurement of precision against the recall. Precision = TP/(TP + FP) and TP/(TP + FN).
-	This is in contrast with ROC that measures and plots True Positive against False positive rate.
-
-- Feature importances: 
-	It is also known as the Gini importance. The importance of a feature is computed as the (normalized) total reduction of the criterion brought by that feature.  	That reduction or weighted information gain is defined as. The weighted impurity decrease equation is the following: 
-	
-		N_t / N * (impurity - N_t_R / N_t * right_impurity - N_t_L / N_t * left_impurity)
-	
-			N 	: Total number of samples
-			N_t 	: No. of samples at the current node
-			N_t_L 	: No. of samples in the left child 
-			N_t_R 	: No. of samples in the right child
-------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------	
 # Decision Tree 
+
 ## Gini Index:
 Gini index says, if we select two items from a population at random then they must be of same class and probability for this is 1 if population is pure.
 - It works with categorical target variable “Success” or “Failure”.
@@ -746,6 +663,7 @@ Gini index says, if we select two items from a population at random then they mu
 	    	- Sum the weighted gini index for each split.
 ------------------------------------------------------------------------------------------------------
 ## Chi-Square:
+
 - It is an algorithm to find out the statistical significance between the differences between sub-nodes and parent node. We measures it by sum of squares of standardized differences between observed and expected frequencies of target variable.
 - It works with categorical target variable “Success” or “Failure”.
 - It can performs two or more splits
@@ -780,6 +698,7 @@ Gini index says, if we select two items from a population at random then they mu
 		8. TOTAL CHI-SQUARE for Class  = 0.38 + 0.38 + 0.35 + 0.35 = 1.46
 
 ## Information Gain
+
 - We can say that less impure node requires less information to describe it and more impure node requires more information. Information theory has a measure to define this degree of disorganization in a system, which is called Entropy. Lower Entropy is better. If the sample is completely homogeneous, then the entropy is zero and if the sample is an equally divided it has entropy of one. 
 - Entropy can be calculated using formula:   - P*Log2(P) - Q*Log2(Q)
 	- Here P and Q is probability of success and failure respectively in that node. 
@@ -835,6 +754,7 @@ Above, you can see that Gender split has lower variance compare to parent node s
 the split would be on Gender only.
 ------------------------------------------------------------------------------------------------------
 # Random Forest
+
 ## Bootstrap samples:
 - Draw repeated samples from the population, a large number of times. 
 - Samples are approximatively independent and identically distributed (i.i.d.).
@@ -853,7 +773,9 @@ the split would be on Gender only.
 ## Stacking:
 - Stacking mainly differ from bagging and boosting on two points. First stacking often considers heterogeneous weak learners (different learning algorithms are combined) whereas bagging and boosting consider mainly homogeneous weak learners. Second, stacking learns to combine the base models using a meta-model whereas bagging and boosting combine weak learners following deterministic algorithms.
 ------------------------------------------------------------------------------------------------------	
+
 ## Bias - Variance
+
 ### Bias: 
 - Bias is the difference between the prediction of model and actual value. 
 - It always leads to high error on training and test data.
@@ -903,7 +825,7 @@ the split would be on Gender only.
 
 -----------------------------------------------------------------------------------------------------------------------
 
-## Model Validation:
+# Model Validation:
 
 	------------------------------------------------------------------------------------------------------------------- 
 
@@ -1222,7 +1144,7 @@ https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-expl
 
 ------------------------------------------------------------------------------------------------------------------------
 
-## ML Model Issue:
+# ML Model Issue:
 
 	1. A high-performing model can still be completely wrong: Instead of a logical monotonic relationship 
  		(higher credit score → lower default risk), the model learned a non-monotonic pattern.
@@ -1381,7 +1303,99 @@ https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-expl
 	
 --------------------------------------------------------------------------------------------------------------------------
 
-	AUC measures how well a model distinguishes between two groups, Accuracy is the percentage of correct 
+# Model Metrics
+
+- beta(x) 	= covariance(x,y) / variance(x)
+- correlation(x,y)= covariance(x,y) / [variance(x) * variance(y)]
+- TSS 		= SUM[y-mean(y)]^2
+- RSS 		= SUM[y-predicted(y)]^2
+- R Squared	= 1.0 - (RSS/TSS)
+- AIC		= ( No of variable * 2)             - ( 2 * -Log Likelihood )
+- BIC		= { No of variable * log(No of obs)}  - ( 2* -Log Likelihood )
+- VIF 		= 1.0 / (1.0 - R Squared)
+- Gini/Somer’s D = [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+- Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]       
+
+			[meanG = mean of score only for good, varB= variance of score only for bad ]
+			
+- True Positives (TP) = Correctly Identified
+- True Negatives (TN) = Correctly Rejected
+- False Positives (FP) = Incorrectly Identified = Type I Error
+- False Negatives (FN) = Incorrectly Rejected	= Type II Error
+- Recall (Sensitivity) = Ability of the classifier to find positive samples from all positive samples
+- Precision = Ability of the classifier not to label as positive a sample that is negative (positive predictive value)
+- Specificity = Measures the proportion of actual negatives that are correctly identified (true negative rate)
+
+![Function](https://github.com/amitmse/in_Python_/blob/master/Formula/Confusion%20Matrxi.jpg)
+
+- True Positive Rate / Sensitivity / Recall : TP  / (TP + FN) = TP / Actual Positives
+- True Negative Rate / Specificity : 	    TN  / (TN + FP) = TN / Actual Negatives
+- False Positive Rate / Type I Error: 	    FP  / (FP + TN) = FP / Actual Negatives = 1 - Specificity
+- False Negative Rate / Type II Error : 	    FN  / (FN + TP) = FN / Actual Positives = 1 - True Positive Rate
+- Positive Predictive Value / Precision :     TP  / (TP + FP)
+- Negative Predictive Value : 		    TN  / (TN + FN)
+- False Discovery Rate: 			    FP  / (FP + TP) = 1 - Positive Predictive Value	
+- Accuracy : 				   (TP + TN)/ (TP  + TN + FP + FN)
+- F1-Score : 2*TP/ (2TP + FP + FN)   =   [2 * (Precision * Recall) / (Precision + Recall)]
+	- F1 score (also F-score or F-measure) is a measure of a test's accuracy. 
+	- The F1-score gives you the harmonic mean of precision and recall.
+	- The scores corresponding to every class will tell you the accuracy of the classifier in classifying the data points in that particular class compared to all other classes.
+	- The F1 score is the harmonic average of the precision and recall, where an F1 score reaches its best value at 1 (perfect precision and recall) and worst at 0.
+	- It considers both the precision and the recall of the test to compute the score: 
+		- precision is the number of correct positive results divided by the number of all positive results returned by the classifier. precision is the measure of how accurate the classifier’s prediction of a specific class
+		- recall is the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive). recall is the measure of the classifier’s ability to identify a class.
+	 
+			F1-Score : 2 * TP / (2TP + FP + FN) = [2 * (Precision * Recall) / (Precision + Recall)]
+	- If the classifier predicts the minority class but the prediction is erroneous and false-positive increases, the precision metric will be low and so as F1 score. Also, if the classifier identifies the minority class poorly, i.e. more of this class wrongfully predicted as the majority class then false negatives will increase, so recall and F1 score will low. F1 score only increases if both the number and quality of prediction improves. F1 score keeps the balance between precision and recall and improves the score only if the classifier identifies more of a certain class correctly.
+	
+- Precision/Specificity: how many selected instances are relevant.
+- Recall/Sensitivity: how many relevant instances are selected.
+- F1 score: harmonic mean of precision and recall.
+- MCC: correlation coefficient between the observed and predicted binary classifications.
+- AUC: relation between true-positive rate and false positive rate.
+- Accuracy is not appropriate when the data is imbalanced. Because the model can achieve higher accuracy by just predicting accurately the majority class while performing poorly on the minority class which in most cases is the class we care about the most.
+
+- Accuracy paradox: if the incidence of category A is dominant, being found in 99% of cases, then predicting that every case is category A will have an accuracy of 99%. Precision and recall are better measures in such cases. The underlying issue is that there is a class imbalance between the positive class and the negative class. Prior probabilities for these classes need to be accounted for in error analysis. Precision and recall help, but precision too can be biased by very unbalanced class priors in the test sets.
+
+- Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied ( https://www.geeksforgeeks.org/how-to-handle-imbalanced-classes-in-machine-learning/ )
+	The ROC curve is a graphical plot that illustrates the performance of any binary classifier 
+	system as its discrimination threshold is varied. True positive rate (Sensitivity : Y axis ) 
+	is plotted in function of the false positive rate (100-Specificity : X axis) for different 
+	cut-off points. Each point on the ROC curve represents a sensitivity/specificity pair 
+	corresponding to a particular decision threshold.
+- Standard Error Coef: 
+	Linear regression standard error of Coef : SE  = sqrt [ S(yi - yi)2 / (n - 2) ] / sqrt [ S(xi - x)2 ]
+	The standard error of the coefficient estimates the variability between coefficient estimates 
+	that you would obtain if you took samples from the same population again and again. 
+	The calculation assumes that the sample size and the coefficients to estimate would remain 
+	the same if you sampled again and again. Use the standard error of the coefficient to measure 
+	the precision of the estimate of the coefficient. 
+	The smaller the standard error, the more precise the estimate.
+- Recall and Precision:
+	Recall is the fraction of instances that have been classified as true. On the contrary, 
+	precision is a measure of weighing instances that are actually true. 
+	While recall is an approximation, precision is a true value that represents factual knowledge.
+- ROC curve:
+	Receiver Operating Characteristic is a measurement of the True Positive Rate (TPR) against False 
+	Positive Rate (FPR). We calculate True Positive (TP) as TPR = TP/ (TP + FN). On the contrary, 
+	false positive rate is determined as FPR = FP/FP+TN where where TP = true positive, TN = true negative, 
+	FP = false positive, FN = false negative.
+- AUC vs ROC:
+	AUC curve is a measurement of precision against the recall. Precision = TP/(TP + FP) and TP/(TP + FN).
+	This is in contrast with ROC that measures and plots True Positive against False positive rate.
+
+- Feature importances: 
+	It is also known as the Gini importance. The importance of a feature is computed as the (normalized) total reduction of the criterion brought by that feature.  	That reduction or weighted information gain is defined as. The weighted impurity decrease equation is the following: 
+	
+		N_t / N * (impurity - N_t_R / N_t * right_impurity - N_t_L / N_t * left_impurity)
+	
+			N 	: Total number of samples
+			N_t 	: No. of samples at the current node
+			N_t_L 	: No. of samples in the left child 
+			N_t_R 	: No. of samples in the right child
+
+
+AUC measures how well a model distinguishes between two groups, Accuracy is the percentage of correct 
 	predictions, F1 Score balances precision and recall, Gini is a measure of model discrimination derived 
 	from AUC, and Kolmogorov-Smirnov (KS) measures the difference between two distributions. 
 
@@ -1483,6 +1497,8 @@ https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-expl
 			Because of that, with the F1 score, you need to choose a threshold that 
    			assigns your observations to those classes. 
 			Often, you can improve your model performance a lot if you choose it well.
+
+------------------------------------------------------------------------------------------------------
 
 https://www.kaggle.com/discussions/getting-started/170389
 
