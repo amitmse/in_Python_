@@ -568,6 +568,7 @@ Step-by-step:
 	distributed across all possible combinations of features.
 
 	SHAP value =  sum [weight * (prediction with feature - prediction without feature)]
+
 		weight assigned to a particular coalition based on the number of ways
   			the feature could have joined the coalition.
 		prediction with feature is the model prediction when the feature is included in the coalition.
