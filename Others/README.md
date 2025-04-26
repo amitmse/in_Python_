@@ -827,89 +827,67 @@ the split would be on Gender only.
 
 # Model Validation:
 
+-------------------------------------------------------------
+
 #### SR 11-7: 
 - Regulators expect ML models to comply with the standards of SR 11-7 part of model risk management (MRM).
-	
 - Conceptual Soundness: 
 	- Assess model design, construct, variable selection, decisions based on incorrect info, empirical evidence, documentation, limitations, misuse of model outputs.
-
 	- Any good model always has weakness or hidden weaknesses.
 	- Where does this model fail and under what conditions?	
 	- How can it be exploited or misused?
 	- Find a blind spots before they become costly failures
-  
 - Data Integrity/Representativeness: 
 	- The data used for model development be representative of the bank’s portfolio and market/business conditions
-  
 - Validation:
 	- Out of time validation. 
 	- Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used.
 	- Validation guides model refinement during development, and testing validates its performance in real-world contexts, ensuring it behaves reliably and effectively beyond the training data.
-
-	-------------------------------------------------------------
+-------------------------------------------------------------
 
 #### SS 1/23:
-	- Model development, implementation and use
-	- Independent model validation
-	- Model risk mitigants 
-	- model risk classification
-	- Model identification
-	- Governance
-
-	--------------------------------------------------------
-
-	- Group Model Risk Standards (GMRS): It state how things must be done to meet the requirements set out in the GMRP.
-	- Group Model Risk Policy (GMRP): It sets out requirements and responsibilities for the identification, 
-			measurement, and monitoring of Model Risk.
-	- Model Family Standards (MFS): Model Family Standards state how things must be done within a given model family.
-
-	--------------------------------------------------------
+- Model development, implementation and use
+- Independent model validation
+- Model risk mitigants 
+- model risk classification
+- Model identification
+- Governance
+--------------------------------------------------------
+- Group Model Risk Standards (GMRS): It state how things must be done to meet the requirements set out in the GMRP.
+- Group Model Risk Policy (GMRP): It sets out requirements and responsibilities for the identification, measurement, and monitoring of Model Risk.
+- Model Family Standards (MFS): Model Family Standards state how things must be done within a given model family.
+--------------------------------------------------------
+Model Risk Policy and Governance:
+- Responsible for ongoing assessment of the model risk management framework
+- Responsible for preparing model risk oversight reporting
+- Responsible for the governance and execution of the annual status assessment for models
+- Responsible for preparing Group’s model risk assessments and Group’s model risk profile reporting
+--------------------------------------------------------
+Third Party Model:
+- Assessment of model development design and methodology
+- Assessment of input data quality, security, privacy, integrity, bias and representativeness
+- Assessment of any overlays or post model output adjustments
+- Assessment of the Model Control Framework and Implementation
+- Assessment of the Monitoring approach
+- Assessment for Regulatory Compliance
+- Model performance testing on recent out of time data
+- Review of the model change management process
+- Validation team to review the validation conducted by the vendor and document the key findings and recommendations in the model approval request template.
+----------------------------------------------------------------------------------------------------
  
-	Model Risk Policy and Governance:
-	- Responsible for ongoing assessment of the model risk management framework
-	- Responsible for preparing model risk oversight reporting
-	- Responsible for the governance and execution of the annual status assessment for models
-	- Responsible for preparing Group’s model risk assessments and Group’s model risk profile reporting
-
-	--------------------------------------------------------
+### Check Bias and Variance:
+- Check bias in human decision-making is carried over to the development. The data-generating process itself can be biased. One way to identify data bias is by benchmarking with other models. Random selection of development sample.
  
-	Third Party Model:
-	- Assessment of model development design and methodology
-	- Assessment of input data quality, security, privacy, integrity, bias and representativeness
-	- Assessment of any overlays or post model output adjustments
-	- Assessment of the Model Control Framework and Implementation
-	- Assessment of the Monitoring approach
-	- Assessment for Regulatory Compliance
-	- Model performance testing on recent out of time data
-	- Review of the model change management process
-	- Validation team to review the validation conducted by the vendor and document the key findings 
-		and recommendations in the model approval request template.
-
-	----------------------------------------------------------------------------------------------------
- 
-	- Check Bias and Variance:
-		Check bias in human decision-making is carried over to the development.
-		The data-generating process itself can be biased.
-		One way to identify data bias is by benchmarking with other models.
-		Random selection of development sample.
- 
- 		Assess model's bias (error due to assumptions).
-  		Assess model's Variance (sensitivity to training data fluctuations).
-		To check above perform: 
+- Assess model's bias (error due to assumptions).
+- Assess model's Variance (sensitivity to training data fluctuations).
+- To check above perform: 
+	- Cross-Validation: It reveals model's performance is consistent across different data samples, indicating lower variance. It also helps identify if the model's assumptions are too restrictive, leading to high bias.
   
-		- Cross-Validation: It reveals model's performance is consistent across different data samples, 
-			indicating lower variance. 
-			It also helps identify if the model's assumptions are too restrictive, leading to high bias.
-  
-		- Learning Curves: Plot the training and validation errors against the size of the training dataset.
-  			Interpreting the curves:
-			High Bias (Underfitting): If both training and validation errors are high and close together, 
-			the model may be too simple and not capturing the underlying patterns in the data.
-			High Training Error, High Validation Error: Suggests underfitting (high bias).
+	- Learning Curves: Plot the training and validation errors against the size of the training dataset. 
+		Interpreting the curves:
+			- High Bias (Underfitting): If both training and validation errors are high and close together, the model may be too simple and not capturing the underlying patterns in the data. High Training Error, High Validation Error: Suggests underfitting (high bias).
        
-			High Variance (Overfitting): If the training error is low but the validation error is high, 
-			the model is overfitting the training data and not generalizing well to unseen data
-			Low Training Error, High Validation Error: Indicates overfitting (high variance).
+			- High Variance (Overfitting): If the training error is low but the validation error is high, the model is overfitting the training data and not generalizing well to unseen data Low Training Error, High Validation Error: Indicates overfitting (high variance).
     
 		- Sensitivity Analysis: Test the model's sensitivity to changes in input variables.
 
