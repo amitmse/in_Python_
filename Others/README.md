@@ -419,16 +419,13 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
   "F-tests" mainly arise when the models have been fitted to the data using least squares.
 
 -----------------------------------------------------------------------------------------------------------------------------------
-
-https://medium.com/@srowen/common-probability-distributions-347e6b945ce4
-
-https://blog.cloudera.com/blog/2015/12/common-probability-distributions-the-data-scientists-crib-sheet/
-
-https://www.johndcook.com/blog/distribution_chart/
-
-https://www.statisticshowto.datasciencecentral.com/probability-distribution/
-
+	https://medium.com/@srowen/common-probability-distributions-347e6b945ce4
+	https://blog.cloudera.com/blog/2015/12/common-probability-distributions-the-data-scientists-crib-sheet/
+	https://www.johndcook.com/blog/distribution_chart/
+	https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 -----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+
 ## Covariance: 
 	Covariance(X,Y) = E[(X−EX)(Y−EY)] = E[XY]−(EX)(EY)
  	correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
@@ -452,7 +449,9 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 	i.e. all sample means are equal
 	
 ------------------------------------------------------------------------------------------------------
+
 # Ordinary Least Squares (OLS): 
+
 	- Finds parameter values that minimizing the error.
  
 	- Gauss-Markov Theorem: It provides a theoretical justification for using OLS in linear regression, 
