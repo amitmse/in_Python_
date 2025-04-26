@@ -479,11 +479,11 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 2. No perfect multicollinearity :
 	- Issue: Regression coefficient variance will increase.
   
-	- It inflates standard errors, leading to unstable and unreliable coefficient estimates, making it difficult to determine the individual effect of each predictor on the outcome and potentially leading to misleading conclusions about variable importance.
+	  It inflates standard errors, leading to unstable and unreliable coefficient estimates, making it difficult to determine the individual effect of each predictor on the outcome and potentially leading to misleading conclusions about variable importance.
 		
-	- The presence of multicollinearity makes the coefficient estimates highly sensitive to small changes in the data or model specification. Even a slight shift in the data can cause the coefficients to fluctuate significantly, making the model's interpretation unreliable.
+	  The presence of multicollinearity makes the coefficient estimates highly sensitive to small changes in the data or model specification. Even a slight shift in the data can cause the coefficients to fluctuate significantly, making the model's interpretation unreliable.
 
-	- Multicollinearity does not directly affect the goodness-of-fit statistics of the model, such as R-squared or the overall F-test. The model can still make accurate predictions despite the presence of multicollinearity.
+	  Multicollinearity does not directly affect the goodness-of-fit statistics of the model, such as R-squared or the overall F-test. The model can still make accurate predictions despite the presence of multicollinearity.
 
 	- Test: VIF 
 		VIF: [1.0 / (1.0 - R Squared)]
@@ -500,24 +500,24 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 ### For Error Tearm: 4
 
 3. Normality of residuals : Differences between observed and predicted values.
-	- In linear regression, the assumption that "errors follow a normal distribution" means the difference between the observed values and the values predicted by the model (the residuals) are assumed to be distributed according to a normal distribution. 
+	In linear regression, the assumption that "errors follow a normal distribution" means the difference between the observed values and the values predicted by the model (the residuals) are assumed to be distributed according to a normal distribution. 
      
 	- Issue: OLS estimators won’t have the desirable BLUE property. 
   
-	- This assumption is crucial for the validity of statistical tests used in linear regression, such as hypothesis tests, t-tests, p-values and ANOVA, which rely on the normality of the errors to provide accurate regression coefficients and confidence intervals.
+	  This assumption is crucial for the validity of statistical tests used in linear regression, such as hypothesis tests, t-tests, p-values and ANOVA, which rely on the normality of the errors to provide accurate regression coefficients and confidence intervals.
   
-	- Standard errors and t-values used to calculate the statistical significance of regression parameters may be inaccurate, leading to potentially misleading conclusions.
+	  Standard errors and t-values used to calculate the statistical significance of regression parameters may be inaccurate, leading to potentially misleading conclusions.
 
 	- Test: Jarque-Bera test, Kolmogorov-Smirnov Test, Shapiro-Wilk test, histograms or Q-Q plots
     
 	- Solution: Transforming the dependent or independent variables, Use robust statistical methods that are less sensitive to non-normality may be appropriate.
     
 4. Homoscedasticity of residuals /equal variance of residuals
-	- Homoscedasticity in the context of residuals refers to the assumption that the variance of the error terms (residuals) is constant across all levels of the independent variables in a regression model.
+	Homoscedasticity in the context of residuals refers to the assumption that the variance of the error terms (residuals) is constant across all levels of the independent variables in a regression model.
 
 	- Issue: Homoscedasticity is necessary for accurately estimating the standard errors of the regression coefficients. The standard errors of the coefficients may be biased, leading to unreliable hypothesis tests nd confidence intervals. Homoscedasticity ensures that the estimated coefficients are unbiased and have minimum variance.
   
-	- Example	: Family income to predict luxury spending. Residuals are very small for low values of family income (less spend on luxury) while there is great variation in the size of the residuals for wealthier families. Standard errors are biased and it leads to incorrect conclusions about the significance of the regression coefficients
+	  Example	: Family income to predict luxury spending. Residuals are very small for low values of family income (less spend on luxury) while there is great variation in the size of the residuals for wealthier families. Standard errors are biased and it leads to incorrect conclusions about the significance of the regression coefficients
      
 	- Test	: Breush-Pagan test, Goldfeld-Quandt, Koenker-Bassett (generalized Breusch-Pagan)
 		Breush-Pagan: Calculate the Square the residuals, and Regress it on the independent variables.
@@ -538,7 +538,7 @@ https://www.statisticshowto.datasciencecentral.com/probability-distribution/
 	OLS vs GLS: OLS assumes the error is independent, identically distributed, and have constant variance. GLS relaxes above assumption and allows for heteroscedasticity, and autocorrelation.
 
 6. Mean of residuals is zero :
-	- The sum of the residuals is always zero when an intercept is included in the regression model. This is because the regression line is fitted in a way that the total distance of the data points above the line is equal to the total distance of the data points below the line. If a model without an intercept is used, the residuals will not necessarily have a mean of zero. The mean of residuals is zero is a direct result of how the least squares method calculates the regression line. It's not an assumption that needs to be tested.
+	The sum of the residuals is always zero when an intercept is included in the regression model. This is because the regression line is fitted in a way that the total distance of the data points above the line is equal to the total distance of the data points below the line. If a model without an intercept is used, the residuals will not necessarily have a mean of zero. The mean of residuals is zero is a direct result of how the least squares method calculates the regression line. It's not an assumption that needs to be tested.
   
 	- Issue: Error terms has zero mean and doesn’t depend on the independent variables. Thus, there must be no relationship between the independent variable and the error term. A model with a zero mean for residuals suggests that the model is, on average, neither overestimating nor underestimating the response variable.
    
