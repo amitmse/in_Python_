@@ -585,6 +585,9 @@ Step-by-step:
 	E[f(X)] refers to the baseline (mean or median in the case of regression).
 	f(x) is the value predicted by our model. 
 
+![image](https://github.com/user-attachments/assets/cec7ebe0-a67c-42ad-9142-742928394034)
+
+
 ------------------------------------------------------------------------------------------------------------
 
 ## hyperparameters
