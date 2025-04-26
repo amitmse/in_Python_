@@ -300,21 +300,20 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	For BIG data its only option to apply Gradient descent in faster way.
 			
 ##### 3. Newton Raphson:   
-	- Newton's method generally requires fewer iterations, but each iteration is slow as we need to compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must  	supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate). http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf
+- Newton's method generally requires fewer iterations, but each iteration is slow as we need to compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must  	supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate). http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf
    
-	- The Newton-Raphson method requires the second derivative because it uses a quadratic approximation of the function, and the second derivative provides information about the curvature of the function, allowing the method to converge faster than methods that use only the first derivative.
+- The Newton-Raphson method requires the second derivative because it uses a quadratic approximation of the function, and the second derivative provides information about the curvature of the function, allowing the method to converge faster than methods that use only the first derivative.
 
+- Second derivative tells about the concavity of the function's graph:
+	- Positive second derivative means the graph is concave up (like a "U" shape), indicating a minimum.
+	- A negative second derivative means the graph is concave down (like a hump), indicating a maximum
 
-	- Second derivative tells about the concavity of the function's graph:
-		- Positive second derivative means the graph is concave up (like a "U" shape), indicating a minimum.
-		- A negative second derivative means the graph is concave down (like a hump), indicating a maximum
-
-	- The second derivative is used to determine whether a critical point of a function is a local minimum, maximum, or neither. A positive second derivative at a critical point indicates a local minimum, while a negative second derivative indicates a local maximum.
-	- Find Critical Points: Start by finding the points where the first derivative of the function is equal to zero. These points are potential candidates for local minima or maxima.
-	-  Second Derivative Test: second derivative of the function at each of the critical points
-		- minimum: second derivative > 0 at a critical point
-		- maximum: second derivative < 0 at a critical point
-		- inconclusive: second derivative = 0 at a critical point
+- The second derivative is used to determine whether a critical point of a function is a local minimum, maximum, or neither. A positive second derivative at a critical point indicates a local minimum, while a negative second derivative indicates a local maximum.
+- Find Critical Points: Start by finding the points where the first derivative of the function is equal to zero. These points are potential candidates for local minima or maxima.
+-  Second Derivative Test: second derivative of the function at each of the critical points
+	- minimum: second derivative > 0 at a critical point
+	- maximum: second derivative < 0 at a critical point
+	- inconclusive: second derivative = 0 at a critical point
 
 	f(x) = x² - 4x + 5
 	first derivative: f'(x) = 2x - 4
@@ -323,17 +322,17 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
     	Evaluate f''(x) at x = 2: f''(2) = 2. Since f''(2) > 0, the function has a local minimum at x = 2.
 
 
-	- Newton Raphson without second derivative
-		Xn+1 	= Xn - f(X)/f'(X)
-			(Xn is initail guess, f'(X) first derivative)
-		f(X) 	= X^2 - 8  
-		f'(X)	= 2X  
-		X1	= 3 (initail guess)  
-		X2	= X1 - f(X)/f'(X)  
-			= 3  - [( 3^2 - 8 )/ 2*3 ]   = 3  - (1/6)  = 18-1/6  
-		X2	= 17/6
-		X3	= X2 - f(X2)/f'(X2)  = 17/6 - [(17/6)^2 - 8] / [2(17/6)] 
-		X3	= 2.828
+- Newton Raphson without second derivative
+	Xn+1 	= Xn - f(X)/f'(X)
+		(Xn is initail guess, f'(X) first derivative)
+	f(X) 	= X^2 - 8  
+	f'(X)	= 2X  
+	X1	= 3 (initail guess)  
+	X2	= X1 - f(X)/f'(X)  
+		= 3  - [( 3^2 - 8 )/ 2*3 ]   = 3  - (1/6)  = 18-1/6  
+	X2	= 17/6
+	X3	= X2 - f(X2)/f'(X2)  = 17/6 - [(17/6)^2 - 8] / [2(17/6)] 
+	X3	= 2.828
     
 -----------------------------------------------------------------------------------------------------------------------
 
