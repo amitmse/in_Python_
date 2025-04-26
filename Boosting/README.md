@@ -576,11 +576,11 @@ Step-by-step:
 
 ![image](https://github.com/user-attachments/assets/e97c45c3-c565-473e-82ca-b2d11b95c244)
 
-	- n is total number of features
-	- N contains all the possible feature subsets not containing feature i
-	- S is one feature set from N
-	- v(x) is the trained model prediction function f(x), x is a model input instance
-	- |S|is the number of not missing features in set S
+		- n is total number of features
+		- N contains all the possible feature subsets not containing feature i
+		- S is one feature set from N
+		- v(x) is the trained model prediction function f(x), x is a model input instance
+		- |S|is the number of not missing features in set S
     
 
 -  Interpretion of SHAP Values: The SHAP values indicate the degree to which a feature influences the model's prediction.
