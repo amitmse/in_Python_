@@ -583,18 +583,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 
 # Logistic regression 
 
-- It uses MLE rather than OLS, it avoids many of the typical assumptions (listed below) tested in statistical analysis.
-  
-### Assumptions:
-	1. Dependent variable should be binary
-	2. Linearity between independent & log odds. (non-linear relationship between the dependent and independent variables)
-	3. Independence of errors
-	4. No perfect multicollinearity
-### Does not assume: 
-	- normality of variables (both DV and IVs)
-	- linearity between DV and IVs
-	- homoscedasticity
-	- normal errors
+https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
+
 --------------------------------------------------------------------------------------	
 # Decision Tree 
 
