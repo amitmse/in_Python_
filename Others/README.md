@@ -123,6 +123,7 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 	- The width of the confidence interval is related to the margin of error, which indicates how much your sample estimate might vary from the true population value. 
 
 - P-value:
+	- P-value represents the probability that observed results would occur if the null hypothesis were true. The null hypothesis typically assumes there's no effect or no difference between groups.
 	- Probability of observing test results at least as extreme as the results observed, assuming the null hypothesis is correct.
  	- It helps determine the strength of the evidence against the null hypothesis.
   	- P value is compared with a significance level. It does not provide information about the magnitude of the effect. 
