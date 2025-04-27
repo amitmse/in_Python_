@@ -10,8 +10,10 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 1. Dependent variable should be binary
  
 2. Linearity between independent & log odds.
-   	- Log converts odds into linear form. log(p/q) = [log(p) - log(q)] 
-		(non-linear relationship between the dependent and independent variables) 
+   	- Log converts odds into linear form. log(p/q) = [log(p) - log(q)]
+   	  
+		(non-linear relationship between the dependent and independent variables)
+
 	- Test: Box-Tidwell test	
   
 3. Independence of errors
@@ -23,10 +25,9 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 4. No perfect multicollinearity
 
 -------------------------------------------------------------
+
 - Logistic regression relaxes several key assumptions required by linear regression (linearity between the dependent and independent variables, normality of errors, homoscedasticity)
-	
 - Logistic regression the target variable follows Bernoulli / binomial distribution, not normal distribution. The errors in logistic regression are not normally distributed, as the outcome is a probability (0 to 1).
-  		
 - Logistic regression does not require homoscedasticity as the variance of the errors can vary depending on the predicted probability, as it's a binomial random variable.
        
 -----------------------------------------------------------------------------------------------------------------------
@@ -40,11 +41,14 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 #### Why use odds and log-odds.
 - Probability output ranges from 0 to 1  
 - Odds Ratio = P/(1-P)		[Odds output range from 0 to ∞ ]
+  
 	odds = 0 when p = 0     [ 0 / (1-0) = 0] 
 	odds = ∞ when p = 1	[ when denominator is very small number]
-	Odds of an event occurring in one group compared to another, provides a measure of the strength of association between the predictor and the outcome.
+
+Odds of an event occurring in one group compared to another, provides a measure of the strength of association between the predictor and the outcome.
   
 - Log of Odds: log (p/(1-P))  	[Log output ranges from −∞ to ∞]
+  
 	- Log of Odds is also called logit function.
 	- Logit established a linear relationship between Predictors and Target.
 	- The logit function takes a probability (0 to 1) and converts it back into a linear combination of predictors.
@@ -54,7 +58,8 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	- One unit increase in logit means exactly is still challenging. Thus, convert regression coefficients to something easier for interpretation, like odds ratios. This can be done easily by exponentiating the coefficient.
 	- Log odds with a negative value indicating the odds of failure and a positive value showing higher chances of success.
 
-- Sigmoid function: 1/(1+exp^-y) 
+- Sigmoid function: 1/(1+exp^-y)
+  
 	- The inverse of the logit function.
 	- The sigmoid function maps arbitrary real values back to the range [0, 1].
 	- Generalised form of logit function. For probability p, sigmoid(logit(p)) = p. 
@@ -62,6 +67,7 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 - Cost Function: [{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}]
 
 - Logistic regression estimates an unknown probability for any given linear combination (log odds #2Assumptions) of the independent variables.
+  
 	- logit(p) => Log(Odds) => log[p/(1-P)] => [log(p) - log(1-P)] => logit(p)
 	- log[p/(1-P)] = a + bX (Logistic Model)
 	  Anti Log is exponential function which converts logit to sigmoid for probability.
@@ -181,6 +187,7 @@ Maximum likelihood estimation (MLE):
 
 ![image](https://github.com/user-attachments/assets/ea2009ca-5cac-4334-af54-bfd6226fb7af)
 
+---------------------------------------------------------------------------------------------------
 
 ### Challenges with Gradient Descent
 
@@ -192,7 +199,8 @@ Maximum likelihood estimation (MLE):
 	- Vanishing gradients: This occurs when the gradient is too small. As move backwards during backpropagation, the gradient continues to become smaller, causing the earlier layers in the network to learn more slowly than later layers. When this happens, the weight parameters update until they become insignificant—i.e. 0—resulting in an algorithm that is no longer learning. The parameters of the higher layers change significantly whereas the parameters of lower layers would not change much (or not at all). The model weights may become 0 during training. The model learns very slowly and perhaps the training stagnates at a very early stage just after a few iterations. 
 
 	- Exploding gradients: This happens when the gradient is too large, creating an unstable model. In this case, the model weights will grow too large, and they will eventually be represented as NaN. One solution to this issue is to leverage a dimensionality reduction technique, which can help to minimize complexity within the model. There is an exponential growth in the model parameters. The model weights may become NaN during training. The model experiences avalanche learning.
-
+   
+---------------------------------------------------------------------------------------------------
 
 ## Types of Gradient Descent:
 1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost function hence and it's very slow.
@@ -206,7 +214,11 @@ Maximum likelihood estimation (MLE):
 
 ![image](https://github.com/user-attachments/assets/4c300ff5-7a12-4625-84b4-1c7bf4aafa7d)
 
+---------------------------------------------------------------------------------------------------
+
 ### Gradient Descent vs Newton's method
+
+---------------------------------------------------------------------------------------------------
 
 #### Gradient Descent:
 	- Simple
@@ -215,6 +227,8 @@ Maximum likelihood estimation (MLE):
 	- More number of iterations
 	- Each iteration is cheap (no 2nd derivative )
 	- If number of observation is large then its cheaper
+ 
+---------------------------------------------------------------------------------------------------
 
 #### Newton's method:
 	- Complex
@@ -224,7 +238,11 @@ Maximum likelihood estimation (MLE):
 	- Each iteration is expesive (2nd derivative )
 	- If less number of observation (may be 1000) then its cheaper
 
+---------------------------------------------------------------------------------------------------
+
 ### Solve a equation (identify beta):  
+
+---------------------------------------------------------------------------------------------------
 
 ##### 1. Calculus: 
 - It will faster if equation is simple. But in real life equations are very complex and messy and its difficult to solve.
@@ -232,7 +250,9 @@ Maximum likelihood estimation (MLE):
 		f(x) 	= X^2 - 2X + 2   
 		df/dx 	= 2X - 2  
 		2X	= 2  
-		X	= 1   
+		X	= 1
+  
+---------------------------------------------------------------------------------------------------
 	
 ##### 2. Gradient Descent:
 
@@ -262,7 +282,9 @@ Maximum likelihood estimation (MLE):
 - First make initial guess for c & d then do the derivative by c & d seperately to get the optimium value of c & d. Above process will apply on Gradient Descent "Xi+1 = Xi - a f'(Xi)". Gradient descent is based on 1st derivatives only and it use all data at one time. Gradient descent generally requires more iterations. If data size is big then it will take long time to compute.
 			
 - Stochastic Gradient descent: It takes portion of data at one time and do the computation and continue in same way. cofficients are not exactly equals to Gradient descent but its close. For BIG data its only option to apply Gradient descent in faster way.
-			
+
+---------------------------------------------------------------------------------------------------
+   
 ##### 3. Newton Raphson:   
 - Newton's method generally requires fewer iterations, but each iteration is slow as we need to compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must  	supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate). http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf
    
@@ -284,7 +306,6 @@ Maximum likelihood estimation (MLE):
 	Set f'(x) = 0 and solve for x: 2x - 4 = 0 => x = 2. This is a critical point.
 	second derivative: f''(x) = 2
     	Evaluate f''(x) at x = 2: f''(2) = 2. Since f''(2) > 0, the function has a local minimum at x = 2.
-
 
 - Newton Raphson without second derivative
   
