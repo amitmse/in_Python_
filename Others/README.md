@@ -630,6 +630,18 @@ https://github.com/amitmse/in_Python_/tree/master/Random_Forest#readme
 
 -----------------------------------------------------------------------------------------------------------------------
 
+### Regularization
+
+https://github.com/amitmse/in_Python_/tree/master/Regularization
+
+-----------------------------------------------------------------------------------------------------------------------
+
+### Cluster Analysis
+
+https://github.com/amitmse/in_Python_/tree/master/Cluster%20Analysis
+
+-----------------------------------------------------------------------------------------------------------------------
+
 # Model Validation:
 
 -------------------------
