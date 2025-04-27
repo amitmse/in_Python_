@@ -36,9 +36,8 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic_Regression.py
 
 -----------------------------------------------------------------------------------------------------------------------
-## Points
   
-#### Why use odds and log-odds.
+#### Why use odds and log-odds
 - Probability output ranges from 0 to 1  
 - Odds Ratio = P/(1-P)		[Odds output range from 0 to ∞ ]
   
