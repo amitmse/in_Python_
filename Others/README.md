@@ -1,5 +1,6 @@
 ------------------------------------------------------------------------------------------------------
-# Type of data:
+# Type of data
+
 ### Nominal / categorical/qualitative /non-parametric:  
 		Example	: 	colour,gender. 
 		check	: 	frequency each category. 
@@ -35,7 +36,7 @@
 		and the other has a very low number of observations (rare event i.e., Fraud)
 ------------------------------------------------------------------------------------------------------
 
-## sampling
+## Sampling
 
 #### Under-sampling: 
 - Under-sampling balances the dataset by reducing the size of the abundant class. This method is used when quantity of data is sufficient. By keeping all samples in the rare class and randomly selecting an equal number of samples in the abundant class, a balanced new dataset can be retrieved for further modelling.
@@ -65,10 +66,10 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 #### Cluster the abundant class: 
 - An elegant approach was proposed by Sergey on Quora. Instead of relying on random samples to cover the variety of the training samples, he suggests clustering the abundant class in r groups, with r being the number of cases in r. For each group, only the medoid (centre of cluster) is kept. The model is then trained with the rare class and the medoids only.
 
-
 ---------------------------------------------------------------------------------------------
 
-## Hypothesis Testing: 
+## Hypothesis Testing
+
 - Hypothesis testing uses data from a sample to draw conclusions about a population parameter or a population probability distribution.  
   It's a statistical method used to determine if there's enough evidence in a sample to reject a null hypothesis in favor of an alternative hypothesis.
   It help to make better decisions.
@@ -168,7 +169,8 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 - Discrete Probability Distribution: Bernoulli, Binomial, Negative Binomial, Geometric, Poisson, Uniform (defined both).
 
 ---------------------------------------------------------------------------------------------
-## Uniform distribution:
+## Uniform distribution
+
 - Many equally-likely outcomes (Bernoulli):the uniform distribution, characterized by its flat PDF. 
 - It can be defined for any number of outcomes or even as a continuous distribution.
 - Function
@@ -179,7 +181,8 @@ Example:
 	- Imagine rolling a fair die. The outcomes 1 to 6 are equally likely.
 
 ---------------------------------------------------------------------------------------------
-## Bernoulli distribution:
+## Bernoulli distribution
+
 - Bernoulli distribution has only two possible outcomes i.e. success and failure in a single trial
 - The Bernoulli PDF has two lines of equal height, representing the two equally-probable outcomes of 0 and 1 at either end.
 - Bernoulli Distribution is a special case of Binomial Distribution with a single trial
@@ -192,7 +195,8 @@ Example:
 	- it’s going to rain tomorrow or not
 
 ---------------------------------------------------------------------------------------------
-## Binomial distribution:
+## Binomial distribution
+
 - The binomial distribution may be thought of as the sum of outcomes of things that follow a Bernoulli distribution.
 - Function
 	- PDF		: [n!/(n-x)!*x!] * [P^x*(Q)^(n-x)]	{! factorial}
@@ -209,7 +213,8 @@ Example:
 	  This count also follows a binomial distribution.
 
 -------------------------------------------------------------------------------------------------
-## Logistic distribution:
+## Logistic distribution
+
 - The logistic distribution is a continuous probability distribution similar in shape to the normal distribution but with heavier tails.
   Heavier tail is due to its mathematical structure. While logistic and normal distribution both are symmetric and unimodal.
   The logistic distribution's PDF decays more slowly in the tails compared to the normal distribution,
@@ -233,7 +238,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/Logistic-%20Normal.png)
 
 ---------------------------------------------------------------------------------------------	
-## Hyper-Geometric distribution:
+## Hyper-Geometric distribution
+
 - Example: 
 	- This is the distribution of that same count if the balls were drawn without replacement instead. 
 	  Undeniably it’s a cousin to the binomial distribution, but not the same, because the probability 
@@ -242,7 +248,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	  because the chance of success changes less with each draw.
 	
 ---------------------------------------------------------------------------------------------	
-## Poisson distribution:
+## Poisson distribution
+
 - Simialr to the binomial distribution, the Poisson distribution is the distribution of a 
   count - the count of times something happened. 
 - The Poisson distribution is when trying to count events over a time given the continuous rate of events occurring
@@ -263,7 +270,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	- The number of incoming calls at a call center in a day.
 	
 ---------------------------------------------------------------------------------------------	
-## Geometric distribution:
+## Geometric distribution
+
 - If the binomial distribution is “How many successes?” then the geometric distribution is
   “How many failures until a success?”
 - Example:
@@ -271,7 +279,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	  come up tails before it first comes up heads? This count of tails follows a geometric distribution.
 
 ---------------------------------------------------------------------------------------------
-## Negative Binomial distribution:
+## Negative Binomial distribution
+
 - It's a simple generalization. It’s the number of failures until r successes have occurred,not just 1.
 - Example:
 	- If we flip a coin a fixed number of times and count the number of times the coin turns out heads is a binomial distribution.
@@ -281,7 +290,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
    		believe the rumor can be computed using the negative binomial distribution.
 
 ---------------------------------------------------------------------------------------------  
-## Exponential distribution:
+## Exponential distribution
+
 - The exponential distribution is one of the widely used continuous distributions. 
 - It is often used to model the time elapsed between events.
 - The exponential distribution should come to mind when thinking of "time until event", maybe "time until failure".
@@ -305,7 +315,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	- Very simple model used by insurance companies
 
 ---------------------------------------------------------------------------------------------
-## Weibull:
+## Weibull
+
 - Weibull distribution can model increasing (or decreasing) rates of failure over time. 
 - The exponential is merely a special case.
 - Commonly used to assess product reliability, analyze life data and model failure times
@@ -313,7 +324,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
   usually modeled with the lognormal distribution.
 
 ---------------------------------------------------------------------------------------------
-## Normal Distribution / Gaussian distribution:
+## Normal Distribution / Gaussian distribution
+
 - The sum of Bernoulli trials follows a binomial distribution, and as the number of trials increases, 
   that binomial distribution becomes more like the normal distribution. 
 - Its cousin the hyper-geometric distribution does too. 
@@ -340,7 +352,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
   The Bayesian approach assumes the 'a priori' knowledge of probability models, in such a way that it is possible to build exact models of phenomena starting
   from experimental data, and then use the models to make predictions.
 ---------------------------------------------------------------------------------------------
-### Standard Normal distribution: 
+### Standard Normal distribution
+
 - It is also known as the Z distribution and it follows normal distribution with a mean of zero and a variance of one.
   The Standard Normal Distribution is used to standardize and compare different normal distributions by converting them into a single, common reference.
   This allows for easier calculation of probabilities and comparison of data points across various datasets.
@@ -356,7 +369,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
   	  your score is far higher than most of the students (your score falls into the tail).
 
 ---------------------------------------------------------------------------------------------
-### Z-test:
+### Z-test
+
 - The sample is assumed to be normally distributed. A z-score is calculated with population parameters 
   such as "population mean" and "population standard deviation" and is used to validate a hypothesis 
   that the sample drawn belongs to the same population. Sample mean is same as the population mean.
@@ -366,7 +380,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	- Variance 	: 1			  
 
 ---------------------------------------------------------------------------------------------
-## t /Student  Distribution:
+## t /Student  Distribution
+
 - The t test tells how significant the differences between groups are. A t-test is used to compare the mean of 
   two given samples.
 - A t-test is used when the population mean and population standard deviation are unknown.
@@ -387,7 +402,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	  Choose the paired t-test if you have two measurements on the same item, person or thing
 		
 ---------------------------------------------------------------------------------------------		
-## Chi-Squared Distribution :
+## Chi-Squared Distribution 
+
 - Tests for the strength of the association between two categorical variables. Chi Square lets you know whether 
   two groups have significantly different opinions, which makes it a very useful statistic for survey research.
 - Population mean is known and test the variance of normal distributed. chi squared distribution is the square 
@@ -407,11 +423,13 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	- Cochran–Mantel–Haenszel test for stratified contingency tables
 
 ---------------------------------------------------------------------------------------------
-## Likelihood-ratio :
+## Likelihood-ratio
+
 - This test assesses the goodness of fit of two competing statistical models based on the ratio of their likelihoods
 
 ---------------------------------------------------------------------------------------------
-## F-test:
+## F-test
+
 - F-test of equality of variances is a test for the null hypothesis that two normal populations have the same variance. 
 
 - It is most often used when comparing statistical models that have been fitted to a data set, 
@@ -426,7 +444,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 -----------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------
 
-## Covariance: 
+## Covariance
+
 	Covariance(X,Y) = E[(X−EX)(Y−EY)] = E[XY]−(EX)(EY)
  	correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
 - It refers to the measure of how two variables will change (directional relationship) when they are compared to each other
@@ -434,7 +453,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 - Covariance indicates the direction of the linear relationship between variables. Correlation on the other hand measures 
    both the strength and direction of the linear relationship between two variables. 
 
-## Correlation vs Regression:
+## Correlation vs Regression
+
 - Correlation: 
 	- It measures the degree of relationship between two variables. 
 	- correlation doesn’t capture causality.
@@ -444,26 +464,23 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	- Regression is based on causality (cause and effect).
 	- Regression of x and y, and y and x, yields completely different results.
 	
-## ANOVA:
+## ANOVA
+
 - Known as analysis of variance, is used to compare multiple (three or more) samples with a single test 
 	i.e. all sample means are equal
 	
 ------------------------------------------------------------------------------------------------------
 
-# Ordinary Least Squares (OLS): 
+# Ordinary Least Squares (OLS)
 
-	- Finds parameter values that minimizing the error.
+- Finds parameter values that minimizing the error.
  
-	- Gauss-Markov Theorem: It provides a theoretical justification for using OLS in linear regression, 
-		guaranteeing that the resulting estimates are BLUE. 
-	- Best Linear Unbiased Estimator (BLUE) refers to the Ordinary Least Squares (OLS) estimator.	
-  	- Why OLS is BLUE:
-		- Most Efficient (Best): Because OLS has the smallest variance, it is considered 
-  				the most efficient estimator for estimating the regression coefficients. 
-		- Linear: An estimator is linear.   
-		- Unbiasedness: The OLS estimator is unbiased under the Gauss-Markov assumptions. 
-		- Minimizes Variance: The Gauss-Markov theorem guarantees that the OLS estimator 
-				has the smallest variance among all unbiased linear estimators. 
+- Gauss-Markov Theorem: It provides a theoretical justification for using OLS in linear regression, guaranteeing that the resulting estimates are BLUE. 
+- Best Linear Unbiased Estimator (BLUE) refers to the Ordinary Least Squares (OLS) estimator. Why OLS is BLUE:
+	- Most Efficient (Best): Because OLS has the smallest variance, it is considered the most efficient estimator for estimating the regression coefficients. 
+	- Linear: An estimator is linear.   
+	- Unbiasedness: The OLS estimator is unbiased under the Gauss-Markov assumptions. 
+	- Minimizes Variance: The Gauss-Markov theorem guarantees that the OLS estimator has the smallest variance among all unbiased linear estimators. 
 
 ## Assumptions of Linear regression: 6
 
@@ -840,7 +857,7 @@ Third Party Model:
 - Model performance testing on recent out of time data
 - Review of the model change management process
 - Validation team to review the validation conducted by the vendor and document the key findings and recommendations in the model approval request template.
-  
+- Vendor-model: outcomes analysis, sensitivity analysis, benchmarking, monitoring.  
 ----------------------------------------------------------------------------------------------------
  
 ### Check Bias and Variance:
@@ -896,36 +913,44 @@ Third Party Model:
 - Interpretability: It helps identify potential model weaknesses, fostering robustness and reliability. credit-scoring model relies too heavily on a single variable, leading to biased decisions.
 - Explainability: It builds trust by shedding light on the factors driving the model's decisions. why certain financial behaviors contribute more to the model's risk assessment.
 - To provide explanations for complex models like neural networks, RF and GBM use methods like:
-  
+
+--------------------------------------------------------------------------------------------------------
+
+##### Feature Importance
+
+- Analyze the importance of each input feature in the model's predictions.
+- Techniques like tree-based models or methods that calculate the importance of each feature based on its contribution to the model's predictions.
+- Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity (e.g., Gini index or information gain) in the decision tree nodes.
+- Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
+- Linear Models (Logistic Regression, Linear Regression) feature importance is derived from the coefficients of the linear model.
+- Features with larger absolute coefficient values are considered more important.
+- Neural Networks Techniques like SHAP (SHapley Additive exPlanations) values or feature importance via gradient analysis is used to understand the contribution of individual features.
+- Permutation Feature Importance: This technique measures the contribution of a feature by measuring the changes in the model performance after randomly shuffling its values.
+    
 ------------------------------------------------------------------------------------------------------
     
 ##### LIME: Local Interpretable Model-Agnostic Explanations
+
 - It creates a simplified, interpretable model to explain the predictions of a complex model. It provides Local Explanations for individual predictions, focusing on how each input feature contributes to that specific prediction.
 	
 -------------------------------------------------------------------------------------------------------
   
 ##### SHAP: SHapley Additive exPlanations. 
+
 - It explain the output of machine learning models by assigning importance values to each feature based on their contribution to the prediction. 
 - It's a game-theoretic approach that calculates the average marginal contribution of each feature, helping to understand how each feature affects the model's output SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, focusing on the overall influence of each feature.
 
 https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-explanations-shap
   
---------------------------------------------------------------------------------------------------------
-
-##### Feature Importance: 
-- Analyze the importance of each input feature in the model's predictions. Techniques like tree-based models or methods that calculate the importance of each feature based on its contribution to the model's predictions. Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity (e.g., Gini index or information gain) in the decision tree nodes. Tree based: Decision Trees, Random Forests, XGBoost, LightGBM. Linear Models (Logistic Regression, Linear Regression) feature importance is derived from the coefficients of the linear model. Features with larger absolute coefficient values are considered more important. Neural Networks Techniques like SHAP (SHapley Additive exPlanations) values or feature importance via gradient analysis is used to understand the contribution of individual features. Permutation Feature Importance: This technique measures the contribution of a feature by measuring the changes in the model performance after randomly shuffling its values. 
-    
-------------------------------------------------------------------------------------------------------------
-
-- Vendor-model: outcomes analysis, sensitivity analysis, benchmarking, monitoring.
-
 ------------------------------------------------------------------------------------------------------------
 ### Hyperparameters
+
 - Validation is crucial for selecting the best model, tuning hyperparameters, and ensuring the model can adapt to new situations. It is the process of finding the best set of hyperparameters for a model to maximize its performance.
   
 ------------------------------------------------------------------------------------------------------------
   
-#### Random Forest hyperparameters:
+#### Random Forest hyperparameters
+
 - Number of trees: The number of decision trees in the forest. Generally, a larger number of trees can improve accuracy but also increase training time.
 - Maximum depth of each tree: A deeper tree can capture more complex relationships in the data but may also lead to overfitting.
 - Minimum number of samples required to split a node:  Helps prevent overfitting by ensuring that nodes aren't split on very small subsets of the data.
@@ -936,21 +961,24 @@ https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-expl
 - Class weight: To adjust the weights of classes in imbalanced datasets, which can be useful when one class is significantly more prevalent than others.
        
 ------------------------------------------------------------------------------------------------------------
-#### AdaBoost hyperparameters:
+#### AdaBoost hyperparameters
+
 - Number of Estimators: This determines how many weak learners (e.g., decision trees) are combined in the ensemble. More estimators can improve accuracy but also increase training time. 
 - Learning Rate: This controls the contribution of each weak learner to the final prediction. A smaller learning rate means each weak learner has less influence, potentially requiring more estimators to achieve the same performance. 
 - Base Estimator Hyperparameters: If the base estimator (e.g., decision trees) has its own hyperparameters (like max_depth for decision trees), tuning these can also impact the AdaBoost model's performance. 
 - Loss Function (loss): AdaBoost supports different loss functions for classification, like exponential, linear, and square, which affect how weights are assigned to misclassified samples. - Random Seed: Setting a random seed ensures reproducibility, but experimenting with different random seeds during hyperparameter tuning can improve the robustness of the model.
    
 ------------------------------------------------------------------------------------------------------------
-#### Gradient Boosting hyperparameters:
+#### Gradient Boosting hyperparameters
+
 - Learning Rate: This controls the contribution of each tree to the final prediction. A smaller learning rate leads to more stable and robust models, but requires more trees to achieve optimal performance. 
 - Number of Estimators (Trees): This parameter dictates how many trees are used in the ensemble. A larger number of trees can improve performance, but also increases computational cost and risk of overfitting. 
 - Max Depth: This limits the complexity of individual trees, preventing overfitting by restricting how deep they can grow. 
 - Subsampling: This involves randomly selecting a subset of the training data for each tree. Subsampling helps to prevent overfitting and can improve the generalizability of the model, explains a guide on Hands-On Machine Learning with R. 
 	   
 ------------------------------------------------------------------------------------------------------------
-#### XGBoost hyperparameters: 
+#### XGBoost hyperparameters
+
 - Maximum depth of each tree: A deeper tree can capture more complex relationships in the data but may also lead to overfitting.
 - minimum sum of instance weights (Hessian) needed in a child. It helps prevent overfitting by controlling the creation of new nodes in the tree. 
 - subsample: This determines the fraction of training instances used for each tree, reducing the risk of overfitting. 
@@ -960,9 +988,9 @@ https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-expl
 - L1 regularization: This parameter adds a penalty proportional to the absolute value of the coefficients, promoting sparsity in the model. 
        
 ------------------------------------------------------------------------------------------------------------
-#### neural networks hyperparameters:
-- In neural networks, hyperparameters are settings that are not learned during training but are set beforehand and influence the model's architecture, learning process, and overall performance.
+#### neural networks hyperparameters
 
+- In neural networks, hyperparameters are settings that are not learned during training but are set beforehand and influence the model's architecture, learning process, and overall performance.
 - Number of Layers: The number of hidden layers significantly impacts the model's complexity and ability to learn intricate patterns. 
 - Number of Neurons per Layer: The width of each hidden layer influences the model's capacity to represent complex relationships. 
 - Learning Rate: This determines the step size during optimization, affecting how quickly the model converges to the minimum loss.
@@ -973,8 +1001,9 @@ https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-expl
 - Regularization Techniques: These help prevent overfitting by adding penalties to the model's complexity (e.g., L1, L2 regularization).
 - Dropout Rate: Randomly drops out neurons during training, preventing over-reliance on specific neurons and improving generalization.
 
-	------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 #### Grid Search, Randomized Search or Bayesian Optimization
+
 - Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter space and find the optimal combination.
     
 - Grid Search: Defines a grid of hyperparameter values and tests all possible combinations. 
