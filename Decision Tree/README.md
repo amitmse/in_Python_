@@ -214,5 +214,6 @@ Gini index says, if we select two items from a population at random then they mu
 
 # Model Metrics
 
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 
 ---------------------------------------------------------------------------------------------------------
