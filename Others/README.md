@@ -738,6 +738,7 @@ Third Party Model:
  
 ### Check Bias and Variance:
 
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md#bias---variance
   
 #### To check above performance: 
 - Cross-Validation: It reveals model's performance is consistent across different data samples, indicating lower variance. It also helps identify if the model's assumptions are too restrictive, leading to high bias.  
