@@ -99,8 +99,8 @@ Different ways to get feature importance
 	- Softmax Loss: Generally used for multi-class classification tasks. It calculates a probability distribution for each class and maximizes the likelihood across all classes.
 	- Adaptive Log Loss (ALogLoss): Introduced in XGBoost, this loss function provides a balance between speed and accuracy. It's derived by approximating the Poisson likelihood.
 
-		Regression 	= (1/2)*(actual - predicted)^2
-		Classification 	= -[y*log(p) - (1-y)log(1-p)]
+			Regression 	= (1/2)*(actual - predicted)^2
+			Classification 	= -[y*log(p) - (1-y)log(1-p)]
 
 	- Total loss will be the sum of this function
 
