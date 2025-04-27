@@ -82,14 +82,14 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 	- A telecom service provider claims that customers spend an average of ₹400 per month, with a standard deviation of ₹25. However, a random sample of 50 customer bills shows a mean of ₹250 and a standard deviation of ₹15. Does this sample data support the service provider’s claim?
 
-	- Null Hypothesis (H0): The average amount spent per month is ₹400.
-	- Alternate Hypothesis (H1): The average amount spent per month is not ₹400.
+		- Null Hypothesis (H0): The average amount spent per month is ₹400.
+		- Alternate Hypothesis (H1): The average amount spent per month is not ₹400.
 
-	- Population mean (m): ₹400
-	- Population Standard Deviation (σ): ₹25
-	- Sample Size (n): 50
-	- Sample Mean (x̄): ₹250
- 	- Significance level: 5%
+		- Population mean (m): ₹400
+		- Population Standard Deviation (σ): ₹25
+		- Sample Size (n): 50
+		- Sample Mean (x̄): ₹250
+ 		- Significance level: 5%
 
 ![image](https://github.com/user-attachments/assets/f3c88d3e-9129-4d9f-a4f4-60811faade31)
     
