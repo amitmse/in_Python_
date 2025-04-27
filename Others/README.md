@@ -580,12 +580,15 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 ##### Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
 ------------------------------------------------------------------------------------------------------
-# Logistic regression 
+## Logistic regression 
 
 https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 
+## Gradient Descent
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md#shapley-shapley-additive-explanations
+
 --------------------------------------------------------------------------------------	
-# Decision Tree 
+## Decision Tree 
 
 https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
 
