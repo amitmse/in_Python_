@@ -423,11 +423,18 @@ Pseudo-code of the GBM algorithm
 
 ## SHapley Additive exPlanations (SHAP) 
 
-- SHAP Values provide a way to understand how each feature contributes to the model's predictions. Similar to the beta of linear regression. It helps in identifying the most important features and understanding their impact on the model.
-
+- SHapley Values provide a way to understand how each feature contributes to the model's predictions. Similar to the beta of linear regression. It helps in identifying the most important features and understanding their impact on the model.
 - This method uses random feature combinations as input and compute the changes in the model performance. The features which impact the performance the most are considered the most important ones.
-
-- SHAP does not go on and retrain the model for each subset. Instead, for the removed or left out feature, it just replaces it with the average value of the feature and generates the predictions.
+- SHapley does not go on and retrain the model for each subset. Instead, for the removed or left out feature, it just replaces it with the average value of the feature and generates the predictions.
+- SHapley attribute the difference between a model’s prediction for an instance and the average prediction to each feature.
+	- Additivity: The sum of SHAP values for all features equals the difference between the prediction and the baseline (average prediction).
+	- Local Accuracy: Each feature’s contribution is computed for a single instance.
+	- Consistency: If a feature’s impact increases, its SHAP value won’t decrease.
+- When to Use SHAP:
+	- You need instance-level explanations (e.g., “Why was this loan rejected?”).
+	- You want to compare feature importance across the dataset (aggregated SHAP).
+	- Your model has nonlinear interactions best captured per-instance.
+	- Use SHAP if you need to explain individual predictions or compare feature importance globally.
 
 #### Step-by-step:
 - Baseline: The SHAP value calculation starts with a baseline value, which represents the expected output of the model when no features are present. This is often the mean or median of the model's predictions across the training data.
@@ -494,95 +501,46 @@ SHapley value =  sum [weight * (prediction with feature - prediction without fea
 - Sampling Bias: The synthetic data might not accurately represent real-world data distributions, potentially leading to biased explanations.
 
 ------------------------------------------------------------------------------------------------------------
+
 ## Partial Dependence Plots (PDPs)
 
-PDPs are a visualization technique used in machine learning to understand how individual features influence model predictions. They help interpret complex models by showing the average marginal effect of a feature on the predicted outcome, while holding other features constant. Essentially, PDPs reveal how a single feature impacts the model's output on average, making them useful for understanding model behavior and identifying important features. 
-
-A PDP plots the average model prediction for different values of a selected feature, while holding other features constant. This allows you to see how the model's predictions change as that specific feature varies. 
-
-The shape of the PDP curve reveals the relationship between the feature and the predicted outcome.
-
-Benefits:
-
-    Explainability: PDPs help make complex models more transparent and understandable, especially for non-technical audiences. 
-
-    Feature Importance: They can reveal which features have the most significant impact on the model's predictions. 
-
-    Debugging: PDPs can help identify issues with the model, such as unexpected relationships between features and predictions
-
-For example, if you have a feature like "average income", PDP can show how changing the income level influences the predicted house price while keeping other factors constant.
-
-Limitations: PDPs can be biased in scenarios with highly correlated features, as they use marginal rather than conditional probabilities. Accumulated Local Effects (ALE) plots are an alternative that addresses this bias, says a resource from Oracle ADS. 
-
-
-Interpretable ML — PDP, ALE and SHAP | Chen Xing
-Accumulated Local Effects (ALE) plots: 
-
-Partial Dependence Plots (PDPs) are great for showing average feature effects, but they rely on an independence assumption—averaging over the marginal distribution of other features. This can lead to unrealistic combinations when features are correlated.
+- Similar to sensitivity analysis.
+- PDPs are a method to visualize, how individual features influence (marginal effect) model predictions.
+- It helps interpret complex models by showing the average marginal effect of a feature on the predicted outcome, while holding other features constant.
+- Benefits:
+	- Explainability: PDPs help make complex models more transparent and understandable, especially for non-technical audiences.
+	- Feature Importance: They can reveal which features have the most significant impact on the model's predictions. 
+	- Debugging: PDPs can help identify issues with the model, such as unexpected relationships between features and predictions
+   
+- Limitations:
+	- PDPs can be biased in scenarios with highly correlated features, as they use marginal rather than conditional probabilities. Accumulated Local Effects (ALE) plots are an alternative that addresses this bias.
+	- PDPs are best suited for visualizing the relationship between one or two features and the model's output. They become harder to interpret with more than two features.
+	- PDPs only capture the marginal effect of a feature, potentially hiding complex interactions between multiple features.
 
 ------------------------------------------------------------------------------------------------------------
 
-Accumulated Local Effects (ALE) plots are designed to overcome this limitation. Instead of averaging over all observations globally, ALE focuses on differences in predictions to isolate each feature’s effect.
+## Accumulated Local Effects (ALE) plots
 
-    Compute Local Derivatives: They first estimate the local effect (i.e., the derivative) of the feature on the model prediction in small intervals (bins) of the feature’s range.
-
-    Accumulate the Effects: Then they integrate (accumulate) these local effects over the feature’s range, starting from a reference point (often the minimum value).
-
-    Centering: Finally, the accumulated effect is centered so that the overall average effect is zero, making it easier to compare across features.
-
-When to Use ALE:
-
-    You care about global feature effects (e.g., “Does income positively affect loan approval?”).
-
-    Features are correlated, and you want reliable estimates.
-
-    You need a clear visual of the feature’s directional trend.
-
-
-SHAP (SHapley Additive exPlanations) values attribute the difference between a model’s prediction for an instance and the average prediction to each feature.
-
-    Additivity: The sum of SHAP values for all features equals the difference between the prediction and the baseline (average prediction).
-
-    Local Accuracy: Each feature’s contribution is computed for a single instance.
-
-    Consistency: If a feature’s impact increases, its SHAP value won’t decrease.
-
-When to Use SHAP:
-
-    You need instance-level explanations (e.g., “Why was this loan rejected?”).
-
-    You want to compare feature importance across the dataset (aggregated SHAP).
-
-    Your model has nonlinear interactions best captured per-instance.
-
-Final Recommendation
-
-    Use ALE if your goal is to understand the overall directional relationship between a feature and the outcome, especially with correlated features.
-
-    Use SHAP if you need to explain individual predictions or compare feature importance globally.
-
-For example:
-
-    A bank might use ALE to audit whether income has a fair directional effect on loan approvals.
-
-    The same bank could use SHAP to explain to a customer why their specific loan application was denied.
-
-
-
-
-
-
-
-
+- ALE plots are designed to overcome PDPs limitation (above). Instead of averaging over all observations globally, ALE focuses on differences in predictions to isolate each feature’s effect.
+- Compute Local Derivatives: They first estimate the local effect (i.e., the derivative) of the feature on the model prediction in small intervals (bins) of the feature’s range.
+- Accumulate the Effects: Then they integrate (accumulate) these local effects over the feature’s range, starting from a reference point (often the minimum value).
+- Centering: Finally, the accumulated effect is centered so that the overall average effect is zero, making it easier to compare across features.
+- When to Use ALE:
+	- You care about global feature effects (e.g., “Does income positively affect loan approval?”).
+	- Features are correlated, and you want reliable estimates.
+	- You need a clear visual of the feature’s directional trend.
+	- Overall directional relationship between a feature and the outcome, especially with correlated features.
 
 ------------------------------------------------------------------------------------------------------------
 
 ## Hyperparameters
+
 - Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter space and find the optimal combination. Details are below in link
    
 https://github.com/amitmse/in_Python_/blob/master/Others/README.md
  
 ### AdaBoost hyperparameters:
+
 - Number of Estimators: This determines how many weak learners (e.g., decision trees) are combined in the ensemble. More estimators can improve accuracy but also increase training time. 
 - Learning Rate: This controls the contribution of each weak learner to the final prediction. A smaller learning rate means each weak learner has less influence, potentially requiring  more estimators to achieve the same performance. 
 - Base Estimator Hyperparameters: If the base estimator (e.g., decision trees) has its own hyperparameters (like max_depth for decision trees), tuning these can also impact the AdaBoost model's performance. 
@@ -590,7 +548,9 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md
 - Random Seed: Setting a random seed ensures reproducibility, but experimenting with different random seeds during hyperparameter tuning can improve the robustness of the model.
 
 ------------------------------------------------------------------------------------------------------------
+
 ### Gradient Boosting hyperparameters:
+
 - Learning Rate: This controls the contribution of each tree to the final prediction. A smaller learning rate leads to more stable and robust models, but requires more trees to achieve optimal performance. 
 - Number of Estimators (Trees): This parameter dictates how many trees are used in the ensemble. A larger number of trees can improve performance, but also increases computational cost and risk of overfitting. 
 - Max Depth: This limits the complexity of individual trees, preventing overfitting by restricting how deep they can grow. 
