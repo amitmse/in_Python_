@@ -491,6 +491,7 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 		VIF: [1.0 / (1.0 - R Squared)]
 
 		VIF = 1/T  (T refers to Tolerance = 1 – R² which is unexplained portion)
+
 			R^2 is regressing each independent variable on the other independent variables.
   
 		Tolerance: It measures the influence of one independent variable on all other independent variables.
