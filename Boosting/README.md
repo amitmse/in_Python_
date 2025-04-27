@@ -200,7 +200,7 @@ Prediction is made after the pruning process is completed. The tree prediction i
 
 - Example: 
   
-https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx  
+https://github.com/amitmse/in_Python_/blob/master/Others/Example.xlsx
 
 ------------------------------------------------------------------------------------------------------------
 ### XGBoost hyperparameters: 
@@ -258,7 +258,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 
 ## Adaptive (ADA) Boosting: Adapts from mistakes
 
-https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
+https://github.com/amitmse/in_Python_/blob/master/Others/Example.xlsx
 
 --------------------------------------------------------------------------------------------------
 1. Initialize Weights:
