@@ -418,19 +418,19 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#shapley-shapl
 
 ## Local Interpretable Model-Agnostic Explanations (LIME)
 
-https://github.com/amitmse/in_Python_/blob/master/Others/README.md#shapley-shapley-additive-explanations
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md#lime-local-interpretable-model-agnostic-explanations
 
 ------------------------------------------------------------------------------------------------------------
 
 ## Partial Dependence Plots (PDPs)
 
-https://github.com/amitmse/in_Python_/blob/master/Others/README.md#shapley-shapley-additive-explanations
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md#partial-dependence-plots-pdps
 
 ------------------------------------------------------------------------------------------------------------
 
 ## Accumulated Local Effects (ALE) plots
 
-https://github.com/amitmse/in_Python_/blob/master/Others/README.md#shapley-shapley-additive-explanations
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md#accumulated-local-effects-ale-plots
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -438,7 +438,7 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#shapley-shapl
 
 - Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter space and find the optimal combination. Details are below in link
    
-https://github.com/amitmse/in_Python_/blob/master/Others/README.md
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md#hyperparameters
 
 -------------------------------------------------------------------------- 
 
