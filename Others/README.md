@@ -795,6 +795,12 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 - Explainability: It builds trust by shedding light on the factors driving the model's decisions. why certain financial behaviors contribute more to the model's risk assessment.
 - To provide explanations for complex models like neural networks, RF and GBM use methods like:
 
+- Feature Importance: https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-importance
+- SHapley: https://github.com/amitmse/in_Python_/blob/master/Others/README.md#shapley-shapley-additive-explanations
+- LIME: https://github.com/amitmse/in_Python_/blob/master/Others/README.md#lime-local-interpretable-model-agnostic-explanations
+- PDPs: https://github.com/amitmse/in_Python_/blob/master/Others/README.md#partial-dependence-plots-pdps
+- ALE: https://github.com/amitmse/in_Python_/blob/master/Others/README.md#accumulated-local-effects-ale-plots
+
 --------------------------------------------------------------------------------------------------------
 
 # ML Model Issue:
