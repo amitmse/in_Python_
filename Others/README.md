@@ -92,6 +92,8 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
  	- Significance level: 5%
  	
 	- 1. Calculate the z-value: z=(x̄-m)/{σ/sqrt(n)}
+  ![image](https://github.com/user-attachments/assets/f3c88d3e-9129-4d9f-a4f4-60811faade31)
+
 		- z = (250 - 400)/ {25/SQRT(50)} =  (-150) / { 25 / 7.07 } = -150 / 3.54 = −42.42
 
 	- 2. Compare with critical z-values:
