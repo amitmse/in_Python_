@@ -255,7 +255,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 			"colsample_bytree" : [ 0.3, 0.4, 0.5 , 0.7 ]
 			}
   
-		https://github.com/krishnaik06/Hyperparameter-Optimization
+	https://github.com/krishnaik06/Hyperparameter-Optimization
   
 ------------------------------------------------------------------------------------------------------------
 
@@ -263,7 +263,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 
 https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 
-	--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 1. Initialize Weights:
 - Assign same weight to all obs ( 1/No. of obs ).
 - The sum of weights is 1.
@@ -429,15 +429,12 @@ SHAP value =  sum [weight * (prediction with feature - prediction without featur
 	- weight assigned to a particular coalition based on the number of ways the feature could have joined the coalition.
 	- prediction with feature is the model prediction when the feature is included in the coalition.
 	- prediction without feature is the model prediction when the feature is excluded from the coalition.
-
 ![image](https://github.com/user-attachments/assets/e97c45c3-c565-473e-82ca-b2d11b95c244)
-
 	- n is total number of features
 	- N contains all the possible feature subsets not containing feature i
 	- S is one feature set from N
 	- v(x) is the trained model prediction function f(x), x is a model input instance
 	- |S|is the number of not missing features in set S
-    
 
 -  Interpretion of SHAP Values: The SHAP values indicate the degree to which a feature influences the model's prediction. A positive SHAP value suggests that the feature contributes to a higher prediction, while a negative SHAP value suggests a lower prediction. The magnitude of the SHAP value reflects the strength of the feature's influence. The sum of SHAP values for all features equals the difference between the model prediction and the baseline prediction. If a feature has no impact on the prediction, its SHAP value will be zero. If a feature's impact changes when other features are included or excluded, the SHAP value reflects that change. E[f(X)] refers to the baseline (mean or median in the case of regression).  f(x) is the value predicted by our model. 
 
