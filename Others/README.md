@@ -211,7 +211,12 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/distribution.png)
 
 - Continuous Probability Distribution: Gaussian Normal, Standard Normal (Z- dist.), Student-t, Uniform, Log-Normal, Chi-Square.
+
+![image](https://github.com/user-attachments/assets/15889bc6-4ee0-4b6a-ade6-584bc86292a5)
+
 - Discrete Probability Distribution: Bernoulli, Binomial, Negative Binomial, Geometric, Poisson, Uniform (defined both).
+
+![image](https://github.com/user-attachments/assets/4550a22c-b8f5-46fe-9f4e-449e73f4f6c5)
 
 ---------------------------------------------------------------------------------------------
 ## Uniform distribution
