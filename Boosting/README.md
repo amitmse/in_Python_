@@ -507,6 +507,8 @@ SHapley value =  sum [weight * (prediction with feature - prediction without fea
 - Similar to sensitivity analysis.
 - PDPs are a method to visualize, how individual features influence (marginal effect) model predictions.
 - It helps interpret complex models by showing the average marginal effect of a feature on the predicted outcome, while holding other features constant.
+- PDPs are calculated by averaging the model's predictions across all possible combinations of the other features, while varying the feature(s) of interest.
+
 - Benefits:
 	- Explainability: PDPs help make complex models more transparent and understandable, especially for non-technical audiences.
 	- Feature Importance: They can reveal which features have the most significant impact on the model's predictions. 
