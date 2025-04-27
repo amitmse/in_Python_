@@ -175,9 +175,8 @@ Different ways to get feature importance
 	- Gain = Left Similarity + Right Similarity - Root Similarity
 		Root Similarity: The Similarity Score of the Previous Tree is the Similarity Score.
     
-		Gain — Gamma > 0 Keep the tree.
-
-		Gain — Gamma < 0 Prune the tree.
+			Gain — Gamma > 0 Keep the tree.
+			Gain — Gamma < 0 Prune the tree.
 
 - Lambda (λ): regularisation parameter
 	- As the lambda increases, the similarity score will decrease and therefore this will also decrease the gain score. This allows for more pruning, only branches with a high gain score are preserved and overfitting can be prevented.
@@ -194,12 +193,9 @@ Different ways to get feature importance
 
 Prediction is made after the pruning process is completed. The tree prediction is multiplied by the learning rate and added to the prediction value of the first tree, and a new prediction value is formed. These operations continue until the specified number of iterations, namely n_estimators (number of boosting trees).
    
-Predicted value (regressor) = First Prediction + (Learnin Rate)* (Second Prediction)
-       
-Predicted Value (classifier) =  log of odds of Initial prediction + eta(learning rate) * output from the leaves(mean value)
-
+		Predicted value (regressor) = First Prediction + (Learnin Rate)* (Second Prediction)
+		Predicted Value (classifier) =  log of odds of Initial prediction + eta(learning rate) * output from the leaves(mean value)
 		Convert above value to probability with logistic function
- 
 		Probability = Exp^log(odds) / [1 + Exp^log(odds)]
 
 - Example: 
