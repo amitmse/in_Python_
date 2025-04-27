@@ -5,7 +5,7 @@
 https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
 -----------------------------------------------------------------------------------------------------------------------
-## Logistic Regression Assumptions:
+## Logistic Regression Assumptions
 
 1. Dependent variable should be binary
  
@@ -29,8 +29,18 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 - Logistic regression relaxes several key assumptions required by linear regression (linearity between the dependent and independent variables, normality of errors, homoscedasticity)
 - Logistic regression the target variable follows Bernoulli / binomial distribution, not normal distribution. The errors in logistic regression are not normally distributed, as the outcome is a probability (0 to 1).
 - Logistic regression does not require homoscedasticity as the variance of the errors can vary depending on the predicted probability, as it's a binomial random variable.
+- Interpretation of the coefficient is challenging compared to linear regression due log-odds.
        
 -----------------------------------------------------------------------------------------------------------------------
+
+## Limitations of Logistic Regression
+
+- It assumes a linear relationship between independent and dependent variables, which may not always hold true in real-world scenarios.
+- It can be sensitive to outliers and may lead to overfitting.
+- It's limited to binary outcomes, requiring modifications for non-binary outcomes.
+
+-----------------------------------------------------------------------------------------------------------------------
+
 ## Logistic Regression Algorithm Coded in Python:
 
 https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic_Regression.py
