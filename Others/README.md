@@ -70,75 +70,93 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 ## Hypothesis Testing
 
-- Hypothesis testing uses data from a sample to draw conclusions about a population parameter or a population probability distribution.  
-  It's a statistical method used to determine if there's enough evidence in a sample to reject a null hypothesis in favor of an alternative hypothesis.
-  It help to make better decisions.
+- Way to figure out believe is likely true based on a sample.
+	- Start with a belief about the larger group. This belief is hypothesis.
+	- Collect data from a sample of that group. 
+	- Use statistical methods to compare sample data to initial belief and see how likely it is that your belief is true.
+	- Drawing a conclusion based on the statistical analysis.
+		- Accept or fail to reject the belief: This means there's not enough evidence to say your belief is wrong.
+		- Reject the belief: This means sample data provides strong enough evidence that belief is likely false.
+   
+- Hypothesis testing uses data from a sample to draw conclusions about a population parameter or a population probability distribution.  It's a statistical method used to determine if there's enough evidence in a sample to reject a null hypothesis in favor of an alternative hypothesis. It help to make better decisions.
 
-  Avoiding Misleading Conclusions (Type I and Type II Errors): It helps you avoid jumping to the wrong conclusions.
-  For instance, a Type I error could occur if a bank launches a new product thinking it will be a hit, only to find out later that the data misled them.
-  A Type II error might happen when a bank overlooks a potentially successful product because their testing wasn’t thorough enough.
-  By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
+  - Avoiding Misleading Conclusions (Type I and Type II Errors)
+  	- It helps you avoid jumping to the wrong conclusions.
+   	- For instance, a Type I error could occur if a bank launches a new product thinking it will be a hit, only to find out later that the data misled them.
+  	- A Type II error might happen when a bank overlooks a potentially successful product because their testing wasn’t thorough enough.
+  - By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
 
-  Making Smarter Choices: Evidence-based decisions. Let’s say a bank wants to determine if new strategy will increase revenue.
-  By testing the hypothesis using data from similar projects, they can make an informed choice.
-  Similarly, a bank might use hypothesis testing to see if a credit limit increse actually improves credit card spending.
-  It’s about taking the guesswork out of decisions and relying on solid evidence instead.
+  - Making Smarter Choices:
+  	- Evidence-based decisions. Let’s say a bank wants to determine if new strategy will increase revenue.
+  	- By testing the hypothesis using data from similar projects, they can make an informed choice.
+  	- Similarly, a bank might use hypothesis testing to see if a credit limit increse actually improves credit card spending.
+  	- It’s about taking the guesswork out of decisions and relying on solid evidence instead.
 
-  Optimizing Business Tactics: In business, hypothesis testing is invaluable for testing new ideas and strategies before fully committing to them.
-  For example, bank company might want to test whether offering upgraded credit card increases spending.
-  By using hypothesis testing, bank can compare spend data from customers who received upgraded credit card vs who didn’t.
-  This allows bank to base decisions on data, not hunches, reducing the risk of costly mistakes.
+  - Optimizing Business Tactics:
+  	- In business, hypothesis testing is invaluable for testing new ideas and strategies before fully committing to them.
+  	- For example, bank company might want to test whether offering upgraded credit card increases spending.
+  	- By using hypothesis testing, bank can compare spend data from customers who received upgraded credit card vs who didn’t.
+  	- This allows bank to base decisions on data, not hunches, reducing the risk of costly mistakes.
   
 - Null Hypothesis (H0): This hypothesis states that there is no effect or difference, and it is the hypothesis you attempt to reject with your test.
 - Alternative Hypothesis (H1 or Ha): This hypothesis is what you might believe to be true or hope to prove true. It is usually considered the opposite of the null hypothesis.
   
 - Significance level: A significance level is used to determine if the null hypothesis is true or not. Often denoted by alpha (α), is the probability of accurately rejecting the null hypothesis. 
-  Common choices for α are 0.05 (5%), 0.01 (1%), and 0.10 (10%).
-  The significance level is the probability of a Type I error, i.e., rejecting a null hypothesis that is true.
+  Common choices for α are 0.05 (5%), 0.01 (1%), and 0.10 (10%). The significance level is the probability of a Type I error, i.e., rejecting a null hypothesis that is true.
   
-- Confidence level: The confidence level indicates the probability of obtaining the same results if you repeat the same data collection processes like tests, polls, or surveys.
-  The confidence level is established before conducting the data integration and collection, typically between 90% and 99%. It helps you determine whether the results from sample data apply to the entire population.
-  The confidence level and significance level are related. If you have a 95% confidence interval, it corresponds to a 5% significance level in the hypothesis test.
-  Confidence level indicates the probability of drawing accurate conclusions based on sample data. The significance level is a concept that deals with testing a hypothesis and avoiding a type I error,
-  	while the confidence level deals more with the precision of the results despite the repetition of the test. These two concepts have an inverse relationship, meaning that if the significance level increases,
+- Confidence level:
+	- The confidence level indicates the probability of obtaining the same results if you repeat the same data collection processes like tests, polls, or surveys.
+	- The confidence level is established before conducting the data integration and collection, typically between 90% and 99%. It helps you determine whether the results from sample data apply to the entire population.
+	- The confidence level and significance level are related. If you have a 95% confidence interval, it corresponds to a 5% significance level in the hypothesis test.
+	- Confidence level indicates the probability of drawing accurate conclusions based on sample data. The significance level is a concept that deals with testing a hypothesis and avoiding a type I error, while the confidence level deals more with the precision of the results despite the repetition of the test. These two concepts have an inverse relationship, meaning that if the significance level increases,
   	the confidence level decreases, and vice versa. If you want to be more certain of the conclusions you draw, your confidence level needs to be higher.
-  Both confidence level and significance level are used to determine the confidence interval.  Confidence level = 1-Significance level
+	- Both confidence level and significance level are used to determine the confidence interval.  Confidence level = 1-Significance level
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Others/Significance%20Level%20Confidence%20Level.png)
 
-- Confidence Intervals: It is a range of values within which the true population value likely falls, with a certain level of confidence.
-  Think of it as an estimate, but instead of just giving a single number, it provides a range.
-  This range is calculated from a sample of data and tells you how accurately your sample represents the entire population.
-  Margin of Error: The width of the confidence interval is related to the margin of error, which indicates how much your sample estimate might vary from the true population value. 
+- Confidence Intervals:
+	- It is a range of values within which the true population value likely falls, with a certain level of confidence.
+	- Think of it as an estimate, but instead of just giving a single number, it provides a range.
+	- This range is calculated from a sample of data and tells you how accurately your sample represents the entire population.
+   
+- Margin of Error:
+	- The width of the confidence interval is related to the margin of error, which indicates how much your sample estimate might vary from the true population value. 
 
-- P-value: Probability of observing test results at least as extreme as the results observed, assuming the null hypothesis is correct. It helps determine the strength of the evidence against the null hypothesis.
-  P value is compared with a significance level. It does not provide information about the magnitude of the effect. 
-  The p-value is calculated based on the data and the test statistic (e.g., t-statistic, z-statistic) used to test the hypothesis.
-  Once test statistic "t" calculted, find the associated p-value by referring to a t-distribution table.
+- P-value:
+	- Probability of observing test results at least as extreme as the results observed, assuming the null hypothesis is correct.
+ 	- It helps determine the strength of the evidence against the null hypothesis.
+  	- P value is compared with a significance level. It does not provide information about the magnitude of the effect. 
+	- The p-value is calculated based on the data and the test statistic (e.g., t-statistic, z-statistic) used to test the hypothesis.
+	- Once test statistic "t" calculted, find the associated p-value by referring to a t-distribution table.
   
-  If the p-value ≤ α: Reject the null hypothesis, suggesting sufficient evidence in the data supports the alternative hypothesis.
-  If the p-value > α: Do not reject the null hypothesis, suggesting insufficient evidence to support the alternative hypothesis.
+	- If the p-value ≤ α: Reject the null hypothesis, suggesting sufficient evidence in the data supports the alternative hypothesis.
+	- If the p-value > α: Do not reject the null hypothesis, suggesting insufficient evidence to support the alternative hypothesis.
 
-- Critical region: All sets of values that lead to rejecting the null hypothesis lie in the critical region. Critical value separates the critical region from the non-critical region.
-  Critical value is the value of the test statistic which defines the upper and lower bounds of a confidence interval.
+- Critical region:
+	- All sets of values that lead to rejecting the null hypothesis lie in the critical region. Critical value separates the critical region from the non-critical region.
+	- Critical value is the value of the test statistic which defines the upper and lower bounds of a confidence interval.
   
-- One-Tailed test Hypothesis Testing: Also called a directional test. critical distribution area is one-sided, meaning the test sample is either greater or lesser than a specific value.
-  Two tails: the critical distribution area is two-sided.
+- One-Tailed test Hypothesis Testing:
+	- Also called a directional test. critical distribution area is one-sided, meaning the test sample is either greater or lesser than a specific value.
+- Two tails:
+	- the critical distribution area is two-sided.
   
 - Statistical power refers to the probability that a statistical test will correctly reject a false null hypothesis.
 
 - Limitations of Hypothesis Testing
-  It cannot prove or establish the truth: Hypothesis testing provides evidence to support or reject a hypothesis, but it cannot confirm the absolute truth of the research question.
-  Results are sample-specific: Hypothesis testing is based on analyzing a sample from a population, and the conclusions drawn are specific to that particular sample.
-  Possible errors: During hypothesis testing, there is a chance of committing type I error (rejecting a true null hypothesis) or type II error (failing to reject a false null hypothesis).
-  	Type 1 Error: A Type-I error occurs when sample results reject the null hypothesis despite being true.
-  	Type 2 Error: A Type-II error occurs when the null hypothesis is not rejected when it is false, unlike a Type-I error.
-  Assumptions and requirements: Different tests have specific assumptions and requirements that must be met to accurately interpret results.
+	- It cannot prove or establish the truth: Hypothesis testing provides evidence to support or reject a hypothesis, but it cannot confirm the absolute truth of the research question.
+	- Results are sample-specific: Hypothesis testing is based on analyzing a sample from a population, and the conclusions drawn are specific to that particular sample.
+	- Possible errors: During hypothesis testing, there is a chance of committing type I error (rejecting a true null hypothesis) or type II error (failing to reject a false null hypothesis).
+		- Type 1 Error: A Type-I error occurs when sample results reject the null hypothesis despite being true.
+		- Type 2 Error: A Type-II error occurs when the null hypothesis is not rejected when it is false, unlike a Type-I error.
+  
+-Assumptions and requirements: Different tests have specific assumptions and requirements that must be met to accurately interpret results.
 
-- Degrees of Freedom refer to the number of independent pieces of information available when calculating a statistic.
-  Trying to find the average of a group of numbers given total sum and the count of numbers are know.
-  It means the last number is automatically determined for average computation, meaning it doesn't have freedom to vary independently.
-  So, the degrees of freedom would be one less than the count of numbers, as freely choose all but the last one.
+- Degrees of Freedom
+	- It refer to the number of independent pieces of information available when calculating a statistic.
+	- Trying to find the average of a group of numbers given total sum and the count of numbers are know.
+	- It means the last number is automatically determined for average computation, meaning it doesn't have freedom to vary independently.
+	- So, the degrees of freedom would be one less than the count of numbers, as freely choose all but the last one.
 
 ---------------------------------------------------------------------------------------------
 
