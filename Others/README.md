@@ -775,7 +775,10 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#bias---varian
 ---------------------------------------------------------------------------------------------------
 
 #### Check model metrics: 
-- accuracy, precision, recall, F1-Score, and error rates (MAE, RMSE).
+
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
+
+- accuracy, precision, recall, F1-Score, and error rates (MAE, MSE, RMSE).
 - Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values. 
 - Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
 - Root Mean Squared Error (RMSE): It helps interpret errors in the same units as the target variable. It follows an assumption that errors are unbiased and follow a normal distribution. 
@@ -783,29 +786,9 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#bias---varian
 - Bias towards the Majority Class, Actual Performance of the Minority Class.
 - Below metrics help to indentify:
 - F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing their importance. Why harmonic mean and not an arithmetic mean: HM punishes extreme values.
-- G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture of performance across all classes.
-  
-----------------------------------------------------------------------------------------------------
-  
-- Gini coefficient: It's ratio between the area between the ROC curve and the diagonal line & the area of the above triangle. 
-	Gini = 2*AUC – 1
-- Gain and Lift charts: Check the rank ordering of the probabilities. This graph tells how well is model is segregating positive from negative. Lift is dependent on the total response rate of the population. Hence, if the response rate of the population changes, the same model will give a different lift chart.
-- Kolomogorov Smirnov Chart: KS measures the degree of separation between the positive and negative.
-- AUC-ROC: Model's ability to distinguish between classes. The biggest advantage of using the ROC curve is that it is independent of the change in the proportion of positive class. It considers the predicted probabilities for determining our model’s performance. 
-	- Issue: it only takes into account the order of probabilities, and does not take into account the model’s capability to predict a higher probability for samples more likely to be positive. The ROC curve is the plot between sensitivity and (1- specificity). (1- specificity).
+- G-Mean: Computes the geometric mean of sensitivities for each class, providing a better overall picture of performance across all classes.  
    
-----------------------------------------------------------------------------------------------------  
-
-- Accuracy: Measures the overall proportion of correct predictions. 
-	- Precision: Measures the proportion of true positives among all positive predictions.
-	- Recall (Sensitivity): Measures the proportion of actual positives that are correctly identified.
-	- Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, enabling a deeper understanding of the model's performance under various scenarios.
-	 
-	- Log Loss: Measures the performance of a classification model based on probability predictions. It's a negative average of the log of corrected predicted probabilities.
-       
-	- R-squared (Coefficient of Determination): Measures the proportion of variance in the dependent variable that can be predicted from the independent variables.
-     
-  	----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
     
 #### Model Interpretability and Explainability in Validation:
  
@@ -831,6 +814,20 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#bias---varian
  - Permutation Feature Importance: This technique measures the contribution of a feature by measuring the changes in the model performance after randomly shuffling its values.
 
 
+
+
+- Feature importances: 
+	- It is also known as the Gini importance. The importance of a feature is computed as the (normalized) total reduction of the criterion brought by that feature.
+	- That reduction or weighted information gain is defined as. The weighted impurity decrease equation is the following:
+   
+		N_t / N * (impurity - N_t_R / N_t * right_impurity - N_t_L / N_t * left_impurity)
+	
+			N 	: Total number of samples
+			N_t 	: No. of samples at the current node
+			N_t_L 	: No. of samples in the left child 
+			N_t_R 	: No. of samples in the right child
+
+  
 ------------------------------------------------------------------------------------------------------
   
 # SHapley: SHapley Additive exPlanations. 
@@ -878,9 +875,7 @@ SHapley value =  sum [weight * (prediction with feature - prediction without fea
 - SHAP assumes feature independence, which may not always hold true in real-world datasets. The aggregation of individual SHAP values to provide global insights can also be a complex task, requiring careful interpretation and consideration of the underlying data and model characteristics.
 -  Computationally expensive, especially with many features (where feature interactions are complex)
 
-
 https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-explanations-shap
-
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -1039,24 +1034,41 @@ Key Takeaways:
 
 - beta(x) 	= covariance(x,y) / variance(x)
 - correlation(x,y)= covariance(x,y) / [variance(x) * variance(y)]
-  
+
+----------------------------------------------------------------------------
+
 - TSS 		= SUM[y-mean(y)]^2
 - RSS 		= SUM[y-predicted(y)]^2
 - R Squared	= 1.0 - (RSS/TSS)
 - VIF 		= 1.0 / (1.0 - R Squared)
-    
+
+----------------------------------------------------------------------------
+
 - AIC		= ( No of variable * 2)             - ( 2 * -Log Likelihood )
 - BIC		= { No of variable * log(No of obs)}  - ( 2* -Log Likelihood )
 - Gini/Somer’s D = [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
 - Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]      [meanG = mean of score only for good, varB= variance of score only for bad ]
-			
+
+----------------------------------------------------------------------------
+
 - True Positives (TP) = Correctly Identified
 - True Negatives (TN) = Correctly Rejected
 - False Positives (FP) = Incorrectly Identified = Type I Error
 - False Negatives (FN) = Incorrectly Rejected	= Type II Error
-  
-- Recall (Sensitivity) = Ability of the classifier to find positive samples from all positive samples
-- Precision = Ability of the classifier not to label as positive a sample that is negative (positive predictive value)
+
+----------------------------------------------------------------------------
+
+- Recall and Precision:
+	- Recall (Sensitivity) = Ability of the classifier to find positive samples from all positive samples
+	- Recall is the fraction of instances that have been classified as true. On the contrary, precision is a measure of weighing instances that are actually true.
+	- Recall/Sensitivity: how many relevant instances are selected.
+
+	- Precision = Ability of the classifier not to label as positive a sample that is negative (positive predictive value)	
+	- While recall is an approximation, precision is a true value that represents factual knowledge.
+	- Precision/Specificity: how many selected instances are relevant.
+
+----------------------------------------------------------------------------
+
 - Specificity = Measures the proportion of actual negatives that are correctly identified (true negative rate)
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Formula/Confusion%20Matrxi.jpg)
@@ -1070,119 +1082,158 @@ Key Takeaways:
 - Negative Predictive Value : 		   	TN  / (TN + FN)
 - False Discovery Rate: 			FP  / (FP + TP) = 1 - Positive Predictive Value
   
-- Accuracy : 				   	(TP + TN)/ (TP  + TN + FP + FN)
-- F1-Score : 2*TP/ (2TP + FP + FN)   =   [2 * (Precision * Recall) / (Precision + Recall)]
-	- F1 score (also F-score or F-measure) is a measure of a test's accuracy. 
-	- The F1-score gives you the harmonic mean of precision and recall.
-	- The scores corresponding to every class will tell you the accuracy of the classifier in classifying the data points in that particular class compared to all other classes.
-	- The F1 score is the harmonic average of the precision and recall, where an F1 score reaches its best value at 1 (perfect precision and recall) and worst at 0.
-	- It considers both the precision and the recall of the test to compute the score: 
-		- precision is the number of correct positive results divided by the number of all positive results returned by the classifier. precision is the measure of how accurate the classifier’s prediction of a specific class
-		- recall is the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive). recall is the measure of the classifier’s ability to identify a class.
-	 
-			F1-Score : 2 * TP / (2TP + FP + FN) = [2 * (Precision * Recall) / (Precision + Recall)]
-	- If the classifier predicts the minority class but the prediction is erroneous and false-positive increases, the precision metric will be low and so as F1 score. Also, if the classifier identifies the minority class poorly, i.e. more of this class wrongfully predicted as the majority class then false negatives will increase, so recall and F1 score will low. F1 score only increases if both the number and quality of prediction improves. F1 score keeps the balance between precision and recall and improves the score only if the classifier identifies more of a certain class correctly.
-	
-- Precision/Specificity: how many selected instances are relevant.
-- Recall/Sensitivity: how many relevant instances are selected.
-- F1 score: harmonic mean of precision and recall.
-- MCC: correlation coefficient between the observed and predicted binary classifications.
-- AUC: relation between true-positive rate and false positive rate.
-- Accuracy is not appropriate when the data is imbalanced. Because the model can achieve higher accuracy by just predicting accurately the majority class while performing poorly on the minority class which in most cases is the class we care about the most.
+-------------------------------------------------------------------------------------------
+
+- F1-Score :
+
+	- F1-Score = 2*TP/ (2TP + FP + FN)   =   [2 * (Precision * Recall) / (Precision + Recall)]
+
+	- What it is:
+ 		- The F1 score is a metric that balances precision and recall, which are both important in evaluating a model's performance.
+		- F1 score (also F-score or F-measure) is a measure of a test's accuracy.
+ 		- The F1-score gives you the harmonic mean of precision and recall.
+		- The scores corresponding to every class will tell you the accuracy of the classifier in classifying the data points in that particular class compared to all other classes.
+		- The F1 score is the harmonic average of the precision and recall, where an F1 score reaches its best value at 1 (perfect precision and recall) and worst at 0.
+		- It considers both the precision and the recall of the test to compute the score: 
+			- precision is the number of correct positive results divided by the number of all positive results returned by the classifier. precision is the measure of how accurate the classifier’s prediction of a specific class
+			- recall is the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive). recall is the measure of the classifier’s ability to identify a class.
+		- If the classifier predicts the minority class but the prediction is erroneous and false-positive increases, the precision metric will be low and so as F1 score. Also, if the classifier identifies the minority class poorly, i.e. more of this class wrongfully predicted as the majority class then false negatives will increase, so recall and F1 score will low. F1 score only increases if both the number and quality of prediction improves. F1 score keeps the balance between precision and recall and improves the score only if the classifier identifies more of a certain class correctly.
+		
+	- How to interpret:
+ 		- Precision is the percentage of positive predictions that were actually correct (true positives / total positive predictions).
+		- Recall (also known as sensitivity) is the percentage of actual positive cases that the model correctly identified (true positives / total actual positives).
+		- F1 score is the harmonic mean of precision and recall, providing a single score that considers both.
+		- Why harmonic mean and not an arithmetic mean. This is because HM punishes extreme values more.
+
+	- Use Cases: F1 score is particularly useful in scenarios where both precision and recall are important, or when dealing with imbalanced datasets.
 
 -----------------------------------------------------------------------------------
 
-- Accuracy paradox: if the incidence of category A is dominant, being found in 99% of cases, then predicting that every case is category A will have an accuracy of 99%. Precision and recall are better measures in such cases. The underlying issue is that there is a class imbalance between the positive class and the negative class. Prior probabilities for these classes need to be accounted for in error analysis. Precision and recall help, but precision too can be biased by very unbalanced class priors in the test sets.
-
-- Area under curve /C statistics = Percent Concordant + 0.5 * Percent Tied ( https://www.geeksforgeeks.org/how-to-handle-imbalanced-classes-in-machine-learning/ )
-	The ROC curve is a graphical plot that illustrates the performance of any binary classifier 
-	system as its discrimination threshold is varied. True positive rate (Sensitivity : Y axis ) 
-	is plotted in function of the false positive rate (100-Specificity : X axis) for different 
-	cut-off points. Each point on the ROC curve represents a sensitivity/specificity pair 
-	corresponding to a particular decision threshold.
-- Standard Error Coef: 
-	Linear regression standard error of Coef : SE  = sqrt [ S(yi - yi)2 / (n - 2) ] / sqrt [ S(xi - x)2 ]
-	The standard error of the coefficient estimates the variability between coefficient estimates 
-	that you would obtain if you took samples from the same population again and again. 
-	The calculation assumes that the sample size and the coefficients to estimate would remain 
-	the same if you sampled again and again. Use the standard error of the coefficient to measure 
-	the precision of the estimate of the coefficient. 
-	The smaller the standard error, the more precise the estimate.
-- Recall and Precision:
-	Recall is the fraction of instances that have been classified as true. On the contrary, 
-	precision is a measure of weighing instances that are actually true. 
-	While recall is an approximation, precision is a true value that represents factual knowledge.
-- ROC curve:
-	Receiver Operating Characteristic is a measurement of the True Positive Rate (TPR) against False 
-	Positive Rate (FPR). We calculate True Positive (TP) as TPR = TP/ (TP + FN). On the contrary, 
-	false positive rate is determined as FPR = FP/FP+TN where where TP = true positive, TN = true negative, 
-	FP = false positive, FN = false negative.
-- AUC vs ROC:
-	AUC curve is a measurement of precision against the recall. Precision = TP/(TP + FP) and TP/(TP + FN).
-	This is in contrast with ROC that measures and plots True Positive against False positive rate.
-
-- Feature importances: 
-	It is also known as the Gini importance. The importance of a feature is computed as the (normalized) total reduction of the criterion brought by that feature.  	That reduction or weighted information gain is defined as. The weighted impurity decrease equation is the following: 
-	
-		N_t / N * (impurity - N_t_R / N_t * right_impurity - N_t_L / N_t * left_impurity)
-	
-			N 	: Total number of samples
-			N_t 	: No. of samples at the current node
-			N_t_L 	: No. of samples in the left child 
-			N_t_R 	: No. of samples in the right child
-
-
-- AUC measures how well a model distinguishes between two groups, Accuracy is the percentage of correct predictions, F1 Score balances precision and recall, Gini is a measure of model discrimination derived from AUC, and Kolmogorov-Smirnov (KS) measures the difference between two distributions. 
-
------------------------------------------------------------------------------------
-
-1. AUC (Area Under the Curve) / ROC (Receiver operating characteristic) :
-	- What it is: AUC represents the area under the Receiver Operating Characteristic (ROC) curve, which plots the true positive rate (how well the model identifies positives) against the false positive rate (how often the model incorrectly identifies negatives as positives) at various thresholds. Trade-off between the true positive rate (TPR) and the false positive rate (FPR). Advantage of ROC curve is that it is independent of the change in the proportion of responders.
-    
-	- How to interpret: An AUC of 1 means the model perfectly distinguishes between the two groups. An AUC of 0.5 means the model is no better than random guessing. A higher AUC indicates better model performance. 
-
-	- Use Cases: AUC is particularly useful for evaluating models in scenarios with imbalanced datasets (where one group is much larger than the other) because it considers the trade-off between true and false positives. 
-
-2. Accuracy:
+- Accuracy:
+	- Accuracy = (TP + TN)/ (TP  + TN + FP + FN)  
 	- What it is: Accuracy is the percentage of predictions that the model gets right, calculated as (correct predictions / total predictions) * 100.
-
 	- How to interpret: A higher accuracy means the model is making more correct predictions overall.
-  
 	- Use Cases: Accuracy is a good general metric, but it can be misleading in imbalanced datasets, as a model might achieve high accuracy by simply predicting the majority class. 
 
-3. F1 Score:
-	- What it is: The F1 score is a metric that balances precision and recall, which are both important in evaluating a model's performance. 
+	- Accuracy paradox:
+		- if the incidence of category A is dominant, being found in 99% of cases, then predicting that every case is category A will have an accuracy of 99%. Precision and recall are better measures in such cases.
+		- The underlying issue is that there is a class imbalance between the positive class and the negative class.
+		- Prior probabilities for these classes need to be accounted for in error analysis.
+		- Precision and recall help, but precision too can be biased by very unbalanced class priors in the test sets.
 
-	- How to interpret: Precision is the percentage of positive predictions that were actually correct (true positives / total positive predictions). Recall (also known as sensitivity) is the percentage of actual positive cases that the model correctly identified (true positives / total actual positives). F1 score is the harmonic mean of precision and recall, providing a single score that considers both. Why harmonic mean and not an arithmetic mean. This is because HM punishes extreme values more.	
+	- Accuracy is not appropriate when the data is imbalanced. Because the model can achieve higher accuracy by just predicting accurately the majority class while performing poorly on the minority class which in most cases is the class we care about the most.
 
-	- Use Cases: F1 score is particularly useful in scenarios where both precision and recall are important, or when dealing with imbalanced datasets. 
+-----------------------------------------------------
+   
+- Receiver operating characteristic (ROC) curve:
+	- Receiver Operating Characteristic is a measurement of the True Positive Rate (TPR) against False Positive Rate (FPR).
+	- True Positive (TP) as TPR = TP/ (TP + FN). On the contrary, 
+	- False positive rate is determined as FPR = FP/FP+TN
+		where where TP = true positive, TN = true negative, FP = false positive, FN = false negative.
 
-4. Gini Coefficient:
-	- What it is: The Gini coefficient is derived from the AUC and represents the model's ability to discriminate between the two groups. Gini is nothing but the ratio between the area between the ROC curve and the diagonal line & the area of the above triangle.
+	- Model's ability to distinguish between classes. The biggest advantage of using the ROC curve is that it is independent of the change in the proportion of positive class. It considers the predicted probabilities for determining our model’s performance.
+	- Issue: it only takes into account the order of probabilities, and does not take into account the model’s capability to predict a higher probability for samples more likely to be positive.
+	- The ROC curve is the plot between sensitivity and (1- specificity).
 
+-----------------------------------------------------
+
+- AUC (Area Under the Curve) / C statistics / :
+	- AUC = Percent Concordant + 0.5 * Percent Tied 
+	- What it is:
+		- AUC represents the area under the Receiver Operating Characteristic (ROC) curve, which plots the true positive rate (how well the model identifies positives) against the false positive rate (how often the model incorrectly identifies negatives as positives) at various thresholds.
+		- Trade-off between the true positive rate (TPR) and the false positive rate (FPR). Advantage of ROC curve is that it is independent of the change in the proportion of responders.
+		- The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.
+		- True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate (100-Specificity : X axis) for different cut-off points. Each point on the ROC curve represents a sensitivity/specificity pair corresponding to a particular decision threshold.
+
+	- How to interpret: An AUC of 1 means the model perfectly distinguishes between the two groups. An AUC of 0.5 means the model is no better than random guessing. A higher AUC indicates better model performance. 
+	- Use Cases: AUC is particularly useful for evaluating models in scenarios with imbalanced datasets (where one group is much larger than the other) because it considers the trade-off between true and false positives.
+
+	https://www.geeksforgeeks.org/how-to-handle-imbalanced-classes-in-machine-learning/
+
+-----------------------------------------------------
+
+- Accuracy vs ROC AUC:
+	- First difference is that you calculate accuracy on the predicted classes while you calculate ROC AUC on predicted scores. That means you will have to find the optimal threshold for your problem. 
+	- Secondly, accuracy scores start at 0.93 for the very worst model and go up to 0.97 for the best one.
+	- Remember that predicting all observations as majority class 0 would give 0.9 accuracy, so our worst experiment, BIN-98 is only slightly better than that.
+	- Yet the score itself is quite high, and it shows that you should always take an imbalance into consideration when looking at accuracy. 
+
+-----------------------------------------------------
+
+- AUC vs ROC:
+	- AUC curve is a measurement of precision against the recall. Precision = TP/(TP + FP) and TP/(TP + FN).
+	- This is in contrast with ROC that measures and plots True Positive against False positive rate.
+
+-----------------------------------------------------
+
+- F1 score vs ROC AUC:
+	- One big difference between the F1 score and the ROC AUC is that the first one takes predicted classes, and the second takes predicted scores as input.
+ 	- Because of that, with the F1 score, you need to choose a threshold that assigns your observations to those classes. Often, you can improve your model performance a lot if you choose it well.
+ 
+-----------------------------------------------------
+
+- F1 score vs Accuracy:
+	- F1 score balances precision and recall in the positive class, while accuracy looks at correctly classified observations, both positive and negative.
+	- That makes a big difference, especially for the imbalanced problems, where by default our model will be good at predicting true negatives and hence accuracy will be high.
+ 	- However, if you care equally about true negatives and true positives, then accuracy is the metric you should choose. 
+
+-----------------------------------------------------------------------------------
+
+- Gini Coefficient:
+	- What it is: The Gini coefficient is derived from the AUC and represents the model's ability to discriminate between the two groups.
+ 		Gini is nothing but the ratio between the area between the ROC curve and the diagonal line & the area of the above triangle.
+   
 	- How to interpret: Gini = 2 * AUC - 1. 
 		A Gini of 0 means the model is no better than random guessing.
 		A Gini of 1 means the model perfectly distinguishes between the two groups.
 
 	- Use Cases: The Gini coefficient provides a simple and intuitive measure of model performance, especially for non-technical audiences. 
 
-5. Kolmogorov-Smirnov (KS) Test:
-	- What it is: The KS test is a statistical test used to determine if two distributions are significantly different. KS measures the degree of separation between the positive and negative distributions. The K-S is 100 if the scores partition the population into two separate groups in which one group contains all the positives and the other all the negatives. If the model cannot differentiate between positives and negatives, then it is as if the model selects cases randomly from the population. The KS would be 0.			
+-----------------------------------------------------------------------------------
 
-	- How to interpret: In the context of machine learning, the KS test can be used to evaluate the performance of a model by comparing the distribution of predicted probabilities with the distribution of actual outcomes. A higher KS value indicates a greater difference between the two distributions, suggesting that the model is better at distinguishing between the two groups.
+- Kolmogorov-Smirnov (KS) Test:
+	- What it is: The KS test is a statistical test used to determine if two distributions are significantly different. KS measures the degree of separation between the positive and negative distributions.
+ 		The K-S is 100 if the scores partition the population into two separate groups in which one group contains all the positives and the other all the negatives.
+		If the model cannot differentiate between positives and negatives, then it is as if the model selects cases randomly from the population. The KS would be 0.
 
+	- How to interpret: In the context of machine learning, the KS test can be used to evaluate the performance of a model by comparing the distribution of predicted probabilities with the distribution of actual outcomes.
+	  A higher KS value indicates a greater difference between the two distributions, suggesting that the model is better at distinguishing between the two groups.
+   
 	- Use Cases: The KS test is useful for evaluating the performance of a model in a more nuanced way than AUC or Gini, as it considers the entire distribution of predicted probabilities. 
 
-6. Accuracy vs ROC AUC:
-	- First difference is that you calculate accuracy on the predicted classes while you calculate ROC AUC on predicted scores. That means you will have to find the optimal threshold for your problem. 
+-----------------------------------------------------------------------------------
 
-	- Secondly, accuracy scores start at 0.93 for the very worst model and go up to 0.97 for the best one. Remember that predicting all observations as majority class 0 would give 0.9 accuracy, so our worst experiment, BIN-98 is only slightly better than that. Yet the score itself is quite high, and it shows that you should always take an imbalance into consideration when looking at accuracy. 
+- Gain and Lift charts:
+	- Check the rank ordering of the probabilities.
+ 	- This graph tells how well is model is segregating positive from negative.
+  	- Lift is dependent on the total response rate of the population.
+  	- Hence, if the response rate of the population changes, the same model will give a different lift chart.
 
-7. F1 score vs Accuracy:
-	- F1 score balances precision and recall in the positive class, while accuracy looks at correctly classified observations, both positive and negative. That makes a big difference, especially for the imbalanced problems, where by default our model will be good at predicting true negatives and hence accuracy will be high. However, if you care equally about true negatives and true positives, then accuracy is the metric you should choose. 
+-----------------------------------------------------
 
-8. F1 score vs ROC AUC:
-	- One big difference between the F1 score and the ROC AUC is that the first one takes predicted classes, and the second takes predicted scores as input. Because of that, with the F1 score, you need to choose a threshold that assigns your observations to those classes. Often, you can improve your model performance a lot if you choose it well.
+- Standard Error Coef: 
+	- Linear regression standard error of Coef : SE  = sqrt [ S(yi - yi)2 / (n - 2) ] / sqrt [ S(xi - x)2 ]
+	- The standard error of the coefficient estimates the variability between coefficient estimates that you would obtain if you took samples from the same population again and again. 
+	- The calculation assumes that the sample size and the coefficients to estimate would remain the same if you sampled again and again.
+	- Use the standard error of the coefficient to measure the precision of the estimate of the coefficient. 
+	- The smaller the standard error, the more precise the estimate.
+
+-----------------------------------------------------
+
+--------------------------------------------------------------------------------------
+
+- Accuracy: Measures the overall proportion of correct predictions. 
+- Precision: Measures the proportion of true positives among all positive predictions.
+- Recall (Sensitivity): Measures the proportion of actual positives that are correctly identified.
+- Precision-Recall Curves: Visualize the trade-off between precision and recall across different thresholds, enabling a deeper understanding of the model's performance under various scenarios.
+- Log Loss: Measures the performance of a classification model based on probability predictions. It's a negative average of the log of corrected predicted probabilities.
+- R-squared (Coefficient of Determination): Measures the proportion of variance in the dependent variable that can be predicted from the independent variables.
+- AUC measures how well a model distinguishes between two groups
+- Accuracy is the percentage of correct predictions
+- F1 Score balances precision and recall
+- Gini is a measure of model discrimination derived from AUC
+- Kolmogorov-Smirnov (KS) measures the difference between two distributions. 
+- MCC: correlation coefficient between the observed and predicted binary classifications.
 
 ------------------------------------------------------------------------------------------------------
 
