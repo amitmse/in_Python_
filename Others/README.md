@@ -772,21 +772,7 @@ https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-expl
 - Validation is crucial for selecting the best model, tuning hyperparameters, and ensuring the model can adapt to new situations. It is the process of finding the best set of hyperparameters for a model to maximize its performance.
 - Refer to model page for the detail
 
-------------------------------------------------------------------------------------------------------------
-#### neural networks hyperparameters
-
-- In neural networks, hyperparameters are settings that are not learned during training but are set beforehand and influence the model's architecture, learning process, and overall performance.
-- Number of Layers: The number of hidden layers significantly impacts the model's complexity and ability to learn intricate patterns. 
-- Number of Neurons per Layer: The width of each hidden layer influences the model's capacity to represent complex relationships. 
-- Learning Rate: This determines the step size during optimization, affecting how quickly the model converges to the minimum loss.
-- Batch Size: The number of training examples processed before updating model parameters. Larger batch sizes can lead to faster convergence but might require more memory. 
-- Optimizer: The algorithm used to update model weights (e.g., Adam, SGD) influences the speed and stability of training. 
-- Epochs: The number of times the entire training dataset is passed through the model.
-- Activation Function: The activation function introduced nonlinearity into the model, enabling it to learn complex relationships.
-- Regularization Techniques: These help prevent overfitting by adding penalties to the model's complexity (e.g., L1, L2 regularization).
-- Dropout Rate: Randomly drops out neurons during training, preventing over-reliance on specific neurons and improving generalization.
-
-------------------------------------------------------------------------------------------------------------
+-------------------------
 #### Grid Search, Randomized Search or Bayesian Optimization
 
 - Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter space and find the optimal combination.
@@ -794,9 +780,11 @@ https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-expl
 - Grid Search: Defines a grid of hyperparameter values and tests all possible combinations. 
 	- Pro: Simple to understand and implement. Finding the best combination within the defined grid.
 	- Cons: Computationally expensive, especially with many hyperparameters or large grids. May miss the optimal hyperparameters if the grid is not fine-grained enough.
+   
 - Random Search: Randomly samples hyperparameters from a defined range or distribution, without evaluating all combinations.
 	- Pros: More efficient than grid search, especially with high-dimensional hyperparameter spaces. Can find good hyperparameters with fewer evaluations. 
-	- Cons: May not find the optimal hyperparameters, especially if the search space is large. Requires careful selection of the number of iterations to balance exploration and efficiency. 
+	- Cons: May not find the optimal hyperparameters, especially if the search space is large. Requires careful selection of the number of iterations to balance exploration and efficiency.
+   
 - Bayesian Optimization: Uses a probabilistic model (typically a Gaussian process) to learn the relationship between hyperparameters and performance. It then intelligently explores the hyperparameter space, focusing on regions with the highest probability of containing the optimal hyperparameters. 
 	- Pros: Efficient than grid and random search, requirs fewer evaluations to find good hyperparameters. Can handle non-convex and noisy objective functions. Can be parallelized to speed up the search process. 
 	- Cons: Can be computationally expensive for each iteration, especially with complex models. Requires a suitable Gaussian process model and careful selection of hyperparameters for the model.
