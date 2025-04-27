@@ -7,32 +7,27 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 -----------------------------------------------------------------------------------------------------------------------
 ## Logistic Regression Assumptions:
 
-	1. Dependent variable should be binary
+1. Dependent variable should be binary
  
-	2. Linearity between independent & log odds
-		Log converts odds into linear form. log(p/q) = [log(p) - log(q)] 
+2. Linearity between independent & log odds.
+   	- Log converts odds into linear form. log(p/q) = [log(p) - log(q)] 
 		(non-linear relationship between the dependent and independent variables) 
-		Test: Box-Tidwell test	
+	- Test: Box-Tidwell test	
   
-	3. Independence of errors
-		Each observation in the dataset is unrelated to any other observation,
-		If observations are not independent, the error terms (residuals) will be correlated.
-		This can lead to biased coefficient estimates and inflated standard errors.
-  		Example: Data collected from the same individuals over time. 
-		Observations collected at consecutive time points.
-		Test: Durbin-Watson test, Residual plots
+3. Independence of errors
+	- Each observation in the dataset is unrelated to any other observation, If observations are not independent, the error terms (residuals) will be correlated.
+	- This can lead to biased coefficient estimates and inflated standard errors.
+	- Example: Data collected from the same individuals over time. Observations collected at consecutive time points.
+	- Test: Durbin-Watson test, Residual plots
   
-	4. No perfect multicollinearity
+4. No perfect multicollinearity
 
-	-------------------------------------------------------------
-	- Logistic regression relaxes several key assumptions required by linear regression
- 		(linearity between the dependent and independent variables, normality of errors, homoscedasticity)
+-------------------------------------------------------------
+- Logistic regression relaxes several key assumptions required by linear regression (linearity between the dependent and independent variables, normality of errors, homoscedasticity)
 	
- 	- Logistic regression the target variable follows Bernoulli / binomial distribution, not normal distribution.
-  		The errors in logistic regression are not normally distributed, as the outcome is a probability (0 to 1).
+- Logistic regression the target variable follows Bernoulli / binomial distribution, not normal distribution. The errors in logistic regression are not normally distributed, as the outcome is a probability (0 to 1).
   		
-	- Logistic regression does not require homoscedasticity as the variance of the errors can vary depending on 
- 		the predicted probability, as it's a binomial random variable.
+- Logistic regression does not require homoscedasticity as the variance of the errors can vary depending on the predicted probability, as it's a binomial random variable.
        
 -----------------------------------------------------------------------------------------------------------------------
 ## Logistic Regression Algorithm Coded in Python:
@@ -42,44 +37,35 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 -----------------------------------------------------------------------------------------------------------------------
 ## Points
   
-	- Why use odds and log-odds.
-	- Probability output ranges from 0 to 1  
-	- Odds Ratio = P/(1-P)		[Odds output range from 0 to ∞ ]
-		odds = 0 when p = 0     [ 0 / (1-0) = 0] 
-		odds = ∞ when p = 1	[ when denominator is very small number]
-		Odds of an event occurring in one group compared to another, provides a measure of 
-		the strength of association between the predictor and the outcome.
+#### Why use odds and log-odds.
+- Probability output ranges from 0 to 1  
+- Odds Ratio = P/(1-P)		[Odds output range from 0 to ∞ ]
+	odds = 0 when p = 0     [ 0 / (1-0) = 0] 
+	odds = ∞ when p = 1	[ when denominator is very small number]
+	Odds of an event occurring in one group compared to another, provides a measure of the strength of association between the predictor and the outcome.
   
-	- Log of Odds: log (p/(1-P))  	[Log output ranges from −∞ to ∞]
-		- Log of Odds is also called logit function.
-		- Logit established a linear relationship between Predictors and Target.
-		- The logit function takes a probability (0 to 1) and 
-			converts it back into a linear combination of predictors.
- 		- Converting a sigmoid function to logit for an easier interpretation of 
-			the output results in the logistic model equation.
-		- Converting the probability to the logit (log odds), it transforms 
-			the nonlinear relationship into a linear one, making it easier to interpret. 
-		- The coefficients in the logit model tell us how a one-unit change in a 
-			predictor affects the log odds (i.e., logit) of the outcome.
-		- One unit increase in logit means exactly is still challenging. 
-			Thus, convert regression coefficients to something easier for interpretation, 
-			like odds ratios. This can be done easily by exponentiating the coefficient.
-		- Log odds with a negative value indicating the odds of failure and 
-			a positive value showing higher chances of success.
+- Log of Odds: log (p/(1-P))  	[Log output ranges from −∞ to ∞]
+	- Log of Odds is also called logit function.
+	- Logit established a linear relationship between Predictors and Target.
+	- The logit function takes a probability (0 to 1) and converts it back into a linear combination of predictors.
+	- Converting a sigmoid function to logit for an easier interpretation of the output results in the logistic model equation.
+	- Converting the probability to the logit (log odds), it transforms the nonlinear relationship into a linear one, making it easier to interpret. 
+	- The coefficients in the logit model tell us how a one-unit change in a predictor affects the log odds (i.e., logit) of the outcome.
+	- One unit increase in logit means exactly is still challenging. Thus, convert regression coefficients to something easier for interpretation, like odds ratios. This can be done easily by exponentiating the coefficient.
+	- Log odds with a negative value indicating the odds of failure and a positive value showing higher chances of success.
 
-	- Sigmoid function: 1/(1+exp^-y) 
- 		- The inverse of the logit function.
-		- The sigmoid function maps arbitrary real values back to the range [0, 1].
-		- Generalised form of logit function. For probability p, sigmoid(logit(p)) = p. 
+- Sigmoid function: 1/(1+exp^-y) 
+	- The inverse of the logit function.
+	- The sigmoid function maps arbitrary real values back to the range [0, 1].
+	- Generalised form of logit function. For probability p, sigmoid(logit(p)) = p. 
 		 
-	- Cost Function: [{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}]
+- Cost Function: [{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}]
 
-	- Logistic regression estimates an unknown probability for any given
-		linear combination (log odds #2Assumptions) of the independent variables.
-			logit(p) => Log(Odds) => log[p/(1-P)] => [log(p) - log(1-P)] => logit(p)
-			log[p/(1-P)] = a + bX (Logistic Model)
-		Anti Log is exponential function which converts logit to sigmoid for probability.
-  			inverse of logit(p)= 1/[1+exp^(a+bX)] (output is probability between 0 to 1)
+- Logistic regression estimates an unknown probability for any given linear combination (log odds #2Assumptions) of the independent variables.
+	- logit(p) => Log(Odds) => log[p/(1-P)] => [log(p) - log(1-P)] => logit(p)
+	- log[p/(1-P)] = a + bX (Logistic Model)
+	  Anti Log is exponential function which converts logit to sigmoid for probability.
+	- inverse of logit(p)= 1/[1+exp^(a+bX)] (output is probability between 0 to 1)
   
 ----------------------------------------------------------------------------------------------------------------------- 
 ## Statistical Derivation of Logistic Regression:
@@ -90,40 +76,36 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Logit function / Sigmoid Function:
-		Below shows probability to logit
+- Below shows probability to logit
 		Y 		= Exp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}] = 1/(1+exp^-y)
 		1 - Y 		= Exp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}    = 1/(1+exp^y)
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
-  		If not clear then read from bottom to top (above 4 lines) to understand logit to probability.
+- If above not clear then read from bottom to top (above 4 lines) to understand logit to probability.
 		  
-	- The sigmoid function is a mathematical function used to map the predicted values to probabilities 
-		which has a characteristic of S-shaped or sigmoid curve. 
-	- Logistic / logit function has the same property of a sigmoid function.	
-	- The sigmoid function takes any real number as input and output probabilities (a value between 0 to 1), 
-		which forms a S-shaped curve.
-	- Due to Sigmoid function, Logistic Regression is not a Linear Regression model (Sigmoid introduces non-linearity).
+- The sigmoid function is a mathematical function used to map the predicted values to probabilities which has a characteristic of S-shaped or sigmoid curve. 
+- Logistic / logit function has the same property of a sigmoid function. 
+- The sigmoid function takes any real number as input and output probabilities (a value between 0 to 1), which forms a S-shaped curve.
+- Due to Sigmoid function, Logistic Regression is not a Linear Regression model (Sigmoid introduces non-linearity).
 
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Maximum Likelihood: 
-	Finds parameter values that maximize the likelihood of making the observations given the parameters
+- Finds parameter values that maximize the likelihood of making the observations given the parameters
 		Pi = {Pr(Yi = 1/Xi) if Yi = 1}	= Pr^Yi         --> (P, Yi is a Bernoulli random variable)
 		{1 - Pr(Yi = 1/Xi)  if Yi = 0}	= (1-Pr)^(1-Yi)	--> (1-P)
 			
-	Likelihood function/Joint probability density function: (Yi is success and failure)
+- Likelihood function/Joint probability density function: (Yi is success and failure)
 		= Product[(Pr^Yi){(1-Pr)^(1-Yi)}]
 
-	Maximum likelihood estimation (MLE):
-		- Logistic Regression uses Maximum likelihood estimation finds parameter values that maximize 
-			the likelihood of making the observations given the parameters. Linear regression uses 
-			Ordinary Least Squares (OLS) which finds parameter values that minimizing the error.
-		- MLE allows more flexibility because it has fewer restrictions.  
+Maximum likelihood estimation (MLE):
+- Logistic Regression uses Maximum likelihood estimation finds parameter values that maximize the likelihood of making the observations given the parameters. Linear regression uses Ordinary Least Squares (OLS) which finds parameter values that minimizing the error.
+- MLE allows more flexibility because it has fewer restrictions.  
     
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Log Likelihood Function:
-	(Applying Logs on likelihood equation and  product will become sum. Refer to property of LOG)
+- Apply Logs on likelihood equation and  product will become sum. Refer to property of LOG
 		= Sum[{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}] (Apply log in above eq. and simplify it. cost function/log loss)
 		= Sum[Yi*Log(Pr) - Yi*Log(1-Pr) + Log(1-Pr)]
 		= Sum[Yi*Log{Pr/(1-Pr)}] + Sum[Log(1-Pr)] 
@@ -134,24 +116,22 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		= -[Sum[Yi*(a + bX)] - Sum[Log{1 + Exp(a + bX)}]] 
 		(Apply negative to minimize the Log Likelihood Function)
 	
-	Cost function :
-		- Log Loss is cost function of logistic regression.
-		- It quantifies the error of a logistic regression by assessing how effectively it separates actual 
-			from predicted. Error = Predicted – Actual.
+- Cost function :
+	- Log Loss is cost function of logistic regression.
+	- It quantifies the error of a logistic regression by assessing how effectively it separates actual from predicted. Error = Predicted – Actual.
 
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Gradient of Log Likelihood Function : 
-	First Differentiation (with respect to beta) of Log Likelihood Function
+- First Differentiation (with respect to beta) of Log Likelihood Function
 		= [Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]
 		= -[[Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]]	
-		(Negative is part of negative log likelihood function. Refer to gradient_log_likelihood)  		
+- Negative is refers to negative log likelihood function. Refer to gradient_log_likelihood
   
 -----------------------------------------------------------------------------------------------------------------------
 
 #### Hessian Matrix :
-	Second Differentiation (with respect to beta) of Log Likelihood Function
-	First Differentiation of Gradient of Log Likelihood Function
+- Second Differentiation (with respect to beta) of Log Likelihood Function. First Differentiation of Gradient of Log Likelihood Function
 		= 0 - [{(X*Exp(a + bX)*X)/(1 + Exp(a + bX))} + {(X*Exp(a + bX))/((1+Exp(a + bX))^2)*(Exp(a + bX)*X)}]	
 			(Differentiation of [Yi*X] will be 0 due to no beta.
 		= [(X*X*Exp(a + bX))/((1+Exp(a + bX))^2)*{Exp(a + bX) - (1+Exp(a + bX))}]
@@ -159,38 +139,26 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 		= (X*X*Exp(a + bX))/((1+Exp(a + bX))^2) 
 			(minus will be cancel out due to minus sign in Gradient of Log Likelihood Function)
 
-	Jacobian is similar to first order derivative.
- 	Hessian is similar to second order derivative. 
+- Jacobian is similar to first order derivative.
+- Hessian is similar to second order derivative. 
 	  
 -----------------------------------------------------------------------------------------------------------------------
 
 # Gradient Descent
 
-	- Gradient Descent is an optimization algorithm which finds global or local minima of a cost/loss function.
-		(Cost Function quantifies the error between predicted values and expected values)
-		A gradient (slope) is nothing but a derivative (first-order) of cost function.  
-	- The gradient of the loss function is a vector that indicates the direction and magnitude of the steepest 
-		increase in the loss. It tells which way to change the model's parameters to increase the loss.
-	- Gradient Descent Process:
-		- Initialization: Start with an initial set of model parameters (e.g., weights and biases).
-		- Iteration: Calculate the gradient of the loss function with respect to the current parameters.
-		- Learning Rate: A parameter that determines how large of a step to take during each iteration. 
-			A smaller learning rate may lead to slower convergence but avoid overshooting the minimum, 
-			while a larger learning rate can converge faster but potentially overshoot and 
-			oscillate around the minimum.
-	- By iteratively adjusting the model's parameters in the direction of the negative gradient, gradient descent 
-		aims to find the set of parameters that minimizes the loss function.
-  
+- Gradient Descent is an optimization algorithm which finds global or local minima of a cost/loss function. (Cost Function quantifies the error between predicted values and expected values). A gradient (slope) is nothing but a derivative (first-order) of cost function.  
+- The gradient of the loss function is a vector that indicates the direction and magnitude of the steepest increase in the loss. It tells which way to change the model's parameters to increase the loss.
+- Gradient Descent Process:
+	- Initialization: Start with an initial set of model parameters (e.g., weights and biases).
+	- Iteration: Calculate the gradient of the loss function with respect to the current parameters.
+	- Learning Rate: A parameter that determines how large of a step to take during each iteration. A smaller learning rate may lead to slower convergence but avoid overshooting the minimum, while a larger learning rate can converge faster but potentially overshoot and oscillate around the minimum.
+- By iteratively adjusting the model's parameters in the direction of the negative gradient, gradient descent aims to find the set of parameters that minimizes the loss function.
 		New Value = Old Value — Step Size
-
 ![image](https://github.com/user-attachments/assets/197d05e3-6c47-4cd8-b064-9d34a1767d6a)
-
-		- Derivative calculates slope and helps to find direction to reach minima.
-		- Constant (Learning rate) also referred to as step size or the alpha, is the size of the steps that are
-			taken to reach the minimum. Learning rate must be chosen wisely as:
-				- if it is too small, then the model will take some time to learn.
-				- if it is too large, model will converge as our pointer will shoot 
-					and we’ll not be able to get to minima.
+	- Derivative calculates slope and helps to find direction to reach minima.
+	- Constant (Learning rate) also referred to as step size or the alpha, is the size of the steps that are taken to reach the minimum. Learning rate must be chosen wisely as:
+		- if it is too small, then the model will take some time to learn.
+		- if it is too large, model will converge as our pointer will shoot and we’ll not be able to get to minima.
 
 ![image](https://github.com/user-attachments/assets/ff5e905d-df2d-4e38-8d9e-503498cfdd62)
 
