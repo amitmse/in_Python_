@@ -467,12 +467,13 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 
 ## Covariance
 
-	Covariance(X,Y) = E[(X−EX)(Y−EY)] = E[XY]−(EX)(EY)
- 	correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
 - It refers to the measure of how two variables will change (directional relationship) when they are compared to each other
 - It measures the Variance between two variables
-- Covariance indicates the direction of the linear relationship between variables. Correlation on the other hand measures 
-   both the strength and direction of the linear relationship between two variables. 
+- Covariance indicates the direction of the linear relationship between variables. Correlation on the other hand measures both the strength and direction of the linear relationship between two variables. 
+
+	Covariance(X,Y) = E[(X−EX)(Y−EY)] = E[XY]−(EX)(EY)
+
+ 	correlation(x,y)= covariance(x,y) / [variance(x)*variance(y)]
 
 ## Correlation vs Regression
 
