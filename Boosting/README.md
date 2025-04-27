@@ -240,7 +240,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 - L1 regularization: This parameter adds a penalty proportional to the absolute value of the coefficients, promoting sparsity in the model.
   
 		Default is 0  
-  
+
 ------------------------------------------------------------------------------------
 - Hyper Parameter Optimization: RandomizedSearchCV
   
