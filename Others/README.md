@@ -229,7 +229,10 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 	- PDF		: 1/(b-a) 	       {-infinite <- (a,b) -> infinite}
 	- Mean  	: (a+b)/2
 	- Variance 	: (b-a)^2/12
-Example: 
+
+![image](https://github.com/user-attachments/assets/ab68f043-2c87-4001-bb86-89057b95c0a6)
+
+- Example: 
 	- Imagine rolling a fair die. The outcomes 1 to 6 are equally likely.
 
 ---------------------------------------------------------------------------------------------
@@ -242,6 +245,9 @@ Example:
 	- PDF		: P^x*(1-P)^(1-x)       {x in 0 or 1}
 	- Mean  	: P
 	- Variance 	: P(1-P)
+
+![image](https://github.com/user-attachments/assets/7b95029e-0942-446d-a37a-5c403b3a75aa)
+
 - Example: 
 	- Flipping a fair coin
 	- it’s going to rain tomorrow or not
@@ -254,6 +260,12 @@ Example:
 	- PDF		: [n!/(n-x)!*x!] * [P^x*(Q)^(n-x)]	{! factorial}
 	- Mean  	: nP
 	- Variance 	: nPQ
+
+![image](https://github.com/user-attachments/assets/0becac22-d6f8-46f3-b083-39c67a99ac5e)
+
+![image](https://github.com/user-attachments/assets/e2fec31e-8586-4abd-be75-3cec63cede89)
+
+
 - Example: 
 	- Toss a fair coin 20 times; how many times does it come up heads? This count is an outcome that follows 
 	  the binomial distribution. Each flip is a Bernoulli-distributed outcome. Converted to binomial 
@@ -274,7 +286,13 @@ Example:
   This characteristic makes the logistic distribution more robust to outliers and extreme values.
   
 - sigmoid function  / logistic function (Cumulative Distribution Function) =  1 / (1+exp^-y)
+
+![image](https://github.com/user-attachments/assets/08dffc46-4060-44bd-b6fe-aa8e8e7299e3)
+
 - Probability Density Function: exp^-y / (1 + exp^-y)^2
+
+![image](https://github.com/user-attachments/assets/c60aca07-3b18-463e-954f-f26b21b24b45)
+
 - Mean = 0
 - Variance = Phi^2 / 3
   
@@ -311,6 +329,9 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	- PDF		: Expo(-Mean)*{(Mean^x)/x!} 		{x in o,1,2,3,4,5}
 	- Mean  	: Mean
 	- Variance 	: Mean
+
+![image](https://github.com/user-attachments/assets/6b9470ef-4dd3-4c2e-9dc9-ee68de8090a7)
+
 - Example:
 	- Packets arrive at routers, or customers arrive at a store, or things wait in some kind of queue Count 
 	  of customers calling a support hot-line each minute doesn't follow binomial/Bernoulli but Poisson.
@@ -329,6 +350,8 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 - Example:
 	- From simple Bernoulli trials arises another distribution. How many times does a flipped coin 
 	  come up tails before it first comes up heads? This count of tails follows a geometric distribution.
+
+![image](https://github.com/user-attachments/assets/9452598a-629d-4640-8263-b0b96d822d80)
 
 ---------------------------------------------------------------------------------------------
 ## Negative Binomial distribution
@@ -354,6 +377,9 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	- PDF		: λe^(-λx)    		{x ≥ 0}
 	- Mean  	: 1/λ
 	- Variance 	: (1/λ)²
+
+![image](https://github.com/user-attachments/assets/c1bd1469-9aac-4ace-a53b-9f8a35b318da)
+
 - Example: 
 	- let’s say a Poisson distribution models the number of births in a given time period. 
 	  The time in between each birth can be modeled with an exponential distribution.
@@ -396,6 +422,9 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	- PDF		: [1/{SQRT(2Pai)*STD}]*Expo[(X-Mean)^2/-2Variance]   {-infinite <-x-> infinite}
 	- Mean  	: Mean
 	- Variance 	: Variance
+
+![image](https://github.com/user-attachments/assets/fd1a750e-ed3d-4089-b19e-360998b365fa)
+
 - Example:
 	- Heights of people, Measurement errors, Blood pressure, Points on a test, IQ scores, Salaries.
 
@@ -411,7 +440,10 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
   This allows for easier calculation of probabilities and comparison of data points across various datasets.
   It also helps in hypothesis testing and identifying the probability of sample means significantly differing from population means.
   The standard normal distribution is a specific type of normal distribution with a mean of 0 and a standard deviation of 1. It is often used to calculate z-scores and probabilities.
-  
+
+![image](https://github.com/user-attachments/assets/062ff1c8-16ac-404b-84b4-2b32fde19150)
+
+
   z = (x - μ) / σ  (x is raw value, μ mean and σ standard deviation)
 
   - Example: 
@@ -463,6 +495,10 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 - Function
 	- PDF		: (Observed - Mean)^2/Mean
 	- Mean  	: mean
+
+![image](https://github.com/user-attachments/assets/464b5989-aae7-4c98-b4f8-f18b2478a810)
+
+
 - Example:
 	- The chi-squared distribution is used primarily in hypothesis testing
 	- Goodness of fit test, which determines if a sample matches the population 
