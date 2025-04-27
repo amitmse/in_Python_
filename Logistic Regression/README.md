@@ -5,7 +5,7 @@
 https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
 -----------------------------------------------------------------------------------------------------------------------
-## Logistic Regression Assumptions
+### Logistic Regression Assumptions
 
 1. Dependent variable should be binary
  
@@ -33,7 +33,7 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
        
 -----------------------------------------------------------------------------------------------------------------------
 
-## Limitations of Logistic Regression
+### Limitations of Logistic Regression
 
 - It assumes a linear relationship between independent and dependent variables, which may not always hold true in real-world scenarios.
 - It can be sensitive to outliers and may lead to overfitting.
