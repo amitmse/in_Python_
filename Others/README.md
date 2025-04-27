@@ -1192,6 +1192,8 @@ SHapley value =  sum [weight * (prediction with feature - prediction without fea
 
 https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-explanations-shap
 
+https://github.com/amitmse/in_Python_/blob/master/Others/Example.xlsx
+
 ------------------------------------------------------------------------------------------------------------
 
 # LIME: Local Interpretable Model-Agnostic Explanations
