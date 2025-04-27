@@ -73,7 +73,7 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 - Way to figure out believe is likely true based on a sample.
 	- Start with a belief about the larger group. This belief is hypothesis.
 	- Collect data from a sample of that group. 
-	- Use statistical methods to compare sample data to initial belief and see how likely it is that belief is true.
+	- Use statistical methods to compare sample data to initial belief and see how likely belief is true.
 	- Drawing a conclusion based on the statistical analysis.
 		- Accept or fail to reject the belief: This means there's not enough evidence to say belief is wrong.
 		- Reject the belief: This means sample data provides strong enough evidence that belief is likely false.
