@@ -580,6 +580,18 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 ##### Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
 ------------------------------------------------------------------------------------------------------
+
+### Limitation of Linear Regression
+
+- OLS assumptions are limitation.
+- Linearity Assumption: Linear relationship between the independent and dependent variables. In real-world relationships are nonlinear, and forcing a linear model onto such data can lead to inaccurate predictions.
+- Sensitivity to Outliers: Outliers, or extreme data points, can disproportionately influence the regression line, leading to inaccurate models.
+- Multicollinearity: When independent variables are highly correlated with each other, leading to stability and precision issue in the model.
+- Underfitting: when the model is too simple and fails to capture the underlying relationships in the data.
+- Overfitting: when the model is too complex and learns the training data too well, including noise, leading to poor generalization to new data.
+- Dependence Assumption: All independent variables are independent of each other.
+
+------------------------------------------------------------------------------------------------------
 ## Logistic regression 
 
 https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
