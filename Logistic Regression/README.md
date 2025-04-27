@@ -328,7 +328,8 @@ Maximum likelihood estimation (MLE):
 
 https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 
-- beta(x): covariance(x,y) / variance(x) 
+- beta(x): covariance(x,y) / variance(x)
+  
 	- Standardized beta: Beta * [ standard deviation of a model variable / {Pi / SQRT(3)}]
 	- standard deviation of a model variable get it from proc means 'Std Dev'
 	- Pi / SQRT(3): standard deviation of standard logistic regression =  1.81379936423422
