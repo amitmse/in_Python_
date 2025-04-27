@@ -77,11 +77,12 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 ### Logit function / Sigmoid Function:
 - Below shows probability to logit
+  
 		Y 		= Exp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}] = 1/(1+exp^-y)
 		1 - Y 		= Exp-(a + bX)/{1 + Exp-(a + bX)} =  1/{1 + Exp(a + bX)}    = 1/(1+exp^y)
 		Y/(1-Y)		= Exp(a + bX)/{1 + Exp(a + bX)}]/ [1/{1 + Exp(a + bX)}]     = Exp(a + bX) = exp^y
 		Log{Y/(1-Y)}	= a + bX (Apply log to convert non-linear relationship into linear relationship)
-- If above not clear then read from bottom to top (above 4 lines) to understand logit to probability.
+		If above not clear then read from bottom to top (above 4 lines) to understand logit to probability.
 		  
 - The sigmoid function is a mathematical function used to map the predicted values to probabilities which has a characteristic of S-shaped or sigmoid curve. 
 - Logistic / logit function has the same property of a sigmoid function. 
@@ -92,10 +93,12 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 ### Maximum Likelihood: 
 - Finds parameter values that maximize the likelihood of making the observations given the parameters
+  
 		Pi = {Pr(Yi = 1/Xi) if Yi = 1}	= Pr^Yi         --> (P, Yi is a Bernoulli random variable)
 		{1 - Pr(Yi = 1/Xi)  if Yi = 0}	= (1-Pr)^(1-Yi)	--> (1-P)
 			
 - Likelihood function/Joint probability density function: (Yi is success and failure)
+  
 		= Product[(Pr^Yi){(1-Pr)^(1-Yi)}]
 
 Maximum likelihood estimation (MLE):
@@ -106,6 +109,7 @@ Maximum likelihood estimation (MLE):
 
 ### Log Likelihood Function:
 - Apply Logs on likelihood equation and  product will become sum. Refer to property of LOG
+  
 		= Sum[{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}] (Apply log in above eq. and simplify it. cost function/log loss)
 		= Sum[Yi*Log(Pr) - Yi*Log(1-Pr) + Log(1-Pr)]
 		= Sum[Yi*Log{Pr/(1-Pr)}] + Sum[Log(1-Pr)] 
@@ -124,14 +128,17 @@ Maximum likelihood estimation (MLE):
 
 ### Gradient of Log Likelihood Function : 
 - First Differentiation (with respect to beta) of Log Likelihood Function
+  
 		= [Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]
-		= -[[Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]]	
+		= -[[Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]]
+  
 - Negative is refers to negative log likelihood function. Refer to gradient_log_likelihood
   
 -----------------------------------------------------------------------------------------------------------------------
 
 #### Hessian Matrix :
 - Second Differentiation (with respect to beta) of Log Likelihood Function. First Differentiation of Gradient of Log Likelihood Function
+  
 		= 0 - [{(X*Exp(a + bX)*X)/(1 + Exp(a + bX))} + {(X*Exp(a + bX))/((1+Exp(a + bX))^2)*(Exp(a + bX)*X)}]	
 			(Differentiation of [Yi*X] will be 0 due to no beta.
 		= [(X*X*Exp(a + bX))/((1+Exp(a + bX))^2)*{Exp(a + bX) - (1+Exp(a + bX))}]
