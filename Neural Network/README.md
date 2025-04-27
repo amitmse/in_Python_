@@ -673,6 +673,23 @@ Note: sourced from [Link](https://www.asimovinstitute.org/author/fjodorvanveen/)
 	- Convolutional Neural Networks(CNN) : Imgaes data
 	- Recurrent neural network(RNN): Time series data
 	https://www.mygreatlearning.com/blog/types-of-neural-networks/
+
+
+
+------------------------------------------------------------------------------------------------------------
+#### Neural Networks Hyperparameters
+
+- In neural networks, hyperparameters are settings that are not learned during training but are set beforehand and influence the model's architecture, learning process, and overall performance.
+- Number of Layers: The number of hidden layers significantly impacts the model's complexity and ability to learn intricate patterns. 
+- Number of Neurons per Layer: The width of each hidden layer influences the model's capacity to represent complex relationships. 
+- Learning Rate: This determines the step size during optimization, affecting how quickly the model converges to the minimum loss.
+- Batch Size: The number of training examples processed before updating model parameters. Larger batch sizes can lead to faster convergence but might require more memory. 
+- Optimizer: The algorithm used to update model weights (e.g., Adam, SGD) influences the speed and stability of training. 
+- Epochs: The number of times the entire training dataset is passed through the model.
+- Activation Function: The activation function introduced nonlinearity into the model, enabling it to learn complex relationships.
+- Regularization Techniques: These help prevent overfitting by adding penalties to the model's complexity (e.g., L1, L2 regularization).
+- Dropout Rate: Randomly drops out neurons during training, preventing over-reliance on specific neurons and improving generalization.
+   
 ---------------------------------------------------------------------------------------------------------------
 
 - The Turing test is a method to test a machine’s ability to match the human-level intelligence.
