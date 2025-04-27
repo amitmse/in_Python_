@@ -270,21 +270,23 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 	- Actual weight for target "No" = -0.1 
   
 2. Iterative Learning: In each iteration, a model is trained.
-- Each tree learns from previous ones. Misclassified observations gain more weight in the next iteration.
-- Correctly classified observations retain their weights. All weights are adjusted to sum to 1.
+	- Each tree learns from previous ones. Misclassified observations gain more weight in the next iteration.
+	- Correctly classified observations retain their weights. All weights are adjusted to sum to 1.
    
-- For each iteration compute accuracy:
-- (1/2) * ln [ (1 - Total Error) / Total Error ] 
+	- For each iteration compute accuracy:
+
+		(1/2) * ln [ (1 - Total Error) / Total Error ]
+
 	- If three obs are misclassified out of 10 in the first iteration, the total error is 3/10. accuracy: 0.43
    
-- Recompute weights: Adjust weight for misclassified observation: 
-	- correctly classified = Previous Weight * e^(-accuracy) = 0.07
-	- wrongly classified   = Previous Weight * e^(+accuracy) = 0.15
+	- Recompute weights: Adjust weight for misclassified observation: 
+		- correctly classified = Previous Weight * e^(-accuracy) = 0.07
+		- wrongly classified   = Previous Weight * e^(+accuracy) = 0.15
   
-- Normalize weights: All weights are adjusted to sum to 1. Divide each weight by the sum of all weights.
-	- 7 correctly classified and 3 wrongly classified, sum of weight = (0.07 X 7) + (0.15 X 3) =  0.92
-	- Normalize weights for correctly classified = 0.071
-	- Normalize weights for wrongly   classified = 0.167
+	- Normalize weights: All weights are adjusted to sum to 1. Divide each weight by the sum of all weights.
+		- 7 correctly classified and 3 wrongly classified, sum of weight = (0.07 X 7) + (0.15 X 3) =  0.92
+		- Normalize weights for correctly classified = 0.071
+		- Normalize weights for wrongly   classified = 0.167
   
 3. Final Tree: Combine all models using weights.
 
@@ -306,18 +308,23 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 6. Final: Sum up all models
  
 1. Y 	  = M(x) + error
+   
 	- (Logistic Regression if dep is binay). get the weight as well
 
 2. Error  = G(x) + error2
+   
 	- (Regress error with other ind var. Apply linear regression as error is continuous. Apply learning rate (0 to 1) or weight of the model.
 
 3. Error2 = H(x) + error3
+   
 	- (continue the #2 until you get low error)
 
 4. Y 	  = M(x) + G(x) + H(x) + error3
+   
 	- (combine all model together)
 
 5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4
+   
 	- (alpha, beta, gamma are weight / learning rates of each model)
   
 --------------------------------------
