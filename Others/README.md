@@ -577,10 +577,9 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	
 12. Number of observations must be greater than number of Xs
 
-#### Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
+##### Linear model should have residuals mean zero, have a constant variance, and not correlated with themselves or other variables. If these assumptions hold true, the OLS procedure creates the best possible estimates.
 
 ------------------------------------------------------------------------------------------------------
-
 # Logistic regression 
 
 https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
@@ -597,24 +596,8 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
 
 ------------------------------------------------------------------------------------------------------
 # Random Forest
+https://github.com/amitmse/in_Python_/tree/master/Random_Forest#readme
 
-## Bootstrap samples:
-- Draw repeated samples from the population, a large number of times. 
-- Samples are approximatively independent and identically distributed (i.i.d.).
-
-## Ensemble methods:
-- Ensemble learning is a machine learning paradigm where multiple models (often called "weak learners") are trained to solve the same problem and combined to get better results. 
-	
-## Bagging (Bootstrap aggregating):
-- Fit a weak learner (several independent models) on each of bootstarp samples and finally aggregate the outputs (average model predictions) in order to obtain a model with a lower variance. It builds model parallelly.
-
-## Boosting:
-- Similar to bagging but it fits weak learner sequentially (a model depends on the previous ones) in a very adaptative way. Each model in the sequence is fitted giving more importance to the observations which are not classified correctly (high error). Mainly focus on reducing bias.
-	
-- Bagging mainly focus at getting an ensemble model with less variance than its components whereas boosting and stacking will mainly try to produce strong models less biased than their components (even if variance can also be reduced).
-
-## Stacking:
-- Stacking mainly differ from bagging and boosting on two points. First stacking often considers heterogeneous weak learners (different learning algorithms are combined) whereas bagging and boosting consider mainly homogeneous weak learners. Second, stacking learns to combine the base models using a meta-model whereas bagging and boosting combine weak learners following deterministic algorithms.
 ------------------------------------------------------------------------------------------------------	
 
 ## Bias - Variance
@@ -636,11 +619,8 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
 - The values of the variable in the out-of-bag-sample are randomly shuffled, keeping all other variables the same. Finally, the decrease in prediction accuracy on the shuffled data is measured. 
 - The mean decrease in accuracy across all trees is reported. 
 - For example, age is important for predicting that a person earns over $50,000, but not important for predicting a person earns less. Intuitively, the random shuffling means that, on average, the shuffled variable has no predictive power. This importance is a measure of by how much removing a variable decreases accuracy, and vice versa — by how much including a variable increases accuracy.
-
 - Note that if a variable has very little predictive power, shuffling may lead to a slight increase in accuracy due to random noise. This in turn can give rise to small negative importance scores, which can be essentially regarded as equivalent to zero importance.	
-		
 - This is most interesting measure, because it is based on experiments on out-of-bag(OOB) samples, via destroying the predictive power of a feature without changing its marginal distribution.
-	
 - Percentage increase in mean square error is analogous to accuracy-based importance, and is calculated by shuffling the values of the out-of-bag samples.
 
 ## Gini Importance / Mean Decrease in Impurity (MDI) :
@@ -670,7 +650,7 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
 
 # Model Validation:
 
--------------------------------------------------------------
+-------------------------
 
 #### SR 11-7: 
 
@@ -688,7 +668,7 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
 	- Also k-fold cross-validation, Stratified K-Fold, time-based splits can be used.
 	- Validation guides model refinement during development, and testing validates its performance in real-world contexts, ensuring it behaves reliably and effectively beyond the training data.
    
--------------------------------------------------------------
+--------------------------------
 
 #### SS 1/23:
 - Model development, implementation and use
@@ -698,19 +678,19 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
 - Model identification
 - Governance
   
---------------------------------------------------------
+--------------------------
 - Group Model Risk Standards (GMRS): It state how things must be done to meet the requirements set out in the GMRP.
 - Group Model Risk Policy (GMRP): It sets out requirements and responsibilities for the identification, measurement, and monitoring of Model Risk.
 - Model Family Standards (MFS): Model Family Standards state how things must be done within a given model family
   
---------------------------------------------------------
+-------------------------
 Model Risk Policy and Governance:
 - Responsible for ongoing assessment of the model risk management framework
 - Responsible for preparing model risk oversight reporting
 - Responsible for the governance and execution of the annual status assessment for models
 - Responsible for preparing Group’s model risk assessments and Group’s model risk profile reporting
   
---------------------------------------------------------
+-------------------
 
 Third Party Model:
 - Assessment of model development design and methodology
