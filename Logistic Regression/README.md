@@ -227,13 +227,15 @@ Maximum likelihood estimation (MLE):
 ### Solve a equation (identify beta):  
 
 ##### 1. Calculus: 
-- It will faster if equation is simple. But in real life equations are very complex and messy and its difficult to solve.   
+- It will faster if equation is simple. But in real life equations are very complex and messy and its difficult to solve.
+  
 		f(x) 	= X^2 - 2X + 2   
 		df/dx 	= 2X - 2  
 		2X	= 2  
 		X	= 1   
 	
 ##### 2. Gradient Descent:
+
 		f(x) 	= X^2 - 2X + 2  
 		df/dx 	= 2X - 2
 		Gradient Descent: Xi+1 = Xi - a f'(Xi)
@@ -252,6 +254,7 @@ Maximum likelihood estimation (MLE):
 			
 - continue doing this untill we are close to 1 which is the exact solution. As we approach to local minimum, Gradient Descent will automatically take smaller steps. So no need to decrease "a" over time. 
 - optimization gradient descent:
+  
 		cX + d 	        = Y 			[equation of line and solve this for c & d]  
 		(cX + d) -  Y 	= 0 			("cX + d" is predected Y^, Y^-Y is error and it should be zero)   
 		min by(a,b) = sum ([cX + d]-Yi)^2	[c = cofficient, d=intercept]  
@@ -284,6 +287,7 @@ Maximum likelihood estimation (MLE):
 
 
 - Newton Raphson without second derivative
+  
 	Xn+1 	= Xn - f(X)/f'(X)
 		(Xn is initail guess, f'(X) first derivative)
 	f(X) 	= X^2 - 8  
@@ -300,33 +304,41 @@ Maximum likelihood estimation (MLE):
 ### Metrics:
 
 - beta(x): covariance(x,y) / variance(x)
+  
 	Standardized beta: Beta * [ standard deviation of a model variable / {Pi / SQRT(3)}] 	
 	standard deviation of a model variable get it from proc means 'Std Dev'
 	Pi / SQRT(3): standard deviation of standard logistic regression =  1.81379936423422
 	Value of Pi: 3.14159265358979 	SQRT of 3: 1.73205080756888 
    
-- Standard Error of Beta: Square root of variance of beta coefficient. 
+- Standard Error of Beta: Square root of variance of beta coefficient.
+  
 	Square root of the diagonal elements of the covariance matrix. 	[Covariance Matrix = Inverse(Hessian matrix)]
 	SQRT(Diagonal(Covariance Matrix))
  
 - Correlation(x,y): covariance(x,y) / [variance(x)*variance(y)]
  
 - AIC: (No of variable*2) - (2*-Log Likelihood)
+  
 "2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. Ordinary least squares minimizes RSS and LR minimizes deviance.
  
 - BIC: {No of variable*log(No of obs)} - (2*-Log Likelihood)
 
 - Area under curve / C statistics: Percent Concordant + 0.5 * Percent Tied
+  
 (The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.) True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate (100-Specificity : X axis) for different cut-off points. Each point on the ROC curve represents a sensitivity/specificity pair corresponding to a particular decision threshold. 
 
 - Somer’s D (Gini): [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
  
 - Divergence: [(meanG – meanB)^2] / [0.5(varG + varB)]
+  
 	[meanG = mean of score only for good, varB= variance of score only for bad ]
 
 - TSS: SUM[y-mean(y)]^2
+  
 - RSS: SUM[y-predicted(y)]^2
+  
 - R Squared: 1.0 - (RSS/TSS)
+  
 - VIF: 1.0 / (1.0 - R Squared)
 
 -----------------------------------------------------------------------------------------------------------------------
