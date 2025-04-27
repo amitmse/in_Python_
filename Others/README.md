@@ -263,9 +263,6 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 ![image](https://github.com/user-attachments/assets/0becac22-d6f8-46f3-b083-39c67a99ac5e)
 
-![image](https://github.com/user-attachments/assets/e2fec31e-8586-4abd-be75-3cec63cede89)
-
-
 - Example: 
 	- Toss a fair coin 20 times; how many times does it come up heads? This count is an outcome that follows 
 	  the binomial distribution. Each flip is a Bernoulli-distributed outcome. Converted to binomial 
