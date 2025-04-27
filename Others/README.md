@@ -595,6 +595,16 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
 - Reduction in Variance: https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md#information-gain
 
 ------------------------------------------------------------------------------------------------------
+
+## Mean Decrease in Accuracy (MDA) / Accuracy-based importance / Permutation Importance:
+
+https://github.com/amitmse/in_Python_/blob/master/Random_Forest/README.md#mean-decrease-in-accuracy-mda--accuracy-based-importance--permutation-importance
+
+## Gini Importance / Mean Decrease in Impurity (MDI) :
+
+https://github.com/amitmse/in_Python_/blob/master/Random_Forest/README.md#gini-importance--mean-decrease-in-impurity-mdi-
+
+------------------------------------------------------------------------------------------------------	
 # Random Forest
 https://github.com/amitmse/in_Python_/tree/master/Random_Forest#readme
 
@@ -614,37 +624,6 @@ https://github.com/amitmse/in_Python_/tree/master/Random_Forest#readme
 - If model has large number of parameters then it’s going to have high variance and low bias
 - For high variance, one common solution is to reduce parameter/features. 
 - This very frequently increases bias, so there’s a tradeoff to take into consideration.
-
-## Mean Decrease in Accuracy (MDA) / Accuracy-based importance / Permutation Importance:
-- The values of the variable in the out-of-bag-sample are randomly shuffled, keeping all other variables the same. Finally, the decrease in prediction accuracy on the shuffled data is measured. 
-- The mean decrease in accuracy across all trees is reported. 
-- For example, age is important for predicting that a person earns over $50,000, but not important for predicting a person earns less. Intuitively, the random shuffling means that, on average, the shuffled variable has no predictive power. This importance is a measure of by how much removing a variable decreases accuracy, and vice versa — by how much including a variable increases accuracy.
-- Note that if a variable has very little predictive power, shuffling may lead to a slight increase in accuracy due to random noise. This in turn can give rise to small negative importance scores, which can be essentially regarded as equivalent to zero importance.	
-- This is most interesting measure, because it is based on experiments on out-of-bag(OOB) samples, via destroying the predictive power of a feature without changing its marginal distribution.
-- Percentage increase in mean square error is analogous to accuracy-based importance, and is calculated by shuffling the values of the out-of-bag samples.
-
-## Gini Importance / Mean Decrease in Impurity (MDI) :
-- Gini Impurity is the probability of incorrectly classifying a randomly chosen element in the dataset if it were randomly labeled according to the class distribution in the dataset. It’s calculated as 
-- Gini impurity index (G) = P * (1 - P)
-- Importance = G (parent node) - G (child node 1) - G (child node 2)
-- The initial gini index before split  Overall = 1 − P(success)^2 − P(Failure)^2
-- Node level :
-	- impurity in Left node  =1 − P(Success in left node)^2  − P(Failure in left node)^2
-	- impurity in Right node =1 − P(Success in right node)^2 − P(Failure in right node)^2
-- Now the final formula for GiniGain would be = Overall − impurity in  Left node − impurity in Right node
-	- Lets assume we have 3 classes and 80 objects. 19 objects are in class 1, 21 objects in class 2, and 40 objects in class 3 (denoted as (19,21,40) ). 
-	- The Gini index would be: 	= 1 - [ (19/80)^2 + (21/80)^2 + (40/80)^2] = 0.6247      
-		- costbefore Gini(19,21,40) = 0.6247
-
-	- In order to decide where to split, we test all possible splits. For example splitting at 2.0623, 
-		- which results in a split (16,9,0) and (3,12,40).
-		- After testing x1 < 2.0623:
-			- costL Gini(16,9,0)  = 0.4608
-			- costR Gini(3,12,40) = 0.4205
-	- Then we weight branch impurity by empirical branch probabilities: costx1<2.0623 = 25/80 costL + 55/80 costR = 0.4331
-	- We do that for every possible split, for example x1 < 1:
-		- costx1<1 = FractionL Gini(8,4,0) + FractionR Gini(11,17,40) = 12/80 * 0.4444 + 68/80 * 0.5653 = 0.5417
-	- After that, we chose the split with the lowest cost. This is the split x1 < 2.0623 with a cost of 0.4331.
 
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -791,47 +770,8 @@ https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-expl
 ### Hyperparameters
 
 - Validation is crucial for selecting the best model, tuning hyperparameters, and ensuring the model can adapt to new situations. It is the process of finding the best set of hyperparameters for a model to maximize its performance.
-  
-------------------------------------------------------------------------------------------------------------
-  
-#### Random Forest hyperparameters
+- Refer to model page for the detail
 
-- Number of trees: The number of decision trees in the forest. Generally, a larger number of trees can improve accuracy but also increase training time.
-- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data but may also lead to overfitting.
-- Minimum number of samples required to split a node:  Helps prevent overfitting by ensuring that nodes aren't split on very small subsets of the data.
-- Minimum number of samples per leaf node: The minimum number of samples required to be at a leaf node. It helps to prevent overfitting by ensuring that leaf nodes have a sufficient number of samples.
-- Number of features to consider when making a split: IT controls the diversity of the trees in the forest, with more features leading to potentially more diverse trees.
-- Bootstrap: Determines whether or not to use bootstrap sampling when building the trees. Bootstrap sampling involves drawing samples with replacement, which can help increase diversity. 
-- Criterion: The function used to measure the quality of a split. Common choices include "gini" for Gini impurity and "entropy" for information gain. 
-- Class weight: To adjust the weights of classes in imbalanced datasets, which can be useful when one class is significantly more prevalent than others.
-       
-------------------------------------------------------------------------------------------------------------
-#### AdaBoost hyperparameters
-
-- Number of Estimators: This determines how many weak learners (e.g., decision trees) are combined in the ensemble. More estimators can improve accuracy but also increase training time. 
-- Learning Rate: This controls the contribution of each weak learner to the final prediction. A smaller learning rate means each weak learner has less influence, potentially requiring more estimators to achieve the same performance. 
-- Base Estimator Hyperparameters: If the base estimator (e.g., decision trees) has its own hyperparameters (like max_depth for decision trees), tuning these can also impact the AdaBoost model's performance. 
-- Loss Function (loss): AdaBoost supports different loss functions for classification, like exponential, linear, and square, which affect how weights are assigned to misclassified samples. - Random Seed: Setting a random seed ensures reproducibility, but experimenting with different random seeds during hyperparameter tuning can improve the robustness of the model.
-   
-------------------------------------------------------------------------------------------------------------
-#### Gradient Boosting hyperparameters
-
-- Learning Rate: This controls the contribution of each tree to the final prediction. A smaller learning rate leads to more stable and robust models, but requires more trees to achieve optimal performance. 
-- Number of Estimators (Trees): This parameter dictates how many trees are used in the ensemble. A larger number of trees can improve performance, but also increases computational cost and risk of overfitting. 
-- Max Depth: This limits the complexity of individual trees, preventing overfitting by restricting how deep they can grow. 
-- Subsampling: This involves randomly selecting a subset of the training data for each tree. Subsampling helps to prevent overfitting and can improve the generalizability of the model, explains a guide on Hands-On Machine Learning with R. 
-	   
-------------------------------------------------------------------------------------------------------------
-#### XGBoost hyperparameters
-
-- Maximum depth of each tree: A deeper tree can capture more complex relationships in the data but may also lead to overfitting.
-- minimum sum of instance weights (Hessian) needed in a child. It helps prevent overfitting by controlling the creation of new nodes in the tree. 
-- subsample: This determines the fraction of training instances used for each tree, reducing the risk of overfitting. 
-- colsample bytree: This parameter specifies the fraction of features used for each tree. Similar to subsample, it helps prevent overfitting by reducing the model's reliance on specific features. 
-- learning rate (eta): This parameter controls the step size of the gradient descent algorithm. A smaller learning rate can lead to more stable training but may require more iterations to converge. 
-- gamma: This parameter specifies the minimum loss reduction required to make a split. It can be useful for pruning the tree and preventing overfitting. - L2 regularization: This parameter adds a penalty proportional to the squared magnitude of the coefficients, helping to prevent overfitting. 
-- L1 regularization: This parameter adds a penalty proportional to the absolute value of the coefficients, promoting sparsity in the model. 
-       
 ------------------------------------------------------------------------------------------------------------
 #### neural networks hyperparameters
 
