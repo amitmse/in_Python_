@@ -591,18 +591,9 @@ https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
 
 - Gini Index: https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md#gini-index
-
-- Chi-Square
-
-https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md#information-gain
-
-- Information Gain
-
-https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md#information-gain
-
-- Reduction in Variance
-
-https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md#information-gain
+- Chi-Square: https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md#information-gain
+- Information Gain: https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md#information-gain
+- Reduction in Variance: https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md#information-gain
 
 ------------------------------------------------------------------------------------------------------
 # Random Forest
