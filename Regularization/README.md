@@ -80,11 +80,8 @@ https://github.com/empathy87/The-Elements-of-Statistical-Learning-Python-Noteboo
 
 ### Use Cases:
 - Ridge: It is majorly used to prevent over-fitting. Since it includes all the features, it is not very useful in case of exorbitantly high #features, say in millions, as it will pose computational challenges.
-	
 - Lasso: Since it provides sparse solutions, it is generally the model of choice (or some variant of this concept) for modelling cases where the #features are in millions or more. In such a case, getting a sparse solution is of great computational advantage as the features with zero coefficients can simply be ignored.
-
 - Regularization, significantly reduces the variance of the model, without substantial increase in its bias. So the tuning parameter λ, controls the impact on bias and variance. As the value of λ rises, it reduces the value of coefficients and thus reducing the variance. Till a point, this increase in λ is beneficial as it is only reducing the variance(hence avoiding over-fitting), without loosing any important properties in the data. But after certain value, the model starts loosing important properties, giving rise to bias in the model and thus under-fitting. Therefore, the value of λ should be carefully selected.
-
 - Both L1 and L2 work differently in the way that they penalize the size of a weight. 
 	- L2 will force the weights into a pattern similar to a Gaussian distribution
 	- L1 will force the weights into a pattern similar to a Laplace distribution
