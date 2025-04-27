@@ -590,9 +590,7 @@ https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 
 https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
 
-- Gini Index
-
-https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md#gini-index
+- Gini Index: https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md#gini-index
 
 - Chi-Square
 
