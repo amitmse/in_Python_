@@ -93,13 +93,13 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 ![image](https://github.com/user-attachments/assets/f3c88d3e-9129-4d9f-a4f4-60811faade31)
     
-	- 1. Calculate the z-value: z=(x̄-m)/{σ/sqrt(n)}
+	1. Calculate the z-value: z=(x̄-m)/{σ/sqrt(n)}
 		- z = (250 - 400)/ {25/SQRT(50)} =  (-150) / { 25 / 7.07 } = -150 / 3.54 = −42.42
 
-	- 2. Compare with critical z-values:
+	2. Compare with critical z-values:
 		- For a 5% significance level, critical z-values are -1.96 and +1.96.
 		- Since -42.42 is far outside this range, reject the null hypothesis.
-	- The sample data suggests that the average amount spent is significantly different from ₹400.
+	The sample data suggests that the average amount spent is significantly different from ₹400.
 
 ------------------------------------------------------------------
 
