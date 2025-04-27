@@ -650,17 +650,20 @@ https://github.com/amitmse/in_Python_/tree/master/Random_Forest#readme
 ## Bias - Variance
 
 ### Bias: 
-- Bias is the difference between the prediction of model and actual value. 
-- It always leads to high error on training and test data.
-- It creates underfitting problem.
+
 - If model is too simple and has very few parameters then it may have high bias and low variance.
+- It creates underfitting problem. High error on training and test data.
+- Bias is the difference between the prediction of model and actual value. 
+- Check bias in human decision-making is carried over to the development. The data-generating process itself can be biased. One way to identify data bias is by benchmarking with other models. Random selection of development sample.
+- Assess model's bias (error due to assumptions).
 
 ### Variance: 
-- Model performs very well on development data but poor performance on on OOT validation.
-- It creates overfitting problem.
-- If model has large number of parameters then it’s going to have high variance and low bias
-- For high variance, one common solution is to reduce parameter/features. 
+
+- It creates overfitting problem. Model performs very well on development data but poor performance on validation.
+- If model has large number of parameters then it’s going to have high variance and low bias.
+- For high variance, one common solution is to reduce parameter/features.
 - This very frequently increases bias, so there’s a tradeoff to take into consideration.
+- Assess model's Variance (sensitivity to training data fluctuations).
 
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -734,9 +737,7 @@ Third Party Model:
 ----------------------------------------------------------------------------------------------------
  
 ### Check Bias and Variance:
-- Check bias in human decision-making is carried over to the development. The data-generating process itself can be biased. One way to identify data bias is by benchmarking with other models. Random selection of development sample.
-- Assess model's bias (error due to assumptions).
-- Assess model's Variance (sensitivity to training data fluctuations).
+
   
 #### To check above performance: 
 - Cross-Validation: It reveals model's performance is consistent across different data samples, indicating lower variance. It also helps identify if the model's assumptions are too restrictive, leading to high bias.  
