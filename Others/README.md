@@ -486,8 +486,10 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 
 	  Multicollinearity does not directly affect the goodness-of-fit statistics of the model, such as R-squared or the overall F-test. The model can still make accurate predictions despite the presence of multicollinearity.
 
-	- Test: VIF 
+	- Test: VIF
+
 		VIF: [1.0 / (1.0 - R Squared)]
+
 		VIF = 1/T  (T refers to Tolerance = 1 – R² which is unexplained portion)
 			R^2 is regressing each independent variable on the other independent variables.
   
