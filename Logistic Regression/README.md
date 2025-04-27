@@ -188,21 +188,14 @@ Maximum likelihood estimation (MLE):
 
 
 ## Types of Gradient Descent:
-	1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost 
-	function hence and it's very slow.
-		- Cost function is calculated after the initialization of parameters.
-		- It reads all the records into memory from the disk.
-		- After calculating sigma for one iteration, we move one step further, and repeat the process.
+1. Batch Gradient Descent: It uses a complete dataset available to compute the gradient of the cost function hence and it's very slow.
+	- Cost function is calculated after the initialization of parameters.
+	- It reads all the records into memory from the disk.
+	- After calculating sigma for one iteration, we move one step further, and repeat the process.
 
-	2. Mini-batch Gradient Descent: It is a widely used algorithm that makes faster and accurate results. 
-	The dataset, here, is clustered into small groups of ‘n’ training datasets hence it's faster. 
-	In every iteration, it uses a batch of ‘n’ training datasets to compute the gradient of the cost function. 
-	It reduces the variance of the parameter updates, which can lead to more stable convergence. 
-	It can also make use of a highly optimized matrix that makes computing of the gradient very efficient.
+2. Mini-batch Gradient Descent: It is a widely used algorithm that makes faster and accurate results. The dataset, here, is clustered into small groups of ‘n’ training datasets hence it's faster. In every iteration, it uses a batch of ‘n’ training datasets to compute the gradient of the cost function. It reduces the variance of the parameter updates, which can lead to more stable convergence. It can also make use of a highly optimized matrix that makes computing of the gradient very efficient.
 
-	3. Stochastic Gradient Descent: Stochastic gradient descent used for faster computation. First, it randomizes
-	the complete dataset, and then uses only one training example in every iteration to calculate the gradient.
-	Its benifical for huge datasets.
+3. Stochastic Gradient Descent: Stochastic gradient descent used for faster computation. First, it randomizes the complete dataset, and then uses only one training example in every iteration to calculate the gradient. Its benifical for huge datasets.
 
 ![image](https://github.com/user-attachments/assets/4c300ff5-7a12-4625-84b4-1c7bf4aafa7d)
 
@@ -227,8 +220,7 @@ Maximum likelihood estimation (MLE):
 ### Solve a equation (identify beta):  
 
 ##### 1. Calculus: 
-	It will faster if equation is simple. But in real life equations are very complex and messy and 
-	its difficult to solve.   
+- It will faster if equation is simple. But in real life equations are very complex and messy and its difficult to solve.   
 		f(x) 	= X^2 - 2X + 2   
 		df/dx 	= 2X - 2  
 		2X	= 2  
@@ -251,21 +243,15 @@ Maximum likelihood estimation (MLE):
 		X3 = 1.72 - 0.288  
 		X3 = 1.432  
 			
-	continue doing this untill we are close to 1 which is the exact solution. As we approach to local minimum, 
-	Gradient Descent will automatically take smaller steps. So no need to decrease "a" over time. 
-	optimization gradient descent:
+- continue doing this untill we are close to 1 which is the exact solution. As we approach to local minimum, Gradient Descent will automatically take smaller steps. So no need to decrease "a" over time. 
+- optimization gradient descent:
 		cX + d 	        = Y 			[equation of line and solve this for c & d]  
 		(cX + d) -  Y 	= 0 			("cX + d" is predected Y^, Y^-Y is error and it should be zero)   
 		min by(a,b) = sum ([cX + d]-Yi)^2	[c = cofficient, d=intercept]  
 		
-	First make initial guess for c & d then do the derivative by c & d seperately to get the optimium value of c & d. 
-	Above process will apply on Gradient Descent "Xi+1 = Xi - a f'(Xi)". Gradient descent is based on 1st derivatives 
-	only and it use all data at one time. Gradient descent generally requires more iterations. If data size is big then 
-	it will take long time to compute.
+- First make initial guess for c & d then do the derivative by c & d seperately to get the optimium value of c & d. Above process will apply on Gradient Descent "Xi+1 = Xi - a f'(Xi)". Gradient descent is based on 1st derivatives only and it use all data at one time. Gradient descent generally requires more iterations. If data size is big then it will take long time to compute.
 			
-	Stochastic Gradient descent: It takes portion of data at one time and do the computation and continue in same way. 
-	cofficients are not exactly equals to Gradient descent but its close. 
-	For BIG data its only option to apply Gradient descent in faster way.
+- Stochastic Gradient descent: It takes portion of data at one time and do the computation and continue in same way. cofficients are not exactly equals to Gradient descent but its close. For BIG data its only option to apply Gradient descent in faster way.
 			
 ##### 3. Newton Raphson:   
 - Newton's method generally requires fewer iterations, but each iteration is slow as we need to compute 2nd dervatives too. There is no guarantee that the Hessian is nonsingular. Additionally, we must  	supply the second partial derivatives to the computer (and they can sometimes be very difficult to calculate). http://www.stat.missouri.edu/~spinkac/stat8320/Nonlinear.pdf
@@ -306,42 +292,34 @@ Maximum likelihood estimation (MLE):
 
 ### Metrics:
 
-	- beta(x): covariance(x,y) / variance(x)
-		Standardized beta: Beta * [ standard deviation of a model variable / {Pi / SQRT(3)}] 	
-  			standard deviation of a model variable get it from proc means 'Std Dev'
-			Pi / SQRT(3): standard deviation of standard logistic regression =  1.81379936423422
-			Value of Pi: 3.14159265358979 	SQRT of 3: 1.73205080756888 
+- beta(x): covariance(x,y) / variance(x)
+	Standardized beta: Beta * [ standard deviation of a model variable / {Pi / SQRT(3)}] 	
+	standard deviation of a model variable get it from proc means 'Std Dev'
+	Pi / SQRT(3): standard deviation of standard logistic regression =  1.81379936423422
+	Value of Pi: 3.14159265358979 	SQRT of 3: 1.73205080756888 
    
-	- Standard Error of Beta: Square root of variance of beta coefficient. 
- 		Square root of the diagonal elements of the covariance matrix. 	[Covariance Matrix = Inverse(Hessian matrix)]
-                SQRT(Diagonal(Covariance Matrix))
+- Standard Error of Beta: Square root of variance of beta coefficient. 
+	Square root of the diagonal elements of the covariance matrix. 	[Covariance Matrix = Inverse(Hessian matrix)]
+	SQRT(Diagonal(Covariance Matrix))
  
-	- Correlation(x,y): covariance(x,y) / [variance(x)*variance(y)]
+- Correlation(x,y): covariance(x,y) / [variance(x)*variance(y)]
  
-	- AIC: (No of variable*2) - (2*-Log Likelihood)
- 		"2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. 
-  		Ordinary least squares minimizes RSS and LR minimizes deviance.
+- AIC: (No of variable*2) - (2*-Log Likelihood)
+"2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. Ordinary least squares minimizes RSS and LR minimizes deviance.
  
-	- BIC: {No of variable*log(No of obs)} - (2*-Log Likelihood)
+- BIC: {No of variable*log(No of obs)} - (2*-Log Likelihood)
 
-	- Area under curve / C statistics: Percent Concordant + 0.5 * Percent Tied
-		(The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its 
- 		discrimination threshold is varied.) 
-		True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate 
-  		(100-Specificity : X axis) for different cut-off points. Each point on the ROC curve represents 
-    		a sensitivity/specificity pair corresponding to a particular decision threshold. 
+- Area under curve / C statistics: Percent Concordant + 0.5 * Percent Tied
+(The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.) True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate (100-Specificity : X axis) for different cut-off points. Each point on the ROC curve represents a sensitivity/specificity pair corresponding to a particular decision threshold. 
 
-	- Somer’s D (Gini): [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+- Somer’s D (Gini): [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
  
- 	- Divergence: [(meanG – meanB)^2] / [0.5(varG + varB)]
-  			[meanG = mean of score only for good, varB= variance of score only for bad ]
+- Divergence: [(meanG – meanB)^2] / [0.5(varG + varB)]
+	[meanG = mean of score only for good, varB= variance of score only for bad ]
 
-	- TSS: SUM[y-mean(y)]^2
-	- RSS: SUM[y-predicted(y)]^2
-	- R Squared: 1.0 - (RSS/TSS)
-	- VIF: 1.0 / (1.0 - R Squared)
+- TSS: SUM[y-mean(y)]^2
+- RSS: SUM[y-predicted(y)]^2
+- R Squared: 1.0 - (RSS/TSS)
+- VIF: 1.0 / (1.0 - R Squared)
 
 -----------------------------------------------------------------------------------------------------------------------
-
-
-    
