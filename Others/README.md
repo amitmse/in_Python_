@@ -77,7 +77,30 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 	- Drawing a conclusion based on the statistical analysis.
 		- Accept or fail to reject the belief: This means there's not enough evidence to say belief is wrong.
 		- Reject the belief: This means sample data provides strong enough evidence that belief is likely false.
-   
+
+- Example:
+
+	- A telecom service provider claims that customers spend an average of ₹400 per month, with a standard deviation of ₹25. However, a random sample of 50 customer bills shows a mean of ₹250 and a standard deviation of ₹15. Does this sample data support the service provider’s claim?
+
+	- Null Hypothesis (H0): The average amount spent per month is ₹400.
+	- Alternate Hypothesis (H1): The average amount spent per month is not ₹400.
+
+	- Population mean (m): ₹400
+	- Population Standard Deviation (σ): ₹25
+	- Sample Size (n): 50
+	- Sample Mean (x̄): ₹250
+ 	- Significance level: 5%
+ 	
+	- 1. Calculate the z-value: z=(x̄-m)/{σ/sqrt(n)}
+		- z = (250 - 400)/ {25/SQRT(50)} =  (-150) / { 25 / 7.07 } = -150 / 3.54 = −42.42
+
+	- 2. Compare with critical z-values:
+		- For a 5% significance level, critical z-values are -1.96 and +1.96.
+		- Since -42.42 is far outside this range, reject the null hypothesis.
+	- The sample data suggests that the average amount spent is significantly different from ₹400.
+
+------------------------------------------------------------------
+
 - Hypothesis testing uses data from a sample to draw conclusions about a population parameter or a population probability distribution.  It's a statistical method used to determine if there's enough evidence in a sample to reject a null hypothesis in favor of an alternative hypothesis. It help to make better decisions.
 
 - Avoiding Misleading Conclusions (Type I and Type II Errors)
