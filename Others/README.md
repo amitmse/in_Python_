@@ -588,6 +588,8 @@ https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 --------------------------------------------------------------------------------------	
 # Decision Tree 
 
+https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
+
 - Gini Index
 - Chi-Square
 - Information Gain
