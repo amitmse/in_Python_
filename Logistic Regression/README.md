@@ -81,6 +81,9 @@ Odds of an event occurring in one group compared to another, provides a measure 
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Logit function / Sigmoid Function:
+
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md#logistic-distribution
+
 - Below shows probability to logit
   
 		Y 		= Exp(a + bX)/{1 + Exp(a + bX)}   = [1/{1 + Exp -(a + bX)}] = 1/(1+exp^-y)
