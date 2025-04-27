@@ -262,18 +262,20 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 
 --------------------------------------------------------------------------------------------------
 1. Initialize Weights:
-- Assign same weight to all obs ( 1/No. of obs ).
-- The sum of weights is 1.
-- If there are 10 total obs then weight is 0.1 (1/10).
-- Actual weight for target "Yes" = +0.1
-- Actual weight for target "No" = -0.1 
+   
+	- Assign same weight to all obs ( 1/No. of obs ).
+	- The sum of weights is 1.
+	- If there are 10 total obs then weight is 0.1 (1/10).
+	- Actual weight for target "Yes" = +0.1
+	- Actual weight for target "No" = -0.1 
   
 2. Iterative Learning: In each iteration, a model is trained.
 - Each tree learns from previous ones. Misclassified observations gain more weight in the next iteration.
 - Correctly classified observations retain their weights. All weights are adjusted to sum to 1.
    
-- For each iteration compute accuracy: (1/2) * ln [ (1 - Total Error) / Total Error ] 
-	- Three obs are misclassified out of 10 in the first iteration, the total error is 3/10. accuracy: 0.43
+- For each iteration compute accuracy:
+- (1/2) * ln [ (1 - Total Error) / Total Error ] 
+	- If three obs are misclassified out of 10 in the first iteration, the total error is 3/10. accuracy: 0.43
    
 - Recompute weights: Adjust weight for misclassified observation: 
 	- correctly classified = Previous Weight * e^(-accuracy) = 0.07
@@ -426,7 +428,9 @@ SHAP value =  sum [weight * (prediction with feature - prediction without featur
 	- weight assigned to a particular coalition based on the number of ways the feature could have joined the coalition.
 	- prediction with feature is the model prediction when the feature is included in the coalition.
 	- prediction without feature is the model prediction when the feature is excluded from the coalition.
+ 
 ![image](https://github.com/user-attachments/assets/e97c45c3-c565-473e-82ca-b2d11b95c244)
+
 	- n is total number of features
 	- N contains all the possible feature subsets not containing feature i
 	- S is one feature set from N
