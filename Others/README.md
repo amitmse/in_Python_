@@ -82,23 +82,26 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 	- A telecom service provider claims that customers spend an average of ₹400 per month, with a standard deviation of ₹25. However, a random sample of 50 customer bills shows a mean of ₹250 and a standard deviation of ₹15. Does this sample data support the service provider’s claim?
 
-		- Null Hypothesis (H0): The average amount spent per month is ₹400.
-		- Alternate Hypothesis (H1): The average amount spent per month is not ₹400.
+	- Null Hypothesis (H0): The average amount spent per month is ₹400.
+	- Alternate Hypothesis (H1): The average amount spent per month is not ₹400.
 
-		- Population mean (m): ₹400
-		- Population Standard Deviation (σ): ₹25
-		- Sample Size (n): 50
-		- Sample Mean (x̄): ₹250
- 		- Significance level: 5%
+	- Population mean (m): ₹400
+	- Population Standard Deviation (σ): ₹25
+	- Sample Size (n): 50
+	- Sample Mean (x̄): ₹250
+	- Significance level: 5%
 
 ![image](https://github.com/user-attachments/assets/f3c88d3e-9129-4d9f-a4f4-60811faade31)
     
 	1. Calculate the z-value: z=(x̄-m)/{σ/sqrt(n)}
+ 
 		- z = (250 - 400)/ {25/SQRT(50)} =  (-150) / { 25 / 7.07 } = -150 / 3.54 = −42.42
 
 	2. Compare with critical z-values:
+ 
 		- For a 5% significance level, critical z-values are -1.96 and +1.96.
 		- Since -42.42 is far outside this range, reject the null hypothesis.
+  
 	The sample data suggests that the average amount spent is significantly different from ₹400.
 
 ------------------------------------------------------------------
