@@ -99,12 +99,12 @@ Different ways to get feature importance
 	- Softmax Loss: Generally used for multi-class classification tasks. It calculates a probability distribution for each class and maximizes the likelihood across all classes.
 	- Adaptive Log Loss (ALogLoss): Introduced in XGBoost, this loss function provides a balance between speed and accuracy. It's derived by approximating the Poisson likelihood.
 
-	Regression 	= (1/2)*(actual - predicted)^2
-	Classification 	= -[y*log(p) - (1-y)log(1-p)]
-		
-	Total loss will be the sum of this function
+	- Regression 		= (1/2)*(actual - predicted)^2
+	- Classification 	= -[y*log(p) - (1-y)log(1-p)]		
+	- Total loss will be the sum of this function
 
- 
+----------------------------------------------------------------------------
+
 ### XGBoost Feature Selection: 
 - Refer below Similarity Score.
 - XGBoost uses a few criteria for feature selection.		
@@ -156,9 +156,12 @@ Different ways to get feature importance
 
 - Similarity score or Quality score for the Residuals: It's used to split. Info gain. The smaller the similarity, the less they are similar. To get all the residuals into one leaf and calculate the similarity score.
   
-- For regressor = (Sum of Residuals)^2 / (number of Residuals + λ ) λ (lambda) is the regularization parameter, which helps prevent overfitting.
+- For regressor = (Sum of Residuals)^2 / (number of Residuals + λ )
+  
+  		λ (lambda) is the regularization parameter, which helps prevent overfitting.
    
-- For classifier = (Sum of Residuals)^2 / [pr*(1-pr) + λ] 	pr  is probability
+- For classifier = (Sum of Residuals)^2 / [pr*(1-pr) + λ]
+  		pr  is probability
 
 - Feature importance scores:
 	- Gain: Average loss reduction gained when using a feature for splitting.
@@ -171,6 +174,7 @@ Different ways to get feature importance
 		Root Similarity: The Similarity Score of the Previous Tree is the Similarity Score.
     
 		Gain — Gamma > 0 Keep the tree.
+
 		Gain — Gamma < 0 Prune the tree.
 
 - Lambda (λ): regularisation parameter
@@ -191,8 +195,9 @@ Prediction is made after the pruning process is completed. The tree prediction i
 Predicted value (regressor) = First Prediction + (Learnin Rate)* (Second Prediction)
        
 Predicted Value (classifier) =  log of odds of Initial prediction + eta(learning rate) * output from the leaves(mean value)
-			Convert above value to probability with logistic function
-			Probability = Exp^log(odds) / [1 + Exp^log(odds)]
+	Convert above value to probability with logistic function
+ 
+		Probability = Exp^log(odds) / [1 + Exp^log(odds)]
 
 - Example: 
   
@@ -201,43 +206,44 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 ------------------------------------------------------------------------------------------------------------
 ### XGBoost hyperparameters: 
 - Maximum depth of each tree: A deeper tree can capture more complex relationships in the data but may also lead to overfitting.
-	max_depth: [ 3, 4, 5, 6, 8, 10, 12, 15]
-	Default is 6
+		max_depth: [ 3, 4, 5, 6, 8, 10, 12, 15]
+		Default is 6
   
 - minimum sum of instance weights (Hessian) needed in a child. It helps prevent overfitting by controlling the creation of new nodes in the tree.
-	Default is 1  
-	min_child_weight:[ 1, 3, 5, 7 ]
+		Default is 1  
+		min_child_weight:[ 1, 3, 5, 7 ]
   
 - subsample: This determines the fraction of training instances used for each tree, reducing the risk of overfitting. 
-	Default is 1
+		Default is 1
   
 - colsample bytree: This parameter specifies the fraction of features used for each tree. Similar to subsample, it helps prevent overfitting by reducing the model's reliance on specific features.
-	Default is 1  
-	colsample_bytree:[ 0.3, 0.4, 0.5 , 0.7 ]
+		Default is 1  
+		colsample_bytree:[ 0.3, 0.4, 0.5 , 0.7 ]
   
 - learning rate (eta): This parameter controls the step size of the gradient descent algorithm. A smaller learning rate can lead to more stable training but may require more iterations to converge.
-	Default is 0.3
-	learning_rate: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30 ]
+		Default is 0.3
+		learning_rate: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30 ]
     
 - gamma: This parameter specifies the minimum loss reduction required to make a split. It can be useful for pruning the tree and preventing overfitting.
-	Default is 0
-	gamma:[ 0.0, 0.1, 0.2 , 0.3, 0.4 ]
+		Default is 0
+		gamma:[ 0.0, 0.1, 0.2 , 0.3, 0.4 ]
   
 - L2 regularization: This parameter adds a penalty proportional to the squared magnitude of the coefficients, helping to prevent overfitting.
-	Default is 1
+		Default is 1
   
 - L1 regularization: This parameter adds a penalty proportional to the absolute value of the coefficients, promoting sparsity in the model.
-	Default is 0  
+		Default is 0  
   
 ------------------------------------------------------------------------------------
 - Hyper Parameter Optimization: RandomizedSearchCV
-	params={
-		"learning_rate"    : [0.05, 0.10, 0.15, 0.20, 0.25, 0.30 ] ,
-		"max_depth"        : [ 3, 4, 5, 6, 8, 10, 12, 15],
-		"min_child_weight" : [ 1, 3, 5, 7 ],
-		"gamma"            : [ 0.0, 0.1, 0.2 , 0.3, 0.4 ],
-		"colsample_bytree" : [ 0.3, 0.4, 0.5 , 0.7 ]
-		}
+		params={
+			"learning_rate"    : [0.05, 0.10, 0.15, 0.20, 0.25, 0.30 ] ,
+			"max_depth"        : [ 3, 4, 5, 6, 8, 10, 12, 15],
+			"min_child_weight" : [ 1, 3, 5, 7 ],
+			"gamma"            : [ 0.0, 0.1, 0.2 , 0.3, 0.4 ],
+			"colsample_bytree" : [ 0.3, 0.4, 0.5 , 0.7 ]
+			}
+  
 		https://github.com/krishnaik06/Hyperparameter-Optimization
   
 ------------------------------------------------------------------------------------------------------------
@@ -247,18 +253,19 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 
 	--------------------------------------------------------------------------------------------------
-1. Initialize Weights: Assign same weight to all obs ( 1/No. of obs ). The sum of weights is 1. 
-	If there are 10 total obs then weight is 0.1 (1/10).
-	Actual weight for target "Yes" = +0.1
-	Actual weight for target "No" = -0.1 
-  
+1. Initialize Weights:
+- Assign same weight to all obs ( 1/No. of obs ).
+- The sum of weights is 1.
+- If there are 10 total obs then weight is 0.1 (1/10).
+- Actual weight for target "Yes" = +0.1
+- Actual weight for target "No" = -0.1 
   
 2. Iterative Learning: In each iteration, a model is trained.
 - Each tree learns from previous ones. Misclassified observations gain more weight in the next iteration.
 - Correctly classified observations retain their weights. All weights are adjusted to sum to 1.
    
 - For each iteration compute accuracy: (1/2) * ln [ (1 - Total Error) / Total Error ] 
-3 obs are misclassified out of 10 in the first iteration, the total error is 3/10. accuracy: 0.43
+	- Three obs are misclassified out of 10 in the first iteration, the total error is 3/10. accuracy: 0.43
    
 - Recompute weights: Adjust weight for misclassified observation: 
 	- correctly classified = Previous Weight * e^(-accuracy) = 0.07
@@ -276,12 +283,11 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
  ## Gradient Boosting Machine (GBM)
 
 - GBM is ensemble methods that build models in a forward stepwise manner, using decision trees as base learners. The algorithm can be computationally intensive, making it a somewhat challenging learning model. 
-
 - Pre-sorting approach to find best split which is computationally expensive.
 - GBM stops splitting a node when it encounters a negative loss in the split. Therefore it is more of a greedy algorithm.
 
  
-	--------------------------------------
+--------------------------------------
 1. Initialize with a base model
 2. Calculate residuals
 3. Predict the residuals with learning rate (0 to 1) or weight of model
@@ -310,9 +316,9 @@ Pseudo-code of the GBM algorithm
 			
 3. Return the final output.
   
-	---------------------------------------------------------------------
+---------------------------------------------------------------------
  
-Gradient boosting involves three elements: 
+#### Gradient boosting involves three elements: 
 
 1. A loss function to be optimized: 
 - The loss function used depends on the type of problem being solved.
@@ -328,15 +334,15 @@ Gradient boosting involves three elements:
 - This is to ensure that the learners remain weak, but can still be constructed in a greedy manner.
 
 3. An additive model to add weak learners to minimize the loss function:
-	- Trees are added one at a time, and existing trees in the model are not changed.
-	- A gradient descent procedure is used to minimize the loss when adding trees.
-	- Traditionally, gradient descent is used to minimize a set of parameters, such as the coefficients in a regression equation or weights in a neural network. After calculating error or loss, the weights are updated to minimize that error.
-	- Instead of parameters, we have weak learner sub-models or more specifically decision trees. After calculating the loss, to perform the gradient descent procedure, we must add a tree to the model that reduces the loss. We do this by parameterizing the tree, then modify the parameters of the tree and move in the right direction by reducing the residual loss.
-	- Generally this approach is called functional gradient descent or gradient descent with functions.
+- Trees are added one at a time, and existing trees in the model are not changed.
+- A gradient descent procedure is used to minimize the loss when adding trees.
+- Traditionally, gradient descent is used to minimize a set of parameters, such as the coefficients in a regression equation or weights in a neural network. After calculating error or loss, the weights are updated to minimize that error.
+- Instead of parameters, we have weak learner sub-models or more specifically decision trees. After calculating the loss, to perform the gradient descent procedure, we must add a tree to the model that reduces the loss. We do this by parameterizing the tree, then modify the parameters of the tree and move in the right direction by reducing the residual loss.
+- Generally this approach is called functional gradient descent or gradient descent with functions.
 
-	---------------------------------------------------------------------
- 
-Improvements to Basic Gradient Boosting
+---------------------------------------------------------------------
+
+#### Improvements to Basic Gradient Boosting
 
 - Gradient boosting is a greedy algorithm and can overfit a training dataset quickly.
 - It can benefit from regularization methods that penalize various parts of the algorithm and generally improve the performance of the algorithm by reducing overfitting.
@@ -376,10 +382,9 @@ Improvements to Basic Gradient Boosting
 - Analyze the importance of each input feature in the model's predictions. 
 - Techniques like tree-based models or methods that calculate the importance of each feature based on its contribution to the model's predictions.
 - Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity (e.g., Gini index or information gain) in the decision tree nodes. Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
-- 
 - Below are same as Feature Importance
-	LIME: Local Interpretable Model-Agnostic Explanations. 
-	SHAP: SHapley Additive exPlanations.
+	- LIME: Local Interpretable Model-Agnostic Explanations. 
+	- SHAP: SHapley Additive exPlanations.
 	Details are below in link
     
 ------------------------------------------------------------------------------------------------------------
@@ -435,7 +440,6 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md
 - Number of Estimators (Trees): This parameter dictates how many trees are used in the ensemble. A larger number of trees can improve performance, but also increases computational cost and risk of overfitting. 
 - Max Depth: This limits the complexity of individual trees, preventing overfitting by restricting how deep they can grow. 
 - Subsampling: This involves randomly selecting a subset of the training data for each tree. Subsampling helps to prevent overfitting and can improve the generalizability of the model, explains a guide on Hands-On Machine Learning with R. 
-   
 
 ------------------------------------------------------------------------------------------------------------  
 
