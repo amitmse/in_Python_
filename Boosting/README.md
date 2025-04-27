@@ -404,7 +404,7 @@ Pseudo-code of the GBM algorithm
 
 ------------------------------------------------------------------------------------------------------------
 
-### Feature Importance
+## Feature Importance
 
 - Analyze the importance of each input feature in the model's predictions. 
 - Techniques like tree-based models or methods that calculate the importance of each feature based on its contribution to the model's predictions.
@@ -421,7 +421,7 @@ Pseudo-code of the GBM algorithm
  
 ------------------------------------------------------------------------------------------------------------
 
-### SHapley Additive exPlanations (SHAP) 
+## SHapley Additive exPlanations (SHAP) 
 
 - SHAP Values provide a way to understand how each feature contributes to the model's predictions. Similar to the beta of linear regression. It helps in identifying the most important features and understanding their impact on the model.
 
@@ -461,7 +461,7 @@ SHapley value =  sum [weight * (prediction with feature - prediction without fea
 
 ------------------------------------------------------------------------------------------------------------
 
-### Local Interpretable Model-Agnostic Explanations (LIME)
+## Local Interpretable Model-Agnostic Explanations (LIME)
 
 - It creates a simplified, interpretable model to explain the predictions of a complex model.
 - It provides Local Explanations for individual predictions, focusing on how each input feature contributes to that specific prediction.
@@ -495,7 +495,7 @@ SHapley value =  sum [weight * (prediction with feature - prediction without fea
 
 ------------------------------------------------------------------------------------------------------------
 
-### hyperparameters
+## Hyperparameters
 - Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter space and find the optimal combination. Details are below in link
    
 https://github.com/amitmse/in_Python_/blob/master/Others/README.md
