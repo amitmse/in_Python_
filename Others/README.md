@@ -73,26 +73,26 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 - Way to figure out believe is likely true based on a sample.
 	- Start with a belief about the larger group. This belief is hypothesis.
 	- Collect data from a sample of that group. 
-	- Use statistical methods to compare sample data to initial belief and see how likely it is that your belief is true.
+	- Use statistical methods to compare sample data to initial belief and see how likely it is that belief is true.
 	- Drawing a conclusion based on the statistical analysis.
-		- Accept or fail to reject the belief: This means there's not enough evidence to say your belief is wrong.
+		- Accept or fail to reject the belief: This means there's not enough evidence to say belief is wrong.
 		- Reject the belief: This means sample data provides strong enough evidence that belief is likely false.
    
 - Hypothesis testing uses data from a sample to draw conclusions about a population parameter or a population probability distribution.  It's a statistical method used to determine if there's enough evidence in a sample to reject a null hypothesis in favor of an alternative hypothesis. It help to make better decisions.
 
-  - Avoiding Misleading Conclusions (Type I and Type II Errors)
-  	- It helps you avoid jumping to the wrong conclusions.
+- Avoiding Misleading Conclusions (Type I and Type II Errors)
+	- It helps you avoid jumping to the wrong conclusions.
    	- For instance, a Type I error could occur if a bank launches a new product thinking it will be a hit, only to find out later that the data misled them.
   	- A Type II error might happen when a bank overlooks a potentially successful product because their testing wasn’t thorough enough.
-  - By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
+- By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
 
-  - Making Smarter Choices:
+- Making Smarter Choices:
   	- Evidence-based decisions. Let’s say a bank wants to determine if new strategy will increase revenue.
   	- By testing the hypothesis using data from similar projects, they can make an informed choice.
   	- Similarly, a bank might use hypothesis testing to see if a credit limit increse actually improves credit card spending.
   	- It’s about taking the guesswork out of decisions and relying on solid evidence instead.
 
-  - Optimizing Business Tactics:
+- Optimizing Business Tactics:
   	- In business, hypothesis testing is invaluable for testing new ideas and strategies before fully committing to them.
   	- For example, bank company might want to test whether offering upgraded credit card increases spending.
   	- By using hypothesis testing, bank can compare spend data from customers who received upgraded credit card vs who didn’t.
@@ -123,7 +123,9 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 	- The width of the confidence interval is related to the margin of error, which indicates how much your sample estimate might vary from the true population value. 
 
 - P-value:
+  
 	- P-value represents the probability that observed results would occur if the null hypothesis were true. The null hypothesis typically assumes there's no effect or no difference between groups.
+   
 	- Probability of observing test results at least as extreme as the results observed, assuming the null hypothesis is correct.
  	- It helps determine the strength of the evidence against the null hypothesis.
   	- P value is compared with a significance level. It does not provide information about the magnitude of the effect. 
