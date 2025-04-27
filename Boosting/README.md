@@ -408,12 +408,23 @@ Pseudo-code of the GBM algorithm
 
 - Analyze the importance of each input feature in the model's predictions. 
 - Techniques like tree-based models or methods that calculate the importance of each feature based on its contribution to the model's predictions.
-- Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity (e.g., Gini index or information gain) in the decision tree nodes. Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
+- Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity (e.g., Gini index or information gain) in the decision tree nodes.
+- Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
+- Linear Models (Logistic Regression, Linear Regression) feature importance is derived from the coefficients of the linear model.
+- Features with larger absolute coefficient values are considered more important.
 - Below are same as Feature Importance
 	- LIME: Local Interpretable Model-Agnostic Explanations. 
 	- SHAP: SHapley Additive exPlanations.
 	Details are below in link
-    
+ - For Neural Networks Techniques, SHAP or feature importance (via gradient analysis) are used to understand the contribution of individual features.
+ - Permutation Feature Importance: This technique measures the contribution of a feature by measuring the changes in the model performance after randomly shuffling its values.
+ 
+------------------------------------------------------------------------------------------------------------
+
+### Local Interpretable Model-Agnostic Explanations (LIME)
+
+- It creates a simplified, interpretable model to explain the predictions of a complex model. It provides Local Explanations for individual predictions, focusing on how each input feature contributes to that specific prediction.
+-     
 ------------------------------------------------------------------------------------------------------------
 
 ### SHapley Additive exPlanations (SHAP) 
