@@ -494,6 +494,88 @@ SHapley value =  sum [weight * (prediction with feature - prediction without fea
 - Sampling Bias: The synthetic data might not accurately represent real-world data distributions, potentially leading to biased explanations.
 
 ------------------------------------------------------------------------------------------------------------
+## Partial Dependence Plots (PDPs)
+
+PDPs are a visualization technique used in machine learning to understand how individual features influence model predictions. They help interpret complex models by showing the average marginal effect of a feature on the predicted outcome, while holding other features constant. Essentially, PDPs reveal how a single feature impacts the model's output on average, making them useful for understanding model behavior and identifying important features. 
+
+A PDP plots the average model prediction for different values of a selected feature, while holding other features constant. This allows you to see how the model's predictions change as that specific feature varies. 
+
+The shape of the PDP curve reveals the relationship between the feature and the predicted outcome.
+
+Benefits:
+
+    Explainability: PDPs help make complex models more transparent and understandable, especially for non-technical audiences. 
+
+    Feature Importance: They can reveal which features have the most significant impact on the model's predictions. 
+
+    Debugging: PDPs can help identify issues with the model, such as unexpected relationships between features and predictions
+
+For example, if you have a feature like "average income", PDP can show how changing the income level influences the predicted house price while keeping other factors constant.
+
+Limitations: PDPs can be biased in scenarios with highly correlated features, as they use marginal rather than conditional probabilities. Accumulated Local Effects (ALE) plots are an alternative that addresses this bias, says a resource from Oracle ADS. 
+
+
+Interpretable ML — PDP, ALE and SHAP | Chen Xing
+Accumulated Local Effects (ALE) plots: 
+
+Partial Dependence Plots (PDPs) are great for showing average feature effects, but they rely on an independence assumption—averaging over the marginal distribution of other features. This can lead to unrealistic combinations when features are correlated.
+
+------------------------------------------------------------------------------------------------------------
+
+Accumulated Local Effects (ALE) plots are designed to overcome this limitation. Instead of averaging over all observations globally, ALE focuses on differences in predictions to isolate each feature’s effect.
+
+    Compute Local Derivatives: They first estimate the local effect (i.e., the derivative) of the feature on the model prediction in small intervals (bins) of the feature’s range.
+
+    Accumulate the Effects: Then they integrate (accumulate) these local effects over the feature’s range, starting from a reference point (often the minimum value).
+
+    Centering: Finally, the accumulated effect is centered so that the overall average effect is zero, making it easier to compare across features.
+
+When to Use ALE:
+
+    You care about global feature effects (e.g., “Does income positively affect loan approval?”).
+
+    Features are correlated, and you want reliable estimates.
+
+    You need a clear visual of the feature’s directional trend.
+
+
+SHAP (SHapley Additive exPlanations) values attribute the difference between a model’s prediction for an instance and the average prediction to each feature.
+
+    Additivity: The sum of SHAP values for all features equals the difference between the prediction and the baseline (average prediction).
+
+    Local Accuracy: Each feature’s contribution is computed for a single instance.
+
+    Consistency: If a feature’s impact increases, its SHAP value won’t decrease.
+
+When to Use SHAP:
+
+    You need instance-level explanations (e.g., “Why was this loan rejected?”).
+
+    You want to compare feature importance across the dataset (aggregated SHAP).
+
+    Your model has nonlinear interactions best captured per-instance.
+
+Final Recommendation
+
+    Use ALE if your goal is to understand the overall directional relationship between a feature and the outcome, especially with correlated features.
+
+    Use SHAP if you need to explain individual predictions or compare feature importance globally.
+
+For example:
+
+    A bank might use ALE to audit whether income has a fair directional effect on loan approvals.
+
+    The same bank could use SHAP to explain to a customer why their specific loan application was denied.
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------
 
 ## Hyperparameters
 - Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter space and find the optimal combination. Details are below in link
