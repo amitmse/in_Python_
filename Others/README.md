@@ -782,7 +782,6 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 - Mean Squared Error (MSE): Measures the average squared difference between predicted and actual values. 
 - Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
 - Root Mean Squared Error (RMSE): It helps interpret errors in the same units as the target variable. It follows an assumption that errors are unbiased and follow a normal distribution. 
-      
 - Bias towards the Majority Class, Actual Performance of the Minority Class.
 - Below metrics help to indentify:
 - F1-Score: Provides a harmonic mean of precision and recall, accounting for both metrics and balancing their importance. Why harmonic mean and not an arithmetic mean: HM punishes extreme values.
@@ -797,178 +796,6 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 - To provide explanations for complex models like neural networks, RF and GBM use methods like:
 
 --------------------------------------------------------------------------------------------------------
-
-# Feature Importance
-
-- Analyze the importance of each input feature in the model's predictions. 
-- Techniques like tree-based models or methods that calculate the importance of each feature based on its contribution to the model's predictions.
-- Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity (e.g., Gini index or information gain) in the decision tree nodes.
-- Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
-- Linear Models (Logistic Regression, Linear Regression) feature importance is derived from the coefficients of the linear model.
-- Features with larger absolute coefficient values are considered more important.
-- Below are same as Feature Importance
-	- SHAP: SHapley Additive exPlanations.
-	- LIME: Local Interpretable Model-Agnostic Explanations. 
-	Details are below in link
- - For Neural Networks Techniques, SHAP or feature importance (via gradient analysis) are used to understand the contribution of individual features.
- - Permutation Feature Importance: This technique measures the contribution of a feature by measuring the changes in the model performance after randomly shuffling its values.
-
-
-
-
-- Feature importances: 
-	- It is also known as the Gini importance. The importance of a feature is computed as the (normalized) total reduction of the criterion brought by that feature.
-	- That reduction or weighted information gain is defined as. The weighted impurity decrease equation is the following:
-   
-		N_t / N * (impurity - N_t_R / N_t * right_impurity - N_t_L / N_t * left_impurity)
-	
-			N 	: Total number of samples
-			N_t 	: No. of samples at the current node
-			N_t_L 	: No. of samples in the left child 
-			N_t_R 	: No. of samples in the right child
-
-  
-------------------------------------------------------------------------------------------------------
-  
-# SHapley: SHapley Additive exPlanations. 
-
-- It's a game-theoretic approach that calculates the average marginal contribution of each feature, helping to understand how each feature affects the model's output SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, focusing on the overall influence of each feature.
-- SHapley Values provide a way to understand how each feature contributes to the model's predictions. Similar to the beta of linear regression. It helps in identifying the most important features and understanding their impact on the model.
-- This method uses random feature combinations as input and compute the changes in the model performance. The features which impact the performance the most are considered the most important ones.
-- SHapley does not go on and retrain the model for each subset. Instead, for the removed or left out feature, it just replaces it with the average value of the feature and generates the predictions.
-- SHapley attribute the difference between a model’s prediction for an instance and the average prediction to each feature.
-	- Additivity: The sum of SHAP values for all features equals the difference between the prediction and the baseline (average prediction).
-	- Local Accuracy: Each feature’s contribution is computed for a single instance.
-	- Consistency: If a feature’s impact increases, its SHAP value won’t decrease.
-   
-- When to Use SHAP:
-	- You need instance-level explanations (e.g., “Why was this loan rejected?”).
-	- You want to compare feature importance across the dataset (aggregated SHAP).
-	- Your model has nonlinear interactions best captured per-instance.
-	- Use SHAP if you need to explain individual predictions or compare feature importance globally.
-
-#### Step-by-step:
-- Baseline: The SHAP value calculation starts with a baseline value, which represents the expected output of the model when no features are present. This is often the mean or median of the model's predictions across the training data.
-- Combinations of Features: For each data point and feature, SHAP examines all possible combinations of features (coalitions) that could be present in the prediction.
-- Marginal Contributions: For each coalition, the model's prediction is calculated with and without the specific feature in question. The difference between these predictions represents the marginal contribution of that feature to the prediction for that coalition.
-- Shapley Values: The SHAP value for a feature is the weighted average of all its marginal contributions across all possible coalitions. This weighted average ensures that each feature's contribution is fairly distributed across all possible combinations of features.
-
-SHapley value =  sum [weight * (prediction with feature - prediction without feature)]
-
-	- weight assigned to a particular coalition based on the number of ways the feature could have joined the coalition.
-	- prediction with feature is the model prediction when the feature is included in the coalition.
-	- prediction without feature is the model prediction when the feature is excluded from the coalition.
- 
-![image](https://github.com/user-attachments/assets/e97c45c3-c565-473e-82ca-b2d11b95c244)
-
-	- n is total number of features
-	- N contains all the possible feature subsets not containing feature i
-	- S is one feature set from N
-	- v(x) is the trained model prediction function f(x), x is a model input instance
-	- |S|is the number of not missing features in set S
-
--  Interpretion of SHAP Values: The SHAP values indicate the degree to which a feature influences the model's prediction. A positive SHAP value suggests that the feature contributes to a higher prediction, while a negative SHAP value suggests a lower prediction. The magnitude of the SHAP value reflects the strength of the feature's influence. The sum of SHAP values for all features equals the difference between the model prediction and the baseline prediction. If a feature has no impact on the prediction, its SHAP value will be zero. If a feature's impact changes when other features are included or excluded, the SHAP value reflects that change. E[f(X)] refers to the baseline (mean or median in the case of regression).  f(x) is the value predicted by our model. 
-
-#### Limitations of SHapley
-
-- The computational complexity of calculating SHAP values can be challenging, especially for models with a large number of features. To address this, approximation techniques like Kernel SHAP and Tree SHAP have been developed, but these methods may introduce some inaccuracies in the explanations.
-- SHAP assumes feature independence, which may not always hold true in real-world datasets. The aggregation of individual SHAP values to provide global insights can also be a complex task, requiring careful interpretation and consideration of the underlying data and model characteristics.
--  Computationally expensive, especially with many features (where feature interactions are complex)
-
-https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-explanations-shap
-
-------------------------------------------------------------------------------------------------------------
-
-# LIME: Local Interpretable Model-Agnostic Explanations
-
-- It creates a simplified, interpretable model to explain the predictions of a complex model.
-- It provides Local Explanations for individual predictions, focusing on how each input feature contributes to that specific prediction.
-- LIME creates synthetic input data around a specific instance and observing how the model predictions change. And then trains a surrogate model (e.g., a linear model) on synthetic data.
-- LIME is much faster than SHAP. Shapley values take a long time to compute.
-- LIME is actually a subset of SHAP but lacks the same propertie.
-- LIME does not support functionality for global interpretation. LIME to interpret individual predictions locally, like SHAP.
-  
-#### Step-by-step:
-1. Choose the specific data point for which want to understand the model prediction. 
-2. Create a synthetic data, slightly altered around original data point.
-
-		synthetic data = original data point * (1 + random factor)
- 
-	- Synthetic data is calculated by introducing controlled changes (noise or distortions) to original data points.
-	- Noise: Adding random values (e.g., from a Laplace distribution) to the original data.
-	- Data Transformation: Using techniques like SVD (Singular Value Decomposition) or geometric rotations to transform the data into a different space. 
-	- Randomization: Shuffling categorical data, or adding random shifts to time values. 
-
-3. Use model to predict the output for each synthetic data point.
-4. Obtain predictions for synthetic data point using original model (ML). 
-5. Assign weights to synthetic data based on the original data point, with closer samples receiving higher weights.
-6. Train an interpretable model (like a linear model) on the synthetic data, using the weights calculated in the previous step. 
-7. Analyze the coefficients or feature importances of the surrogate model to understand how each feature contributes to the prediction of the black-box model for the specific instance. 
-
-#### Limitations of LIME
-- Local vs. Global Interpretability: LIME provides explanations for individual predictions, which may not reflect the model's overall behavior.
-- Linear Assumption: LIME assumes a linear relationship in the local approximation, which might oversimplify complex decision boundaries.
-- Stability and Consistency: The random sampling process in LIME can lead to different explanations for the same input, affecting reliability.
-- Sampling Bias: The synthetic data might not accurately represent real-world data distributions, potentially leading to biased explanations.
-	
--------------------------------------------------------------------------------------------------------  
-
-# Partial Dependence Plots (PDPs)
-
-- Similar to sensitivity analysis.
-- PDPs are a method to visualize, how individual features influence (marginal effect) model predictions.
-- It helps interpret complex models by showing the average marginal effect of a feature on the predicted outcome, while holding other features constant.
-- PDPs are calculated by averaging the model's predictions across all possible combinations of the other features, while varying the feature(s) of interest.
-
-- Benefits:
-	- Explainability: PDPs help make complex models more transparent and understandable, especially for non-technical audiences.
-	- Feature Importance: They can reveal which features have the most significant impact on the model's predictions. 
-	- Debugging: PDPs can help identify issues with the model, such as unexpected relationships between features and predictions
-   
-- Limitations:
-	- PDPs can be biased in scenarios with highly correlated features, as they use marginal rather than conditional probabilities. Accumulated Local Effects (ALE) plots are an alternative that addresses this bias.
-	- PDPs are best suited for visualizing the relationship between one or two features and the model's output. They become harder to interpret with more than two features.
-	- PDPs only capture the marginal effect of a feature, potentially hiding complex interactions between multiple features.
-
-------------------------------------------------------------------------------------------------------------
-
-# Accumulated Local Effects (ALE) plots
-
-- ALE plots are designed to overcome PDPs limitation (above). Instead of averaging over all observations globally, ALE focuses on differences in predictions to isolate each feature’s effect.
-- Compute Local Derivatives: They first estimate the local effect (i.e., the derivative) of the feature on the model prediction in small intervals (bins) of the feature’s range.
-- Accumulate the Effects: Then they integrate (accumulate) these local effects over the feature’s range, starting from a reference point (often the minimum value).
-- Centering: Finally, the accumulated effect is centered so that the overall average effect is zero, making it easier to compare across features.
-- When to Use ALE:
-	- You care about global feature effects (e.g., “Does income positively affect loan approval?”).
-	- Features are correlated, and you want reliable estimates.
-	- You need a clear visual of the feature’s directional trend.
-	- Overall directional relationship between a feature and the outcome, especially with correlated features.
-
-------------------------------------------------------------------------------------------------------------
-
-### Hyperparameters
-
-- Validation is crucial for selecting the best model, tuning hyperparameters, and ensuring the model can adapt to new situations. It is the process of finding the best set of hyperparameters for a model to maximize its performance.
-- Refer to model page for the detail
-
--------------------------
-#### Grid Search, Randomized Search or Bayesian Optimization
-
-- Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter space and find the optimal combination.
-    
-- Grid Search: Defines a grid of hyperparameter values and tests all possible combinations. 
-	- Pro: Simple to understand and implement. Finding the best combination within the defined grid.
-	- Cons: Computationally expensive, especially with many hyperparameters or large grids. May miss the optimal hyperparameters if the grid is not fine-grained enough.
-   
-- Random Search: Randomly samples hyperparameters from a defined range or distribution, without evaluating all combinations.
-	- Pros: More efficient than grid search, especially with high-dimensional hyperparameter spaces. Can find good hyperparameters with fewer evaluations. 
-	- Cons: May not find the optimal hyperparameters, especially if the search space is large. Requires careful selection of the number of iterations to balance exploration and efficiency.
-   
-- Bayesian Optimization: Uses a probabilistic model (typically a Gaussian process) to learn the relationship between hyperparameters and performance. It then intelligently explores the hyperparameter space, focusing on regions with the highest probability of containing the optimal hyperparameters. 
-	- Pros: Efficient than grid and random search, requirs fewer evaluations to find good hyperparameters. Can handle non-convex and noisy objective functions. Can be parallelized to speed up the search process. 
-	- Cons: Can be computationally expensive for each iteration, especially with complex models. Requires a suitable Gaussian process model and careful selection of hyperparameters for the model.
-
-------------------------------------------------------------------------------------------------------------------------
 
 # ML Model Issue:
 
@@ -1027,7 +854,31 @@ Key Takeaways:
 	Revealing hidden diversity and addressing heterogeneity in the population is not only boosts overall performance but also enhances performance uniformity, making the model more resilient against distribution drift. For instance, in the figure provided, Cluster 0 the worst-performing region under a single model—shows marked improvement when modeled using MoE. Even the "worst" expert in the MoE framework outperforms many segments of the single model.
 
 	Mixture of Experts is far more sophisticated than simple segmentation. While segmentation typically divides the data into static groups, MoE employs a dynamic gating mechanism that assigns varying weights to different expert models based on the input features. This adaptive process allows the model to capture subtle, continuous variations in data heterogeneity, handle overlapping regions, and respond to changes in the data distribution. Instead of treating each segment as completely independent, MoE enables experts to collaborate—learning how to optimally combine their predictions for each specific input. This results in a more expressive and flexible modeling framework that uncovers hidden diversity and significantly enhances overall performance. 
-	
+
+------------------------------------------------------------------------------------------------------------------------
+
+### Hyperparameters
+
+- Validation is crucial for selecting the best model, tuning hyperparameters, and ensuring the model can adapt to new situations. It is the process of finding the best set of hyperparameters for a model to maximize its performance.
+- Refer to model page for the detail
+
+-------------------------
+#### Grid Search, Randomized Search or Bayesian Optimization
+
+- Use techniques like Grid Search, Randomized Search or Bayesian Optimization to explore the parameter space and find the optimal combination.
+    
+- Grid Search: Defines a grid of hyperparameter values and tests all possible combinations. 
+	- Pro: Simple to understand and implement. Finding the best combination within the defined grid.
+	- Cons: Computationally expensive, especially with many hyperparameters or large grids. May miss the optimal hyperparameters if the grid is not fine-grained enough.
+   
+- Random Search: Randomly samples hyperparameters from a defined range or distribution, without evaluating all combinations.
+	- Pros: More efficient than grid search, especially with high-dimensional hyperparameter spaces. Can find good hyperparameters with fewer evaluations. 
+	- Cons: May not find the optimal hyperparameters, especially if the search space is large. Requires careful selection of the number of iterations to balance exploration and efficiency.
+   
+- Bayesian Optimization: Uses a probabilistic model (typically a Gaussian process) to learn the relationship between hyperparameters and performance. It then intelligently explores the hyperparameter space, focusing on regions with the highest probability of containing the optimal hyperparameters. 
+	- Pros: Efficient than grid and random search, requirs fewer evaluations to find good hyperparameters. Can handle non-convex and noisy objective functions. Can be parallelized to speed up the search process. 
+	- Cons: Can be computationally expensive for each iteration, especially with complex models. Requires a suitable Gaussian process model and careful selection of hyperparameters for the model.
+ 
 --------------------------------------------------------------------------------------------------------------------------
 
 # Model Metrics
@@ -1189,7 +1040,7 @@ Key Takeaways:
 
 	- Use Cases: The Gini coefficient provides a simple and intuitive measure of model performance, especially for non-technical audiences. 
 
------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 - Kolmogorov-Smirnov (KS) Test:
 	- What it is: The KS test is a statistical test used to determine if two distributions are significantly different. KS measures the degree of separation between the positive and negative distributions.
@@ -1201,7 +1052,7 @@ Key Takeaways:
    
 	- Use Cases: The KS test is useful for evaluating the performance of a model in a more nuanced way than AUC or Gini, as it considers the entire distribution of predicted probabilities. 
 
------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 - Gain and Lift charts:
 	- Check the rank ordering of the probabilities.
@@ -1209,7 +1060,7 @@ Key Takeaways:
   	- Lift is dependent on the total response rate of the population.
   	- Hence, if the response rate of the population changes, the same model will give a different lift chart.
 
------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 - Standard Error Coef: 
 	- Linear regression standard error of Coef : SE  = sqrt [ S(yi - yi)2 / (n - 2) ] / sqrt [ S(xi - x)2 ]
@@ -1218,7 +1069,149 @@ Key Takeaways:
 	- Use the standard error of the coefficient to measure the precision of the estimate of the coefficient. 
 	- The smaller the standard error, the more precise the estimate.
 
------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+
+# Feature Importance
+
+- Analyze the importance of each input feature in the model's predictions. 
+- Techniques like tree-based models or methods that calculate the importance of each feature based on its contribution to the model's predictions.
+- Tree-Based Algorithms feature importance scores based on how much each feature reduces impurity (e.g., Gini index or information gain) in the decision tree nodes.
+- Tree based: Decision Trees, Random Forests, XGBoost, LightGBM.
+- Linear Models (Logistic Regression, Linear Regression) feature importance is derived from the coefficients of the linear model.
+- Features with larger absolute coefficient values are considered more important.
+- It is also known as the Gini importance. The importance of a feature is computed as the (normalized) total reduction of the criterion brought by that feature.
+  
+- That reduction or weighted information gain is defined as. The weighted impurity decrease equation is the following:
+
+	N_t / N * (impurity - N_t_R / N_t * right_impurity - N_t_L / N_t * left_impurity)
+	
+			N 	: Total number of samples
+			N_t 	: No. of samples at the current node
+			N_t_L 	: No. of samples in the left child 
+			N_t_R 	: No. of samples in the right child
+
+- Below are same as Feature Importance
+	- SHAP: SHapley Additive exPlanations.
+	- LIME: Local Interpretable Model-Agnostic Explanations. 
+	Details are below in link
+ - For Neural Networks Techniques, SHAP or feature importance (via gradient analysis) are used to understand the contribution of individual features.
+ - Permutation Feature Importance: This technique measures the contribution of a feature by measuring the changes in the model performance after randomly shuffling its values.
+  
+------------------------------------------------------------------------------------------------------
+  
+# SHapley: SHapley Additive exPlanations. 
+
+- It's a game-theoretic approach that calculates the average marginal contribution of each feature, helping to understand how each feature affects the model's output SHAP to provide overall (Global) explanations of how the model as a whole makes predictions, focusing on the overall influence of each feature.
+- SHapley Values provide a way to understand how each feature contributes to the model's predictions. Similar to the beta of linear regression. It helps in identifying the most important features and understanding their impact on the model.
+- This method uses random feature combinations as input and compute the changes in the model performance. The features which impact the performance the most are considered the most important ones.
+- SHapley does not go on and retrain the model for each subset. Instead, for the removed or left out feature, it just replaces it with the average value of the feature and generates the predictions.
+- SHapley attribute the difference between a model’s prediction for an instance and the average prediction to each feature.
+	- Additivity: The sum of SHAP values for all features equals the difference between the prediction and the baseline (average prediction).
+	- Local Accuracy: Each feature’s contribution is computed for a single instance.
+	- Consistency: If a feature’s impact increases, its SHAP value won’t decrease.
+   
+- When to Use SHAP:
+	- You need instance-level explanations (e.g., “Why was this loan rejected?”).
+	- You want to compare feature importance across the dataset (aggregated SHAP).
+	- Your model has nonlinear interactions best captured per-instance.
+	- Use SHAP if you need to explain individual predictions or compare feature importance globally.
+
+#### Step-by-step:
+- Baseline: The SHAP value calculation starts with a baseline value, which represents the expected output of the model when no features are present. This is often the mean or median of the model's predictions across the training data.
+- Combinations of Features: For each data point and feature, SHAP examines all possible combinations of features (coalitions) that could be present in the prediction.
+- Marginal Contributions: For each coalition, the model's prediction is calculated with and without the specific feature in question. The difference between these predictions represents the marginal contribution of that feature to the prediction for that coalition.
+- Shapley Values: The SHAP value for a feature is the weighted average of all its marginal contributions across all possible coalitions. This weighted average ensures that each feature's contribution is fairly distributed across all possible combinations of features.
+
+SHapley value =  sum [weight * (prediction with feature - prediction without feature)]
+
+	- weight assigned to a particular coalition based on the number of ways the feature could have joined the coalition.
+	- prediction with feature is the model prediction when the feature is included in the coalition.
+	- prediction without feature is the model prediction when the feature is excluded from the coalition.
+ 
+![image](https://github.com/user-attachments/assets/e97c45c3-c565-473e-82ca-b2d11b95c244)
+
+	- n is total number of features
+	- N contains all the possible feature subsets not containing feature i
+	- S is one feature set from N
+	- v(x) is the trained model prediction function f(x), x is a model input instance
+	- |S|is the number of not missing features in set S
+
+-  Interpretion of SHAP Values: The SHAP values indicate the degree to which a feature influences the model's prediction. A positive SHAP value suggests that the feature contributes to a higher prediction, while a negative SHAP value suggests a lower prediction. The magnitude of the SHAP value reflects the strength of the feature's influence. The sum of SHAP values for all features equals the difference between the model prediction and the baseline prediction. If a feature has no impact on the prediction, its SHAP value will be zero. If a feature's impact changes when other features are included or excluded, the SHAP value reflects that change. E[f(X)] refers to the baseline (mean or median in the case of regression).  f(x) is the value predicted by our model. 
+
+#### Limitations of SHapley
+
+- The computational complexity of calculating SHAP values can be challenging, especially for models with a large number of features. To address this, approximation techniques like Kernel SHAP and Tree SHAP have been developed, but these methods may introduce some inaccuracies in the explanations.
+- SHAP assumes feature independence, which may not always hold true in real-world datasets. The aggregation of individual SHAP values to provide global insights can also be a complex task, requiring careful interpretation and consideration of the underlying data and model characteristics.
+-  Computationally expensive, especially with many features (where feature interactions are complex)
+
+https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-explanations-shap
+
+------------------------------------------------------------------------------------------------------------
+
+# LIME: Local Interpretable Model-Agnostic Explanations
+
+- It creates a simplified, interpretable model to explain the predictions of a complex model.
+- It provides Local Explanations for individual predictions, focusing on how each input feature contributes to that specific prediction.
+- LIME creates synthetic input data around a specific instance and observing how the model predictions change. And then trains a surrogate model (e.g., a linear model) on synthetic data.
+- LIME is much faster than SHAP. Shapley values take a long time to compute.
+- LIME is actually a subset of SHAP but lacks the same propertie.
+- LIME does not support functionality for global interpretation. LIME to interpret individual predictions locally, like SHAP.
+  
+#### Step-by-step:
+1. Choose the specific data point for which want to understand the model prediction. 
+2. Create a synthetic data, slightly altered around original data point.
+
+		synthetic data = original data point * (1 + random factor)
+ 
+	- Synthetic data is calculated by introducing controlled changes (noise or distortions) to original data points.
+	- Noise: Adding random values (e.g., from a Laplace distribution) to the original data.
+	- Data Transformation: Using techniques like SVD (Singular Value Decomposition) or geometric rotations to transform the data into a different space. 
+	- Randomization: Shuffling categorical data, or adding random shifts to time values. 
+
+3. Use model to predict the output for each synthetic data point.
+4. Obtain predictions for synthetic data point using original model (ML). 
+5. Assign weights to synthetic data based on the original data point, with closer samples receiving higher weights.
+6. Train an interpretable model (like a linear model) on the synthetic data, using the weights calculated in the previous step. 
+7. Analyze the coefficients or feature importances of the surrogate model to understand how each feature contributes to the prediction of the black-box model for the specific instance. 
+
+#### Limitations of LIME
+- Local vs. Global Interpretability: LIME provides explanations for individual predictions, which may not reflect the model's overall behavior.
+- Linear Assumption: LIME assumes a linear relationship in the local approximation, which might oversimplify complex decision boundaries.
+- Stability and Consistency: The random sampling process in LIME can lead to different explanations for the same input, affecting reliability.
+- Sampling Bias: The synthetic data might not accurately represent real-world data distributions, potentially leading to biased explanations.
+	
+-------------------------------------------------------------------------------------------------------  
+
+# Partial Dependence Plots (PDPs)
+
+- Similar to sensitivity analysis.
+- PDPs are a method to visualize, how individual features influence (marginal effect) model predictions.
+- It helps interpret complex models by showing the average marginal effect of a feature on the predicted outcome, while holding other features constant.
+- PDPs are calculated by averaging the model's predictions across all possible combinations of the other features, while varying the feature(s) of interest.
+
+- Benefits:
+	- Explainability: PDPs help make complex models more transparent and understandable, especially for non-technical audiences.
+	- Feature Importance: They can reveal which features have the most significant impact on the model's predictions. 
+	- Debugging: PDPs can help identify issues with the model, such as unexpected relationships between features and predictions
+   
+- Limitations:
+	- PDPs can be biased in scenarios with highly correlated features, as they use marginal rather than conditional probabilities. Accumulated Local Effects (ALE) plots are an alternative that addresses this bias.
+	- PDPs are best suited for visualizing the relationship between one or two features and the model's output. They become harder to interpret with more than two features.
+	- PDPs only capture the marginal effect of a feature, potentially hiding complex interactions between multiple features.
+
+------------------------------------------------------------------------------------------------------------
+
+# Accumulated Local Effects (ALE) plots
+
+- ALE plots are designed to overcome PDPs limitation (above). Instead of averaging over all observations globally, ALE focuses on differences in predictions to isolate each feature’s effect.
+- Compute Local Derivatives: They first estimate the local effect (i.e., the derivative) of the feature on the model prediction in small intervals (bins) of the feature’s range.
+- Accumulate the Effects: Then they integrate (accumulate) these local effects over the feature’s range, starting from a reference point (often the minimum value).
+- Centering: Finally, the accumulated effect is centered so that the overall average effect is zero, making it easier to compare across features.
+- When to Use ALE:
+	- You care about global feature effects (e.g., “Does income positively affect loan approval?”).
+	- Features are correlated, and you want reliable estimates.
+	- You need a clear visual of the feature’s directional trend.
+	- Overall directional relationship between a feature and the outcome, especially with correlated features.
 
 --------------------------------------------------------------------------------------
 
