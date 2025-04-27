@@ -161,6 +161,7 @@ Different ways to get feature importance
   		λ (lambda) is the regularization parameter, which helps prevent overfitting.
    
 - For classifier = (Sum of Residuals)^2 / [pr*(1-pr) + λ]
+  
   		pr  is probability
 
 - Feature importance scores:
@@ -195,7 +196,8 @@ Prediction is made after the pruning process is completed. The tree prediction i
 Predicted value (regressor) = First Prediction + (Learnin Rate)* (Second Prediction)
        
 Predicted Value (classifier) =  log of odds of Initial prediction + eta(learning rate) * output from the leaves(mean value)
-	Convert above value to probability with logistic function
+
+		Convert above value to probability with logistic function
  
 		Probability = Exp^log(odds) / [1 + Exp^log(odds)]
 
@@ -206,36 +208,45 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 ------------------------------------------------------------------------------------------------------------
 ### XGBoost hyperparameters: 
 - Maximum depth of each tree: A deeper tree can capture more complex relationships in the data but may also lead to overfitting.
+  
 		max_depth: [ 3, 4, 5, 6, 8, 10, 12, 15]
 		Default is 6
   
 - minimum sum of instance weights (Hessian) needed in a child. It helps prevent overfitting by controlling the creation of new nodes in the tree.
+  
 		Default is 1  
 		min_child_weight:[ 1, 3, 5, 7 ]
   
-- subsample: This determines the fraction of training instances used for each tree, reducing the risk of overfitting. 
+- subsample: This determines the fraction of training instances used for each tree, reducing the risk of overfitting.
+  
 		Default is 1
   
 - colsample bytree: This parameter specifies the fraction of features used for each tree. Similar to subsample, it helps prevent overfitting by reducing the model's reliance on specific features.
+  
 		Default is 1  
 		colsample_bytree:[ 0.3, 0.4, 0.5 , 0.7 ]
   
 - learning rate (eta): This parameter controls the step size of the gradient descent algorithm. A smaller learning rate can lead to more stable training but may require more iterations to converge.
+  
 		Default is 0.3
 		learning_rate: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30 ]
     
 - gamma: This parameter specifies the minimum loss reduction required to make a split. It can be useful for pruning the tree and preventing overfitting.
+  
 		Default is 0
 		gamma:[ 0.0, 0.1, 0.2 , 0.3, 0.4 ]
   
 - L2 regularization: This parameter adds a penalty proportional to the squared magnitude of the coefficients, helping to prevent overfitting.
+  
 		Default is 1
   
 - L1 regularization: This parameter adds a penalty proportional to the absolute value of the coefficients, promoting sparsity in the model.
+  
 		Default is 0  
   
 ------------------------------------------------------------------------------------
 - Hyper Parameter Optimization: RandomizedSearchCV
+  
 		params={
 			"learning_rate"    : [0.05, 0.10, 0.15, 0.20, 0.25, 0.30 ] ,
 			"max_depth"        : [ 3, 4, 5, 6, 8, 10, 12, 15],
@@ -295,24 +306,34 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Example.xlsx
 5. Repeat #2,3,4 until target achieved
 6. Final: Sum up all models
  
-1. Y 	  = M(x) + error (Logistic Regression if dep is binay). get the weight as well
-2. Error  = G(x) + error2 (Regress error with other ind var. Apply linear regression as error is continuous. Apply learning rate (0 to 1) or weight of the model.
-3. Error2 = H(x) + error3 (continue the #2 until you get low error)
-4. Y 	  = M(x) + G(x) + H(x) + error3	(combine all model together)  
-5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4 		(alpha, beta, gamma are weight / learning rates of each model)
+1. Y 	  = M(x) + error
+	- (Logistic Regression if dep is binay). get the weight as well
+
+2. Error  = G(x) + error2
+	- (Regress error with other ind var. Apply linear regression as error is continuous. Apply learning rate (0 to 1) or weight of the model.
+
+3. Error2 = H(x) + error3
+	- (continue the #2 until you get low error)
+
+4. Y 	  = M(x) + G(x) + H(x) + error3
+	- (combine all model together)
+
+5. Y 	  = alpha * M(x) + beta * G(x) + gamma * H(x) + error4
+	- (alpha, beta, gamma are weight / learning rates of each model)
   
 --------------------------------------
 Pseudo-code of the GBM algorithm
 	
 1. Initialize the outcome		
 2. Iterate from 1 to total number of trees
-	2.1 Update the weights for targets based on previous run (higher for the ones mis-classified) 
-	[weight = 0.5*log[(1-error)/error]
-	It would indicate higher weights to trees with lower error rate.
+   
+	- 2.1 Update the weights for targets based on previous run (higher for the ones mis-classified) 
+	- [weight = 0.5*log[(1-error)/error]
+	- It would indicate higher weights to trees with lower error rate.
 			
-	2.2 Fit the model on selected subsample of data	  
-	2.3 Make predictions on the full set of observations		
-	2.4 Update the output with current results taking into account the learning rate
+	- 2.2 Fit the model on selected subsample of data	  
+	- 2.3 Make predictions on the full set of observations		
+	- 2.4 Update the output with current results taking into account the learning rate
 			
 3. Return the final output.
   
