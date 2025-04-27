@@ -413,18 +413,12 @@ Pseudo-code of the GBM algorithm
 - Linear Models (Logistic Regression, Linear Regression) feature importance is derived from the coefficients of the linear model.
 - Features with larger absolute coefficient values are considered more important.
 - Below are same as Feature Importance
-	- LIME: Local Interpretable Model-Agnostic Explanations. 
 	- SHAP: SHapley Additive exPlanations.
+	- LIME: Local Interpretable Model-Agnostic Explanations. 
 	Details are below in link
  - For Neural Networks Techniques, SHAP or feature importance (via gradient analysis) are used to understand the contribution of individual features.
  - Permutation Feature Importance: This technique measures the contribution of a feature by measuring the changes in the model performance after randomly shuffling its values.
  
-------------------------------------------------------------------------------------------------------------
-
-### Local Interpretable Model-Agnostic Explanations (LIME)
-
-- It creates a simplified, interpretable model to explain the predictions of a complex model. It provides Local Explanations for individual predictions, focusing on how each input feature contributes to that specific prediction.
--     
 ------------------------------------------------------------------------------------------------------------
 
 ### SHapley Additive exPlanations (SHAP) 
@@ -435,13 +429,13 @@ Pseudo-code of the GBM algorithm
 
 - SHAP does not go on and retrain the model for each subset. Instead, for the removed or left out feature, it just replaces it with the average value of the feature and generates the predictions.
 
-Step-by-step:
+#### Step-by-step:
 - Baseline: The SHAP value calculation starts with a baseline value, which represents the expected output of the model when no features are present. This is often the mean or median of the model's predictions across the training data.
 - Combinations of Features: For each data point and feature, SHAP examines all possible combinations of features (coalitions) that could be present in the prediction.
 - Marginal Contributions: For each coalition, the model's prediction is calculated with and without the specific feature in question. The difference between these predictions represents the marginal contribution of that feature to the prediction for that coalition.
 - Shapley Values: The SHAP value for a feature is the weighted average of all its marginal contributions across all possible coalitions. This weighted average ensures that each feature's contribution is fairly distributed across all possible combinations of features.
 
-SHAP value =  sum [weight * (prediction with feature - prediction without feature)]
+SHapley value =  sum [weight * (prediction with feature - prediction without feature)]
 
 	- weight assigned to a particular coalition based on the number of ways the feature could have joined the coalition.
 	- prediction with feature is the model prediction when the feature is included in the coalition.
@@ -456,6 +450,48 @@ SHAP value =  sum [weight * (prediction with feature - prediction without featur
 	- |S|is the number of not missing features in set S
 
 -  Interpretion of SHAP Values: The SHAP values indicate the degree to which a feature influences the model's prediction. A positive SHAP value suggests that the feature contributes to a higher prediction, while a negative SHAP value suggests a lower prediction. The magnitude of the SHAP value reflects the strength of the feature's influence. The sum of SHAP values for all features equals the difference between the model prediction and the baseline prediction. If a feature has no impact on the prediction, its SHAP value will be zero. If a feature's impact changes when other features are included or excluded, the SHAP value reflects that change. E[f(X)] refers to the baseline (mean or median in the case of regression).  f(x) is the value predicted by our model. 
+
+#### Limitations of SHapley
+
+- The computational complexity of calculating SHAP values can be challenging, especially for models with a large number of features. To address this, approximation techniques like Kernel SHAP and Tree SHAP have been developed, but these methods may introduce some inaccuracies in the explanations.
+
+- SHAP assumes feature independence, which may not always hold true in real-world datasets. The aggregation of individual SHAP values to provide global insights can also be a complex task, requiring careful interpretation and consideration of the underlying data and model characteristics.
+
+-  Computationally expensive, especially with many features (where feature interactions are complex)
+
+------------------------------------------------------------------------------------------------------------
+
+### Local Interpretable Model-Agnostic Explanations (LIME)
+
+- It creates a simplified, interpretable model to explain the predictions of a complex model.
+- It provides Local Explanations for individual predictions, focusing on how each input feature contributes to that specific prediction.
+- LIME creates synthetic input data around a specific instance and observing how the model predictions change. And then trains a surrogate model (e.g., a linear model) on synthetic data.
+- LIME is much faster than SHAP. Shapley values take a long time to compute.
+- LIME is actually a subset of SHAP but lacks the same propertie.
+- LIME does not support functionality for global interpretation. LIME to interpret individual predictions locally, like SHAP.
+  
+#### Step-by-step:
+1. Choose the specific data point for which want to understand the model prediction. 
+2. Create a synthetic data, slightly altered around original data point.
+
+		synthetic data = original data point * (1 + random factor)
+ 
+	- Synthetic data is calculated by introducing controlled changes (noise or distortions) to original data points.
+	- Noise: Adding random values (e.g., from a Laplace distribution) to the original data.
+	- Data Transformation: Using techniques like SVD (Singular Value Decomposition) or geometric rotations to transform the data into a different space. 
+	- Randomization: Shuffling categorical data, or adding random shifts to time values. 
+
+3. Use model to predict the output for each synthetic data point.
+4. Obtain predictions for synthetic data point using original model (ML). 
+5. Assign weights to synthetic data based on the original data point, with closer samples receiving higher weights.
+6. Train an interpretable model (like a linear model) on the synthetic data, using the weights calculated in the previous step. 
+7. Analyze the coefficients or feature importances of the surrogate model to understand how each feature contributes to the prediction of the black-box model for the specific instance. 
+
+#### Limitations of LIME
+- Local vs. Global Interpretability: LIME provides explanations for individual predictions, which may not reflect the model's overall behavior.
+- Linear Assumption: LIME assumes a linear relationship in the local approximation, which might oversimplify complex decision boundaries.
+- Stability and Consistency: The random sampling process in LIME can lead to different explanations for the same input, affecting reliability.
+- Sampling Bias: The synthetic data might not accurately represent real-world data distributions, potentially leading to biased explanations.
 
 ------------------------------------------------------------------------------------------------------------
 
