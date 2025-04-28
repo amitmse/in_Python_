@@ -104,10 +104,10 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 - Hypothesis testing uses data from a sample to draw conclusions about a population parameter or a population probability distribution.  It's a statistical method used to determine if there's enough evidence in a sample to reject a null hypothesis in favor of an alternative hypothesis. It help to make better decisions.
 
-- Avoiding Misleading Conclusions (Type I and Type II Errors)
+- Avoiding Misleading Conclusions: Type I and Type II Errors
 	- It helps you avoid jumping to the wrong conclusions.
-   	- For instance, a Type I error could occur if a bank launches a new product thinking it will be a hit, only to find out later that the data misled them.
-  	- A Type II error might happen when a bank overlooks a potentially successful product because their testing wasn’t thorough enough.
+   	- Type I error (False Positive): Bank launches a new product thinking it will be a hit, only to find out later that the data misled them.
+  	- Type II error (False Negative): Bank overlooks a potentially successful product because their testing wasn’t thorough enough.
 - By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
 
 - Making Smarter Choices:
@@ -144,12 +144,14 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 	- This range is calculated from a sample of data and tells you how accurately your sample represents the entire population.
    
 - Margin of Error:
-	- The width of the confidence interval is related to the margin of error, which indicates how much your sample estimate might vary from the true population value. 
+	- The width of the confidence interval is related to the margin of error, which indicates how much your sample estimate might vary from the true population value.
+	- Imagine a survey shows that 55% of people support a certain candidate, with a margin of error of +/- 4 percentage points and a 95% confidence level. This means:
+		- The confidence interval would be 51% to 59% (55% +/- 4%).
+		- We are 95% confident that the true percentage of people in the population who support the candidate is between 51% and 59% 
 
 - P-value:
   
 	- P-value represents the probability that observed results would occur if the null hypothesis were true. The null hypothesis typically assumes there's no effect or no difference between groups.
-   
 	- Probability of observing test results at least as extreme as the results observed, assuming the null hypothesis is correct.
  	- It helps determine the strength of the evidence against the null hypothesis.
   	- P value is compared with a significance level. It does not provide information about the magnitude of the effect. 
