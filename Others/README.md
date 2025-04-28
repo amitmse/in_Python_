@@ -150,7 +150,8 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 		- We are 95% confident that the true percentage of people in the population who support the candidate is between 51% and 59% 
 
 - P-value:
-  
+
+	- The p-value approach directly compares the calculated probability to the significance level (alpha) to determine if the null hypothesis should be rejected.  
 	- P-value represents the probability that observed results would occur if the null hypothesis were true. The null hypothesis typically assumes there's no effect or no difference between groups.
 	- Probability of observing test results at least as extreme as the results observed, assuming the null hypothesis is correct.
  	- It helps determine the strength of the evidence against the null hypothesis.
