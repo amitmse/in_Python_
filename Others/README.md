@@ -687,7 +687,7 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression
 
 ## Gradient Descent
-https://github.com/amitmse/in_Python_/blob/master/Others/README.md#shapley-shapley-additive-explanations
+https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression#gradient-descent
 
 --------------------------------------------------------------------------------------	
 ## Decision Tree 
