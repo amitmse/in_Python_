@@ -636,8 +636,9 @@ https://www.acsu.buffalo.edu/~adamcunn/probability/standardlogistic.html
 	- Test	: Breush-Pagan test, Goldfeld-Quandt, Koenker-Bassett (generalized Breusch-Pagan)
 		Breush-Pagan: Calculate the Square the residuals, and Regress it on the independent variables.
 
-  	- Solution: Weighted least squares regression (heavier weights given to smaller error variances) Transform the dependent variable using one of the variance stabilizing transformations
-	
+  	- Solution: Weighted least squares regression (heavier weights given to smaller error variances), GLS, Transform the dependent variable using one of the variance stabilizing transformations
+	- OLS vs GLS: OLS assumes the error is independent, identically distributed, and have constant variance. GLS relaxes above assumption and allows for heteroscedasticity, and autocorrelation.
+ 
 7. No autocorrelation (serial correlation) of residuals :
    
 	- Issue: correlation with own lag (stock price today linked with yesterday's price). If above fails then OLS estimators are no longer the Best Linear Unbiased Estimators. While it does not bias the OLS coefficient estimates, the standard errors tend to be underestimated (t-scores overestimated) when the autocorrelations of the errors at low lags are positive. Low variance in unbiased estimator. Autocorrelation can lead to biased and unreliable standard errors, affecting the validity of statistical tests and confidence intervals. Potentially missing key variables or an incorrect functional form. 
