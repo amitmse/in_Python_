@@ -935,6 +935,7 @@ Key Takeaways:
 
 - beta(x) 	= covariance(x,y) / variance(x)
 - correlation(x,y)= covariance(x,y) / [variance(x) * variance(y)]
+- Covariance(X,Y) = E[(X−EX)(Y−EY)] = E[XY]−(EX)(EY)
 
 ----------------------------------------------------------------------------
 
@@ -945,8 +946,23 @@ Key Takeaways:
 
 ----------------------------------------------------------------------------
 
-- AIC		= ( No of variable * 2)             - ( 2 * -Log Likelihood )
-- BIC		= { No of variable * log(No of obs)}  - ( 2* -Log Likelihood )
+- Akaike Information Criterion (AIC):  ( No of variable * 2) - ( 2 * -Log Likelihood )
+	- Log Likelihood (log loss) is the cost function.
+	- "2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. 
+	- Ordinary least squares minimizes RSS and LR minimizes deviance.
+
+	- AIC balances the model's goodness of fit with its complexity (number of parameters). Models with more parameters are penalized, as they are more likely to overfit the training data.   
+	- AIC is used to compare different models and select the best one.
+	- The model with the lower AIC value is considered a better fit to the data.
+	- AIC is a relative measure of model fit, meaning it only indicates which model is better relative to other models being considered, not whether any of the models are actually a good fit.
+	- AIC is most useful when comparing similar models (e.g., different logistic regressions with varying predictors). It might not be as robust when comparing drastically different model types.
+
+- Bayesian Information Criterion (BIC): { No of variable * log(No of obs)} - ( 2* -Log Likelihood )
+	- Similar to AIC, BIC is also used to compare models based on their goodness of fit and complexity.
+	- BIC places a stronger penalty on model complexity compared to AIC
+
+----------------------------------------------------------------------------
+
 - Gini/Somer’s D = [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
 - Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]      [meanG = mean of score only for good, varB= variance of score only for bad ]
 
