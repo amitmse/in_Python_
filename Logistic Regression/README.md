@@ -409,10 +409,11 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 	- SQRT(Diagonal(Covariance Matrix))
  
 - AIC: (No of variable * 2) - (2 * -Log Likelihood)
+	- Log Likelihood (log loss) is the cost function.
 	- "2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. 
 	- Ordinary least squares minimizes RSS and LR minimizes deviance.
  
-- BIC: {No of variable*log(No of obs)} - (2*-Log Likelihood)
+- BIC: {No of variable * log(No of obs)} - (2 * -Log Likelihood)
 
 - Area under curve / C statistics: Percent Concordant + 0.5 * Percent Tied
 	- The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.
