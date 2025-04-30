@@ -701,11 +701,10 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/README.md
 
 ------------------------------------------------------------------------------------------------------
 
-## Mean Decrease in Accuracy (MDA) / Accuracy-based importance / Permutation Importance:
+## Mean Decrease in Accuracy (MDA):
 
-https://github.com/amitmse/in_Python_/blob/master/Random_Forest/README.md#mean-decrease-in-accuracy-mda--accuracy-based-importance--permutation-importance
 
-## Gini Importance / Mean Decrease in Impurity (MDI) :
+## Gini Importance:
 
 https://github.com/amitmse/in_Python_/blob/master/Random_Forest/README.md#gini-importance--mean-decrease-in-impurity-mdi-
 
