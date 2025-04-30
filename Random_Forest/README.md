@@ -147,11 +147,7 @@ http://www.bios.unc.edu/~dzeng/BIOS740/randomforest.pdf
 - Default setting for a first run is: 1000 trees, 1/2 features per node, out of bag performance weighting, Gini Index for node evaluation.
 - Make sure to use sklearn's GridSearch (preferably GridSearchCV, but your data set size is too small) when trying out these parameters. Details are in below link.
 
-https://github.com/amitmse/in_Python_/blob/master/Others/README.md
-
------------------------------------------------------------------------------------------  
-
-#### Grid Search, Randomized Search or Bayesian Optimization
+##### Grid Search, Randomized Search or Bayesian Optimization
 
 https://github.com/amitmse/in_Python_/blob/master/Others/README.md#grid-search-randomized-search-or-bayesian-optimization
 
