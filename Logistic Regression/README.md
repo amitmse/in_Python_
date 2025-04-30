@@ -5,7 +5,7 @@
 https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
 -----------------------------------------------------------------------------------------------------------------------
-### Logistic Regression Assumptions
+##### Logistic Regression Assumptions
 
 1. Dependent variable should be binary
  
@@ -33,7 +33,7 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
        
 -----------------------------------------------------------------------------------------------------------------------
 
-### Limitations of Logistic Regression
+##### Limitations of Logistic Regression
 
 - It assumes a linear relationship between independent and log odds variables, which may not always hold true in real-world scenarios.
 - It can be sensitive to outliers and may lead to overfitting.
@@ -41,13 +41,13 @@ https://www.linkedin.com/pulse/logistic-regression-algorithm-step-amit-kumar/
 
 -----------------------------------------------------------------------------------------------------------------------
 
-## Logistic Regression Algorithm Coded in Python:
+# Logistic Regression Algorithm Coded in Python:
 
 https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic_Regression.py
 
 -----------------------------------------------------------------------------------------------------------------------
   
-#### Why use odds and log-odds
+##### Why use odds and log-odds
 - Probability output ranges between 0 to 1  
 - Odds Ratio = P/(1-P)		[Odds output range between 0 to ∞ ]
 	- odds = 0 when p = 0   [ 0 / (1-0) = 0] 
@@ -97,14 +97,14 @@ Odds of an event occurring in one group compared to another, provides a measure 
   
 ----------------------------------------------------------------------------------------------------------------------- 
 
-## Statistical Derivation of Logistic Regression:
-### Model Equation:
+# Statistical Derivation of Logistic Regression:
+##### Model Equation:
 		
 		Y = a + bX (Y = dependent_variable, a=Intercept, b = coefficient, X = independent_variable)
 	
 -----------------------------------------------------------------------------------------------------------------------
 
-### Logit function / Sigmoid Function:
+##### Logit function / Sigmoid Function:
 
 https://github.com/amitmse/in_Python_/blob/master/Others/README.md#logistic-distribution
 
@@ -123,7 +123,7 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#logistic-dist
 
 -----------------------------------------------------------------------------------------------------------------------
 
-### Maximum Likelihood: 
+##### Maximum Likelihood: 
 - Finds parameter values that maximize the likelihood of making the observations given the parameters
   
 		Pi = {Pr(Yi = 1/Xi) if Yi = 1}	= Pr^Yi         --> (P, Yi is a Bernoulli random variable)
@@ -140,7 +140,7 @@ Maximum likelihood estimation (MLE):
   
 -----------------------------------------------------------------------------------------------------------------------
 
-### Log Likelihood Function:
+##### Log Likelihood Function:
 - Apply Logs on likelihood equation and  product will become sum. Refer to property of LOG
   
 		= Sum[{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}] (Apply log in above eq. and simplify it. cost function/log loss)
@@ -159,7 +159,7 @@ Maximum likelihood estimation (MLE):
 
 -----------------------------------------------------------------------------------------------------------------------
 
-### Gradient of Log Likelihood Function : 
+##### Gradient of Log Likelihood Function : 
 - First Differentiation (with respect to beta) of Log Likelihood Function
   
 		= [Yi*X] - [X*Exp(a + bX) / {1 + Exp(a + bX)}]
@@ -169,7 +169,7 @@ Maximum likelihood estimation (MLE):
   
 -----------------------------------------------------------------------------------------------------------------------
 
-#### Hessian Matrix :
+##### Hessian Matrix :
 - Second Differentiation (with respect to beta) of Log Likelihood Function. First Differentiation of Gradient of Log Likelihood Function
   
 		= 0 - [{(X*Exp(a + bX)*X)/(1 + Exp(a + bX))} + {(X*Exp(a + bX))/((1+Exp(a + bX))^2)*(Exp(a + bX)*X)}]	
@@ -228,7 +228,7 @@ Maximum likelihood estimation (MLE):
 
 ---------------------------------------------------------------------------------------------------
 
-### Challenges with Gradient Descent
+##### Challenges with Gradient Descent
 
 - Local minima and saddle points:
 	- For convex problems, gradient descent can find the global minimum with ease, but as nonconvex problems emerge, gradient descent can struggle to find the global minimum, where the model achieves the best results.
@@ -382,7 +382,7 @@ Maximum likelihood estimation (MLE):
     
 -----------------------------------------------------------------------------------------------------------------------
 
-### Metrics:
+## Metrics:
 
 https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 
