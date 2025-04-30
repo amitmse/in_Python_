@@ -372,9 +372,13 @@ Maximum likelihood estimation (MLE):
 	- inconclusive: second derivative = 0 at a critical point
 
 		f(x) = x² - 4x + 5
+
 		first derivative: f'(x) = 2x - 4
+
 		Set f'(x) = 0 and solve for x: 2x - 4 = 0 => x = 2. This is a critical point.
+
 		second derivative: f''(x) = 2
+
     		Evaluate f''(x) at x = 2: f''(2) = 2. Since f''(2) > 0, the function has a local minimum at x = 2.
 
 - Newton Raphson without second derivative
