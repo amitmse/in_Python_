@@ -59,6 +59,7 @@ Odds of an event occurring in one group compared to another, provides a measure 
 
 ![image](https://github.com/user-attachments/assets/7eadb191-bea5-4c59-adc6-1c4b4ebf04c8)
 
+
 	- Log odds output ranges between −∞ to ∞.
 	- Logit established a linear relationship between Predictors and Target.
 	- The logit function takes a probability (0 to 1) and converts it back into a linear combination of predictors.
