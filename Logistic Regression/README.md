@@ -134,9 +134,10 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#logistic-dist
 		= Product[(Pr^Yi){(1-Pr)^(1-Yi)}]
 
 Maximum likelihood estimation (MLE):
-- Logistic Regression uses Maximum likelihood estimation finds parameter values that maximize the likelihood of making the observations given the parameters. Linear regression uses Ordinary Least Squares (OLS) which finds parameter values that minimizing the error.
+- Logistic Regression uses Maximum likelihood estimation finds parameter values that maximize the likelihood of making the observations given the parameters.
+- Linear regression uses Ordinary Least Squares (OLS) which finds parameter values that minimizing the error.
 - MLE allows more flexibility because it has fewer restrictions.  
-    
+  
 -----------------------------------------------------------------------------------------------------------------------
 
 ### Log Likelihood Function:
@@ -202,15 +203,26 @@ Maximum likelihood estimation (MLE):
 
 ![image](https://github.com/user-attachments/assets/ff5e905d-df2d-4e38-8d9e-503498cfdd62)
 
-- Regression: Loss function is mean squared loss. only positive values (squared loss) are picked to obtain positive, and squaring is done to obtain the model’s real performance. When positive and negative numbers are added together, the result could be 0. This will inform the model that, although the net error is zero and it is operating well, it is still operating poorly. Larger errors are likewise given more weight when squaring. Squaring the error will penalize the model more and help it approach the minimal value faster when the cost function is far from its minimal value.
+- Regression:
+	- Loss function is mean squared loss.
+	- Only positive values (squared loss) are picked to obtain positive, and squaring is done to obtain the model’s real performance.
+	- When positive and negative numbers are added together, the result could be 0.
+	- This informs the model that, although the net error is zero and it is operating well, it is still operating poorly.
+	- Larger errors are likewise given more weight when squaring. Squaring the error will penalize the model more and help it approach the minimal value faster when the cost function is far from its minimal value.
 
 ![image](https://github.com/user-attachments/assets/ea0c26a4-caa1-4173-8b66-e14ec8ddc15c)
   
-- Mean of Absolute of error (MAE) is difference between the actual and the predicted prediction by the model. The absolute of residuals is done to convert negative values to positive values. Mean is taken to make the loss function independent of number of datapoints in the training set. MAE is generally less preferred over MSE as it is harder to calculate the derivative of the absolute function because absolute function is not differentiable at the minima.
+- Mean of Absolute of error (MAE):
+	- It's difference between the actual and the predicted prediction by the model.
+	- The absolute of residuals is done to convert negative values to positive values.
+	- Mean is taken to make the loss function independent of number of datapoints in the training set.
+	- MAE is generally less preferred over MSE as it is harder to calculate the derivative of the absolute function because absolute function is not differentiable at the minima.
 
 ![image](https://github.com/user-attachments/assets/8e1e15ef-30bf-4892-8030-09d08a5638b2)
 
-- Classification: loss function is cross entropy loss. Cross-entropy, also known as logarithmic loss or log loss or Negative Log Likelihood.
+- Classification:
+	- loss function is cross entropy loss.
+	- Cross-entropy, also known as logarithmic loss or log loss or Negative Log Likelihood.
 
 ![image](https://github.com/user-attachments/assets/ea2009ca-5cac-4334-af54-bfd6226fb7af)
 
@@ -222,10 +234,20 @@ Maximum likelihood estimation (MLE):
 
 ![image](https://github.com/user-attachments/assets/ecba556f-d6e5-4dd2-a710-d0c3245d8c82)
 
-- Vanishing and Exploding Gradients mostly happes in deeper neural networks, particular recurrent neural networks. Activation functions, like the logistic function (sigmoid), have a huge difference between the variance of their inputs and the outputs. In simpler words, they shrink and transform a larger input space into a smaller output space between the range of [0,1]. Cen be fixed with proper weight initialization, activation functions like ReLU, gradient clipping, and batch normalization. 
-	- Vanishing gradients: This occurs when the gradient is too small. As move backwards during backpropagation, the gradient continues to become smaller, causing the earlier layers in the network to learn more slowly than later layers. When this happens, the weight parameters update until they become insignificant—i.e. 0—resulting in an algorithm that is no longer learning. The parameters of the higher layers change significantly whereas the parameters of lower layers would not change much (or not at all). The model weights may become 0 during training. The model learns very slowly and perhaps the training stagnates at a very early stage just after a few iterations. 
+- Vanishing and Exploding Gradients mostly happes in deeper neural networks, particular recurrent neural networks. Activation functions, like the logistic function (sigmoid), have a huge difference between the variance of their inputs and the outputs. In simpler words, they shrink and transform a larger input space into a smaller output space between the range of [0,1]. Cen be fixed with proper weight initialization, activation functions like ReLU, gradient clipping, and batch normalization.
 
-	- Exploding gradients: This happens when the gradient is too large, creating an unstable model. In this case, the model weights will grow too large, and they will eventually be represented as NaN. One solution to this issue is to leverage a dimensionality reduction technique, which can help to minimize complexity within the model. There is an exponential growth in the model parameters. The model weights may become NaN during training. The model experiences avalanche learning.
+- Vanishing gradients:
+	- This occurs when the gradient is too small.
+	- As move backwards during backpropagation, the gradient continues to become smaller, causing the earlier layers in the network to learn more slowly than later layers.
+	- When this happens, the weight parameters update until they become insignificant—i.e. 0—resulting in an algorithm that is no longer learning.
+	- The parameters of the higher layers change significantly whereas the parameters of lower layers would not change much (or not at all).
+	- The model weights may become 0 during training. The model learns very slowly and perhaps the training stagnates at a very early stage just after a few iterations. 
+
+- Exploding gradients:
+	- This happens when the gradient is too large, creating an unstable model.
+	- In this case, the model weights will grow too large, and they will eventually be represented as NaN.
+	- One solution to this issue is to leverage a dimensionality reduction technique, which can help to minimize complexity within the model.
+	- There is an exponential growth in the model parameters. The model weights may become NaN during training. The model experiences avalanche learning.
    
 ---------------------------------------------------------------------------------------------------
 
@@ -235,9 +257,17 @@ Maximum likelihood estimation (MLE):
 	- It reads all the records into memory from the disk.
 	- After calculating sigma for one iteration, we move one step further, and repeat the process.
 
-2. Mini-batch Gradient Descent: It is a widely used algorithm that makes faster and accurate results. The dataset, here, is clustered into small groups of ‘n’ training datasets hence it's faster. In every iteration, it uses a batch of ‘n’ training datasets to compute the gradient of the cost function. It reduces the variance of the parameter updates, which can lead to more stable convergence. It can also make use of a highly optimized matrix that makes computing of the gradient very efficient.
+2. Mini-batch Gradient Descent: 
+	- It is a widely used algorithm that makes faster and accurate results.
+	- The dataset, here, is clustered into small groups of ‘n’ training datasets hence it's faster. 
+	- In every iteration, it uses a batch of ‘n’ training datasets to compute the gradient of the cost function. 
+	- It reduces the variance of the parameter updates, which can lead to more stable convergence. 
+	- It can also make use of a highly optimized matrix that makes computing of the gradient very efficient.
 
-3. Stochastic Gradient Descent: Stochastic gradient descent used for faster computation. First, it randomizes the complete dataset, and then uses only one training example in every iteration to calculate the gradient. Its benifical for huge datasets.
+3. Stochastic Gradient Descent: 
+	- Stochastic gradient descent used for faster computation. 
+	- First, it randomizes the complete dataset, and then uses only one training example in every iteration to calculate the gradient. 
+	- Its benifical for huge datasets.
 
 ![image](https://github.com/user-attachments/assets/4c300ff5-7a12-4625-84b4-1c7bf4aafa7d)
 
@@ -323,7 +353,7 @@ Maximum likelihood estimation (MLE):
 
 - The second derivative is used to determine whether a critical point of a function is a local minimum, maximum, or neither. A positive second derivative at a critical point indicates a local minimum, while a negative second derivative indicates a local maximum.
 - Find Critical Points: Start by finding the points where the first derivative of the function is equal to zero. These points are potential candidates for local minima or maxima.
--  Second Derivative Test: second derivative of the function at each of the critical points
+- Second Derivative Test: second derivative of the function at each of the critical points
 	- minimum: second derivative > 0 at a critical point
 	- maximum: second derivative < 0 at a critical point
 	- inconclusive: second derivative = 0 at a critical point
