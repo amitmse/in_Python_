@@ -55,6 +55,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 - XGBoost builds a series of trees to make predictions, and each tree corrects errors made by the previous ones. 
 - Offers speed and performance both.
 - Minimizes a loss function: mean squared error for regression and the log loss for classification.
+- Shrinkage (Learning Rate): Each tree's contribution is modulated, reducing the impact of outliers. This mechanism is designed to improve the balance between model complexity and learning speed. 
 - Regularization: Controls model complexity to prevent overfitting. L1 (Lasso) and L2 (Ridge) regularization terms are added to the objective function. This penalizes overly complex trees to avoid overfitting by discouraging the overly deep or detailed trees.
 	- Ridge (L2):
 		- RSS + α * (sum of square of coefficients) 
@@ -68,19 +69,14 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 		- Lasso along with shrinking coefficients, also performs feature selection. 
 
 https://github.com/amitmse/in_Python_/blob/master/Regularization/README.md#regularization
-
-- Shrinkage (Learning Rate): Each tree's contribution is modulated, reducing the impact of outliers. This mechanism is designed to improve the balance between model complexity and learning speed. 
 		
 - Cross-Validation: XGBoost internally performs cross-validation tasks to fine-tune hyperparameters, such as the number of trees, boosting round, etc.
-
 - The algorithm minimizes a predefined loss function by following the steepest descent in the model's parameter space.
- 
 - Split: Histogram based approach to find best split and reduces complexity. Computational efficiency via split finding algorithms using approximate tree boosting. Employs the exact or approximate greedy algorithm for split discovery. Splits up to the specified max_depth and then starts pruning back the tree, removing splits beyond which there is no positive gain. Gini index or information gain are used to evaluate to split. XGBoost employs a greedy search, evaluating each possible split and choosing the one that results in the greatest gain in the split quality metric.  
     
 - Early stopping
  
 - It allows to specify whether the model should have a positive or negative relationship with each feature, implementing business logic into the model.
-
 - Feature Importance: Mechanisms to rank and select features, empowering better decision-making. Provides a way to calculate feature importance scores based on the number of times a feature is used in the model and how much it contributes to reducing the objective function.
 
 Different ways to get feature importance
