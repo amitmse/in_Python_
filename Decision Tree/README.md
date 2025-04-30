@@ -85,7 +85,7 @@ Gini index says, if we select two items from a population at random then they mu
 
 4. Above is Gini and below is for Gini Index (1-gini)
 
-	https://github.com/amitmse/in_Python_/tree/master/Random_Forest
+https://github.com/amitmse/in_Python_/tree/master/Random_Forest#gini-importance--mean-decrease-in-impurity-mdi-
 	
 	- Gini Index:
 		- for each branch in split:
