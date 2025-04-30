@@ -79,7 +79,7 @@ Odds of an event occurring in one group compared to another, provides a measure 
 	- logit(p) => Log(Odds) => log[p/(1-P)] => [log(p) - log(1-P)] => logit(p)
 	- log[p/(1-P)] = a + bX (Logistic Model)
 	  Anti Log is exponential function which converts logit to sigmoid for probability.
-	- inverse of logit(p)= 1/[1+exp^(a+bX)] (output is probability between 0 to 1)
+	- inverse of logit(p)= 1/[1+exp^-(a+bX)] (output is probability between 0 to 1)
   
 ----------------------------------------------------------------------------------------------------------------------- 
 ## Statistical Derivation of Logistic Regression:
