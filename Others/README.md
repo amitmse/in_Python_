@@ -1319,6 +1319,32 @@ https://github.com/amitmse/in_Python_/blob/master/Others/Example.xlsx
 
 --------------------------------------------------------------------------------------
 
+# Mean Decrease in Accuracy (MDA) / Accuracy-based importance / Permutation Importance
+
+- The values of the variable in the out-of-bag-sample are randomly shuffled, keeping all other variables the same. Finally, the decrease in prediction accuracy on the shuffled data is measured. 
+- The mean decrease in accuracy across all trees is reported. 
+- For example, age is important for predicting that a person earns over $50,000, but not important for predicting a person earns less. Intuitively, the random shuffling means that, on average, the shuffled variable has no predictive power. This importance is a measure of by how much removing a variable decreases accuracy, and vice versa — by how much including a variable increases accuracy.
+- Note that if a variable has very little predictive power, shuffling may lead to a slight increase in accuracy due to random noise. This in turn can give rise to small negative importance scores, which can be essentially regarded as equivalent to zero importance.	
+- This is most interesting measure, because it is based on experiments on out-of-bag(OOB) samples, via destroying the predictive power of a feature without changing its marginal distribution.
+- Percentage increase in mean square error is analogous to accuracy-based importance, and is calculated by shuffling the values of the out-of-bag samples.
+
+- ** Scikit-learn doesn’t implement this measure, Python user may not even know it exists.**
+
+			from sklearn.datasets import load_boston
+			from sklearn.ensemble import RandomForestRegressor
+			import numpy as np
+			#Load boston housing dataset as an example
+			boston = load_boston()
+			X = boston["data"]
+			Y = boston["target"]
+			names = boston["feature_names"]
+			rf = RandomForestRegressor()
+			rf.fit(X, Y)
+			print "Features sorted by their score:"
+			print sorted(zip(map(lambda x: round(x, 4), rf.feature_importances_), names), reverse=True)
+
+--------------------------------------------------------------------------------------
+
 - Accuracy: Measures the overall proportion of correct predictions. 
 - Precision: Measures the proportion of true positives among all positive predictions.
 - Recall (Sensitivity): Measures the proportion of actual positives that are correctly identified.
