@@ -65,13 +65,13 @@ Odds of an event occurring in one group compared to another, provides a measure 
 	- One unit increase in logit means exactly is still challenging. Thus, convert regression coefficients to something easier for interpretation, like odds ratios. This can be done easily by exponentiating the coefficient.
 	- Log odds with a negative value indicating the odds of failure and a positive value showing higher chances of success.
 
+![image](https://github.com/user-attachments/assets/7eadb191-bea5-4c59-adc6-1c4b4ebf04c8)
+
 - Sigmoid function: 1/(1+exp^-y)
   
 	- The inverse of the logit function.
 	- The sigmoid function maps arbitrary real values back to the range [0, 1].
 	- Generalised form of logit function. For probability p, sigmoid(logit(p)) = p. 
-
-![image](https://github.com/user-attachments/assets/7eadb191-bea5-4c59-adc6-1c4b4ebf04c8)
    
 - Cost Function: [{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}]
 
