@@ -939,10 +939,25 @@ Key Takeaways:
 
 ----------------------------------------------------------------------------
 
-- TSS 		= SUM[y-mean(y)]^2
-- RSS 		= SUM[y-predicted(y)]^2
-- R Squared	= 1.0 - (RSS/TSS)
-- VIF 		= 1.0 / (1.0 - R Squared)
+- Total Sum of Squares (TSS) = SUM[ y - mean(y) ]^2
+	- the total variation in the dependent variable.
+	- TSS = ESS + RSS  	(ESS:Explained Sum of Squares)
+
+- Residual Sum of Squares (RSS) = SUM[ y - predicted(y) ]^2
+	- the variation not explained by the model.
+	- RSS is essentially the error or residual component of the model.
+
+- R Squared (Coefficient of Determination) = 1.0 - (RSS/TSS)
+	- It represents the proportion of the variance in the dependent variable that is explained by the independent variables.
+
+- Variance Inflation Factor (VIF) = 1.0 / (1.0 - R Squared)
+	- Detect multicollinearity
+	- VIF = 1/T  (T refers to Tolerance = 1 – R² which is unexplained portion)
+		R^2 is regressing each independent variable on the other independent variables.
+	- Tolerance: It measures the influence of one independent variable on all other independent variables.
+		- It measures of how much a predictor variable's variance is not explained (1 – R²) by the other predictor variables in the model. 
+		- It essentially assesses the degree to which a variable is independent of the others.
+	- Solution: Transformations of independent variables
 
 ----------------------------------------------------------------------------
 
@@ -963,7 +978,30 @@ Key Takeaways:
 
 ----------------------------------------------------------------------------
 
-- Gini/Somer’s D = [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+- Weight of Evidence (WoE): Log( Percentage of event / Percentage of non-event )
+	- Log: refer to natural log
+	- Percentage of event: Bin wise count of event / total event.
+	- WoE measures the predictive power of a feature (at bin and overall level).
+	- Useful in logistic regression as WoE variable and log-odds are in log space. 
+
+-Information Value: WoE * (Percentage of event - Percentage of non-event)
+	- Limitation: insufficient sample size
+
+Python code: https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Information_value_calculation.py
+
+----------------------------------------------------------------------------
+
+- Gini / Somer’s D = [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
+	- Somers' D:	
+		- Somers' D assumes that both the predictor and outcome variables have ordinal properties, meaning their values can be meaningfully ranked.
+		- Measure the strength and direction of association between predictor and a binary outcome.
+		- When the outcome variable has more than two categories (polytomous), Somers' D can underestimate the true magnitude of the association.
+
+	- Gini:
+		- For measuring a model's ability to discriminate between classes.
+		- It's problematic when dealing with imbalanced datasets or when the goal is to understand the performance of the model on specific subgroups within the data.
+		- It's global measure of model performance, and it doesn't provide information on how the model performs on specific subgroups or on the performance of the model across different threshold values.
+   
 - Divergence 	= [(meanG – meanB)^2] / [0.5(varG + varB)]      [meanG = mean of score only for good, varB= variance of score only for bad ]
 
 ----------------------------------------------------------------------------
