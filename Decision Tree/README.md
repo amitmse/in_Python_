@@ -59,15 +59,17 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 ## Gini Index:
 Gini index says, if we select two items from a population at random then they must be of same class and probability for this is 1 if population is pure.
 
+- Gini Index and Gini Impurity refer to the same.
 - Gini Index = (1 - Gini)
-
 - It works with categorical target variable “Success” or “Failure”.
 - It performs only Binary splits
 - Higher the value of Gini higher the homogeneity.
 - CART (Classification and Regression Tree) uses Gini method to create binary splits.
 
-### Steps to Calculate Gini for a split: 	
+### Steps to Calculate Gini for a split:
+
 1. Calculate Gini for sub-nodes, using formula sum of square of probability for success and failure (p^2+q^2).
+	- Gini = (p^2+q^2)
 2. Calculate Gini for split using weighted Gini score of each node of that split
 3. Example:
 	- Total Student = 30 and only 15 play cricket(50%)
@@ -87,11 +89,15 @@ Gini index says, if we select two items from a population at random then they mu
 
 	- Above, we can see that Gini score for Split on Gender is higher (0.59> 0.51) than Class so node will split on Gender
 
-4. Above is Gini and below is for Gini Index (1-gini)
+4. Above is Gini and below is for Gini Index (1-Gini)
 
 https://github.com/amitmse/in_Python_/tree/master/Random_Forest#gini-importance--mean-decrease-in-impurity-mdi-
-	
-	- Gini Index: (1-gini)
+
+	- Gini and Gini Index based approach reach to same conclusion. Only difference is
+		- From Gini based approach we select variable based on higher value.
+  		- While from Gini Index based approach we select lowest one as it's based on Gini Impurity.
+
+	- Gini Index: (1 - Gini)
 		- for each branch in split:
 			- Calculate percent branch represents #Used for weighting
 			- for each class in branch:
