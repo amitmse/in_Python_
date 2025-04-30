@@ -379,16 +379,16 @@ Maximum likelihood estimation (MLE):
 
 - Newton Raphson without second derivative
   
-	Xn+1 	= Xn - f(X)/f'(X) 
-		(Xn is initail guess, f'(X) first derivative)
-	f(X) 	= X^2 - 8  
-	f'(X)	= 2X  
-	X1	= 3 (initail guess)  
-	X2	= X1 - f(X)/f'(X)  
-		= 3  - [( 3^2 - 8 )/ 2*3 ]   = 3  - (1/6)  = 18-1/6  
-	X2	= 17/6
-	X3	= X2 - f(X2)/f'(X2)  = 17/6 - [(17/6)^2 - 8] / [2(17/6)] 
-	X3	= 2.828
+			Xn+1 	= Xn - f(X)/f'(X) 
+				(Xn is initail guess, f'(X) first derivative)
+			f(X) 	= X^2 - 8  
+			f'(X)	= 2X  
+			X1	= 3 (initail guess)  
+			X2	= X1 - f(X)/f'(X)  
+				= 3  - [( 3^2 - 8 )/ 2*3 ]   = 3  - (1/6)  = 18-1/6  
+			X2	= 17/6
+			X3	= X2 - f(X2)/f'(X2)  = 17/6 - [(17/6)^2 - 8] / [2(17/6)] 
+			X3	= 2.828
     
 -----------------------------------------------------------------------------------------------------------------------
 
