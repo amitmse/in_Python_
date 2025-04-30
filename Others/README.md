@@ -1248,8 +1248,6 @@ SHapley value =  sum [weight * (prediction with feature - prediction without fea
 - SHAP assumes feature independence, which may not always hold true in real-world datasets. The aggregation of individual SHAP values to provide global insights can also be a complex task, requiring careful interpretation and consideration of the underlying data and model characteristics.
 -  Computationally expensive, especially with many features (where feature interactions are complex)
 
-https://github.com/amitmse/in_Python_/tree/master/Boosting#shapley-additive-explanations-shap
-
 https://github.com/amitmse/in_Python_/blob/master/Others/Example.xlsx
 
 ------------------------------------------------------------------------------------------------------------
