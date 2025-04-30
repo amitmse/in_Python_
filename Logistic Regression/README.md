@@ -408,12 +408,20 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 	- Square root of the diagonal elements of the covariance matrix. 	[Covariance Matrix = Inverse(Hessian matrix)]
 	- SQRT(Diagonal(Covariance Matrix))
  
-- AIC: (No of variable * 2) - (2 * -Log Likelihood)
+- Akaike Information Criterion (AIC): (No of variable * 2) - (2 * -Log Likelihood)
 	- Log Likelihood (log loss) is the cost function.
 	- "2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. 
 	- Ordinary least squares minimizes RSS and LR minimizes deviance.
+
+	- AIC balances the model's goodness of fit with its complexity (number of parameters). Models with more parameters are penalized, as they are more likely to overfit the training data.   
+	- AIC is used to compare different models and select the best one.
+	- The model with the lower AIC value is considered a better fit to the data.
+	- AIC is a relative measure of model fit, meaning it only indicates which model is better relative to other models being considered, not whether any of the models are actually a good fit.
+	- AIC is most useful when comparing similar models (e.g., different logistic regressions with varying predictors). It might not be as robust when comparing drastically different model types.
  
-- BIC: {No of variable * log(No of obs)} - (2 * -Log Likelihood)
+- Bayesian Information Criterion (BIC): {No of variable * log(No of obs)} - (2 * -Log Likelihood)
+	- Similar to AIC, BIC is also used to compare models based on their goodness of fit and complexity.
+	- BIC places a stronger penalty on model complexity compared to AIC,
 
 - Area under curve / C statistics: Percent Concordant + 0.5 * Percent Tied
 	- The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.
