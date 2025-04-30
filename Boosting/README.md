@@ -56,6 +56,16 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 - Offers speed and performance both.
 - Minimizes a loss function: mean squared error for regression and the log loss for classification.
 - Regularization: Controls model complexity to prevent overfitting. L1 (Lasso) and L2 (Ridge) regularization terms are added to the objective function. This penalizes overly complex trees to avoid overfitting by discouraging the overly deep or detailed trees.
+	- Ridge (L2):
+		- RSS + α * (sum of square of coefficients) 
+		- Adds penalty equivalent to the square of the magnitude of coefficients.
+		- Eliminates multicollinearity
+		- 
+	- Lasso (L1):
+		- RSS + α * (sum of absolute value of coefficients)
+		- Adds penalty equivalent to the absolute value of the magnitude of coefficients
+		- Differs from ridge regression only in penalizing the high coefficients.
+		- Lasso along with shrinking coefficients, also performs feature selection. 
 
 https://github.com/amitmse/in_Python_/blob/master/Regularization/README.md#regularization
 
