@@ -54,7 +54,9 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 	- odds = ∞ when p = 1	[ when denominator is very small number]
 
 Odds of an event occurring in one group compared to another, provides a measure of the strength of association between the predictor and the outcome.
-  
+
+--------------------------------------------------------  
+
 - Log of Odds: Also called Logit.
 	- Log odds output ranges between −∞ to ∞.
 	- Logit established a linear relationship between Predictors and Target.
@@ -67,6 +69,8 @@ Odds of an event occurring in one group compared to another, provides a measure 
 
 ![image](https://github.com/user-attachments/assets/7eadb191-bea5-4c59-adc6-1c4b4ebf04c8)
 
+--------------------------------------------------------  
+
 - Sigmoid function:
 	- The inverse of the logit function.
 	- The sigmoid function maps arbitrary real values back to the range [0, 1].
@@ -74,6 +78,7 @@ Odds of an event occurring in one group compared to another, provides a measure 
 
 ![image](https://github.com/user-attachments/assets/d26ed7d0-e3e0-41fd-a166-585f9bde8ea9)
 
+--------------------------------------------------------  
    
 - Cost Function: [{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}]
 	- Cost Function quantifies the error between predicted values and actual values.
@@ -81,6 +86,7 @@ Odds of an event occurring in one group compared to another, provides a measure 
    
 ![image](https://github.com/user-attachments/assets/5e6c38a6-1616-409f-97d4-f966f75b402d)
 
+--------------------------------------------------------  
 
 - Logistic regression estimates an unknown probability for any given linear combination (log odds #2Assumptions) of the independent variables.
   
@@ -90,6 +96,7 @@ Odds of an event occurring in one group compared to another, provides a measure 
 	- inverse of logit(p)= 1/[1+exp^-(a+bX)] (output is probability between 0 to 1)
   
 ----------------------------------------------------------------------------------------------------------------------- 
+
 ## Statistical Derivation of Logistic Regression:
 ### Model Equation:
 		
