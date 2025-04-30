@@ -47,20 +47,34 @@ https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/Decision_Trees
 
 ### Algorithms
 
-- Iterative Dichotomiser 3 (ID3): Developed by Ross Quinlan, it uses entropy and information gain to evaluate candidate splits.
-- C4.5: A later iteration of ID3, developed by Quinlan, it evaluates split points using information gain or gain ratios.
-- Classification And Regression Trees (CART): Introduced by Leo Breiman, it uses Gini impurity to identify the ideal attribute to split.
-- Chi-Squared automatic interaction detection (CHAID): Performs multi-level splits in classification trees, using the F-test for attribute selection.
+- Iterative Dichotomiser 3 (ID3):
+	- Developed by Ross Quinlan, it uses entropy and information gain to evaluate candidate splits.
+	- Uses Information Gain.
+
+- C4.5:
+	- A later iteration of ID3, developed by Quinlan, it evaluates split points using information gain or gain ratios. 
+	- Uses Information Gain.
+
+- Chi-Squared automatic interaction detection (CHAID): 
+	- Performs multi-level splits in classification trees, using the F-test for attribute selection. 
+	- Uses Chi-Square.
+
+- Classification And Regression Trees (CART):
+	- Introduced by Leo Breiman, it uses Gini impurity to identify the ideal attribute to split. 
+	- Uses Gini Index.
 
 -----------------------------------------------------------------------------------------------------
 
 ## Variable Selection method:
 
 ## Gini Index:
-Gini index says, if we select two items from a population at random then they must be of same class and probability for this is 1 if population is pure.
+- Gini index says, if we select two items from a population at random then they must be of same class and probability for this is 1 if population is pure.
+- It's preferred for balanced datasets.
+- Simple to calculate.
 
 - Gini Index and Gini Impurity refer to the same.
 - Gini Index = (1 - Gini)
+
 - It works with categorical target variable “Success” or “Failure”.
 - It performs only Binary splits
 - Higher the value of Gini higher the homogeneity.
@@ -111,8 +125,11 @@ https://github.com/amitmse/in_Python_/tree/master/Random_Forest#gini-importance-
 ----------------------------------------------------------------------------
 
 ### Information Gain
+- Information Gain is preferred for imbalanced dataset. It's used in algorithms like ID3 and C4.5.
+- Computationally intensive.
 
 - We can say that less impure node requires less information to describe it and more impure node requires more information. Information theory has a measure to define this degree of disorganization in a system, which is called Entropy. Lower Entropy is better. If the sample is completely homogeneous, then the entropy is zero and if the sample is an equally divided it has entropy of one. 
+
 - Entropy can be calculated using formula:   - P * Log2(P) - Q * Log2(Q)
 	- Here P and Q is probability of success and failure respectively in that node. 
 	- Entropy is also used with categorical target variable. 
@@ -145,6 +162,7 @@ https://github.com/amitmse/in_Python_/tree/master/Random_Forest#gini-importance-
 
 ### Chi-Square 
 
+- Chi-square is particularly useful for categorical target variables and can handle multiple splits at a node.
 - It is an algorithm to find out the statistical significance between the differences between sub-nodes and parent node. We measures it by sum of squares of standardized differences between observed and expected frequencies of target variable.
 - It works with categorical target variable “Success” or “Failure”.
 - It can performs two or more splits
