@@ -113,7 +113,7 @@ https://github.com/amitmse/in_Python_/tree/master/Random_Forest#gini-importance-
 ### Information Gain
 
 - We can say that less impure node requires less information to describe it and more impure node requires more information. Information theory has a measure to define this degree of disorganization in a system, which is called Entropy. Lower Entropy is better. If the sample is completely homogeneous, then the entropy is zero and if the sample is an equally divided it has entropy of one. 
-- Entropy can be calculated using formula:   - P*Log2(P) - Q*Log2(Q)
+- Entropy can be calculated using formula:   - P * Log2(P) - Q * Log2(Q)
 	- Here P and Q is probability of success and failure respectively in that node. 
 	- Entropy is also used with categorical target variable. 
 	- It chooses the split which has lowest entropy compared to parent node and other splits.			
