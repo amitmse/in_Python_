@@ -60,7 +60,7 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 		- RSS + α * (sum of square of coefficients) 
 		- Adds penalty equivalent to the square of the magnitude of coefficients.
 		- Eliminates multicollinearity
-		- 
+
 	- Lasso (L1):
 		- RSS + α * (sum of absolute value of coefficients)
 		- Adds penalty equivalent to the absolute value of the magnitude of coefficients
