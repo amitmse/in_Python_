@@ -421,7 +421,7 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
  
 - Bayesian Information Criterion (BIC): {No of variable * log(No of obs)} - (2 * -Log Likelihood)
 	- Similar to AIC, BIC is also used to compare models based on their goodness of fit and complexity.
-	- BIC places a stronger penalty on model complexity compared to AIC,
+	- BIC places a stronger penalty on model complexity compared to AIC
 
 - Area under curve / C statistics: Percent Concordant + 0.5 * Percent Tied
 	- The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.
