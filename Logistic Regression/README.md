@@ -230,7 +230,9 @@ Maximum likelihood estimation (MLE):
 
 ### Challenges with Gradient Descent
 
-- Local minima and saddle points: For convex problems, gradient descent can find the global minimum with ease, but as nonconvex problems emerge, gradient descent can struggle to find the global minimum, where the model achieves the best results.
+- Local minima and saddle points:
+	- For convex problems, gradient descent can find the global minimum with ease, but as nonconvex problems emerge, gradient descent can struggle to find the global minimum, where the model achieves the best results.
+	- Saddle point: a critical point of a function where the gradient is zero, but the point is neither a local maximum nor a local minimum
 
 ![image](https://github.com/user-attachments/assets/ecba556f-d6e5-4dd2-a710-d0c3245d8c82)
 
