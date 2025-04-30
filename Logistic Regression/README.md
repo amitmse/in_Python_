@@ -77,6 +77,7 @@ Odds of an event occurring in one group compared to another, provides a measure 
    
 - Cost Function: [{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}]
 	- Cost Function quantifies the error between predicted values and actual values.
+  	- Guiding the optimization process to find the best model parameters.
    
 ![image](https://github.com/user-attachments/assets/5e6c38a6-1616-409f-97d4-f966f75b402d)
 
