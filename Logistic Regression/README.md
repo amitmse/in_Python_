@@ -409,7 +409,8 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 	- SQRT(Diagonal(Covariance Matrix))
  
 - AIC: (No of variable * 2) - (2 * -Log Likelihood)
-	- "2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. Ordinary least squares minimizes RSS and LR minimizes deviance.
+	- "2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. 
+	- Ordinary least squares minimizes RSS and LR minimizes deviance.
  
 - BIC: {No of variable*log(No of obs)} - (2*-Log Likelihood)
 
