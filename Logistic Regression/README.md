@@ -55,9 +55,11 @@ https://github.com/amitmse/in_Python_/blob/master/Logistic%20Regression/Logistic
 
 Odds of an event occurring in one group compared to another, provides a measure of the strength of association between the predictor and the outcome.
   
-- Log of Odds: log (p/(1-P))  	[Log output ranges between −∞ to ∞]
-  
-	- Log of Odds is also called logit function.
+- Log of Odds: Also called logit function.
+
+![image](https://github.com/user-attachments/assets/7eadb191-bea5-4c59-adc6-1c4b4ebf04c8)
+
+	- Log odds output ranges between −∞ to ∞.
 	- Logit established a linear relationship between Predictors and Target.
 	- The logit function takes a probability (0 to 1) and converts it back into a linear combination of predictors.
 	- Converting a sigmoid function to logit for an easier interpretation of the output results in the logistic model equation.
