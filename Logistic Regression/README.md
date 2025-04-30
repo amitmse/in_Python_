@@ -402,22 +402,21 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 	- standard deviation of a model variable get it from proc means 'Std Dev'
 	- Pi / SQRT(3): standard deviation of standard logistic regression =  1.81379936423422
 	- Value of Pi: 3.14159265358979 	SQRT of 3: 1.73205080756888 
+	- Correlation(x,y): covariance(x,y) / [variance(x)*variance(y)]
    
 - Standard Error of Beta: Square root of variance of beta coefficient.
 	- Square root of the diagonal elements of the covariance matrix. 	[Covariance Matrix = Inverse(Hessian matrix)]
 	- SQRT(Diagonal(Covariance Matrix))
  
-- Correlation(x,y): covariance(x,y) / [variance(x)*variance(y)]
- 
-- AIC: (No of variable*2) - (2*-Log Likelihood)
-  
-"2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. Ordinary least squares minimizes RSS and LR minimizes deviance.
+- AIC: (No of variable * 2) - (2 * -Log Likelihood)
+	- "2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. Ordinary least squares minimizes RSS and LR minimizes deviance.
  
 - BIC: {No of variable*log(No of obs)} - (2*-Log Likelihood)
 
 - Area under curve / C statistics: Percent Concordant + 0.5 * Percent Tied
-  
-(The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.) True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate (100-Specificity : X axis) for different cut-off points. Each point on the ROC curve represents a sensitivity/specificity pair corresponding to a particular decision threshold. 
+	- The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.
+	- True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate (100-Specificity : X axis) for different cut-off points. 
+	- Each point on the ROC curve represents a sensitivity/specificity pair corresponding to a particular decision threshold. 
 
 - Somer’s D (Gini): [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
  
