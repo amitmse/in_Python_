@@ -72,8 +72,14 @@ Odds of an event occurring in one group compared to another, provides a measure 
 	- The inverse of the logit function.
 	- The sigmoid function maps arbitrary real values back to the range [0, 1].
 	- Generalised form of logit function. For probability p, sigmoid(logit(p)) = p. 
+
+![image](https://github.com/user-attachments/assets/d26ed7d0-e3e0-41fd-a166-585f9bde8ea9)
+
    
 - Cost Function: [{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}]
+
+![image](https://github.com/user-attachments/assets/5e6c38a6-1616-409f-97d4-f966f75b402d)
+
 
 - Logistic regression estimates an unknown probability for any given linear combination (log odds #2Assumptions) of the independent variables.
   
