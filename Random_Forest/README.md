@@ -179,6 +179,7 @@ https://docs.h2o.ai/h2o/latest-stable/h2o-docs/variable-importance.html
 
 ## Gini Importance / Mean Decrease in Impurity (MDI) :
 
+- Gini Index and Gini Impurity refer to the same.
 - Gini Impurity is the probability of incorrectly classifying a randomly chosen element in the dataset if it were randomly labeled according to the class distribution in the dataset. It’s calculated as 
 - Gini impurity index (G) = P * (1 - P)
 - Importance = G (parent node) - G (child node 1) - G (child node 2)
