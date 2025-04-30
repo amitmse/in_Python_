@@ -22,7 +22,6 @@
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/structure.PNG)
 
-https://github.com/amitmse/in_Python_/blob/master/Decision%20Tree/structure.PNG
 
 -----------------------------------------------------------------------------------------------------
 ## Decision Trees in Python:
