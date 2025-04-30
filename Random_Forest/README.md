@@ -164,9 +164,7 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#grid-search-r
 	- LIME: Local Interpretable Model-Agnostic Explanations.  
 	- SHAP: SHapley Additive exPlanations.
 
-  	Details are in https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-importance
-
-https://docs.h2o.ai/h2o/latest-stable/h2o-docs/variable-importance.html
+Details are in https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-importance
 
 ## Mean Decrease in Accuracy (MDA) / Accuracy-based importance / Permutation Importance:
 
