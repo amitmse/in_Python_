@@ -141,10 +141,10 @@ https://github.com/amitmse/in_Python_/tree/master/Random_Forest#gini-importance-
 	- Let’s use this method to identify best split for student example. 	Total=30, PC=15, NPC=15, P=PC/Total, Q=NPC/Total			
 	- Entropy for parent node = -(15/30)log2(15/30) – (15/30)log2(15/30) 	= 1. 	Here 1 shows that it is a impure node. 
 	- Entropy for Female node = -(2/10)log2(2/10) – (8/10)log2(8/10) 	= 0.72 and for male node   = -(13/20)log2(13/20) – (7/20)log2(7/20) 	= 0.93.
-	- Entropy for split Gender = Weighted entropy of sub-nodes [10 Female, 20 Male] = (10/30)*0.72 + (20/30)*0.93 					= 0.86 
+	- Entropy for split Gender = Weighted entropy of sub-nodes [10 Female, 20 Male] = (10/30) * 0.72 + (20/30) * 0.93				= 0.86 
 	- Entropy for Class IX node = -(6/14) log2 (6/14) – (8/14) log2 (8/14) 	= 0.99 and for Class X node  = -(9/16) log2 (9/16) – (7/16) log2 (7/16) = 0.99
-	- Entropy for split Class =  (14/30)*0.99 + (16/30)*0.99 		= 0.99
-	- Above you can see that entropy of split on Gender is lower compare to Class so we will again go with split Gender. 
+	- Entropy for split Class =  (14/30) * 0.99 + (16/30) * 0.99 		= 0.99
+	- Above you can see that entropy of split on Gender is lower compare to Class so we will again go with split Gender.
 	- We can derive information gain from entropy as 1- Entropy.
 
 - Entropy:
@@ -208,17 +208,18 @@ https://github.com/amitmse/in_Python_/tree/master/Random_Forest#gini-importance-
 - Example: 
 	- Let’s assign numerical value 1 for play cricket and 0 for not playing cricket. 
 	- Now follow the steps to identify the right split:
-	- Variance for Root node, here mean value is (15*1 + 15*0)/30 = 0.5 and we have 15 one and 15 zero. 
+	- Variance for Root node, here mean value is ( 15 * 1 + 15 * 0 ) / 30 = 0.5 and we have 15 one and 15 zero. 
 	
 		Now variance would be ((1-0.5)^2+(1-0.5)^2+….15 times+(0-0.5)^2+(0-0.5)^2+…15 times) / 30,
 		
-		this can be written as (15*(1-0.5)^2+15*(0-0.5)^2) / 30 = 0.25
-	- Mean of Female node =(2*1+8*0)/10=0.2 and Variance = (2*(1-0.2)^2+8*(0-0.2)^2) / 10 = 0.16
-	- Mean of Male Node =(13*1+7*0)/20=0.65 and Variance = (13*(1-0.65)^2+7*(0-0.65)^2) / 20 = 0.23
-	- Variance for Split Gender = Weighted Variance of Sub-nodes = (10/30)*0.16 + (20/30) *0.23 = 0.21
-	- Mean of Class IX node =(6*1+8*0)/14=0.43 and Variance = (6*(1-0.43)^2+8*(0-0.43)^2) / 14 = 0.24
-	- Mean of Class X node =(9*1+7*0)/16=0.56 and Variance = (9*(1-0.56)^2+7*(0-0.56)^2) / 16 = 0.25
-	- Variance for Split Gender =Weighted Variance of Sub-nodes = (14/30)*0.24 + (16/30) *0.25 = 0.25
+		this can be written as (15 * (1-0.5)^2 + 15 * (0-0.5)^2) / 30 = 0.25
+
+	- Mean of Female node =(2 * 1 + 8 * 0)/10=0.2 and Variance = (2 * (1-0.2)^2 + 8 * (0-0.2)^2) / 10 = 0.16
+	- Mean of Male Node =(13 * 1 + 7 * 0)/20=0.65 and Variance = (13 * (1-0.65)^2 + 7 * (0-0.65)^2) / 20 = 0.23
+	- Variance for Split Gender = Weighted Variance of Sub-nodes = (10/30) * 0.16 + (20/30) * 0.23 = 0.21
+	- Mean of Class IX node =(6*1+8*0)/14=0.43 and Variance = (6 * (1-0.43)^2 + 8 * (0-0.43)^2) / 14 = 0.24
+	- Mean of Class X node =(9*1+7*0)/16=0.56 and Variance = (9 * (1-0.56)^2 + 7 * (0-0.56)^2) / 16 = 0.25
+	- Variance for Split Gender =Weighted Variance of Sub-nodes = (14/30) * 0.24 + (16/30) * 0.25 = 0.25
 
 	- Above, you can see that Gender split has lower variance compare to parent node so the split would be on Gender only.
 
