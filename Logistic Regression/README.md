@@ -76,7 +76,8 @@ Odds of an event occurring in one group compared to another, provides a measure 
 
    
 - Cost Function: [{Yi*Log(Pr)} + {(1-Yi)*Log(1-Pr)}]
-
+	- Cost Function quantifies the error between predicted values and actual values.
+   
 ![image](https://github.com/user-attachments/assets/5e6c38a6-1616-409f-97d4-f966f75b402d)
 
 
@@ -176,7 +177,8 @@ Maximum likelihood estimation (MLE):
 
 # Gradient Descent
 
-- Gradient Descent is an optimization algorithm which finds global or local minima of a cost/loss function. (Cost Function quantifies the error between predicted values and actual values). A gradient (slope) is nothing but a derivative (first-order) of cost function.  
+- Gradient Descent is an optimization algorithm which finds global or local minima of a cost/loss function.
+- A gradient (slope) is nothing but a derivative (first-order) of cost function.  
 - The gradient of the loss function is a vector that indicates the direction and magnitude of the steepest increase in the loss. It tells which way to change the model's parameters to increase the loss.
 - Gradient Descent Process:
 	- Initialization: Start with an initial set of model parameters (e.g., weights and biases).
