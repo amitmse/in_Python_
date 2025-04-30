@@ -67,8 +67,7 @@ Odds of an event occurring in one group compared to another, provides a measure 
 
 ![image](https://github.com/user-attachments/assets/7eadb191-bea5-4c59-adc6-1c4b4ebf04c8)
 
-- Sigmoid function: 1/(1+exp^-y)
-  
+- Sigmoid function:
 	- The inverse of the logit function.
 	- The sigmoid function maps arbitrary real values back to the range [0, 1].
 	- Generalised form of logit function. For probability p, sigmoid(logit(p)) = p. 
