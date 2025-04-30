@@ -254,13 +254,16 @@ Maximum likelihood estimation (MLE):
 ---------------------------------------------------------------------------------------------------
 
 ## Types of Gradient Descent:
+
 #### 1. Batch Gradient Descent:
+
 	- It uses a complete dataset available to compute the gradient of the cost function hence and it's very slow.
 	- Cost function is calculated after the initialization of parameters.
 	- It reads all the records into memory from the disk.
 	- After calculating sigma for one iteration, we move one step further, and repeat the process.
 
 #### 2. Mini-batch Gradient Descent: 
+
 	- It is a widely used algorithm that makes faster and accurate results.
 	- The dataset, here, is clustered into small groups of ‘n’ training datasets hence it's faster. 
 	- In every iteration, it uses a batch of ‘n’ training datasets to compute the gradient of the cost function. 
@@ -268,6 +271,7 @@ Maximum likelihood estimation (MLE):
 	- It can also make use of a highly optimized matrix that makes computing of the gradient very efficient.
 
 #### 3. Stochastic Gradient Descent: 
+
 	- Stochastic gradient descent used for faster computation. 
 	- First, it randomizes the complete dataset, and then uses only one training example in every iteration to calculate the gradient. 
 	- Its benifical for huge datasets.
