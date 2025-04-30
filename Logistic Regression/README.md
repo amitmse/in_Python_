@@ -317,10 +317,10 @@ Maximum likelihood estimation (MLE):
 ##### 1. Calculus: 
 - It will faster if equation is simple. But in real life equations are very complex and messy and its difficult to solve.
   
-		f(x) 	= X^2 - 2X + 2   
-		df/dx 	= 2X - 2  
-		2X	= 2  
-		X	= 1
+		f(x) 		= X^2 - 2X + 2   
+		df/dx 		= 2X - 2  
+		2X		= 2  
+		X		= 1
   
 ---------------------------------------------------------------------------------------------------
 	
@@ -330,15 +330,15 @@ Maximum likelihood estimation (MLE):
 		df/dx 	= 2X - 2
 		Gradient Descent: Xi+1 = Xi - a f'(Xi)
 			(Xi+1 is next guess, Xi = initial guess, a = learning rate, f'(Xi) = df/dx)  
-		apply "Xi+1 on above function. 
-		X1 = X0 - 0.2f'(3)
-		Initial guess X0=3, a=0.2
+   
+		apply "Xi+1 (X1) on above function where Initial guess X0=3, a=0.2
+		X1 = X0 - a*f'(Xi)
 		X1 = 3  - 0.2*f'(Xi) 				[f'(Xi) = df/dx = 2X - 2 = 2*3 -2 = 4]
-		X1 = 3  - 0.2(4) = 3 - 0.8 = 2.2
+		X1 = 3  - 0.2*(4) = 3 - 0.8 = 2.2
 		X1 = 2.2
-		X2 = X1 - 0.2f'(X1) = 2.2 - 0.2(2.4) 		[f'(Xi) = 2*2.2 - 2 = 4.4-2 =2.4 ]
+		X2 = X1 - 0.2*f'(X1) = 2.2 - 0.2*(2.4) 		[f'(Xi) = 2*2.2 - 2 = 4.4-2 =2.4 ]
 		X2 = 1.72  
-		X3 = X2 - 0.2f'(X2)  = 1.72 - 0.2(1.44)		[f'(Xi) 2*1.72 - 2 = 3.44-2 =1.44]  
+		X3 = X2 - 0.2*f'(X2)  = 1.72 - 0.2*(1.44)	[f'(Xi) 2*1.72 - 2 = 3.44-2 =1.44]  
 		X3 = 1.72 - 0.288  
 		X3 = 1.432  
 			
