@@ -396,6 +396,9 @@ Maximum likelihood estimation (MLE):
 
 https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 
+
+
+--------------------------------------------------------------------------------------------------------
 - beta(x): covariance(x,y) / variance(x)
   
 	- Standardized beta: Beta * [ standard deviation of a model variable / {Pi / SQRT(3)}]
@@ -408,38 +411,10 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#model-metrics
 	- Square root of the diagonal elements of the covariance matrix. 	[Covariance Matrix = Inverse(Hessian matrix)]
 	- SQRT(Diagonal(Covariance Matrix))
  
-- Akaike Information Criterion (AIC): (No of variable * 2) - (2 * -Log Likelihood)
-	- Log Likelihood (log loss) is the cost function.
-	- "2*- Log Likelihood" is deviance of LR and its similar to residual sum of squares(RSS) of a linear regression. 
-	- Ordinary least squares minimizes RSS and LR minimizes deviance.
-
-	- AIC balances the model's goodness of fit with its complexity (number of parameters). Models with more parameters are penalized, as they are more likely to overfit the training data.   
-	- AIC is used to compare different models and select the best one.
-	- The model with the lower AIC value is considered a better fit to the data.
-	- AIC is a relative measure of model fit, meaning it only indicates which model is better relative to other models being considered, not whether any of the models are actually a good fit.
-	- AIC is most useful when comparing similar models (e.g., different logistic regressions with varying predictors). It might not be as robust when comparing drastically different model types.
- 
+- Akaike Information Criterion (AIC): (No of variable * 2) - (2 * -Log Likelihood) 
 - Bayesian Information Criterion (BIC): {No of variable * log(No of obs)} - (2 * -Log Likelihood)
-	- Similar to AIC, BIC is also used to compare models based on their goodness of fit and complexity.
-	- BIC places a stronger penalty on model complexity compared to AIC
-
 - Area under curve / C statistics: Percent Concordant + 0.5 * Percent Tied
-	- The ROC curve is a graphical plot that illustrates the performance of any binary classifier system as its discrimination threshold is varied.
-	- True positive rate (Sensitivity : Y axis ) is plotted in function of the false positive rate (100-Specificity : X axis) for different cut-off points. 
-	- Each point on the ROC curve represents a sensitivity/specificity pair corresponding to a particular decision threshold. 
-
-- Somer’s D (Gini): [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs]
- 
-- Divergence: [(meanG – meanB)^2] / [0.5(varG + varB)]
-  
-	[meanG = mean of score only for good, varB= variance of score only for bad ]
-
-- TSS: SUM[y-mean(y)]^2
-  
-- RSS: SUM[y-predicted(y)]^2
-  
-- R Squared: 1.0 - (RSS/TSS)
-  
+- Somer’s D (Gini): [2AUC-1] OR [(Concordant - Disconcordant) / Total  pairs] 
 - VIF: 1.0 / (1.0 - R Squared)
 
 -----------------------------------------------------------------------------------------------------------------------
