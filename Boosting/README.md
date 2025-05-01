@@ -2,7 +2,8 @@
 ----------------------------------------------------------------------------------------------------------------
 # Boosting: 
 
-- It decreases Bias. Bias causes high error on training and test data, leading to underfitting.
+- It decreases Bias.
+	- Bias causes high error on training and test data, leading to underfitting.
 
 Bias and Variance: https://github.com/amitmse/in_Python_/blob/master/Others/README.md#bias---variance
 
