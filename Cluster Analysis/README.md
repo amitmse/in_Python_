@@ -2,19 +2,13 @@
 
 -------------------------------------------------------------------------------------------------
 
-	- Clustering algorithms are a part of unsupervised (no target variable) machine learning algorithms
-	
-	- These clustering techniques use distance measures to decide the similarity or dissimilarity in the observations
-    
-	- There are some important things you should keep in mind:
-		- With quantitative variables, distance calculations are highly influenced by variable units and 
-			magnitude. For example, clustering variable height (in feet) with salary (in rupees) having 
-			different units and distribution (skewed) will invariably return biased results. 
-			Hence, always make sure to standardize (mean = 0, sd = 1) the variables. Standardization 
-			results in unit-less variables.
-				
-		- Use of a particular distance measure depends on the variable types; i.e., formula for calculating 
-			distance between numerical variables is different than categorical variables.
+- Clustering algorithms are a part of unsupervised (no target variable) machine learning algorithms
+- These clustering techniques use distance measures to decide the similarity or dissimilarity in the observations
+- There are some important things you should keep in mind:
+	- With quantitative variables, distance calculations are highly influenced by variable units and magnitude.
+		- For example, clustering variable height (in feet) with salary (in rupees) having different units and distribution (skewed) will invariably return biased results. 
+		- Hence, always make sure to standardize (mean = 0, sd = 1) the variables. Standardization results in unit-less variables.	
+	- Use of a particular distance measure depends on the variable types; i.e., formula for calculating distance between numerical variables is different than categorical variables.
 
 -------------------------------------------------------------------------------------------------
 
@@ -24,80 +18,72 @@ https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Ana
 
 -------------------------------------------------------------------------------------------------
 
-## K means clustering: 
-	This technique partitions the data set into unique homogeneous clusters whose observations are similar 
-	to each other but different than other clusters. The resultant clusters remain mutually exclusive, 
-	i.e., non-overlapping clusters. In this technique, "K" refers to the number of cluster among which 
-	we wish to partition the data. Every cluster has a centroid. The name "k means" is derived from the 
-	fact that cluster centroids are computed as the mean distance of observations assigned to each cluster.
-	This k value k is given by the user. It's a hard clustering technique, i.e., one observation gets 
-	classified into exactly one cluster. K means tries to classify the observations into K clusters such 
-	that the total within cluster variation is as small as possible. How do we calculate within cluster variation? 
-	The most commonly used method is squared Euclidean distance. It is sum of squared Euclidean distance 
-	between observations in a cluster divided by the number of observations in a cluster.
-	
-	K - Means Algorithm:
-	
-		1. Initilize (randomly) K number of values ( its centroid).
-		2. Calculate distance between all data points and k centroid.
-		3. Assign a cluster to all data point based on minimum distance from above
-		4. Calculate mean of each cluster (move centroid)
-		5. Repeat the process (1 to 4) until we get minimum distince
-							
-							
-	K means takes the following steps:
-		1. Let's say the value of k = 2. At first, the clustering technique will assign two centroids 
-			randomly in the set of observations.
-		2. Then, it will start partitioning the observations based on their distance from the centroids.
-			Observations relatively closer to any centroid will get partitioned accordingly.
-		3. Then, based on the number of iterations (after how many times we want the algorithm to converge)
-			we've given, the cluster centroids will get recentered in every iteration. With this, 
-			the algorithm will try to continually optimize for the lowest within cluster variation.
-		4. Based on the newly assigned centroids, assign each observation falling closest to new centroids
-		5. This process continues until the cluster centers do not change or stopping criterion is reached
-							
-	Find an optimal k value:
-		1. Cross Validation: 
-			It's a commonly used method for determining k value. It divides the data into X parts.
-			Then, it trains the model on X-1 parts and validates (test) the model on the remaining part.
-			The model is validated by checking the value of the sum of squared distance to the centroid.
-			This final value is calculated by averaging over X clusters. Practically, for different 
-			values of k, we perform cross validation and then choose value which returns lowest error
-		2. Elbow Method: 
-			This method calculates the best k value by considering the percentage of variance 
-			explained by each cluster. It results in a plot similar to PCA's scree plot. 
-			In fact, the logic behind selecting the best cluster value is the same as PCA.
-			In PCA, we select number of components such that they explain the maximum variance in data.
-			Similarly, in the plot generated by the elbow method, we select the value of k such 
-			that percentage of variance explained is maximum.
-		3. Silhouette Method: 
-			It returns a value between -1 and 1 based on the similarity of an observation with 
-			its own cluster. Similarly, the observation is also compared with other clusters to derive 
-			at the similarity score. High value indicates high match, and vice versa. We can use any 
-			distance metric (explained above) to calculate the silhouette score.
+## K means clustering:
 
-		4. X means Clustering: 
-			This method is a modification of the k means technique. It starts from k = 1 and 
-			continues to divide the set of observations into clusters until the best 
-			split is found or the stopping criterion is reached. But, how does it find the best split?
-			It uses the Bayesian information criterion to decide the best split.
-		5. Cubic Clustering Criteria:
-			The CCC idea is to compare the R2 you get for a given set of clusters with the R2 you 
-			would get by clustering a uniformly distributed set of points in p dimensional space.
-			CCC uses a heuristic formula built from many simulations to estimate the error of a 
-			distance based clustering algorithm (i.e. k-means, Ward's method) in the reference 
-			distribution and in the training data for k=1 cluster to k=some maximum number of 
-			clusters to test. The difference between these two error measures at each trial k is 
-			basically the value of CCC at that k. This figure contains the CCC values for this 
-			training data from k=1 to k=11. Note the local maxima at k=3, indicating three is 
-			probably the best estimate for the number of clusters in this data set.	
-			Look for CCC to increase to a maximum as I increment the number of clusters by 1, 
-			and then observe when the CCC starts to decrease. At that point I take the number of 
-			clusters at the (local) maximum. This would be similar to using a scree plot to picking 
-			the number of principal components.
-		6. There is something called Rule of Thumb. It says that the number of clusters can be calculated 
-			by k = (n/2)^0,5, where n is the total number of elements from your sample. 
-			
+- This technique partitions the data set into unique homogeneous clusters whose observations are similar to each other but different than other clusters.
+- The resultant clusters remain mutually exclusive, i.e., non-overlapping clusters. In this technique, "K" refers to the number of cluster among which we wish to partition the data.
+- Every cluster has a centroid. The name "k means" is derived from the fact that cluster centroids are computed as the mean distance of observations assigned to each cluster.
+- This k value k is given by the user. It's a hard clustering technique, i.e., one observation gets classified into exactly one cluster.
+- K means tries to classify the observations into K clusters such that the total within cluster variation is as small as possible.
+- How do we calculate within cluster variation? 
+- The most commonly used method is squared Euclidean distance. It is sum of squared Euclidean distance between observations in a cluster divided by the number of observations in a cluster.
+
+--------------------------------------------------------------------------------------------------
+ 
+- K - Means Algorithm:
+	
+	1. Initilize (randomly) K number of values ( its centroid).
+	2. Calculate distance between all data points and k centroid.
+	3. Assign a cluster to all data point based on minimum distance from above
+	4. Calculate mean of each cluster (move centroid)
+	5. Repeat the process (1 to 4) until we get minimum distince
+							
+--------------------------------------------------------------------------------------------------
+
+- K means takes the following steps:
+	1. Let's say the value of k = 2. At first, the clustering technique will assign two centroids randomly in the set of observations.
+	2. Then, it will start partitioning the observations based on their distance from the centroids. Observations relatively closer to any centroid will get partitioned accordingly.
+	3. Then, based on the number of iterations (after how many times we want the algorithm to converge) we've given, the cluster centroids will get recentered in every iteration. With this, the algorithm will try to continually optimize for the lowest within cluster variation.
+	4. Based on the newly assigned centroids, assign each observation falling closest to new centroids
+	5. This process continues until the cluster centers do not change or stopping criterion is reached
+
+--------------------------------------------------------------------------------------------------
+       
+- Find an optimal k value:
+	1. Cross Validation: 
+		- It's a commonly used method for determining k value. It divides the data into X parts. Then, it trains the model on X-1 parts and validates (test) the model on the remaining part.
+		- The model is validated by checking the value of the sum of squared distance to the centroid.
+		- This final value is calculated by averaging over X clusters. Practically, for different values of k, we perform cross validation and then choose value which returns lowest error
+	2. Elbow Method: 
+		- This method calculates the best k value by considering the percentage of variance explained by each cluster. It results in a plot similar to PCA's scree plot. 
+		- In fact, the logic behind selecting the best cluster value is the same as PCA.
+		- In PCA, we select number of components such that they explain the maximum variance in data.
+		- Similarly, in the plot generated by the elbow method, we select the value of k such that percentage of variance explained is maximum.
+	3. Silhouette Method: 
+		- It returns a value between -1 and 1 based on the similarity of an observation with its own cluster. 
+		- Similarly, the observation is also compared with other clusters to derive at the similarity score. 
+		- High value indicates high match, and vice versa. We can use any distance metric (explained above) to calculate the silhouette score.
+
+	4. X means Clustering: 
+		- This method is a modification of the k means technique. 
+		- It starts from k = 1 and continues to divide the set of observations into clusters until the best split is found or the stopping criterion is reached. 
+		- But, how does it find the best split?
+		- It uses the Bayesian information criterion to decide the best split.
+
+	5. Cubic Clustering Criteria:
+		- The CCC idea is to compare the R2 you get for a given set of clusters with the R2 you would get by clustering a uniformly distributed set of points in p dimensional space.
+		- CCC uses a heuristic formula built from many simulations to estimate the error of a distance based clustering algorithm (i.e. k-means, Ward's method) in the reference distribution and in the training data for k=1 cluster to k=some maximum number of clusters to test. 
+		- The difference between these two error measures at each trial k is basically the value of CCC at that k. 
+		- This figure contains the CCC values for this training data from k=1 to k=11. 
+		- Note the local maxima at k=3, indicating three is probably the best estimate for the number of clusters in this data set.
+		- Look for CCC to increase to a maximum as I increment the number of clusters by 1, and then observe when the CCC starts to decrease. 
+		- At that point I take the number of clusters at the (local) maximum. This would be similar to using a scree plot to picking the number of principal components.
+
+	6. There is something called Rule of Thumb. 
+		- It says that the number of clusters can be calculated by k = (n/2)^0,5, where n is the total number of elements from your sample. 
+
+--------------------------------------------------------------------------------------------------
+
 ## Hierarchical Clustering
 	Hierarchical clustering tries to create a sequence of nested clusters to explore deeper insights from data.
 	For example, this technique is being popularly used to explore the standard plant taxonomy which would 
@@ -138,6 +124,8 @@ https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Ana
 				The pseudo  t^2  is defined as pseudo  "t^2=\frac{B_{KL}^2}{(W_L+W_K)/(n_K+n_L-2)}" 
 				for joining cluster  G_L with  G_K  each having  n_L  and  n_K  elements.
 
+--------------------------------------------------------------------------------------------------
+
 ## Some of the advantages which k means has over hierarchical clustering are as follows:
   	- It uses less memory.
   	- It converges faster.
@@ -147,6 +135,8 @@ https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Ana
   		different clusters. On the contrary, hierarchical clustering is deterministic.
   	- K means is preferred when the data is numeric. Hierarchical clustering is preferred 
 		when the data is categorical.
+
+--------------------------------------------------------------------------------------------------
 
 ## The methods to evaluate clustering accuracy :
 	- Internal Accuracy Measures: 
@@ -184,6 +174,7 @@ https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Ana
 				Here, precision is a measure of correctly retrieved items. Recall is measure of 
 				matching items from all the correctly retrieved items.
 
+--------------------------------------------------------------------------------------------------
 
 ## Distance Calculation for Clustering:
 	- Euclidean Distance: 
@@ -212,4 +203,4 @@ https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Ana
 		For two vectors (x,y), the cosine similarity is given by their normalized dot product shown below:
 		cossim(x, y) <- dot(x, y)/(sqrt(dot(x,x)*dot(y,y)))
 
-
+--------------------------------------------------------------------------------------------------
