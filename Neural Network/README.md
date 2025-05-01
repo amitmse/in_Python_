@@ -14,7 +14,7 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN.py
 
 https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
 
-![image](https://github.com/user-attachments/assets/23b93e26-2d95-4999-ad25-e00a2a73a99b)
+![image](https://github.com/user-attachments/assets/e7ae91ab-faaa-4f83-8d24-07fd9eeb0b66)
 
 ## Key Components of Neural Networks:
 
