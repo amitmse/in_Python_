@@ -202,11 +202,10 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-impor
 - During the pruning process, the "gamma" hyperparameter is used as a metric. if Gain Score < Gamma,the branch is pruned. As gamma increases, the most valuable branches remain on the tree, and this pruning helps prevent overfitting. Pruning is done from the bottom to the top. If the bottom branch is not pruned, the upper branches are not examined.
 
 - Prediction is made after the pruning process is completed. The tree prediction is multiplied by the learning rate and added to the prediction value of the first tree, and a new prediction value is formed. These operations continue until the specified number of iterations, namely n_estimators (number of boosting trees).
-   
-- Predicted value (regressor) = First Prediction + (Learnin Rate)* (Second Prediction)
-- Predicted Value (classifier) =  log of odds of Initial prediction + eta(learning rate) * output from the leaves(mean value)
-- Convert above value to probability with logistic function
-- Probability = Exp^log(odds) / [1 + Exp^log(odds)]
+	- Predicted value (regressor) = First Prediction + (Learnin Rate)* (Second Prediction)
+	- Predicted Value (classifier) =  log of odds of Initial prediction + eta(learning rate) * output from the leaves(mean value)
+	- Convert above value to probability with logistic function
+	- Probability = Exp^log(odds) / [1 + Exp^log(odds)]
 
 - Example: https://github.com/amitmse/in_Python_/blob/master/Others/Example.xlsx
 
