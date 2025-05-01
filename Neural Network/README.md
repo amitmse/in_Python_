@@ -116,16 +116,22 @@ Solutions:
 - Activation Function converts input into output. It takes the decision of whether or not to pass the signal to next and known as Transfer Function. Without activation functions the NN will only produce a linear output.
 - Some examples: SIGMOID, RELU, LEAKYRELU, TANH, SOFTMAX, CUBE, ELU, RRELU, HARDSIGMOID, HARDTANH, IDENTITY,  RATIONALTANH, SOFTPLUS, SOFTSIGN, 
 - The Activation Functions can be basically divided into 2 types:
-	
+
+---------------------------------------------------------------
+ 
 ### 1. Linear Activation Function: 
 	
 - A neural network with a linear activation function is simply a linear regression model. No matter how many layers in the neural network, the last layer will be a linear function of the first layer so a linear activation function turns the neural network into just one layer. Backpropagation can't be used as  the derivative of linear function is a constant. 
 - Range: -infinity to infinity.
-	
+
+---------------------------------------------------------------
+ 
 ### 2. Non-linear Activation Functions: 
 	
 - It makes it easy for the model to generalize or adapt with variety of data and to differentiate between the output. It allows backpropagation because they have a derivative function which is related to the inputs. It allows “stacking” of multiple layers of neurons to create a deep neural network. Multiple hidden layers of neurons are needed to learn complex data sets with high levels of accuracy. Below are few non-linear activation functions:
-	
+
+---------------------------------------------------------------
+ 
 #### 2.1 Sigmoid or Logistic Activation Function: 
 	
 - Sigmoid Function looks like a S-shape. The logistic sigmoid function can cause a neural network to get stuck at the training time. The softmax function is a more generalized logistic activation function which is used for multiclass classification. The main reason why we use sigmoid function is because it exists between (0 to 1). 	
@@ -140,7 +146,9 @@ Solutions:
 - Problem: Vanishing gradient.
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Tanh.PNG)
-	
+
+---------------------------------------------------------------
+ 
 #### 2.3 Rectified Linear Unit (ReLU) Activation Function: 
 	
 - The ReLU is the most used activation function. Since, it is used in almost all the convolutional neural networks or deep learning. It rectifies vanishing gradient problem. Range is 0 to infinity. 
@@ -155,12 +163,25 @@ Solutions:
 	- Rectified Linear Unit doesn't have the saturation problem where the output might get constrained beyond a limit.
 	
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/ReLU.PNG)
-	
-#### 2.4 Leaky ReLU: 
+
+---------------------------------------------------------------
+
+#### 2.4 Leaky ReLU:
+
+- It introduces a hyperparameter (the leakage constant) that needs to be tuned, potentially leading to overfitting. 
+	- Leakage constant determines the slope of the function for negative inputs. 
+	- This constant needs to be carefully chosen, as a value that's too high can make the function behave too much like a linear function, while a value that's too low might not effectively address the dying ReLU problem.
+	- As the leakage constant increases, the function becomes more linear, potentially diminishing the non-linearity that's crucial for complex model learning. 
+
+- It also doesn't completely eliminate the "dying ReLU" problem, where some neurons can become inactive and output zero, and the function loses some of its non-linearity as the slope increases.
+	- Leaky ReLU mitigates the dying ReLU problem by allowing some gradient flow for negative inputs, but it still produces 0 for an input value of 0. 
+	- This can still lead to neurons becoming inactive and potentially limiting the network's capacity, especially when a large number of neurons are affected, according to a post on Medium. 
 	
 - Range : -infinity to infinity.
 
 ![Function](https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/Leaky_ReLU.PNG)
+
+---------------------------------------------------------------
 
 #### 2.5 Softmax: 
 - Softmax is a very interesting activation function because it not only maps our output to a [0,1] range but also maps each output in such a way that the total sum is 1. The output of Softmax is therefore a probability distribution.
