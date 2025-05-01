@@ -15,4 +15,6 @@
 - Eigenvalues are used in PCA to quantify the amount of variance explained by each principal component.
 - The corresponding eigenvalues indicate the magnitude of this variance.
 - By selecting the eigenvectors associated with the largest eigenvalues, PCA effectively reduces dimensionality while retaining the most important information.
-- Example: https://medium.com/analytics-vidhya/understanding-principle-component-analysis-pca-step-by-step-e7a4bb4031d9
+- Example: https://github.com/amitmse/in_Python_/blob/master/PCA/Example.xlsx
+
+        https://medium.com/analytics-vidhya/understanding-principle-component-analysis-pca-step-by-step-e7a4bb4031d9
