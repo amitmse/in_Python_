@@ -33,6 +33,11 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
 	- The loss function is the grade that tells the student (network) how many mistakes they made.
 
 6. Training: The process of adjusting the weights and biases of the neural network to minimize the loss. This is typically done using a technique called back-propagation and an optimization algorithm like gradient descent.
+	- Backpropagation is a method for calculating the gradient of the error function with respect to the network's weights, allowing the model to learn and improve its predictions by adjusting these weights iteratively. 
+	- The Backpropagation algorithm involves two main steps: the Forward Pass and the Backward Pass. 
+		- In forward pass the input data is fed into the input layer. 
+		- In the backward pass, the error is propagated back through the network to adjust the weights and biases. One common method for error calculation is the Mean Squared Error (MSE).
+	- Alternative techniques to backpropagation: evolutionary algorithms, gradient-free optimization, Hebbian learning, and Hessian-free optimization, Equilibrium Propagation, Direct Feedback Alignment, Neuroevolution of Augmenting Topologies, NoProp.
 
 7. Batch Size: The number of training examples processed before updating model parameters. Larger batch sizes can lead to faster convergence but might require more memory. 
   
