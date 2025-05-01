@@ -87,7 +87,7 @@ https://github.com/amitmse/in_Python_/blob/master/Regularization/README.md#regul
 - It allows to specify whether the model should have a positive or negative relationship with each feature, implementing business logic into the model.
 - Feature Importance: Mechanisms to rank and select features, empowering better decision-making. Provides a way to calculate feature importance scores based on the number of times a feature is used in the model and how much it contributes to reducing the objective function.
 
-Different ways to get feature importance
+- Different ways to get feature importance
 	- use built-in feature importance.
 	- use permutation based importance.
 	- use shap based importance.
