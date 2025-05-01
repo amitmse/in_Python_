@@ -128,10 +128,15 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-impor
 - Feature importance scores: gain, cover, weight.
 	- Gain: Average loss reduction when using a feature for splitting.
 		- XGBoost considers the impurity (e.g., Gini impurity, entropy) of the parent node (before the split) and the impurity of the child nodes (after the split). 
+https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#gini-index
+
 		- Gain Calculation: Difference between the impurity of the parent node and the weighted sum of the impurity of the child nodes. This represents the reduction in impurity achieved by the split. 
+
 		- Feature Importance: The feature with the highest gain value is considered the most important feature for that particular split and, cumulatively, for the entire tree.
 			https://xgboost.readthedocs.io/en/latest/tutorials/model.html
+
 	- Cover: Indicates how many times a feature is used to split data across all trees, weighted by the number of data points that go through those splits. 
+
 	- Weight: Represents the total number of times a feature is used to split data across all trees. Access above using the get_feature_importance() method after training your XGBoost model.
   
 - Thresholding above scores: Recursive Feature Elimination (RFE), SHAP values. You can set a threshold on the feature importance scores and select features that exceed that threshold. The `SelectFromModel` class in Scikit-learn can be used to apply this threshold-based selection.
@@ -139,7 +144,8 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-impor
 - Recursive Feature Elimination (RFE): It iteratively removes features based on their importance and evaluates the model's performance on the remaining features. This can help identify the most relevant features while improving model performance and reducing training time. 
     
 - SHAP Values (SHapley Additive exPlanations): values provide a way to understand how each feature contributes to the model's predictions. Similar to the beta of linear regression. They can help in identifying the most important features and understanding their impact on the model.
-			
+https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-importance
+   
 - mRMR (Minimum Redundancy, Maximum Relevance): It's a feature selection algorithm that identifies the most relevant features for predicting the target variable while minimizing redundancy between selected features. This process improves model performance by focusing on the most important information and reducing overfitting.
    
 	- Relevance: mRMR aims to select features that have a strong relationship with the target variable (high correlation). The F-statistic, which is derived from ANOVA if the target is discrete or correlation if the target is categorical. The F-statistic determines the degree of linear association between the features and the target. If the target is categorical, the F-statistic is calculated using Scikit-learn’s f_classif function. If the target is continuous, the F-statistic is determined using f_regression. Mutual information: Quantifies how much we know about one variable, by examining the values of a second variable. In other words, it measures the non-linear association between features. Higher values indicate stronger associations.
@@ -174,12 +180,10 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-impor
 - Similarity score or Quality score for the Residuals: It's used to split. Info gain. The smaller the similarity, the less they are similar. To get all the residuals into one leaf and calculate the similarity score.
   
 - For regressor = (Sum of Residuals)^2 / (number of Residuals + λ )
-  
-  		λ (lambda) is the regularization parameter, which helps prevent overfitting.
+	- λ (lambda) is the regularization parameter, which helps prevent overfitting.
    
 - For classifier = (Sum of Residuals)^2 / [pr*(1-pr) + λ]
-  
-  		pr  is probability
+	- pr  is probability
 
 - Feature importance scores:
 	- Gain: Average loss reduction gained when using a feature for splitting.
@@ -189,10 +193,10 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-impor
 - Gain:
 	- How great is it the leaves classify similar residuals compared to the root.
 	- Gain = Left Similarity + Right Similarity - Root Similarity
-		Root Similarity: The Similarity Score of the Previous Tree is the Similarity Score.
+		- Root Similarity: The Similarity Score of the Previous Tree is the Similarity Score.
     
-			Gain — Gamma > 0 Keep the tree.
-			Gain — Gamma < 0 Prune the tree.
+		- Gain — Gamma > 0 Keep the tree.
+		- Gain — Gamma < 0 Prune the tree.
 
 - Lambda (λ): regularisation parameter
 	- As the lambda increases, the similarity score will decrease and therefore this will also decrease the gain score. This allows for more pruning, only branches with a high gain score are preserved and overfitting can be prevented.
