@@ -4,8 +4,7 @@
 
 - It decreases Bias.
 	- Bias causes high error on training and test data, leading to underfitting.
-
-Bias and Variance: https://github.com/amitmse/in_Python_/blob/master/Others/README.md#bias---variance
+	- Bias and Variance: https://github.com/amitmse/in_Python_/blob/master/Others/README.md#bias---variance
 
 - Similar to bagging but it fits weak learner sequentially (a model depends on the previous ones) in a very adaptative way. Each model in the sequence is fitted giving more importance to the observations which are not classified correctly (high error). Mainly focus on reducing bias.
 	
