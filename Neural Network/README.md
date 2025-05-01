@@ -14,6 +14,8 @@ https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN.py
 
 https://github.com/amitmse/in_Python_/blob/master/Neural%20Network/NN_v1.xlsx
 
+![image](https://github.com/user-attachments/assets/23b93e26-2d95-4999-ad25-e00a2a73a99b)
+
 ## Key Components of Neural Networks:
 
 1. Neurons (Nodes): The basic units of a neural network that receive input, process it, and pass the output to the next layer. Each neuron applies an activation function to its input. The width of each hidden layer influences the model's capacity to represent complex relationships. 
