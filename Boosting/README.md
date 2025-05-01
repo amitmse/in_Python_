@@ -34,6 +34,10 @@
 ## Loss Functions:
 	1. Mean Squared Error (MSE): ( 1/2 ) * ( Actual - Predicted )^2
 	2. Cross-entropy: Difference between two probability distributions
+		- loss function is cross entropy loss.
+		- Cross-entropy, also known as logarithmic loss or log loss or Negative Log Likelihood.
+
+![image](https://github.com/user-attachments/assets/ea2009ca-5cac-4334-af54-bfd6226fb7af)
 
 ----------------------------------------------------------------------------------------------------------------
 ## Boosting in Python
