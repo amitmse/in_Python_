@@ -98,16 +98,23 @@ https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Ana
 		- Then, we continue to split the clusters until the leaf cluster contains exactly one observation. It uses a top-down approach.
 		- Find an optimal k value:
 			1. R_k^2 statistic:
-				- The  R_k^2 for k clusters is defined as "R_k^2=\frac{B_k}{T}=1-\frac{P_k}{T}" T, P_k means total sum of squares, within cluster sum of squares, respectively.
+				- The  R_k^2 for k clusters is defined as 
+					- "R_k^2=\frac{B_k}{T}=1-\frac{P_k}{T}"
+					- T, P_k means total sum of squares, within cluster sum of squares, respectively.
 				- For n clusters, obviously each  P_k=0  so that  R^2=1. As the number of clusters decreases from n to 1 they should become more widely separated. 
 				- A large decrease in  R_k^2  would represent a distinct join. Actually, we also can use semipartial R^2 statistic to reach our goal.
 			2. Semipartial  R_k^2  statistic : 
-				- The semipartial  R_k^2  for k clusters is defined as "SR_k^2=\frac{B_{KL}^2}{T}=R_{k+1}^2-R_k^2" B_{KL}^2 is equal to  W_M-(W_K+W_L) and  W_t means the sum of squares in cluster  G_t .
+				- The semipartial  R_k^2  for k clusters is defined as 
+					- "SR_k^2=\frac{B_{KL}^2}{T}=R_{k+1}^2-R_k^2" B_{KL}^2 is equal to  W_M-(W_K+W_L) and  
+					- W_t means the sum of squares in cluster  G_t .
 			3. Pseudo  F_k statistic:
-				- The pseudo  F_k  statistic for k clusters is defined as pseudo "F_k=\frac{(T-P_k)/(k-1)}{(P_k)/(n-k)}=1-\frac{B_k(n-k)}{P_k(k-1)}" 
+				- The pseudo  F_k  statistic for k clusters is defined as pseudo 
+					- "F_k=\frac{(T-P_k)/(k-1)}{(P_k)/(n-k)}=1-\frac{B_k(n-k)}{P_k(k-1)}" 
 				- If pseudo  F_k   decreases with k and reaches a maximum value, the value of k at the maximum or immediately prior to the point may be a candidate for the value of k.
 			4. Pseudo  t^2 statistic:
-				- The pseudo  t^2  is defined as pseudo  "t^2=\frac{B_{KL}^2}{(W_L+W_K)/(n_K+n_L-2)}" for joining cluster  G_L with  G_K  each having  n_L  and  n_K  elements.
+				- The pseudo  t^2  is defined as pseudo  
+					- "t^2=\frac{B_{KL}^2}{(W_L+W_K)/(n_K+n_L-2)}" 
+					- for joining cluster  G_L with  G_K  each having  n_L  and  n_K  elements.
 
 --------------------------------------------------------------------------------------------------
 
@@ -142,7 +149,7 @@ https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Ana
 			- Its value lies between 0 and 1. Think of the clustering structures (C1 and C2) with several small clusters.
 			- Think of C1 as your predicted cluster output and C2 as the actual cluster output. Higher the value, better the score. 
 			- Its simple formula is given by: 
-				RAND SCORE = a + d / (a + b + c + d)
+				- RAND SCORE = a + d / (a + b + c + d)
 					- a = obs which are available in the same cluster in both structures (C1 and C2)
 					- b = obs which are available in a cluster in C1 and not in the same cluster in C2
 					- c = obs which are available in a cluster in C2 and not in the same cluster in C1
@@ -159,17 +166,18 @@ https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Ana
 
 - Euclidean Distance: 
 	- It is used to calculate the distance between quantitative (numeric) variables. As it involves square terms, it is also known as L2 distance (because it squares the difference in coordinates). 
-	- Its formula is given by d(xi , xj ) = (|xi1 - xj1|² + |xi2 - xj2|² + . . . + |xip - xjp|² ) 1/2
+	- Its formula is given by 
+	- d(xi , xj ) = (|xi1 - xj1|² + |xi2 - xj2|² + . . . + |xip - xjp|² ) 1/2
 
 - Manhattan Distance: 
 	- It is calculated as the absolute value of the sum of differences in the given coordinates. 
 	- This is known as L1 distance. It is also sometimes called the Minowski Distance.
-		d(xi , xj ) = (|xi1 - xj1| + |xi2 - xj2| + . . . + |xip - xjp| 
+		- d(xi , xj ) = (|xi1 - xj1| + |xi2 - xj2| + . . . + |xip - xjp| 
 					
 - Hamming Distance: 
 	- It is used to calculate the distance between categorical variables. 
 	- It uses a contingency table to count the number of mismatches among the observations. If a categorical variable is binary (say, male or female), it encodes the variable as male = 0, female = 1.
-		hdist(x, y) <- sum((x[1] != y[1]) + (x[2] != y[2]) + ...)
+		- hdist(x, y) <- sum((x[1] != y[1]) + (x[2] != y[2]) + ...)
 
 - Gower Distance: 
 	- It is used to calculate the distance between mixed (numeric, categorical) variables. 
@@ -179,6 +187,6 @@ https://github.com/amitmse/in_Python_/blob/master/Cluster%20Analysis/Cluster_Ana
 	- It is the most commonly used similarity metric in text analysis. 
 	- The closeness of text data is measured by the smallest angle between two vectors. The angle (T) is assumed to be between 0 and 90.
 	- For two vectors (x,y), the cosine similarity is given by their normalized dot product shown below:
-		cossim(x, y) <- dot(x, y)/(sqrt(dot(x,x)*dot(y,y)))
+		- cossim(x, y) <- dot(x, y)/(sqrt(dot(x,x)*dot(y,y)))
 
 --------------------------------------------------------------------------------------------------
