@@ -115,8 +115,8 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-impor
 	- Softmax Loss: Generally used for multi-class classification tasks. It calculates a probability distribution for each class and maximizes the likelihood across all classes.
 	- Adaptive Log Loss (ALogLoss): Introduced in XGBoost, this loss function provides a balance between speed and accuracy. It's derived by approximating the Poisson likelihood.
 
-			Regression 	= (1/2)*(actual - predicted)^2
-			Classification 	= -[y*log(p) - (1-y)log(1-p)]
+			Regression	= (1/2)*(actual - predicted)^2
+			Classification	= -[y*log(p) - (1-y)log(1-p)]
 
 	- Total loss will be the sum of this function
 
@@ -127,16 +127,10 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-impor
 - XGBoost uses a few criteria for feature selection.		
 - Feature importance scores: gain, cover, weight.
 	- Gain: Average loss reduction when using a feature for splitting.
-		- XGBoost considers the impurity (e.g., Gini impurity, entropy) of the parent node (before the split) and the impurity of the child nodes (after the split).
-https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#gini-index
-
+		- XGBoost considers the impurity (e.g., Gini impurity, entropy) of the parent node (before the split) and the impurity of the child nodes (after the split). https://github.com/amitmse/in_Python_/tree/master/Decision%20Tree#gini-index
 		- Gain Calculation: Difference between the impurity of the parent node and the weighted sum of the impurity of the child nodes. This represents the reduction in impurity achieved by the split. 
-
-		- Feature Importance: The feature with the highest gain value is considered the most important feature for that particular split and, cumulatively, for the entire tree.
-			https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-importance
-
+		- Feature Importance: The feature with the highest gain value is considered the most important feature for that particular split and, cumulatively, for the entire tree. https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-importance
 	- Cover: Indicates how many times a feature is used to split data across all trees, weighted by the number of data points that go through those splits. 
-
 	- Weight: Represents the total number of times a feature is used to split data across all trees. Access above using the get_feature_importance() method after training your XGBoost model.
   
 - Thresholding above scores: Recursive Feature Elimination (RFE), SHAP values. You can set a threshold on the feature importance scores and select features that exceed that threshold. The `SelectFromModel` class in Scikit-learn can be used to apply this threshold-based selection.
