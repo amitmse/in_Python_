@@ -9,7 +9,7 @@
 
 - Following techniques are based on Boosting:
 	- AdaBoost (Adaptive Boosting)
-	- Gradient Tree Boosting (GBM)
+	- Gradient Boosting Machine (GBM)
 	- eXtreme Gradient Boosting (XGBoost)
 	- Light Gradient Boosting Machine (LightGBM)
 	- Categorical Boosting (CatBoost)
