@@ -67,14 +67,14 @@ https://github.com/amitmse/in_Python_/blob/master/Boosting/Boosting_Try.py
 		- RSS + α * (sum of square of coefficients)
 			- For Logistic Regression = Logistic Regression Cost + α * (sum of squared coefficients)
 		- Adds penalty equivalent to the square of the magnitude of coefficients.
-		- Eliminates multicollinearity
+		- Eliminates multicollinearity by penalizing large regression coefficients, effectively shrinking the impact of correlated variables.
 
 	- Lasso (L1):
 		- RSS + α * (sum of absolute value of coefficients)
 			- For Logistic Regression = Logistic Regression Cost + α * (sum of absolute value of coefficients) 
 		- Adds penalty equivalent to the absolute value of the magnitude of coefficients
 		- Differs from ridge regression only in penalizing the high coefficients.
-		- Lasso along with shrinking coefficients, also performs feature selection. 
+		- Lasso helps in feature selection. L1 shrinks the coefficients of less important features to exactly zero, effectively removing those features from the model.
 
 https://github.com/amitmse/in_Python_/blob/master/Regularization/README.md#regularization
 		
