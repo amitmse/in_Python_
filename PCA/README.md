@@ -18,3 +18,7 @@
 - Example: https://github.com/amitmse/in_Python_/blob/master/PCA/Example.xlsx
 
         https://medium.com/analytics-vidhya/understanding-principle-component-analysis-pca-step-by-step-e7a4bb4031d9
+
+- "Eigen" is a German word which means: own, characteristic, proper. So eigenvalue is own value, proper value, characteristic value.
+- Eigenvectors are the directions that remain unchanged during a transformation, even if they get longer or shorter.
+- Eigenvalues are the numbers that indicate how much something stretches or shrinks during that transformation.
