@@ -66,6 +66,8 @@ https://github.com/amitmse/in_Python_/blob/master/Others/README.md#feature-impor
 
 ### Vanishing Gradients: 
 
+https://github.com/amitmse/in_Python_/tree/master/Logistic%20Regression#gradient-descent
+
 - In deep networks, during back-propagation, gradients are calculated using the chain rule. The gradients are multiplied many times during back-propagation. If the gradients are small, repeated multiplication can make them exponentially smaller, leading to vanishing gradients. 
 - This can significantly slow down or even halt the training process because the weights update very slowly.The derivative of the sigmoid function is small for large positive or negative input values. 
 - Sigmoid and Tanh Activation Functions squash their input into a small range (e.g., 0 to 1 for Sigmoid, -1 to 1 for Tanh). When the input to these functions is in the saturated region (very high or very low), the gradients become very small.
