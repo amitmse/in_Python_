@@ -984,7 +984,7 @@ Key Takeaways:
 	- WoE measures the predictive power of a feature (at bin and overall level).
 	- Useful in logistic regression as WoE variable and log-odds are in log space. 
 
--Information Value: WoE * (Percentage of event - Percentage of non-event)
+- Information Value: WoE * (Percentage of event - Percentage of non-event)
 	- Limitation: insufficient sample size
 
 Python code: https://github.com/amitmse/in_Python_/blob/master/Data%20Prep/Information_value_calculation.py
