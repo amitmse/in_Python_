@@ -102,13 +102,11 @@ https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
 
 ------------------------------------------------------------------
 
-- Hypothesis testing uses data from a sample to draw conclusions about a population parameter or a population probability distribution.  It's a statistical method used to determine if there's enough evidence in a sample to reject a null hypothesis in favor of an alternative hypothesis. It help to make better decisions.
+- Draw conclusions about a population parameter.  It help to make better decisions.  It helps you avoid jumping to the wrong conclusions. By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
 
 - Avoiding Misleading Conclusions: Type I and Type II Errors
-	- It helps you avoid jumping to the wrong conclusions.
    	- Type I error (False Positive): Bank launches a new product thinking it will be a hit, only to find out later that the data misled them.
   	- Type II error (False Negative): Bank overlooks a potentially successful product because their testing wasn’t thorough enough.
-- By setting up the right significance level and carefully calculating the p-value, hypothesis testing minimizes the chances of these errors, leading to more accurate results.
 
 - Making Smarter Choices:
   	- Evidence-based decisions. Let’s say a bank wants to determine if new strategy will increase revenue.
