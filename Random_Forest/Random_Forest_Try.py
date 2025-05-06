@@ -16,6 +16,11 @@
 ## Bias-Variance : https://www.quora.com/What-is-the-best-way-to-explain-the-bias-variance-trade-off-in-laymens-terms
 ###################################################################################################################################################################
 
+#!pip install six
+#!pip install scikit-optimize
+
+###################################################################################################################################################################
+
 from __future__ import print_function
 import subprocess
 import sys
@@ -30,13 +35,17 @@ from time import time
 from operator import itemgetter
 from scipy.stats import randint
 from collections import defaultdict
-from sklearn import tree, metrics, datasets, model_selection, cross_validation
+from sklearn import tree, metrics, datasets, model_selection #, cross_validation           deprecated
+from sklearn.model_selection import train_test_split, cross_val_score, KFold
 from sklearn.metrics import classification_report, roc_auc_score, confusion_matrix, accuracy_score, r2_score, roc_curve, auc
 from sklearn.tree import DecisionTreeClassifier, export_graphviz, _tree, DecisionTreeRegressor
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier, RandomForestRegressor
-from sklearn.externals.six import StringIO
+#from sklearn.externals.six import StringIO                   deprecated
+from six import StringIO
 from sklearn.preprocessing import LabelEncoder
-from sklearn.grid_search import GridSearchCV, RandomizedSearchCV
+# from sklearn.grid_search import GridSearchCV, RandomizedSearchCV              deprecated
+from skopt import BayesSearchCV
+from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 from sklearn.datasets import load_iris, make_blobs
 import pickle
 print ('-------------------------------------------------------------------------------------------------')
@@ -307,7 +316,7 @@ ts_gs 	= 	run_gridsearch(independent_variable, dependent_variable, clf, param_gr
 for k, v in ts_gs.items(): print("parameters: {:<20s} setting: {}".format(k, v))
 
 # n_estimators 		: 	The number of trees in the forest.
-# criterion 		: 	The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “entropy” for the information gain.
+# criterion 		: 	The function to measure the quality of a split. Supported criteria are Â“giniÂ” for the Gini impurity and Â“entropyÂ” for the information gain.
 # max_features 		: 	The number of features to consider when looking for the best split.
 # max_depth 		: 	The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
 # min_samples_split	: 	The minimum number of samples required to split an internal node.
@@ -540,18 +549,18 @@ for c, feature in zip(contributions[0], iris.feature_names):
 ################################################################################
 ## https://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/
 ## 2.a. n_jobs : This parameter tells the engine how many processors is it allowed to use. 
-## A value of “-1” means there is no restriction whereas a value of “1” means it can only use one processor. 
+## A value of Â“-1Â” means there is no restriction whereas a value of Â“1Â” means it can only use one processor. 
 ## Here is a simple experiment you can do with Python to check this metric :
 
 # Only in Ipython
 ## %timeit
 model = RandomForestRegressor(n_estimators = 100, oob_score = True,n_jobs = 1,random_state =1)
 model.fit(X,y)
-## Output  ———-  1 loop best of 3 : 1.7 sec per loop
+## Output  Â—Â—Â—-  1 loop best of 3 : 1.7 sec per loop
 ## %timeit
 model = RandomForestRegressor(n_estimators = 100,oob_score = True,n_jobs = -1,random_state =1)
 model.fit(X,y)
-## Output  ———-  1 loop best of 3 : 1.1 sec per loop
+## Output  Â—Â—Â—-  1 loop best of 3 : 1.1 sec per loop
 
 #########################################################
 ## Titanic data	  
@@ -564,7 +573,7 @@ y = x.pop("Survived")
 model =  RandomForestRegressor(n_estimators = 100, oob_score=True, random_state = 42)
 model.fit(x(numeric_variable,y)
 print "AUC - ROC : ", roc_auc_score(y,model.oob_prediction)
-## AUC – ROC : 0.7386
+## AUC Â– ROC : 0.7386
 ## Try runing the following code and find the optimal leaf size in the comment box.
 sample_leaf_options = [1,5,10,50,100,200,500]
 for leaf_size in sample_leaf_options :
