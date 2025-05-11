@@ -1360,6 +1360,8 @@ https://github.com/amitmse/in_Python_/blob/master/Others/Example.xlsx
 
 https://www.kaggle.com/discussions/getting-started/170389
 
+https://www.kdnuggets.com/star-doesnt-work-how-to-answer-behavioral-questions-as-a-data-scientist
+
 -----------------------------------------------------------------------------------------------------------------------------------
 	https://www.linkedin.com/posts/agus-sudjianto-76519619_does-your-model-have-more-holes-than-swiss-activity-7307963627938992128-K6uD/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAPDob0BbqFMdl3Xolh4xcMoT3do--FKv3g
 	
