@@ -957,6 +957,8 @@ Key Takeaways:
 		- It essentially assesses the degree to which a variable is independent of the others.
 	- Solution: Transformations of independent variables
 
+![image](https://github.com/user-attachments/assets/e664c187-9eec-481d-902a-7a51808600cf)
+
 ----------------------------------------------------------------------------
 
 - Akaike Information Criterion (AIC):  ( No of variable * 2) - ( 2 * -Log Likelihood )
